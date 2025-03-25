@@ -108,6 +108,7 @@ Heat-Dissipating Coils
 High-Pressure Quantum Forge Core
 🎖️ Credits & Acknowledgments
 🚀 Built upon the GregTech Community Pack – Huge thanks to the GregTech community for developing and maintaining the best-in-class tech mod that serves as the foundation for Phoenix Forge Technologies!
+https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack-modern
 
 🙌 Special thanks to contributors, testers, and the modding community for their support!
 
