@@ -37,7 +37,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create("akashic_zeronium")
     .ingot()
     .element(GTElements.get("akashic_zeronium"))
-    .color(0x800080)
+    .color(0x8F00FF)
     .iconSet('shiny')
     .flags(
         GTMaterialFlags.GENERATE_PLATE,
@@ -62,7 +62,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create("phoenix_enriched_naquad")
     .ingot()
     .element(GTElements.get("phoenix_enriched_naquad"))
-    .color(0xFFA500)
+    .color(0x935d26)
     .iconSet('shiny')
     .flags(
         GTMaterialFlags.GENERATE_PLATE,
@@ -87,7 +87,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create("phoenix_enriched_tritanium")
     .ingot()
     .element(GTElements.get("phoenix_enriched_tritanium"))
-    .color(0xFFA500)
+    .color(0xFF0000)
     .iconSet('shiny')
     .flags(
         GTMaterialFlags.GENERATE_PLATE,
