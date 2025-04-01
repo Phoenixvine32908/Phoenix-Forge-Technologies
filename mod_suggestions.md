@@ -19,6 +19,12 @@
 - https://www.curseforge.com/minecraft/mc-mods/ftb-backups-2 (id preffer them to simple backups)
 - https://www.curseforge.com/minecraft/mc-mods/throughput-quest
 - https://www.curseforge.com/minecraft/mc-mods/configured
+- https://www.curseforge.com/minecraft/mc-mods/tschipcrafts-dynamic-lights-mod
+- https://www.curseforge.com/minecraft/mc-mods/anvil-never-too-expensive
+- https://www.curseforge.com/minecraft/mc-mods/easier-sleeping
+- https://www.curseforge.com/minecraft/mc-mods/applied-energistics-2-wireless-terminals
+- https://www.curseforge.com/minecraft/mc-mods/smooth-boot-reloaded
+- https://www.curseforge.com/minecraft/mc-mods/borderless
 
 ### Id like them
 - https://www.curseforge.com/minecraft/mc-mods/construction-wand
@@ -27,10 +33,21 @@
 - https://www.curseforge.com/minecraft/mc-mods/torchmaster
 - https://www.curseforge.com/minecraft/mc-mods/aeinfinitybooster
 - https://www.curseforge.com/minecraft/mc-mods/time-in-a-bottle-universal
-- https://www.curseforge.com/minecraft/mc-mods/portable-crafting-table
-- https://www.curseforge.com/minecraft/mc-mods/tinkers-construct
+- https://www.curseforge.com/minecraft/mc-mods/portable-crafting-table (idk which is better)
+- https://www.curseforge.com/minecraft/mc-mods/crafting-on-a-stick (idk wchich is better)
+- https://www.curseforge.com/minecraft/mc-mods/tinkers-construct (plsplspls)
+- https://www.curseforge.com/minecraft/mc-mods/silent-gear (worse alternative to tinkers imo)
 - https://www.curseforge.com/minecraft/mc-mods/loading-backgrounds
 - https://www.curseforge.com/minecraft/mc-mods/configured-defaults
+- https://www.curseforge.com/minecraft/mc-mods/entangled
+- https://www.curseforge.com/minecraft/mc-mods/simple-tomb
+- https://www.curseforge.com/minecraft/mc-mods/lootr
+- https://www.curseforge.com/minecraft/mc-mods/crash-assistant
+- https://www.curseforge.com/minecraft/mc-mods/chunky-pregenerator-forge
+- https://www.curseforge.com/minecraft/mc-mods/extra-compat/relations/dependencies
+- https://www.curseforge.com/minecraft/mc-mods/fastboot
+- https://www.curseforge.com/minecraft/mc-mods/set-home-waypoints (id like the FTB alternative but idk if there is one honestly)
+- https://www.curseforge.com/minecraft/mc-mods/supplementaries
 
 ### just a suggestion 
 - https://www.curseforge.com/minecraft/mc-mods/elytra-slot
@@ -46,3 +63,11 @@
 - https://www.curseforge.com/minecraft/mc-mods/ftb-ultimine-forge
 - https://www.curseforge.com/minecraft/mc-mods/simple-discord-rpc
 - https://www.curseforge.com/minecraft/mc-mods/craftpresence (an alternative for simple discord rpc)
+- https://www.curseforge.com/minecraft/mc-mods/relics-mod
+- https://www.curseforge.com/minecraft/mc-mods/bygone-nether
+- https://www.curseforge.com/minecraft/mc-mods/trade-cycling
+- https://www.curseforge.com/minecraft/mc-mods/wormhole-portals
+- https://www.curseforge.com/minecraft/mc-mods/advanced-mining-dimension
+- https://www.curseforge.com/minecraft/mc-mods/super-factory-manager
+- https://www.curseforge.com/minecraft/mc-mods/flopper
+- https://www.curseforge.com/minecraft/mc-mods/falling-tree
