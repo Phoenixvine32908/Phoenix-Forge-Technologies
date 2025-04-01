@@ -233,8 +233,24 @@ ServerEvents.recipes((event) => {
     "fluxnetworks:fluxplug",
     "fluxnetworks:fluxcore",
     "fluxnetworks:fluxblock",
-    "javd:portal_block"
-
+    "javd:portal_block",
+    "storagenetwork:import_kabel",
+    "storagenetwork:import_filter_kabel",
+    "storagenetwork:import_filter_kabel",
+    "storagenetwork:filter_kabel",
+    "storagenetwork:export_kabel",
+    "storagenetwork:stack_upgrade",
+    "storagenetwork:speed_upgrade",
+    "storagenetwork:slow_upgrade",
+    "storagenetwork:stock_upgrade",
+    "storagenetwork:operation_upgrade",
+    "storagenetwork:single_upgrade",
+    "storagenetwork:inventory_remote",
+    "storagenetwork:crafting_remote",
+    "storagenetwork:picker_remote",
+    "storagenetwork:collector_remote",
+    "storagenetwork:builder_remote",
+    "storagenetwork:expanded_remote"
   ];
 
   recipesToRemove.forEach(recipeId => {
@@ -250,8 +266,8 @@ ServerEvents.recipes((event) => {
   .EUt(64);
 
   event.recipes.gtceu.forming_press('void_portal')
-  .itemInputs('2x minectaft:nether_star', )
-  .itemOutputs('1x powah:crystal_blazing')
+  .itemInputs('2x minecraft:nether_star', )
+  .itemOutputs('1x javd:portal_block')
   .duration(600)
   .EUt(64);
 
