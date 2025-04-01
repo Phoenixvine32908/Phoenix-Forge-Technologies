@@ -1,0 +1,33 @@
+{
+    "ModSettings": {
+        "highlight_foused_items": {
+            "value": false
+        },
+        "enable_auto_refill": {
+            "value": false
+        },
+        "for_modpack_devs": true,
+        "first_run": false
+    },
+    "GuiSettings": {
+        "enable_inventory_editor_button": {
+            "value": false
+        },
+        "enable_inventory_settings_button": {
+            "value": false
+        },
+        "enable_profiles_ui": {
+            "value": false
+        },
+        "enable_inventory_buttons": {
+            "value": false
+        }
+    },
+    "Hotkeys": {
+        "sort_inventory": {
+            "main": {
+                "keys": "BUTTON_3"
+            }
+        }
+    }
+}
