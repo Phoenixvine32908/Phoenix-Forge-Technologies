@@ -12,8 +12,7 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.melferious_matrix('comb')
         .itemInputs[{ item: Item.of("productivebees:bee_cage", '{EntityTag:{type:"' + 'productivebees:epoxy' + '"}}')}]
-        .chancedInput('minecraft:obsidian', 100, 0)
-        .itemOutputs[{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"' + 'productivebees:epoxy' + '"}}'), chance: 10000 }]
+        .itemOutputs[{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"' + 'productivebees:epoxy' + '"}}')}]
         .duration(300)
         .EUt(8192)
 
