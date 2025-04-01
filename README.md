@@ -11,3 +11,4 @@ idea to make a cable part grab the idea of a machine and let the player set a va
 idea to make an amp meter to transfer the gtceu or forge energy and will output these
 Idea to make a mob cell, that allows you to store mobs in ae2 but not pull them out unless you have smth to pull it out like a export bus or some kind of mob cell/bucket thingy
 Idea to make level emitters go while a pattern is used and the emitters are selected using the name.
+idea to make a cable part that damages entities and it will be used as part of the mob grinder multiblock
