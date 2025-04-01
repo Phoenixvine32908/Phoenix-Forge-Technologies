@@ -230,10 +230,11 @@ ServerEvents.recipes((event) => {
     "gtceu:extruder/extrude_phoenix_enriched_neutronium_ingot_to_ring",
     "gtceu:extruder/extrude_akashic_zeronium_ingot_to_ring",
     "fluxnetworks:fluxpoint",
-    "productivebees:bottler",
     "fluxnetworks:fluxplug",
     "fluxnetworks:fluxcore",
-    "fluxnetworks:fluxblock"
+    "fluxnetworks:fluxblock",
+    "javd:portal_block"
+
   ];
 
   recipesToRemove.forEach(recipeId => {
@@ -248,6 +249,11 @@ ServerEvents.recipes((event) => {
   .duration(600)
   .EUt(64);
 
+  event.recipes.gtceu.forming_press('void_portal')
+  .itemInputs('2x minectaft:nether_star', )
+  .itemOutputs('1x powah:crystal_blazing')
+  .duration(600)
+  .EUt(64);
 
 event.recipes.gtceu.forming_press('blaze_crystal2')
   .itemInputs('1x minecraft:blaze_rod')

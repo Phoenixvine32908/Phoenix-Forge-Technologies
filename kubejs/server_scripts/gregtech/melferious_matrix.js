@@ -10,7 +10,7 @@ ServerEvents.recipes(event => {
         .duration(3000)
         .EUt(8192)
 
-        event.recipes.gtceu.melferious_matrix('flux_dus')
+        event.recipes.gtceu.melferious_matrix('comb')
         .itemInputs('4x minecraft:redstone')
         .chancedInput('minecraft:obsidian', 100, 0)
         .itemOutputs('fluxnetworks:flux_dust')
