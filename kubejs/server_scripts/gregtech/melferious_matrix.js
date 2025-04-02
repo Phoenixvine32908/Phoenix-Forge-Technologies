@@ -168,10 +168,12 @@ makeMatrixRecipes(
     addOreBeeRecipe('vanadium_magnetite');
 //////////////////// Wanna Section ////////////////
 
-   makeMatrixRecipes(
-    'kubejs:gtceu/melferious_matrix/creeper',
-    Item.of("productivebees:bee_cage", '{type:"productivebees:wanna", entity: "productivebees:configurable_bee"}'),
-    Item.of("productivebees:amber", '{BlockEntityTag:{EntityData:{entityType:"minecraft:creeper"}}}').strongNBT(),
-    [{ item: 'minecraft:gunpowder', chance: 10000 }] // Creeper drop as an output object
-);
+    phoenixvine.recipes.gtceu.melferious_matrix('kubejs:gtceu/melferious_matrix/creeper')
+        .circuit(1)
+        .EUt(1048)
+        .duration(300)
+        .notConsumable(Item.of('productivebees:bee_cage', '{type:"productivebees:iron", entity: "productivebees:configurable_bee"}'))
+        .notConsumable(Item.of("productivebees:amber", '{BlockEntityTag:{EntityData:{entityType:"minecraft:creeper"}}}').strongNBT())
+        .notConsumable(Item.of('productivebees:upgrade_productivity_2', 1))
+        .itemOutputs('minecraft:gunpowder') // Creeper drop
 })
