@@ -167,5 +167,59 @@ makeMatrixRecipes(
     addOreBeeRecipe('tungstate');
     addOreBeeRecipe('vanadium_magnetite');
 //////////////////// Wanna Section ////////////////
-   // Item.of("productivebees:amber", '{BlockEntityTag:{EntityData:{entityType:"minecraft:creeper"}}}').strongNBT(),
+function addWannaBeeRecipe(beeName, mobEntityType, outputs) {
+    makeMatrixRecipes(
+        `kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(':', '_')}`,
+        Item.of('productivebees:bee_cage', `{type:"productivebees:wanna", entity: "productivebees:configurable_bee"}`),
+        Item.of("productivebees:amber", `{BlockEntityTag:{EntityData:{entityType:"${mobEntityType}"}}}`).weakNBT(),
+        outputs
+    );
+}
+
+addWannaBeeRecipe('Creeper', 'minecraft:creeper', [{ item: 'minecraft:gunpowder', count: 1, chance: 7500 }]);
+addWannaBeeRecipe('Zombie', 'minecraft:zombie', [
+    { item: 'minecraft:rotten_flesh', count: 3, chance: 9000 },
+    { item: 'minecraft:iron_ingot', chance: 500 },
+    { item: 'minecraft:carrot', chance: 500 },
+    { item: 'minecraft:potato', chance: 500 }
+]);
+addWannaBeeRecipe('Skeleton', 'minecraft:skeleton', [
+    { item: 'minecraft:bone', count: 2, chance: 8000 },
+    { item: 'minecraft:arrow', chance: 500 }
+]);
+addWannaBeeRecipe('Spider', 'minecraft:spider', [
+    { item: 'minecraft:string', count: 4, chance: 8500 },
+    { item: 'minecraft:spider_eye', chance: 1000 }
+]);
+addWannaBeeRecipe('Enderman', 'minecraft:enderman', [
+    { item: 'minecraft:ender_pearl', chance: 6000 }
+]);
+addWannaBeeRecipe('Ghast', 'minecraft:ghast', [
+    { item: 'minecraft:ghast_tear', chance: 7000 },
+    { item: 'minecraft:gunpowder', chance: 2000 }
+]);
+addWannaBeeRecipe('Wither', 'minecraft:wither', [
+    { item: 'minecraft:nether_star', chance: 1000 }
+]);
+addWannaBeeRecipe('EnderDragon', 'minecraft:ender_dragon', [
+    { item: 'minecraft:dragon_breath', count: 5, chance: 5000 }
+    // Dragon Heart or other potential modded drops could be added here
+]);
+addWannaBeeRecipe('Cow', 'minecraft:cow', [
+    { item: 'minecraft:leather', count: 2, chance: 9500 },
+    { item: 'minecraft:beef', count: 2, chance: 9000 }
+]);
+addWannaBeeRecipe('Rabbit', 'minecraft:rabbit', [
+    { item: 'minecraft:rabbit_hide', chance: 8000 },
+    { item: 'minecraft:rabbit_foot', chance: 1000 },
+    { item: 'minecraft:cooked_rabbit', chance: 7000 } // Assuming they drop cooked rabbit
+]);
+addWannaBeeRecipe('Pig', 'minecraft:pig', [
+    { item: 'minecraft:porkchop', count: 3, chance: 9200 }
+]);
+addWannaBeeRecipe('Sheep', 'minecraft:sheep', [
+    { item: 'minecraft:mutton', count: 2, chance: 9000 },
+    { item: 'minecraft:wool', chance: 8500 }
+]);
+
 })
