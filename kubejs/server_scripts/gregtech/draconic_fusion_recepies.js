@@ -16,7 +16,9 @@ ServerEvents.recipes(allthemods => {
         .duration(600)
         .EUt(29723)
         .stationResearch(b => b.researchStack(Item.of('draconicevolution:reactor_core')).EUt(30720).CWUt(16, 32000))
-    
+
+
+
         allthemods.recipes.gtceu.assembly_line('compact_draconic_fusion_reactor_2')
         .itemInputs('4x #gtceu:circuits/uv',
                 '96x gtceu:uhpic_chip',
