@@ -1,0 +1,9 @@
+{
+    "ldlib": {
+        "connection": "gtceu:block/casings/coils/heat_dissipating_coils_ctm",
+        "emissive": true
+    },
+    "shimmer": {
+        "bloom": true
+    }
+}
