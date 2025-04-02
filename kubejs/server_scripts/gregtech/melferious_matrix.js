@@ -1,8 +1,7 @@
-
 const Tags = Java.loadClass('dev.latvian.mods.kubejs.util.Tags')
 const $FluidStackJS = Java.loadClass('dev.latvian.mods.kubejs.fluid.FluidStackJS')
 
-ServerEvents.recipes(allthemods => {
+ServerEvents.recipes(phoenixvine => {
 
 
     function makeName(inputString) {
@@ -37,10 +36,10 @@ ServerEvents.recipes(allthemods => {
     }
 
     function makeMatrixRecipes(id, input, flower, outputs) {
-        let recipeBuilder = allthemods.recipes.gtceu.melferious_matrix(id)
+        let recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(id)
             .circuit(1) // Set the circuit to 1
-            .EUt(32768) // Changed EUt to 32,768
-            .duration(600) // Changed duration to 600
+            .EUt(1048) // Changed EUt to 32,768
+            .duration(300) // Changed duration to 600
             .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1)) // Input count is 1
             .notConsumable(Item.of('productivebees:upgrade_productivity_2', 1)) // Productivity upgrade count for circuit 1
         outputs.forEach((output) => {
@@ -65,8 +64,8 @@ ServerEvents.recipes(allthemods => {
         }
     }
 
-    ////////////// machine controllers ////////////////
-    allthemods.shaped('gtceu:melferious_matrix', ['CAC', 'ABA', 'WSW'],
+    //////////// machine controllers ////////////////
+    phoenixvine.shaped('gtceu:melferious_matrix', ['CAC', 'ABA', 'WSW'],
         {
             A: '#gtceu:circuits/ev',
             W: 'gtceu:black_steel_single_cable',
@@ -75,39 +74,106 @@ ServerEvents.recipes(allthemods => {
             B: 'productivebees:upgrade_comb_block'
         }).id('gtceu:shaped/melferious_matrix')
 
-    ////////////// melferious_matrix recipes - Iron Bee only ////////////////
+    ////////////// melferious_matrix recipes - Based on filenames ////////////////
 
-    let iron_input = Item.of('productivebees:bee_cage', '{type:"productivebees:iron", entity: "productivebees:configurable_bee"}')
-    let iron_flower = Item.of('minecraft:iron_block')
-    let iron_output = [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:iron"}}'), chance: 10000 }]
-    makeMatrixRecipes('kubejs:gtceu/melferious_matrix/iron', iron_input, iron_flower, iron_output)
+    function addGemBeeRecipe(gemName) {
+        const beeName = gemName.replace('_gem', ''); // Handle cases like amber_gem.json
+        const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
+        const flower = Item.of(`minecraft:${gemName.replace('_gem', '')}_block`); // Assuming block name is gemName (without _gem) + "_block"
+        const outputItem = Item.of(`productivebees:configurable_comb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
+        const output = [{ item: outputItem, chance: 10000 }];
+        makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
+    }
 
-    ////////////// melferious_matrix recipes - Diamond Bee ////////////////
+    function addOreBeeRecipe(oreName) {
+    const beeName = oreName;
+    const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
+    const flower = Item.of(`gtceu:raw_${oreName}_block`);
+    const outputItem = Item.of(`productivebees:configurable_comb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
+    const output = [{ item: outputItem, chance: 10000 }];
+    makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
+}
 
-    let diamond_input = Item.of('productivebees:bee_cage', '{type:"productivebees:diamond", entity: "productivebees:configurable_bee"}')
-    let diamond_flower = Item.of('minecraft:diamond_block')
-    let diamond_output = [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:diamond"}}'), chance: 10000 }]
-    makeMatrixRecipes('kubejs:gtceu/melferious_matrix/diamond', diamond_input, diamond_flower, diamond_output)
 
-    ////////////// melferious_matrix recipes - Redstone Bee ////////////////
+    function addGenericBeeRecipe(beeName) {
+        const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
+        const flower = Item.of(`minecraft:${beeName}_block`); // Assuming block name is beeName + "_block"
+        const outputItem = Item.of(`productivebees:configurable_comb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
+        const output = [{ item: outputItem, chance: 10000 }];
+        makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
+    }
 
-    let redstone_input = Item.of('productivebees:bee_cage', '{type:"productivebees:redstone", entity: "productivebees:configurable_bee"}')
-    let redstone_flower = Item.of('minecraft:redstone_block')
-    let redstone_output = [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:redstone"}}'), chance: 10000 }]
-    makeMatrixRecipes('kubejs:gtceu/melferious_matrix/redstone', redstone_input, redstone_flower, redstone_output)
+    // Recipes based on the previous list of .json files
+    addGenericBeeRecipe('amethyst');
+    makeMatrixRecipes(
+        'kubejs:gtceu/melferious_matrix/crystalline',
+        Item.of('productivebees:bee_cage', '{type:"productivebees:crystalline", entity: "productivebees:configurable_bee"}'),
+        Item.of('minecraft:quartz_block'),
+        [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:crystalline"}}'), chance: 10000 }]
+    );
+    addGenericBeeRecipe('diamond');
+    addGenericBeeRecipe('emerald');
+    addGemBeeRecipe('lapis');
+    addGenericBeeRecipe('redstone');
+    addGenericBeeRecipe('iron');
+    addGenericBeeRecipe('gold');
+    addOreBeeRecipe('barite');
+    addOreBeeRecipe('bastnasite');
+    addOreBeeRecipe('bauxite');
+    addOreBeeRecipe('chromite');
+    addOreBeeRecipe('cobaltite');
+    addOreBeeRecipe('electrotine');
+    addOreBeeRecipe('galena');
+    addOreBeeRecipe('graphite');
+    addOreBeeRecipe('ilmenite');
+    addOreBeeRecipe('naquadah');
+    addOreBeeRecipe('neodymium');
+    addOreBeeRecipe('topaz');
+    addOreBeeRecipe('pyrope');
+    addOreBeeRecipe('ruby');
+    addOreBeeRecipe('sapphire');
+    addOreBeeRecipe('sodalite');
+    addOreBeeRecipe('cinnabar');
+    addOreBeeRecipe('apatite');
+    makeMatrixRecipes(
+        'kubejs:gtceu/melferious_matrix/neutronium',
+        Item.of('productivebees:bee_cage', '{type:"productivebees:neutronium", entity: "productivebees:configurable_bee"}'),
+        Item.of('gtceu:neutronium_block'),
+        [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:neutronium"}}'), chance: 10000 }]
+    );
+makeMatrixRecipes(
+    'kubejs:gtceu/melferious_matrix/slimy',
+    Item.of('productivebees:bee_cage', '{type:"productivebees:slimy", entity: "productivebees:configurable_bee"}'),
+    Item.of('minecraft:slime_block'),
+    [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:slimy"}}'), chance: 10000 }]
+);
+    addOreBeeRecipe('oilsands'); // Might not have a block form
+    addOreBeeRecipe('palladium');
+    addOreBeeRecipe('pyrochlore');
+    addOreBeeRecipe('pyrolusite');
+    addOreBeeRecipe('realgar');
+    addOreBeeRecipe('scheelite');
+    makeMatrixRecipes(
+        'kubejs:gtceu/melferious_matrix/sheldonite',
+        Item.of('productivebees:bee_cage', '{type:"productivebees:sheldonite", entity: "productivebees:configurable_bee"}'),
+        Item.of('gtceu:raw_cooperite_block'),
+        [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:sheldonite"}}'), chance: 10000 }]
+    );
+    addOreBeeRecipe('sphalerite');
+    addOreBeeRecipe('stibnite');
+    addOreBeeRecipe('tantalite');
+    addOreBeeRecipe('tetrahedrite');
+    addOreBeeRecipe('tricalcium_phosphate'); // Might not have a block form
+    addOreBeeRecipe('tungstate');
+    addOreBeeRecipe('vanadium_magnetite');
+//////////////////// WannaBee Section ////////////////
 
-    ////////////// melferious_matrix recipes - Emerald Bee ////////////////
-
-    let emerald_input = Item.of('productivebees:bee_cage', '{type:"productivebees:emerald", entity: "productivebees:configurable_bee"}')
-    let emerald_flower = Item.of('minecraft:emerald_block')
-    let emerald_output = [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:emerald"}}'), chance: 10000 }]
-    makeMatrixRecipes('kubejs:gtceu/melferious_matrix/emerald', emerald_input, emerald_flower, emerald_output)
-
-    ////////////// melferious_matrix recipes - Slimy Bee ////////////////
-
-    let slimy_input = Item.of('productivebees:bee_cage', '{type:"productivebees:slimy", entity: "productivebees:configurable_bee"}')
-    let slimy_flower = Item.of('minecraft:slime_block')
-    let slimy_output = [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:slimy"}}'), chance: 10000 }]
-    makeMatrixRecipes('kubejs:gtceu/melferious_matrix/slimy', slimy_input, slimy_flower, slimy_output)
-
+    phoenixvine.recipes.gtceu.melferious_matrix('creeper')
+        .itemOutputs([
+          Item.of("productivebees:configurable_comb", {
+            EntityTag: {
+              type: "productivebees:iron"
+            }
+          })
+        ])
 })
