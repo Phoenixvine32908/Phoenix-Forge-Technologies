@@ -2,9 +2,6 @@
   "framedblocks": {
     "framed_item_frame": true
   },
-  "enderchests": {
-    "hud": true
-  },
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
@@ -57,11 +54,8 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "endertanks": {
-    "hud.basic": true,
-    "hud": true,
-    "hud.status": true,
-    "hud.contents": true
+  "entangled": {
+    "entangled_block_component": true
   },
   "gtceu": {
     "primitive_pump": true,
@@ -139,11 +133,5 @@
     "hud.rgb16": true,
     "hud": true,
     "hud.redstone": true
-  },
-  "storagedrawers": {
-    "display.stacklimit": true,
-    "main": true,
-    "display.content": true,
-    "display.status": true
   }
 }
