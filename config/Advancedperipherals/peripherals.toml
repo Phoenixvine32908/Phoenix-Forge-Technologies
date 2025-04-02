@@ -73,7 +73,7 @@
 
 	[Peripherals.RS_Bridge]
 		#Enable the Rs Bridge or not.
-		enableRsBridge = true
+		enableRsBridge = false
 		#Power consumption per tick.
 		#Range: > 0
 		rsPowerConsumption = 10
@@ -104,7 +104,7 @@
 
 	[Peripherals.Colony_Integrator]
 		#Enable the colony integrator or not.
-		enableColonyIntegrator = true
+		enableColonyIntegrator = false
 
 	[Peripherals.Compass_Turtle]
 		#Enable the compass turtle or not.

@@ -1,6 +1,12 @@
-// * Item Registry - defines ID, name, texture
-// * and certain other properties of custom items.
-//
+function makeDust(event, id, color, cmp){
+    event.create(id)
+    .dust()
+    .fluid()
+    .color(color)
+    .components(cmp)
+    .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+}
+
 StartupEvents.registry('item', event => {
     function create(namespace, displayName) {
         event.create("phoenix_enriched_" + namespace)
@@ -55,22 +61,27 @@ StartupEvents.registry('item', event => {
    // create("naquad_1x_wire", "§6Brilliant Wire 1x");
 });
 GTCEuStartupEvents.registry('gtceu:material', event => {
-        event.create('crude_quantum_binder_dust')
-        .dust()
-        .fluid()
-        .color(0xe47815)
-        .components('1x calcium', '2x chlorine', '8x oxygen')
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-        event.create('advanced_quantum_binder_dust')
-        .dust()
-        .fluid()
-        .color(0xFF0000)
-        .components('1x calcium', '2x chlorine')
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
-        event.create('super_advanced_quantum_binder_dust')
-        .dust()
-        .fluid()
-        .color(0x8F00FF)
-        .components('1x calcium')
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION)
+
+    const dusts = [
+        [
+            "crude_quantum_binder_dust",
+            0xe47815,
+            ['1x calcium', '2x chlorine', '8x oxygen']
+        ],
+        [
+            "advanced_quantum_binder_dust",
+            0xFF0000,
+            ['1x calcium', '2x chlorine']
+        ],
+        [
+            "super_advanced_quantum_binder_dust",
+            0x8F00FF,
+            ['1x calcium']
+        ]
+    ]
+
+    dusts.forEach(dust => {
+        makeDust(event, dust[0], dust[1], dust[2]);
+    });
+
 });
