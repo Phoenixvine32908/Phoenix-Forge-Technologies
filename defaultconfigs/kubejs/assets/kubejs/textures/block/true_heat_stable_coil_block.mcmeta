@@ -1,7 +1,0 @@
-
-{
-    "ldlib": {
-        "connection": "kubejs:block/true_heat_stable_coil_block",
-        "emissive": true
-    },
-}

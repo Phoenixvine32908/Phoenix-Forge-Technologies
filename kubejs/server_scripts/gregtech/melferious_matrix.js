@@ -166,14 +166,14 @@ makeMatrixRecipes(
     addOreBeeRecipe('tricalcium_phosphate'); // Might not have a block form
     addOreBeeRecipe('tungstate');
     addOreBeeRecipe('vanadium_magnetite');
-//////////////////// WannaBee Section ////////////////
+//////////////////// Wanna Section ////////////////
 
-    phoenixvine.recipes.gtceu.melferious_matrix('creeper')
-        .itemOutputs([
-          Item.of("productivebees:configurable_comb", {
-            EntityTag: {
-              type: "productivebees:iron"
-            }
-          })
-        ])
+    phoenixvine.recipes.gtceu.melferious_matrix('kubejs:gtceu/melferious_matrix/creeper')
+        .circuit(1)
+        .EUt(1048)
+        .duration(300)
+        .notConsumable(Item.of('productivebees:bee_cage', '{type:"productivebees:iron", entity: "productivebees:configurable_bee"}'))
+        .notConsumable(Item.of("productivebees:amber", '{BlockEntityTag:{EntityData:{entityType:"minecraft:creeper"}}}').strongNBT())
+        .notConsumable(Item.of('productivebees:upgrade_productivity_2', 1))
+        .itemOutputs('minecraft:gunpowder') // Creeper drop
 })
