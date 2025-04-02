@@ -23,3 +23,4 @@ import export bus for mobs, the player would have to craft a special mob storage
 - damage plane, something like annihilation plane, but instead of breaking block, it would damage entities, possible enchantments and accel cards
 ### generator
 multiblock 7x7x7 consisting of for example crafting storage units, a burn chamber (s), stabilizers, insulation, based on the blocks used and speed upgrades installed it would generate AE starting from 128AE/t up to 16M AE/t, it would take the selected resource (quartz/flux crystals/fluix crystals) from ME system, and burn them for some time determined by the amount of efficiency blocks and burn chambers inside and the accel cards installed, minimal speed should be equivalent to the basic furnace, max speed is a stack of items per burn chamber per tick
+### right click provider
