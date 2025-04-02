@@ -30,3 +30,5 @@ LICENSE
 modlist.html
 .curseclient
 fancymenu_data
+apikey.py
+__pycache__
