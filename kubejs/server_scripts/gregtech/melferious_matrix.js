@@ -3,7 +3,6 @@ const $FluidStackJS = Java.loadClass('dev.latvian.mods.kubejs.fluid.FluidStackJS
 
 ServerEvents.recipes(phoenixvine => {
 
-
     function makeName(inputString) {
         let underscore = inputString.split('_');
         let returnString = '';
@@ -35,28 +34,30 @@ ServerEvents.recipes(phoenixvine => {
         recipeBuilder.chancedOutput(output.withCount(i), chance, 0);
     }
 
-    function makeMatrixRecipes(id, input, flower, outputs) {
+    function makeMatrixRecipes(id, input, flower, outputs, upgrade) {
         let recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(id)
-            .circuit(1) // Set the circuit to 1
-            .EUt(1048) // Changed EUt to 32,768
-            .duration(300) // Changed duration to 600
-            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1)) // Input count is 1
-            .notConsumable(Item.of('productivebees:upgrade_productivity_2', 1)); // Productivity upgrade count for circuit 1
+            .circuit(1)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
+            .notConsumable(Item.of(upgrade, 1));
+
         outputs.forEach((output) => {
             if (output.chance == 10000) {
-                if (10 * 1 > 127 && output.item.hasNBT()) {
-                    addOutputs(recipeBuilder, Item.of(output.item), 10 * 1);
+                if (output.item.hasNBT()) {
+                    addOutputs(recipeBuilder, Item.of(output.item), output.count);
                 } else {
-                    recipeBuilder.itemOutputs(Item.of(output.item, 10 * 1));
+                    recipeBuilder.itemOutputs(Item.of(output.item, output.count));
                 }
             } else {
-                if (10 * 1 > 127 && output.item.hasNBT()) {
-                    addChancedOutputs(recipeBuilder, Item.of(output.item), output.chance, 10 * 1);
+                if (output.item.hasNBT()) {
+                    addChancedOutputs(recipeBuilder, Item.of(output.item), output.chance, output.count);
                 } else {
-                    recipeBuilder.chancedOutput(Item.of(output.item, 10 * 1), output.chance, 0);
+                    recipeBuilder.chancedOutput(Item.of(output.item, output.count), output.chance / 10000, 0);
                 }
             }
         });
+
         if (flower instanceof $FluidStackJS) {
             recipeBuilder.notConsumableFluid(flower);
         } else {
@@ -65,54 +66,106 @@ ServerEvents.recipes(phoenixvine => {
     }
 
     //////////// machine controllers ////////////////
-    phoenixvine.shaped('gtceu:melferious_matrix', ['CAC', 'ABA', 'WSW'],
-        {
-            A: '#gtceu:circuits/ev',
-            W: 'gtceu:black_steel_single_cable',
-            S: 'gtceu:stable_machine_casing',
-            C: 'productivebees:upgrade_productivity_4',
-            B: 'productivebees:upgrade_comb_block'
-        }).id('gtceu:shaped/melferious_matrix');
+    phoenixvine.shaped('gtceu:melferious_matrix', ['CAC', 'ABA', 'WSW'], {
+        A: '#gtceu:circuits/ev',
+        W: 'gtceu:black_steel_single_cable',
+        S: 'gtceu:stable_machine_casing',
+        C: 'productivebees:upgrade_productivity_4',
+        B: 'productivebees:upgrade_comb_block'
+    }).id('gtceu:shaped/melferious_matrix');
 
-    ////////////// melferious_matrix recipes - Based on filenames ////////////////
+    // ////////////// melferious_matrix recipes - Based on filenames ////////////////
+
+    function addBeeRecipes(beeName, flower, baseOutput) {
+        const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
+
+        const betaHoneycombCount = baseOutput.count + 10;
+        const gammaHoneycombCount = betaHoneycombCount * 2;
+
+        // Beta (Prog 1)
+        makeMatrixRecipes(
+            `kubejs:gtceu/melferious_matrix/${beeName}_beta1`,
+            input,
+            flower,
+            [{
+                item: Item.of('productivebees:configurable_honeycomb', baseOutput.nbt),
+                chance: 10000,
+                count: betaHoneycombCount
+            }],
+            'productivebees:upgrade_productivity_2' // Corrected Beta upgrade item
+        );
+
+        // Block (Prog 2)
+        phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/${beeName}_block2`)
+            .circuit(2)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
+            .notConsumable(Item.of('productivebees:upgrade_comb_block', 1))
+            .itemOutputs(Item.of('productivebees:configurable_comb', baseOutput.nbt).withCount(baseOutput.count))
+            .notConsumable(flower);
+
+        // Gamma (Prog 3)
+        phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/${beeName}_gamma3`)
+            .circuit(3)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
+            .notConsumable(Item.of('productivebees:upgrade_productivity_3', 1))
+            .itemOutputs(Item.of('productivebees:configurable_honeycomb', baseOutput.nbt).withCount(gammaHoneycombCount))
+            .notConsumable(flower);
+
+        // Omega (Prog 4)
+        phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/${beeName}_omega4`)
+            .circuit(4)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
+            .notConsumable(Item.of('productivebees:upgrade_productivity_4', 1))
+            .itemOutputs(Item.of('productivebees:configurable_comb', baseOutput.nbt).withCount(40))
+            .notConsumable(flower);
+    }
 
     function addGemBeeRecipe(gemName) {
-        const beeName = gemName.replace('_gem', ''); // Handle cases like amber_gem.json
-        const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
-        const flower = Item.of(`minecraft:${gemName.replace('_gem', '')}_block`); // Assuming block name is gemName (without _gem) + "_block"
-        const outputItem = Item.of(`productivebees:configurable_honeycomb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
-        const output = [{ item: outputItem, chance: 10000 }];
-        makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
+        const beeName = gemName.replace('_gem', '');
+        const flower = Item.of(`minecraft:${gemName.replace('_gem', '')}_block`);
+        const baseOutputNbt = `{EntityTag:{type:"productivebees:${beeName}"}}`;
+        addBeeRecipes(beeName, flower, {
+            nbt: baseOutputNbt,
+            count: 10
+        });
     }
 
     function addOreBeeRecipe(oreName) {
-    const beeName = oreName;
-    const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
-    const flower = Item.of(`gtceu:raw_${oreName}_block`);
-    const outputItem = Item.of(`productivebees:configurable_honeycomb
-`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
-    const output = [{ item: outputItem, chance: 10000 }];
-    makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
-}
-
+        const beeName = oreName;
+        const flower = Item.of(`gtceu:raw_${oreName}_block`);
+        const baseOutputNbt = `{EntityTag:{type:"productivebees:${beeName}"}}`;
+        addBeeRecipes(beeName, flower, {
+            nbt: baseOutputNbt,
+            count: 10
+        });
+    }
 
     function addGenericBeeRecipe(beeName) {
-        const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
-        const flower = Item.of(`minecraft:${beeName}_block`); // Assuming block name is beeName + "_block"
-        const outputItem = Item.of(`productivebees:configurable_honeycomb
-`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
-        const output = [{ item: outputItem, chance: 10000 }];
-        makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
+        const flower = Item.of(`minecraft:${beeName}_block`);
+        const baseOutputNbt = `{EntityTag:{type:"productivebees:${beeName}"}}`;
+        addBeeRecipes(beeName, flower, {
+            nbt: baseOutputNbt,
+            count: 10
+        });
     }
 
     // Recipes based on the previous list of .json files
     addGenericBeeRecipe('amethyst');
-    makeMatrixRecipes(
-        'kubejs:gtceu/melferious_matrix/crystalline',
-        Item.of('productivebees:bee_cage', '{type:"productivebees:crystalline", entity: "productivebees:configurable_bee"}'),
-        Item.of('minecraft:quartz_block'),
-        [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:crystalline"}}'), chance: 10000 }]
-    );
+
+    // Crystalline Bee
+    const crystallineFlower = Item.of('minecraft:quartz_block');
+    const crystallineOutputNbt = `{EntityTag:{type:"productivebees:crystalline"}}`;
+    addBeeRecipes('crystalline', crystallineFlower, {
+        nbt: crystallineOutputNbt,
+        count: 10
+    });
+
     addGenericBeeRecipe('diamond');
     addGenericBeeRecipe('emerald');
     addGemBeeRecipe('lapis');
@@ -137,163 +190,240 @@ ServerEvents.recipes(phoenixvine => {
     addOreBeeRecipe('sodalite');
     addOreBeeRecipe('cinnabar');
     addOreBeeRecipe('apatite');
-    makeMatrixRecipes(
-        'kubejs:gtceu/melferious_matrix/neutronium',
-        Item.of('productivebees:bee_cage', '{type:"productivebees:neutronium", entity: "productivebees:configurable_bee"}'),
-        Item.of('gtceu:neutronium_block'),
-        [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:neutronium"}}'), chance: 10000 }]
-    );
-makeMatrixRecipes(
-    'kubejs:gtceu/melferious_matrix/slimy',
-    Item.of('productivebees:bee_cage', '{type:"productivebees:slimy", entity: "productivebees:configurable_bee"}'),
-    Item.of('minecraft:slime_block'),
-    [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:slimy"}}'), chance: 10000 }]
-);
-    addOreBeeRecipe('oilsands'); // Might not have a block form
+
+    // Neutronium Bee
+    const neutroniumFlower = Item.of('gtceu:neutronium_block');
+    const neutroniumOutputNbt = `{EntityTag:{type:"productivebees:neutronium"}}`;
+    addBeeRecipes('neutronium', neutroniumFlower, {
+        nbt: neutroniumOutputNbt,
+        count: 10
+    });
+
+    // Slimy Bee
+    const slimyFlower = Item.of('minecraft:slime_block');
+    const slimyOutputNbt = `{EntityTag:{type:"productivebees:slimy"}}`;
+    addBeeRecipes('slimy', slimyFlower, {
+        nbt: slimyOutputNbt,
+        count: 10
+    });
+
+    addOreBeeRecipe('oilsands');
     addOreBeeRecipe('palladium');
     addOreBeeRecipe('pyrochlore');
     addOreBeeRecipe('pyrolusite');
     addOreBeeRecipe('realgar');
     addOreBeeRecipe('scheelite');
-    makeMatrixRecipes(
-        'kubejs:gtceu/melferious_matrix/sheldonite',
-        Item.of('productivebees:bee_cage', '{type:"productivebees:sheldonite", entity: "productivebees:configurable_bee"}'),
-        Item.of('gtceu:raw_cooperite_block'),
-        [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:sheldonite"}}'), chance: 10000 }]
-    );
+
+    // Sheldonite Bee
+    const sheldoniteFlower = Item.of('gtceu:raw_cooperite_block');
+    const sheldoniteOutputNbt = `{EntityTag:{type:"productivebees:sheldonite"}}`;
+    addBeeRecipes('sheldonite', sheldoniteFlower, {
+        nbt: sheldoniteOutputNbt,
+        count: 10
+    });
+
     addOreBeeRecipe('sphalerite');
     addOreBeeRecipe('stibnite');
     addOreBeeRecipe('tantalite');
     addOreBeeRecipe('tetrahedrite');
-    addOreBeeRecipe('tricalcium_phosphate'); // Might not have a block form
+    addOreBeeRecipe('tricalcium_phosphate');
     addOreBeeRecipe('tungstate');
     addOreBeeRecipe('vanadium_magnetite');
-//////////////////// Wanna Section ////////////////
-function addWannaBeeRecipe(beeName, mobEntityType) {
-    const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(' ', '_')}`)
-        .circuit(1)
-        .EUt(1048)
-        .duration(300)
-        .notConsumable(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', `{type:"productivebees:wanna", entity: "productivebees:configurable_bee"}`)).withCount(1))
-        .notConsumable(Item.of("productivebees:amber", `{BlockEntityTag:{EntityData:{entityType:"${mobEntityType}"}}}`).weakNBT())
-        .notConsumable(Item.of('productivebees:upgrade_productivity_2', 1));
-    return recipeBuilder; // Return the recipe builder to chain output definitions
-}
 
-const piglinRecipe = addWannaBeeRecipe('Piglin', 'minecraft:piglin');
-piglinRecipe.chancedOutput('minecraft:gold_ingot', 6000, 1); // 60%
-piglinRecipe.chancedOutput('minecraft:rotten_flesh', 4000, 1); // 40%
-piglinRecipe.chancedOutput('minecraft:porkchop', 3000, 1); // 30%
-
-const hoglinRecipe = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin');
-hoglinRecipe.chancedOutput('minecraft:porkchop', 7000, 2); // 70%
-hoglinRecipe.chancedOutput('minecraft:leather', 5000, 1); // 50%
-
-const zombifiedPiglinRecipe = addWannaBeeRecipe('Zombified Piglin', 'minecraft:zombified_piglin');
-zombifiedPiglinRecipe.chancedOutput('minecraft:gold_ingot', 5000, 1); // 50%
-zombifiedPiglinRecipe.chancedOutput('minecraft:rotten_flesh', 6000, 2); // 60%
-
-const zombifiedHoglinRecipe = addWannaBeeRecipe('Zombified Hoglin', 'minecraft:zombified_hoglin');
-zombifiedHoglinRecipe.chancedOutput('minecraft:rotten_flesh', 7500, 2); // 75%
-zombifiedHoglinRecipe.chancedOutput('minecraft:leather', 4000, 1); // 40%
-
-const piglinBruteRecipe = addWannaBeeRecipe('Piglin Brute', 'minecraft:piglin_brute');
-piglinBruteRecipe.chancedOutput('minecraft:gold_ingot', 8000, 2); // 80%
-piglinBruteRecipe.chancedOutput('minecraft:rotten_flesh', 2000, 1); // 20%
-piglinBruteRecipe.chancedOutput('minecraft:porkchop', 4000, 1); // 40%
-
-const shulkerRecipe = addWannaBeeRecipe('Shulker', 'minecraft:shulker');
-shulkerRecipe.chancedOutput('minecraft:shulker_shell', 6500, 1); // 65%
-
-const phantomRecipe = addWannaBeeRecipe('Phantom', 'minecraft:phantom');
-phantomRecipe.chancedOutput('minecraft:phantom_membrane', 7000, 1); // 70%
-
-const blazeRecipe = addWannaBeeRecipe('Blaze', 'minecraft:blaze');
-blazeRecipe.chancedOutput('minecraft:blaze_rod', 6000, 1); // 60%
-
-const elderGuardianRecipe = addWannaBeeRecipe('Elder Guardian', 'minecraft:elder_guardian');
-elderGuardianRecipe.chancedOutput('minecraft:prismarine_shard', 5000, 3); // 50%
-elderGuardianRecipe.chancedOutput('minecraft:prismarine_crystals', 4000, 2); // 40%
-elderGuardianRecipe.chancedOutput('minecraft:sponge', 1000, 1); // 10%
-
-const evokerRecipe = addWannaBeeRecipe('Evoker', 'minecraft:evoker');
-evokerRecipe.chancedOutput('minecraft:totem_of_undying', 1500, 1); // 15%
-evokerRecipe.chancedOutput('minecraft:emerald', 5000, 2); // 50%
-
-const magmaCubeRecipe = addWannaBeeRecipe('Magma Cube', 'minecraft:magma_cube');
-magmaCubeRecipe.chancedOutput('minecraft:magma_cream', 7500, 2); // 75%
-
-const wardenRecipe = addWannaBeeRecipe('Warden', 'minecraft:warden');
-wardenRecipe.chancedOutput('minecraft:sculk_catalyst', 1000, 1); // 10%
-wardenRecipe.chancedOutput('minecraft:echo_shard', 3000, 2); // 30%
-
-const illagerRecipe = addWannaBeeRecipe('Illager', 'minecraft:pillager'); // Using pillager as a general illager
-illagerRecipe.chancedOutput('minecraft:crossbow', 4000, 1); // 40%
-
-const slimeRecipe = addWannaBeeRecipe('Slime', 'minecraft:slime');
-slimeRecipe.chancedOutput('minecraft:slime_ball', 8000, 3); // 80%
-
-const vindicatorRecipe = addWannaBeeRecipe('Vindicator', 'minecraft:vindicator');
-vindicatorRecipe.chancedOutput('minecraft:emerald', 5500, 1); // 55%
-vindicatorRecipe.chancedOutput('minecraft:iron_axe', 4000, 1); // 40%
-
-const witchRecipe = addWannaBeeRecipe('Witch', 'minecraft:witch');
-witchRecipe.chancedOutput('minecraft:glass_bottle', 5000, 1); // 50%
-witchRecipe.chancedOutput('minecraft:glowstone_dust', 3000, 1); // 30%
-witchRecipe.chancedOutput('minecraft:redstone', 3000, 1); // 30%
-witchRecipe.chancedOutput('minecraft:spider_eye', 3000, 1); // 30%
-witchRecipe.chancedOutput('minecraft:sugar', 3000, 1); // 30%
-witchRecipe.chancedOutput('minecraft:stick', 3000, 1); // 30%
-witchRecipe.chancedOutput('minecraft:gunpowder', 3000, 1); // 30%
-
-const witherSkeletonRecipe = addWannaBeeRecipe('Wither Skeleton', 'minecraft:wither_skeleton');
-witherSkeletonRecipe.chancedOutput('minecraft:coal', 6000, 1); // 60%
-witherSkeletonRecipe.chancedOutput('minecraft:bone', 5000, 1); // 50%
-witherSkeletonRecipe.chancedOutput('minecraft:wither_skeleton_skull', 500, 1); // 5%
-
-const creeperRecipe = addWannaBeeRecipe('Creeper', 'minecraft:creeper');
-creeperRecipe.chancedOutput('minecraft:gunpowder', 7500, 2); // 75%
-
-const zombieRecipe = addWannaBeeRecipe('Zombie', 'minecraft:zombie');
-zombieRecipe.chancedOutput('minecraft:rotten_flesh', 9000, 3); // 90%
-zombieRecipe.chancedOutput('minecraft:iron_ingot', 500, 1);    // 5%
-zombieRecipe.chancedOutput('minecraft:carrot', 500, 1);      // 5%
-zombieRecipe.chancedOutput('minecraft:potato', 500, 1);      // 5%
-
-const skeletonRecipe = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton');
-skeletonRecipe.chancedOutput('minecraft:bone', 8000, 2);      // 80%
-skeletonRecipe.chancedOutput('minecraft:arrow', 500, 1);     // 5%
-
-const spiderRecipe = addWannaBeeRecipe('Spider', 'minecraft:spider');
-spiderRecipe.chancedOutput('minecraft:string', 8500, 4);      // 85%
-spiderRecipe.chancedOutput('minecraft:spider_eye', 1000, 1); // 10%
-
-const endermanRecipe = addWannaBeeRecipe('Enderman', 'minecraft:enderman');
-endermanRecipe.chancedOutput('minecraft:ender_pearl', 6000, 1); // 60%
-
-const ghastRecipe = addWannaBeeRecipe('Ghast', 'minecraft:ghast');
-ghastRecipe.chancedOutput('minecraft:ghast_tear', 7000, 1); // 70%
-ghastRecipe.chancedOutput('minecraft:gunpowder', 2000, 1);    // 20%
-
-const witherRecipe = addWannaBeeRecipe('Wither', 'minecraft:wither');
-witherRecipe.chancedOutput('minecraft:nether_star', 1000, 1); // 10%
-
-const enderDragonRecipe = addWannaBeeRecipe('EnderDragon', 'minecraft:ender_dragon');
-enderDragonRecipe.chancedOutput('minecraft:dragon_breath', 5000, 5); // 50%
-
-const cowRecipe = addWannaBeeRecipe('Cow', 'minecraft:cow');
-cowRecipe.chancedOutput('minecraft:leather', 9500, 2); // 95%
-cowRecipe.chancedOutput('minecraft:beef', 9000, 2);    // 90%
-
-const rabbitRecipe = addWannaBeeRecipe('Rabbit', 'minecraft:rabbit');
-rabbitRecipe.chancedOutput('minecraft:rabbit_hide', 8000, 1);    // 80%
-rabbitRecipe.chancedOutput('minecraft:rabbit_foot', 1000, 1);    // 10%
-rabbitRecipe.chancedOutput('minecraft:cooked_rabbit', 7000, 1); // 70%
-
-const pigRecipe = addWannaBeeRecipe('Pig', 'minecraft:pig');
-pigRecipe.chancedOutput('minecraft:porkchop', 9200, 3); // 92%
-
-const sheepRecipe = addWannaBeeRecipe('Sheep', 'minecraft:sheep');
-sheepRecipe.chancedOutput('minecraft:mutton', 9000, 2); // 90%
-sheepRecipe.chancedOutput('minecraft:wool', 8500, 1);    // 85%
+    // Draconic Bee
+    const draconicFlower = Item.of('minecraft:dragon_egg');
+    const draconicOutputNbt = `{EntityTag:{type:"productivebees:draconic"}}`;
+    addBeeRecipes('draconic', draconicFlower, {
+        nbt: draconicOutputNbt,
+        count: 10
     });
+
+    function addWannaBeeRecipe(beeName, mobEntityType) {
+        const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(' ', '_')}_omega`)
+            .EUt(1048)
+            .duration(30)
+            .notConsumable(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', `{type:"productivebees:wanna", entity: "productivebees:configurable_bee"}`)).withCount(1))
+            .notConsumable(Item.of("productivebees:amber", `{BlockEntityTag:{EntityData:{entityType:"${mobEntityType}"}}}`).weakNBT())
+            .notConsumable(Item.of('productivebees:upgrade_productivity_4', 1)); // Using productivity 4 for Omega
+        return recipeBuilder; // Return the recipe builder to chain output definitions
+    }
+
+    function setCircuit(recipeBuilder, circuitLevel) {
+        recipeBuilder.circuit(circuitLevel);
+    }
+
+ // Piglin Recipes
+ const piglinRecipeOmega = addWannaBeeRecipe('Piglin', 'minecraft:piglin');
+ setCircuit(piglinRecipeOmega, 4); // Assuming Omega tier needs a higher circuit
+ piglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 8000, 5);
+ piglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 2000, 5);
+ piglinRecipeOmega.chancedOutput('minecraft:porkchop', 5000, 5);
+
+ // Hoglin Recipes
+ const hoglinRecipeOmega = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin');
+ setCircuit(hoglinRecipeOmega, 4);
+ hoglinRecipeOmega.chancedOutput('minecraft:porkchop', 9000, 5);
+ hoglinRecipeOmega.chancedOutput('minecraft:leather', 7000, 5);
+
+ // Zombified Piglin Recipes
+ const zombifiedPiglinRecipeOmega = addWannaBeeRecipe('Zombified Piglin', 'minecraft:zombified_piglin');
+ setCircuit(zombifiedPiglinRecipeOmega, 4);
+ zombifiedPiglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 7000, 5);
+ zombifiedPiglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 8000, 5);
+
+ // Zombified Hoglin Recipes
+ const zombifiedHoglinRecipeOmega = addWannaBeeRecipe('Zombified Hoglin', 'minecraft:zombified_hoglin');
+ setCircuit(zombifiedHoglinRecipeOmega, 4);
+ zombifiedHoglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 9500, 5);
+ zombifiedHoglinRecipeOmega.chancedOutput('minecraft:leather', 6000, 5);
+
+ // Piglin Brute Recipes
+ const piglinBruteRecipeOmega = addWannaBeeRecipe('Piglin Brute', 'minecraft:piglin_brute');
+ setCircuit(piglinBruteRecipeOmega, 4);
+ piglinBruteRecipeOmega.chancedOutput('minecraft:gold_ingot', 9000, 5);
+ piglinBruteRecipeOmega.chancedOutput('minecraft:rotten_flesh', 1000, 5);
+ piglinBruteRecipeOmega.chancedOutput('minecraft:porkchop', 6000, 5);
+
+ // Shulker Recipes
+ const shulkerRecipeOmega = addWannaBeeRecipe('Shulker', 'minecraft:shulker');
+ setCircuit(shulkerRecipeOmega, 4);
+ shulkerRecipeOmega.chancedOutput('minecraft:shulker_shell', 8500, 5);
+
+ // Phantom Recipes
+ const phantomRecipeOmega = addWannaBeeRecipe('Phantom', 'minecraft:phantom');
+ setCircuit(phantomRecipeOmega, 4);
+ phantomRecipeOmega.chancedOutput('minecraft:phantom_membrane', 9000, 5);
+
+ // Blaze Recipes
+ const blazeRecipeOmega = addWannaBeeRecipe('Blaze', 'minecraft:blaze');
+ setCircuit(blazeRecipeOmega, 4);
+ blazeRecipeOmega.chancedOutput('minecraft:blaze_rod', 8000, 5);
+
+ // Elder Guardian Recipes
+ const elderGuardianRecipeOmega = addWannaBeeRecipe('Elder Guardian', 'minecraft:elder_guardian');
+ setCircuit(elderGuardianRecipeOmega, 4);
+ elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_shard', 7000, 5);
+ elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_crystals', 6000, 5);
+ elderGuardianRecipeOmega.chancedOutput('minecraft:sponge', 2000, 5);
+
+ // Evoker Recipes
+ const evokerRecipeOmega = addWannaBeeRecipe('Evoker', 'minecraft:evoker');
+ setCircuit(evokerRecipeOmega, 4);
+ evokerRecipeOmega.chancedOutput('minecraft:totem_of_undying', 3000, 5);
+ evokerRecipeOmega.chancedOutput('minecraft:emerald', 7000, 5);
+
+ // Magma Cube Recipes
+ const magmaCubeRecipeOmega = addWannaBeeRecipe('Magma Cube', 'minecraft:magma_cube');
+ setCircuit(magmaCubeRecipeOmega, 4);
+ magmaCubeRecipeOmega.chancedOutput('minecraft:magma_cream', 9500, 5);
+
+ // Warden Recipes
+ const wardenRecipeOmega = addWannaBeeRecipe('Warden', 'minecraft:warden');
+ setCircuit(wardenRecipeOmega, 4);
+ wardenRecipeOmega.chancedOutput('minecraft:sculk_catalyst', 2000, 5);
+ wardenRecipeOmega.chancedOutput('minecraft:echo_shard', 5000, 5);
+
+ // Illager Recipes (using Pillager as a general illager)
+ const illagerRecipeOmega = addWannaBeeRecipe('Illager', 'minecraft:pillager');
+ setCircuit(illagerRecipeOmega, 4);
+ illagerRecipeOmega.chancedOutput('minecraft:crossbow', 6000, 5);
+
+ // Slime Recipes
+ const slimeRecipeOmega = addWannaBeeRecipe('Slime', 'minecraft:slime');
+ setCircuit(slimeRecipeOmega, 4);
+ slimeRecipeOmega.chancedOutput('minecraft:slime_ball', 9500, 5);
+
+ // Vindicator Recipes
+ const vindicatorRecipeOmega = addWannaBeeRecipe('Vindicator', 'minecraft:vindicator');
+ setCircuit(vindicatorRecipeOmega, 4);
+ vindicatorRecipeOmega.chancedOutput('minecraft:emerald', 7500, 5);
+ vindicatorRecipeOmega.chancedOutput('minecraft:iron_axe', 6000, 5);
+
+ // Witch Recipes
+ const witchRecipeOmega = addWannaBeeRecipe('Witch', 'minecraft:witch');
+ setCircuit(witchRecipeOmega, 4);
+ witchRecipeOmega.chancedOutput('minecraft:glass_bottle', 7000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:glowstone_dust', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:redstone', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:spider_eye', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:sugar', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:stick', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:gunpowder', 5000, 5);
+
+ // Wither Skeleton Recipes
+ const witherSkeletonRecipeOmega = addWannaBeeRecipe('Wither Skeleton', 'minecraft:wither_skeleton');
+ setCircuit(witherSkeletonRecipeOmega, 4);
+ witherSkeletonRecipeOmega.chancedOutput('minecraft:coal', 8000, 5);
+ witherSkeletonRecipeOmega.chancedOutput('minecraft:bone', 7000, 5);
+ witherSkeletonRecipeOmega.chancedOutput('minecraft:wither_skeleton_skull', 1000, 5);
+
+ // Creeper Recipes
+ const creeperRecipeOmega = addWannaBeeRecipe('Creeper', 'minecraft:creeper');
+ setCircuit(creeperRecipeOmega, 4);
+ creeperRecipeOmega.chancedOutput('minecraft:gunpowder', 9500, 5);
+
+ // Zombie Recipes
+ const zombieRecipeOmega = addWannaBeeRecipe('Zombie', 'minecraft:zombie');
+ setCircuit(zombieRecipeOmega, 4);
+ zombieRecipeOmega.chancedOutput('minecraft:rotten_flesh', 10000, 5);
+ zombieRecipeOmega.chancedOutput('minecraft:iron_ingot', 1000, 5);
+ zombieRecipeOmega.chancedOutput('minecraft:carrot', 1000, 5);
+ zombieRecipeOmega.chancedOutput('minecraft:potato', 1000, 5);
+
+ // Skeleton Recipes
+ const skeletonRecipeOmega = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton');
+ setCircuit(skeletonRecipeOmega, 4);
+ skeletonRecipeOmega.chancedOutput('minecraft:bone', 9000, 5);
+ skeletonRecipeOmega.chancedOutput('minecraft:arrow', 1000, 5);
+
+ // Spider Recipes
+ const spiderRecipeOmega = addWannaBeeRecipe('Spider', 'minecraft:spider');
+ setCircuit(spiderRecipeOmega, 4);
+ spiderRecipeOmega.chancedOutput('minecraft:string', 9500, 5);
+ spiderRecipeOmega.chancedOutput('minecraft:spider_eye', 2000, 5);
+
+ // Enderman Recipes
+ const endermanRecipeOmega = addWannaBeeRecipe('Enderman', 'minecraft:enderman');
+ setCircuit(endermanRecipeOmega, 4);
+ endermanRecipeOmega.chancedOutput('minecraft:ender_pearl', 8000, 5);
+
+ // Ghast Recipes
+ const ghastRecipeOmega = addWannaBeeRecipe('Ghast', 'minecraft:ghast');
+ setCircuit(ghastRecipeOmega, 4);
+ ghastRecipeOmega.chancedOutput('minecraft:ghast_tear', 9000, 5);
+ ghastRecipeOmega.chancedOutput('minecraft:gunpowder', 4000, 5);
+
+ // Wither Recipes
+ const witherRecipeOmega = addWannaBeeRecipe('Wither', 'minecraft:wither');
+ setCircuit(witherRecipeOmega, 4);
+ witherRecipeOmega.chancedOutput('minecraft:nether_star', 2000, 5);
+
+ // EnderDragon Recipes
+ const enderDragonRecipeOmega = addWannaBeeRecipe('EnderDragon', 'minecraft:ender_dragon');
+ setCircuit(enderDragonRecipeOmega, 4);
+ enderDragonRecipeOmega.chancedOutput('minecraft:dragon_breath', 7000, 5);
+
+ // Cow Recipes
+ const cowRecipeOmega = addWannaBeeRecipe('Cow', 'minecraft:cow');
+ setCircuit(cowRecipeOmega, 4);
+ cowRecipeOmega.chancedOutput('minecraft:leather', 10000, 5);
+ cowRecipeOmega.chancedOutput('minecraft:beef', 10000, 5);
+
+ // Rabbit Recipes
+ const rabbitRecipeOmega = addWannaBeeRecipe('Rabbit', 'minecraft:rabbit');
+ setCircuit(rabbitRecipeOmega, 4);
+ rabbitRecipeOmega.chancedOutput('minecraft:rabbit_hide', 9000, 5);
+ rabbitRecipeOmega.chancedOutput('minecraft:rabbit_foot', 2000, 5);
+ rabbitRecipeOmega.chancedOutput('minecraft:cooked_rabbit', 9000, 5);
+
+ // Pig Recipes
+ const pigRecipeOmega = addWannaBeeRecipe('Pig', 'minecraft:pig');
+ setCircuit(pigRecipeOmega, 4);
+ pigRecipeOmega.chancedOutput('minecraft:porkchop', 10000, 5);
+
+ // Sheep Recipes
+ const sheepRecipeOmega = addWannaBeeRecipe('Sheep', 'minecraft:sheep');
+ setCircuit(sheepRecipeOmega, 4);
+ sheepRecipeOmega.chancedOutput('minecraft:mutton', 10000, 5);
+ sheepRecipeOmega.chancedOutput('minecraft:wool', 9500, 5);
+ });
