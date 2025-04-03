@@ -241,7 +241,7 @@ ServerEvents.recipes(phoenixvine => {
     function addWannaBeeRecipe(beeName, mobEntityType) {
         const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(' ', '_')}_omega`)
             .EUt(1048)
-            .duration(300)
+            .duration(30)
             .notConsumable(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', `{type:"productivebees:wanna", entity: "productivebees:configurable_bee"}`)).withCount(1))
             .notConsumable(Item.of("productivebees:amber", `{BlockEntityTag:{EntityData:{entityType:"${mobEntityType}"}}}`).weakNBT())
             .notConsumable(Item.of('productivebees:upgrade_productivity_4', 1)); // Using productivity 4 for Omega
@@ -252,178 +252,178 @@ ServerEvents.recipes(phoenixvine => {
         recipeBuilder.circuit(circuitLevel);
     }
 
-    // Piglin Recipes
-    const piglinRecipeOmega = addWannaBeeRecipe('Piglin', 'minecraft:piglin');
-    setCircuit(piglinRecipeOmega, 4); // Assuming Omega tier needs a higher circuit
-    piglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 8000, 3);
-    piglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 2000, 1);
-    piglinRecipeOmega.chancedOutput('minecraft:porkchop', 5000, 2);
+ // Piglin Recipes
+ const piglinRecipeOmega = addWannaBeeRecipe('Piglin', 'minecraft:piglin');
+ setCircuit(piglinRecipeOmega, 4); // Assuming Omega tier needs a higher circuit
+ piglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 8000, 5);
+ piglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 2000, 5);
+ piglinRecipeOmega.chancedOutput('minecraft:porkchop', 5000, 5);
 
-    // Hoglin Recipes
-    const hoglinRecipeOmega = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin');
-    setCircuit(hoglinRecipeOmega, 4);
-    hoglinRecipeOmega.chancedOutput('minecraft:porkchop', 9000, 4);
-    hoglinRecipeOmega.chancedOutput('minecraft:leather', 7000, 2);
+ // Hoglin Recipes
+ const hoglinRecipeOmega = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin');
+ setCircuit(hoglinRecipeOmega, 4);
+ hoglinRecipeOmega.chancedOutput('minecraft:porkchop', 9000, 5);
+ hoglinRecipeOmega.chancedOutput('minecraft:leather', 7000, 5);
 
-    // Zombified Piglin Recipes
-    const zombifiedPiglinRecipeOmega = addWannaBeeRecipe('Zombified Piglin', 'minecraft:zombified_piglin');
-    setCircuit(zombifiedPiglinRecipeOmega, 4);
-    zombifiedPiglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 7000, 2);
-    zombifiedPiglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 8000, 4);
+ // Zombified Piglin Recipes
+ const zombifiedPiglinRecipeOmega = addWannaBeeRecipe('Zombified Piglin', 'minecraft:zombified_piglin');
+ setCircuit(zombifiedPiglinRecipeOmega, 4);
+ zombifiedPiglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 7000, 5);
+ zombifiedPiglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 8000, 5);
 
-    // Zombified Hoglin Recipes
-    const zombifiedHoglinRecipeOmega = addWannaBeeRecipe('Zombified Hoglin', 'minecraft:zombified_hoglin');
-    setCircuit(zombifiedHoglinRecipeOmega, 4);
-    zombifiedHoglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 9500, 4);
-    zombifiedHoglinRecipeOmega.chancedOutput('minecraft:leather', 6000, 2);
+ // Zombified Hoglin Recipes
+ const zombifiedHoglinRecipeOmega = addWannaBeeRecipe('Zombified Hoglin', 'minecraft:zombified_hoglin');
+ setCircuit(zombifiedHoglinRecipeOmega, 4);
+ zombifiedHoglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 9500, 5);
+ zombifiedHoglinRecipeOmega.chancedOutput('minecraft:leather', 6000, 5);
 
-    // Piglin Brute Recipes
-    const piglinBruteRecipeOmega = addWannaBeeRecipe('Piglin Brute', 'minecraft:piglin_brute');
-    setCircuit(piglinBruteRecipeOmega, 4);
-    piglinBruteRecipeOmega.chancedOutput('minecraft:gold_ingot', 9000, 4);
-    piglinBruteRecipeOmega.chancedOutput('minecraft:rotten_flesh', 1000, 1);
-    piglinBruteRecipeOmega.chancedOutput('minecraft:porkchop', 6000, 2);
+ // Piglin Brute Recipes
+ const piglinBruteRecipeOmega = addWannaBeeRecipe('Piglin Brute', 'minecraft:piglin_brute');
+ setCircuit(piglinBruteRecipeOmega, 4);
+ piglinBruteRecipeOmega.chancedOutput('minecraft:gold_ingot', 9000, 5);
+ piglinBruteRecipeOmega.chancedOutput('minecraft:rotten_flesh', 1000, 5);
+ piglinBruteRecipeOmega.chancedOutput('minecraft:porkchop', 6000, 5);
 
-    // Shulker Recipes
-    const shulkerRecipeOmega = addWannaBeeRecipe('Shulker', 'minecraft:shulker');
-    setCircuit(shulkerRecipeOmega, 4);
-    shulkerRecipeOmega.chancedOutput('minecraft:shulker_shell', 8500, 2);
+ // Shulker Recipes
+ const shulkerRecipeOmega = addWannaBeeRecipe('Shulker', 'minecraft:shulker');
+ setCircuit(shulkerRecipeOmega, 4);
+ shulkerRecipeOmega.chancedOutput('minecraft:shulker_shell', 8500, 5);
 
-    // Phantom Recipes
-    const phantomRecipeOmega = addWannaBeeRecipe('Phantom', 'minecraft:phantom');
-    setCircuit(phantomRecipeOmega, 4);
-    phantomRecipeOmega.chancedOutput('minecraft:phantom_membrane', 9000, 2);
+ // Phantom Recipes
+ const phantomRecipeOmega = addWannaBeeRecipe('Phantom', 'minecraft:phantom');
+ setCircuit(phantomRecipeOmega, 4);
+ phantomRecipeOmega.chancedOutput('minecraft:phantom_membrane', 9000, 5);
 
-    // Blaze Recipes
-    const blazeRecipeOmega = addWannaBeeRecipe('Blaze', 'minecraft:blaze');
-    setCircuit(blazeRecipeOmega, 4);
-    blazeRecipeOmega.chancedOutput('minecraft:blaze_rod', 8000, 2);
+ // Blaze Recipes
+ const blazeRecipeOmega = addWannaBeeRecipe('Blaze', 'minecraft:blaze');
+ setCircuit(blazeRecipeOmega, 4);
+ blazeRecipeOmega.chancedOutput('minecraft:blaze_rod', 8000, 5);
 
-    // Elder Guardian Recipes
-    const elderGuardianRecipeOmega = addWannaBeeRecipe('Elder Guardian', 'minecraft:elder_guardian');
-    setCircuit(elderGuardianRecipeOmega, 4);
-    elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_shard', 7000, 5);
-    elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_crystals', 6000, 3);
-    elderGuardianRecipeOmega.chancedOutput('minecraft:sponge', 2000, 1);
+ // Elder Guardian Recipes
+ const elderGuardianRecipeOmega = addWannaBeeRecipe('Elder Guardian', 'minecraft:elder_guardian');
+ setCircuit(elderGuardianRecipeOmega, 4);
+ elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_shard', 7000, 5);
+ elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_crystals', 6000, 5);
+ elderGuardianRecipeOmega.chancedOutput('minecraft:sponge', 2000, 5);
 
-    // Evoker Recipes
-    const evokerRecipeOmega = addWannaBeeRecipe('Evoker', 'minecraft:evoker');
-    setCircuit(evokerRecipeOmega, 4);
-    evokerRecipeOmega.chancedOutput('minecraft:totem_of_undying', 3000, 1);
-    evokerRecipeOmega.chancedOutput('minecraft:emerald', 7000, 4);
+ // Evoker Recipes
+ const evokerRecipeOmega = addWannaBeeRecipe('Evoker', 'minecraft:evoker');
+ setCircuit(evokerRecipeOmega, 4);
+ evokerRecipeOmega.chancedOutput('minecraft:totem_of_undying', 3000, 5);
+ evokerRecipeOmega.chancedOutput('minecraft:emerald', 7000, 5);
 
-    // Magma Cube Recipes
-    const magmaCubeRecipeOmega = addWannaBeeRecipe('Magma Cube', 'minecraft:magma_cube');
-    setCircuit(magmaCubeRecipeOmega, 4);
-    magmaCubeRecipeOmega.chancedOutput('minecraft:magma_cream', 9500, 4);
+ // Magma Cube Recipes
+ const magmaCubeRecipeOmega = addWannaBeeRecipe('Magma Cube', 'minecraft:magma_cube');
+ setCircuit(magmaCubeRecipeOmega, 4);
+ magmaCubeRecipeOmega.chancedOutput('minecraft:magma_cream', 9500, 5);
 
-    // Warden Recipes
-    const wardenRecipeOmega = addWannaBeeRecipe('Warden', 'minecraft:warden');
-    setCircuit(wardenRecipeOmega, 4);
-    wardenRecipeOmega.chancedOutput('minecraft:sculk_catalyst', 2000, 1);
-    wardenRecipeOmega.chancedOutput('minecraft:echo_shard', 5000, 4);
+ // Warden Recipes
+ const wardenRecipeOmega = addWannaBeeRecipe('Warden', 'minecraft:warden');
+ setCircuit(wardenRecipeOmega, 4);
+ wardenRecipeOmega.chancedOutput('minecraft:sculk_catalyst', 2000, 5);
+ wardenRecipeOmega.chancedOutput('minecraft:echo_shard', 5000, 5);
 
-    // Illager Recipes (using Pillager as a general illager)
-    const illagerRecipeOmega = addWannaBeeRecipe('Illager', 'minecraft:pillager');
-    setCircuit(illagerRecipeOmega, 4);
-    illagerRecipeOmega.chancedOutput('minecraft:crossbow', 6000, 2);
+ // Illager Recipes (using Pillager as a general illager)
+ const illagerRecipeOmega = addWannaBeeRecipe('Illager', 'minecraft:pillager');
+ setCircuit(illagerRecipeOmega, 4);
+ illagerRecipeOmega.chancedOutput('minecraft:crossbow', 6000, 5);
 
-    // Slime Recipes
-    const slimeRecipeOmega = addWannaBeeRecipe('Slime', 'minecraft:slime');
-    setCircuit(slimeRecipeOmega, 4);
-    slimeRecipeOmega.chancedOutput('minecraft:slime_ball', 9500, 5);
+ // Slime Recipes
+ const slimeRecipeOmega = addWannaBeeRecipe('Slime', 'minecraft:slime');
+ setCircuit(slimeRecipeOmega, 4);
+ slimeRecipeOmega.chancedOutput('minecraft:slime_ball', 9500, 5);
 
-    // Vindicator Recipes
-    const vindicatorRecipeOmega = addWannaBeeRecipe('Vindicator', 'minecraft:vindicator');
-    setCircuit(vindicatorRecipeOmega, 4);
-    vindicatorRecipeOmega.chancedOutput('minecraft:emerald', 7500, 2);
-    vindicatorRecipeOmega.chancedOutput('minecraft:iron_axe', 6000, 2);
+ // Vindicator Recipes
+ const vindicatorRecipeOmega = addWannaBeeRecipe('Vindicator', 'minecraft:vindicator');
+ setCircuit(vindicatorRecipeOmega, 4);
+ vindicatorRecipeOmega.chancedOutput('minecraft:emerald', 7500, 5);
+ vindicatorRecipeOmega.chancedOutput('minecraft:iron_axe', 6000, 5);
 
-    // Witch Recipes
-    const witchRecipeOmega = addWannaBeeRecipe('Witch', 'minecraft:witch');
-    setCircuit(witchRecipeOmega, 4);
-    witchRecipeOmega.chancedOutput('minecraft:glass_bottle', 7000, 2);
-    witchRecipeOmega.chancedOutput('minecraft:glowstone_dust', 5000, 2);
-    witchRecipeOmega.chancedOutput('minecraft:redstone', 5000, 2);
-    witchRecipeOmega.chancedOutput('minecraft:spider_eye', 5000, 2);
-    witchRecipeOmega.chancedOutput('minecraft:sugar', 5000, 2);
-    witchRecipeOmega.chancedOutput('minecraft:stick', 5000, 2);
-    witchRecipeOmega.chancedOutput('minecraft:gunpowder', 5000, 2);
+ // Witch Recipes
+ const witchRecipeOmega = addWannaBeeRecipe('Witch', 'minecraft:witch');
+ setCircuit(witchRecipeOmega, 4);
+ witchRecipeOmega.chancedOutput('minecraft:glass_bottle', 7000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:glowstone_dust', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:redstone', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:spider_eye', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:sugar', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:stick', 5000, 5);
+ witchRecipeOmega.chancedOutput('minecraft:gunpowder', 5000, 5);
 
-    // Wither Skeleton Recipes
-    const witherSkeletonRecipeOmega = addWannaBeeRecipe('Wither Skeleton', 'minecraft:wither_skeleton');
-    setCircuit(witherSkeletonRecipeOmega, 4);
-    witherSkeletonRecipeOmega.chancedOutput('minecraft:coal', 8000, 2);
-    witherSkeletonRecipeOmega.chancedOutput('minecraft:bone', 7000, 2);
-    witherSkeletonRecipeOmega.chancedOutput('minecraft:wither_skeleton_skull', 1000, 2);
+ // Wither Skeleton Recipes
+ const witherSkeletonRecipeOmega = addWannaBeeRecipe('Wither Skeleton', 'minecraft:wither_skeleton');
+ setCircuit(witherSkeletonRecipeOmega, 4);
+ witherSkeletonRecipeOmega.chancedOutput('minecraft:coal', 8000, 5);
+ witherSkeletonRecipeOmega.chancedOutput('minecraft:bone', 7000, 5);
+ witherSkeletonRecipeOmega.chancedOutput('minecraft:wither_skeleton_skull', 1000, 5);
 
-    // Creeper Recipes
-    const creeperRecipeOmega = addWannaBeeRecipe('Creeper', 'minecraft:creeper');
-    setCircuit(creeperRecipeOmega, 4);
-    creeperRecipeOmega.chancedOutput('minecraft:gunpowder', 9500, 4);
+ // Creeper Recipes
+ const creeperRecipeOmega = addWannaBeeRecipe('Creeper', 'minecraft:creeper');
+ setCircuit(creeperRecipeOmega, 4);
+ creeperRecipeOmega.chancedOutput('minecraft:gunpowder', 9500, 5);
 
-    // Zombie Recipes
-    const zombieRecipeOmega = addWannaBeeRecipe('Zombie', 'minecraft:zombie');
-    setCircuit(zombieRecipeOmega, 4);
-    zombieRecipeOmega.chancedOutput('minecraft:rotten_flesh', 10000, 5);
-    zombieRecipeOmega.chancedOutput('minecraft:iron_ingot', 1000, 2);
-    zombieRecipeOmega.chancedOutput('minecraft:carrot', 1000, 2);
-    zombieRecipeOmega.chancedOutput('minecraft:potato', 1000, 2);
+ // Zombie Recipes
+ const zombieRecipeOmega = addWannaBeeRecipe('Zombie', 'minecraft:zombie');
+ setCircuit(zombieRecipeOmega, 4);
+ zombieRecipeOmega.chancedOutput('minecraft:rotten_flesh', 10000, 5);
+ zombieRecipeOmega.chancedOutput('minecraft:iron_ingot', 1000, 5);
+ zombieRecipeOmega.chancedOutput('minecraft:carrot', 1000, 5);
+ zombieRecipeOmega.chancedOutput('minecraft:potato', 1000, 5);
 
-    // Skeleton Recipes
-    const skeletonRecipeOmega = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton');
-    setCircuit(skeletonRecipeOmega, 4);
-    skeletonRecipeOmega.chancedOutput('minecraft:bone', 9000, 4);
-    skeletonRecipeOmega.chancedOutput('minecraft:arrow', 1000, 2);
+ // Skeleton Recipes
+ const skeletonRecipeOmega = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton');
+ setCircuit(skeletonRecipeOmega, 4);
+ skeletonRecipeOmega.chancedOutput('minecraft:bone', 9000, 5);
+ skeletonRecipeOmega.chancedOutput('minecraft:arrow', 1000, 5);
 
-    // Spider Recipes
-    const spiderRecipeOmega = addWannaBeeRecipe('Spider', 'minecraft:spider');
-    setCircuit(spiderRecipeOmega, 4);
-    spiderRecipeOmega.chancedOutput('minecraft:string', 9500, 6);
-    spiderRecipeOmega.chancedOutput('minecraft:spider_eye', 2000, 2);
+ // Spider Recipes
+ const spiderRecipeOmega = addWannaBeeRecipe('Spider', 'minecraft:spider');
+ setCircuit(spiderRecipeOmega, 4);
+ spiderRecipeOmega.chancedOutput('minecraft:string', 9500, 5);
+ spiderRecipeOmega.chancedOutput('minecraft:spider_eye', 2000, 5);
 
-    // Enderman Recipes
-    const endermanRecipeOmega = addWannaBeeRecipe('Enderman', 'minecraft:enderman');
-    setCircuit(endermanRecipeOmega, 4);
-    endermanRecipeOmega.chancedOutput('minecraft:ender_pearl', 8000, 2);
+ // Enderman Recipes
+ const endermanRecipeOmega = addWannaBeeRecipe('Enderman', 'minecraft:enderman');
+ setCircuit(endermanRecipeOmega, 4);
+ endermanRecipeOmega.chancedOutput('minecraft:ender_pearl', 8000, 5);
 
-    // Ghast Recipes
-    const ghastRecipeOmega = addWannaBeeRecipe('Ghast', 'minecraft:ghast');
-    setCircuit(ghastRecipeOmega, 4);
-    ghastRecipeOmega.chancedOutput('minecraft:ghast_tear', 9000, 2);
-    ghastRecipeOmega.chancedOutput('minecraft:gunpowder', 4000, 2);
+ // Ghast Recipes
+ const ghastRecipeOmega = addWannaBeeRecipe('Ghast', 'minecraft:ghast');
+ setCircuit(ghastRecipeOmega, 4);
+ ghastRecipeOmega.chancedOutput('minecraft:ghast_tear', 9000, 5);
+ ghastRecipeOmega.chancedOutput('minecraft:gunpowder', 4000, 5);
 
-    // Wither Recipes
-    const witherRecipeOmega = addWannaBeeRecipe('Wither', 'minecraft:wither');
-    setCircuit(witherRecipeOmega, 4);
-    witherRecipeOmega.chancedOutput('minecraft:nether_star', 2000, 1);
+ // Wither Recipes
+ const witherRecipeOmega = addWannaBeeRecipe('Wither', 'minecraft:wither');
+ setCircuit(witherRecipeOmega, 4);
+ witherRecipeOmega.chancedOutput('minecraft:nether_star', 2000, 5);
 
-    // EnderDragon Recipes
-    const enderDragonRecipeOmega = addWannaBeeRecipe('EnderDragon', 'minecraft:ender_dragon');
-    setCircuit(enderDragonRecipeOmega, 4);
-    enderDragonRecipeOmega.chancedOutput('minecraft:dragon_breath', 7000, 7);
+ // EnderDragon Recipes
+ const enderDragonRecipeOmega = addWannaBeeRecipe('EnderDragon', 'minecraft:ender_dragon');
+ setCircuit(enderDragonRecipeOmega, 4);
+ enderDragonRecipeOmega.chancedOutput('minecraft:dragon_breath', 7000, 5);
 
-    // Cow Recipes
-    const cowRecipeOmega = addWannaBeeRecipe('Cow', 'minecraft:cow');
-    setCircuit(cowRecipeOmega, 4);
-    cowRecipeOmega.chancedOutput('minecraft:leather', 10000, 3);
-    cowRecipeOmega.chancedOutput('minecraft:beef', 10000, 3);
+ // Cow Recipes
+ const cowRecipeOmega = addWannaBeeRecipe('Cow', 'minecraft:cow');
+ setCircuit(cowRecipeOmega, 4);
+ cowRecipeOmega.chancedOutput('minecraft:leather', 10000, 5);
+ cowRecipeOmega.chancedOutput('minecraft:beef', 10000, 5);
 
-    // Rabbit Recipes
-    const rabbitRecipeOmega = addWannaBeeRecipe('Rabbit', 'minecraft:rabbit');
-    setCircuit(rabbitRecipeOmega, 4);
-    rabbitRecipeOmega.chancedOutput('minecraft:rabbit_hide', 9000, 2);
-    rabbitRecipeOmega.chancedOutput('minecraft:rabbit_foot', 2000, 1);
-    rabbitRecipeOmega.chancedOutput('minecraft:cooked_rabbit', 9000, 2);
+ // Rabbit Recipes
+ const rabbitRecipeOmega = addWannaBeeRecipe('Rabbit', 'minecraft:rabbit');
+ setCircuit(rabbitRecipeOmega, 4);
+ rabbitRecipeOmega.chancedOutput('minecraft:rabbit_hide', 9000, 5);
+ rabbitRecipeOmega.chancedOutput('minecraft:rabbit_foot', 2000, 5);
+ rabbitRecipeOmega.chancedOutput('minecraft:cooked_rabbit', 9000, 5);
 
-    // Pig Recipes
-    const pigRecipeOmega = addWannaBeeRecipe('Pig', 'minecraft:pig');
-    setCircuit(pigRecipeOmega, 4);
-    pigRecipeOmega.chancedOutput('minecraft:porkchop', 10000, 5);
+ // Pig Recipes
+ const pigRecipeOmega = addWannaBeeRecipe('Pig', 'minecraft:pig');
+ setCircuit(pigRecipeOmega, 4);
+ pigRecipeOmega.chancedOutput('minecraft:porkchop', 10000, 5);
 
-    // Sheep Recipes
-    const sheepRecipeOmega = addWannaBeeRecipe('Sheep', 'minecraft:sheep');
-    setCircuit(sheepRecipeOmega, 4);
-    sheepRecipeOmega.chancedOutput('minecraft:mutton', 10000, 3);
-    sheepRecipeOmega.chancedOutput('minecraft:wool', 9500, 2);
-});
+ // Sheep Recipes
+ const sheepRecipeOmega = addWannaBeeRecipe('Sheep', 'minecraft:sheep');
+ setCircuit(sheepRecipeOmega, 4);
+ sheepRecipeOmega.chancedOutput('minecraft:mutton', 10000, 5);
+ sheepRecipeOmega.chancedOutput('minecraft:wool', 9500, 5);
+ });
