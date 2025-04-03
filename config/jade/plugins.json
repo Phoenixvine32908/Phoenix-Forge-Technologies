@@ -54,9 +54,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "entangled": {
-    "entangled_block_component": true
-  },
   "gtceu": {
     "primitive_pump": true,
     "auto_output_info": true,
@@ -133,5 +130,11 @@
     "hud.rgb16": true,
     "hud": true,
     "hud.redstone": true
+  },
+  "storagedrawers": {
+    "display.stacklimit": true,
+    "main": true,
+    "display.content": true,
+    "display.status": true
   }
 }
