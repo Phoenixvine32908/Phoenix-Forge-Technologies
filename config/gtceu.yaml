@@ -271,7 +271,7 @@ machines:
   # This is intended for modpack developers only, and is not playable without custom tweaks or addons.
   # Other mods can override this to true, regardless of the config file.
   # Default: false
-  highTierContent: false
+  highTierContent: true
 
   # Whether the Assembly Line should require the item inputs to be in order.
   # Default: true
@@ -284,71 +284,71 @@ machines:
 
   # Default maximum parallel of steam multiblocks
   # Default: 8
-  steamMultiParallelAmount: 8
+  steamMultiParallelAmount: 16
 
   # Small Steam Boiler Options
   smallBoilers:
     # The amount of steam a Steam Solid Boiler produces per second at max temperature.
     # Default: 120
-    solidBoilerBaseOutput: 120
+    solidBoilerBaseOutput: 180
 
     # The amount of steam a High Pressure Steam Solid Boiler produces per second at max temperature.
     # Default: 300
-    hpSolidBoilerBaseOutput: 300
+    hpSolidBoilerBaseOutput: 340
 
     # The amount of steam a Steam Liquid Boiler produces per second at max temperature.
     # Default: 240
-    liquidBoilerBaseOutput: 240
+    liquidBoilerBaseOutput: 300
 
     # The amount of steam a High Pressure Steam Liquid Boiler produces per second at max temperature.
     # Default: 600
-    hpLiquidBoilerBaseOutput: 600
+    hpLiquidBoilerBaseOutput: 700
 
     # The amount of steam a Steam Solar Boiler produces per second at max temperature.
     # Default: 120
-    solarBoilerBaseOutput: 120
+    solarBoilerBaseOutput: 180
 
     # The amount of steam a High Pressure Steam Solar Boiler produces per second at max temperature.
     # Default: 360
-    hpSolarBoilerBaseOutput: 360
+    hpSolarBoilerBaseOutput: 400
 
   # Large Steam Boiler Options
   largeBoilers:
     # The conversion rate between water and steam in Large Boilers.
     # Default: 160
-    steamPerWater: 160
+    steamPerWater: 200
 
     # The max temperature of the Large Bronze Boiler.
     # Default: 800
-    bronzeBoilerMaxTemperature: 800
+    bronzeBoilerMaxTemperature: 900
 
     # The heat speed of the Large Bronze Boiler.
     # Default: 1
-    bronzeBoilerHeatSpeed: 1
+    bronzeBoilerHeatSpeed: 2
 
     # The max temperature of the Large Steel Boiler.
     # Default: 1800
-    steelBoilerMaxTemperature: 1800
+    steelBoilerMaxTemperature: 2000
 
     # The heat speed of the Large Steel Boiler.
     # Default: 1
-    steelBoilerHeatSpeed: 1
+    steelBoilerHeatSpeed: 3
 
     # The max temperature of the Large Titanium Boiler.
     # Default: 3200
-    titaniumBoilerMaxTemperature: 3200
+    titaniumBoilerMaxTemperature: 3400
 
     # The heat speed of the Large Titanium Boiler.
     # Default: 1
-    titaniumBoilerHeatSpeed: 1
+    titaniumBoilerHeatSpeed: 4
 
     # The max temperature of the Large Tungstensteel Boiler.
     # Default: 6400
-    tungstensteelBoilerMaxTemperature: 6400
+    tungstensteelBoilerMaxTemperature: 6800
 
     # The heat speed of the Large Tungstensteel Boiler.
     # Default: 2
-    tungstensteelBoilerHeatSpeed: 2
+    tungstensteelBoilerHeatSpeed: 5
 
 client:
   # Whether or not to enable Emissive Textures for GregTech Machines.
