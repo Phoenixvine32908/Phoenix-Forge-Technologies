@@ -3,19 +3,6 @@ const $FluidStackJS = Java.loadClass('dev.latvian.mods.kubejs.fluid.FluidStackJS
 
 ServerEvents.recipes(phoenixvine => {
 
-    function makeName(inputString) {
-        let underscore = inputString.split('_');
-        let returnString = '';
-        if (inputString == 'bee') {
-            returnString = 'Bee';
-        } else if (underscore.length == 1) {
-            returnString = inputString.charAt(0).toUpperCase() + inputString.slice(1) + ' Bee';
-        } else {
-            returnString = underscore[0].charAt(0).toUpperCase() + underscore[0].slice(1) + ' ' + underscore[1].charAt(0).toUpperCase() + underscore[1].slice(1) + ' Bee';
-        }
-        return returnString;
-    }
-
     function addOutputs(recipeBuilder, output, count) {
         let i = count;
         while (i > 127) {
@@ -28,44 +15,123 @@ ServerEvents.recipes(phoenixvine => {
     function addChancedOutputs(recipeBuilder, output, chance, count) {
         let i = count;
         while (i > 127) {
-            recipeBuilder.chancedOutput(output.withCount(127), chance, 0);
+            recipeBuilder.chancedOutput(output.withCount(127), chance / 10000, 0);
             i = i - 127;
         }
-        recipeBuilder.chancedOutput(output.withCount(i), chance, 0);
+        recipeBuilder.chancedOutput(output.withCount(i), chance / 10000, 0);
     }
 
-    function makeMatrixRecipes(id, input, flower, outputs, upgrade) {
-        let recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(id)
+    function makeLimitedMatrixRecipe(id, input, flower, outputNbt, baseCombCount, upgradeBeta, upgradeBlock, upgradeGamma, upgradeOmega, chance, customDisplayName) {
+        const inputItem = Item.of('productivebees:bee_cage', `{type:"productivebees:${input}", entity: "productivebees:configurable_bee"}`);
+        const baseOutputNbt = `{EntityTag:{type:"productivebees:${input}"}}`;
+        let baseOutputDisplay;
+        if (customDisplayName) {
+            baseOutputDisplay = { display: { Name: `{"text":"${customDisplayName}"}` } };
+        } else {
+            baseOutputDisplay = { display: { Name: `{"translate":"item.productivebees.configurable_honeycomb.${outputNbt}"}` } };
+        }
+        const baseOutput = Object.assign(baseOutputNbt, baseOutputDisplay);
+        const betaHoneycombCount = baseCombCount;
+        const gammaHoneycombCount = betaHoneycombCount * 2;
+        const omegaCombCount = 40;
+
+        // Beta (Prog 1) - Limited Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_beta1`)
             .circuit(1)
             .EUt(1048)
             .duration(300)
-            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
-            .notConsumable(Item.of(upgrade, 1));
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeBeta, 1))
+            .chancedOutput(Item.of('productivebees:configurable_honeycomb', baseOutput).withCount(betaHoneycombCount), chance, 0)
+            .notConsumable(flower);
 
-        outputs.forEach((output) => {
-            if (output.chance == 10000) {
-                if (output.item.hasNBT()) {
-                    addOutputs(recipeBuilder, Item.of(output.item), output.count);
-                } else {
-                    recipeBuilder.itemOutputs(Item.of(output.item, output.count));
-                }
-            } else {
-                if (output.item.hasNBT()) {
-                    addChancedOutputs(recipeBuilder, Item.of(output.item), output.chance, output.count);
-                } else {
-                    recipeBuilder.chancedOutput(Item.of(output.item, output.count), output.chance / 10000, 0);
-                }
-            }
-        });
+        // Block (Prog 2) - Limited Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_block2`)
+            .circuit(2)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeBlock, 1))
+            .chancedOutput(Item.of('productivebees:configurable_comb', baseOutput).withCount(baseCombCount), chance, 0)
+            .notConsumable(flower);
 
-        if (flower instanceof $FluidStackJS) {
-            recipeBuilder.notConsumableFluid(flower);
-        } else {
-            recipeBuilder.notConsumable(flower);
-        }
+        // Gamma (Prog 3) - Limited Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_gamma3`)
+            .circuit(3)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeGamma, 1))
+            .chancedOutput(Item.of('productivebees:configurable_honeycomb', baseOutput).withCount(gammaHoneycombCount), chance, 0)
+            .notConsumable(flower);
+
+        // Omega (Prog 4) - Limited Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_omega4`)
+            .circuit(4)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeOmega, 1))
+            .chancedOutput(Item.of('productivebees:configurable_comb', baseOutput).withCount(omegaCombCount), chance, 0)
+            .notConsumable(flower);
     }
 
-    //////////// machine controllers ////////////////
+    function makeStandardMatrixRecipe(id, input, flower, outputNbt, combCount, upgradeBeta, upgradeBlock, upgradeGamma, upgradeOmega, customDisplayName) {
+        const inputItem = Item.of('productivebees:bee_cage', `{type:"productivebees:${input}", entity: "productivebees:configurable_bee"}`);
+        const baseOutputNbt = `{EntityTag:{type:"productivebees:${input}"}}`;
+        let baseOutputDisplay;
+        if (customDisplayName) {
+            baseOutputDisplay = { display: { Name: `{"text":"${customDisplayName}"}` } };
+        } else {
+            baseOutputDisplay = { display: { Name: `{"translate":"item.productivebees.configurable_honeycomb.${outputNbt}"}` } };
+        }
+        const baseOutput = Object.assign(baseOutputNbt, baseOutputDisplay);
+        const betaHoneycombCount = combCount;
+        const gammaHoneycombCount = betaHoneycombCount * 2;
+        const omegaCombCount = 40;
+
+        // Beta (Prog 1) - Standard Output (Honeycomb)
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_beta1`)
+            .circuit(1)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeBeta, 1))
+            .itemOutputs(Item.of('productivebees:configurable_honeycomb', baseOutput).withCount(betaHoneycombCount))
+            .notConsumable(flower);
+
+        // Block (Prog 2) - Comb Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_block2`)
+            .circuit(2)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeBlock, 1))
+            .itemOutputs(Item.of('productivebees:configurable_comb', baseOutput).withCount(combCount))
+            .notConsumable(flower);
+
+        // Gamma (Prog 3) - Increased Honeycomb Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_gamma3`)
+            .circuit(3)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeGamma, 1))
+            .itemOutputs(Item.of('productivebees:configurable_honeycomb', baseOutput).withCount(gammaHoneycombCount))
+            .notConsumable(flower);
+
+        // Omega (Prog 4) - Larger Comb Output
+        phoenixvine.recipes.gtceu.melferious_matrix(`${id}_omega4`)
+            .circuit(4)
+            .EUt(1048)
+            .duration(300)
+            .notConsumable(IngredientHelper.weakNBT(inputItem).withCount(1))
+            .notConsumable(Item.of(upgradeOmega, 1))
+            .itemOutputs(Item.of('productivebees:configurable_comb', baseOutput).withCount(omegaCombCount))
+            .notConsumable(flower);
+    }
+
+    // //////////// machine controllers ////////////////
     phoenixvine.shaped('gtceu:melferious_matrix', ['CAC', 'ABA', 'WSW'], {
         A: '#gtceu:circuits/ev',
         W: 'gtceu:black_steel_single_cable',
@@ -74,177 +140,689 @@ ServerEvents.recipes(phoenixvine => {
         B: 'productivebees:upgrade_comb_block'
     }).id('gtceu:shaped/melferious_matrix');
 
-    // ////////////// melferious_matrix recipes - Based on filenames ////////////////
+    // ////////////// Individual melferious_matrix recipes ////////////////
 
-    function addBeeRecipes(beeName, flower, baseOutput) {
-        const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
+    // Generic Bees
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/amethyst', 'amethyst', Item.of('minecraft:amethyst_block'), 'amethyst', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/crystalline', 'crystalline', Item.of('minecraft:quartz_block'), 'crystalline', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/diamond', 'diamond', Item.of('minecraft:diamond_block'), 'diamond', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/emerald', 'emerald', Item.of('minecraft:emerald_block'), 'emerald', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/lapis', 'lapis_gem', Item.of('minecraft:lapis_block'), 'lapis', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/redstone', 'redstone', Item.of('minecraft:redstone_block'), 'redstone', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/iron', 'iron', Item.of('minecraft:iron_block'), 'iron', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/gold', 'gold', Item.of('minecraft:gold_block'), 'gold', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
 
-        const betaHoneycombCount = baseOutput.count + 10;
-        const gammaHoneycombCount = betaHoneycombCount * 2;
+    // Ore Bees
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/barite', 'barite', Item.of('gtceu:raw_barite_block'), 'barite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4'); 
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/lepidolite', 'lepidolite', Item.of('gtceu:raw_lepidolite_block'), 'lepidolite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/bastnasite', 'bastnasite', Item.of('gtceu:raw_bastnasite_block'), 'bastnasite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/bauxite', 'bauxite', Item.of('gtceu:raw_bauxite_block'), 'bauxite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/chromite', 'chromite', Item.of('gtceu:raw_chromite_block'), 'chromite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/cobaltite', 'cobaltite', Item.of('gtceu:raw_cobaltite_block'), 'cobaltite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/electrotine', 'electrotine', Item.of('gtceu:raw_electrotine_block'), 'electrotine', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/galena', 'galena', Item.of('gtceu:raw_galena_block'), 'galena', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/graphite', 'graphite', Item.of('gtceu:raw_graphite_block'), 'graphite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/ilmenite', 'ilmenite', Item.of('gtceu:raw_ilmenite_block'), 'ilmenite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/naquadah', 'naquadah', Item.of('gtceu:raw_naquadah_block'), 'naquadah', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/neodymium', 'neodymium', Item.of('gtceu:raw_neodymium_block'), 'neodymium', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/topaz', 'topaz', Item.of('gtceu:raw_topaz_block'), 'topaz', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/pyrope', 'pyrope', Item.of('gtceu:raw_pyrope_block'), 'pyrope', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/ruby', 'ruby', Item.of('gtceu:raw_ruby_block'), 'ruby', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/sapphire', 'sapphire', Item.of('gtceu:raw_sapphire_block'), 'sapphire', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/sodalite', 'sodalite', Item.of('gtceu:raw_sodalite_block'), 'sodalite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/cinnabar', 'cinnabar', Item.of('gtceu:raw_cinnabar_block'), 'cinnabar', 10, 'productivebees:upgrade_productivity_2', 'productivebeesees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/apatite', 'apatite', Item.of('gtceu:raw_apatite_block'), 'apatite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/neutronium', 'neutronium', Item.of('gtceu:neutronium_block'), 'neutronium', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/slimy', 'slimy', Item.of('minecraft:slime_block'), 'slimy', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/oilsands', 'oilsands', Item.of('gtceu:raw_oilsands_block'), 'oilsands', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/palladium', 'palladium', Item.of('gtceu:raw_palladium_block'), 'palladium', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/pyrochlore', 'pyrochlore', Item.of('gtceu:raw_pyrochlore_block'), 'pyrochlore', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/pyrolusite', 'pyrolusite', Item.of('gtceu:raw_pyrolusite_block'), 'pyrolusite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/realgar', 'realgar', Item.of('gtceu:raw_realgar_block'), 'realgar', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/scheelite', 'scheelite', Item.of('gtceu:raw_scheelite_block'), 'scheelite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/sheldonite', 'sheldonite', Item.of('gtceu:raw_cooperite_block'), 'sheldonite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/sphalerite', 'sphalerite', Item.of('gtceu:raw_sphalerite_block'), 'sphalerite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/stibnite', 'stibnite', Item.of('gtceu:raw_stibnite_block'), 'stibnite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/tantalite', 'tantalite', Item.of('gtceu:raw_tantalite_block'), 'tantalite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/tetrahedrite', 'tetrahedrite', Item.of('gtceu:raw_tetrahedrite_block'), 'tetrahedrite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/tricalcium_phosphate', 'tricalcium_phosphate', Item.of('gtceu:raw_tricalcium_phosphate_block'), 'tricalcium_phosphate', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/tungstate', 'tungstate', Item.of('gtceu:raw_tungstate_block'), 'tungstate', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/vanadium_magnetite', 'vanadium_magnetite', Item.of('gtceu:raw_vanadium_magnetite_block'), 'vanadium_magnetite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/draconic', 'draconic', Item.of('minecraft:dragon_egg'), 'draconic', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
 
-        // Beta (Prog 1)
-        makeMatrixRecipes(
-            `kubejs:gtceu/melferious_matrix/${beeName}_beta1`,
-            input,
-            flower,
-            [{
-                item: Item.of('productivebees:configurable_honeycomb', baseOutput.nbt),
-                chance: 10000,
-                count: betaHoneycombCount
-            }],
-            'productivebees:upgrade_productivity_2' // Corrected Beta upgrade item
-        );
+    // New Bees
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/ghostly',
+        'ghostly',
+        Item.of('minecraft:soul_sand'),
+        'productivebees:comb_ghostly',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+    const rancherFlower = Item.of("productivebees:amber", `{BlockEntityTag:{EntityData:{entityType:{minecraft:cow}"}}}`).weakNBT()
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/rancher',
+        'rancher',
+        rancherFlower,
+        'productivebees:comb_milky',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/frost_bee',
+        'frost',
+        Item.of('minecraft:snowball'),
+        'frost',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Frost Honeycomb'
+    );
 
-        // Block (Prog 2)
-        phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/${beeName}_block2`)
-            .circuit(2)
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/platinum_bee',
+        'platinum',
+        Item.of('gtceu:platinum_ingot'),
+        'platinum',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Platinum Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/tungsten_bee',
+        'tungsten',
+        Item.of('gtceu:tungsten_ingot'),
+        'tungsten',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Tungsten Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/rose_gold_bee',
+        'rose_gold',
+        Item.of('gtceu:rose_gold_ingot'),
+        'rose_gold',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Rose Gold Honeycomb'
+    );
+
+
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/bismuth_bee',
+        'bismuth',
+        Item.of('gtceu:bismuth_ingot'),
+        'bismuth',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Bismuth Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/iridum_bee',
+        'iridum',
+        Item.of('gtceu:iridium_ingot'),
+        'iridum',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Iridum Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/withered_bee',
+        'withered',
+        Item.of('minecraft:wither_rose'),
+        'withered',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Withered Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/lapis_bee',
+        'lapis',
+        Item.of('minecraft:lapis_lazuli'),
+        'lapis',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Lapis Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/cobalt_bee',
+        'cobalt',
+        Item.of('gtceu:cobalt_ingot'),
+        'cobalt',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Cobalt Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/zombie_bee',
+        'zombie',
+        Item.of('minecraft:rotten_flesh'),
+        'zombie',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Zombie Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/steel_bee',
+        'steel',
+        Item.of('gtceu:steel_ingot'),
+        'steel',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Steel Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/skeletal_bee',
+        'skeletal',
+        Item.of('minecraft:bone'),
+        'skeletal',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Skeletal Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/silky_bee',
+        'silky',
+        Item.of('minecraft:string'),
+        'silky',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Silky Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/copper_bee',
+        'copper',
+        Item.of('minecraft:copper_block'),
+        'copper',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Copper Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/bronze_bee',
+        'bronze',
+        Item.of('gtceu:bronze_ingot'),
+        'bronze',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Bronze Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/coal_bee',
+        'coal',
+        Item.of('minecraft:coal'),
+        'coal',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Coal Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/molybdenum_bee',
+        'molybdenum',
+        Item.of('gtceu:molybdenum_ingot'),
+        'molybdenum',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Molybdenum Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/silver_bee',
+        'silver',
+        Item.of('gtceu:silver_ingot'),
+        'silver',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Silver Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/radioactive_bee',
+        'radioactive',
+        Item.of('gtceu:uranium'), // Assuming a generic radioactive item
+        'radioactive',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Radioactive Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/electrum_bee',
+        'electrum',
+        Item.of('gtceu:electrum_ingot'),
+        'electrum',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Electrum Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/spacial_bee',
+        'spacial',
+        Item.of('ae2:singularity'), // Assuming an AE2 related item
+        'spacial',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'spacial Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/uranite_bee',
+        'uranite',
+        Item.of('gtceu:uraninite_dust'),
+        'uranite',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Uranite Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/fluix_bee',
+        'fluix',
+        Item.of('ae2:fluix_crystal'),
+        'fluix',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Fluix Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/ancient_bee',
+        'ancient',
+        Item.of('minecraft:ancient_debris'),
+        'ancient',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Ancient Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/magmatic_bee',
+        'magmatic',
+        Item.of('minecraft:magma_cream'),
+        'magmatic',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Magmatic Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/nickel_bee',
+        'nickel',
+        Item.of('gtceu:nickel_ingot'),
+        'nickel',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Nickel Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/sky_steel_bee',
+        'sky_steel',
+        Item.of( 'megacells:sky_steel_ingot' ),
+        'sky_steel',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Sky Steel Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/lead_bee',
+        'lead',
+        Item.of('gtceu:lead_ingot'),
+        'lead',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Lead Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/invar_bee',
+        'invar',
+        Item.of('gtceu:invar_ingot'),
+        'invar',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Invar Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/osmium_bee',
+        'osmium',
+        Item.of('gtceu:osmium_block'),
+        'osmium',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Osmium Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/sticky_resin_bee',
+        'sticky_resin',
+        Item.of('gtceu:sticky_resin'),
+        'sticky_resin',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Sticky Resin Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/palladium_bee',
+        'palladium',
+        Item.of('gtceu:palladium_ingot'),
+        'palladium',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Palladium Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/menril_bee',
+        'menril',
+        Item.of('integrateddynamics:crystalized_menril_chunk'),
+        'menril',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Menril Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/brass_bee',
+        'brass',
+        Item.of('gtceu:brass_ingot'),
+        'brass',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Brass Honeycomb'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/obsidian_bee',
+        'obsidian',
+        Item.of('minecraft:obsidian'),
+        'obsidian',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        'Obsidian Honeycomb'
+    );
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/creebee',
+        'creebee',
+        Item.of('minecraft:tnt'),
+        'productivebees:comb_powdery',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/glowing',
+        'glowing',
+        Item.of('minecraft:glowstone'),
+        'glowing',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/experience',
+        'experience',
+        Item.of('minecraft:bookshelf'),
+        'experience',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/blazing',
+        'blazing',
+        Item.of('minecraft:magma_block'),
+        'blazing',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    // Titanium Bee (Limited Output - 20% for all tiers)
+    makeLimitedMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/titanium',
+        'titanium',
+        Item.of('gtceu:titanium_block'),
+        'titanium',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4',
+        2000 // 20% chance for comb output in all tiers
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/prismarine',
+        'prismarine',
+        Item.of('minecraft:sea_lantern'),
+        'prismarine',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/sculk',
+        'sculk',
+        Item.of('minecraft:sculk_catalyst'),
+        'sculk',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/zinc',
+        'zinc',
+        Item.of('gtceu:zinc_block'),
+        'zinc',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/tin',
+        'tin',
+        Item.of('gtceu:tin_block'),
+        'tin',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/sulfur',
+        'sulfur',
+        Item.of('minecraft:coal_ore'),
+        'sulfur',
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/warped_shroombee',
+        'warped_shroombee',
+        Item.of('minecraft:warped_fungus'),
+        'warped', // Corrected output name
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    makeStandardMatrixRecipe(
+        'kubejs:gtceu/melferious_matrix/brown_shroombee',
+        'brown_shroombee',
+        Item.of('minecraft:brown_mushroom'),
+        'brown_shroom', // Corrected output name
+        10,
+        'productivebees:upgrade_productivity_2',
+        'productivebees:upgrade_comb_block',
+        'productivebees:upgrade_productivity_3',
+        'productivebees:upgrade_productivity_4'
+    );
+
+    function addWannaBeeRecipe(beeName, mobEntityType, upgrade) {
+        const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(' ', '_')}_${upgrade.split('_').pop()}`)
             .EUt(1048)
             .duration(300)
-            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
-            .notConsumable(Item.of('productivebees:upgrade_comb_block', 1))
-            .itemOutputs(Item.of('productivebees:configurable_comb', baseOutput.nbt).withCount(baseOutput.count))
-            .notConsumable(flower);
-
-        // Gamma (Prog 3)
-        phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/${beeName}_gamma3`)
-            .circuit(3)
-            .EUt(1048)
-            .duration(300)
-            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
-            .notConsumable(Item.of('productivebees:upgrade_productivity_3', 1))
-            .itemOutputs(Item.of('productivebees:configurable_honeycomb', baseOutput.nbt).withCount(gammaHoneycombCount))
-            .notConsumable(flower);
-
-        // Omega (Prog 4)
-        phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/${beeName}_omega4`)
-            .circuit(4)
-            .EUt(1048)
-            .duration(300)
-            .notConsumable(IngredientHelper.weakNBT(Item.of(input)).withCount(1))
-            .notConsumable(Item.of('productivebees:upgrade_productivity_4', 1))
-            .itemOutputs(Item.of('productivebees:configurable_comb', baseOutput.nbt).withCount(40))
-            .notConsumable(flower);
-    }
-
-    function addGemBeeRecipe(gemName) {
-        const beeName = gemName.replace('_gem', '');
-        const flower = Item.of(`minecraft:${gemName.replace('_gem', '')}_block`);
-        const baseOutputNbt = `{EntityTag:{type:"productivebees:${beeName}"}}`;
-        addBeeRecipes(beeName, flower, {
-            nbt: baseOutputNbt,
-            count: 10
-        });
-    }
-
-    function addOreBeeRecipe(oreName) {
-        const beeName = oreName;
-        const flower = Item.of(`gtceu:raw_${oreName}_block`);
-        const baseOutputNbt = `{EntityTag:{type:"productivebees:${beeName}"}}`;
-        addBeeRecipes(beeName, flower, {
-            nbt: baseOutputNbt,
-            count: 10
-        });
-    }
-
-    function addGenericBeeRecipe(beeName) {
-        const flower = Item.of(`minecraft:${beeName}_block`);
-        const baseOutputNbt = `{EntityTag:{type:"productivebees:${beeName}"}}`;
-        addBeeRecipes(beeName, flower, {
-            nbt: baseOutputNbt,
-            count: 10
-        });
-    }
-
-    // Recipes based on the previous list of .json files
-    addGenericBeeRecipe('amethyst');
-
-    // Crystalline Bee
-    const crystallineFlower = Item.of('minecraft:quartz_block');
-    const crystallineOutputNbt = `{EntityTag:{type:"productivebees:crystalline"}}`;
-    addBeeRecipes('crystalline', crystallineFlower, {
-        nbt: crystallineOutputNbt,
-        count: 10
-    });
-
-    addGenericBeeRecipe('diamond');
-    addGenericBeeRecipe('emerald');
-    addGemBeeRecipe('lapis');
-    addGenericBeeRecipe('redstone');
-    addGenericBeeRecipe('iron');
-    addGenericBeeRecipe('gold');
-    addOreBeeRecipe('barite');
-    addOreBeeRecipe('bastnasite');
-    addOreBeeRecipe('bauxite');
-    addOreBeeRecipe('chromite');
-    addOreBeeRecipe('cobaltite');
-    addOreBeeRecipe('electrotine');
-    addOreBeeRecipe('galena');
-    addOreBeeRecipe('graphite');
-    addOreBeeRecipe('ilmenite');
-    addOreBeeRecipe('naquadah');
-    addOreBeeRecipe('neodymium');
-    addOreBeeRecipe('topaz');
-    addOreBeeRecipe('pyrope');
-    addOreBeeRecipe('ruby');
-    addOreBeeRecipe('sapphire');
-    addOreBeeRecipe('sodalite');
-    addOreBeeRecipe('cinnabar');
-    addOreBeeRecipe('apatite');
-
-    // Neutronium Bee
-    const neutroniumFlower = Item.of('gtceu:neutronium_block');
-    const neutroniumOutputNbt = `{EntityTag:{type:"productivebees:neutronium"}}`;
-    addBeeRecipes('neutronium', neutroniumFlower, {
-        nbt: neutroniumOutputNbt,
-        count: 10
-    });
-
-    // Slimy Bee
-    const slimyFlower = Item.of('minecraft:slime_block');
-    const slimyOutputNbt = `{EntityTag:{type:"productivebees:slimy"}}`;
-    addBeeRecipes('slimy', slimyFlower, {
-        nbt: slimyOutputNbt,
-        count: 10
-    });
-
-    addOreBeeRecipe('oilsands');
-    addOreBeeRecipe('palladium');
-    addOreBeeRecipe('pyrochlore');
-    addOreBeeRecipe('pyrolusite');
-    addOreBeeRecipe('realgar');
-    addOreBeeRecipe('scheelite');
-
-    // Sheldonite Bee
-    const sheldoniteFlower = Item.of('gtceu:raw_cooperite_block');
-    const sheldoniteOutputNbt = `{EntityTag:{type:"productivebees:sheldonite"}}`;
-    addBeeRecipes('sheldonite', sheldoniteFlower, {
-        nbt: sheldoniteOutputNbt,
-        count: 10
-    });
-
-    addOreBeeRecipe('sphalerite');
-    addOreBeeRecipe('stibnite');
-    addOreBeeRecipe('tantalite');
-    addOreBeeRecipe('tetrahedrite');
-    addOreBeeRecipe('tricalcium_phosphate');
-    addOreBeeRecipe('tungstate');
-    addOreBeeRecipe('vanadium_magnetite');
-
-    // Draconic Bee
-    const draconicFlower = Item.of('minecraft:dragon_egg');
-    const draconicOutputNbt = `{EntityTag:{type:"productivebees:draconic"}}`;
-    addBeeRecipes('draconic', draconicFlower, {
-        nbt: draconicOutputNbt,
-        count: 10
-    });
-
-    function addWannaBeeRecipe(beeName, mobEntityType) {
-        const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(' ', '_')}_omega`)
-            .EUt(1048)
-            .duration(30)
             .notConsumable(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', `{type:"productivebees:wanna", entity: "productivebees:configurable_bee"}`)).withCount(1))
             .notConsumable(Item.of("productivebees:amber", `{BlockEntityTag:{EntityData:{entityType:"${mobEntityType}"}}}`).weakNBT())
-            .notConsumable(Item.of('productivebees:upgrade_productivity_4', 1)); // Using productivity 4 for Omega
+            .notConsumable(Item.of(upgrade, 1));
         return recipeBuilder; // Return the recipe builder to chain output definitions
     }
 
@@ -252,178 +830,194 @@ ServerEvents.recipes(phoenixvine => {
         recipeBuilder.circuit(circuitLevel);
     }
 
- // Piglin Recipes
- const piglinRecipeOmega = addWannaBeeRecipe('Piglin', 'minecraft:piglin');
- setCircuit(piglinRecipeOmega, 4); // Assuming Omega tier needs a higher circuit
- piglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 8000, 5);
- piglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 2000, 5);
- piglinRecipeOmega.chancedOutput('minecraft:porkchop', 5000, 5);
+    // Piglin Recipes
+    const piglinRecipeProg2 = addWannaBeeRecipe('Piglin', 'minecraft:piglin', 'productivebees:upgrade_productivity_2');
+    setCircuit(piglinRecipeProg2, 1);
+    piglinRecipeProg2.chancedOutput('minecraft:gold_ingot', 6000, 1);   // 60%
+    piglinRecipeProg2.chancedOutput('minecraft:rotten_flesh', 4000, 1); // 40%
+    piglinRecipeProg2.chancedOutput('minecraft:porkchop', 3000, 1);     // 30%
 
- // Hoglin Recipes
- const hoglinRecipeOmega = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin');
- setCircuit(hoglinRecipeOmega, 4);
- hoglinRecipeOmega.chancedOutput('minecraft:porkchop', 9000, 5);
- hoglinRecipeOmega.chancedOutput('minecraft:leather', 7000, 5);
+    const piglinRecipeGamma3 = addWannaBeeRecipe('Piglin', 'minecraft:piglin', 'productivebees:upgrade_productivity_3');
+    setCircuit(piglinRecipeGamma3, 1);
+    piglinRecipeGamma3.chancedOutput('minecraft:gold_ingot', 7000, 2);   // 70% (2x output)
+    piglinRecipeGamma3.chancedOutput('minecraft:rotten_flesh', 5000, 2); // 50% (2x output)
+    piglinRecipeGamma3.chancedOutput('minecraft:porkchop', 4000, 2);     // 40% (2x output)
+    piglinRecipeGamma3.chancedOutput('minecraft:emerald', 2000, 2);      // 20% (2x output)
 
- // Zombified Piglin Recipes
- const zombifiedPiglinRecipeOmega = addWannaBeeRecipe('Zombified Piglin', 'minecraft:zombified_piglin');
- setCircuit(zombifiedPiglinRecipeOmega, 4);
- zombifiedPiglinRecipeOmega.chancedOutput('minecraft:gold_ingot', 7000, 5);
- zombifiedPiglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 8000, 5);
+    const piglinRecipeOmega4 = addWannaBeeRecipe('Piglin', 'minecraft:piglin', 'productivebees:upgrade_productivity_4');
+    setCircuit(piglinRecipeOmega4, 1); // Still circuit 1 as only Omega should work
+    piglinRecipeOmega4.chancedOutput('minecraft:gold_ingot', 8000, 4);   // 80% (4x output)
+    piglinRecipeOmega4.chancedOutput('minecraft:rotten_flesh', 6000, 4); // 60% (4x output)
+    piglinRecipeOmega4.chancedOutput('minecraft:porkchop', 5000, 4);     // 50% (4x output)
+    piglinRecipeOmega4.chancedOutput('minecraft:emerald', 3000, 4);      // 30% (4x output)
 
- // Zombified Hoglin Recipes
- const zombifiedHoglinRecipeOmega = addWannaBeeRecipe('Zombified Hoglin', 'minecraft:zombified_hoglin');
- setCircuit(zombifiedHoglinRecipeOmega, 4);
- zombifiedHoglinRecipeOmega.chancedOutput('minecraft:rotten_flesh', 9500, 5);
- zombifiedHoglinRecipeOmega.chancedOutput('minecraft:leather', 6000, 5);
+    // Hoglin Recipes
+    const hoglinRecipeProg2 = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin', 'productivebees:upgrade_productivity_2');
+    setCircuit(hoglinRecipeProg2, 1);
+    hoglinRecipeProg2.chancedOutput('minecraft:porkchop', 7000, 2); // 70%
+    hoglinRecipeProg2.chancedOutput('minecraft:leather', 5000, 1); // 50%
 
- // Piglin Brute Recipes
- const piglinBruteRecipeOmega = addWannaBeeRecipe('Piglin Brute', 'minecraft:piglin_brute');
- setCircuit(piglinBruteRecipeOmega, 4);
- piglinBruteRecipeOmega.chancedOutput('minecraft:gold_ingot', 9000, 5);
- piglinBruteRecipeOmega.chancedOutput('minecraft:rotten_flesh', 1000, 5);
- piglinBruteRecipeOmega.chancedOutput('minecraft:porkchop', 6000, 5);
+    const hoglinRecipeGamma3 = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin', 'productivebees:upgrade_productivity_3');
+    setCircuit(hoglinRecipeGamma3, 1);
+    hoglinRecipeGamma3.chancedOutput('minecraft:porkchop', 8000, 4); // 80% (2x output)
+    hoglinRecipeGamma3.chancedOutput('minecraft:leather', 6000, 2); // 60% (2x output)
+    hoglinRecipeGamma3.chancedOutput('minecraft:bone', 3000, 2);     // 30% (2x output)
 
- // Shulker Recipes
- const shulkerRecipeOmega = addWannaBeeRecipe('Shulker', 'minecraft:shulker');
- setCircuit(shulkerRecipeOmega, 4);
- shulkerRecipeOmega.chancedOutput('minecraft:shulker_shell', 8500, 5);
+    const hoglinRecipeOmega4 = addWannaBeeRecipe('Hoglin', 'minecraft:hoglin', 'productivebees:upgrade_productivity_4');
+    setCircuit(hoglinRecipeOmega4, 1); // Still circuit 1
+    hoglinRecipeOmega4.chancedOutput('minecraft:porkchop', 9000, 8); // 90% (4x output)
+    hoglinRecipeOmega4.chancedOutput('minecraft:leather', 7000, 4); // 70% (4x output)
+    hoglinRecipeOmega4.chancedOutput('minecraft:bone', 4000, 4);     // 40% (4x output)
 
- // Phantom Recipes
- const phantomRecipeOmega = addWannaBeeRecipe('Phantom', 'minecraft:phantom');
- setCircuit(phantomRecipeOmega, 4);
- phantomRecipeOmega.chancedOutput('minecraft:phantom_membrane', 9000, 5);
+    // Zombified Piglin Recipes
 
- // Blaze Recipes
- const blazeRecipeOmega = addWannaBeeRecipe('Blaze', 'minecraft:blaze');
- setCircuit(blazeRecipeOmega, 4);
- blazeRecipeOmega.chancedOutput('minecraft:blaze_rod', 8000, 5);
+    const zombifiedPiglinRecipeOmega4 = addWannaBeeRecipe('Zombified Piglin', 'minecraft:zombified_piglin', 'productivebees:upgrade_productivity_4');
+    setCircuit(zombifiedPiglinRecipeOmega4, 1); // Still circuit 1
+    zombifiedPiglinRecipeOmega4.chancedOutput('minecraft:gold_ingot', 7000, 4);   // 70% (4x output)
+    zombifiedPiglinRecipeOmega4.chancedOutput('minecraft:rotten_flesh', 8000, 8); // 80% (4x output)
+    zombifiedPiglinRecipeOmega4.chancedOutput('minecraft:gold_nugget', 5000, 20); // 50% (4x output)
 
- // Elder Guardian Recipes
- const elderGuardianRecipeOmega = addWannaBeeRecipe('Elder Guardian', 'minecraft:elder_guardian');
- setCircuit(elderGuardianRecipeOmega, 4);
- elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_shard', 7000, 5);
- elderGuardianRecipeOmega.chancedOutput('minecraft:prismarine_crystals', 6000, 5);
- elderGuardianRecipeOmega.chancedOutput('minecraft:sponge', 2000, 5);
+    // Zombified Hoglin Recipes
+    const zombifiedHoglinRecipeOmega4 = addWannaBeeRecipe('Zombified Hoglin', 'minecraft:zombified_hoglin', 'productivebees:upgrade_productivity_4');
+    setCircuit(zombifiedHoglinRecipeOmega4, 1); // Still circuit 1
+    zombifiedHoglinRecipeOmega4.chancedOutput('minecraft:rotten_flesh', 9500, 8); // 95% (4x output)
+    zombifiedHoglinRecipeOmega4.chancedOutput('minecraft:leather', 6000, 4); // 60% (4x output)
+    zombifiedHoglinRecipeOmega4.chancedOutput('minecraft:slime_ball', 3000, 4); // 30% (4x output)
 
- // Evoker Recipes
- const evokerRecipeOmega = addWannaBeeRecipe('Evoker', 'minecraft:evoker');
- setCircuit(evokerRecipeOmega, 4);
- evokerRecipeOmega.chancedOutput('minecraft:totem_of_undying', 3000, 5);
- evokerRecipeOmega.chancedOutput('minecraft:emerald', 7000, 5);
+    // Piglin Brute Recipes
+    const piglinBruteRecipeOmega4 = addWannaBeeRecipe('Piglin Brute', 'minecraft:piglin_brute', 'productivebees:upgrade_productivity_4');
+    setCircuit(piglinBruteRecipeOmega4, 1); // Still circuit 1
+    piglinBruteRecipeOmega4.chancedOutput('minecraft:gold_ingot', 9500, 8);   // 95% (4x output)
+    piglinBruteRecipeOmega4.chancedOutput('minecraft:rotten_flesh', 4000, 4); // 40% (4x output)
+    piglinBruteRecipeOmega4.chancedOutput('minecraft:porkchop', 6000, 4);     // 60% (4x output)
+    piglinBruteRecipeOmega4.chancedOutput('minecraft:netherite_scrap', 750, 4); // 7.5% (4x output)
 
- // Magma Cube Recipes
- const magmaCubeRecipeOmega = addWannaBeeRecipe('Magma Cube', 'minecraft:magma_cube');
- setCircuit(magmaCubeRecipeOmega, 4);
- magmaCubeRecipeOmega.chancedOutput('minecraft:magma_cream', 9500, 5);
+    // Shulker Recipes
+    const shulkerRecipeOmega4 = addWannaBeeRecipe('Shulker', 'minecraft:shulker', 'productivebees:upgrade_productivity_4');
+    setCircuit(shulkerRecipeOmega4, 1); // Still circuit 1
+    shulkerRecipeOmega4.chancedOutput('minecraft:shulker_shell', 8500, 4); // 85% (4x output)
+    shulkerRecipeOmega4.chancedOutput('minecraft:ender_pearl', 4000, 4);   // 40% (4x output)
 
- // Warden Recipes
- const wardenRecipeOmega = addWannaBeeRecipe('Warden', 'minecraft:warden');
- setCircuit(wardenRecipeOmega, 4);
- wardenRecipeOmega.chancedOutput('minecraft:sculk_catalyst', 2000, 5);
- wardenRecipeOmega.chancedOutput('minecraft:echo_shard', 5000, 5);
+    // Phantom Recipes
+    const phantomRecipeOmega4 = addWannaBeeRecipe('Phantom', 'minecraft:phantom', 'productivebees:upgrade_productivity_4');
+    setCircuit(phantomRecipeOmega4, 1); // Still circuit 1
+    phantomRecipeOmega4.chancedOutput('minecraft:phantom_membrane', 9000, 4); // 90% (4x output)
+    phantomRecipeOmega4.chancedOutput('minecraft:leather', 3500, 4);       // 35% (4x output)
 
- // Illager Recipes (using Pillager as a general illager)
- const illagerRecipeOmega = addWannaBeeRecipe('Illager', 'minecraft:pillager');
- setCircuit(illagerRecipeOmega, 4);
- illagerRecipeOmega.chancedOutput('minecraft:crossbow', 6000, 5);
+    // Blaze Recipes
+    const blazeRecipeOmega4 = addWannaBeeRecipe('Blaze', 'minecraft:blaze', 'productivebees:upgrade_productivity_4');
+    setCircuit(blazeRecipeOmega4, 1); // Still circuit 1
+    blazeRecipeOmega4.chancedOutput('minecraft:blaze_rod', 8000, 4);     // 80% (4x output)
+    blazeRecipeOmega4.chancedOutput('minecraft:glowstone_dust', 5000, 8); // 50% (4x output)
 
- // Slime Recipes
- const slimeRecipeOmega = addWannaBeeRecipe('Slime', 'minecraft:slime');
- setCircuit(slimeRecipeOmega, 4);
- slimeRecipeOmega.chancedOutput('minecraft:slime_ball', 9500, 5);
+    // Elder Guardian Recipes
 
- // Vindicator Recipes
- const vindicatorRecipeOmega = addWannaBeeRecipe('Vindicator', 'minecraft:vindicator');
- setCircuit(vindicatorRecipeOmega, 4);
- vindicatorRecipeOmega.chancedOutput('minecraft:emerald', 7500, 5);
- vindicatorRecipeOmega.chancedOutput('minecraft:iron_axe', 6000, 5);
+    const elderGuardianRecipeOmega4 = addWannaBeeRecipe('Elder Guardian', 'minecraft:elder_guardian', 'productivebees:upgrade_productivity_4');
+    setCircuit(elderGuardianRecipeOmega4, 1); // Still circuit 1
+    elderGuardianRecipeOmega4.chancedOutput('minecraft:prismarine_shard', 7000, 12);  // 70% (4x output)
+    elderGuardianRecipeOmega4.chancedOutput('minecraft:prismarine_crystals', 6000, 8);  // 60% (4x output)
+    elderGuardianRecipeOmega4.chancedOutput('minecraft:sponge', 2000, 4);            // 20% (4x output)
+    elderGuardianRecipeOmega4.chancedOutput('minecraft:diamond_block', 100, 4);
+    elderGuardianRecipeOmega4.chancedOutput('minecraft:heart_of_the_sea', 100, 4);
 
- // Witch Recipes
- const witchRecipeOmega = addWannaBeeRecipe('Witch', 'minecraft:witch');
- setCircuit(witchRecipeOmega, 4);
- witchRecipeOmega.chancedOutput('minecraft:glass_bottle', 7000, 5);
- witchRecipeOmega.chancedOutput('minecraft:glowstone_dust', 5000, 5);
- witchRecipeOmega.chancedOutput('minecraft:redstone', 5000, 5);
- witchRecipeOmega.chancedOutput('minecraft:spider_eye', 5000, 5);
- witchRecipeOmega.chancedOutput('minecraft:sugar', 5000, 5);
- witchRecipeOmega.chancedOutput('minecraft:stick', 5000, 5);
- witchRecipeOmega.chancedOutput('minecraft:gunpowder', 5000, 5);
+    // Evoker Recipes
+    const evokerRecipeOmega4 = addWannaBeeRecipe('Evoker', 'minecraft:evoker', 'productivebees:upgrade_productivity_4');
+    setCircuit(evokerRecipeOmega4, 1); // Still circuit 1
+    evokerRecipeOmega4.chancedOutput('minecraft:totem_of_undying', 2500, 4); // 25% (4x output)
+    evokerRecipeOmega4.chancedOutput('minecraft:emerald', 7000, 8);      // 70% (4x output)
+    evokerRecipeOmega4.chancedOutput('minecraft:gold_ingot', 4000, 6);   // 40% (2x output - Adjusted for reasonable progression)
 
- // Wither Skeleton Recipes
- const witherSkeletonRecipeOmega = addWannaBeeRecipe('Wither Skeleton', 'minecraft:wither_skeleton');
- setCircuit(witherSkeletonRecipeOmega, 4);
- witherSkeletonRecipeOmega.chancedOutput('minecraft:coal', 8000, 5);
- witherSkeletonRecipeOmega.chancedOutput('minecraft:bone', 7000, 5);
- witherSkeletonRecipeOmega.chancedOutput('minecraft:wither_skeleton_skull', 1000, 5);
+    // Magma Cube Recipes
+    const magmaCubeRecipeOmega4 = addWannaBeeRecipe('Magma Cube', 'minecraft:magma_cube', 'productivebees:upgrade_productivity_4');
+    setCircuit(magmaCubeRecipeOmega4, 1); // Still circuit 1
+    magmaCubeRecipeOmega4.chancedOutput('minecraft:magma_cream', 9500, 8); // 95% (4x output)
+    magmaCubeRecipeOmega4.chancedOutput('minecraft:coal', 6000, 8);       // 60% (4x output)
 
- // Creeper Recipes
- const creeperRecipeOmega = addWannaBeeRecipe('Creeper', 'minecraft:creeper');
- setCircuit(creeperRecipeOmega, 4);
- creeperRecipeOmega.chancedOutput('minecraft:gunpowder', 9500, 5);
+    // Warden Recipes
+    const wardenRecipeOmega4 = addWannaBeeRecipe('Warden', 'minecraft:warden', 'productivebees:upgrade_productivity_4');
+    setCircuit(wardenRecipeOmega4, 1); // Still circuit 1
+    wardenRecipeOmega4.chancedOutput('minecraft:sculk_catalyst', 2000, 4); // 20% (4x output)
+    wardenRecipeOmega4.chancedOutput('minecraft:echo_shard', 5000, 8);   // 50% (4x output)
+    wardenRecipeOmega4.chancedOutput('minecraft:diamond', 750, 4);      // 7.5% (4x output)
 
- // Zombie Recipes
- const zombieRecipeOmega = addWannaBeeRecipe('Zombie', 'minecraft:zombie');
- setCircuit(zombieRecipeOmega, 4);
- zombieRecipeOmega.chancedOutput('minecraft:rotten_flesh', 10000, 5);
- zombieRecipeOmega.chancedOutput('minecraft:iron_ingot', 1000, 5);
- zombieRecipeOmega.chancedOutput('minecraft:carrot', 1000, 5);
- zombieRecipeOmega.chancedOutput('minecraft:potato', 1000, 5);
+    // Illager Recipes (using Pillager as a general illager)
+    const illagerRecipeOmega4 = addWannaBeeRecipe('Illager', 'minecraft:pillager', 'productivebees:upgrade_productivity_4');
+    setCircuit(illagerRecipeOmega4, 1); // Still circuit 1
+    illagerRecipeOmega4.chancedOutput('minecraft:crossbow', 6000, 4); // 60% (4x output)
+    illagerRecipeOmega4.chancedOutput('minecraft:emerald', 4000, 4);  // 40% (4x output)
 
- // Skeleton Recipes
- const skeletonRecipeOmega = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton');
- setCircuit(skeletonRecipeOmega, 4);
- skeletonRecipeOmega.chancedOutput('minecraft:bone', 9000, 5);
- skeletonRecipeOmega.chancedOutput('minecraft:arrow', 1000, 5);
+    // Slime Recipes
+    const slimeRecipeOmega4 = addWannaBeeRecipe('Slime', 'minecraft:slime', 'productivebees:upgrade_productivity_4');
+    setCircuit(slimeRecipeOmega4, 1); // Still circuit 1
+    slimeRecipeOmega4.chancedOutput('minecraft:slime_ball', 9500, 12); // 95% (4x output)
+    slimeRecipeOmega4.chancedOutput('minecraft:sugar', 7000, 8);     // 70% (4x output)
 
- // Spider Recipes
- const spiderRecipeOmega = addWannaBeeRecipe('Spider', 'minecraft:spider');
- setCircuit(spiderRecipeOmega, 4);
- spiderRecipeOmega.chancedOutput('minecraft:string', 9500, 5);
- spiderRecipeOmega.chancedOutput('minecraft:spider_eye', 2000, 5);
+    // Vindicator Recipes
+    const vindicatorRecipeOmega4 = addWannaBeeRecipe('Vindicator', 'minecraft:vindicator', 'productivebees:upgrade_productivity_4');
+    setCircuit(vindicatorRecipeOmega4, 1); // Still circuit 1
+    vindicatorRecipeOmega4.chancedOutput('minecraft:emerald', 7500, 4);  // 75% (4x output)
+    vindicatorRecipeOmega4.chancedOutput('minecraft:iron_axe', 6000, 4); // 60% (4x output)
+    vindicatorRecipeOmega4.chancedOutput('minecraft:oak_log', 8000, 12); // 80% (4x output - Adjusted)
 
- // Enderman Recipes
- const endermanRecipeOmega = addWannaBeeRecipe('Enderman', 'minecraft:enderman');
- setCircuit(endermanRecipeOmega, 4);
- endermanRecipeOmega.chancedOutput('minecraft:ender_pearl', 8000, 5);
+    // Witch Recipes
+    const witchRecipeOmega4 = addWannaBeeRecipe('Witch', 'minecraft:witch', 'productivebees:upgrade_productivity_4');
+    setCircuit(witchRecipeOmega4, 1); // Still circuit 1
+    witchRecipeOmega4.chancedOutput('minecraft:glass_bottle', 7000, 4);      // 70% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:glowstone_dust', 5000, 4);  // 50% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:redstone', 5000, 4);        // 50% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:spider_eye', 5000, 4);      // 50% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:sugar', 5000, 4);         // 50% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:stick', 5000, 4);         // 50% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:gunpowder', 5000, 4);     // 50% (4x output)
+    witchRecipeOmega4.chancedOutput('minecraft:fermented_spider_eye', 3000, 4); // 30% (4x output)
 
- // Ghast Recipes
- const ghastRecipeOmega = addWannaBeeRecipe('Ghast', 'minecraft:ghast');
- setCircuit(ghastRecipeOmega, 4);
- ghastRecipeOmega.chancedOutput('minecraft:ghast_tear', 9000, 5);
- ghastRecipeOmega.chancedOutput('minecraft:gunpowder', 4000, 5);
+    // Wither Skeleton Recipes
+    const witherSkeletonRecipeOmega4 = addWannaBeeRecipe('Wither Skeleton', 'minecraft:wither_skeleton','productivebees:upgrade_productivity_4');
+    setCircuit(witherSkeletonRecipeOmega4, 1); // Still circuit 1
+    witherSkeletonRecipeOmega4.chancedOutput('minecraft:coal', 8000, 4);                   // 80% (4x output)
+    witherSkeletonRecipeOmega4.chancedOutput('minecraft:bone', 7000, 4);                   // 70% (4x output)
+    witherSkeletonRecipeOmega4.chancedOutput('minecraft:wither_skeleton_skull', 1000, 2);  // 10% (2x output - Adjusted)
+    witherSkeletonRecipeOmega4.chancedOutput('minecraft:nether_wart', 5000, 12);          // 50% (2x output - Adjusted)
 
- // Wither Recipes
- const witherRecipeOmega = addWannaBeeRecipe('Wither', 'minecraft:wither');
- setCircuit(witherRecipeOmega, 4);
- witherRecipeOmega.chancedOutput('minecraft:nether_star', 2000, 5);
+    // Creeper Recipes
+    const creeperRecipeOmega4 = addWannaBeeRecipe('Creeper', 'minecraft:creeper', 'productivebees:upgrade_productivity_4');
+    setCircuit(creeperRecipeOmega4, 1); // Still circuit 1
+    creeperRecipeOmega4.chancedOutput('minecraft:gunpowder', 9500, 8); // 95% (4x output)
+    creeperRecipeOmega4.chancedOutput('minecraft:tnt', 1500, 4);       // 15% (4x output)
 
- // EnderDragon Recipes
- const enderDragonRecipeOmega = addWannaBeeRecipe('EnderDragon', 'minecraft:ender_dragon');
- setCircuit(enderDragonRecipeOmega, 4);
- enderDragonRecipeOmega.chancedOutput('minecraft:dragon_breath', 7000, 5);
+    // Zombie Recipes
+    const zombieRecipeOmega4 = addWannaBeeRecipe('Zombie', 'minecraft:zombie', 'productivebees:upgrade_productivity_4');
+    setCircuit(zombieRecipeOmega4, 1); // Still circuit 1
+    zombieRecipeOmega4.chancedOutput('minecraft:rotten_flesh', 9800, 12); // 98% (4x output)
+    zombieRecipeOmega4.chancedOutput('minecraft:iron_ingot', 1000, 4);   // 10% (4x output)
+    zombieRecipeOmega4.chancedOutput('minecraft:carrot', 1000, 4);      // 10% (4x output)
+    zombieRecipeOmega4.chancedOutput('minecraft:potato', 1000, 4);      // 10% (4x output)
+    zombieRecipeOmega4.chancedOutput('minecraft:copper_ingot', 4000, 8); // 40% (4x output)
 
- // Cow Recipes
- const cowRecipeOmega = addWannaBeeRecipe('Cow', 'minecraft:cow');
- setCircuit(cowRecipeOmega, 4);
- cowRecipeOmega.chancedOutput('minecraft:leather', 10000, 5);
- cowRecipeOmega.chancedOutput('minecraft:beef', 10000, 5);
+    // Skeleton Recipes
+    const skeletonRecipeOmega4 = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton', 'productivebees:upgrade_productivity_4');
+    setCircuit(skeletonRecipeOmega4, 1); // Still circuit 1
+    skeletonRecipeOmega4.chancedOutput('minecraft:bone', 9500, 8);    // 95% (4x output)
+    skeletonRecipeOmega4.chancedOutput('minecraft:arrow', 1000, 4);   // 10% (4x output)
+    skeletonRecipeOmega4.chancedOutput('minecraft:string', 5000, 4);   // 50% (2x output - Adjusted)
 
- // Rabbit Recipes
- const rabbitRecipeOmega = addWannaBeeRecipe('Rabbit', 'minecraft:rabbit');
- setCircuit(rabbitRecipeOmega, 4);
- rabbitRecipeOmega.chancedOutput('minecraft:rabbit_hide', 9000, 5);
- rabbitRecipeOmega.chancedOutput('minecraft:rabbit_foot', 2000, 5);
- rabbitRecipeOmega.chancedOutput('minecraft:cooked_rabbit', 9000, 5);
+    // Spider Recipes
+    const spiderRecipeOmega4 = addWannaBeeRecipe('Spider', 'minecraft:spider', 'productivebees:upgrade_productivity_4');
+    setCircuit(spiderRecipeOmega4, 1); // Still circuit 1
+    spiderRecipeOmega4.chancedOutput('minecraft:string', 9500, 16);            // 95% (4x output)
+    spiderRecipeOmega4.chancedOutput('minecraft:spider_eye', 2000, 4);         // 20% (4x output)
+    spiderRecipeOmega4.chancedOutput('minecraft:fermented_spider_eye', 3500, 4); // 35% (2x output - Adjusted)
 
- // Pig Recipes
- const pigRecipeOmega = addWannaBeeRecipe('Pig', 'minecraft:pig');
- setCircuit(pigRecipeOmega, 4);
- pigRecipeOmega.chancedOutput('minecraft:porkchop', 10000, 5);
+    // Enderman Recipes
+    const endermanRecipeOmega4 = addWannaBeeRecipe('Enderman', 'minecraft:enderman', 'productivebees:upgrade_productivity_4');
+    setCircuit(endermanRecipeOmega4, 1); // Still circuit 1
+    endermanRecipeOmega4.chancedOutput('minecraft:ender_pearl', 8000, 4); // 80% (4x output)
+    endermanRecipeOmega4.chancedOutput('minecraft:end_eye', 4000, 4);   // 40% (2x output - Adjusted)
 
- // Sheep Recipes
- const sheepRecipeOmega = addWannaBeeRecipe('Sheep', 'minecraft:sheep');
- setCircuit(sheepRecipeOmega, 4);
- sheepRecipeOmega.chancedOutput('minecraft:mutton', 10000, 5);
- sheepRecipeOmega.chancedOutput('minecraft:wool', 9500, 5);
- });
+    // Ghast Recipes
+    const ghastRecipeOmega4 = addWannaBeeRecipe('Ghast', 'minecraft:ghast', 'productivebees:upgrade_productivity_4');
+    setCircuit(ghastRecipeOmega4, 1); // Still circuit 1
+    ghastRecipeOmega4.chancedOutput('minecraft:ghast_tear', 9000, 4);   // 90% (4x output)
+    ghastRecipeOmega4.chancedOutput('minecraft:gunpowder', 4000, 4);   // 40% (2x output - Adjusted)
+    ghastRecipeOmega4.chancedOutput('minecraft:gold_nugget', 6000, 20); // 60% (4x output - Adjusted)
+    });
