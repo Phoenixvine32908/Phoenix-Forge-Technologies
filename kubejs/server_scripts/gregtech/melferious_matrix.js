@@ -80,7 +80,7 @@ ServerEvents.recipes(phoenixvine => {
         const beeName = gemName.replace('_gem', ''); // Handle cases like amber_gem.json
         const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
         const flower = Item.of(`minecraft:${gemName.replace('_gem', '')}_block`); // Assuming block name is gemName (without _gem) + "_block"
-        const outputItem = Item.of(`productivebees:configurable_comb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
+        const outputItem = Item.of(`productivebees:configurable_honeycomb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
         const output = [{ item: outputItem, chance: 10000 }];
         makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
     }
@@ -89,7 +89,8 @@ ServerEvents.recipes(phoenixvine => {
     const beeName = oreName;
     const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
     const flower = Item.of(`gtceu:raw_${oreName}_block`);
-    const outputItem = Item.of(`productivebees:configurable_comb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
+    const outputItem = Item.of(`productivebees:configurable_honeycomb
+`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
     const output = [{ item: outputItem, chance: 10000 }];
     makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
 }
@@ -98,7 +99,8 @@ ServerEvents.recipes(phoenixvine => {
     function addGenericBeeRecipe(beeName) {
         const input = Item.of('productivebees:bee_cage', `{type:"productivebees:${beeName}", entity: "productivebees:configurable_bee"}`);
         const flower = Item.of(`minecraft:${beeName}_block`); // Assuming block name is beeName + "_block"
-        const outputItem = Item.of(`productivebees:configurable_comb`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
+        const outputItem = Item.of(`productivebees:configurable_honeycomb
+`, `{EntityTag:{type:"productivebees:${beeName}"}}`);
         const output = [{ item: outputItem, chance: 10000 }];
         makeMatrixRecipes(`kubejs:gtceu/melferious_matrix/${beeName}`, input, flower, output);
     }
@@ -109,7 +111,7 @@ ServerEvents.recipes(phoenixvine => {
         'kubejs:gtceu/melferious_matrix/crystalline',
         Item.of('productivebees:bee_cage', '{type:"productivebees:crystalline", entity: "productivebees:configurable_bee"}'),
         Item.of('minecraft:quartz_block'),
-        [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:crystalline"}}'), chance: 10000 }]
+        [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:crystalline"}}'), chance: 10000 }]
     );
     addGenericBeeRecipe('diamond');
     addGenericBeeRecipe('emerald');
@@ -139,13 +141,13 @@ ServerEvents.recipes(phoenixvine => {
         'kubejs:gtceu/melferious_matrix/neutronium',
         Item.of('productivebees:bee_cage', '{type:"productivebees:neutronium", entity: "productivebees:configurable_bee"}'),
         Item.of('gtceu:neutronium_block'),
-        [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:neutronium"}}'), chance: 10000 }]
+        [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:neutronium"}}'), chance: 10000 }]
     );
 makeMatrixRecipes(
     'kubejs:gtceu/melferious_matrix/slimy',
     Item.of('productivebees:bee_cage', '{type:"productivebees:slimy", entity: "productivebees:configurable_bee"}'),
     Item.of('minecraft:slime_block'),
-    [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:slimy"}}'), chance: 10000 }]
+    [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:slimy"}}'), chance: 10000 }]
 );
     addOreBeeRecipe('oilsands'); // Might not have a block form
     addOreBeeRecipe('palladium');
@@ -157,7 +159,7 @@ makeMatrixRecipes(
         'kubejs:gtceu/melferious_matrix/sheldonite',
         Item.of('productivebees:bee_cage', '{type:"productivebees:sheldonite", entity: "productivebees:configurable_bee"}'),
         Item.of('gtceu:raw_cooperite_block'),
-        [{ item: Item.of("productivebees:configurable_comb", '{EntityTag:{type:"productivebees:sheldonite"}}'), chance: 10000 }]
+        [{ item: Item.of("productivebees:configurable_honeycomb", '{EntityTag:{type:"productivebees:sheldonite"}}'), chance: 10000 }]
     );
     addOreBeeRecipe('sphalerite');
     addOreBeeRecipe('stibnite');
@@ -166,7 +168,7 @@ makeMatrixRecipes(
     addOreBeeRecipe('tricalcium_phosphate'); // Might not have a block form
     addOreBeeRecipe('tungstate');
     addOreBeeRecipe('vanadium_magnetite');
- //////////////////// Wanna Section ////////////////
+//////////////////// Wanna Section ////////////////
 function addWannaBeeRecipe(beeName, mobEntityType) {
     const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(':', '_')}`)
         .circuit(1)
@@ -184,15 +186,15 @@ creeperRecipe.chancedOutput('minecraft:gunpowder', 7500, 2); // 75%
 const zombieRecipe = addWannaBeeRecipe('Zombie', 'minecraft:zombie');
 zombieRecipe.chancedOutput('minecraft:rotten_flesh', 9000, 3); // 90%
 zombieRecipe.chancedOutput('minecraft:iron_ingot', 500, 1);   // 5%
-zombieRecipe.chancedOutput('minecraft:carrot', 500, 1);      // 5%
-zombieRecipe.chancedOutput('minecraft:potato', 500, 1);      // 5%
+zombieRecipe.chancedOutput('minecraft:carrot', 500, 1);     // 5%
+zombieRecipe.chancedOutput('minecraft:potato', 500, 1);     // 5%
 
 const skeletonRecipe = addWannaBeeRecipe('Skeleton', 'minecraft:skeleton');
-skeletonRecipe.chancedOutput('minecraft:bone', 8000, 2);    // 80%
+skeletonRecipe.chancedOutput('minecraft:bone', 8000, 2);     // 80%
 skeletonRecipe.chancedOutput('minecraft:arrow', 500, 1);   // 5%
 
 const spiderRecipe = addWannaBeeRecipe('Spider', 'minecraft:spider');
-spiderRecipe.chancedOutput('minecraft:string', 8500, 4);    // 85%
+spiderRecipe.chancedOutput('minecraft:string', 8500, 4);     // 85%
 spiderRecipe.chancedOutput('minecraft:spider_eye', 1000, 1); // 10%
 
 const endermanRecipe = addWannaBeeRecipe('Enderman', 'minecraft:enderman');
@@ -200,7 +202,7 @@ endermanRecipe.chancedOutput('minecraft:ender_pearl', 6000, 1); // 60%
 
 const ghastRecipe = addWannaBeeRecipe('Ghast', 'minecraft:ghast');
 ghastRecipe.chancedOutput('minecraft:ghast_tear', 7000, 1); // 70%
-ghastRecipe.chancedOutput('minecraft:gunpowder', 2000, 1);  // 20%
+ghastRecipe.chancedOutput('minecraft:gunpowder', 2000, 1);   // 20%
 
 const witherRecipe = addWannaBeeRecipe('Wither', 'minecraft:wither');
 witherRecipe.chancedOutput('minecraft:nether_star', 1000, 1); // 10%
