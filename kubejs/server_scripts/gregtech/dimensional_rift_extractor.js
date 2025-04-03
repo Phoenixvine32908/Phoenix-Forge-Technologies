@@ -7,7 +7,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs(`${outputOre}`)
         .inputFluids('gtceu:drilling_fluid 500')
         .duration(75)
-        .EUt(512)
+        .EUt(1280)
         .dimension(dimension);
     }
   
