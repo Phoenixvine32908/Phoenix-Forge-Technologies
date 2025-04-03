@@ -1,43 +1,43 @@
-gtceu machines set prog circ
-inv slot num
-used slots
-inv item count
-how full the inv is in %
-if inv empty
-the same as above but for fluid inv
-if machine is working
-job progress in %
-total time of a job
-if redstone powered
-is power acceptor/provider
-fe in machine
-max fe for machine
-power IO rate
-mekanisms reactor temp
-DE ractor temp
-tinkers smeltery temp
+gtceu machines set prog circ </br>
+inv slot num</br>
+used slots</br>
+inv item count</br>
+how full the inv is in %</br>
+if inv empty</br>
+the same as above but for fluid inv</br>
+if machine is working</br>
+job progress in %</br>
+total time of a job</br>
+if redstone powered</br>
+is power acceptor/provider</br>
+fe in machine</br>
+max fe for machine</br>
+power IO rate</br>
+mekanisms reactor temp</br>
+DE ractor temp</br>
+tinkers smeltery temp</br>
 
-if you put one on ME controller
-currently ongoing crafts
-amount of cpus
-biggest  storage from all currently idle cpus
+if you put one on ME controller</br>
+currently ongoing crafts</br>
+amount of cpus</br>
+biggest  storage from all currently idle cpus</br>
 
-if you put on a crafting cpu
-% of craft
-amount of crafts done
-amount of crafts to be done
+if you put on a crafting cpu</br>
+% of craft</br>
+amount of crafts done</br>
+amount of crafts to be done</br>
 
-if on me interface
-amount of types across all cells of given type
-% of types used for a cell type
-% how much the cells of a given type, are filled with data
-amount of given item in the system
+if on me interface</br>
+amount of types across all cells of given type</br>
+% of types used for a cell type</br>
+% how much the cells of a given type, are filled with data</br>
+amount of given item in the system</br>
 
-if on ampmeter (from my mod)
-the amount and type of power transfered
-the voltage tier but not like MV, HV, but using only integers to tell you which tier it is
+if on ampmeter (from my mod)</br>
+the amount and type of power transfered</br>
+the voltage tier but not like MV, HV, but using only integers to tell you which tier it is</br>
 
-if on a generator (from my mod)
-max throughtput
-cur gen
-items/t burned 
+if on a generator (from my mod)</br>
+max throughtput</br>
+cur gen</br>
+items/t burned </br>
