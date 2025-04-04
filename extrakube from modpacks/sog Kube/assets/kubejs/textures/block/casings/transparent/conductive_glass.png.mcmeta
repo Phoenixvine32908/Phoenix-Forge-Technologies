@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/casings/transparent/conductive_glass_ctm"
+    }
+}

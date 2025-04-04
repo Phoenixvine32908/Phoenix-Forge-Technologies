@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/casings/stellar_powered_casing_ctm"
+    }
+}

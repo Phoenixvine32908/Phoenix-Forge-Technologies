@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/casings/industrial_power_casing_ctm"
+    }
+}

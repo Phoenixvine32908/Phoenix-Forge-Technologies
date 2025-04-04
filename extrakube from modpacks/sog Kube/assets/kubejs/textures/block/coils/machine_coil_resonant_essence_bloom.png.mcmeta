@@ -1,0 +1,13 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/coils/machine_coil_resonant_essence_bloom_ctm",
+        "emissive": true
+    },
+    "shimmer": {
+        "bloom": true
+    },
+    "animation": {
+        "interpolate": true,
+        "frametime": 20
+    }
+}

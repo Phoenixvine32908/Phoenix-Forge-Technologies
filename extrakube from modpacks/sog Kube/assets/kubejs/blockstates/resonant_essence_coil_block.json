@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "kubejs:block/resonant_essence_coil_block"
+    },
+    "active=true": {
+      "model": "kubejs:block/resonant_essence_coil_block_active"
+    }
+  }
+}

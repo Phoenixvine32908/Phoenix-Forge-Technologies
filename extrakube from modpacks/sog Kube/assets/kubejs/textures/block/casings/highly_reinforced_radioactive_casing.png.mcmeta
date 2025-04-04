@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/casings/highly_reinforced_radioactive_casing_ctm"
+    }
+}

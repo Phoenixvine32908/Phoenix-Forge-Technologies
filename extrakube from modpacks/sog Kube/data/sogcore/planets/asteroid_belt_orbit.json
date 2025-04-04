@@ -1,0 +1,9 @@
+{
+    "dimension": "sogcore:asteroid_belt_orbit",
+    "gravity": 1.622,
+    "oxygen": false,
+    "solar_power": 24,
+    "solar_system": "ad_astra:proxima_centauri",
+    "temperature": -200,
+    "tier": 6
+  }
