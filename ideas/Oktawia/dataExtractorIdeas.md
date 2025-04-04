@@ -27,7 +27,6 @@ DE ractor temp</br>
 #### if you put one on ME controller</br>
 currently ongoing crafts</br>
 amount of cpus</br>
-biggest  storage from all currently idle cpus</br>
 
 #### if you put on a crafting cpu</br>
 % of craft</br>
