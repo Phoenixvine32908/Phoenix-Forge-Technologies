@@ -1,18 +1,33 @@
-function circuitAssemblerRecipe(event, id, inputs, outputs, dur, power) {
-    const rec = event.recipes.gtceu.circuit_assembler(id)
-    .duration(dur)
-    .EUt(power);
-    rec.itemInputs.apply(rec, inputs)
-    rec.itemOutputs.apply(rec, outputs)
-}
-
 ServerEvents.recipes(event => {
 
-    const formingPressRecipes = [
-        ["processor_logic2", ["4x minecraft:blaze_powder"], ["1x powah:crystal_blazing"], 600, 64],
-    ]
+    function CircuitAssemblerRecipe(event, id, inputs, fluidInputs, outputs, dur, power) {
+        const rec = event.recipes.gtceu.circuit_assembler(id)
+            .duration(dur)
+            .EUt(power);
+        inputs.forEach(input => rec.itemInputs(input)); // Use forEach for clarity
+        fluidInputs.forEach(fluid => {
+            const [fluidId, amount] = fluid.split(' ');
+            rec.inputFluids(Fluid.of(fluidId, parseInt(amount)));
+        });
+        outputs.forEach(output => rec.itemOutputs(output)); // Use forEach for clarity
+    }
 
-    formingPressRecipes.forEach(([id, inputs, outputs, dur, power]) => {
-        formingPressRecipe(event, id, inputs, outputs, dur, power);
+    const circuitassemblerRecipes = [
+        ["processor_logic2", ["1x ae2:printed_logic_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/mv", "gtceu:resistor", "2x gtceu:fine_aluminium_wire" ], ["gtceu:soldering_alloy 74"], ["6x ae2:logic_processor"], 600, 64],
+        ["processor_logic3", ["1x ae2:printed_logic_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/hv", "4x gtceu:smd_resistor", "2x gtceu:fine_electrum_wire" ], ["gtceu:soldering_alloy 74"], ["8x ae2:logic_processor"], 600, 64], // Added empty FluidInputs array
+        ["processor_logic4", ["1x ae2:printed_logic_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/ev", "1x gtceu:smd_resistor", "2x gtceu:fine_niobium_titanium_wire" ], ["gtceu:soldering_alloy 74"], ["10x ae2:logic_processor"], 600, 64],
+        ["processor_logic5", ["1x ae2:printed_logic_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/iv", "1x gtceu:advanced_smd_resistor", "2x gtceu:fine_hssg_wire" ], ["gtceu:soldering_alloy 74"], ["12x ae2:logic_processor"], 600, 64],
+        ["processor_calculation2", ["1x ae2:printed_calculation_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/mv", "gtceu:capacitor", "2x gtceu:fine_aluminium_wire" ], ["gtceu:soldering_alloy 74"], ["6x ae2:calculation_processor"], 600, 64],
+        ["processor_calculation3", ["1x ae2:printed_calculation_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/hv", "4x gtceu:smd_capacitor", "2x gtceu:fine_electrum_wire" ], ["gtceu:soldering_alloy 74"], ["8x ae2:calculation_processor"], 600, 64],
+        ["processor_calculation4", ["1x ae2:printed_calculation_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/ev", "1x gtceu:smd_capacitor", "2x gtceu:fine_niobium_titanium_wire" ], ["gtceu:soldering_alloy 74"], ["10x ae2:calculation_processor"], 600, 64],
+        ["processor_calculation5", ["1x ae2:printed_calculation_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/iv", "1x gtceu:advanced_smd_capacitor", "2x gtceu:fine_hssg_wire" ], ["gtceu:soldering_alloy 74"], ["12x ae2:calculation_processor"], 600, 64],
+        ["processor_engineering2", ["1x ae2:printed_engineering_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/mv", "gtceu:inductor", "2x gtceu:fine_aluminium_wire" ], ["gtceu:soldering_alloy 74"], ["6x ae2:engineering_processor"], 600, 64],
+        ["processor_engineering3", ["1x ae2:printed_engineering_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/hv", "4x gtceu:smd_inductor", "2x gtceu:fine_electrum_wire" ], ["gtceu:soldering_alloy 74"], ["8x ae2:engineering_processor"], 600, 64],
+        ["processor_engineering4", ["1x ae2:printed_engineering_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/ev", "1x gtceu:smd_inductor", "2x gtceu:fine_niobium_titanium_wire" ], ["gtceu:soldering_alloy 74"], ["10x ae2:engineering_processor"], 600, 64],
+        ["processor_engineering5", ["1x ae2:printed_engineering_processor", "1x ae2:printed_silicon", "1x #gtceu:circuits/iv", "1x gtceu:advanced_smd_inductor", "2x gtceu:fine_hssg_wire" ], ["gtceu:soldering_alloy 74"], ["12x ae2:engineering_processor"], 600, 64],
+    ];
+
+    circuitassemblerRecipes.forEach(([id, inputs, FluidInputs, outputs, dur, power]) => {
+        CircuitAssemblerRecipe(event, id, inputs, FluidInputs, outputs, dur, power);
     });
 })

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "kubejs:block/highly_superconductor_coil_block"
+    },
+    "active=true": {
+      "model": "kubejs:block/highly_superconductor_coil_block_active"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/casings/kaemite_casing_ctm"
+    }
+}

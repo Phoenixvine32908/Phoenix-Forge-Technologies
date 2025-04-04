@@ -1,0 +1,261 @@
+{
+    "filters": [{
+            "category": "ironfurnaces:generator_regular"
+        },
+        {
+            "category": "ironfurnaces:generator_blasting"
+        },
+        {
+            "category": "ironfurnaces:generator_smoking"
+        },
+        {
+            "category": "thermal:pulverizer"
+        },
+        {
+            "category": "thermal:gourmand_fuel"
+        },
+        {
+            "category": "thermal:disenchantement_fuel"
+        },
+        {
+            "category": "thermal:lapidary_fuel"
+        },
+        {
+            "category": "enderio:alloy_smelting"
+        },
+        {
+            "category": "thermal:furnace"
+        },
+        {
+            "category": "ironfurnaces:generator_regular"
+        },
+        {
+            "category": "ironfurnaces:generator_blasting"
+        },
+        {
+            "category": "nuclearcraft:supercooler"
+        },
+        {
+            "category": "nuclearcraft:rock_crusher"
+        },
+        {
+            "category": "nuclearcraft:decay_hastener"
+        },
+        {
+            "category": "nuclearcraft:irradiator"
+        },
+        {
+            "category": "nuclearcraft:nuclear_furnace"
+        },
+        {
+            "category": "nuclearcraft:extractor"
+        },
+        {
+            "category": "nuclearcraft:electrolyzer"
+        },
+        {
+            "category": "nuclearcraft:pressurizer"
+        },
+        {
+            "category": "nuclearcraft:alloy_smelter"
+        },
+        {
+            "category": "nuclearcraft:centrifuge"
+        },
+        {
+            "category": "nuclearcraft:manufactory"
+        },
+        {
+            "category": "nuclearcraft:gas_scrubber"
+        },
+        {
+            "category": "nuclearcraft:fluid_enricher"
+        },
+        {
+            "category": "nuclearcraft:isotope_separator"
+        },
+        {
+            "category": "nuclearcraft:fluid_infuser"
+        },
+        {
+            "category": "nuclearcraft:chemical_reactor"
+        },
+        {
+            "category": "nuclearcraft:analyzer"
+        },
+        {
+            "category": "nuclearcraft:ingot_former"
+        },
+        {
+            "category": "nuclearcraft:pump"
+        },
+        {
+            "category": "nuclearcraft:fuel_reprocessor"
+        },
+        {
+            "category": "nuclearcraft:leacher"
+        },
+        {
+            "category": "nuclearcraft:crystallizer"
+        },
+        {
+            "category": "nuclearcraft:assembler"
+        },
+        {
+            "category": "nuclearcraft:steam_turbine"
+        },
+        {
+            "category": "nuclearcraft:melter"
+        },
+        {
+            "category": "nuclearcraft:nc_ore_veins"
+        },
+        {
+            "category": "ftbquests:quest"
+        },
+        {
+            "category": "minecraft:grinding"
+        },
+        {
+            "id": "/bucket/",
+            "category": "thermal:bottler"
+        },
+        {
+            "id": "/bucket/",
+            "category": "emi:world_interaction"
+        },
+        {
+            "id": "/repair/",
+            "category": "emi:anvil_repairing"
+        },
+        {
+            "category": "thermal:smelter"
+        },
+        {
+            "category": "thermal:smelter_catalyst"
+        },
+        {
+            "category": "thermal:sawmill"
+        },
+        {
+            "category": "thermal:refinery"
+        },
+        {
+            "category": "thermal:pyrolyzer"
+        },
+        {
+            "category": "thermal:pulverizer_catalyst"
+        },
+        {
+            "category": "thermal:disenchantement_fuel"
+        },
+        {
+            "category": "thermal:crystallizer"
+        },
+        {
+            "category": "thermal:crucible"
+        },
+        {
+            "category": "thermal:chiller"
+        },
+        {
+            "category": "thermal:centrifuge"
+        },
+        {
+            "category": "thermal:brewer"
+        },
+        {
+            "category": "thermal:bottler"
+        },
+        {
+            "category": "ae2:entropy"
+        },
+        {
+            "category": "emi_loot:archaeology_drops"
+        },
+        {
+            "category": "emi_loot:gameplay_drops"
+        },
+        {
+            "category": "emi_loot:block_drops"
+        },
+        {
+            "category": "minecraft:alchemy_bench"
+        },
+        {
+            "category": "minecraft:botanist_workbench"
+        },
+        {
+            "category": "minecraft:glassblower"
+        },
+        {
+            "category": "minecraft:carpenters_table"
+        },
+        {
+            "category": "minecraft:loom_table"
+        },
+        {
+            "category": "minecraft:mason_table"
+        },
+        {
+            "category": "minecraft:tinkering_table"
+        },
+        {
+            "category": "create:automatic_shaped" 
+        },
+        {
+            "category": "create:automatic_shapeless" 
+        },
+        {
+            "category": "create:automatic_brewing" 
+        },
+        {
+            "category": "create:automatic_packing" 
+        },
+        {
+            "category": "create:draining" 
+        },
+        {
+            "category": "gtceu:create_mixer" 
+        },
+        {
+            "category": "create:sawing" 
+        },
+        {
+            "category": "create:mixing" 
+        },
+        {
+            "category": "create:pressing" 
+        },
+        {
+            "category": "nuclearcraft:fusion_coolant" 
+        },
+        {
+            "category": "nuclearcraft:fusion_core" 
+        },
+        {
+            "category": "nuclearcraft:turbine_controller" 
+        },
+        {
+            "category": "enderio:primitive_alloy_smelting" 
+        },
+        {
+            "category": "create:fan_blasting" 
+        },
+        {
+            "category": "create:fan_haunting" 
+        },
+        {
+            "category": "create:fan_smoking" 
+        },
+        {
+            "category": "create:fan_washing" 
+        },
+        {
+            "category": "create:block_cutting" 
+        },
+        {
+            "category": "enderio:sagmilling" 
+        }
+    ]
+}

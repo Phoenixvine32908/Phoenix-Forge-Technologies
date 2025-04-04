@@ -453,7 +453,7 @@ ServerEvents.recipes(phoenixvine => {
     makeStandardMatrixRecipe(
         'kubejs:gtceu/melferious_matrix/radioactive_bee',
         'radioactive',
-        Item.of('gtceu:uranium'), // Assuming a generic radioactive item
+        Item.of('gtceu:uranium_ingot'),
         'radioactive',
         10,
         'productivebees:upgrade_productivity_2',

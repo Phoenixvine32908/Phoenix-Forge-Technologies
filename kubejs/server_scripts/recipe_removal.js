@@ -246,7 +246,9 @@ const recipesToRemove = [
     "storagenetwork:picker_remote",
     "storagenetwork:collector_remote",
     "storagenetwork:builder_remote",
-    "storagenetwork:expanded_remote"
+    "storagenetwork:expanded_remote",
+    "productivebees:bee_breeding/raw_materials/osmium_bee"
+    
 ];
 
 ServerEvents.recipes((event) => {

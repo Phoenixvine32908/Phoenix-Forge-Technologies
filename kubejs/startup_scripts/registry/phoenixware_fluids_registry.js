@@ -36,3 +36,11 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         makePlasma(event, plasma[0], plasma[1], plasma[2]);
     })
 })
+StartupEvents.registry('fluid', event => {
+
+    event.create("grass_water")
+        .thinTexture(0x00ff11)
+        .bucketColor(0x00ff11)
+        .displayName("Grass Water")
+
+})
