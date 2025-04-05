@@ -13,6 +13,7 @@ StartupEvents.registry("block", phoenixvine => {
     }
 
     const dispNames = {
+        quantified_alloy_block: "§6Quantified Alloy Block",
         plasma_resistant: "§6Plasma Resistant Casing",
         unstable_logic: "§6Unstable Logic Capable Casings",
         stable_logic: "§6Stable Logic Capable Casings",
@@ -37,7 +38,9 @@ StartupEvents.registry("block", phoenixvine => {
         high_pressure_quantum_forge_core: "§6High-Pressure Quantum Forge Core",
         strongest_rhodium_plated_machne_casing: "§eStrongest Rhodium Plated Casing",
         reliable_naquadah_alloy_machine_casing: "§eReliable Naquadah Alloy Casing",
-        stronk_tritanium_machine_casing: "§cStronk Tritanium Casing"
+        stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
+        entropy_logic_casing: "§cEntropy Logic Casing",
+        glitched_fusion_casing: "§cEntropy Fusion Casing"
       };
 
     for (const key in dispNames) {
