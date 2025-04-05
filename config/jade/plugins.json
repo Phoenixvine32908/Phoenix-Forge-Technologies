@@ -54,6 +54,11 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "avaritia": {
+    "extreme_smithing": true,
+    "crafting_table": true,
+    "compressor": true
+  },
   "gtceu": {
     "primitive_pump": true,
     "auto_output_info": true,
@@ -130,11 +135,5 @@
     "hud.rgb16": true,
     "hud": true,
     "hud.redstone": true
-  },
-  "storagedrawers": {
-    "display.stacklimit": true,
-    "main": true,
-    "display.content": true,
-    "display.status": true
   }
 }

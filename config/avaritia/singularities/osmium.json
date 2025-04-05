@@ -1,0 +1,22 @@
+{
+  "name": "singularity.avaritia.osmium",
+  "colors": [
+    "e6eef7",
+    "c0c4cd"
+  ],
+  "timeRequired": 240,
+  "conditions": [
+    {
+      "type": "forge:not",
+      "value": {
+        "tag": "forge:ingots/osmium",
+        "type": "forge:tag_empty"
+      }
+    }
+  ],
+  "ingredient": {
+    "tag": "forge:ingots/osmium"
+  },
+  "enabled": true,
+  "recipeDisabled": false
+}

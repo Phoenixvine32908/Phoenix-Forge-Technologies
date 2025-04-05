@@ -27,7 +27,7 @@ StartupEvents.registry("block", phoenixvine => {
         supercooled_reactor_core: "§bSupercooled §6Reactor Core",
         quantum_stable_fusion_casing: "§cQuantum Stable fusion casing PW1",
         quasi_stable_fusion_casing: "§eQuasi Stable fusion casing PW2",
-        super_stable_fusion_casing: "§eSuper Stable fusion casing PW3",
+        super_stable_fusion_casing: "§eSuper Stable fusion casing PW4",
         volatile_plasma_chamber: "§6Volatile Plasma Chamber",
         quantum_stabilized_electrodes: "§bQuantum-Stabilized Electrodes",
         true_phoenix_infused_casing: "§6True Phoenix-Infused Casing",
@@ -39,8 +39,9 @@ StartupEvents.registry("block", phoenixvine => {
         strongest_rhodium_plated_machne_casing: "§eStrongest Rhodium Plated Casing",
         reliable_naquadah_alloy_machine_casing: "§eReliable Naquadah Alloy Casing",
         stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
-        entropy_logic_casing: "§cEntropy Logic Casing",
+        entropy_logic_casing: "§cEntropy Logic Casing PW3",
         glitched_fusion_casing: "§cEntropy Fusion Casing"
+        
       };
 
     for (const key in dispNames) {
