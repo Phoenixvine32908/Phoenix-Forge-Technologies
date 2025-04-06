@@ -32,6 +32,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         ]
     ]
 
+    event.create("trinaquadalloy")
+        .ingot().fluid()
+        .color(0x281832).iconSet(GTMaterialIconSet.BRIGHT)
+        .flags(GTMaterialFlags.GENERATE_PLATE)
+        .components('6x trinium', '2x naquadah', '1x carbon')
+        .blastTemp(8747, 'higher', GTValues.VA[GTValues.ZPM], 1200)
+
     plasmas.forEach(plasma => {
         makePlasma(event, plasma[0], plasma[1], plasma[2]);
     })

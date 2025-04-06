@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('test_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.ZPM))
+    phoenixvine.create('test_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.UIV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('plasma_generator')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])

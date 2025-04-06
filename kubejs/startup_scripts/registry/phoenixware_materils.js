@@ -1,3 +1,9 @@
+const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.FluidProperty')
+const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty')
+const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder')
+const $FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys')
+
+
 function makeIconSet(event, id, parent){
     event.create(id).parent(parent);
 }
@@ -16,7 +22,9 @@ function makeMaterial(event, id, color, color2, icon, flgs, prps){
     .flags(flgs)
     .fluid();
     mat.cableProperties.apply(mat, prps)
+    .rotorStats(1200, 300, 13.0, 655360)
 }
+
 
 GTCEuStartupEvents.registry('gtceu:element', event => {
 

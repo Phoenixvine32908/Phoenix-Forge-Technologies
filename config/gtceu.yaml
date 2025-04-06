@@ -501,7 +501,7 @@ compat:
     # Forge Energy to GTEU ratio for converting FE to EU.
     # Only affects converters.
     # Default: 4 FE == 1 EU
-    feToEuRatio: 4
+    feToEuRatio: 1
 
     # GTEU to Forge Energy ratio for converting EU to FE.
     # Affects native conversion and Converters.
