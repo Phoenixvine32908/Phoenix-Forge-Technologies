@@ -1,0 +1,21 @@
+{
+    "primaryColor": "#d7a7af",
+    "secondaryColor": "#c29da6",
+    "tertiaryColor": "#d7a7af",
+    "renderer": "default_shell",
+    "size": 4.20,
+    "selfbreed": false,
+    "selfheal": true,
+    "fireproof": true,
+    "flowerItem": "gtceu:tritanium_coil_block",
+    "name": "I Guess That's A Tritanium bee",
+    "invulnerability": [
+        "mekanism.radiation"
+    ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "productivebees"
+        }
+    ]
+}

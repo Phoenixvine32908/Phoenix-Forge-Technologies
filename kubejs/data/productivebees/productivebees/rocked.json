@@ -1,0 +1,21 @@
+{
+    "primaryColor": "#c3bbba",
+    "secondaryColor": "#cbc3b9",
+    "tertiaryColor": "#e6deda",
+    "renderer": "default_shell",
+    "size": 1.20,
+    "selfbreed": true,
+    "selfheal": true,
+    "fireproof": true,
+    "flowerItem": "gtceu:rock_salt_block",
+    "name": "Are Rocks Salty?",
+    "invulnerability": [
+        "mekanism.radiation"
+    ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "productivebees"
+        }
+    ]
+}

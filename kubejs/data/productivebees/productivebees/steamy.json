@@ -1,0 +1,21 @@
+ {
+    "primaryColor": "#e5e5e5",
+    "secondaryColor": "#dfdfdf",
+    "tertiaryColor": "#e5e5e5",
+    "renderer": "default_shell",
+    "size": 4.20,
+    "selfbreed": true,
+    "selfheal": true,
+    "fireproof": true,
+    "flowerItem": "gtceu:steam_bucket",
+    "name": "Steamy Bee",
+    "invulnerability": [
+        "mekanism.radiation"
+    ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "productivebees"
+        }
+    ]
+}

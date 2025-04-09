@@ -1,0 +1,40 @@
+{
+    "type": "productivebees:centrifuge",
+    "ingredient": {
+      "type": "forge:nbt",
+      "item": "productivebees:configurable_honeycomb",
+      "nbt": {
+        "EntityTag": {
+          "type": "productivebees:acidic"
+        }
+      }
+    },
+    "outputs": [
+      {
+        "item": {
+          "tag": "forge:dusts/sulfur"
+        },
+        "chance": 10
+      },
+      {
+        "item": {
+          "tag": "forge:wax"
+        }
+      },
+      {
+        "fluid": {
+          "fluid": "gtceu:aqua_regia"
+        },
+        "amount": 1
+      }
+    ],
+    "conditions": [
+      {
+        "type": "forge:not",
+        "value": {
+          "type": "forge:tag_empty",
+          "tag": "forge:dusts/sulfur"
+        }
+      }
+    ]
+}

@@ -1,0 +1,21 @@
+{
+    "primaryColor": "#eacb99",
+    "secondaryColor": "#eaca96",
+    "tertiaryColor": "#eaca96",
+    "renderer": "default_shell",
+    "size": 4.20,
+    "selfbreed": true,
+    "selfheal": true,
+    "fireproof": true,
+    "flowerItem": "gtceu:aqua_regia_bucket",
+    "name": "This Bee Hurts",
+    "invulnerability": [
+        "mekanism.radiation"
+    ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "productivebees"
+        }
+    ]
+}

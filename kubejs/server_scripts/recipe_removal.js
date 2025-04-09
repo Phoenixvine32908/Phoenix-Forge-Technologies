@@ -247,7 +247,9 @@ const recipesToRemove = [
     "storagenetwork:collector_remote",
     "storagenetwork:builder_remote",
     "storagenetwork:expanded_remote",
-    "productivebees:bee_breeding/raw_materials/osmium_bee"
+    "productivebees:bee_breeding/raw_materials/osmium_bee",
+    "minecraft:neutron_pile_from_ingots",
+    "minecraft:neutron_nugget"
     
 ];
 

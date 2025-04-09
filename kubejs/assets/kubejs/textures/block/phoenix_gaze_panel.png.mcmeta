@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/phoenix_gaze_panel_ctm"
+    }
+}

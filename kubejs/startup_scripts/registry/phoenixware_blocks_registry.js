@@ -27,7 +27,6 @@ StartupEvents.registry("block", phoenixvine => {
         supercooled_reactor_core: "§bSupercooled §6Reactor Core",
         quantum_stable_fusion_casing: "§cQuantum Stable fusion casing PW1",
         quasi_stable_fusion_casing: "§eQuasi Stable fusion casing PW2",
-        super_stable_fusion_casing: "§eSuper Stable fusion casing PW4",
         volatile_plasma_chamber: "§6Volatile Plasma Chamber",
         quantum_stabilized_electrodes: "§bQuantum-Stabilized Electrodes",
         true_phoenix_infused_casing: "§6True Phoenix-Infused Casing",
@@ -40,8 +39,33 @@ StartupEvents.registry("block", phoenixvine => {
         reliable_naquadah_alloy_machine_casing: "§eReliable Naquadah Alloy Casing",
         stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
         entropy_logic_casing: "§cEntropy Logic Casing PW3",
-        glitched_fusion_casing: "§cEntropy Fusion Casing"
-        
+        glitched_fusion_casing: "§cEntropy Fusion Casing",
+
+          // 🌌 Voidglass & Finality Constructs
+          voidglass_cocoon_shell: "§5Voidglass Cocoon Shell",
+          fractured_core_prism: "§dFractured Core Prism",
+          entropy_containment_plating: "§5Entropy Containment Plating",
+          dimensional_anchor_node: "§5Dimensional Anchor Node",
+          final_seal_node: "§dFinal Seal Node",
+  
+          // 🧠 Panoptic Engine Blocks
+          panoptic_frame: "§fPanoptic Frame",
+          panoptic_lens_matrix: "§fLens Matrix Block",
+          voidcore_actuator: "§dVoidcore Actuator",
+          astral_projection_matrix: "§5Astral Projection Matrix",
+          eidolon_stabilization_field: "§dEidolon Stabilization Field",
+  
+          // 🔥 Phoenix Infuser Components
+          phoenix_heart_casing: "§cPhoenix Heart Casing",
+          blazing_core_stabilizer: "§cBlazing Core Stabilizer",
+          ashglass_viewing_panel: "§6Ashglass Viewing Panel",
+          super_stable_fusion_casing: "§cPhoenix Infusion Casing",
+          phoenix_gaze_panel: "§cPhoenix Gaze Panel",
+          controlled_ruin_lens: "§cControlled Ruin Lens",
+          phoenix_pyre_helix: "§cPhoenix Pyre Helix",
+          phoenix_ignition_matrix: "§cPhoenix Ignition Matrix",
+          entropy_well_coil: "§cEntropy Well Coil",
+
       };
 
     for (const key in dispNames) {
@@ -59,4 +83,52 @@ StartupEvents.registry("block", phoenixvine => {
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
     .soundType('metal')
+
+    phoenixvine.create('infinity_coil_block', 'gtceu:coil')
+    .temperature(20000)
+    .level(30)
+    .energyDiscount(30)
+    .tier(12)
+    .coilMaterial(() => GTMaterials.get('infinity'))
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .soundType('metal')
+    
+    phoenixvine.create('entropic_coil_block', 'gtceu:coil')
+    .temperature(20000)
+    .level(30)
+    .energyDiscount(30)
+    .tier(12)
+    .coilMaterial(() => GTMaterials.get('corrupted_hyperalloy'))
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .soundType('metal')
+    phoenixvine.create('true_gravi_stable_coil_block', 'gtceu:coil')
+    .temperature(20000)
+    .level(30)
+    .energyDiscount(30)
+    .tier(12)
+    .coilMaterial(() => GTMaterials.get('phoenix_enriched_neutronium'))
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .soundType('metal')
+    phoenixvine.create('akashic_coil_block', 'gtceu:coil')
+    .temperature(20000)
+    .level(30)
+    .energyDiscount(30)
+    .tier(12)
+    .coilMaterial(() => GTMaterials.get('akashic_chrono_metal'))
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .soundType('metal')
+
+
 });

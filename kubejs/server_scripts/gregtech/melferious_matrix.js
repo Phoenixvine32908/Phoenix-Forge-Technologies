@@ -189,6 +189,7 @@ ServerEvents.recipes(phoenixvine => {
     makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/tungstate', 'tungstate', Item.of('gtceu:raw_tungstate_block'), 'tungstate', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
     makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/vanadium_magnetite', 'vanadium_magnetite', Item.of('gtceu:raw_vanadium_magnetite_block'), 'vanadium_magnetite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
     makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/draconic', 'draconic', Item.of('minecraft:dragon_egg'), 'draconic', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4');
+    makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/fluorite', 'fluorite', Item.of('gtceu:raw_fluorite_block'), 'fluorite', 10, 'productivebees:upgrade_productivity_2', 'productivebees:upgrade_comb_block', 'productivebees:upgrade_productivity_3', 'productivebees:upgrade_productivity_4'); 
 
     // New Bees
     makeStandardMatrixRecipe(
