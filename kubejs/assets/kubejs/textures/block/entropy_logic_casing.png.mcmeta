@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/entropy_logic_casing_ctm"
+    }
+}

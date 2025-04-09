@@ -1,7 +1,7 @@
 {
   "variants": {
     "active=false": {
-      "model": "kubejs:block/true_heat_stable_coil_block_active"
+      "model": "kubejs:block/true_heat_stable_coil_block"
     },
     "active=true": {
       "model": "kubejs:block/true_heat_stable_coil_block_active"

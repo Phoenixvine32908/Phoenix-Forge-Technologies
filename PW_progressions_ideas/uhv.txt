@@ -1,0 +1,24 @@
+Resource Generation
+
+Progression Multiblocks
+
+Side Progression
+
+Tier Materiels(hulls and casings)
+
+Materiel ore proc line/chemicals
+
+Power Generation
+
+Componet Materiels (motors, etc)
+
+Circuit Materiels
+
+Circuits
+
+Alloys
+
+Chemicals
+
+Color Scheme
+

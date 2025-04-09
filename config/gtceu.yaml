@@ -430,7 +430,7 @@ tools:
 
     # The base damage of the NanoSaber.
     # Default: 5.0
-    nanoSaberBaseDamage: 5.0
+    nanoSaberBaseDamage: 7.0
 
     # Should Zombies spawn with charged, active NanoSabers on hard difficulty?
     # Default: true

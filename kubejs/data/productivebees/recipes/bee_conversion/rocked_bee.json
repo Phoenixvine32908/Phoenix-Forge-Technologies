@@ -1,0 +1,19 @@
+{
+    "type": "productivebees:bee_conversion",
+    "source": "productivebees:salty",
+    "result": "productivebees:rocked",
+    "item": {
+        "item": "gtceu:rock_salt_block"
+    },
+    "chance": 30,
+    "conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:salty"
+        },
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:rocked"
+        }
+    ]
+}

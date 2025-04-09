@@ -8,6 +8,15 @@ function makeDust(event, id, color, cmp){
 }
 
 StartupEvents.registry('item', event => {
+
+    event.create('galaxium_core')
+    .displayName("§6Galaxium Core")
+    .texture("kubejs:item/galaxium_core")
+
+    event.create('test_ingot')
+    .displayName("§6Test Ingot")
+    .texture("kubejs:item/test_ingot")
+
     function create(namespace, displayName) {
         event.create("phoenix_enriched_" + namespace)
         .displayName(displayName)
@@ -23,6 +32,7 @@ StartupEvents.registry('item', event => {
 
     // PhoenixWare Wafers And Chips (silicon,ram,cpu,and soc)
     create("naquad_wafer", "§6Brilliant Wafer");
+   
 
     // PhoenixWare Multiblock casings/custom blocks
 
