@@ -4,6 +4,11 @@ const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuil
 const $FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys')
 
 
+StartupEvents.registry('item', event => {
+    
+    event.create('phoenix_feather').displayName('§cFeather §6Of §cRebirth').texture("kubejs:item/phoenix_feather")
+})
+
 function makeIconSet(event, id, parent){
     event.create(id).parent(parent);
 }
@@ -65,6 +70,76 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
             110,
             "VTT"
         ],
+        [
+            "celestial_aurorium",
+            0xFFD700, // Gold
+            0xFFFACD, // Lemon Chiffon
+            [GTValues.V[GTValues.MAX], 4096, 512, true],
+            [2650, 670, 27.5, 2100000]
+        ],
+        [
+            "primordial_flux_metal",
+            0x8A2BE2, // Blue Violet
+            0x4B0082, // Indigo
+            [GTValues.V[GTValues.OpV], 2048, 256, true],
+            [2500, 630, 24.0, 1950000]
+        ],
+        [
+            "eternal_starforged_steel",
+            0x708090, // Slate Gray
+            0xF5F5F5, // White Smoke
+            [GTValues.V[GTValues.UIV], 512, 64, true],
+            [2150, 520, 21.0, 1600000]
+        ],
+        [
+            "dimensional_reflection_alloy",
+            0x00CED1, // Dark Turquoise
+            0xE6E6FA, // Lavender
+            [GTValues.V[GTValues.UEV], 1024, 128, true],
+            [2400, 580, 25.5, 1850000]
+        ],
+        [
+            "timewoven_platinum",
+            0xE5E4E2, // Platinum
+            0xC0C0C0, // Silver
+            [GTValues.V[GTValues.UXV], 2048, 256, true],
+            [2550, 610, 26.5, 2000000]
+        ],
+        [
+            "soulbound_ethersteel",
+            0x87CEEB, // Sky Blue
+            0x00008B, // Dark Blue
+            [GTValues.V[GTValues.UIV], 512, 64, true],
+            [2000, 490, 22.0, 1500000]
+        ],
+        [
+            "tachyon_infused_chromium",
+            0xB0C4DE, // Light Steel Blue
+            0x5F9EA0, // Cadet Blue
+            [GTValues.V[GTValues.OpV], 1024, 128, true],
+            [2450, 600, 24.5, 1750000]
+        ],
+        [
+            "echo_crystal_alloy",
+            0xDA70D6, // Orchid
+            0x8B008B, // Dark Magenta
+            [GTValues.V[GTValues.OpV], 4096, 512, true],
+            [2750, 690, 28.0, 2250000]
+        ],
+        [
+            "nebular_resonance_ingot",
+            0x4682B4, // Steel Blue
+            0xD8BFD8, // Thistle
+            [GTValues.V[GTValues.MAX], 8192, 1024, true],
+            [2850, 710, 29.5, 2400000]
+        ],
+        [
+            "paradoxium",
+            0x000000, // Black
+            0xFF1493, // Deep Pink
+            [GTValues.V[GTValues.MAX], 16384, 2048, true],
+            [3000, 750, 32.0, 3000000]
+        ]
         [
             "quantum_infused_cobalt",
             27,

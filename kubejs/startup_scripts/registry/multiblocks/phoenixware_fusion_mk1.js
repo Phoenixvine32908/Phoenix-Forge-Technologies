@@ -4,17 +4,17 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('phoenixware_fusion_mk1')
         .category('multiblock')
         .setEUIO('in') 
-        .setMaxIOSize(1, 1, 4, 4)
+        .setMaxIOSize(0, 0, 2, 1)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);
 });
  
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('phoenixware_fusion_mk1', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.UV))
+    phoenixvine.create('phoenixware_fusion_mk1', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.UIV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('phoenixware_fusion_mk1')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
         .pattern(definition => FactoryBlockPattern.start()  
         .aisle("AAAAAAAABBCCCBBAAAAAAAA", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAABBCCCBBAAAAAAAA")
@@ -39,7 +39,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
 .aisle("AAABBBBBBBBBBBBBBBBBAAA", "AAAGAAAAAAAAAAAAAAAGAAA", "AAAGAAAAAAAAAAAAAAAGAAA", "AAAGAAAAAAAAAAAAAAAGAAA", "AAABBBBBBBBBBBBBBBBBAAA")
 .aisle("AAAABBBBBBBBBBBBBBBAAAA", "AAAAGGAAAAAAAAAAAGGAAAA", "AAAAGGAAAAAAAAAAAGGAAAA", "AAAAGGAAAAAAAAAAAGGAAAA", "AAAABBBBBBBBBBBBBBBAAAA")
 .aisle("AAAAAABBBBBBBBBBBAAAAAA", "AAAAAAFFAAAAAAAFFAAAAAA", "AAAAAAFFAAAAAAAFFAAAAAA", "AAAAAAFFAAAAAAAFFAAAAAA", "AAAAAABBBBBBBBBBBAAAAAA")
-.aisle("AAAAAAAABBCCCBBAAAAAAAM", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAADDENEDDAAAAAAAA", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAABBCCCBBAAAAAAAA")
+.aisle("AAAAAAAABBCCCBBAAAAAAAA", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAADDENEDDAAAAAAAA", "AAAAAAAADDEEEDDAAAAAAAA", "AAAAAAAABBCCCBBAAAAAAAA")
    .where("A", Predicates.blocks("minecraft:air"))
    .where("B", Predicates.blocks("kubejs:strongest_rhodium_plated_machne_casing"))
    .where("C", Predicates.blocks("gtceu:advanced_computer_casing"))

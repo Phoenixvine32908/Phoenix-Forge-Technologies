@@ -2,16 +2,23 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('phoenix_infuser')
         .category('multiblock')
         .setEUIO('in')
-        .setMaxIOSize(2, 2, 2, 2)
+        .setMaxIOSize(0, 0, 2, 1)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);
+        phoenixvine.create('phoenix_heart_hearth')
+        .category('phoenix_infuser')
+        .setEUIO('in')
+        .setMaxIOSize(3, 1, 3, 1)
+        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.FURNACE);
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('phoenix_infuser', 'multiblock')
+    phoenixvine.create('phoenix_infuser', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.OpV))
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('electric_blast_furnace')
+        .recipeTypes('phoenix_infuser', 'phoenix_heart_hearth')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()

@@ -2,7 +2,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('melferious_matrix')
         .category('multiblock')
         .setEUIO('in')
-        .setMaxIOSize(4, 4, 4, 4)
+        .setMaxIOSize(4, 4, 4, 8)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);

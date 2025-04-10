@@ -13,7 +13,7 @@
 			}
 		}
 	}
-	id: "07452BFE84713D92"
+	id: "3DE34BC00718BB48"
 	order_index: 1
 	quest_links: [ ]
 	quests: [
@@ -34,19 +34,19 @@
 				""
 				"Built on the foundation of the &bGregTech Community Pack&r, with thanks to the &aGTCEu Modern&r developers!"
 			]
-			icon: "kubejs:greg_icon"
-			id: "0125498CB5AFE79A"
+			icon: "kubejs:phoenix_feather"
+			id: "43B33195C4C4E01A"
 			rewards: [
 				{
 					auto: "invisible"
 					icon: "minecraft:cooked_beef"
-					id: "43AF9A5CFF608C11"
+					id: "0062F8FE66ED54CA"
 					item: "gtceu:sus_record"
 					title: "Steak"
 					type: "item"
 				}
 				{
-					id: "71B4DCC42C5810B9"
+					id: "4BA40DE8CCA1D542"
 					item: "gtceu:prospector.hv"
 					type: "item"
 				}
@@ -55,7 +55,7 @@
 			size: 1.2d
 			subtitle: "We hope you enjoy your stay"
 			tasks: [{
-				id: "187667BDDDFD596D"
+				id: "119638773CD3F8F4"
 				title: "Welcome!"
 				type: "checkmark"
 			}]
@@ -71,14 +71,14 @@
 				"&o&8\"My adventure starts with some tree punching!? Huh, I thought GregTech was supposed to shake things up a bit...\"&r"
 			]
 			icon: "minecraft:oak_log"
-			id: "1C5918909AB8A643"
+			id: "2647D3E1F7308C07"
 			shape: "square"
 			size: 0.75d
 			subtitle: "Begin your playthrough as before"
 			tasks: [
 				{
 					count: 6L
-					id: "7DA2BB532AA618C2"
+					id: "628D253144A57FE8"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -91,7 +91,7 @@
 					type: "item"
 				}
 				{
-					id: "0C6AC25531C1B96F"
+					id: "55325863D4F805A1"
 					item: "minecraft:crafting_table"
 					type: "item"
 				}
@@ -110,10 +110,10 @@
 				"Eight furnaces might seem &cexcessive&r if you're new to &aGregTech,&r but trust us... you can never have too many."
 			]
 			icon: "minecraft:sugar_cane"
-			id: "248E3C5E8CF94FD5"
+			id: "69AFF2C644D9E38E"
 			rewards: [{
 				count: 24
-				id: "31C2685CA2DB08ED"
+				id: "3BE22329DE7974B7"
 				item: "minecraft:iron_ingot"
 				type: "item"
 			}]
@@ -123,31 +123,31 @@
 			tasks: [
 				{
 					count: 4L
-					id: "60345AC6660AEEED"
+					id: "6C4476645A8D4B1B"
 					item: "minecraft:sugar_cane"
 					type: "item"
 				}
 				{
 					count: 32L
-					id: "1BA458FDC0B4ACBB"
+					id: "4D6BC6252B8DA0A7"
 					item: "minecraft:sand"
 					type: "item"
 				}
 				{
 					count: 32L
-					id: "041520056A8AB607"
+					id: "4C3D35B933BE9AF1"
 					item: "minecraft:clay_ball"
 					type: "item"
 				}
 				{
 					count: 4L
-					id: "5D2328BA947A1E5D"
+					id: "43D46DF85C6AFA3B"
 					item: "gtceu:rubber_sapling"
 					type: "item"
 				}
 				{
 					count: 8L
-					id: "5B54E055466ABB63"
+					id: "0F821CC09A15C170"
 					item: "minecraft:furnace"
 					type: "item"
 				}
@@ -170,12 +170,12 @@
 				"&9-&r It's a good practice to make &dWaypoints&r (default &4N&r) for every vein you find, and to label their type. You may want to come back to the vein several times."
 			]
 			icon: "gtceu:cobaltite_ore"
-			id: "0E58BD3BECC1D90A"
+			id: "7779C433C185F2A4"
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "More like SNORE generation!"
 			tasks: [{
-				id: "3701E843579008F4"
+				id: "34A4BB8614149AD2"
 				title: "Woah, ores sure sound exciting."
 				type: "checkmark"
 			}]
@@ -204,10 +204,10 @@
 					}
 				}
 			}
-			id: "49C7BD40A5CCC88E"
+			id: "30F7497B565776B2"
 			rewards: [{
 				count: 8
-				id: "4689F90952D7AC32"
+				id: "6DEFA317F3B3A715"
 				item: "minecraft:spruce_sapling"
 				type: "item"
 			}]
@@ -215,7 +215,7 @@
 			size: 0.66d
 			subtitle: "Who needs Veinminer?"
 			tasks: [{
-				id: "3C5C511B57282507"
+				id: "4AAFA4343C2AFE09"
 				item: {
 					Count: 1
 					id: "itemfilters:or"
@@ -702,10 +702,10 @@
 				"This may be time-consuming, but rest assured, you'll unlock a &ebetter way&r to produce Wrought Iron before long."
 			]
 			icon: "gtceu:wrought_iron_ingot"
-			id: "643B799513D75684"
+			id: "124BD7B9D4285774"
 			rewards: [{
 				count: 5
-				id: "664BA79592D514B1"
+				id: "21D67EF620B49867"
 				item: "gtceu:wrought_iron_ingot"
 				type: "item"
 			}]
@@ -713,7 +713,7 @@
 			size: 0.66d
 			subtitle: "Murder, she Wrought"
 			tasks: [{
-				id: "3D539C8D40474CB0"
+				id: "1CDF7071DE9B35D6"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
@@ -739,9 +739,9 @@
 				""
 				"As a sidenote on all &aGregTech&r tools, you can repair them in an Anvil using the material of the tool itself, just like any vanilla tool. If you are finding yourself short on experience, &eBottles o' Enchanting&r are now craftable."
 			]
-			id: "558E7334B38E3148"
+			id: "55EF69D29FE2A1FF"
 			rewards: [{
-				id: "64E2E9E8146AC9DC"
+				id: "641C4A8AFC58D98C"
 				item: "gtceu:iron_plate"
 				random_bonus: 2
 				type: "item"
@@ -760,7 +760,7 @@
 						}
 					}
 				}
-				id: "3CB6D6EA238CBA34"
+				id: "7EC8D84100EBACC0"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
@@ -796,7 +796,7 @@
 					}
 				}
 			}
-			id: "3B6BE8B5537552A0"
+			id: "4034ECD1189E8E81"
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Mining just became efficient"
@@ -811,7 +811,7 @@
 						}
 					}
 				}
-				id: "7A65E7C29373579E"
+				id: "1274D9AC4F74678E"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
@@ -842,17 +842,17 @@
 				"Gather &l&cany&r of the requested &dRaw Ores&r to complete this quest!"
 			]
 			icon: "minecraft:iron_ingot"
-			id: "6F6557F896F09427"
+			id: "498DB85EEE597E9E"
 			rewards: [{
 				count: 32
-				id: "734CB15E56B5635A"
+				id: "04D7A70889547716"
 				item: "gtceu:magnetite_ore"
 				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "Isn't it ironic... don't you think?"
 			tasks: [{
-				id: "186C5E6F2A852FC1"
+				id: "3A2ECB98E29A246A"
 				item: {
 					Count: 1
 					id: "itemfilters:or"
@@ -923,12 +923,12 @@
 					}
 				}
 			}
-			id: "225D058B6FDB5E6B"
+			id: "7F0098D27C895D6F"
 			shape: "square"
 			size: 0.75d
 			tasks: [
 				{
-					id: "67D1438AF9B595CE"
+					id: "5DC88D7910302A47"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -940,7 +940,7 @@
 					type: "item"
 				}
 				{
-					id: "2B7982A2343BAC93"
+					id: "2A7569E2762DAA3E"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -952,7 +952,7 @@
 					type: "item"
 				}
 				{
-					id: "10E17D133842D03D"
+					id: "51D380BA9B4CDC82"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -1005,17 +1005,17 @@
 					}
 				}
 			}
-			id: "43E1F247E351FA16"
+			id: "565A367BAF7CB7FE"
 			rewards: [{
 				count: 16
-				id: "2607D785C6DD5C01"
+				id: "382AF857A9D57E52"
 				item: "gtceu:damascus_steel_ingot"
 				type: "item"
 			}]
 			size: 0.75d
 			tasks: [
 				{
-					id: "1DB9FD2A6E4D3760"
+					id: "315727980FDFDCCD"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -1027,7 +1027,7 @@
 					type: "item"
 				}
 				{
-					id: "67F574C901C83A56"
+					id: "6DA23196438F2DDC"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -1039,7 +1039,7 @@
 					type: "item"
 				}
 				{
-					id: "433967A9BBE6768A"
+					id: "36BF88126DF5DE21"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -1051,7 +1051,7 @@
 					type: "item"
 				}
 				{
-					id: "670B64F46435BA1B"
+					id: "4FBAC76378A41CD0"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -1063,7 +1063,7 @@
 					type: "item"
 				}
 				{
-					id: "39423351EC2A2958"
+					id: "155E41ECA87D3993"
 					item: {
 						Count: 1
 						id: "itemfilters:tag"
@@ -1097,10 +1097,10 @@
 				"&l&3Lore:&r&o The concept of multiblocks is a modded Minecraft classic. Think of IC2's Nuclear Reactor, or Railcraft's Coke Oven - truly revolutionary at the time!&r"
 			]
 			icon: "gtceu:coke_oven"
-			id: "603EE833EE4546CB"
+			id: "5FBB32A001630702"
 			min_required_dependencies: 1
 			rewards: [{
-				id: "5A28D9D0E644B815"
+				id: "0366434746F250D1"
 				item: "gtceu:exquisite_coke_gem"
 				random_bonus: 2
 				type: "item"
@@ -1109,7 +1109,7 @@
 			size: 1.2d
 			subtitle: "Your first big project... hopefully"
 			tasks: [{
-				id: "29F0D26E8EF7DE25"
+				id: "76FE9242A471152B"
 				item: "gtceu:coke_oven"
 				type: "item"
 			}]
@@ -1127,10 +1127,10 @@
 				"This quest can be completed with &9either metal&r, so you can claim the metal you're missinng as the reward. Be sure to find a source of both soon, as a &a&ocertain&r&a Copper-Tin alloy&r will be needed to get through the &6Steam Age&r."
 			]
 			icon: "minecraft:copper_ingot"
-			id: "40E5BF552CB9E434"
+			id: "7032A34858FE376F"
 			rewards: [{
 				exclude_from_claim_all: true
-				id: "7D91306952326BC5"
+				id: "2C5033A239A1AF77"
 				table_id: 1702176335602373230L
 				type: "choice"
 			}]
@@ -1138,7 +1138,7 @@
 			subtitle: "Gather more resources!"
 			tasks: [{
 				count: 32L
-				id: "7A18595F831158D2"
+				id: "2C0F62FD4CD853DB"
 				item: {
 					Count: 32
 					id: "itemfilters:or"
@@ -1174,10 +1174,10 @@
 				"&l&3Lore:&r&o Bronze in real life is closer to a ratio of 7:1 for Copper to Tin. Here (and in most of modded Minecraft) this is &4not&f the case for the sake of game balance. There are a lot of things like this that need to be tweaked - &eno realism here&f."
 			]
 			icon: "gtceu:bronze_ingot"
-			id: "326E425C95F50207"
+			id: "3C1F8E9E39E7E611"
 			rewards: [{
 				count: 32
-				id: "207FB0AF718B6F77"
+				id: "5D605F32C8BB443D"
 				item: "minecraft:clay_ball"
 				type: "item"
 			}]
@@ -1186,7 +1186,7 @@
 			subtitle: "Humanity's first alloy - and yours too!"
 			tasks: [{
 				count: 24L
-				id: "13E33A86DE011831"
+				id: "2278D57D20A39BEC"
 				item: "gtceu:bronze_ingot"
 				type: "item"
 			}]
@@ -1204,9 +1204,9 @@
 				"Take this &6Wooden Barrel&r full of &bWater&r as a reward. Huh... isn't that an odd reward? We just wanted to show you that all &aGTCEu&r tanks are portable."
 			]
 			icon: "minecraft:bucket"
-			id: "2B1365CFF38D0716"
+			id: "5AFC65F79A52B719"
 			rewards: [{
-				id: "5C8081F4CB6ADFA2"
+				id: "009FB9BE4BFCE79D"
 				item: {
 					Count: 1
 					id: "gtceu:wood_drum"
@@ -1223,7 +1223,7 @@
 			size: 0.66d
 			subtitle: "#realism"
 			tasks: [{
-				id: "6A3B8AF3ECB459CB"
+				id: "30CF9C738DDEF94B"
 				item: "minecraft:bucket"
 				type: "item"
 			}]
@@ -1241,10 +1241,10 @@
 				"If this displeases you - normally you'd be able to &brevert this back&r to vanilla behaviour in the &aGTCEu&r configs, but the configuration option is bugged. To &erevert&r the nerf, you can delete the \"charcoal.js\" script in &bkubejs/server_scripts&r!"
 			]
 			icon: "minecraft:charcoal"
-			id: "6E4DEB9C5028B07A"
+			id: "146A00F3C1EE5F01"
 			rewards: [{
 				count: 16
-				id: "777DE723BA9E3D48"
+				id: "1251B1308EBD0F91"
 				item: "minecraft:coal"
 				type: "item"
 			}]
@@ -1253,7 +1253,7 @@
 			subtitle: "Not here!"
 			tasks: [{
 				count: 48L
-				id: "36BB49B4BADA47C2"
+				id: "27171923B89BB3C2"
 				item: {
 					Count: 1
 					id: "itemfilters:tag"
@@ -1282,9 +1282,9 @@
 				"On the 1.12.2 version of &aGregtech: CEu&r, there were multiple &aGregTech&r addons that may be ported to 1.19.2 in future. Rest assured that this pack will do its &dbest&r to support them if they make it to this version!"
 			]
 			icon: "minecraft:structure_void"
-			id: "762A3FB67712E6A6"
+			id: "79C97744EC156D71"
 			rewards: [{
-				id: "0FD6E23F59C31F0D"
+				id: "0AADA52ABDDB1EF2"
 				item: "storagedrawers:quantify_key"
 				type: "item"
 			}]
@@ -1292,7 +1292,7 @@
 			size: 0.66d
 			subtitle: "Omw to install DecoCraft"
 			tasks: [{
-				id: "1B7130C4BF871DEF"
+				id: "4E381CF104B6FC48"
 				title: "I accept responsibility for any mod conflicts ;)"
 				type: "checkmark"
 			}]
@@ -1310,28 +1310,28 @@
 				"If you needed &6any more&r convincing, take a peek at the &drewards&r for this quest."
 			]
 			icon: "minecraft:bone_meal"
-			id: "25D9EC2BD43A433E"
+			id: "44DAD536F5BCB83A"
 			rewards: [
 				{
 					count: 64
-					id: "40EB9BD1E25A61F2"
+					id: "466EB1C9981D692C"
 					item: "minecraft:bone_meal"
 					type: "item"
 				}
 				{
 					count: 12
-					id: "54A732BEE0F18078"
+					id: "2B4DB00003F69E98"
 					item: "minecraft:potato"
 					type: "item"
 				}
 				{
 					count: 128
-					id: "39C2CA73A721FD96"
+					id: "49845F15F020198E"
 					item: "minecraft:sand"
 					type: "item"
 				}
 				{
-					id: "6E5FD4F5E02A6B1E"
+					id: "6A003D8583E1CF2D"
 					item: {
 						Count: 1
 						id: "gtceu:iron_shovel"
@@ -1345,7 +1345,7 @@
 					type: "item"
 				}
 				{
-					id: "143C6F59F2E1F088"
+					id: "03CFDA52EF86318E"
 					item: {
 						Count: 1
 						id: "gtceu:iron_axe"
@@ -1373,13 +1373,13 @@
 			tasks: [
 				{
 					count: 16L
-					id: "7E171ED99A8452E4"
+					id: "7C2675932F76F546"
 					item: "gtceu:iron_bolt"
 					type: "item"
 				}
 				{
 					count: 8L
-					id: "6DACAF94EB7AB344"
+					id: "780775A05D6F2DCB"
 					item: "gtceu:iron_plate"
 					type: "item"
 				}
@@ -1396,47 +1396,47 @@
 				"&o&8Consult the ore tab if you're struggling to find these materials!&r"
 			]
 			icon: "gtceu:silver_ingot"
-			id: "0A13AD3E04DFD614"
+			id: "5CD5959D83794A92"
 			rewards: [
 				{
 					count: 128
-					id: "52FFD3FB187C7ACE"
+					id: "6F4499668FDAA798"
 					item: "minecraft:sand"
 					type: "item"
 				}
 				{
 					count: 128
-					id: "47B4BC8EE3027CA0"
+					id: "7E3A61D530C20DA2"
 					item: "minecraft:clay_ball"
 					type: "item"
 				}
 				{
 					count: 64
-					id: "161EC29FFACD1E3C"
+					id: "5700F513CDBDFD1A"
 					item: "minecraft:redstone"
 					type: "item"
 				}
 				{
 					count: 24
-					id: "57A666A9E81F89A2"
+					id: "63496E3D95033068"
 					item: "gtceu:nickel_ingot"
 					type: "item"
 				}
 				{
 					count: 24
-					id: "3D4C2A8919E57680"
+					id: "441E7A98FA7DD60F"
 					item: "gtceu:lead_ingot"
 					type: "item"
 				}
 				{
 					count: 24
-					id: "1650CA9A0598458B"
+					id: "63E21A2288A31476"
 					item: "gtceu:silver_ingot"
 					type: "item"
 				}
 				{
 					count: 8
-					id: "44E84F3FD076ABC8"
+					id: "63D3F95B28F087BE"
 					item: "minecraft:diamond"
 					type: "item"
 				}
@@ -1447,31 +1447,31 @@
 			tasks: [
 				{
 					count: 64L
-					id: "21F766E291409C10"
+					id: "2A83412E805BBDC3"
 					item: "minecraft:redstone"
 					type: "item"
 				}
 				{
 					count: 24L
-					id: "0DF45C90FEE768DC"
+					id: "7851866CA6DE44E8"
 					item: "gtceu:nickel_ingot"
 					type: "item"
 				}
 				{
 					count: 24L
-					id: "6B14BE0D103363F5"
+					id: "2564C205F7F93A6F"
 					item: "gtceu:lead_ingot"
 					type: "item"
 				}
 				{
 					count: 24L
-					id: "42F3F43CA86A8DD3"
+					id: "3424BE0E9E937446"
 					item: "gtceu:silver_ingot"
 					type: "item"
 				}
 				{
 					count: 8L
-					id: "0B2A8D93423FE041"
+					id: "3D6CD29433436E64"
 					item: "minecraft:diamond"
 					type: "item"
 				}
@@ -1497,12 +1497,12 @@
 				"When complex recipes arise - and we won't sugarcoat, &aGTCEu&r can be intimidating - we'll make sure to direct you towards the more &5efficient routes&r. However, we urge you to experiment on your own. It's no fun to follow the quest book by rote, right?"
 			]
 			icon: "ftbquests:book"
-			id: "4FDDF95C25F04772"
+			id: "27911752F092CC03"
 			shape: "circle"
 			size: 0.75d
 			subtitle: "Read this, and read it again!"
 			tasks: [{
-				id: "2F44090F2A138067"
+				id: "36A477C49E6EC737"
 				title: "I have read this page multiple times"
 				type: "checkmark"
 			}]
@@ -1520,12 +1520,12 @@
 				"Saw the table again for a lower-profile Slab version."
 			]
 			icon: "craftingstation:crafting_station"
-			id: "5A0B669D8DFB5FC6"
+			id: "67FA40551BBD6884"
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "No, Tinkers' is not in this modpack"
 			tasks: [{
-				id: "07BD942AB7D22294"
+				id: "3C7A6BD4E1A4F1CE"
 				item: "craftingstation:crafting_station"
 				type: "item"
 			}]
@@ -1544,12 +1544,12 @@
 				"Get reading!"
 			]
 			icon: "minecraft:lectern"
-			id: "3C30553A1F05E1CC"
+			id: "3FF38EED0B7F0DAB"
 			shape: "circle"
 			size: 0.75d
 			subtitle: "Tips and tricks to help you prosper"
 			tasks: [{
-				id: "32449A2821A5E123"
+				id: "3155A4BCF6FA41C4"
 				title: "Alright, I get it, I get it"
 				type: "checkmark"
 			}]
@@ -1566,9 +1566,9 @@
 				""
 				"The logs also offer &duseful resources&r when processed in future."
 			]
-			id: "4774615E38F01E26"
+			id: "37BE2956EEEEDA74"
 			rewards: [{
-				id: "2614C7D89927A6F7"
+				id: "56E85422F2C882CF"
 				item: "gtceu:sticky_resin"
 				random_bonus: 3
 				type: "item"
@@ -1578,7 +1578,7 @@
 			subtitle: "No, this isn't IC2"
 			tasks: [{
 				count: 8L
-				id: "2E0AC3FC0D491A92"
+				id: "6F327DA50C20E622"
 				item: "gtceu:rubber_sapling"
 				type: "item"
 			}]
@@ -1616,11 +1616,11 @@
 				"Note that the pack is still under &eheavy development&r, but you should be able to achieve the &o\"Classic Stargate\"&r as of version BETA 1!"
 			]
 			icon: "minecraft:netherite_upgrade_smithing_template"
-			id: "2A9CC703DC30DD01"
+			id: "73C5BFEEB7C07185"
 			shape: "circle"
 			size: 0.75d
 			tasks: [{
-				id: "5B5506C9243E8B3C"
+				id: "6D1D34F54B6ADBBB"
 				title: "Whoah, these sound cool."
 				type: "checkmark"
 			}]
@@ -1638,12 +1638,12 @@
 				"You can now use &2EMI&r to learn more about the vein beneath your feet. Just press &dU&r on the Tiny Dust you mined from the rock, and navigate to the &6Ore Page&r. This page contains details on what &btypes of ores&r generate, their &3generation patterns&r, their &espawning dimension&r and &dY-level range&r, and their &aspawning weight&r, which is the chance it spawns."
 			]
 			icon: "gtceu:cobalt_indicator"
-			id: "4C88A4B40C7CEDF8"
+			id: "00F0DC4778900A68"
 			shape: "circle"
 			size: 0.5d
 			subtitle: "Awakening your inner geologist"
 			tasks: [{
-				id: "59800956218ED313"
+				id: "12908B1CBE2A2C0D"
 				title: "I love prospecting!"
 				type: "checkmark"
 			}]

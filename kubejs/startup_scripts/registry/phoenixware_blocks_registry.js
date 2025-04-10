@@ -73,7 +73,7 @@ StartupEvents.registry("block", phoenixvine => {
     }
 
     phoenixvine.create('true_heat_stable_coil_block', 'gtceu:coil')
-    .temperature(20000)
+    .temperature(200000)
     .level(30)
     .energyDiscount(30)
     .tier(12)
@@ -132,3 +132,56 @@ StartupEvents.registry("block", phoenixvine => {
 
 
 });
+const $ParallelHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.ParallelHatchPartMachine')
+
+// Parallel Hatches
+GTCEuStartupEvents.registry('gtceu:machine', event => {
+    event.create("uhv_parallel_hatch", "custom")
+    .tiers(GTValues.UHV)
+    .machine((holder, tier, t) => new $ParallelHatchPartMachine(holder, tier))
+    .definition((tier, builder) => {
+        builder.rotationState(RotationState.ALL)
+                .abilities(PartAbility.PARALLEL_HATCH)
+                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_uhv"))
+    })
+    event.create("uev_parallel_hatch", "custom")
+    .tiers(GTValues.UEV)
+    .machine((holder, tier, t) => new $ParallelHatchPartMachine(holder, tier))
+    .definition((tier, builder) => {
+        builder.rotationState(RotationState.ALL)
+                .abilities(PartAbility.PARALLEL_HATCH)
+                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_uev"))
+    })
+    event.create("uiv_parallel_hatch", "custom")
+    .tiers(GTValues.UIV)
+    .machine((holder, tier, t) => new $ParallelHatchPartMachine(holder, tier))
+    .definition((tier, builder) => {
+        builder.rotationState(RotationState.ALL)
+                .abilities(PartAbility.PARALLEL_HATCH)
+                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_uiv"))
+    })
+    event.create("uxv_parallel_hatch", "custom")
+    .tiers(GTValues.UXV)
+    .machine((holder, tier, t) => new $ParallelHatchPartMachine(holder, tier))
+    .definition((tier, builder) => {
+        builder.rotationState(RotationState.ALL)
+                .abilities(PartAbility.PARALLEL_HATCH)
+                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_uxv"))
+    })
+    event.create("opv_parallel_hatch", "custom")
+    .tiers(GTValues.OpV)
+    .machine((holder, tier, t) => new $ParallelHatchPartMachine(holder, tier))
+    .definition((tier, builder) => {
+        builder.rotationState(RotationState.ALL)
+                .abilities(PartAbility.PARALLEL_HATCH)
+                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_opv"))
+    })
+    event.create("max_parallel_hatch", "custom")
+    .tiers(GTValues.MAX)
+    .machine((holder, tier, t) => new $ParallelHatchPartMachine(holder, tier))
+    .definition((tier, builder) => {
+        builder.rotationState(RotationState.ALL)
+                .abilities(PartAbility.PARALLEL_HATCH)
+                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_opv"))
+    })
+})
