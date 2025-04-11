@@ -1,5 +1,3 @@
-### ampere meeter 
-block that would transfer FE/EU from its one side to another, and would allow the player to set a variable that would hold the amount of power transfered. option to set the max transfer rate
 ### energy accessor 
 a cable part that would allow the player to extract AE as FE/EU from an ME system, the max extract defined by the amount of accel cards inside and and for EU, the player will have to input a power thingy of a given tier to extract EU in that selected voltage, extract limited by the thingys amps. However the player should not be able to insert EU into ME system in any way to avoid using it as a convinient power station/transformer
 ### mob storage 
