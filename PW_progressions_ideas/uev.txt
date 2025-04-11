@@ -1,24 +1,32 @@
 Resource Generation
 
 Progression Multiblocks
-
+Quantum Singularity Circuit Forge (UHV - UXV Tier) 🌌
+"A machine so advanced, it bends reality itself to craft circuits beyond human comprehension."
 Side Progression
 
 Tier Materiels(hulls and casings)
-
+Reality-Bound Osmium – Dense osmium alloy with phase-shifting properties.
 Materiel ore proc line/chemicals
 
 Power Generation
 
 Componet Materiels (motors, etc)
-
+Void-Stitched Neodymium – Magnetized neodymium modified for quantum interactions.
+primordial_flux_metal	UEV	Raw primal energy, powerful yet early high-tier.
 Circuit Materiels
-
+Glitched Corruption Substrate
 Circuits
 
 Alloys
-
+Corrupted Hyperalloy – An unstable yet powerful alloy infused with residual glitched matter.
+soulbound_ethersteel	UEV	Etheric infusions—powerful and arcane.
+dimensional_reflection_alloy	UEV	Reality-bending and complex—solid mid-endgame.
 Chemicals
-
+Glitched Anomalous Resin
+Chrono-Stabilized Plasma
+Entropy-Diffusion Mist
+Dark Matter Suspension
+Reality-Fractured Isotope
 Color Scheme
 

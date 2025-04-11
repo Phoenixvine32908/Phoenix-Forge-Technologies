@@ -129,6 +129,12 @@ StartupEvents.registry("block", phoenixvine => {
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
     .soundType('metal')
+    phoenixvine.create('highly_conductive_fission_casing')
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .soundType('metal')
 
 
 });

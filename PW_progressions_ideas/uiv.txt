@@ -1,24 +1,36 @@
 Resource Generation
-
+Matter Rebirthing Phase Shifter, More resources from catalyst-based matter
+ conversion uses of both bees and dimensional rift extractor logic 
 Progression Multiblocks
 
 Side Progression
 
 Tier Materiels(hulls and casings)
-
+eternal_starforged_steel
 Materiel ore proc line/chemicals
 
 Power Generation
 
 Componet Materiels (motors, etc)
-
+Phoenix-Tempered Mithril, animated, only to the bounds that the uiv stuff is, component materiel
+tachyon_infused_chromium	UIV	Speed of light particles—late tech, high performance. magnetic rod
 Circuit Materiels
-
+phoenix enriched tritanium
 Circuits
 
 Alloys
+eternal_starforged_steel	UIV	Long-lasting durability, but not too exotic.
+timewoven_platinum	UIV	Intricate time manipulation tech, upper tier.
+Void-Sung Adamantite, not animated but colored, tier materiel
+Quantum-Locked Palladium, secondary casing materiel, as in plates or the frames
 
 Chemicals
+🌀 UIV Tier:
 
+Reality-Woven Nanotubes
+Phoenix Fire Solution
+Eldritch Catalytic Mist
+Quantum-Locked Fluid
+Void-Charged Ionic Gel
 Color Scheme
 
