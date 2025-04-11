@@ -5,20 +5,28 @@ Progression Multiblocks
 Side Progression
 
 Tier Materiels(hulls and casings)
-
+Akashic Zeronium, animated,
 Materiel ore proc line/chemicals
 
 Power Generation
 
 Componet Materiels (motors, etc)
-
+paradoxium	MAX	Beyond logic and reason—final tier, reality-breaking.
 Circuit Materiels
-
+Akashic Chrono-Metal
 Circuits
 
 Alloys
 
+Absolute-Zero Zeronium, not animated but colored, tier materiel
+Multiversal Hyperalloy, secondary casing materiel, as in plates or the frames
 Chemicals
+🛠️ MAX Tier:
 
+Eon-Fused Catalyst
+Singularity-Condensed Matter
+Primordial Chaos Fluid
+Multiversal Binding Agent
+Absolute-Zero Etherium
 Color Scheme
 

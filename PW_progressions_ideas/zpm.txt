@@ -35,6 +35,7 @@ Unstable Processing Unit, not an actual circuit but it is needed to make the mul
 
 Alloys
 Aetherium Steel – A reinforced alloy infused with low-tier quantum stabilizers.
+celestial_aurorium
 Color Scheme
 Bright orange and black, with some gray as well
 Chemicals
