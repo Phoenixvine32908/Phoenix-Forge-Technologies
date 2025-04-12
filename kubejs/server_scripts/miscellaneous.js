@@ -41,3 +41,30 @@ ServerEvents.recipes((event) => {
     S: "#forge:plates/steel",
   });
 });
+
+ServerEvents.recipes((event) => {
+  const createFluxRejoinerRecipe = (outputId, inputTag) => {
+    event.recipes.gtceu.flux_rejoiner(outputId)
+      .itemInputs(`#${inputTag}`)
+      // You'll likely need to add other inputs, outputs, duration, and EUt
+      // based on what the flux_rejoiner recipe should actually do.
+      // For example:
+      .itemOutputs(`kubejs:${outputId}`) // Assuming you want to output your universal circuit
+      .duration(200) // Example duration
+      .EUt(120);    // Example energy per tick
+  };
+
+  createFluxRejoinerRecipe('universal_circuit_zpm', 'gtceu:circuits/zpm');
+  createFluxRejoinerRecipe('universal_circuit_uv', 'gtceu:circuits/uv');
+  createFluxRejoinerRecipe('universal_circuit_uhv', 'gtceu:circuits/uhv');
+  createFluxRejoinerRecipe('universal_circuit_uev', 'gtceu:circuits/uev');
+  createFluxRejoinerRecipe('universal_circuit_uiv', 'gtceu:circuits/uiv');
+  createFluxRejoinerRecipe('universal_circuit_iv', 'gtceu:circuits/iv');
+  createFluxRejoinerRecipe('universal_circuit_uxv', 'gtceu:circuits/uxv');
+  createFluxRejoinerRecipe('universal_circuit_max', 'gtceu:circuits/max');
+  createFluxRejoinerRecipe('universal_circuit_luv', 'gtceu:circuits/luv');
+  createFluxRejoinerRecipe('universal_circuit_ev', 'gtceu:circuits/ev');
+  createFluxRejoinerRecipe('universal_circuit_hv', 'gtceu:circuits/hv');
+  createFluxRejoinerRecipe('universal_circuit_mv', 'gtceu:circuits/mv');
+  createFluxRejoinerRecipe('universal_circuit_lv', 'gtceu:circuits/lv');
+});

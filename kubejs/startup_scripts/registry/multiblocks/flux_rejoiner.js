@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('flux_rejoiner', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('flux_rejoiner')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.PARALLEL_HATCH])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("QGQ", "CCC", "QGQ")

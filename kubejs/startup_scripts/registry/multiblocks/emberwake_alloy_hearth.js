@@ -6,6 +6,12 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHEMICAL);
+        phoenixvine.create("ore_sifter")
+        .setEUIO("in")
+        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+        .setMaxIOSize(2, 1, 2, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.SCIENCE)
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
@@ -36,42 +42,14 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
    .or(Predicates.autoAbilities(definition.getRecipeTypes())))
            .where("I", Predicates.blocks("gtceu:phoenix_enriched_naquad_frame"))
-           .where("J", Predicates.blocks("gtceu:cupronickel_coil_block"))
+           .where('J', Predicates.blocks(GTBlocks.COIL_TRITANIUM.get()))
            .where("K", Predicates.blocks("kubejs:heat_dissipating_coils"))
            .where("L", Predicates.blocks("kubejs:quasi_stable_fusion_casing"))
            .where("M", Predicates.blocks("gtceu:heat_vent"))
            .where("N", Predicates.blocks("kubejs:ashglass_viewing_panel"))
            .where("O", Predicates.blocks("kubejs:phoenix_ignition_matrix"))
            .where("P", Predicates.blocks("kubejs:supercooled_reactor_core"))
-           .where('Q', Predicates.controller(Predicates.blocks(definition.get())))
-
-
-
-
-.where("A", Predicates.blocks("minecraft:air"))
-   .where("B", Predicates.blocks("kubejs:reliable_naquadah_alloy_machine_casing"))
-   .where("C", Predicates.blocks("gtceu:neutronium_frame"))
-   .where("D", Predicates.blocks("kubejs:unstable_logic"))
-   .where("E", Predicates.blocks("kubejs:plasma_resistant"))
-   .where("F", Predicates.blocks("kubejs:phoenix_enriched_naquad_casing"))
-   .where("G", Predicates.blocks("gtceu:high_temperature_smelting_casing").setMinGlobalLimited(6)
-   .or(Predicates.abilities(PartAbility.MAINTENANCE).setMaxGlobalLimited(1))
-   .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
-   .or(Predicates.autoAbilities(definition.getRecipeTypes())))
-   .where("H", Predicates.blocks("gtceu:phoenix_enriched_naquad_frame"))
-   .where('I', Predicates.heatingCoils())
-   .where("J", Predicates.blocks("kubejs:heat_dissipating_coils"))
-   .where("K", Predicates.blocks("kubejs:quasi_stable_fusion_casing"))
-   .where("L", Predicates.blocks("kubejs:ashglass_viewing_panel"))
-   .where("M", Predicates.blocks("gtceu:heat_vent"))
-   .where("N", Predicates.blocks("kubejs:phoenix_ignition_matrix"))
-   .where("O", Predicates.blocks("kubejs:volatile_plasma_chamber"))
-   .where('P', Predicates.controller(Predicates.blocks(definition.get())))
-   .where("Q", Predicates.blocks("gtceu:watertight_casing"))
-
-    
-  
-          
+           .where('Q', Predicates.controller(Predicates.blocks(definition.get())))        
             .build())
             .workableCasingRenderer('kubejs:block/reliable_naquadah_alloy_machine_casing', 'gtceu:block/multiblock/fusion_reactor', false)
 });

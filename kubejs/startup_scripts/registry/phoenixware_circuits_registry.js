@@ -8,6 +8,7 @@ function makeItem(event, id, texture, dispName, tag, glow){
 
 StartupEvents.registry('item', event => {
   const circuitsDir = "kubejs:item/phoenixware/circuits";
+  const universalCircuitsDir = "kubejs:item/universal_circuits";
 
   const AscendedPhoenixWare = [ // Better name for perfected phoenixware
     [
@@ -289,6 +290,28 @@ StartupEvents.registry('item', event => {
 
   itemsCombined.forEach(item => {
     makeItem(event, item[0], item[1], item[2], item[3], item[4]);
-  })
+  });
 
+  // --- Universal Circuits (One per Tier) ---
+  const universalTiers = [
+    { name: "zpm_universal_circuit", displayName: "§dUniversal ZPM Circuit", texture: `${universalCircuitsDir}/zpm_universal_circuit`, tag: "gtceu:circuits/zpm", glow: true },
+    { name: "uv_universal_circuit", displayName: "§dUniversal UV Circuit", texture: `${universalCircuitsDir}/uv_universal_circuit`, tag: "gtceu:circuits/uv", glow: true },
+    { name: "uhv_universal_circuit", displayName: "§dUniversal UHV Circuit", texture: `${universalCircuitsDir}/uhv_universal_circuit`, tag: "gtceu:circuits/uhv", glow: true },
+    { name: "uev_universal_circuit", displayName: "§dUniversal UEV Circuit", texture: `${universalCircuitsDir}/uev_universal_circuit`, tag: "gtceu:circuits/uev", glow: true },
+    { name: "uiv_universal_circuit", displayName: "§dUniversal UIV Circuit", texture: `${universalCircuitsDir}/uiv_universal_circuit`, tag: "gtceu:circuits/uiv", glow: true },
+    { name: "iv_universal_circuit", displayName: "§dUniversal IV Circuit", texture: `${universalCircuitsDir}/iv_universal_circuit`, tag: "gtceu:circuits/iv", glow: true },
+    { name: "uxv_universal_circuit", displayName: "§dUniversal UXV Circuit", texture: `${universalCircuitsDir}/uev_universal_circuit`, tag: "gtceu:circuits/uxv", glow: true },
+    { name: "max_universal_circuit", displayName: "§dUniversal MAX Circuit", texture: `${universalCircuitsDir}/max_universal_circuit`, tag: "gtceu:circuits/max", glow: true },
+    { name: "luv_universal_circuit", displayName: "§dUniversal LUV Circuit", texture: `${universalCircuitsDir}/luv_universal_circuit`, tag: "gtceu:circuits/luv", glow: true },
+    { name: "ev_universal_circuit", displayName: "§dUniversal EV Circuit", texture: `${universalCircuitsDir}/ev_universal_circuit`, tag: "gtceu:circuits/ev", glow: true },
+    { name: "hv_universal_circuit", displayName: "§dUniversal HV Circuit", texture: `${universalCircuitsDir}/hv_universal_circuit`, tag: "gtceu:circuits/hv", glow: true },
+    { name: "mv_universal_circuit", displayName: "§dUniversal MV Circuit", texture: `${universalCircuitsDir}/mv_universal_circuit`, tag: "gtceu:circuits/mv", glow: true },
+    { name: "lv_universal_circuit", displayName: "§dUniversal LV Circuit", texture: `${universalCircuitsDir}/lv_universal_circuit`, tag: "gtceu:circuits/lv", glow: true },
+  ];
+
+  universalTiers.forEach(tier => {
+    makeItem(event, tier.name, tier.texture, tier.displayName, tier.tag, tier.glow);
+  });
 });
+
+// --- Recipes for Universal Circuits (Crafting from any circuit of the same tier) ---

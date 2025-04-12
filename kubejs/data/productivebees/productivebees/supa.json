@@ -3,11 +3,11 @@
     "secondaryColor": "#c29da6",
     "tertiaryColor": "#d7a7af",
     "renderer": "default_shell",
-    "size": 4.20,
+    "size": 1.20,
     "selfbreed": false,
     "selfheal": true,
     "fireproof": true,
-    "flowerItem": "gtceu:tritanium_coil_block",
+    "flowerItem": "sfm:cable",
     "name": "I Guess That's A Tritanium bee",
     "invulnerability": [
         "mekanism.radiation"
