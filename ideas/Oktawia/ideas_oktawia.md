@@ -1,5 +1,3 @@
-### energy accessor 
-a cable part that would allow the player to extract AE as FE/EU from an ME system, the max extract defined by the amount of accel cards inside and and for EU, the player will have to input a power thingy of a given tier to extract EU in that selected voltage, extract limited by the thingys amps. However the player should not be able to insert EU into ME system in any way to avoid using it as a convinient power station/transformer
 ### mob storage 
 import export bus for mobs, the player would have to craft a special mob storage cell (sth like the mekanisms gases) to store the mobs inside ME system, and would need to have a special item inside the system to extract them to theirs inventory (some kind of entity holder, something like when you need a bucket to extract water), it would also add a few other features
 - spawner controller, the player would be able to place a spawner inside this block, and it would generate given entities depositing them straight into ME system, possible accel cards 
@@ -7,7 +5,6 @@ import export bus for mobs, the player would have to craft a special mob storage
 - damage plane, something like annihilation plane, but instead of breaking block, it would damage entities, possible enchantments and accel cards
 ### generator
 multiblock 7x7x7 consisting of for example crafting storage units, a burn chamber (s), stabilizers, insulation, based on the blocks used and speed upgrades installed it would generate AE starting from 128AE/t up to 16M AE/t, it would take the selected resource (quartz/flux crystals/fluix crystals) from ME system, and burn them for some time determined by the amount of efficiency blocks and burn chambers inside and the accel cards installed, minimal speed should be equivalent to the basic furnace, max speed is a stack of items per burn chamber per tick
-### right click provider
 ### xp shards from the mob grinder
 - make new alloys by melting them down with xp shards
 - tiab crafting recipe includes xp shards
