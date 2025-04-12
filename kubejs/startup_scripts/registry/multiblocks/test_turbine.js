@@ -8,11 +8,17 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.ARC);
+        phoenixvine.create("ore_sifter")
+        .setEUIO("in")
+        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+        .setMaxIOSize(2, 1, 2, 0)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.SCIENCE)
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create("ore_sifter", "simple")
-    .tiers(GTValues.LV, GTValues.ULV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
+    .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
     .definition((tier, builder) =>
         builder 
             .rotationState(RotationState.NON_Y_AXIS)
