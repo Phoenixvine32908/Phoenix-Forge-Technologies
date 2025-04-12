@@ -11,6 +11,14 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
+    phoenixvine.create("ore_sifter", "simple")
+    .tiers(GTValues.LV, GTValues.ULV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
+    .definition((tier, builder) =>
+        builder 
+            .rotationState(RotationState.NON_Y_AXIS)
+            .recipeType("ore_sifter")
+            .workableTieredHullRenderer("gtceu:block/machines/sifter")
+        )
     phoenixvine.create('test_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.UIV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('plasma_generator')

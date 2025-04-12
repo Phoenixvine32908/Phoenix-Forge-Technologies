@@ -184,7 +184,7 @@ ServerEvents.recipes((event) => {
   greg.compressor("fishbig")
     .itemInputs("64x minecraft:cookie")
     .itemOutputs("expatternprovider:fishbig")
-    .EUt(1).duration(631152000)
+    .EUt(1).duration(431152000)
 
     event.remove({ id: "expatternprovider:oversize_interface" });
     event.shaped("expatternprovider:oversize_interface", ["TFT", "EBE", "TAT"], {

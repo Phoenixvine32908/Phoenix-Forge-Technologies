@@ -10,3 +10,21 @@ and keep the alloying/smelting of better gt materials behind the gate of you hav
 Fission is everything before UHV
 
 biomancy for uev, de for uix, actually subtractions for UXV, and arivitia for OPV and MAX
+
+
+
+
+My plans for early game for now are, useless materiels used to get trace amounts of ores, 
+ie gravel into like vein traces that give a small amount of ore, 
+chanced ofc because these will be passive and non chanced is too op, custom steam multis and primitve multis, then tinker's is used to make the first bit of the custom tier alloys before the said tier of machine can actually make an alloy so you need tinker's to get to the next tier
+and at ev make the dimensional rift extractor actually 3 different multi modes or actual multis, 
+to then use some kind of custom drill "kit" that has a chance of being consumed
+one for every dimension
+and then the multis ofc go in said dim
+Multis getting materiels with catalysts instead of just ore mining is a sick idea
+
+so, i'm nerfing the melferious matrix recipes to only beta upgrades locked to 5 combs per output
+not comb blocks, only combs
+and nerfing the output chance of said combs
+and making the bee breeding/conversion recipes more difficult
+and making a whole ah chem line for honey treats

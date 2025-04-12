@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
 
         event.recipes.gtceu.flux_rejoiner('flux_dus')
         .itemInputs('4x minecraft:redstone')
-        .chancedInput('minecraft:obsidian', 100, 0)
+        .chancedInput('minecraft:obsidian', 100, 1)
         .itemOutputs('fluxnetworks:flux_dust')
         .duration(300)
         .EUt(8192)
