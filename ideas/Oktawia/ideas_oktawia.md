@@ -15,3 +15,4 @@ new tiers of the smelters heat, maybe even a new types of smelter, max tier that
 ### black/white hole
 add hawking radiation annihilators to the black hole, add enough, and the amount of hawking radiaton starts to get negative which makes the black hole into a white hole. White hole gives some kind of resource generation. Maybe the holes will generate their own specific resources, additional to/instead of normal resource gen. that you would need to use to make max tier, you for example sometimes be abble to get a random quark, and for exmaple adding some kind of quark somwhere (to a recipe/machine or sth) would transfor the output/machine itself into sth else. Maybe enough quark shit will make it possible to achieve higher densities than 100%?
 ### this programming language shit + some new kind of autocarfting to make % based craftings on demand possible
+showcase of the crazy addons 
