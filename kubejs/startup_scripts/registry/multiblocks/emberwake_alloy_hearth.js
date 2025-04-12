@@ -1,3 +1,5 @@
+onst $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.common.data.machines.GTMultiMachines")
+
 GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('emberwake_alloy_hearth')
         .category('multiblock')
@@ -5,20 +7,14 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setMaxIOSize(4, 1, 0, 0)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.CHEMICAL);
-        phoenixvine.create("ore_sifter")
-        .setEUIO("in")
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(2, 1, 2, 0)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.SCIENCE)
+        .setSound(GTSoundEntries.ARC);
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('emberwake_alloy_hearth', 'multiblock')
+    phoenixvine.create('emberwake_alloy_hearth', 'multiblock').machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('alloy_blast_smelter')
-        .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_PERFECT, GTRecipeModifiers.ebfOverclock])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition => FactoryBlockPattern.start()   
         .aisle("BBCCCCCBB", "DEFFFFFED", "DEFFFFFED", "DEFFFFFED", "DEFFFFFED", "FFFFFFFFF", "FFFFFFFFF", "FFFFFFFFF", "FFFFFFFFF", "FFFFFFFFF")
@@ -42,16 +38,14 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
    .or(Predicates.autoAbilities(definition.getRecipeTypes())))
            .where("I", Predicates.blocks("gtceu:phoenix_enriched_naquad_frame"))
-           .where('J', Predicates.blocks(GTBlocks.COIL_TRITANIUM.get()))
+           .where("J", Predicates.blocks("gtceu:cupronickel_coil_block"))
            .where("K", Predicates.blocks("kubejs:heat_dissipating_coils"))
            .where("L", Predicates.blocks("kubejs:quasi_stable_fusion_casing"))
            .where("M", Predicates.blocks("gtceu:heat_vent"))
            .where("N", Predicates.blocks("kubejs:ashglass_viewing_panel"))
            .where("O", Predicates.blocks("kubejs:phoenix_ignition_matrix"))
            .where("P", Predicates.blocks("kubejs:supercooled_reactor_core"))
-           .where('Q', Predicates.controller(Predicates.blocks(definition.get())))        
+           .where('Q', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
             .workableCasingRenderer('kubejs:block/reliable_naquadah_alloy_machine_casing', 'gtceu:block/multiblock/fusion_reactor', false)
 });
-
-
