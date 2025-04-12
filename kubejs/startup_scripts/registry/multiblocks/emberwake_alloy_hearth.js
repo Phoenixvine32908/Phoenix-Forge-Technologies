@@ -1,4 +1,4 @@
-onst $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.common.data.machines.GTMultiMachines")
+const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.common.data.machines.GTMultiMachines")
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('emberwake_alloy_hearth')
