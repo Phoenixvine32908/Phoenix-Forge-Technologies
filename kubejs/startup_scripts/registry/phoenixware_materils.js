@@ -116,7 +116,8 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
     glitched_corruption_substrate: dull,
     galactic_heart_matter: shiny,
     event_horizon_matter: shiny,
-    antimatter: shiny
+    antimatter: shiny,
+    fiery_bronze: dull,
   };
 
   for (const key in iconSets) {
@@ -144,7 +145,13 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     GTMaterialFlags.GENERATE_FOIL,
     GTMaterialFlags.GENERATE_ROTOR
   ];
-
+  const limitedFlags = [
+    GTMaterialFlags.GENERATE_PLATE,
+    GTMaterialFlags.GENERATE_GEAR,
+    GTMaterialFlags.GENERATE_SMALL_GEAR,
+    GTMaterialFlags.GENERATE_DENSE,
+    GTMaterialFlags.GENERATE_FINE_WIRE,
+  ];
   const materials = [
     [
       "akashic_zeronium",
@@ -376,7 +383,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
       0x8FBC8F,
       [GTValues.V[GTValues.MAX], 2048, 256, true], // cableProps
       [2200, 550, 27.0, 1900000] // rotorProps
-    ],
+    ],                                                         
     [
       "multiversal_hyperalloy",
       0xFFFAFA,
@@ -416,8 +423,31 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xffffff)
         .iconSet('infinity')
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_SMALL_GEAR)
+        event.create('fiery_bronze')
+        .ingot()
+        .color(0xff6d00)
+        .secondaryColor(0xa0522d)
+        .iconSet('fiery_bronze')
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR)
+        event.create('aurum_steel')
+        .ingot()
+        .color(0xd0a860)
+        .secondaryColor(0xc0c0c0)
+        .iconSet('aurum_steel')
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR)
+        event.create('aluminfrost')
+        .ingot()
+        .color(0xadd8e6)
+        .secondaryColor(0xc0c0c0)
+        .iconSet('aluminfrost')
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR)
+        event.create('magma')
+        .dust()
+        .color(0xff6d00)
+        .secondaryColor(0xeaa92e)
+        .iconSet('fiery_bronze')
 });
 
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
-  event.create('infinity').parent(GTMaterialIconSet.SHINY)
+  event.create('infinity')
 })

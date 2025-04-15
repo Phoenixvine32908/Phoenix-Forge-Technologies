@@ -59,12 +59,11 @@
 				title: "Welcome!"
 				type: "checkmark"
 			}]
-			title: "Welcome to GregTech CEu!"
+			title: "Welcome to Phoenix Forge Technologies!"
 			x: -0.75d
 			y: -1.5d
 		}
 		{
-			dependencies: ["25289F9E8AE01C29"]
 			description: [
 				"If you're familiar with GregTech, you may be aware of its &cmany nerfs&r to vanilla recipes. &bGTCEu&r doesn't go easy on you - take a look at the crafting recipes for &eBuckets&r or &ePaper&r. However, we'll ease off the insanity in earlygame, and 1 Log will give you 4 Planks. &aRejoice!&r"
 				""
@@ -101,7 +100,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
 			description: [
 				"Here's a &6nifty&r list of some resources that you'll need in bulk for early-game. Collect more than we're asking for in this quest - you'll end up running out before you know it, and it's always a good habit to gather more than you need in &aGregTech&r."
 				""
@@ -157,7 +155,6 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
 			description: [
 				"The ore generation in &2GregTech&r is very different to vanilla or normal modded Minecraft. All ores generate in &6huge veins&r, which can contain &dhundreds&o&r of ore blocks."
 				""
@@ -184,7 +181,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
 			description: [
 				"Were you aware that &aGregTech&r comes with its own set of tools? If not, you may also be pleasantly surprised to hear that they &6&lsurpass&r their vanilla equivalents."
 				""
@@ -690,7 +686,6 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["36DD94945D5B4A80"]
 			dependency_requirement: "one_completed"
 			description: [
 				"Wrought Iron has a very low carbon content, but that's enough to make it &btougher&r than regular Iron."
@@ -729,7 +724,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["1ECBA1CBFFB9F625"]
 			description: [
 				"Alright - your first &oproper&r &aGregTech&r tool. The first of &dmany&r."
 				""
@@ -776,7 +770,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["2001CB4968D3E0A2"]
 			description: [
 				"This hammer isn't quite like the ones you'll use for crafting. It actually works as a &d3x3 pickaxe&r!"
 				""
@@ -827,7 +820,6 @@
 			y: -4.5d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
 			description: [
 				"In the real world, iron isn't &oonly&r found as pure Iron Ore. Instead, it's found in a &avariety&r of &eoxide forms&r or &eminerals&r."
 				""
@@ -901,7 +893,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["7DEB73FD649BDFB6"]
 			description: [
 				"More GregTech tools are required for progression - here are the ones to lay eyes on."
 				""
@@ -969,7 +960,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["2001CB4968D3E0A2"]
 			description: [
 				"More tools - they're not critically important right now, but you'll need to make these at some point."
 				""
@@ -1080,45 +1070,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["2001CB4968D3E0A2"]
-			description: [
-				"The &e&lCoke Oven&r will likely be your first &aGregTech&r multiblock. Congratulations!"
-				""
-				"It is used to make &aCoke&r from &eCoal&r, or &aCharcoal&r from &eWood&r, in addition to &dliquid Creosote&r as a &3bonus&r output."
-				""
-				"Take a look at the &6Multiblock Preview&r tab in EMI (press &dU&r over the controller block of any Multiblock!) to see the structure pattern."
-				"{@pagebreak}"
-				"&9Note:&r &lAny&r Brick block can be replaced with a &3Coke Oven Hatch&r. You can have up to five of them."
-				""
-				"The Hatch allows for automation - it'll &dauto-export&r both Fluid and Items! It also works for insertion into the Coke Oven (you can use Hoppers)."
-				""
-				"If the Coke Oven happens to fully fill up on &eCreosote&r that you are not using, break and replace the Coke Oven block. &3Automated fluid voiding&r is available later in the game."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o The concept of multiblocks is a modded Minecraft classic. Think of IC2's Nuclear Reactor, or Railcraft's Coke Oven - truly revolutionary at the time!&r"
-			]
-			icon: "gtceu:coke_oven"
-			id: "5FBB32A001630702"
-			min_required_dependencies: 1
-			rewards: [{
-				id: "0366434746F250D1"
-				item: "gtceu:exquisite_coke_gem"
-				random_bonus: 2
-				type: "item"
-			}]
-			shape: "gear"
-			size: 1.2d
-			subtitle: "Your first big project... hopefully"
-			tasks: [{
-				id: "76FE9242A471152B"
-				item: "gtceu:coke_oven"
-				type: "item"
-			}]
-			title: "Coke Oven"
-			x: 5.25d
-			y: -4.5d
-		}
-		{
-			dependencies: ["2001CB4968D3E0A2"]
 			description: [
 				"More resources are always nice. You're getting close to entering the &6age of Steam&r - Copper and Tin are required in many &6Steam Age&r machines, so check the ore tab to find out what veins they can be found in, and get mining!"
 				""
@@ -1163,7 +1114,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["45969FFBF88F4FBB"]
 			description: [
 				"&6Bronze&r is an &2alloy&r of Copper and Tin. Grind down 3 parts Copper and 1 part Tin into dust, then combine and smelt them. If you are confused on how this is done, take a look at the &o\"&dMore Tools&r&o\"&r quest."
 				""
@@ -1173,7 +1123,7 @@
 				"{@pagebreak}"
 				"&l&3Lore:&r&o Bronze in real life is closer to a ratio of 7:1 for Copper to Tin. Here (and in most of modded Minecraft) this is &4not&f the case for the sake of game balance. There are a lot of things like this that need to be tweaked - &eno realism here&f."
 			]
-			icon: "gtceu:bronze_ingot"
+			icon: "gtceu:fiery_bronze_ingot"
 			id: "3C1F8E9E39E7E611"
 			rewards: [{
 				count: 32
@@ -1195,7 +1145,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["7DEB73FD649BDFB6"]
 			description: [
 				"The bucket recipe has been &d&lchanged.&r It now requires plates - &owahoo&r."
 				""
@@ -1232,44 +1181,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
-			description: [
-				"Okay, we were generous enough to leave Wood-to-Plank-ratios &cuntouched&r, but this is GregTech - charcoal smelting is &4&lnot possible&r in a Furnace. You'll need to make a &d&lCoke Oven&r to get your grubby hands on some &6charcoal&r."
-				""
-				"Wooden planks are still pretty good as &6furnace fuel&r, especially since you get &l&3four&r from one log."
-				""
-				"If this displeases you - normally you'd be able to &brevert this back&r to vanilla behaviour in the &aGTCEu&r configs, but the configuration option is bugged. To &erevert&r the nerf, you can delete the \"charcoal.js\" script in &bkubejs/server_scripts&r!"
-			]
-			icon: "minecraft:charcoal"
-			id: "146A00F3C1EE5F01"
-			rewards: [{
-				count: 16
-				id: "1251B1308EBD0F91"
-				item: "minecraft:coal"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Not here!"
-			tasks: [{
-				count: 48L
-				id: "27171923B89BB3C2"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "minecraft:logs"
-					}
-				}
-				title: "We demand more logs."
-				type: "item"
-			}]
-			title: "Charcoal?"
-			x: 0.75d
-			y: -1.5d
-		}
-		{
-			dependencies: ["45969FFBF88F4FBB"]
 			description: [
 				"In this &blightweight&r modpack, we've included enough QoL to &o(hopefully)&r fit your needs, and the pack is &aperfectly playable&r as is."
 				""
@@ -1301,7 +1212,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["45969FFBF88F4FBB"]
 			description: [
 				"Don't worry, these crafts are actually useful - you'll be required to make &ehundreds more&r of these components. It's good to start building the habit."
 				""
@@ -1389,7 +1299,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["45969FFBF88F4FBB"]
 			description: [
 				"Iron, Copper and Tin will only get you so far. &4Redstone&r and &bDiamond&r will occasionally be required during the &6Steam Age&r, whereas Nickel, Lead and Silver are also nice to have. All will come in handy &asoon enough&r."
 				""
@@ -1511,7 +1420,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["2001CB4968D3E0A2"]
 			description: [
 				"Crafting can quickly get &etiresome&r. How about making use of your &2new saw&r to make this Crafting table?"
 				""
@@ -1523,7 +1431,7 @@
 			id: "67FA40551BBD6884"
 			shape: "rsquare"
 			size: 0.66d
-			subtitle: "No, Tinkers' is not in this modpack"
+			subtitle: "Yes, Tinker's is in this modpack"
 			tasks: [{
 				id: "3C7A6BD4E1A4F1CE"
 				item: "craftingstation:crafting_station"
@@ -1558,7 +1466,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
 			description: [
 				"Rubber Trees can be found in &aForest&r, &2Jungle&r or &aSwamp&r biomes."
 				""
@@ -1629,7 +1536,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["0C690272ED4FB1C3"]
 			description: [
 				"Whilst frolicking about on the surface, you may have spotted a couple of &dSurface rocks&r."
 				""
@@ -1650,6 +1556,39 @@
 			title: "This Rocks!"
 			x: -2.25d
 			y: -2.25d
+		}
+		{
+			description: [
+				"Finding yourself within a vast temple dedicated to a phoenix, an unfamiliar stirring takes hold. You discover a library and are drawn to a single book: the Flaming Records. Within its pages, schematics and plans of incredible machines awaken something within you. A section on \"PhoenixWare?\" reveals only: \"Power, beyond reality, created by &lPhoenixvine&r—once one of us, now something more.\" With a sense of unanswered questions, you exit the temple into the blinding light."
+				""
+				"{@pagebreak}"
+				""
+				"The world outside bears the marks of a vibrant community now overgrown, littered with the fascinating wreckage of broken machines and automation that sparks an unexpected excitement."
+				""
+				"This is not a story of invention, but of reclamation."
+				""
+				"This is:"
+				""
+				"               &4&lPhoenix Forge&r&r"
+				"                &4&lTechnologies&r&r"
+				""
+				"And you WILL get back what you lost."
+			]
+			icon: "minecraft:writable_book"
+			id: "2F856E8C54CF1B10"
+			rewards: [{
+				id: "00EFE6D2EB2CBA34"
+				type: "xp"
+				xp: 1000
+			}]
+			subtitle: "You awaken on a cold hard floor with a blazing headache."
+			tasks: [{
+				id: "613A17F44BEAB572"
+				title: "Lore"
+				type: "checkmark"
+			}]
+			x: -3.5d
+			y: -1.5d
 		}
 	]
 	subtitle: ["Welcome to &6GTCP&r! Glad to have you here."]

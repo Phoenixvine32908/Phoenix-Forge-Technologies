@@ -97,6 +97,9 @@
     "ench": true,
     "spawner": true
   },
+  "telepastries": {
+    "bites": true
+  },
   "balm": {
     "jade": true
   },

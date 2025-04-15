@@ -12,10 +12,21 @@ StartupEvents.registry('item', event => {
     event.create('galaxium_core')
     .displayName("§6Galaxium Core")
     .texture("kubejs:item/galaxium_core")
+    
+    event.create('flaming_matrix')
+    .displayName("§cFlaming Matrix")
+    .texture("kubejs:item/flaming_matrix")
+    
+    event.create('flaming_dust')
+    .displayName("§cFlaming Dust")
+    .texture("kubejs:item/flaming_dust")
 
     event.create('test_ingot')
     .displayName("§6Test Ingot")
     .texture("kubejs:item/test_ingot")
+    event.create('copper_vein_traces')
+    .displayName("Copper Vein Traces")
+    .texture("kubejs:item/veins/copper_traces")
 
     function create(namespace, displayName) {
         event.create("phoenix_enriched_" + namespace)

@@ -8,12 +8,6 @@
 	order_index: 2
 	quest_links: [
 		{
-			id: "1F0BB0AD77F19FD4"
-			linked_quest: "4946FC5BCA4CCA88"
-			x: 0.0d
-			y: 0.0d
-		}
-		{
 			id: "3E07B33787FBC6BA"
 			linked_quest: "40DE888E6025C646"
 			x: 1.5d

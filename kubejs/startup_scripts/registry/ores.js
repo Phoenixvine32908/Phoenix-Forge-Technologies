@@ -128,5 +128,17 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ore().gem()
         .color(0x111111).iconSet('diamond')
         .components('1x calcium'); // Changed
+        event.create('dormant_ember')
+        .ore().dust()
+        .color(0x704214).iconSet('shiny')
+        .components('1x calcium'); // Changed
+        event.create('osmiridium_80_20')
+        .ore().dust()
+        .color(0xD3D3D3).iconSet('shiny')
+        .components('4x calcium'); // Changed
+        event.create('ismiridium_80_20')
+        .ore().dust()
+        .color(0xE0E0E0).iconSet('shiny')
+        .components('calcium'); // Changed
 
 });

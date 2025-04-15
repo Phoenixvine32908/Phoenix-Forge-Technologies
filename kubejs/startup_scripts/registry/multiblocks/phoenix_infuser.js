@@ -15,11 +15,11 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setSound(GTSoundEntries.FURNACE);
 });
 
-GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
+/**GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('phoenix_infuser', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.OpV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('phoenix_infuser', 'phoenix_heart_hearth')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK, MachineModifiers.FUSION_REACTOR])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB", "BBBAAAAAAAAAAAAAAAAAAAAAAAAAAABBB", "ABBBAAAAAAAAAAAAAAAAAAAAAAAAABBBA", "AABBBAAAAAAAAAAACAAAAAAAAAAABBBAA", "AAABBBAAAAAAAAACCCAAAAAAAAABBBAAA", "AAAABBBAAAAAAACCDCCAAAAAAABBBAAAA", "AAAAABBBAAAAACCEDECCAAAAABBBAAAAA", "AAAAAABBBAAACCFEDEFCCAAABBBAAAAAA", "AAAAAAABBBACCFGEHEGFCCABBBAAAAAAA", "AAAAAAAABBBCFIIEHEIIFCBBBAAAAAAAA", "AAAAAAAAABBBFIIEHEIIFBBBAAAAAAAAA", "AAAAAAAACCBBBFGEHEGFBBBCCAAAAAAAA", "AAAAAAACCFFBBBFEGEFBBBFFCCAAAAAAA", "AAAAAACCFIIFBBBEGEBBBFIIFCCAAAAAA", "AAAAACCFGIIGFBBBGBBBFGIIGFCCAAAAA", "AAAACCEEEEEEEEBBBBBEEEEEEEECCAAAA", "AAACCDDDHHHHGGGBBBGGGHHHHDDDCCAAA", "AAAACCEEEEEEEEBBBBBEEEEEEEECCAAAA", "AAAAACCFGIIGFBBBGBBBFGIIGFCCAAAAA", "AAAAAACCFIIFBBBEGEBBBFIIFCCAAAAAA", "AAAAAAACCFFBBBFEGEFBBBFFCCAAAAAAA", "AAAAAAAACCBBBFGEHEGFBBBCCAAAAAAAA", "AAAAAAAAABBBFIIEHEIIFBBBAAAAAAAAA", "AAAAAAAABBBCFIIEHEIIFCBBBAAAAAAAA", "AAAAAAABBBACCFGEHEGFCCABBBAAAAAAA", "AAAAAABBBAAACCFEDEFCCAAABBBAAAAAA", "AAAAABBBAAAAACCEDECCAAAAABBBAAAAA", "AAAABBBAAAAAAACCDCCAAAAAAABBBAAAA", "AAABBBAAAAAAAAACCCAAAAAAAAABBBAAA", "AABBBAAAAAAAAAAACAAAAAAAAAAABBBAA", "ABBBAAAAAAAAAAAAAAAAAAAAAAAAABBBA", "BBBAAAAAAAAAAAAAAAAAAAAAAAAAAABBB", "BBAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB")
@@ -71,7 +71,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
            .where("J", Predicates.blocks("kubejs:reliable_naquadah_alloy_machine_casing"))
            .where("K", Predicates.blocks("gtceu:phoenix_enriched_naquad_frame"))
            .where("L", Predicates.blocks("kubejs:super_stable_fusion_casing")
-                   .or(Predicates.blocks("kubejs:phoenix_gaze_panel").setMaxGlobalLimited(40)))
+                   .or(Predicates.blocks("kubejs:phoenix_gaze_panel").setMaxGlobalLimited(60)))                                                    
            .where("M", Predicates.blocks("kubejs:blazing_core_stabilizer"))
            .where("N", Predicates.blocks("draconicevolution:awakened_draconium_block"))
            .where("O", Predicates.blocks("expatternprovider:fishbig"))
@@ -81,4 +81,4 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
            .where('S', Predicates.controller(Predicates.blocks(definition.get())))
                     .build())
                     .workableCasingRenderer('kubejs:block/phoenix_enriched_tritanium_casing', 'gtceu:block/multiblock/fusion_reactor', false)
-        });           
+        });           */                                                                                                                                 
