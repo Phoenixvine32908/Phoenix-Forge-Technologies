@@ -409,7 +409,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
 			description: [
 				"Obtaining paper is both more difficult and less efficient than in vanilla. Thanks, Greg."
 				""
@@ -589,7 +588,6 @@
 			y: -0.375d
 		}
 		{
-			dependencies: ["5193DD03C0742548"]
 			description: [
 				"Grow &dRubber Trees&r and cut them down to get &aSticky Resin&r."
 				""
@@ -742,7 +740,6 @@
 			y: 0.75d
 		}
 		{
-			dependencies: ["315DBB3B23F95E0D"]
 			description: [
 				"The &dSolid Boiler&r is the only available Boiler for now, as the &aGlass&r needed for the others is not available just yet. You can get by with only one, but we would recommend making at least two."
 				""

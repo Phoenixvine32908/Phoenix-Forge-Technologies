@@ -1,4 +1,4 @@
-const $CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.common.data.machines.GTMultiMachines")
+
 
 GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('emberwake_alloy_hearth')
@@ -11,10 +11,10 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('emberwake_alloy_hearth', 'multiblock').machine((holder) => new $CoilWorkableElectricMultiblockMachine(holder))
+    phoenixvine.create('emberwake_alloy_hearth', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('alloy_blast_smelter')
-        .recipeModifiers([GTRecipeModifiers.OC_PERFECT, GTRecipeModifiers.ebfOverclock])
+        .recipeModifiers([GTRecipeModifiers.OC_PERFECT])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition => FactoryBlockPattern.start()   
         .aisle("BBCCCCCBB", "DEFFFFFED", "DEFFFFFED", "DEFFFFFED", "DEFFFFFED", "FFFFFFFFF", "FFFFFFFFF", "FFFFFFFFF", "FFFFFFFFF", "FFFFFFFFF")
@@ -38,7 +38,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
    .or(Predicates.autoAbilities(definition.getRecipeTypes())))
            .where("I", Predicates.blocks("gtceu:phoenix_enriched_naquad_frame"))
-           .where("J", Predicates.blocks("gtceu:cupronickel_coil_block"))
+           .where("J", Predicates.blocks("gtceu:tritanium_coil_block"))
            .where("K", Predicates.blocks("kubejs:heat_dissipating_coils"))
            .where("L", Predicates.blocks("kubejs:quasi_stable_fusion_casing"))
            .where("M", Predicates.blocks("gtceu:heat_vent"))

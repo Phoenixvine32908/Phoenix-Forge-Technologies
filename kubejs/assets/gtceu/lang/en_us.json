@@ -3,6 +3,8 @@
   "gtceu.greenhouse":"Greenhouse",
   "block.gtceu.construction_core":"Construction Core", 
   "gtceu.construction_core":"Construction Core",
+  "block.gtceu.large_high_pressure_boiler":"Large High Pressure Boiler",
+  "gtceu.large_high_pressure_boiler":"Large High Pressure Boiler", 
 
   "material.gtceu.fluix":"Fluix"
 }
