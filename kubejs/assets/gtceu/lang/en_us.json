@@ -5,6 +5,10 @@
   "gtceu.construction_core":"Construction Core",
   "block.gtceu.large_high_pressure_boiler":"Large High Pressure Boiler",
   "gtceu.large_high_pressure_boiler":"Large High Pressure Boiler", 
+  "material.gtceu.stabilized_antimatter":"Stabilized Antimatter",
+  "material.gtceu.fiery_bronze":"Fiery Bronze",
+  "material.gtceu.aurum_steel":"Aurum Steel",
+  "material.gtceu.aluminfrost":"AluminFrost",
 
   "material.gtceu.fluix":"Fluix"
 }

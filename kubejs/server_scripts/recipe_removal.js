@@ -249,8 +249,26 @@ const recipesToRemove = [
     "storagenetwork:expanded_remote",
     "productivebees:bee_breeding/raw_materials/osmium_bee",
     "minecraft:neutron_pile_from_ingots",
-    "minecraft:neutron_nugget"
-    
+    "minecraft:neutron_nugget",
+    "gtceu:shaped/steam_boiler_coal_bronze",
+    "draconicevolution:machines/crafting_core",
+    "gtceu:shaped/steam_boiler_lava_bronze",
+    "gtceu:shaped/steam_boiler_solar_bronze",
+    "gtceu:shaped/steam_extractor_bronze",
+    "gtceu:shaped/steam_macerator_bronze",
+    "gtceu:shaped/steam_compressor_bronze",
+    "gtceu:shaped/steam_hammer_bronze",
+    "gtceu:shaped/steam_furnace_bronze",
+    "gtceu:shaped/steam_alloy_smelter_bronze",
+    "gtceu:shaped/steam_miner_bronze",
+    "gtceu:shaped/steam_rock_breaker_bronze",
+    "gtceu:shaped/casing_lv",
+    "gtceu:assembler/casing_lv",
+    "gtceu:shaped/lv_machine_hull",
+    "gtceu:shaped/bronze_hull",
+    "gtceu:assembler/casing_bronze_bricks",
+    "gtceu:shaped/casing_bronze_bricks",
+    "gtceu:shaped/casing_bronze_firebox"
 ];
 
 ServerEvents.recipes((event) => {

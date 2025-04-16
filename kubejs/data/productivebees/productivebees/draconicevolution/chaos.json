@@ -1,0 +1,21 @@
+{
+  "primaryColor": "#090909",
+  "secondaryColor": "#090909",
+  "tertiaryColor": "#303030",
+  "particleColor": "#303030",
+  "flowerItem": "draconicevolution:chaos_shard",
+  "breedingitem": "draconicevolution:dragon_heart",
+  "selfbreed": true,
+  "fireproof": true,
+  "draconic": false,
+  "renderer": "default_crystal",
+  "invulnerability": [
+    "mekanism.radiation"
+  ],
+  "conditions": [
+    {
+      "modid": "draconicevolution",
+      "type": "forge:mod_loaded"
+    }
+  ]
+}

@@ -13,9 +13,9 @@ StartupEvents.registry('item', event => {
     .displayName("§6Galaxium Core")
     .texture("kubejs:item/galaxium_core")
     
-    event.create('flaming_matrix')
-    .displayName("§cFlaming Matrix")
-    .texture("kubejs:item/flaming_matrix")
+    event.create('flaming_mesh')
+    .displayName("§cFlaming Mesh")
+    .texture("kubejs:item/flaming_mesh")
     
     event.create('flaming_dust')
     .displayName("§cFlaming Dust")
@@ -27,6 +27,22 @@ StartupEvents.registry('item', event => {
     event.create('copper_vein_traces')
     .displayName("Copper Vein Traces")
     .texture("kubejs:item/veins/copper_traces")
+    event.create('sapphire_vein_traces')
+    .displayName("Sapphire Vein Traces")
+    .texture("kubejs:item/veins/sapphire_traces")
+    event.create('redstone_vein_traces')
+    .displayName("Redstone Vein Traces")
+    .texture("kubejs:item/veins/redstone_traces")
+    event.create('redstone_vein_traces')
+    .displayName("Redstone Vein Traces")
+    .texture("kubejs:item/veins/redstone_traces")
+    event.create('olivine_vein_traces')
+    .displayName("Olvine Vein Traces")
+    .texture("kubejs:item/veins/olvine_traces")
+    event.create('olivine_vein_traces')
+    .displayName("Olvine Vein Traces")
+    .texture("kubejs:item/veins/olvine_traces")
+
 
     function create(namespace, displayName) {
         event.create("phoenix_enriched_" + namespace)

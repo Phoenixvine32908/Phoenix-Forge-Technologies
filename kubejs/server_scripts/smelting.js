@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-event.smelting('3x minecraft:oak_log', 'minecraft:charcoal')
+event.smelting('1x minecraft:oak_log', 'minecraft:charcoal')
     console.log('Hello! The recipe event has fired!')
   })
 

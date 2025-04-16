@@ -5,28 +5,36 @@
       "item": "productivebees:configurable_honeycomb",
       "nbt": {
         "EntityTag": {
-          "type": "productivebees:gregstar"
+          "type": "productivebees:titanium"
         }
       }
     },
     "outputs": [
       {
         "item": {
-          "item": "kubejs:greg_star_shard"
+          "tag": "forge:dusts/rutile"
         },
-        "chance": 5
+        "chance": 40
+      },
+      {
+        "item": {
+          "tag": "forge:wax"
+        }
       },
       {
         "fluid": {
           "fluid": "productivebees:honey"
         },
-        "amount": 50
+        "amount": 1
       }
     ],
     "conditions": [
       {
-        "type": "productivebees:bee_exists",
-        "bee": "productivebees:gregstar"
+        "type": "forge:not",
+        "value": {
+          "type": "forge:tag_empty",
+          "tag": "forge:dusts/rutile"
+        }
       }
     ]
-  }
+}

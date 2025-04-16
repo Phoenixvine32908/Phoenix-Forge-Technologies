@@ -294,7 +294,7 @@ machines:
 
     # The amount of steam a High Pressure Steam Solid Boiler produces per second at max temperature.
     # Default: 300
-    hpSolidBoilerBaseOutput: 340
+    hpSolidBoilerBaseOutput: 500
 
     # The amount of steam a Steam Liquid Boiler produces per second at max temperature.
     # Default: 240
@@ -302,29 +302,29 @@ machines:
 
     # The amount of steam a High Pressure Steam Liquid Boiler produces per second at max temperature.
     # Default: 600
-    hpLiquidBoilerBaseOutput: 700
+    hpLiquidBoilerBaseOutput: 800
 
     # The amount of steam a Steam Solar Boiler produces per second at max temperature.
     # Default: 120
-    solarBoilerBaseOutput: 180
+    solarBoilerBaseOutput: 400
 
     # The amount of steam a High Pressure Steam Solar Boiler produces per second at max temperature.
     # Default: 360
-    hpSolarBoilerBaseOutput: 400
+    hpSolarBoilerBaseOutput: 800
 
   # Large Steam Boiler Options
   largeBoilers:
     # The conversion rate between water and steam in Large Boilers.
     # Default: 160
-    steamPerWater: 200
+    steamPerWater: 800
 
     # The max temperature of the Large Bronze Boiler.
     # Default: 800
-    bronzeBoilerMaxTemperature: 900
+    bronzeBoilerMaxTemperature: 1200
 
     # The heat speed of the Large Bronze Boiler.
     # Default: 1
-    bronzeBoilerHeatSpeed: 2
+    bronzeBoilerHeatSpeed: 4
 
     # The max temperature of the Large Steel Boiler.
     # Default: 1800

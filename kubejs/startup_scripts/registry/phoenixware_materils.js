@@ -2,6 +2,7 @@ const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.m
 const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
 const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
 const $FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
+Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.Material');
 
 StartupEvents.registry('item', event => {
   event.create('phoenix_feather').displayName('§cFeather §6Of §cRebirth').texture("kubejs:item/phoenix_feather");
@@ -428,7 +429,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xff6d00)
         .secondaryColor(0xa0522d)
         .iconSet('fiery_bronze')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR)
+        .fluidPipeProperties(2000, 40, false, false, false, false)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_FRAME)
         event.create('aurum_steel')
         .ingot()
         .color(0xd0a860)
@@ -440,7 +442,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xadd8e6)
         .secondaryColor(0xc0c0c0)
         .iconSet('aluminfrost')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
         event.create('magma')
         .dust()
         .color(0xff6d00)
