@@ -1,0 +1,18 @@
+{
+    "type": "productivebees:bee_breeding",
+    "parent1": "productivebees:awakened_bee",
+    "parent2": "productivebees:withered_bee",
+    "offspring": [
+        "productivebees:entropy"
+    ],
+    "conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:awakened_bee"
+        },
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:withered_bee"
+        }
+    ]
+}jei:/productivebees/awakened_incubation

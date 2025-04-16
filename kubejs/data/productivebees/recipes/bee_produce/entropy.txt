@@ -1,0 +1,23 @@
+{
+    "type": "productivebees:advanced_beehive",
+    "ingredient": "productivebees:entropy",
+    "results": [
+        {
+            "item": {
+                "type": "forge:nbt",
+                "item": "productivebees:configurable_honeycomb",
+                "nbt": {
+                    "EntityTag": {
+                        "type": "productivebees:entropy"
+                    }
+                }
+            }
+        }
+    ],
+    "conditions": [
+        {
+            "type": "productivebees:bee_exists",
+            "bee": "productivebees:entropy"
+        }
+    ]
+}

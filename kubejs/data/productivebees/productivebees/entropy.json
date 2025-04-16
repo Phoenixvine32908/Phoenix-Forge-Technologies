@@ -1,0 +1,22 @@
+{
+    "primaryColor": "#090909",
+    "secondaryColor": "#090909",
+    "tertiaryColor": "#303030",
+    "renderer": "default_shell",
+    "size": 1.20,
+    "selfbreed": true,
+    "selfheal": true,
+    "fireproof": true,
+    "flowerItem": "draconicevolution:chaos_shard",
+    "breedingitem": "draconicevolution:dragon_heart",
+    "name": "This Bee Hurts",
+    "invulnerability": [
+        "mekanism.radiation"
+    ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "productivebees"
+        }
+    ]
+}

@@ -194,11 +194,11 @@ ServerEvents.recipes(event => {
 
     // Motors
     event.recipes.gtceu.assembly_line('uhv_motor')
-        .itemInputs('gtceu:long_magnetic_terbium_rod', '8x gtceu:long_actinium_rod', '8x gtceu:actinium_ring', '16x gtceu:actinium_round', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire', '32x gtceu:fine_ruthenium_trinium_americium_neutronate_wire', '2x gtceu:europium_single_cable')
-        .inputFluids('gtceu:soldering_alloy 5760', 'gtceu:lubricant 2000', 'gtceu:crystal_matrix 1152', 'gtceu:naquadria 576')
-        .itemOutputs('gtceu:uhv_electric_motor')
-        .duration(600)
-        .EUt(491520)
+            .itemInputs('gtceu:long_magnetic_samarium_rod', '8x gtceu:long_stabilized_antimatter_rod', '8x gtceu:stabilized_antimatter_ring', '16x gtceu:stabilized_antimatter_round', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_single_wire', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_single_wire', '32x gtceu:fine_ruthenium_trinium_americium_neutronate_single_wire', '2x gtceu:europium_single_cable', '4x gtceu:ruthenium_trinium_americium_neutronate_plate')
+            .inputFluids('gtceu:soldering_alloy 5760', 'gtceu:lubricant 2000', 'gtceu:tritanium 1152', 'gtceu:naquadria 576')
+            .itemOutputs('gtceu:uhv_electric_motor')
+            .duration(600)
+            .EUt(491520)
 
         .stationResearch(b => b
             .researchStack('gtceu:uv_electric_motor')
@@ -396,7 +396,7 @@ ServerEvents.recipes(event => {
 
     // Field Generators
     event.recipes.gtceu.assembly_line('uhv_field_generator')
-        .itemInputs('gtceu:neutronium_frame', '6x gtceu:actinium_plate', '2x gtceu:gravi_star', '2x gtceu:uhv_emitter', '2x #gtceu:circuits/uhv', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_wire', '4x gtceu:europium_single_cable')
+        .itemInputs('gtceu:neutronium_frame', '6x gtceu:actinium_plate', '2x gtceu:gravi_star', '2x gtceu:uhv_emitter', '2x #gtceu:circuits/uhv', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_single_wire', '64x gtceu:fine_ruthenium_trinium_americium_neutronate_single_wire', '4x gtceu:europium_single_cable')
         .inputFluids('gtceu:soldering_alloy 5760', 'gtceu:crystal_matrix 1152', 'gtceu:naquadria 576')
         .itemOutputs('gtceu:uhv_field_generator')
         .duration(600)

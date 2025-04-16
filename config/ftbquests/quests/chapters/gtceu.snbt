@@ -1232,43 +1232,6 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["0EAF2C5B5EB755C5"]
-			description: [
-				"Okay, we were generous enough to leave Wood-to-Plank-ratios &cuntouched&r, but this is GregTech - charcoal smelting is &4&lnot possible&r in a Furnace. You'll need to make a &d&lCoke Oven&r to get your grubby hands on some &6charcoal&r."
-				""
-				"Wooden planks are still pretty good as &6furnace fuel&r, especially since you get &l&3four&r from one log."
-				""
-				"If this displeases you - normally you'd be able to &brevert this back&r to vanilla behaviour in the &aGTCEu&r configs, but the configuration option is bugged. To &erevert&r the nerf, you can delete the \"charcoal.js\" script in &bkubejs/server_scripts&r!"
-			]
-			icon: "minecraft:charcoal"
-			id: "36DD94945D5B4A80"
-			rewards: [{
-				count: 16
-				id: "5408859E43668198"
-				item: "minecraft:coal"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Not here!"
-			tasks: [{
-				count: 48L
-				id: "3DF01E4FACBB1D53"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "minecraft:logs"
-					}
-				}
-				title: "We demand more logs."
-				type: "item"
-			}]
-			title: "Charcoal?"
-			x: 0.75d
-			y: -1.5d
-		}
-		{
 			dependencies: ["45969FFBF88F4FBB"]
 			description: [
 				"In this &blightweight&r modpack, we've included enough QoL to &o(hopefully)&r fit your needs, and the pack is &aperfectly playable&r as is."

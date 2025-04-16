@@ -1,0 +1,11 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "genesis"
+	group: ""
+	id: "7DFD5701239DC26C"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+	title: "Genesis"
+}
