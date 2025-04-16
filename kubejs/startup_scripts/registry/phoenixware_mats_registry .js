@@ -38,10 +38,10 @@ StartupEvents.registry('item', event => {
     .texture("kubejs:item/veins/redstone_traces")
     event.create('olivine_vein_traces')
     .displayName("Olvine Vein Traces")
-    .texture("kubejs:item/veins/olvine_traces")
-    event.create('olivine_vein_traces')
-    .displayName("Olvine Vein Traces")
-    .texture("kubejs:item/veins/olvine_traces")
+    .texture("kubejs:item/veins/olivine_traces")
+    event.create('mica_vein_traces')
+    .displayName("Mica Vein Traces")
+    .texture("kubejs:item/veins/mica_traces")
 
 
     function create(namespace, displayName) {
