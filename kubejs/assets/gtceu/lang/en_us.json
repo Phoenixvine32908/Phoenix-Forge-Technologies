@@ -1,6 +1,11 @@
 {
-  "block.gtceu.greenhouse":"Greenhouse", 
+   "block.gtceu.large_steam_compressor":"Large Steam Compressor", 
+"block.gtceu.large_steam_compressor.tooltip.0": "A Multiblock Compressor, without the power",
+  "block.gtceu.emberwake_alloy_hearth":"Emberwake Alloy Hearth",
   "gtceu.greenhouse":"Greenhouse",
+  "block.gtceu.emberwake_alloy_hearth.tooltip.0": "Uses the power of the §cPhoenix Force §fto run parallel alloying recipes at true speed§f!\nUseable: as Alloy Blast Smelter",
+  "gtceu.ember_igniter":"Ember Igniter",
+  "gtceu.earth_sieve":"Earth Sieve",
   "block.gtceu.construction_core":"Construction Core", 
   "gtceu.construction_core":"Construction Core",
   "block.gtceu.large_high_pressure_boiler":"Large High Pressure Boiler",
@@ -9,6 +14,32 @@
   "material.gtceu.fiery_bronze":"Fiery Bronze",
   "material.gtceu.aurum_steel":"Aurum Steel",
   "material.gtceu.aluminfrost":"AluminFrost",
-
+  "material.gtceu.unrefined_aluminfrost":"Unrefined AluminFrost",
+  "material.gtceu.permafrost":"Permafrost",
+  "material.gtceu.magma":"Magma",
+  "material.gtceu.dormant_ember":"Dormant Ember",
+  "material.gtceu.frost_reinforced_stained_steel":"Frost-Reinforced Stained Steel",
+  "material.gtceu.gold_iron_alloy":"Gold Iron Alloy",
+  "gtceu.jei.ove_vein.overworld/heat_frost":"PermaHeat Vein",
+  "gtceu.jei.ove_vein.overworld/deepslate/heat_frost":"PermaHeat Deepslate Vein",
+  "block.gtceu.lv_ember_igniter.tooltip.0": "§4Ignites the flames of a long lost heat!",
+  "block.gtceu.mv_ember_igniter.tooltip.0": "§4Ignites the flames of a long lost heat!",
+  "block.gtceu.hv_ember_igniter.tooltip.0": "§4Ignites the flames of a long lost heat!",
+  "block.gtceu.lv_earth_sieve.tooltip.0": "§8Process your Earth!",
+  "block.gtceu.mv_earth_sieve.tooltip.0": "§8Process your Earth!",
+  "block.gtceu.hv_earth_sieve.tooltip.0": "§8Process your Earth!",
+"block.gtceu.compact_draconic_fusion_reactor_mk1":"Compact Draconic Fusion Reactor MK I",
+    "gtceu.draconic_mk1":"Compact Draconic Fusion MK I",
+    "block.gtceu.compact_draconic_fusion_reactor_mk2":"Compact Draconic Fusion Reactor MK II",
+    "gtceu.draconic_mk2":"Compact Draconic Fusion MK II",
+    "block.gtceu.compact_draconic_fusion_reactor_mk3":"Compact Draconic Fusion Reactor MK III",
+    "gtceu.draconic_mk3":"Compact Draconic Fusion MK III",
+    "block.gtceu.draconic_fusion_reactor_mk1.desc":"Draconic Reactor Without The Explosions!\nAllows Exactly 1 Source Laser Hatch \nCreates Large Amounts Of Power Trough Draconic Fusion \nAdd large Chaos Shards For 3x The EU Output For Half The Duration",
+    "block.gtceu.draconic_fusion_reactor_mk2.desc":"Draconic Reactor Without The Explosions!\nAllows Exactly 1 Source Laser Hatch \nCreates Immense Amounts Of Power Trough Draconic Fusion \nAdd large Chaos Shards For 3x The EU Output For Half The Duration",
+    "block.gtceu.draconic_fusion_reactor_mk3.desc":"Draconic Reactor Without The Explosions!\nAllows Exactly 1 Source Laser Hatch \nCreates Excessive Amounts Of Power Trough Draconic Fusion \nAdd large Chaos Shards For 3x The EU Output For Half The Duration",
   "material.gtceu.fluix":"Fluix"
 }
+
+
+
+Steel, ah yes, steel. A delightful alloy that changed how humanity used machines. It is stronger than iron, more flexible, and more resitant to oxidization

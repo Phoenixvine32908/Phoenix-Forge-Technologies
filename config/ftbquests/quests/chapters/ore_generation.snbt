@@ -8,14 +8,6 @@
 	order_index: 2
 	quest_links: [
 		{
-			id: "4B68740C721D04D5"
-			linked_quest: "7CAD6FF241A827F7"
-			shape: "square"
-			size: 1.5d
-			x: 9.0d
-			y: -2.0d
-		}
-		{
 			id: "2A7A9FDC95689799"
 			linked_quest: "41D32C5178760F47"
 			shape: "square"
@@ -818,7 +810,6 @@
 			y: -3.5d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"The de-facto Rare Earth vein for progression in &5EV&r... and onwards."
 				""
@@ -850,7 +841,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: ["Emerald is the useful ore here. It's used in small quantities in &bMV&r, and is a part of the Crystal process for Crystal and Wetware circuits much later on."]
 			icon: "gtceu:netherrack_emerald_ore"
 			id: "594D84730913698A"
@@ -878,7 +868,6 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"This vein is very rare! Congratulations on stumbling upon one."
 				""
@@ -917,7 +906,6 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"Your ticket into &bApplied Energistics 2&r is nestled deep within a Certus Quartz vein."
 				""
@@ -949,7 +937,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"Electrotine is important for progression in &6HV&r. It centrifuges into Electrum (a source of Gold and Silver), and Redstone."
 				""
@@ -988,7 +975,6 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"Both Topaz ores are excellent subjects for eventual electrolysis."
 				""
@@ -1025,7 +1011,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"Almost a pure Copper vein. Damn you, Stibnite, ruining our purity!"
 				""
@@ -1057,7 +1042,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"This Nether Limonite vein variant isn't to be slept on."
 				""
@@ -1089,7 +1073,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"Your first Nether expedition should be for &eSulfur&r - which is found in this vein! Be careful, as this vein usually spawns from y-levels of 10 to 30. Bring Fire Resistance potions!"
 				""
@@ -1121,7 +1104,6 @@
 			y: -1.0d
 		}
 		{
-			dependencies: ["7CAD6FF241A827F7"]
 			description: [
 				"Your classic Nether Quartz vein."
 				""

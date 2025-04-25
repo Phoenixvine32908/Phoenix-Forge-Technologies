@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "uhv__ultra_high_voltage"
+	group: "693226878D58638A"
+	icon: "gtceu:uhv_electric_motor"
+	id: "5A99457605053DA5"
+	order_index: 8
+	quest_links: [ ]
+	quests: [ ]
+	title: "UHV - Ultra High Voltage"
+}

@@ -107,10 +107,12 @@ StartupEvents.registry('fluid', event => {
         .displayName("Hypercharged Void Extract")
 
     event.create("reality_woven_nanotubes")
-        .color(0x800080) // Using color here as it's also defined as an ingot
+        .thickTexture(0x800080) // Using color here as it's also defined as an ingot
         .bucketColor(0x9400D3)
         .displayName("Reality-Woven Nanotubes")
-
+        event.create('cryo_ember_fluid')
+        .thinTexture(0xFF4500) // Light Blue (for permafrost/cold)
+        .bucketColor(0xA020F0)   // Purple (a blend of the two?)
     event.create("phoenix_fire_solution")
         .thickTexture(0xFF4500)
         .bucketColor(0xFF8C00)
@@ -322,6 +324,10 @@ StartupEvents.registry('fluid', event => {
         .thinTexture(0xD3D3D3)
         .bucketColor(0xC0C0C0)
         .displayName("Cognitive Interface Alloy Fluid")
+        event.create("magma")
+        .thickTexture(0xa12424)
+        .bucketColor(0x400b0b)
+        .displayName("Magma")
 
     // Ascended Phoenixware (Purely Technological) - ALL FLUIDS:
     event.create("akashic_resonance_stream")
@@ -359,6 +365,10 @@ StartupEvents.registry('fluid', event => {
         .thinTexture(0xFFFFFF) // White-hot
         .bucketColor(0xFFD700) // Gold to show intensity
         .displayName("True Heat Conductor (Unstable)")
+        event.create("frost")
+        .thinTexture(0xA7D1EB) // White-hot
+        .bucketColor(0x778899) // Gold to show intensity
+        .displayName("Frost")
 
     event.create("phoenix_ash_suspension")
         .thickTexture(0x696969) // Dim Gray for ash

@@ -9,7 +9,6 @@
 	quest_links: [ ]
 	quests: [
 		{
-			dependencies: ["03DBF1961AE21C76"]
 			description: [
 				"You might already be familiar with EU as the Energy Unit for Electric machines - but what about Steam?"
 				""
@@ -611,7 +610,6 @@
 			y: 1.98d
 		}
 		{
-			dependencies: ["7813F183681E0342"]
 			description: [
 				"&lWhy process ore?"
 				""

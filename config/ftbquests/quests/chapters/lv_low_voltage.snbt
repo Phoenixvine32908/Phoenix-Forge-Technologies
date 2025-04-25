@@ -1,0 +1,12 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "lv_low_voltage"
+	group: "55814AFD7ECBD9F9"
+	icon: "gtceu:lv_robot_arm"
+	id: "097DD67E8DB428C7"
+	order_index: 1
+	quest_links: [ ]
+	quests: [ ]
+	title: "LV: Low Voltage"
+}

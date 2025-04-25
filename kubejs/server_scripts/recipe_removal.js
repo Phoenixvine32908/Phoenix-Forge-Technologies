@@ -268,7 +268,25 @@ const recipesToRemove = [
     "gtceu:shaped/bronze_hull",
     "gtceu:assembler/casing_bronze_bricks",
     "gtceu:shaped/casing_bronze_bricks",
-    "gtceu:shaped/casing_bronze_firebox"
+    "gtceu:shaped/casing_bronze_firebox",
+    "gtceu:smelting/smelt_dust_aluminfrost_to_ingot",
+    "gtceu:shaped/mv_machine_hull",
+    "gtceu:shaped/casing_mv",
+    "gtceu:assembler/casing_mv",
+    "watercollector:watercollector",
+    "gtceu:brewery/potion_vanilla_night_vision_10",
+    "ironfurnaces:augments/augment_generator",
+    "ironfurnaces:furnaces/iron_furnace",
+    "ironfurnaces:furnaces/iron_furnace2",
+    "rftoolsbuilder:shape_card_quarry_dirt",
+    "rftoolsbuilder:shape_card_quarry",
+    "rftoolsbuilder:shape_card_quarry_clear",
+    "rftoolsbuilder:shape_card_quarry_clear_fortune",
+    "rftoolsbuilder:shape_card_quarry_clear_silk",
+    "rftoolsbuilder:shape_card_quarry_fortune_dirt",
+    "rftoolsbuilder:shape_card_quarry_fortune",
+    "rftoolsbuilder:shape_card_quarry_silk_dirt",
+    "rftoolsbuilder:shape_card_quarry_silk",
 ];
 
 ServerEvents.recipes((event) => {
