@@ -1,27 +1,26 @@
-function formingPressRecipe(event, id, inputs, outputs, dur, power) {
-    const rec = event.recipes.gtceu.forming_press(id)
-    .duration(dur)
-    .EUt(power);
-    rec.itemInputs.apply(rec, inputs)
-    rec.itemOutputs.apply(rec, outputs)
-}
-
 ServerEvents.recipes(event => {
 
-    const formingPressRecipes = [
-        ["blaze_crystal1", ["4x minecraft:blaze_powder"], ["1x powah:crystal_blazing"], 600, 64],
-        ["blaze_crystal2", ["1x minecraft:blaze_rod"], ["1x powah:crystal_blazing"], 600, 64],
-        ["blaze_crystal_block", ["9x minecraft:blaze_rod"], ["1x powah:blazing_crystal_block"], 900, 64],
-        ["energized_steel_block", ["2x minecraft:gold_block", "2x minecraft:iron_block"], ["4x powah:energized_steel_block"], 2800, 16],
-        ["energy_steel", ["2x minecraft:iron_ingot", "2x minecraft:gold_ingot"], ["4x powah:steel_energized"], 1200, 16],
-        ["niotic_crystal_block", ["1x minecraft:diamond_block"], ["1x powah:niotic_crystal_block"], 1700, 384],
-        ["crystal_niotic", ["1x minecraft:diamond"], ["1x powah:crystal_niotic"], 1200, 384],
-        ["spirited_crystal_block", ["1x minecraft:emerald_block"], ["1x powah:spirited_crystal_block"], 600, 1024],
-        ["crystal_spirited", ["1x minecraft:emerald"], ["1x powah:crystal_spirited"], 400, 1024],
-        ["crystal_nitro", ["2x minecraft:nether_star", "2x minecraft:redstone_block", "1x powah:blazing_crystal_block"], ["16x powah:crystal_nitro"], 400, 4096]
-    ]
+    function chemicalReactorRecipe(event, id, inputs, fluidInputs, outputs, dur, power) {
+        const rec = event.recipes.gtceu.chemical_reactor(id)
+            .duration(dur)
+            .EUt(power);
+        inputs.forEach(input => rec.itemInputs(input)); // Use forEach for clarity
+        fluidInputs.forEach(fluid => {
+            const [fluidId, amount] = fluid.split(' ');
+            rec.inputFluids(Fluid.of(fluidId, parseInt(amount)));
+        });
+        outputs.forEach(output => rec.itemOutputs(output)); // Use forEach for clarity
+    }
 
-    formingPressRecipes.forEach(([id, inputs, outputs, dur, power]) => {
-        formingPressRecipe(event, id, inputs, outputs, dur, power);
+    const chemicalReactorRecipes = [
+        ["blaze_crystal1", ["4x minecraft:blaze_powder"], ["kubejs:magma 750"], ["2x gtceu:blazing_crystal"], 600, 64],
+        ["energy_steel", ["2x gtceu:gold_iron_alloy_ingot", "1x kubejs:flaming_dust"], ["gtceu:redstone 100"], ["5x gtceu:energy_steel"], 1200, 16],
+        ["crystal_niotic", ["1x minecraft:diamond"], ["gtceu:redstone 100"], ["1x gtceu:niotic_crystal"], 1200, 384],
+        ["crystal_spirited", ["1x minecraft:emerald"], ["gtceu:redstone 100"], ["1x gtceu:spirited_crystal"], 400, 1024],
+        ["crystal_nitro", ["2x minecraft:nether_star", "2x minecraft:redstone_block", "1x gtceu:titanium_block"], ["gtceu:redstone 100"], ["16x powah:crystal_nitro"], 400, 4096]
+        ]
+
+        chemicalReactorRecipes.forEach(([id, inputs, FluidInputs, outputs, dur, power]) => {
+        chemicalReactorRecipe(event, id, inputs, FluidInputs, outputs, dur, power);
     });
 })

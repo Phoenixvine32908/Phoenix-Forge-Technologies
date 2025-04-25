@@ -70,7 +70,7 @@ ServerEvents.recipes(phoenixvine => {
 
     // //////////// machine controllers ////////////////
     phoenixvine.shaped('gtceu:melferious_matrix', ['CAC', 'ABA', 'WSW'], {
-        A: '#gtceu:circuits/ev',
+        A: '#gtceu:circuits/luv',
         W: 'gtceu:black_steel_single_cable',
         S: 'gtceu:stable_machine_casing',
         C: 'productivebees:upgrade_productivity_4',

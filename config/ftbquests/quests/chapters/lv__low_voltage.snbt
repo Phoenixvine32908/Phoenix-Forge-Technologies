@@ -5,15 +5,8 @@
 	group: "693226878D58638A"
 	icon: "gtceu:lv_electric_motor"
 	id: "7D50771C3FE033D7"
-	order_index: 1
-	quest_links: [{
-		id: "376725077649D2CC"
-		linked_quest: "5A8F0124E07D5025"
-		shape: "gear"
-		size: 1.2d
-		x: 2.25d
-		y: 0.0d
-	}]
+	order_index: 0
+	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["2F7617C0C4B330DE"]
@@ -71,7 +64,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["5A8F0124E07D5025"]
 			description: [
 				"Less common as a component, but used in a number of critical machines."
 				""
@@ -98,7 +90,6 @@
 			y: 1.125d
 		}
 		{
-			dependencies: ["5A8F0124E07D5025"]
 			description: [
 				"When placed on a machine, pumps will transfer fluid. You can configure them to import or export."
 				""
@@ -123,7 +114,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["5A8F0124E07D5025"]
 			description: [
 				"A specialized motor needed to make certain machines."
 				""
@@ -148,10 +138,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"4B979482EF026BFF"
-				"5A8F0124E07D5025"
-			]
 			description: [
 				"The &3Steam Turbine&r is the only Generator you can realistically use in &7LV&r. &2Later, you'll unlock more interesting Power options&r, such as natural gases or petrols."
 				""
@@ -233,7 +219,6 @@
 			y: 3.360459183673477d
 		}
 		{
-			dependencies: ["4B979482EF026BFF"]
 			description: [
 				"Make some Battery Alloy, used for Battery Hulls."
 				""
@@ -367,10 +352,6 @@
 			y: 2.25d
 		}
 		{
-			dependencies: [
-				"4B979482EF026BFF"
-				"5A8F0124E07D5025"
-			]
 			description: [
 				"You could make any other &7LV&r Machine, but it would be easiest to start with the most useful one. We know, we know... you wanna make some of the crazier stuff first, but trust us, this is the best starting point."
 				""
@@ -942,28 +923,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["3E6DC423FE4A99F7"]
-			description: [
-				"The Prospector is an amazing tool that'll help you find veins in no time."
-				""
-				"Its GUI is interactive. Right-clicking will scan for ores, displaying them on a dynamic map."
-				""
-				"&l&3Lore:&r&o Back in OUR day, the portable Prospector was locked to &dLuV&f. Kids these days have it easy."
-			]
-			id: "2E36E5755B2F551C"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "(Ok, maybe not)"
-			tasks: [{
-				id: "1AC97E61EF4958C8"
-				item: "gtceu:prospector.lv"
-				type: "item"
-			}]
-			title: "This is Hacking"
-			x: 4.642304421768699d
-			y: 2.165391156462583d
-		}
-		{
 			dependencies: [
 				"5B2696206205CB2E"
 				"70432F650591353C"
@@ -1229,10 +1188,7 @@
 			y: 5.625d
 		}
 		{
-			dependencies: [
-				"32B08E6F414A00C0"
-				"4B979482EF026BFF"
-			]
+			dependencies: ["32B08E6F414A00C0"]
 			description: [
 				"With &7LV&r power, the primary way of getting &aAluminium Dust&r is by electrolyzing &9Sapphire&r or &2Green Sapphire&r. Aluminium is the main &bMV&r material, similar to how Steel is crucial in &7LV&r, and Bronze is important in the &6Steam Age&r."
 				""
@@ -1823,7 +1779,6 @@
 			dependencies: [
 				"3647B1B964A15E4E"
 				"7BE7DE4C0109D788"
-				"4B979482EF026BFF"
 			]
 			description: [
 				"Well... gotten any Aluminium Ingots yet?"
@@ -1858,7 +1813,9 @@
 			description: [
 				"As mentioned in the previous quest, electrolyse the &1Sapphire Dust&r to get your &bAluminium Dust&r."
 				""
-				"Now all you need is an EBF! If you haven't started to work towards one, move to the right on this quest page and you'll end up there."
+				"Next, you'll need to acquire permafrost ore and extract its dust. Is creating Unrefined Aluminfrost dust by combining permafrost dust, and aluminium dust, then smelting it with cobalt dust in an EBF to get Aluminfrost for MV processing really too complicated? Are you sure? "
+				""
+				"(Alternatively, you could process the permafrost to get frost, which might speed up the recipe if that interests you.)\""
 			]
 			hide_dependent_lines: true
 			id: "45B71324028F6E68"
@@ -1870,13 +1827,13 @@
 				type: "item"
 			}]
 			size: 0.75d
-			subtitle: "Aluminium, not \"Aluminum\""
+			subtitle: "Aluminfrost, not aluminium"
 			tasks: [{
 				id: "144F4F8EF61BEEA5"
 				item: "gtceu:aluminium_dust"
 				type: "item"
 			}]
-			title: "Aluminium Dust"
+			title: "AluminFrost Dust"
 			x: -3.375d
 			y: 6.75d
 		}
@@ -2442,6 +2399,52 @@
 			title: "And they say GregTech is grindy..."
 			x: -1.1012329931972786d
 			y: 2.237499999999997d
+		}
+		{
+			description: [
+				"Mine some &dSulfur&r from the Nether."
+				""
+				"If Lava is \"too hot to handle\", we've included a &6direct crafting recipe&r for &aPotions of Fire Resistance&r. EMI might look a little confusing, but don't worry - you can use &bWater Bottles&r in the potion recipe."
+				""
+				"&l&3Lore:&r&o With the existence of &6Small Sulfur Ores&f scattered in GregTech 5 ore veins, you could mine enough Sulfur in the Overworld to skip having to visit the Nether. Sounds broken, but it was still as much of a grind as Nether travel!"
+			]
+			id: "236C886D50A99785"
+			rewards: [
+				{
+					id: "20B864DFB8F05D94"
+					item: {
+						Count: 1
+						id: "minecraft:potion"
+						tag: {
+							Potion: "minecraft:long_fire_resistance"
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "37C361DDB9A55FF2"
+					item: {
+						Count: 1
+						id: "minecraft:potion"
+						tag: {
+							Potion: "minecraft:long_fire_resistance"
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "square"
+			size: 0.75d
+			subtitle: "A little bit of exploring never hurt anyone"
+			tasks: [{
+				count: 16L
+				id: "36D03210534D3226"
+				item: "gtceu:sulfur_dust"
+				type: "item"
+			}]
+			title: "S is for Sulfur"
+			x: -2.25d
+			y: 4.875d
 		}
 	]
 	subtitle: ["Tame electricity and make your first machines"]

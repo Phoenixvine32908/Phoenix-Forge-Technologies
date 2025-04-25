@@ -13,10 +13,14 @@
   "apotheosis:adventure": null,
   "apotheosis:ench": null,
   "apotheosis:spawner": null,
+  "ars_nouveau:mob_jar": null,
   "avaritia:compressor": null,
   "avaritia:crafting_table": null,
   "avaritia:extreme_smithing": null,
   "balm:jade": null,
+  "easy_villagers:breeder": null,
+  "easy_villagers:converter": null,
+  "easy_villagers:villager": null,
   "enderchests:hud": null,
   "endertanks:hud": null,
   "entangled:entangled_block_component": null,
@@ -46,6 +50,7 @@
   "gtceu:steam_boiler_info": null,
   "gtceu:transformer": null,
   "gtceu:workable_provider": null,
+  "hammerlib:root": null,
   "integrateddynamicscompat:drying_basin": null,
   "integrateddynamicscompat:mechanical_drying_basin": null,
   "integrateddynamicscompat:mechanical_squeezer": null,
@@ -106,5 +111,6 @@
   "productivebees:solitary_nest": null,
   "shetiphiancore:hud": null,
   "storagedrawers:main": null,
-  "telepastries:bites": null
+  "telepastries:bites": null,
+  "waystones:waystone": null
 }

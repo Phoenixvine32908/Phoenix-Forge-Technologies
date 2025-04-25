@@ -8,12 +8,6 @@
 	order_index: 2
 	quest_links: [
 		{
-			id: "3E07B33787FBC6BA"
-			linked_quest: "40DE888E6025C646"
-			x: 1.5d
-			y: 0.0d
-		}
-		{
 			id: "787AC5F1A89ABE41"
 			linked_quest: "1E9BE8D3F8A602DC"
 			x: 4.5d
@@ -87,12 +81,6 @@
 			y: 1.5d
 		}
 		{
-			id: "1511F1BFFDF9D496"
-			linked_quest: "13901DA3D4F5C5A6"
-			x: 1.5d
-			y: 1.5d
-		}
-		{
 			id: "3003AF60FECF2899"
 			linked_quest: "33263404ED38C6D2"
 			shape: "rsquare"
@@ -104,20 +92,6 @@
 			linked_quest: "1BB40CCF17D00719"
 			shape: "rsquare"
 			x: 0.0d
-			y: 3.0d
-		}
-		{
-			id: "1666AE4895ABBED3"
-			linked_quest: "6C25D11A26306168"
-			shape: "rsquare"
-			x: 1.5d
-			y: 3.0d
-		}
-		{
-			id: "3656412C2AFCA8BF"
-			linked_quest: "7FF95F1216D104B2"
-			shape: "rsquare"
-			x: 3.0d
 			y: 3.0d
 		}
 		{
@@ -238,12 +212,6 @@
 			linked_quest: "023FF9633765A0EB"
 			x: 10.5d
 			y: 6.0d
-		}
-		{
-			id: "51629B05A3C81438"
-			linked_quest: "15923B47D23CCF34"
-			x: 3.0d
-			y: 0.0d
 		}
 		{
 			id: "4C699B01E796956B"

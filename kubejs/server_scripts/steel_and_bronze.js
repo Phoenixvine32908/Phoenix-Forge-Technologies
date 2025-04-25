@@ -1,25 +1,45 @@
 ServerEvents.recipes((event) => {
   // Shapeless recipes - Removed duplicates and ensured unique ingredient combinations
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:coal_dust",
+    "1x gtceu:coal_dust",
     "gtceu:iron_dust",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:coal_dust",
+    "1x gtceu:coal_dust",
+    "gtceu:wrought_iron_dust",
+  ]);
+  event.shapeless("minecraft:paper", [
+    "3x minecraft:sugarcane",
+  ]);
+  event.shapeless("gtceu:steel_dust", [
+    "1x minecraft:coal",
     "gtceu:wrought_iron_dust",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x minecraft:coal",
-    "gtceu:wrought_iron_dust",
-  ]);
-  event.shapeless("gtceu:steel_dust", [
-    "2x minecraft:coal",
+    "1x minecraft:coal",
     "gtceu:iron_dust",
+  ]);
+  event.shapeless("gtceu:glass_tube", [
+    "6x minecraft:glass_pane",
+  ]);
+  event.shapeless("minecraft:crying_obsidian", [
+    "1x minecraft:obsidian",
   ]);
   event.shapeless("4x gtceu:fiery_bronze_dust", [
     "3x gtceu:copper_dust",
     "1x gtceu:tin_dust",
     "1x gtceu:dormant_ember_dust",
+  ]);
+  event.shapeless("1x gtceu:programmed_circuit", [
+    "#gtceu:circuits",
+  ]);
+  event.shapeless("1x gtceu:red_alloy_dust", [
+    "4x minecraft:redstone",
+    "1x gtceu:copper_dust"
+  ]);
+  event.shapeless("2x gtceu:gold_iron_alloy_dust", [
+    "1x gtceu:iron_dust",
+    "1x gtceu:gold_dust",
   ]);
   event.shapeless("5x gtceu:aurum_steel_dust", [
     "2x gtceu:steel_dust",
@@ -27,10 +47,34 @@ ServerEvents.recipes((event) => {
     "2x gtceu:dormant_ember_dust",
     "1x gtceu:magma_dust",
   ]);
+  event.shaped("gtceu:wood_plate", [" L ", " S ", " S "], {
+    S: "#minecraft:planks",
+    L: "#forge:tools/hammers",
+  });
+  event.shaped("ironfurnaces:iron_furnace", ["SSS", "SLS", "SSS"], {
+    S: "gtceu:wrought_iron_ingot",
+    L: "minecraft:furnace",
+  });
+  event.shaped("ironfurnaces:iron_furnace", ["SSS", "GLG", "SSS"], {
+    S: "gtceu:wrought_iron_ingot",
+    L: "ironfurnaces:copper_furnace",
+    G: "minecraft:glass"
+  });
+  event.shaped("gtceu:wood_plate", [" L ", " S ", " S "], {
+    S: "#minecraft:planks",
+    L: "#forge:tools/hammers",
+  });
+  event.shaped("gtceu:large_steam_compressor", ["SPS", "PCP", "SLS"], {
+    S: "gtceu:steam_machine_casing",
+    L: "gtceu:fiery_bronze_gear",
+    P: "gtceu:dense_steel_plate",
+    C: "gtceu:hp_steam_compressor"
+  });
   event.shaped("gtceu:rubber_plate", [" L ", " S ", " S "], {
     S: "gtceu:sticky_resin",
     L: "#forge:tools/hammers",
   });
+
   event.shaped("gtceu:lp_steam_liquid_boiler", ["PPP", "PBP", "PWP"], {
     P: "gtceu:fiery_bronze_plate",
     W: "gtceu:bronze_brick_casing",
@@ -93,11 +137,24 @@ ServerEvents.recipes((event) => {
     F: "gtceu:fiery_bronze_normal_fluid_pipe",
     Z: "gtceu:small_fiery_bronze_gear"
   });
+  event.shaped("watercollector:watercollector", ["ZFZ", "PWP", " R "], {
+    P: "minecraft:water_bucket",
+    W: "#minecraft:logs",
+    F: "#minecraft:leaves",
+    Z: "minecraft:stick",
+    R: "minecraft:iron_ingot"
+  });
   event.shaped("gtceu:steam_machine_casing", ["PFP", "PZP", "PWP"], {
     P: "gtceu:fiery_bronze_plate",
     W: "#forge:tools/wrenches",
     F: "#forge:tools/hammers",
     Z: "minecraft:bricks"
+  });
+  event.shaped("2x gtceu:industrial_steam_casing", ["PFP", "PZP", "PWP"], {
+    P: "gtceu:fiery_bronze_plate",
+    W: "#forge:tools/wrenches",
+    F: "#forge:tools/hammers",
+    Z: "gtceu:steel_frame"
   });
   event.shaped("gtceu:bronze_firebox_casing", ["PRP", "RFR", "PRP"], {
     P: "gtceu:fiery_bronze_plate",
@@ -105,25 +162,48 @@ ServerEvents.recipes((event) => {
     R: "gtceu:fiery_bronze_rod",
 
   });
+  event.shaped("17x gtceu:tantalite_ore", ["PPP", "PPP", "PPP"], {
+    P: "kubejs:phoenix_feather",
+  });
+  event.shaped("16x gtceu:rubber_sapling", ["   ", "   ", "  P"], {
+    P: "kubejs:phoenix_feather",
+  });
+  event.shaped("17x gtceu:apatite_ore", ["PPP", "PPP", "PP "], {
+    P: "kubejs:phoenix_feather",
+  });
+  event.shaped("64x minecraft:clay_ball", ["P  ", "   ", "   "], {
+    P: "kubejs:phoenix_feather",
+  });
   event.shaped("gtceu:lv_machine_casing", ["PPP", "PWP", "PPP"], {
     P: "gtceu:aurum_steel_plate",
+    W: "#forge:tools/wrenches",
+  });
+  event.shaped("gtceu:mv_machine_casing", ["PPP", "PWP", "PPP"], {
+    P: "gtceu:aluminfrost_plate",
     W: "#forge:tools/wrenches",
   });
   event.shaped("gtceu:bronze_machine_casing", ["PPP", "PWP", "PPP"], {
     P: "gtceu:fiery_bronze_plate",
     W: "#forge:tools/wrenches",
   });
-  event.shaped("gtceu:lv_machine_hull", ["PPP", "WZW", "   "], {
+  event.shaped("gtceu:lv_machine_hull", ["SPS", "WZW", "   "], {
     P: "gtceu:aurum_steel_plate",
     W: "gtceu:tin_single_cable",
-    Z: "gtceu:lv_machine_casing"
+    Z: "gtceu:lv_machine_casing",
+    S: "gtceu:wrought_iron_plate"
+  });
+  event.shaped("gtceu:mv_machine_hull", ["SPS", "WZW", "   "], {
+    P: "gtceu:aluminfrost_plate",
+    W: "gtceu:copper_single_cable",
+    Z: "gtceu:mv_machine_casing",
+    S: "gtceu:wrought_iron_plate"
   });
   event.shapeless("gtceu:steel_dust", [
     "1x gtceu:coke_dust",
     "gtceu:iron_dust",
   ]); 
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:coal_dust",
+    "1x gtceu:coal_dust",
     "minecraft:iron_ingot",
   ]);
   event.shapeless("gtceu:steel_dust", [
@@ -131,11 +211,11 @@ ServerEvents.recipes((event) => {
     "minecraft:iron_ingot",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:coke",
+    "1x gtceu:coke",
     "gtceu:iron_dust",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:coke",
+    "1x gtceu:coke",
     "gtceu:wrought_iron_dust",
   ]);
   event.shapeless("gtceu:magma_dust", [
@@ -143,19 +223,19 @@ ServerEvents.recipes((event) => {
     "#forge:tools/hammers",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x minecraft:charcoal",
+    "1x minecraft:charcoal",
     "gtceu:wrought_iron_dust",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:charcoal_dust",
+    "1x gtceu:charcoal_dust",
     "gtceu:iron_dust",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x gtceu:charcoal_dust",
+    "1x gtceu:charcoal_dust",
     "minecraft:iron_ingot",
   ]);
   event.shapeless("gtceu:steel_dust", [
-    "2x minecraft:charcoal",
+    "1x minecraft:charcoal",
     "minecraft:iron_ingot",
   ]);
   event.recipes.gtceu.compressor('rubber_sheet1')
@@ -174,45 +254,47 @@ function alloySmelterRecipe(event, id, inputs, outputs, dur, power) {
   rec.itemInputs(inputs); // Use spread syntax to pass inputs as individual arguments
   rec.itemOutputs(outputs); // Use spread syntax for outputs as well (though less likely to be an issue here)
 }
-function mixerRecipe(event, id, inputs, outputs, dur, power) {
+function mixerRecipe(event, id, inputs, outputs, dur, power, program) {
   const rec = event.recipes.gtceu.mixer(id)
-    .duration(dur)
-    .EUt(power);
+  .duration(dur)
+  .EUt(power)
+  .circuit(program);
   rec.itemInputs(inputs); // Use spread syntax to pass inputs as individual arguments
   rec.itemOutputs(outputs); // Use spread syntax for outputs as well (though less likely to be an issue here)
 }
 
 ServerEvents.recipes(event => {
   const alloySmelterRecipes = [
-    ["steel_ingot_coal_iron_ingot", ["2x minecraft:coal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_coal_dust_iron_ingot", ["2x #forge:dusts/coal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_coal_dust_iron_dust", ["2x #forge:dusts/coal", "1x gtceu:iron_dust"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_coal_dust_wrought_iron_ingot", ["2x #forge:dusts/coal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_coal_wrought_iron_ingot", ["2x minecraft:coal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_coal_iron_ingot", ["1x minecraft:coal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_coal_dust_iron_ingot", ["1x #forge:dusts/coal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_coal_dust_iron_dust", ["1x #forge:dusts/coal", "1x gtceu:iron_dust"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_coal_dust_wrought_iron_ingot", ["1x #forge:dusts/coal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_coal_wrought_iron_ingot", ["1x minecraft:coal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
     ["steel_ingot_coke_dust_iron_ingot", ["1x gtceu:coke_dust", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_coal_dust_wrought_iron_ingot_gt", ["2x gtceu:coal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
-    ["steel_ingot_coke_iron_ingot", ["2x gtceu:coke_gem", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
-    ["steel_ingot_charcoal_wrought_iron_ingot", ["2x minecraft:charcoal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_charcoal_dust_iron_ingot", ["2x gtceu:charcoal_dust", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["steel_ingot_coke_wrought_iron_ingot_gt", ["2x gtceu:coke_gem", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
-    ["steel_ingot_charcoal_dust_wrought_iron_ingot_gt", ["2x gtceu:charcoal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["fiery_bronze1", ["2x gtceu:charcoal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:fiery_bronze_ingot"], 200, 7],
+    ["steel_ingot_coal_dust_wrought_iron_ingot_gt", ["1x gtceu:coal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
+    ["steel_ingot_coke_iron_ingot", ["1x gtceu:coke_gem", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
+    ["steel_ingot_charcoal_wrought_iron_ingot", ["1x minecraft:charcoal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_charcoal_dust_iron_ingot", ["1x gtceu:charcoal_dust", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_coke_wrought_iron_ingot_gt", ["1x gtceu:coke_gem", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
+    ["steel_ingot_charcoal_dust_wrought_iron_ingot_gt", ["1x gtceu:charcoal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["fiery_bronze1", ["1x gtceu:charcoal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:fiery_bronze_ingot"], 200, 7],
 
-    ["steel_block1", ["2x minecraft:coal_block", "1x minecraft:iron_block"], ["1x gtceu:steel_block"], 600, 112],
+    ["steel_block1", ["1x minecraft:coal_block", "1x minecraft:iron_block"], ["1x gtceu:steel_block"], 600, 112],
   ];
 
   alloySmelterRecipes.forEach(([id, inputs, outputs, dur, power]) => {
     alloySmelterRecipe(event, `gtceu:${id}_from_alloy_smelter`, inputs, outputs, dur, power);
   });
   const mixerRecipes = [
-    ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x gtceu:dormant_ember_dust"], ["4x gtceu:fiery_bronze_dust"], 300, 7],
-    ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:magma_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7],
+    ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x gtceu:dormant_ember_dust"], ["4x gtceu:fiery_bronze_dust"], 300, 7, 4],
+    ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:magma_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7, 2],
+    ["unrefined_aluminfrost_dust_from_mixer", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 300, 34, 3],
     // You can add more mixer recipes here following the same format
     // ["recipe_id", ["input1", "input2", ...], ["output1", "output2", ...], duration, power],
   ];
   
-  mixerRecipes.forEach(([id, inputs, outputs, dur, power]) => {
-    mixerRecipe(event, `gtceu:${id}_from_mixer`, inputs, outputs, dur, power);
+  mixerRecipes.forEach(([id, inputs, outputs, dur, power, program]) => {
+    mixerRecipe(event, `gtceu:${id}_from_mixer`, inputs, outputs, dur, power, program);
     
   });
 });

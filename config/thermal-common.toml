@@ -31,3 +31,11 @@
 			#Whether this feature should naturally spawn in the world.
 			Enable = true
 
+		[World.Features."Oil Sand"]
+			#Whether this feature should naturally spawn in the world.
+			Enable = true
+
+		[World.Features.Cinnabar]
+			#Whether this feature should naturally spawn in the world.
+			Enable = true
+

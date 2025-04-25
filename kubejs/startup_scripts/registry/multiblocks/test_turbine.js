@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         phoenixvine.create("earth_sieve")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(1, 0, 8, 0)
+        .setMaxIOSize(1, 16, 0, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FORGE_HAMMER)
         phoenixvine.create("ember_igniter")
@@ -26,6 +26,12 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setMaxIOSize(2, 1, 2, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
+        phoenixvine.create("thermo_generator")
+        .setEUIO("out")
+        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+        .setMaxIOSize(0, 0, 1, 1)
+        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+        .setSound(GTSoundEntries.SCIENCE)
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
@@ -38,6 +44,15 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
             .workableTieredHullRenderer("gtceu:block/machines/sifter")
             
         )
+        phoenixvine.create("thermo_generator", "simple")
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+        .definition((tier, builder) =>
+            builder 
+                .rotationState(RotationState.NON_Y_AXIS)
+                .recipeType("thermo_generator")
+                .workableTieredHullRenderer("gtceu:block/machines/thermal_centrifuge")
+                
+            )
         phoenixvine.create("confectionery_fabricator", "simple")
         .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
         .definition((tier, builder) =>
@@ -55,7 +70,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
                     .workableTieredHullRenderer("gtceu:block/machines/sifter")
                     
                 )
-    phoenixvine.create('test_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.UIV))
+    phoenixvine.create('test_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.MAX))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('plasma_generator')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])

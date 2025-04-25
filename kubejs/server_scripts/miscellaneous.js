@@ -54,17 +54,17 @@ ServerEvents.recipes((event) => {
       .EUt(120);    // Example energy per tick
   };
 
-  createFluxRejoinerRecipe('universal_circuit_zpm', 'gtceu:circuits/zpm');
-  createFluxRejoinerRecipe('universal_circuit_uv', 'gtceu:circuits/uv');
-  createFluxRejoinerRecipe('universal_circuit_uhv', 'gtceu:circuits/uhv');
-  createFluxRejoinerRecipe('universal_circuit_uev', 'gtceu:circuits/uev');
-  createFluxRejoinerRecipe('universal_circuit_uiv', 'gtceu:circuits/uiv');
-  createFluxRejoinerRecipe('universal_circuit_iv', 'gtceu:circuits/iv');
-  createFluxRejoinerRecipe('universal_circuit_uxv', 'gtceu:circuits/uxv');
-  createFluxRejoinerRecipe('universal_circuit_max', 'gtceu:circuits/max');
-  createFluxRejoinerRecipe('universal_circuit_luv', 'gtceu:circuits/luv');
-  createFluxRejoinerRecipe('universal_circuit_ev', 'gtceu:circuits/ev');
-  createFluxRejoinerRecipe('universal_circuit_hv', 'gtceu:circuits/hv');
-  createFluxRejoinerRecipe('universal_circuit_mv', 'gtceu:circuits/mv');
-  createFluxRejoinerRecipe('universal_circuit_lv', 'gtceu:circuits/lv');
+  createFluxRejoinerRecipe('zpm_universal_circuit', 'gtceu:circuits/zpm');
+  createFluxRejoinerRecipe('uv_universal_circuit', 'gtceu:circuits/uv');
+  createFluxRejoinerRecipe('uhv_universal_circuit', 'gtceu:circuits/uhv');
+  createFluxRejoinerRecipe('uev_universal_circuit', 'gtceu:circuits/uev');
+  createFluxRejoinerRecipe('uiv_universal_circuit', 'gtceu:circuits/uiv');
+  createFluxRejoinerRecipe('iv_universal_circuit', 'gtceu:circuits/iv');
+  createFluxRejoinerRecipe('uxv_universal_circuit', 'gtceu:circuits/uxv');
+  createFluxRejoinerRecipe('max_universal_circuit', 'gtceu:circuits/max');
+  createFluxRejoinerRecipe('luv_universal_circuit', 'gtceu:circuits/luv');
+  createFluxRejoinerRecipe('ev_universal_circuit', 'gtceu:circuits/ev');
+  createFluxRejoinerRecipe('hv_universal_circuit', 'gtceu:circuits/hv');
+  createFluxRejoinerRecipe('mv_universal_circuit', 'gtceu:circuits/mv');
+  createFluxRejoinerRecipe('lv_universal_circuit', 'gtceu:circuits/lv');
 });

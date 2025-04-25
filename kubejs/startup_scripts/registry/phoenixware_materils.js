@@ -441,6 +441,14 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ingot()
         .color(0xadd8e6)
         .secondaryColor(0xc0c0c0)
+        .fluidPipeProperties(4000, 80, false, false, false, false)
+        .iconSet('aluminfrost')
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
+        event.create('frost_reinforced_stained_steel')
+        .ingot()
+        .color(0xADD8E6)
+        .secondaryColor(0xE0FFFF)
+        .fluidPipeProperties(10000, 120, false, true, true, false)
         .iconSet('aluminfrost')
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
         event.create('magma')
@@ -448,8 +456,54 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xff6d00)
         .secondaryColor(0xeaa92e)
         .iconSet('fiery_bronze')
+        event.create('unrefined_aluminfrost')
+        .dust()
+        .color(0xA7D1EB)
+        .secondaryColor(0x778899)
+        .iconSet('fiery_bronze')
+        event.create('gold_iron_alloy')
+        .ingot()
+        .color(0xFFD700)
+        .secondaryColor(0xC0C0C0)
+        .iconSet('fiery_bronze')
+        event.create('blazing_crystal')
+    .ingot()
+    .color(0xFF8C00) // Dark Orange
+    .secondaryColor(0xFF4500) // Orange Red
+    .iconSet('fiery_bronze');
+
+event.create('energized_steel')
+    .ingot()
+    .color(0x4682B4) // SteelBlue
+    .secondaryColor(0xFFFFE0) // LightYellow
+    .iconSet('fiery_bronze');
+
+event.create('niotic_crystal')
+    .ingot()
+    .color(0x8A2BE2) // BlueViolet
+    .secondaryColor(0xE0FFFF) // LightCyan
+    .iconSet('fiery_bronze');
+
+event.create('spirited_crystal')
+    .ingot()
+    .color(0x00FF7F) // SpringGreen
+    .secondaryColor(0xAFEEEE) // PaleTurquoise
+    .iconSet('fiery_bronze');
+
+event.create('nitro')
+    .ingot()
+    .color(0xDC143C) // Crimson
+    .secondaryColor(0xFFD700) // Gold
+    .iconSet('fiery_bronze');
 });
 
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
   event.create('infinity')
+})
+const $PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
+const $RotorBuilder = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.RotorProperty');
+
+GTCEuStartupEvents.registry('gtceu:material', event => {
+  // Existing materials that get an item form
+  GTMaterials.Silver.setProperty($PropertyKey.ROTOR, new $RotorBuilder(21473, 21474, 28.0, 21474));
 })

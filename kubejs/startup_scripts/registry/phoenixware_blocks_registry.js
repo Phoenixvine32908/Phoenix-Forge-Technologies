@@ -1,5 +1,12 @@
 StartupEvents.registry("block", phoenixvine => {
-    
+    phoenixvine.create("dust")
+    .displayName("Dust")
+    .tagBlock("mineable/shovel")
+    .tagBlock("forge:mineable/shovel")
+    .soundType('sand')
+    .hardness(1)
+    .requiresTool(false)
+    .resistance(1)
     function MetalCasings(namespace, dspName) {
         phoenixvine.create(namespace)
         .displayName(dspName)
@@ -139,6 +146,7 @@ StartupEvents.registry("block", phoenixvine => {
 
 });
 const $ParallelHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.ParallelHatchPartMachine')
+const $LaserHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.LaserHatchPartMachine')
 
 // Parallel Hatches
 GTCEuStartupEvents.registry('gtceu:machine', event => {

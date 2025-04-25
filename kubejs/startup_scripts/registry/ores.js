@@ -4,7 +4,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('fluorite')
         .gem().ore()
         .color(0x0c9949).iconSet('diamond')
-        .components('1x calcium'); // Changed
 
     // ⚡ ZPM–UV Tier
     event.create('quantariumite')
@@ -61,6 +60,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ore().dust()
         .color(0xe4d6ff).iconSet('diamond')
         .components('1x calcium'); // Changed
+     
+        event.create('permafrost')
+        .ore().dust()
+        .color(0xA7D1EB).iconSet('diamond')
 
     // 🍄 Overworld Addition
     event.create('mycelial_netherite_ore')
