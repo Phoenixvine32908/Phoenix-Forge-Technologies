@@ -290,6 +290,7 @@
 				""
 				"Thermal Steam Boilers: Run very closely to the greg solid boilers in terms of what it needs to produce steam. However, the steam from thermal does not burn you when inside pipes, and the boilers can be upgraded with multi injectors to increase steam production. Do note that with the buffs to greg steam production it might be faster to run a few high pressure solid boilers. Feel free to test it out thou, thermal might still be stronger."
 			]
+			icon: "systeams:stirling_boiler"
 			id: "75C63892579D7900"
 			rewards: [
 				{
@@ -304,12 +305,17 @@
 					item: "kubejs:phoenix_feather"
 					type: "item"
 				}
+				{
+					id: "5F289A13DB33FB72"
+					item: "systeams:stirling_boiler"
+					type: "item"
+				}
 			]
 			subtitle: "Steamy"
 			tasks: [{
-				id: "72E7FC832FDE87D2"
-				item: "systeams:stirling_boiler"
-				type: "item"
+				id: "54AD9D061F9969B1"
+				title: "Steam"
+				type: "checkmark"
 			}]
 			title: "Steam Production"
 			x: 4.5d
@@ -479,13 +485,13 @@
 			subtitle: "Resources To Get Started"
 			tasks: [
 				{
-					count: 32L
+					count: 8L
 					id: "2376D0205C9E4EB8"
 					item: "minecraft:iron_ingot"
 					type: "item"
 				}
 				{
-					count: 128L
+					count: 32L
 					id: "542B29347857263E"
 					item: "minecraft:redstone"
 					type: "item"
@@ -497,7 +503,7 @@
 					type: "item"
 				}
 				{
-					count: 32L
+					count: 4L
 					id: "566F4A52E809A7BE"
 					item: "minecraft:gold_ingot"
 					type: "item"
@@ -701,7 +707,7 @@
 				type: "item"
 			}]
 			title: "Infinite Water"
-			x: -1.0d
+			x: -2.5d
 			y: 6.0d
 		}
 		{
@@ -921,18 +927,11 @@
 				type: "item"
 			}]
 			subtitle: "Get To Crafting"
-			tasks: [
-				{
-					id: "5F0ACC06384B9D04"
-					item: "craftingstation:crafting_station"
-					type: "item"
-				}
-				{
-					id: "4B871E5BB4BE939E"
-					item: "sophisticatedbackpacks:crafting_upgrade"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "5F0ACC06384B9D04"
+				item: "craftingstation:crafting_station"
+				type: "item"
+			}]
 			title: "Crafting"
 			x: 0.5d
 			y: 3.5d
@@ -1237,7 +1236,6 @@
 			y: 6.0d
 		}
 		{
-			dependencies: ["2BFC80C35BC5E8CD"]
 			description: [
 				"&6&lChop, Chop.&r&r It is time for you to get to work. What, you don't want to go around felling entire forrests with your axe, slowly seeing it fall around you? "
 				""
@@ -1463,6 +1461,17 @@
 			}]
 			x: 8.0d
 			y: -1.5d
+		}
+		{
+			id: "3AC1E101EF831C8D"
+			optional: true
+			tasks: [{
+				id: "102A36785D0F55CE"
+				item: "steamadditions:steam_foundry"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
 		}
 	]
 	subtitle: ["Harness the power of Steam and learn the basics"]

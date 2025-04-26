@@ -738,6 +738,30 @@
 			x: 5.94d
 			y: 0.0d
 		}
+		{
+			dependencies: ["7DA20D65D09F5F6C"]
+			description: [
+				"Unfortunately, this is only an &lEmpty&r Spray Can, which you have to fill with Chemical Dye before using."
+				""
+				"&aSpray Cans&r do not provide any functionality involving machines, but can be quite &bvisually appealing and useful&r!"
+				""
+				"Any &7(or almost any)&r GregTech tile entity &7(machine, pipe, cable...)&r can be &6painted&r to one of the 16 colors of your choosing. This is great for screenshots, or to separate different setups for convenience in a Multiplayer base. They also help with distinguishing between pipelines and cables."
+				""
+				"Holding the &aSpray Can&r in the offhand will automatically paint any block you place."
+			]
+			id: "5AD9884E7BFB2510"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Time for server tag wars"
+			tasks: [{
+				id: "28CFFA0F7A33E02F"
+				item: "gtceu:empty_spray_can"
+				type: "item"
+			}]
+			title: "Spray Can"
+			x: 2.97d
+			y: -0.66d
+		}
 	]
 	subtitle: ["For the Modern Minecrafter"]
 	title: "Tips and Tricks"

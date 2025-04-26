@@ -481,40 +481,6 @@
 			y: 2.31d
 		}
 		{
-			dependencies: ["6431381FBE07D6EF"]
-			description: [
-				"&oThe &3Large Boiler&r is an &6optional&r big-boy variant of the Small Boilers. It runs off solid or liquid fuel."
-				""
-				"If you want Steam-based power production, this will be your first port-of-call. Other power options are listed in the &bMV&r chapter."
-				""
-				"&cImportant:&r This Boiler &lCAN&r also &cexplode&r similarly to the regular Boilers! Usually, the explosion can be rather devastating... but it's configured to not damage blocks or entities in this modpack."
-				"{@pagebreak}"
-				"&cWater supply is &lcrucial&r&r. Dedicate a &3Primitive Pump&r with a &7LV&r Output Hatch in the &lsame chunk&r as the Boiler. Any biome will still be enough to supply enough water."
-				""
-				"Once fully heated up, the &3LBB&r produces 800 Steam per tick, which is &d400EU/t&r after conversion, or 12.5 Basic Steam Turbines. Such (relatively!) immense power comes at the cost of &la lot&r of burnable fuel."
-				"{@pagebreak}"
-				"&5&lWith this in consideration&r, the GUI lets you &9throttle&r the Boiler down to 25% power for 200 Steam per tick. That's &d100EU/t&r, or slightly above 3 Basic Steam Turbines."
-				""
-				"&9Note:&r An in-depth tutorial about Multiblocks is given after you get the &3Electric Blast Furnace&r. We recommend you aim for that first."
-			]
-			id: "33263404ED38C6D2"
-			rewards: [{
-				id: "1BEF1D97E033F1B1"
-				item: "gtceu:steam_bucket"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.75d
-			subtitle: "Boom, boom, boom, boom"
-			tasks: [{
-				id: "560D4D0D6BECE006"
-				item: "gtceu:bronze_large_boiler"
-				type: "item"
-			}]
-			x: 6.75d
-			y: 2.25d
-		}
-		{
 			dependencies: ["1E9BE8D3F8A602DC"]
 			description: [
 				"&6Superconductors&r are special Wires available for each Voltage tier. They don't come with a Cable counterpart, but that isn't necessary, as they have absolutely &6zero cable loss&r."
@@ -545,99 +511,6 @@
 			title: "LV Superconductor"
 			x: 7.875d
 			y: 2.25d
-		}
-		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"The &3Thermal Centrifuge&r is the most energy hungry out of the Ore Processing machines. It takes &aCrushed Ore&r or &aPurified Ore&r to give a different &6Byproduct&r from the &3Ore Washer&r, but at the same rate."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o The GT5 Thermal Centrifuge required 48 EU/t to run. Yes, this may be above 32 EU/t, but GT5 had &dspecial mechanics&f where certain machines such as this one could accept more than 1 Amp."
-				""
-				"&oIn GTCE, the Thermal Centrifuge was changed to only work at &bMV&f with 60EU/t recipes. Let's be completely honest with you... what a &4complete waste of time&f! Never worth it. Thankfully, we've buffed the machine to be much more relevant."
-			]
-			id: "772F7CD63D31966A"
-			size: 0.75d
-			subtitle: "No, not THAT kind of Thermal"
-			tasks: [{
-				id: "10AB20A316EA688F"
-				item: "gtceu:lv_thermal_centrifuge"
-				type: "item"
-			}]
-			title: "Basic Thermal Centrifuge"
-			x: -0.375d
-			y: 3.375d
-		}
-		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"The Sifter sifts &dGem type&r &aPurified Ores&r to find &aExquisite&r and &aFlawless&r Gems, which can be cut into normal Gems. It also finds &aPurified Dusts&r of that gem. Overall, this gives a &6higher yield&r than other means."
-				""
-				"A small amount of &dFlawless Emeralds&r will be required in &bMV&r, and running ores in &3Sifting Machine&r is how you obtain these."
-				""
-				"Each higher tier of &3Sifter&r increases the chance of all Gem types to be found, at the cost of more energy. "
-				""
-				"&9Note:&r If you crushed Gem Ores (such as Diamond), it is critical you use this machine to recover the actual gems in non dust form. However, this is a rather slow process, so you may want to smelt this type of ore directly into the Gem."
-			]
-			id: "7A64425597F58015"
-			size: 0.75d
-			subtitle: "You're as Exquisite as the gems you sift!"
-			tasks: [{
-				id: "2D87ADACFE1EF8E5"
-				item: "gtceu:lv_sifter"
-				type: "item"
-			}]
-			x: 0.75d
-			y: 5.625d
-		}
-		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"&lOutside of Ore Processing:&r"
-				""
-				"You can make &6Paper out of Wood&r so that you no longer rely on &aSugar Canes&9*&r. You're probably sick of them by now, especially if you've played Nomifactory."
-				""
-				"There are some other less important recipes, such as applying colours to various items and blocks, or bleaching them."
-				""
-				"&9*&r &aSugar&r is still useful as a requirement for &cTNT&r production in &6HV&r, so don't dismantle your setups."
-				"{@pagebreak}"
-				"&lFor Ore Processing:&r"
-				""
-				"Some &aCrushed Ores&r have alternate routes when washed into &aPurified Ore&r, involving bathing in either &aMercury&r or &aSodium Persulfate&r. This step isn't really important, unless you really want that special &6Byproduct&r. This can be a nice alternate source of Gold (hint, hint!)."
-			]
-			id: "330BDB559A7BAB35"
-			size: 0.75d
-			subtitle: "The Chemical Bath bathes..."
-			tasks: [{
-				id: "526A5FF9B5DBB129"
-				item: "gtceu:lv_chemical_bath"
-				type: "item"
-			}]
-			title: "Basic Chemical Bath"
-			x: 1.125d
-			y: 3.375d
-		}
-		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"This machine combines washing for simple automation, but also advanced and precise washing for byproducts."
-				""
-				"Washing a &aCrushed Ore&r will grant a &aPurified Ore&r which can be refined further, some useless stone, and more importantly, the first &6Byproduct&r!"
-				""
-				"Any Ore will give at &9minimum 2/3rd of a Dust&r of this Byproduct through washing. Prioritize this step the most."
-				""
-				"Using Distilled Water over Water cuts recipe duration in half, but it's also more difficult to produce."
-			]
-			id: "58BA62A3A8A32C24"
-			size: 0.75d
-			subtitle: "Wash that mouth out"
-			tasks: [{
-				id: "1C03C5F3E5196342"
-				item: "gtceu:lv_ore_washer"
-				type: "item"
-			}]
-			title: "Basic Ore Washing Plant"
-			x: 1.5d
-			y: 5.25d
 		}
 		{
 			dependencies: [
@@ -673,35 +546,7 @@
 			y: 1.98d
 		}
 		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
-				"Make this machine when you feel like it's time you invested into Batteries."
-				""
-				"It'll also be required if you want to make Storage Disks from &bApplied Energistics 2&r."
-			]
-			id: "37307A46E70011D3"
-			rewards: [{
-				count: 2
-				id: "25A57A151B7E8FEB"
-				item: "gtceu:lithium_dust"
-				type: "item"
-			}]
-			size: 0.75d
-			subtitle: "This machine does nothing exciting"
-			tasks: [{
-				id: "5521E4E26119E152"
-				item: "gtceu:lv_canner"
-				type: "item"
-			}]
-			title: "Basic Canner"
-			x: 3.375d
-			y: 3.375d
-		}
-		{
-			dependencies: [
-				"37307A46E70011D3"
-				"6D9D54FAB21EC086"
-			]
+			dependencies: ["6D9D54FAB21EC086"]
 			description: [
 				"&aBatteries&r can be put into the energy slot at the bottom middle of machine GUIs, or in a &3Battery Buffer&r."
 				""
@@ -813,42 +658,6 @@
 			y: 3.375d
 		}
 		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"The Autoclave is typically the last step of Gem Processing. It is used turn a select few &aGem Dusts&r back into regular Gems."
-				""
-				"It's veeeery slow - thus, it is generally not advised to crush gem ores at all, as the recovery process is too expensive."
-				""
-				"&9Note:&r In this modpack, the Autoclave is required to make &5Fluix Crystals&r if you're to progress in Applied Energistics. Sorry."
-			]
-			id: "22A1A629AF754066"
-			size: 0.75d
-			subtitle: "\"Oops, I turned my Diamonds into dust\""
-			tasks: [{
-				id: "30C94122AD446D9B"
-				item: "gtceu:lv_autoclave"
-				type: "item"
-			}]
-			title: "Basic Autoclave"
-			x: -1.125d
-			y: 4.125d
-		}
-		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: ["A rarely used machine. It uses magnetism to separate some Magnetic ores and gain additional &6Byproducts&r you would not obtain otherwise."]
-			id: "24B4D9608718EE27"
-			size: 0.75d
-			subtitle: "Magnets... how do they work?"
-			tasks: [{
-				id: "3162F3E3D12E00FB"
-				item: "gtceu:lv_electromagnetic_separator"
-				type: "item"
-			}]
-			title: "Basic Electromagnetic Separator"
-			x: 0.375d
-			y: 3.375d
-		}
-		{
 			dependencies: ["648BCF486E16CCB2"]
 			description: [
 				"This quest is a light look over the &dfull scale of regular Ore Processing&r. Why \"regular\"? Some ores require special treatment, but that's a topic for much later. Oh no, we're already getting carried away!"
@@ -897,7 +706,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["3D98819A799D2E64"]
 			description: [
 				"Build this machine next to your &3Chemical Reactor&r to automatically solidify Rubber into &aRubber Sheets&r."
 				""
@@ -971,38 +779,6 @@
 			y: 4.5d
 		}
 		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"&5You:&r &oThat's it, I'm uninstalling! This pack is stupid! We're barely in &7LV&r&o, but you're asking me to make you a &6HV&r&o machine!?&r"
-				""
-				"Yes! This is indeed not completable yet, which is also why this quest appears in the &6HV&r Chapter."
-				"{@pagebreak}"
-				"Remember how disappointing it was that you couldn't get byproducts with your Macerator? Well... that disappointment won't be going away until you reach &6HV&r."
-				""
-				"&6The Macerator will unlock its second and third slot at HV&r. Trust us - this is great news for your Ore Processing. In fact, one byproduct is completely locked behind this (after the Thermal Centrifuge step)."
-				""
-				"&cNote:&r Unlike GTCE, the &bMV&r Macerator in GTCEu &4doesn't&r have a second slot."
-				""
-				"&5Writer:&r &oCome back to me when you are stronger, young Cricket.&r"
-			]
-			id: "1DA54DA70E12F499"
-			rewards: [{
-				id: "19F7BE0EE2221321"
-				item: "gtceu:tiny_stainless_steel_dust"
-				type: "item"
-			}]
-			size: 0.75d
-			subtitle: "What? Why?!"
-			tasks: [{
-				id: "5580AE2868E0E451"
-				item: "gtceu:hv_macerator"
-				type: "item"
-			}]
-			title: "Universal Macerator"
-			x: -1.125d
-			y: 3.375d
-		}
-		{
 			dependencies: ["3A8D7FC6F316C38C"]
 			description: [
 				"The Gas Collector collects Air that can then be centrifuged into &aOxygen&r and &aNitrogen&r."
@@ -1021,110 +797,6 @@
 			title: "Basic Gas Collector"
 			x: 1.125d
 			y: 6.75d
-		}
-		{
-			dependencies: ["701BCADAE5CF6CA5"]
-			description: [
-				"The &3Packager&r compresses &aTiny Dusts&r and &aSmall Dusts&r into &afull Dusts&r, which can be compressed further into Ingots."
-				""
-				"It can also work in reverse, change between sizes of Wires, and much more..."
-				""
-				"Unpacking Cables back into Wires and Rubber will be &every useful&r once you rewire your Energy Network."
-				"{@pagebreak}"
-				"&oYeah, we know...&r the 3x3 compacting recipes don't seem useful, because you can just use a Crafting Table. We urge you to consider the utility of this machine when used for &9automation&r purposes."
-				""
-				"For an &9automated&r Dust setup, route &aTiny Dusts&r into a buffer inventory (a chest will do) placed next to your &3Packager&r."
-				""
-				"Next place a &3Robot Arm&r and configure it to \"&dImport&r\", and \"&dSupply Exact 9&r\". Finally, let the Machine auto-output on another side."
-				""
-				"&l&3Lore:&r&o In GTCE, the reverse operation required a separate machine - the Unpackager."
-			]
-			id: "3F123950216DF93B"
-			size: 0.75d
-			subtitle: "Look who's packing"
-			tasks: [{
-				id: "33AEA84A406741FF"
-				item: "gtceu:lv_packer"
-				type: "item"
-			}]
-			title: "Basic Packer"
-			x: -1.125d
-			y: 4.875d
-		}
-		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
-				"The &3Chemical Reactor&r will be required for &la lot&r of recipes."
-				""
-				"Let's give it a spin - why don't we use your freshly made Chemical Reactor to unlock a new, &6better recipe for Rubber&r? Rubber is &dunusable&r as a Fluid, so you will need to make another machine to process it further."
-				"{@pagebreak}"
-				"You can't make Rubber using the Chemical Reactor alone, so here are some &aother machines&r you might want to aim for: "
-				""
-				"A &3Solidifier&r is useful to solidify your Rubber directly into &aRubber Sheets&r. You'll want these moving forward."
-				""
-				"You could then make use of an &3Assembler&r to use your molten Rubber for &aCables&r. This isn't important for Tin Cables, but better cables will &eneed&r to be made in the Assembler."
-				""
-				"&eNote:&r Submit a fluid by having it stored in a &lbucket&r in your inventory. Sorry - it's an FTB Quests quirk."
-			]
-			icon: "gtceu:lv_chemical_reactor"
-			id: "3D98819A799D2E64"
-			size: 0.75d
-			subtitle: "Chemistry for dummies"
-			tasks: [
-				{
-					id: "108424445D0F748A"
-					item: "gtceu:lv_chemical_reactor"
-					type: "item"
-				}
-				{
-					id: "52581CFF25BC339F"
-					item: "gtceu:rubber_bucket"
-					type: "item"
-				}
-			]
-			title: "Basic Chemical Reactor"
-			x: 3.375d
-			y: 5.625d
-		}
-		{
-			dependencies: ["3D98819A799D2E64"]
-			description: [
-				"Cells are an alternative form of Fluid storage. All Cell types with the same type and amount of Fluid inside them &6stack&r. They can be automatically filled with a &3Canning Machine&r."
-				""
-				"Cells hold &done bucket&r of Fluid."
-				"{@pagebreak}"
-				"Universal Cells hold up to &done bucket&r, but also can store &9fractions&r of Buckets. They're particularly ideal if you want to store leftover Fluid without crafting a whole Drum. "
-				""
-				"Cells made from higher tier materials can hold even more fluid, but &9Drums&r and &9Super Tanks&r will hold more by then."
-				""
-				"Like Drums, Cells can be placed into a crafting grid to clear their contents."
-			]
-			icon: "gtceu:fluid_cell"
-			id: "292938760AB9A12B"
-			rewards: [{
-				count: 2
-				id: "7CF6A679E3781C09"
-				item: "gtceu:universal_fluid_cell"
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "GTCE killed cell chemistry... GTCE killed Cells!"
-			tasks: [
-				{
-					id: "48507FA04651418B"
-					item: "gtceu:fluid_cell"
-					type: "item"
-				}
-				{
-					id: "012C90A73EC79E11"
-					item: "gtceu:universal_fluid_cell"
-					type: "item"
-				}
-			]
-			title: "Dead Cells"
-			x: 4.5d
-			y: 5.625d
 		}
 		{
 			dependencies: [
@@ -1329,34 +1001,6 @@
 			}]
 			title: "Basic Mixer"
 			x: 2.25d
-			y: 6.75d
-		}
-		{
-			dependencies: [
-				"63CD0236B337EAAD"
-				"37307A46E70011D3"
-				"3D98819A799D2E64"
-			]
-			description: [
-				"Unfortunately, this is only an &lEmpty&r Spray Can, which you have to fill with Chemical Dye before using."
-				""
-				"&aSpray Cans&r do not provide any functionality involving machines, but can be quite &bvisually appealing and useful&r!"
-				""
-				"Any &7(or almost any)&r GregTech tile entity &7(machine, pipe, cable...)&r can be &6painted&r to one of the 16 colors of your choosing. This is great for screenshots, or to separate different setups for convenience in a Multiplayer base. They also help with distinguishing between pipelines and cables."
-				""
-				"Holding the &aSpray Can&r in the offhand will automatically paint any block you place."
-			]
-			id: "5AD9884E7BFB2510"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Time for server tag wars"
-			tasks: [{
-				id: "28CFFA0F7A33E02F"
-				item: "gtceu:empty_spray_can"
-				type: "item"
-			}]
-			title: "Spray Can"
-			x: 3.375d
 			y: 6.75d
 		}
 		{
@@ -1932,129 +1576,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
-				"&o&7This quest's subject is optional, but may still be of interest to you. We've put it here in the name of completeness.&r"
-				""
-				"The &3Turbo Charger&r charges &6RF and EU&r items such as &9Drills&r extremely quickly."
-				"It accepts up to 4 Amps for every item it charges, making it &6twice as fast&r as the &3Battery Buffer&r. It cannot discharge, though."
-				""
-				"&eAny&r Charger will complete this Quest."
-			]
-			hide_dependency_lines: true
-			icon: "gtceu:lv_charger_4x"
-			id: "2DB259568F347C0E"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "100% Battery"
-			tasks: [{
-				id: "07BF7F14849A3027"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "gtceu:ulv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:lv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:mv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:hv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:ev_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:iv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:luv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:zpm_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:uv_charger_4x"
-							}
-							{
-								Count: 1b
-								id: "gtceu:uhv_charger_4x"
-							}
-						]
-					}
-				}
-				title: "Turbo Charger"
-				type: "item"
-			}]
-			title: "Turbo Charger"
-			x: 5.28d
-			y: 0.0d
-		}
-		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
-				"&o&7This quest's subject is optional, but may still be of interest to you. We've put it here in the name of completeness.&r"
-				""
-				"The &3Fisher&r catches fish from Water. It requires a 5x5 area of Water directly below to operate. It uses the same loot table as normal Fishing, so it can catch things like &dEnchanted Books&r. Each operation consumes 1 String and EU equivalent to its tier (32 for &7LV&r, etc.) That's about it."
-				""
-				"&eFish Oil&r can be extracted from Fish, which can be used for &6Bio Diesel&r."
-				""
-				"Get &eany&r tier Fisher to complete this quest. (They only go up to &5EV&r. If you forsee needing enough Fish to justify an &1IV&r or higher Fisher, make a feature request on our GitHub or Discord.)"
-			]
-			hide_dependency_lines: true
-			icon: "gtceu:lv_fisher"
-			id: "3B26CA44EA955B07"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Women want me, fish fear me"
-			tasks: [{
-				id: "07BA97A0F04F0876"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "gtceu:lv_fisher"
-							}
-							{
-								Count: 1b
-								id: "gtceu:mv_fisher"
-							}
-							{
-								Count: 1b
-								id: "gtceu:hv_fisher"
-							}
-							{
-								Count: 1b
-								id: "gtceu:ev_fisher"
-							}
-						]
-					}
-				}
-				title: "Fisher"
-				type: "item"
-			}]
-			title: "Fishing 50"
-			x: 6.2700000000000005d
-			y: 0.0d
-		}
-		{
 			dependencies: ["46AD7A6F3B6775F5"]
 			description: [
 				"&o&7This quest's subject is optional, but may still be of interest to you. We've put it here in the name of completeness.&r"
@@ -2238,139 +1759,6 @@
 		{
 			dependencies: ["648BCF486E16CCB2"]
 			description: [
-				"&o&7This quest's subject is optional, but may still be of interest to you. We've put it here in the name of completeness.&r"
-				""
-				"The &3Block Breaker&r... well, we'll &dleave it to you&r to figure out what this one does. There are likely some &anifty farms&r you can create with clever usage of this machine - especially with the &6many vanilla mechanics&r introduced between 1.12.2 and 1.20.1!"
-				""
-				"Higher tiers of &3Block Breaker&r come with an additional speed bonus."
-				""
-				"&eAny&r Block Breaker will complete this Quest."
-			]
-			hide_dependency_lines: true
-			icon: "gtceu:lv_block_breaker"
-			id: "12DF2E5269BE87D5"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "I've had it with these blocks!"
-			tasks: [{
-				id: "3FF25D11627A1D05"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "gtceu:lv_block_breaker"
-							}
-							{
-								Count: 1b
-								id: "gtceu:mv_block_breaker"
-							}
-							{
-								Count: 1b
-								id: "gtceu:hv_block_breaker"
-							}
-							{
-								Count: 1b
-								id: "gtceu:ev_block_breaker"
-							}
-						]
-					}
-				}
-				title: "Block Breakers"
-				type: "item"
-			}]
-			title: "Break the Targets!"
-			x: 7.26d
-			y: 0.0d
-		}
-		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
-				"&o&7This quest's subject is optional, but may still be of interest to you. We've put it here in the name of completeness.&r"
-				""
-				"&3Item Collectors&r will pick up items - similar to any kind of &aVacuum Chest&r you may be familiar with from &dother mods&r."
-				""
-				"Higher tiers of &3Collector&r will increase the &ecollection radius&r over multiple chunks. This can be useful if your farm relies on in-world drops, such as &bSugar Cane&r, or... &7uh, bizarrely,&r &8chicken eggs.&r"
-				""
-				"&eAny&r Item Collector will complete this Quest."
-			]
-			hide_dependency_lines: true
-			icon: "gtceu:lv_item_collector"
-			id: "112189FE1A12537A"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Oops, dropped my Pickaxe."
-			tasks: [{
-				id: "4FB4D157D57EF9C8"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "gtceu:lv_item_collector"
-							}
-							{
-								Count: 1b
-								id: "gtceu:mv_item_collector"
-							}
-							{
-								Count: 1b
-								id: "gtceu:hv_item_collector"
-							}
-							{
-								Count: 1b
-								id: "gtceu:ev_item_collector"
-							}
-						]
-					}
-				}
-				title: "Item Collectors"
-				type: "item"
-			}]
-			title: "Gotta Catch 'Em All"
-			x: 8.25d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1E9BE8D3F8A602DC"]
-			description: [
-				"A feature of the &5Soft Mallet&r that you may be aware of is its ability to &6pause machines&r. However, did you know that if you &bsneak whilst pausing a machine&r, it'll tell the machine to continue operating until it finishes its recipe?"
-				""
-				"This is &2perfect&r if you need to make changes to a multiblock but don't want to &evoid items&r, as unforming a multiblock will void all inputs."
-			]
-			icon: {
-				Count: 1
-				id: "gtceu:polybenzimidazole_mallet"
-				tag: {
-					DisallowContainerItem: 0b
-					GT.Behaviours: { }
-					GT.Tool: {
-						Damage: 0
-						MaxDamage: 1023
-					}
-					HideFlags: 2
-				}
-			}
-			id: "237EEDF8D3F170DA"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Shoutout to Yung Onion"
-			tasks: [{
-				id: "05610A3CFF3805F3"
-				title: "Alright, now let me play."
-				type: "checkmark"
-			}]
-			title: "I'm Fetching Me Mallet!"
-			x: 8.91d
-			y: 4.29d
-		}
-		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
 				"This is a &4meme&r quest - check the recipe requirement for the teddy."
 				""
 				"Yes... this will take you an entire year to craft in an &7LV&r Compressor. How long would this take you to craft when overclocked to the highest possible value?"
@@ -2445,6 +1833,17 @@
 			title: "S is for Sulfur"
 			x: -2.25d
 			y: 4.875d
+		}
+		{
+			id: "7826E9A1E4265AFA"
+			size: 0.75d
+			tasks: [{
+				id: "0A418FE499AB302D"
+				item: "hostilenetworks:sim_chamber"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.75d
 		}
 	]
 	subtitle: ["Tame electricity and make your first machines"]

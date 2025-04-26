@@ -287,6 +287,9 @@ const recipesToRemove = [
     "rftoolsbuilder:shape_card_quarry_fortune",
     "rftoolsbuilder:shape_card_quarry_silk_dirt",
     "rftoolsbuilder:shape_card_quarry_silk",
+    "minecraft:kjs/sophisticatedbackpacks_backpack",
+    "thermal:fire_charge/invar_ingot_3",
+    ""
 ];
 
 ServerEvents.recipes((event) => {

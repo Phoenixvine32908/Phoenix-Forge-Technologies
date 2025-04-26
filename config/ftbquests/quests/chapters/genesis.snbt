@@ -168,9 +168,9 @@
 			size: 1.3d
 			subtitle: "Let's Get Steamy"
 			tasks: [{
-				id: "5C6F4DF6FFD2B269"
-				item: "gtceu:fiery_bronze_ingot"
-				type: "item"
+				id: "10EF8397D9E83302"
+				title: "Fire"
+				type: "checkmark"
 			}]
 			title: "Steam Changes"
 			x: -1.9500000000000002d
@@ -291,18 +291,11 @@
 			shape: "rsquare"
 			size: 0.5d
 			subtitle: "Take some weight off your inventory"
-			tasks: [
-				{
-					id: "281B54469C34A5E2"
-					item: "toolbelt:belt"
-					type: "item"
-				}
-				{
-					id: "5FFC5866C6E85F86"
-					item: "toolbelt:pouch"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "35B69F0136865DEE"
+				title: "tools"
+				type: "checkmark"
+			}]
 			title: "Tool Belt"
 			x: -5.5d
 			y: -4.5d
@@ -310,12 +303,19 @@
 		{
 			dependencies: ["4DC49AE1E9C61334"]
 			description: [
-				"Now that you have Steel, you can make a Hang Glider. This might be a good item to grab before you hit up the &cNether&r."
+				"Once you have steel, you can make a Hang Glider. This might be a good item to grab before you hit up the &cNether&r."
 				""
 				"If you don't have enough Leather yet, make a &9Butchering Knife&r and employ its inherent Looting III to hunt some cows."
 				"{@pagebreak}"
 				"&l&3Lore:&r&o The Hang Glider originally came from a mod known as OpenBlocks. As its utility was too great to be left on earlier versions, it was ported all the way up to modern versions."
 			]
+			icon: {
+				Count: 1
+				id: "hangglider:hang_glider"
+				tag: {
+					Damage: 0
+				}
+			}
 			id: "0C301014EC4D17B8"
 			rewards: [{
 				count: 8
@@ -327,15 +327,9 @@
 			size: 0.5d
 			subtitle: "No, it's Steve with a glider!"
 			tasks: [{
-				id: "1D0F8D4470DFFD19"
-				item: {
-					Count: 1
-					id: "hangglider:hang_glider"
-					tag: {
-						Damage: 0
-					}
-				}
-				type: "item"
+				id: "4789FCC8B281B4A9"
+				title: "Gliding"
+				type: "checkmark"
 			}]
 			title: "Is it a Phantom? Is it an Elytra?"
 			x: -6.0d
@@ -814,16 +808,16 @@
 			id: "090C4E1B57C68DCF"
 			subtitle: "Go here for more in-depth explanations"
 			tasks: [{
-				id: "35C8902853024B6D"
-				item: "minecraft:book"
-				type: "item"
+				id: "690FCCDA981F6015"
+				title: "Guides"
+				type: "checkmark"
 			}]
 			title: "Online Guides"
 			x: 1.5d
 			y: -6.0d
 		}
 		{
-			description: ["I will be consistently working on this pack on the github, so if any of you would like to pop over there and help/take a look would be greatly appreciated! If you want to collaberate just make a pull request and there is a very high chance I will approve it. I mainly work with kubejs while my friend Oktawia deals with the mod stuff. Oktawia is also the creator of crazyaeadditons, which will be in the pack later. Much thanks!"]
+			description: ["I will be consistently working on this pack on the github, so if any of you would like to pop over there and help/take a look would be greatly appreciated! If you want to collaberate just make a pull request and there is a very high chance I will approve it. I mainly work with kubejs while my friend Oktawia deals with the mod stuff. Oktawia is also the creator of crazyae2additons, which will be in the pack later. Much thanks!"]
 			icon: "minecraft:dragon_head"
 			id: "543731D1259C6F0A"
 			subtitle: "Github very nice, yes"
@@ -836,55 +830,37 @@
 			y: -8.0d
 		}
 		{
+			description: ["Drawers are cheap, early storage that you will find useful even going into late ev. They can be upgraded with drawer upgrades to increase storage space. Each upgrade is 4 times as strong as the earlier one."]
+			icon: "functionalstorage:oak_1"
 			id: "4316A4F7A5D21762"
 			size: 0.8d
 			subtitle: "Powerful Early Storage"
 			tasks: [{
-				id: "290F723ACE33DC3D"
-				item: {
-					Count: 1
-					id: "itemfilters:tag"
-					tag: {
-						value: "functionalstorage:drawer"
-					}
-				}
-				title: "Any #functionalstorage:drawer"
-				type: "item"
+				id: "43555DBD7ADDE60B"
+				title: "Drawers"
+				type: "checkmark"
 			}]
 			title: "Drawers"
 			x: -6.4d
 			y: -5.2d
 		}
 		{
+			description: ["Dealing with storage early on can be quite annoying. Because of this, sophiscticated storage and backpacks have been added to the pack to allow easier physical storage. To get started, you will need to make some fiery bronze and find some tin."]
+			icon: {
+				Count: 1
+				id: "sophisticatedstorage:iron_chest"
+				tag: {
+					woodType: "oak"
+				}
+			}
 			id: "2477B822BD97C221"
 			size: 0.6d
 			subtitle: "Big, Strong, Helpful"
-			tasks: [
-				{
-					id: "0F34E55F8C206756"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "curios:back"
-						}
-					}
-					title: "Any #curios:back"
-					type: "item"
-				}
-				{
-					id: "1F885657C52EB28B"
-					item: {
-						Count: 1
-						id: "itemfilters:tag"
-						tag: {
-							value: "sophisticatedstorage:all_storage"
-						}
-					}
-					title: "Any #sophisticatedstorage:all_storage"
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "24FABC5780991CC3"
+				title: "Storage"
+				type: "checkmark"
+			}]
 			title: "Sophisticated Storage"
 			x: -6.6d
 			y: -4.5d
@@ -901,6 +877,7 @@
 				"2. Force-Load Chunks:"
 				"Hold down the Shift key while clicking or right-clicking on the chunks you want to force-load. "
 			]
+			icon: "minecraft:oak_door"
 			id: "50EABB8899E42D9D"
 			subtitle: "Claiming Your Land"
 			tasks: [{

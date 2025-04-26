@@ -1424,7 +1424,6 @@
 			dependencies: [
 				"5263F866638D875C"
 				"257DB4B39B2A928E"
-				"3D98819A799D2E64"
 			]
 			description: [
 				"&aSodium Persulfate&r can be used in &9Ore Processing&r in the &3Chemical Bath&r to get various bonus outputs you would not normally obtain. It's completely optional, but pretty rewarding."
@@ -1469,10 +1468,7 @@
 			y: -4.125d
 		}
 		{
-			dependencies: [
-				"3D98819A799D2E64"
-				"1A77CA35F054F988"
-			]
+			dependencies: ["1A77CA35F054F988"]
 			description: [
 				"EMI might look a little overwhelming here, so we'll go through the best path for Sulfuric Acid here."
 				""
@@ -1500,10 +1496,7 @@
 			y: -4.125d
 		}
 		{
-			dependencies: [
-				"32B08E6F414A00C0"
-				"3D98819A799D2E64"
-			]
+			dependencies: ["32B08E6F414A00C0"]
 			description: [
 				"Obtain &9Hydrochloric Acid&r by mixing &aHydrogen&r and &aChlorine&r."
 				""

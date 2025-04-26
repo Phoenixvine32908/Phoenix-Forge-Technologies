@@ -28,7 +28,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
     event.create('large_steam_sieve', 'multiblock')
         .machine((holder) => new $SteamMulti(holder, 4))
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeType('earth_sieve', 'sifter')
+        .recipeType('earth_sieve')
         .recipeModifier((machine, recipe) => $SteamMulti.recipeModifier(machine, recipe), true)
         .appearanceBlock(GTBlocks.CASING_PRIMITIVE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
