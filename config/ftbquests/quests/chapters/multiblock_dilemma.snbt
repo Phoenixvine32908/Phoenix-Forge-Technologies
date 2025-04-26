@@ -81,13 +81,6 @@
 			y: 1.5d
 		}
 		{
-			id: "3003AF60FECF2899"
-			linked_quest: "33263404ED38C6D2"
-			shape: "rsquare"
-			x: 0.0d
-			y: 1.5d
-		}
-		{
 			id: "7D7392009AC28773"
 			linked_quest: "1BB40CCF17D00719"
 			shape: "rsquare"

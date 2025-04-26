@@ -7,6 +7,708 @@
 	id: "097DD67E8DB428C7"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			id: "66AB803846E3B6DF"
+			subtitle: "So Little Time"
+			tasks: [{
+				id: "06B7C5427D8833E5"
+				item: "gtceu:basic_electronic_circuit"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -3.5d
+		}
+		{
+			id: "1B1B07B1BDFDB2CD"
+			tasks: [{
+				id: "3875124F2996219C"
+				item: "systeams:steam_dynamo"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.5d
+		}
+		{
+			id: "42B170E22A69BF64"
+			tasks: [{
+				id: "09B18A284D40D383"
+				item: "sophisticatedbackpacks:copper_backpack"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -4.0d
+		}
+		{
+			id: "5EF01A80BCEBBF8B"
+			tasks: [{
+				id: "568E3F75E7065F19"
+				item: {
+					Count: 1
+					id: "sophisticatedstorage:gold_chest"
+					tag: {
+						woodType: "oak"
+					}
+				}
+				type: "item"
+			}]
+			x: -9.0d
+			y: -5.0d
+		}
+		{
+			id: "3D1A3BD0442BDFCC"
+			tasks: [{
+				id: "2798EBA165360498"
+				item: "hostilenetworks:sim_chamber"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -4.0d
+		}
+		{
+			id: "3B881F4246476601"
+			tasks: [{
+				id: "13C3E69BF19C3808"
+				item: "gtceu:lv_wiremill"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -6.0d
+		}
+		{
+			id: "47EE8D1788285507"
+			tasks: [{
+				id: "740BA97BA871D5F0"
+				item: "gtceu:lv_bender"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -6.0d
+		}
+		{
+			id: "1D9482612C3446CD"
+			tasks: [{
+				id: "0A9C2FFBDEFBFF95"
+				item: "gtceu:lv_polarizer"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -6.0d
+		}
+		{
+			id: "3AD3E1F0CB343F9A"
+			tasks: [{
+				id: "57CAF78C4C52EAF0"
+				item: "gtceu:lv_steam_turbine"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -4.0d
+		}
+		{
+			id: "205FECDB6E036956"
+			tasks: [{
+				id: "46D7CA1ED1E736AF"
+				item: "hostilenetworks:prediction_matrix"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -6.0d
+		}
+		{
+			description: [
+				"A feature of the &5Soft Mallet&r that you may be aware of is its ability to &6pause machines&r. However, did you know that if you &bsneak whilst pausing a machine&r, it'll tell the machine to continue operating until it finishes its recipe?"
+				""
+				"This is &2perfect&r if you need to make changes to a multiblock but don't want to &evoid items&r, as unforming a multiblock will void all inputs."
+			]
+			icon: {
+				Count: 1
+				id: "gtceu:polybenzimidazole_mallet"
+				tag: {
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						Damage: 0
+						MaxDamage: 1023
+					}
+					HideFlags: 2
+				}
+			}
+			id: "237EEDF8D3F170DA"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Shoutout to Yung Onion"
+			tasks: [{
+				id: "05610A3CFF3805F3"
+				title: "Alright, now let me play."
+				type: "checkmark"
+			}]
+			title: "I'm Fetching Me Mallet!"
+			x: 2.64d
+			y: 3.96d
+		}
+		{
+			id: "7BD6A01632453B60"
+			tasks: [{
+				id: "3B85DC07A27CFAC3"
+				item: "gtceu:lv_earth_sieve"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -4.0d
+		}
+		{
+			id: "0C6930FF51965E95"
+			tasks: [{
+				id: "65A88A841EDBF0B3"
+				item: "gtceu:lv_electric_pump"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 4.0d
+		}
+		{
+			id: "52CA7695C00863A9"
+			tasks: [{
+				id: "1C67C218F067DFD2"
+				item: "gtceu:lv_electric_piston"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 5.0d
+		}
+		{
+			id: "2A7330015425ABC4"
+			tasks: [{
+				id: "6C2E5EC2AF65A156"
+				item: "gtceu:lv_electric_motor"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 4.0d
+		}
+		{
+			id: "47CC9572769601A6"
+			tasks: [{
+				id: "7C4803C4F46BC84A"
+				item: "gtceu:lv_robot_arm"
+				type: "item"
+			}]
+			x: -10.0d
+			y: 5.0d
+		}
+		{
+			id: "44344BA840248852"
+			tasks: [{
+				id: "3259F67AA65917EF"
+				item: "gtceu:lv_conveyor_module"
+				type: "item"
+			}]
+			x: -9.0d
+			y: 4.0d
+		}
+		{
+			icon: "gtceu:storage_cover"
+			id: "23D7DF539F01BB48"
+			tasks: [{
+				id: "13D1EF7474B13BD8"
+				title: "Covers"
+				type: "checkmark"
+			}]
+			title: "How Covers Work"
+			x: -9.0d
+			y: 5.0d
+		}
+		{
+			id: "332423D5812B33C7"
+			tasks: [{
+				id: "105634DA66B1810B"
+				item: "gtceu:lv_lithium_battery"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 8.0d
+		}
+		{
+			id: "73BF6170A7C2D558"
+			tasks: [{
+				id: "21795261A77C9E1C"
+				item: {
+					Count: 1
+					id: "gtceu:lv_steel_drill"
+					tag: {
+						Charge: 2147483647L
+						DisallowContainerItem: 0b
+						GT.Behaviours: {
+							AoEColumn: 1
+							AoELayer: 0
+							AoERow: 1
+							MaxAoEColumn: 1
+							MaxAoELayer: 0
+							MaxAoERow: 1
+							TorchPlacing: 1b
+						}
+						GT.Tool: {
+							Damage: 0
+							HarvestLevel: 3
+							MaxDamage: 1535
+							ToolSpeed: 9.0f
+						}
+						HideFlags: 2
+						MaxCharge: 2147483647L
+					}
+				}
+				type: "item"
+			}]
+			x: -11.0d
+			y: 9.0d
+		}
+		{
+			id: "4E3A54C388804ADC"
+			progression_mode: "linear"
+			size: 1.0d
+			tasks: [{
+				id: "633095CFF3ECB1A4"
+				item: "gtceu:lv_centrifuge"
+				type: "item"
+			}]
+			x: 7.26d
+			y: 3.3d
+		}
+		{
+			id: "07518260CEA8C991"
+			tasks: [{
+				id: "28E91C3C2BF5AB54"
+				item: "gtceu:lv_lathe"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -6.0d
+		}
+		{
+			id: "43892B2E7CDD3F76"
+			tasks: [{
+				id: "4B5D18B88B95C8D4"
+				item: "gtceu:lv_electrolyzer"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -3.0d
+		}
+		{
+			id: "40A330D458EFAE65"
+			tasks: [{
+				id: "1315A992C1C4CC3B"
+				item: "gtceu:large_steam_sieve"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -4.0d
+		}
+		{
+			id: "020D27AFCF7E1FC0"
+			tasks: [{
+				id: "5E1041EE8E4CAC7F"
+				item: "gtceu:lv_circuit_assembler"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.0d
+		}
+		{
+			id: "7AFA0B2685D5FEB3"
+			tasks: [{
+				id: "5704F9676EA3F834"
+				item: "gtceu:lv_assembler"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -0.5d
+		}
+		{
+			id: "71B67DC363F34836"
+			tasks: [{
+				id: "31AD5CEB7ADBDA33"
+				item: "gtceu:lv_extractor"
+				type: "item"
+			}]
+			x: -9.0d
+			y: -3.0d
+		}
+		{
+			id: "3EDDBF7BF825624A"
+			tasks: [{
+				id: "515E6F8928CA6828"
+				item: "gtceu:lv_mixer"
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.0d
+		}
+		{
+			id: "7AD17E5106CCD251"
+			tasks: [{
+				id: "2F56F7C907281253"
+				item: "gtceu:battery_alloy_ingot"
+				type: "item"
+			}]
+			x: -11.0d
+			y: 7.0d
+		}
+		{
+			id: "59734135D47DBB07"
+			tasks: [{
+				id: "69919D2977B8F05A"
+				item: "gtceu:cupronickel_coil_block"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.0d
+		}
+		{
+			id: "1DED270BD3B7071E"
+			tasks: [{
+				id: "3DC22A0A35FD8720"
+				item: "gtceu:electric_blast_furnace"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.0d
+		}
+		{
+			id: "38B06F74CC794E6D"
+			tasks: [{
+				id: "5932CCDA70E8DEA3"
+				item: "gtceu:heatproof_machine_casing"
+				type: "item"
+			}]
+			title: "Multiblock Techniques"
+			x: -11.0d
+			y: 0.5d
+		}
+		{
+			id: "5323092AFE112A19"
+			tasks: [{
+				id: "41971C44FF3345B5"
+				item: "gtceu:manganese_phosphide_single_wire"
+				type: "item"
+			}]
+			title: "Your First Superconductor"
+			x: -10.0d
+			y: 1.5d
+		}
+		{
+			id: "68DED13CC8793B2C"
+			tasks: [{
+				id: "2D0AB07FEBB9E23F"
+				item: "gtceu:construction_core"
+				type: "item"
+			}]
+			x: -6.0d
+			y: -5.0d
+		}
+		{
+			id: "680F55B74031276B"
+			tasks: [{
+				id: "4ACE3543C98ED65A"
+				item: "gtceu:lv_item_magnet"
+				type: "item"
+			}]
+			x: -4.0d
+			y: -5.0d
+		}
+		{
+			id: "20559B0D7AEF2180"
+			tasks: [{
+				id: "5DF68BADD5778DA8"
+				item: "gtceu:copper_octal_cable"
+				type: "item"
+			}]
+			title: "Cables"
+			x: -11.0d
+			y: 1.5d
+		}
+		{
+			id: "6ECF3D00695A1CFB"
+			tasks: [{
+				id: "71CBE05CE0813FBE"
+				item: "gtceu:lv_battery_buffer_4x"
+				type: "item"
+			}]
+			title: "Amps"
+			x: -11.0d
+			y: 2.5d
+		}
+		{
+			id: "5CEC3A883706084F"
+			tasks: [{
+				id: "18C058F1F741A425"
+				item: "gtceu:uv_naquadria_battery"
+				type: "item"
+			}]
+			title: "Electricity"
+			x: -10.0d
+			y: 0.5d
+		}
+		{
+			id: "7DA20D65D09F5F6C"
+			tasks: [{
+				id: "2774B8B9B4C08006"
+				item: "gtceu:empty_spray_can"
+				type: "item"
+			}]
+			title: "Painting Your World"
+			x: -10.0d
+			y: 2.5d
+		}
+		{
+			id: "6A1AB0A460EB19AE"
+			tasks: [{
+				id: "46BCB816FDFA8DEB"
+				item: "thermal:dynamo_fuel_augment"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -5.0d
+		}
+		{
+			id: "52A53122C18E7E85"
+			tasks: [{
+				id: "3321804B41E50E20"
+				item: {
+					Count: 1
+					id: "gtceu:programmed_circuit"
+					tag: {
+						Configuration: 0
+					}
+				}
+				type: "item"
+			}]
+			x: -4.0d
+			y: -6.0d
+		}
+		{
+			id: "5A32649F48E4F904"
+			tasks: [{
+				id: "00785CE1013373A8"
+				item: "gtceu:lv_fluid_solidifier"
+				type: "item"
+			}]
+			x: -7.0d
+			y: -3.0d
+		}
+		{
+			id: "16C5B2E3D209F3BA"
+			tasks: [{
+				id: "122A1D037D36758C"
+				item: "gtceu:lv_gas_collector"
+				type: "item"
+			}]
+			x: 8.5d
+			y: 2.5d
+		}
+		{
+			id: "5351F33FE875AE3E"
+			tasks: [{
+				id: "6A8F25191069EE10"
+				item: "gtceu:good_electronic_circuit"
+				type: "item"
+			}]
+			x: 3.5d
+			y: 5.0d
+		}
+		{
+			id: "1D92D3F59F0B2908"
+			tasks: [{
+				id: "3A38F3B832A27AE1"
+				item: "enderio:energy_conduit"
+				type: "item"
+			}]
+			x: -8.0d
+			y: -4.0d
+		}
+		{
+			id: "42FF6E2B8A7E8682"
+			tasks: [{
+				id: "75A4453A2DA7D052"
+				item: "gtceu:oxygen_bucket"
+				type: "item"
+			}]
+			x: -3.0d
+			y: 9.0d
+		}
+		{
+			id: "55C222FA359CE62F"
+			tasks: [{
+				id: "2552A4D869B84736"
+				item: "gtceu:sulfur_dust"
+				type: "item"
+			}]
+			x: -5.0d
+			y: -3.0d
+		}
+		{
+			id: "73915B23AD3195D2"
+			tasks: [{
+				id: "3A54FC15229D5797"
+				item: "gtceu:aluminfrost_ingot"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 5.0d
+		}
+		{
+			id: "79BC1FC74AD1537A"
+			tasks: [{
+				id: "5021C75A4E387C87"
+				item: "gtceu:invar_dust"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -1.5d
+		}
+		{
+			id: "124E1E5399B57104"
+			tasks: [{
+				id: "10AF331428D6AB10"
+				item: "gtceu:cupronickel_dust"
+				type: "item"
+			}]
+			title: "Cupronickel"
+			x: 5.5d
+			y: -1.5d
+		}
+		{
+			id: "54B992BC799FD4DE"
+			tasks: [{
+				id: "6345A73B21F708FB"
+				item: "gtceu:aluminium_dust"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			id: "7722C04DADCEB65E"
+			tasks: [{
+				id: "2C3A9486FE295C72"
+				item: "gtceu:raw_permafrost"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			id: "7EFC03D890EF51E7"
+			size: 0.66d
+			tasks: [{
+				id: "1081D467FC421650"
+				item: "gtceu:nitrogen_bucket"
+				type: "item"
+			}]
+			x: 5.61d
+			y: 3.96d
+		}
+		{
+			id: "3ED59C2572A76D16"
+			tasks: [{
+				id: "2B271538BEF9065E"
+				item: "kubejs:frost_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.5d
+		}
+		{
+			id: "31093217D9526880"
+			tasks: [{
+				id: "335F85E1EEADD9B1"
+				item: "gtceu:phenolic_printed_circuit_board"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 5.0d
+		}
+		{
+			id: "362D701671586EAC"
+			tasks: [{
+				id: "4EFE3971B959EBFB"
+				item: "gtceu:diode"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.0d
+		}
+		{
+			id: "0B8A49C64D005428"
+			tasks: [{
+				id: "62E3CEBFCBAECFE5"
+				item: "gtceu:phenolic_circuit_board"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 5.0d
+		}
+		{
+			id: "669F2396E8158EEC"
+			tasks: [{
+				id: "4A3B967D6449E8EE"
+				item: "gtceu:glue_bucket"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 5.0d
+		}
+		{
+			id: "3D5FEA3878BB1995"
+			tasks: [{
+				id: "331F00F342A6C8D6"
+				item: "gtceu:lv_arc_furnace"
+				type: "item"
+			}]
+			x: -2.0d
+			y: 8.0d
+		}
+		{
+			id: "1CED5A40FF1DC9F0"
+			tasks: [{
+				id: "22CB4950613B699A"
+				item: "gtceu:annealed_copper_ingot"
+				type: "item"
+			}]
+			x: -1.0d
+			y: 7.0d
+		}
+		{
+			id: "4C3A8C4541494F64"
+			tasks: [{
+				id: "432E1D9CC90806E2"
+				item: "gtceu:gallium_arsenide_dust"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 7.0d
+		}
+		{
+			id: "50BE6FF468FB73EA"
+			tasks: [{
+				id: "0721B55DD75B4CB4"
+				item: "gtceu:cobaltite_dust"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 8.0d
+		}
+		{
+			id: "4C15BC6B2307465F"
+			tasks: [{
+				id: "76F17D98BDA6E602"
+				item: "gtceu:gallium_dust"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 9.0d
+		}
+	]
 	title: "LV: Low Voltage"
 }
