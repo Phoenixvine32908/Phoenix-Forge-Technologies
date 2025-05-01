@@ -5,13 +5,13 @@
 	group: "693226878D58638A"
 	icon: "gtceu:lv_electric_motor"
 	id: "7D50771C3FE033D7"
-	order_index: 0
+	order_index: 1
 	quest_links: [ ]
 	quests: [
 		{
 			dependencies: ["2F7617C0C4B330DE"]
 			description: [
-				"The &aFluid Regulator&r is sort of the equivalent to a &9Robot Arm&r for Fluids."
+				"The Fluid Regulater is a fluid version of the robot arm"
 				""
 				"It can transfer fluids, but has two useful modes:"
 				""
@@ -38,13 +38,9 @@
 		{
 			dependencies: ["38993B4697B0E16C"]
 			description: [
-				"When placed on a machine, Robot Arms are a more configurable version of a Conveyor Module. They allow you to transfer items in specific batches, at specific rates, or keep a certain amount of items stocked."
-				""
-				"Practical uses for the Robot Arm will be explained in future Quests as a tutorial."
+				"When placed on a machine, Robot Arms are a stronger version of a Conveyor Module. They allow you to transfer items in specific batches, at specific rates, or keep a certain amount of items stocked."
 				""
 				"&9Note:&r The functionalities provided by the Robot Arm work &lonly&r if it is &lrequired&r to perform the operation."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o GregTech 5 had blocks such as the Buffer, Filter and Type Filter to allow fine control over items. In GTCE it's all been replaced by the almighty Robot Arm and various Filter Covers. Much more compact!"
 			]
 			id: "3DE7A2B91CFF48F6"
 			rewards: [{
@@ -139,7 +135,7 @@
 		}
 		{
 			description: [
-				"The &3Steam Turbine&r is the only Generator you can realistically use in &7LV&r. &2Later, you'll unlock more interesting Power options&r, such as natural gases or petrols."
+				"The &3Steam Turbine&r is the only Greg Generator you can realistically use in &7LV&r. &2Later, you'll unlock more interesting Power options&r, such as natural gases or petrols."
 				""
 				"When provided Steam, the turbine will output EU at a ratio of &d2 Steam = 1 EU&r."
 				""
@@ -192,27 +188,27 @@
 			description: [
 				"Well... can you show us an &bMV&r Circuit as well?"
 				""
-				"&aAluminium&r is the main ingredient for &bMV&r machinery. Check &8aa&7aa&raall the way to the other side for the &2Sapphire Quest&r if you haven't acquired any &aAluminium Dust&r yet."
+				"&aAluminFrost&r is the main ingredient for &bMV&r machinery. Check &8aa&7aa&raall the way to the other side for the &2AluminFrost&r quest if you haven't acquired any &aUnrefined Aluminfrost Dust&r yet."
 				""
-				"Once you setup an &3MV Electrolyzer&r, you can get &aAluminium&r through many other ores. All of this quest's rewards bear &aAluminium&r, so keep an eye out for them when mining."
+				"Once you setup an &3MV Electrolyzer&r, you can get &aAluminFrost&r through many other ores. All of this quest's rewards bear &aAluminFrost&r, so keep an eye out for them when mining."
 				""
-				"The process of smelting Aluminium can be cut down by about a third with &9Nitrogen&r, which is obtained by centrifuging &9Air&r from a &3Gas Collector&r."
+				"The process of smelting AluminFrost can be cut down by about a third with &9Liquid Frost&r, which is obtained by extracting &9PermaFrost&r."
 				""
 				"&6You will still need MV Circuits in order to make MV machines!&r"
 			]
 			id: "7567E885B7166603"
 			rewards: [{
 				count: 8
-				id: "19987707822BC176"
-				item: "gtceu:aluminium_dust"
+				id: "1FAFD533935D1B4B"
+				item: "gtceu:unrefined_aluminfrost_dust"
 				type: "item"
 			}]
 			shape: "gear"
 			size: 1.5d
 			subtitle: "We're basically in MV now, right?"
 			tasks: [{
-				id: "161B5813936E5E42"
-				item: "gtceu:aluminium_ingot"
+				id: "42FD6E615C7E3CC2"
+				item: "gtceu:aluminfrost_ingot"
 				type: "item"
 			}]
 			x: 9.393452380952382d
@@ -258,9 +254,9 @@
 		{
 			dependencies: ["1C767009F505A813"]
 			description: [
-				"Crates are flat upgrades to Chests. A single block space that stores more items - what more could you ask for?"
+				"Crates are strong upgrades to chests in base gtceu. While soph chests or functional storage drawers might hold more, the upgrades can be more expsensive than making a few crates. "
 				""
-				"Where they shine is the fact that they &6accept Covers&r, making them perfect candidates for buffers in automation."
+				"Moreover, crates can accept covers so this makes them really powerful for automation before ae2. (Sadly, crates can not be sorted because of a bug with ldlib)"
 			]
 			id: "7CCC1BDDE0C67F16"
 			rewards: [{
@@ -287,11 +283,11 @@
 				"2F7617C0C4B330DE"
 			]
 			description: [
-				"Covers are placed by right-clicking with Cover in hand on a face of a machine, and removed with a &5Crowbar&r (or by mining the machine, but that's way slower)."
+				"Covers are placed on machines via right clicking and removed either with a crowbar, going in the machine's side gui, or by breaking the machine (can be annoying to replace the machine if you break it thou) "
 				""
-				"Pretty much any GregTech \"machine\" will accept Covers, even if they wouldn't provide any functionality."
+				"Almost any machine can have a cover on one of its faces, even if the machine would have no way to use said cover. "
 				""
-				"Opening a Cover is done by sneak-right-clicking it with an &5empty hand&r. You can also right-click with a &5Screwdriver&r, or sneak-right-click on another face using the grid."
+				"Opening a Cover is done by sneak right clicking with an &5empty hand&r. You can also right-click with a &5Screwdriver&r, or sneak-right-click on another face using the grid."
 				"{@pagebreak}"
 				"For Covers that transfer Items/Fluids, you will have a button to enable/disable other forms of transfer through the cover:"
 				""
@@ -352,18 +348,19 @@
 			y: 2.25d
 		}
 		{
+			dependencies: ["648BCF486E16CCB2"]
 			description: [
-				"You could make any other &7LV&r Machine, but it would be easiest to start with the most useful one. We know, we know... you wanna make some of the crazier stuff first, but trust us, this is the best starting point."
+				"The Wiremill lets you make &6two Wires or 8 Fine Wires from one Ingot&r from one Ingot. That should be three times cheaper than what you were doing up until now!"
 				""
-				"The Wiremill lets you make &6two Wires from one Ingot&r. That should be three times cheaper than what you were doing up until now!"
+				"To the right of this quest are more lv machines to make your resources cost quite a bit less!"
 				""
-				"To the right of this Quest, you'll find some important machines which will grant you cheaper intermediates."
+				""
 				"{@pagebreak}"
 				"&9Note:&r Recipes inside &3LV Machines&r go up to a maximum usage of &a32 EU/t (LV)&r. Anything higher than that and you will need a &bMV&r (or better) Machine. Needless to say, we aren't quite there yet."
 				""
-				"You will need a &dProgrammed Circuit&r for certain recipes. We're sure you don't want to spend a precious Circuit to craft one, so &6read the dedicated quest for important details&r."
+				"You need a Programmed Circuit to run some recipes, so if you don't want to use your precious lv circuits to make them I suggest to look at the quest below this one to learn what ghost circuits are."
 				""
-				"With this machine safely crafted - welcome to the age of all things electric!"
+				"Once you make this machine, your foray into the electric world will truly begin!"
 			]
 			id: "32EA7E81885C8E87"
 			rewards: [{
@@ -485,13 +482,11 @@
 			description: [
 				"&6Superconductors&r are special Wires available for each Voltage tier. They don't come with a Cable counterpart, but that isn't necessary, as they have absolutely &6zero cable loss&r."
 				""
-				"They also won't damage you when you touch them. This makes them the best choice for wiring, if not a little expensive in comparison to the other wires."
+				"They also won't electrocute you when you step on them. This makes them the best choice for wiring, if not a little expensive in comparison to the other wires."
 				""
-				"If you weren't already enamoured, the 1x variant also covers 2 Amps. Isn't that nice?"
+				"If this did not already excite you, the 1x wire can support up to 2 amps!"
 				""
-				"Now is a good time to replace your crappy &aTin Cables&r. Recycle them in the &3Packager&r to recover both the Tin and Rubber used to craft them."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o No version of GregTech has had actual Superconductors for &7LV&f up until Gregicality and GTCEu, though some modpacks had lossless cables."
+				"Now is a good time to replace your &aTin Cables&r. Recycle them in the &3Packager&r to recover both the Tin and Rubber used to craft them."
 			]
 			id: "46AD7A6F3B6775F5"
 			rewards: [{
@@ -635,7 +630,7 @@
 				""
 				"Anyway, the &3EBF&r is your &efirst electric multiblock&r! Congrats. It's used to process materials at high temperatures."
 				""
-				"You'll become familiar with the EBF to make &aAluminium&r and progress to &d&bMV Age&r. It can also make &7Steel&r faster than a PBF."
+				"You'll become familiar with the EBF to make &aAluminFrost&r and progress to &d&bMV Age&r. It can also make &7Steel&r faster than a alloy smelter."
 				"{@pagebreak}"
 				"It's important to keep in mind that the EBF is a beefy boy. The minimum power cost to run a recipe is &9120 EU/t&r! That's slightly under 4 &7LV&r Generators. This is why it was locked behind the Battery Quest. You may wish to consider building a separate power line, with separate Generators and Battery Buffer to run this."
 			]
@@ -676,20 +671,19 @@
 				title: "I agree to lose my sanity"
 				type: "checkmark"
 			}]
-			title: "What is this Mess?: Part Two"
+			title: "Ore Processing: Part Two"
 			x: 0.0d
 			y: 4.5d
 		}
 		{
-			dependencies: ["32EA7E81885C8E87"]
 			description: [
-				"&7LV&r will require you to craft a lot of different machines! Here's a friendly tip if you're struggling to set goals: pick an item in a later quest and go backwards from there."
+				"This journey will require some &bdirectional goals&r. If you are having a bit of difficulty scoping out a plan, pick out a &e specific machine or material&r to work towards."
 				""
-				"With that in mind... why don't we start with a &5Fusion Reactor&r? Never mind, slightly too ambitious - let's check a closer goal instead. Ah, yes, the &3Electric Blast Furnace&r - the main \"end goal\" of &7LV&r - should be a good target."
+				"With that in mind... why don't we start with a &5Fusion Reactor&r? &cNever mind, maybe that's too big of a project&r, let's try to aim for something a little closer. Ah, yes, the &6Electric Blast Furnace&r (EBF) should be a &agood goal&r for now."
 				""
-				"The EBF is &aexpensive&r, which is why you should initially focus on machines to make components and materials cheaper. We'll do our best to guide you in the right direction with these quests."
+				"{@pagebreak}"
 				""
-				"Other important goals are crafting the &3LV Assembler&r and making your first &aMV Circuits&r."
+				"The EBF is quite &cexpensive&r, but we will try to lead you through the process and help you figure out some &b solid info&r along the way."
 			]
 			icon: "gtceu:basic_electronic_circuit"
 			id: "648BCF486E16CCB2"
@@ -899,15 +893,11 @@
 		{
 			dependencies: ["701BCADAE5CF6CA5"]
 			description: [
-				"&lOutside of Ore Processing:&r"
+				"The &7electrolyzer&r has way too many uses to list here but it seperates fluids and items to provide byproducts. "
 				""
-				"Similar to the Centrifuge, this machine does a lot of things - we can't hope to list them all! Fortunately, it's one of the cheapest &7LV&r machines, so grab it as soon as it becomes necessary."
-				"{@pagebreak}"
-				"&lFor Ore Processing:&r"
+				"Because of this, its not &9exactly&r used for ore processing but the products dusts can decompose into are very useful as you go on. "
 				""
-				"Okay, we lied. It's not &oexactly&r used for Ore Processing, it's actually used in the &adecomposition of Dusts&r. However, most of the useful electrolysis recipes are locked at &bMV&r. You can peep at the &emolecular formula&r in a dust's tooltip to see what you can get from electrolysis."
-				"{@pagebreak}"
-				"&cTake caution!&r Due to how ores work, directly smelting dusts into Ingots can give higher metal yields than electrolysis. However, it means you lose the other products in the dust. You will have to decide whether you want to prioritise direct value, or byproduct count."
+				"&4However&r, smelting the dusts straight into ingots can provide &2more value&r for the base dust. So it's up to you whether you &5electrolyze&r or just &asmelt&r the dusts."
 			]
 			id: "32B08E6F414A00C0"
 			rewards: [{
@@ -933,11 +923,9 @@
 				"2F1CCFEBAB71B1F3"
 			]
 			description: [
-				"For now, you should use &9Water&r for its recipes instead of trying to acquire Lubricant."
+				"This machine can either use &1water&r, &9distilled water&r, or &6lubricant&r (lube being the fastest) to cut materials into other &auseable&r forms. "
 				""
-				"The &3Cutting Machine&r additionally unlocks converting &6Rods into four Bolts&r."
-				""
-				"This machine is the only way to obtain &dGem Plates&r, which are needed to craft Filters, and by extension, the &3Gas Collector&r."
+				"It is used to make &egem&r plates, your cheaper &8bolts&r for now, and your &7wafers&r for circuits. I would suggest you use &9&lwater&r, and go for distilled water/lubricant &olater&r."
 			]
 			id: "3A8D7FC6F316C38C"
 			shape: "rsquare"
@@ -955,17 +943,15 @@
 		{
 			dependencies: ["701BCADAE5CF6CA5"]
 			description: [
-				"&lOutside of Ore Processing:&r"
+				"The centrifuge seperates dusts into other &5materials&r, &bseperating air&r,and much &6more&r!"
 				""
-				"Oh boy, what can't this machine do? Decomposition recipes to separate dust types, separating air, do your taxes, and many others..."
+				"I would highly advise you start gathering air from the &dgas collector&r in the &aoverworld&r on program 1 and centrifuge to obtain nitrogen to make the EBF &cf&4a&6s&ct&4e&6r&r."
 				""
-				"The list is too long! Let's just say &cyou need the Centrifuge&r."
+				""
 				"{@pagebreak}"
-				"&lFor Ore Processing:&r"
+				"I would not use the centrifuge singleblock for ore processing and to use the &6Steam Seperator&r from the early ages quests as it is much faster. "
 				""
-				"This takes &aImpure Dust&r or &aPurified Dust&r and turns them into clean Dust, plus an added tiny Dust &6Byproduct&r. This is outside of the optimal chain for Byproducts, but this is also the cheapest Ore Processing machine of the presented array to run and to setup on a small scale."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o In base GTCE, this was objectively the strongest Ore Processing machine as it was fairly easy to use, and gave three tiny dusts, just like the Ore Washer or the Thermal Centrifuge. We tuned it down in favor of diversity."
+				"The &ccatch&r with the Steam seperator however, is that steam multiblocks can &4&lNot&r&r accept &9fluid outputs/inputs&r. However, since you don't need liquids for centrifuge ore processing, it is your best bet for &bspeed&r right now."
 			]
 			id: "5263F866638D875C"
 			rewards: [{
@@ -1192,7 +1178,7 @@
 				""
 				"Be sure to check out the &3Destruction Gadget&r and the &3Copy Paste Gadget&r."
 				""
-				"You &6should&r be able to charge this in the charger slot of any &bGregTech machine&r, but unfortunately, this is currently &cbugged&r. Have a look at the &dTurbo Charger&r quest in the top-right of this page if you want to charge this."
+				"You &acan&r charge this in the charger slot of any &bGregTech machine&r."
 			]
 			id: "0DAD0A6360448B39"
 			rewards: [{
@@ -1249,9 +1235,9 @@
 		{
 			dependencies: ["5263F866638D875C"]
 			description: [
-				"You can now &3centrifuge&r &aResin&r, which will still give Raw Rubber - but this time alongside &aGlue&r (and the less useful Plantball)."
+				"You can now centrifuge Resin to give you raw rubber, glue, and the plantball (not very useful to now right now) for almost free."
 				""
-				"Give yourself a headstart and get on producing Glue. You can use it to make &6cheaper Resistors&r, as well as &6cheaper Circuit Boards&r in the &3Assembling Machine&r (and it is especially useful &oin the near future&r)."
+				"Start producing glue right now and have it run passively for a while. You can use it to make &6cheaper Resistors&r, as well as &6cheaper Circuit Boards&r in the &3Assembling Machine&r (and it is especially useful &oin the near future&r)."
 				""
 				"&eNote:&r Submit a fluid by having it stored in a &lbucket&r in your inventory. Sorry - it's an FTB Quests quirk."
 			]
@@ -1425,13 +1411,13 @@
 				"7BE7DE4C0109D788"
 			]
 			description: [
-				"Well... gotten any Aluminium Ingots yet?"
+				"Well... gotten any AluminFrost Ingots yet?"
 				""
 				"Each Electric Age has Circuits corresponding to its tier. The Good Electronic Circuit is the &dfirst MV Circuit&r you can make out of the three tiers of &bMV&r Circuitry."
 				""
 				"Always be on the lookout for a cheaper way to make your circuits - new sets of recipes become available each time you make a new tier of &2Circuit Assembler&r. Conveniently, this tier of Circuit unlocks one now! Its recipes are far, far cheaper than hand-crafting Circuits."
 				""
-				"&6Having this and Aluminium will grant access to MV Machines.&r"
+				"&6Having this and AluminFrost will grant access to MV Machines.&r"
 			]
 			id: "0DBC148D92A9F69F"
 			rewards: [{
@@ -1455,26 +1441,26 @@
 		{
 			dependencies: ["2F1CCFEBAB71B1F3"]
 			description: [
-				"As mentioned in the previous quest, electrolyse the &1Sapphire Dust&r to get your &bAluminium Dust&r."
+				"Get some &3aluminium&r dust from the clay line or from looking at the previous &1sapphire&r quest to begin your mv journey."
 				""
-				"Next, you'll need to acquire permafrost ore and extract its dust. Is creating Unrefined Aluminfrost dust by combining permafrost dust, and aluminium dust, then smelting it with cobalt dust in an EBF to get Aluminfrost for MV processing really too complicated? Are you sure? "
+				"Next, you'll need to acquire &bpermafrost&r ore and extract its dust. Creating &3Aluminfrost&r for MV processing by combining permafrost and aluminum dust to make &9Unrefined Aluminfrost&r dust, and then smelting it with cobalt dust in an EBF, can be considered complicated. "
 				""
-				"(Alternatively, you could process the permafrost to get frost, which might speed up the recipe if that interests you.)\""
+				"(Alternatively, you could process the &bpermafrost&r to get &3frost&r, which might speed up the recipe if that interests you.)\""
 			]
 			hide_dependent_lines: true
 			id: "45B71324028F6E68"
 			rewards: [{
 				count: 4
-				id: "31AC09707A10129B"
-				item: "gtceu:aluminium_dust"
+				id: "46FEC0CD0E07F38B"
+				item: "gtceu:unrefined_aluminfrost_dust"
 				random_bonus: 4
 				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "Aluminfrost, not aluminium"
 			tasks: [{
-				id: "144F4F8EF61BEEA5"
-				item: "gtceu:aluminium_dust"
+				id: "26ECFDAA596BB4E7"
+				item: "gtceu:unrefined_aluminfrost_dust"
 				type: "item"
 			}]
 			title: "AluminFrost Dust"
@@ -1508,11 +1494,7 @@
 				""
 				"The &3Rock Breaker&r generates different types of igneous Rocks. In order to operate, &9Water&r and &cLava&r (doesn't need to be source blocks) must both be adjacent to it. Those rocks might be pulverized and electrolyzed into certain materials."
 				""
-				"Certain rocks, such as &b&cRed Granite&r, need up to &5EV&r power to generate."
-				""
-				"&eAny&r Rock Breaker will complete this Quest."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o Obsidian requiring Redstone to generate is in reference to an ancient Minecraft bug, &7MC-4239&f. Placing Redstone where the Cobblestone would go in a cobble generator would make it generate Obsidian instead. This bug was resolved in snapshot 14w25b for Minecraft 1.8, over 9 years ago at the time of writing!"
+				"Furthermore, it is very useful to use in some early processing lines in early game such as the clay line and Flaming Prediction Matrix line."
 			]
 			hide_dependency_lines: true
 			icon: "gtceu:lv_rock_crusher"
@@ -1759,37 +1741,6 @@
 		{
 			dependencies: ["648BCF486E16CCB2"]
 			description: [
-				"This is a &4meme&r quest - check the recipe requirement for the teddy."
-				""
-				"Yes... this will take you an entire year to craft in an &7LV&r Compressor. How long would this take you to craft when overclocked to the highest possible value?"
-				""
-				"&7Definitely don't worry about making this now... take the hint and wait for a heavy overclock."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o The main developer of this pack spent far too long fixing the model files to customise this thing.&7.&8. If you're wondering why there's a random Pokemon doll, it's my Minecraft skin!"
-			]
-			hide_dependency_lines: true
-			icon: "expatternprovider:fishbig"
-			id: "59BEB2AA9598A21D"
-			rewards: [{
-				id: "03A3C108D5BCE712"
-				item: "expatternprovider:fishbig"
-				random_bonus: 63
-				type: "item"
-			}]
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Got enough time on your hands?"
-			tasks: [{
-				id: "783D21E963174609"
-				item: "expatternprovider:fishbig"
-				type: "item"
-			}]
-			title: "And they say GregTech is grindy..."
-			x: -1.1012329931972786d
-			y: 2.237499999999997d
-		}
-		{
-			description: [
 				"Mine some &dSulfur&r from the Nether."
 				""
 				"If Lava is \"too hot to handle\", we've included a &6direct crafting recipe&r for &aPotions of Fire Resistance&r. EMI might look a little confusing, but don't worry - you can use &bWater Bottles&r in the potion recipe."
@@ -1821,8 +1772,8 @@
 					type: "item"
 				}
 			]
-			shape: "square"
-			size: 0.75d
+			shape: "circle"
+			size: 0.66d
 			subtitle: "A little bit of exploring never hurt anyone"
 			tasks: [{
 				count: 16L
@@ -1831,19 +1782,468 @@
 				type: "item"
 			}]
 			title: "S is for Sulfur"
-			x: -2.25d
-			y: 4.875d
+			x: 4.62d
+			y: 5.61d
 		}
 		{
+			dependencies: ["648BCF486E16CCB2"]
+			description: [
+				"The &3Simulation Chamber&r acts as your digital mob grinder. By inserting your &5models&r and a &4Flaming Matrix&r, it generates &emob predictions&r. These predictions can then be redeemed for mob drops at the &bLoot Fabricator&r."
+				""
+				"Upgrading your &5models&r directly improves their ability to produce accurate and useful predictions. Once a prediction is successful, take it to the &bLoot Fabricator&r to select your desired mob drop."
+				""
+				"{@pagebreak}"
+				"Here are a couple of useful features:"
+				""
+				"Efficiency: One &bLoot Fabricator&r can use mob predictions from up to four &3Simulation Chambers&r at once."
+				""
+				"Memory: The &bLoot Fabricator&r remembers your preferred mob drop, even if the active predictions change."
+			]
 			id: "7826E9A1E4265AFA"
-			size: 0.75d
+			shape: "circle"
+			size: 0.66d
+			subtitle: "Fabrication And Simulation"
 			tasks: [{
 				id: "0A418FE499AB302D"
 				item: "hostilenetworks:sim_chamber"
 				type: "item"
 			}]
+			x: 3.3d
+			y: 4.62d
+		}
+		{
+			dependencies: ["648BCF486E16CCB2"]
+			description: [
+				"Your first taste of &bFE (Forge Energy)&r producing machines is here!"
+				""
+				"Your first dynamo is the &3Steam Dynamo&r. Much like how the GregTech turbines work, this machine takes in steam to produce power. "
+				""
+				"However, it shines in its upgrades, such as the &aMulti-Cycle Injector&r or &aIntegral Components&r. Eventually, the &3Steam Boiler&r will not be enough, which will mean you should upgrade to the other dynamo options."
+			]
+			id: "53F48B30CAA6163A"
+			shape: "gear"
+			size: 0.66d
+			subtitle: "POWAH"
+			tasks: [{
+				id: "7A7FF5B190E3D7A2"
+				item: "systeams:steam_dynamo"
+				type: "item"
+			}]
+			x: 2.31d
+			y: 3.63d
+		}
+		{
+			dependencies: ["53F48B30CAA6163A"]
+			description: ["These upgrades &alower the amount of fuel used&r while keeping the power production the same. It is a &agood idea to stack these&r in your &6dynamos&r if you can afford them. You will also unlock further &dthermal upgrades&r as you go along, including the &bintegrated components&r!"]
+			id: "449DE2F9B8CC435A"
+			shape: "circle"
+			size: 0.45d
+			subtitle: "Moar Efficiency"
+			tasks: [{
+				id: "268F9C266E5EF183"
+				item: "thermal:dynamo_fuel_augment"
+				type: "item"
+			}]
+			x: 1.7999999999999998d
+			y: 3.375d
+		}
+		{
+			dependencies: [
+				"0A418FE499AB302D"
+				"757AE3F81529AF90"
+			]
+			description: [
+				"While &2Hostile Neural Networks&r typically use prediction matrices and models to simulate mob drops, a key change is the introduction of &6Flaming&r Prediction Matrixes. "
+				""
+				"These are now crafted in the &lSteam Foundry&r by combining &cflaming&r dust (obtained by igniting dormant embers in an ember igniter) with &3clay&r balls. The core system for prediction remains largely the same."
+				""
+				"If you want to check out the full processing line for this, "
+				"{ \"text\": \"Go Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"34D80B137BA82413\" } }"
+			]
+			id: "205FECDB6E036956"
+			shape: "circle"
+			size: 0.4d
+			subtitle: "Flame On"
+			tasks: [{
+				id: "46D7CA1ED1E736AF"
+				item: "hostilenetworks:prediction_matrix"
+				type: "item"
+			}]
+			x: 3.6d
+			y: 4.0d
+		}
+		{
+			dependencies: ["648BCF486E16CCB2"]
+			description: [
+				"Want to make resource gathering even &6easier&r? Craft the &aearth sieve&r and pair it with the &7rock breaker&r for a convenient source of &bores&r! While &dmining&r is still recommended (as the sieve &ccan not&r yield every &bore&r), this machine offers a significant &2boost&r."
+				""
+				"The &aearth sieve&r cleverly utilizes your surplus &8earth-based materials&r to generate &e vein traces&r."
+				""
+				"By processing &fdirt&r, &fcobblestone&r, &fstone&r, &fgravel&r, &fsand&r, and &0deepslate&r, you'll obtain various &e vein traces&r depending on the input. Further sifting these traces will then provide you with valuable &9 dusts&r from underground veins."
+				""
+				"{@pagebreak}"
+				""
+				"\"Starting to run into a storage issue with excess &cminerals&r, you decide to design a machine to process them. This machine will use a combination of &asieving&r, &asifting&r, and &apurifying&r to extract trace amounts of &b resources&r.\""
+			]
+			id: "0513EEE54038CBD4"
+			size: 0.66d
+			subtitle: "Process Your Earth!"
+			tasks: [{
+				id: "41EEE0E0AB97F763"
+				item: "gtceu:lv_earth_sieve"
+				type: "item"
+			}]
+			x: 0.99d
+			y: 3.96d
+		}
+		{
+			dependencies: ["0513EEE54038CBD4"]
+			description: [
+				"A multiblock upgrade of the &bEarth Sieve&r that runs the recipes at a parallel of &a16&r, effectively making it &a8 times faster&r than the single-block."
+				""
+				"I do hope you have some decent &7steel production&r up as well as having your &3steam infrastructure&r still going strong with the initial cost of this machine!"
+				""
+				"{@pagebreak}"
+				""
+				"\"Throughout the journey you've noticed one thing reigns true. &aImprovement&r. You have improved a vast majority of your machines, and you decide it's time for the &bEarth Sieve&r to be improved too. Using a &blarger scale version&r, and tinkering with the &3power consumption&r you were able to create an &bEarth Sieve&r that is so much better than before it's incomparable. You find the only appropriate comparison is that of a &1droplet of water&r to a &9great lake&r.\""
+			]
+			id: "3F44787140E21367"
+			size: 0.66d
+			subtitle: "Large Earth Processing"
+			tasks: [{
+				id: "008B3538B9FA5AB8"
+				item: "gtceu:large_steam_sieve"
+				type: "item"
+			}]
+			x: 0.66d
+			y: 3.3d
+		}
+		{
+			description: [
+				"Time for some &2&oupgrades&r&r!"
+				""
+				"The &7steel&r chest and &6bronze&r packpack have more storage space and one more upgrade slot. "
+				""
+				"I suggest &bupgrading&r your current chests using the bronze to steel upgrade item to save the contents while still enjoying &aall the benefits&r. "
+				""
+				"While the backpack &cmight not&r be your main storage, it is still nice to have, so I suggest &aupgrading&r it as well. "
+			]
+			id: "42B170E22A69BF64"
+			size: 0.66d
+			subtitle: "MOAR Storage"
+			tasks: [
+				{
+					id: "09B18A284D40D383"
+					item: "sophisticatedbackpacks:copper_backpack"
+					type: "item"
+				}
+				{
+					id: "53465DD7850D173E"
+					item: {
+						Count: 1
+						id: "sophisticatedstorage:gold_chest"
+						tag: {
+							woodType: "oak"
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Bronze And Steel Storages"
+			x: 5.28d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1E9BE8D3F8A602DC"]
+			description: [
+				"A feature of the &5Soft Mallet&r that you may be aware of is its ability to &6pause machines&r. However, did you know that if you &bsneak whilst pausing a machine&r, it'll tell the machine to continue operating until it finishes its recipe?"
+				""
+				"This is &2perfect&r if you need to make changes to a multiblock but don't want to &evoid items&r, as unforming a multiblock will void all inputs."
+			]
+			icon: {
+				Count: 1
+				id: "gtceu:polybenzimidazole_mallet"
+				tag: {
+					DisallowContainerItem: 0b
+					GT.Behaviours: { }
+					GT.Tool: {
+						Damage: 0
+						MaxDamage: 1023
+					}
+					HideFlags: 2
+				}
+			}
+			id: "237EEDF8D3F170DA"
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Shoutout to Yung Onion"
+			tasks: [{
+				id: "05610A3CFF3805F3"
+				title: "Alright, now let me play."
+				type: "checkmark"
+			}]
+			title: "I'm Fetching Me Mallet!"
+			x: 8.91d
+			y: 4.29d
+		}
+		{
+			dependencies: ["53F48B30CAA6163A"]
+			description: [
+				"These are your &bbest bet&r to move your non-GregTech power from the thermal &6dynamos&r. For now, you can use these &3basic energy conduits&r, but you will unlock &abetter ones later&r."
+				""
+				"You should also invest in &aextraction cards for EnderIO&r in order to increase power, fluid, and item movement speed."
+				""
+				"Crafting Basic Energy Conduits:"
+				""
+				"To craft these basic conduits, you will need:"
+				""
+				"&66x Conduit Binders&r"
+				"&73x Conductive Iron Ingots&r"
+			]
+			id: "1D92D3F59F0B2908"
+			shape: "circle"
+			size: 0.45d
+			subtitle: "Moving FE"
+			tasks: [{
+				id: "3A38F3B832A27AE1"
+				item: "enderio:energy_conduit"
+				type: "item"
+			}]
+			x: 2.6999999999999997d
+			y: 3.375d
+		}
+		{
+			dependencies: ["701BCADAE5CF6CA5"]
+			description: [
+				"The standard macerator processes raw ore at a 1:2 ratio, yielding two crushed ores for every raw ore. Currently, it produces no additional byproducts. However, the &bHV macerator&r gains the ability to generate byproducts once you reach &6High Voltage (HV)&r tier."
+				""
+				"Despite this, you should prioritize using the &aSteam Grinder&r over the basic macerator. This is why the completion of this objective is marked with a &2checkmark&r rather than requiring an item."
+			]
+			icon: "gtceu:lv_macerator"
+			id: "26120EAC5DAAA965"
+			shape: "circle"
+			size: 0.6d
+			subtitle: "Crushing"
+			tasks: [{
+				id: "43E887A05B948FC0"
+				title: "Crush"
+				type: "checkmark"
+			}]
+			title: "Maceration"
+			x: -0.6d
+			y: 4.2d
+		}
+		{
+			dependencies: ["26120EAC5DAAA965"]
+			description: [
+				"Takes &7purified&r or &8crushed&r ores to obtain further byproducts through the process of &6high heat spinning&r. These machines are ussally the &e&ohighest&r&r yield of byproducts you get from ore processing so i would say to invest in one &6&lasap&r&r."
+				""
+				"There is no speed difference between &8purified/crushed&r ores, with the only difference being the &9added byproducts&r from putting the crushed ores in the ore washer &a&lfirst&r&r."
+			]
+			id: "6555C981EDD818CA"
+			shape: "circle"
+			size: 0.6d
+			subtitle: "Hot Spin"
+			tasks: [{
+				id: "5F144F9611B58DA7"
+				item: "gtceu:lv_thermal_centrifuge"
+				type: "item"
+			}]
+			x: -0.6d
+			y: 3.5999999999999996d
+		}
+		{
+			dependencies: ["26120EAC5DAAA965"]
+			description: [
+				"The ore washer uses &1water&r or &bdistilled water&r to purify crushed ores. It has two operational programs:"
+				""
+				"Program 1: Accepts only normal &1water&r and washes ores &owithout&r byproducts at a faster rate than Program 2."
+				""
+				"Program 2: Accepts &1water&r or &bdistilled water&r, processing at a slower rate to yield byproducts. Using &bdistilled water&r makes this program twice as fast."
+			]
+			id: "044FF4E99087CCC9"
+			shape: "circle"
+			size: 0.6d
+			subtitle: "Washing Your Ores"
+			tasks: [{
+				id: "75AADB23C526D110"
+				item: "gtceu:lv_ore_washer"
+				type: "item"
+			}]
+			x: -1.2d
+			y: 4.2d
+		}
+		{
+			dependencies: ["648BCF486E16CCB2"]
+			description: [
+				"Macerating &3clay&r blocks yields &3clay dust&r. This &3clay dust&r can then be processed in an electrolyzer to extract valuable resources: lithium, sodium, silicon, and aluminum dust."
+				""
+				"Be aware that this process can be quite slow in the early game, so setting up the system to passively electrolyze clay dust is highly recommended. "
+				""
+				"Additionally, the water byproduct can be somewhat &e&oannoying&r. To manage this, consider attaching a &bfluid trash can&r to the electrolyzer's fluid output to automatically void the excess water. "
+				""
+				"If you want to learn how this process line works more in-depth "
+				"{ \"text\": \"check out the quest page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4DE0E8E8A1220B1F\" } }"
+			]
+			id: "14910B1C3985A960"
+			shape: "circle"
+			size: 0.66d
+			subtitle: "Processing Clay"
+			tasks: [{
+				id: "2949C81A5F8810E1"
+				item: "minecraft:clay_ball"
+				type: "item"
+			}]
+			title: "The Clay Line"
 			x: 1.5d
-			y: 3.75d
+			y: 5.25d
+		}
+		{
+			dependencies: ["044FF4E99087CCC9"]
+			description: [
+				"Sifts through &apurified ores&r to give gem dusts, the actual gem, and flawless/exquisite versions of gems. With how &7&oslowwww&r&r this process is in LV, just smelt your &bgem&r ores."
+				""
+				"&3&oFurthermore&r&r, with the &bpower&r of the &2earth sieve&r, you can also sift the vein traces to get a small amount of dusts from processing useless earth. "
+				""
+				"You will need the multiblock version of this later for some more complicated recipes. "
+			]
+			id: "4DFF6152B7002274"
+			shape: "circle"
+			size: 0.6d
+			subtitle: "Precious Gems"
+			tasks: [{
+				id: "193E6F3BCBD6C2F3"
+				item: "gtceu:lv_sifter"
+				type: "item"
+			}]
+			x: -1.2d
+			y: 4.8d
+		}
+		{
+			dependencies: ["701BCADAE5CF6CA5"]
+			description: [
+				"The chemical &9bath&r is a crucial machine throughout your journey, initially with &6&lthree main uses&r."
+				""
+				"&aOre Processing&r: Using sodium persulfate or mercury to bathe ores (also known as fluid washing) yields additional byproducts. This is the most efficient way to obtain &5gallium&r once your sulfuric acid production is set up."
+				""
+				"{@pagebreak}"
+				""
+				"&aCooling Down Hot Ingots&r: Soaking hot ingots in &1water&r or &bdistilled water&r cools them into a usable form. However, this function becomes obsolete once you unlock the vacuum freezer in the EV tier."
+				""
+				"&eCreating Colored Lenses&r: Bathing white lenses in specific liquid dyes creates colored lenses used for wafer engraving in advanced circuits. Note that recipes for certain lenses are locked behind higher-tier machines."
+			]
+			id: "4FE7094AD6ED7658"
+			shape: "circle"
+			size: 0.6d
+			subtitle: "Bath Time"
+			tasks: [{
+				id: "66A841EB1A541AB7"
+				item: "gtceu:lv_chemical_bath"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.5999999999999996d
+		}
+		{
+			dependencies: ["648BCF486E16CCB2"]
+			description: [
+				"While steam and other Thermal Expansion dynamos produce FE, this energy cannot directly power GregTech machines. "
+				""
+				"The solution is to employ &l&aconverters&r, which can convert your &2FE into EU&r. To configure a converter to output EU, simply right-click it with a soft mallet to change its mode from &aEU to FE&r to &2FE to EU&r. "
+				""
+				"Keep in mind, however, that these converters are still subject to &avoltage/amperage rules&r, so &l&4be careful!&r"
+			]
+			id: "21DB0D65009B1CCD"
+			size: 0.75d
+			subtitle: "Conversion"
+			tasks: [{
+				id: "56A763F175BC21AC"
+				item: "gtceu:lv_16a_energy_converter"
+				type: "item"
+			}]
+			x: 2.25d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7826E9A1E4265AFA"]
+			description: [
+				"You attune these &bframeworks&r to a specific mob by right-clicking them on said mob."
+				""
+				"Once you have an attuned model, you put that in a &5deep learner&r in your inventory as you go fight mobs to increase the model's tier, which boosts the chance of useful predictions. They can also be upgraded via the models running in the &3simulation chamber&r."
+				""
+				"&cFlawed models do not work&r, so you need to upgrade it by fighting enough of those mobs."
+			]
+			id: "70C69C062F1AE0AA"
+			shape: "circle"
+			size: 0.4d
+			subtitle: "Modeling"
+			tasks: [{
+				id: "628C10D0DDE2CE6B"
+				item: "hostilenetworks:blank_data_model"
+				type: "item"
+			}]
+			x: 3.2d
+			y: 4.0d
+		}
+		{
+			description: [
+				"Finding evidence of a &cgreat fire&r that consumed the world, you discover that you can &breignite its embers&r. "
+				""
+				"You hesitate before doing so, worried it will once again &cravage these lands&r, however you decide to proceed. "
+				""
+				"Harnessing &6EU&r, &4magma dust&r, and &blava&r, you are able to reignite this &cdormant ember's flame&r. As you do, you begin to understand how truly devastating this was, and you quickly contain the ember. "
+				""
+				"Having made this &4flaming dust&r, you decide to put it to use to reinforce your alloys, making new &astronger&r, &aharder&r, and &abetter materials&r."
+			]
+			id: "757AE3F81529AF90"
+			shape: "circle"
+			size: 0.4d
+			subtitle: "FIRE"
+			tasks: [{
+				id: "7A56FD309ECC784C"
+				item: "gtceu:lv_ember_igniter"
+				type: "item"
+			}]
+			x: 3.4d
+			y: 3.6d
+		}
+		{
+			description: [
+				"GregTech doesn't provide ways to farm plants or trees, so we made a custom multiblock for the modpack!"
+				""
+				"The multiblock &3Greenhouse&r will be your source of &aWood&r and other plants if you wish."
+				""
+				"Its &aWood&r production should be enough to run &32 Pyrolyse Ovens&r at their lowest Power."
+				""
+				"You can also use this for automated &aResin&r. The yields are kept low to incentivize other rubber sources later in the game."
+				"{@pagebreak}"
+				"&9Note: &rWith &d40 EU/t&r recipes, it needs either 1 &bMV&r energy hatch or 2 &7LV&r energy hatches. Multiblocks will &cnot&r use 2A of one tier to reach the next one for recipe voltage minimums. "
+				""
+				"In other words, the controller needs to say at least \"&bMV&r\" in the GUI to run recipes which say \"&bMV&r\" in EMI, even if they can draw enough EU/t with a lower tier hatch configuration."
+				""
+				"&9Note:&r The structure requires a lot of &9Wrought Iron&r. Make sure you have an &3Arc Furnace&r for that."
+				"{@pagebreak}"
+				"&l&3Lore:&r&o We originally implemented a Chemical Reactor recipe for wood in the modpack to solve the tree problem. Our implementation turned out to be completely busted, so we decided that a rebalance was due. Hopefully, the Greenhouse is a happy middle ground."
+			]
+			icon: "minecraft:oak_sapling"
+			id: "2655B72C9FF3B372"
+			rewards: [{
+				count: 10
+				id: "7DCCFC3ADD071D57"
+				item: "gtceu:ulv_machine_casing"
+				type: "item"
+			}]
+			shape: "square"
+			size: 0.75d
+			subtitle: "The power of KubeJS"
+			tasks: [{
+				id: "35CFA225ADAD5D06"
+				item: "gtceu:greenhouse"
+				type: "item"
+			}]
+			title: "Greenhouse"
+			x: 6.375d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Tame electricity and make your first machines"]

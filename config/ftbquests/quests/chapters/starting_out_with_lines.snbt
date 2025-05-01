@@ -1,0 +1,232 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "starting_out_with_lines"
+	group: "74E84404EE17A851"
+	icon: "minecraft:clay_ball"
+	id: "0FCDD34855055A54"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: "gtceu:ruthenium_dust"
+			id: "58F8866781E05E78"
+			subtitle: "Process the world"
+			title: "All The Processing Lines"
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			description: [
+				"Process clay dust in a electrolyzer to obtain lithium, sodium, silicon, and aluminum dust."
+				""
+				"Lithium: Used to make your first lv battery among later batteries."
+				""
+				"Sodium: Can also be used for batteries but not as powerful as lithium. Also used for sodium potassium/sodium sulfide for later plastics and chemicals."
+				""
+				"Silicon: Used mainly to create silicon boules which then get cut into wafers. Also used in many alloys which will prove useful later."
+				""
+				"Aluminum: Used for mv componets, machines, and hulls. Because ae2 uses these, you will want to have a decent stockpile."
+			]
+			icon: "minecraft:clay_ball"
+			id: "39D73A5C9ADFEE1E"
+			subtitle: "Earthy"
+			tasks: [{
+				id: "0AF4C08B4182DC3D"
+				title: "Clay"
+				type: "checkmark"
+			}]
+			title: "Clay Line"
+			x: -1.5d
+			y: 0.5d
+		}
+		{
+			icon: "hostilenetworks:prediction_matrix"
+			id: "1900689FED2BACAA"
+			tasks: [{
+				id: "2055C9718BC90116"
+				title: "HNN"
+				type: "checkmark"
+			}]
+			title: "HNN Line"
+			x: 1.5d
+			y: 0.5d
+		}
+		{
+			id: "0097649DFE924672"
+			tasks: [{
+				id: "2DF80DAE5195B5B0"
+				item: {
+					Count: 1
+					id: "woodenbucket:wooden_bucket"
+					tag: {
+						Damage: 0
+						Fluid: {
+							Amount: 1000
+							FluidName: "gtceu:oil_heavy"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			id: "3F324840FE6A7629"
+			subtitle: "Processing Platinum"
+			tasks: [{
+				id: "6F6642AE5BA40858"
+				item: "gtceu:ruridit_ingot"
+				type: "item"
+			}]
+			title: "PlatLine"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			id: "7230715745F52C48"
+			tasks: [{
+				id: "5F0DF9FCA0FC3E79"
+				item: "gtceu:trinium_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			id: "0266C1E532C47AB2"
+			tasks: [{
+				id: "7E746776BA9E6186"
+				item: "gtceu:neuro_processing_unit"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			icon: "gtceu:epoxy_ingot"
+			id: "38C4BCECD644C98B"
+			subtitle: "Circuit Bases"
+			tasks: [{
+				id: "61F8809276C42F91"
+				title: "Epoxy"
+				type: "checkmark"
+			}]
+			title: "Epoxy Line"
+			x: 2.5d
+			y: -0.5d
+		}
+		{
+			id: "1AC7C1C845550C9C"
+			tasks: [{
+				id: "0FA4F55A2A410976"
+				item: "productivebees:honey_treat"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -0.5d
+		}
+		{
+			id: "5B755243A1A01A64"
+			tasks: [{
+				id: "514F52FD401FD700"
+				item: "gtceu:polyethylene_ingot"
+				type: "item"
+			}]
+			x: -1.5d
+			y: -3.0d
+		}
+		{
+			id: "2FF09D23A14436ED"
+			tasks: [{
+				id: "5AFCFCD5627E2779"
+				item: "gtceu:polytetrafluoroethylene_ingot"
+				type: "item"
+			}]
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			id: "573BACE7980D4F82"
+			tasks: [{
+				id: "6556E14F3AC48015"
+				item: "gtceu:polybenzimidazole_ingot"
+				type: "item"
+			}]
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			id: "248ABA57EA9BD882"
+			tasks: [{
+				id: "01DC80991327E642"
+				item: "gtceu:silicone_rubber_ingot"
+				type: "item"
+			}]
+			x: -2.5d
+			y: -2.0d
+		}
+		{
+			id: "3AC5026D759EAC79"
+			tasks: [{
+				id: "3DBA47E52DE72F9D"
+				item: "gtceu:styrene_butadiene_rubber_ingot"
+				type: "item"
+			}]
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			id: "58A7284B4C5A084C"
+			tasks: [{
+				id: "76FF307B05CC5CEC"
+				item: "gtceu:titanium_ingot"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			id: "3328F6B1C39C3860"
+			tasks: [{
+				id: "0F5011897AA54916"
+				item: "gtceu:indium_dust"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			id: "2E1B282BFB611941"
+			tasks: [{
+				id: "55BB4EE11373DC87"
+				item: "gtceu:tungsten_dust"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			id: "7B1AB0D2108BFC0D"
+			tasks: [{
+				id: "4AA9D4A3D7888702"
+				item: "gtceu:radon_bucket"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 1.0d
+		}
+		{
+			id: "6260EBA9B691CF7F"
+			tasks: [{
+				id: "46ED7AAA6F8D9EC6"
+				item: "gtceu:air_bucket"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+	]
+	title: "Starting Out With Lines"
+}

@@ -23,7 +23,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
             .where('Q', Predicates.blocks("minecraft:crying_obsidian"))
             .where('G', Predicates.blocks("gtceu:purple_lamp"))
             .where('A', Predicates.blocks("minecraft:obsidan"))
-            .where('9', Predicates.blocks("fluxnetworks:flux_block"))
+            .where("9", Predicates.heatingCoils())
             .where('C', Predicates.blocks("gtceu:robust_machine_casing").setMinGlobalLimited(1) // Corrected line
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))
             .build())

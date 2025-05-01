@@ -1,6 +1,4 @@
 ServerEvents.recipes(event => {
-
-
         event.recipes.gtceu.ember_igniter('flaming_dust')
         .itemInputs('2x gtceu:dormant_ember_dust', '1x gtceu:magma_dust')
         .inputFluids('minecraft:lava 1')
@@ -9,7 +7,7 @@ ServerEvents.recipes(event => {
         .EUt(20)
         event.recipes.gtceu.alloy_smelter('flamingmatrix')
         .itemInputs('1x kubejs:flaming_dust', '1x minecraft:clay_ball')
-        .itemOutputs('4x hostilenetworks:prediction_matrix')
+        .itemOutputs('8x hostilenetworks:prediction_matrix')
         .duration(100)
         .EUt(32)
         event.recipes.gtceu.assembler('lv_machine_casing')
@@ -26,7 +24,7 @@ ServerEvents.recipes(event => {
         .EUt(32)
         event.recipes.gtceu.macerator('magma_dust')
         .itemInputs('1x minecraft:magma_block')
-        .itemOutputs('1x gtceu:magma_dust')
+        .itemOutputs('4x gtceu:magma_dust')
         .duration(50)
         .EUt(32)
         event.recipes.gtceu.forge_hammer('dust')
@@ -35,8 +33,9 @@ ServerEvents.recipes(event => {
         .duration(40)
         .EUt(32)
         event.shapeless("minecraft:clay", ["kubejs:dust", "minecraft:water_bucket"])
-        event.recipes.gtceu.forge_hammer('dirttty')
+        event.recipes.gtceu.chemical_reactor('dirttty')
         .itemInputs('1x kubejs:dust')
+        .inputFluids('minecraft:water 100')
         .itemOutputs('1x minecraft:dirt')
         .duration(40)
         .EUt(32)
@@ -113,6 +112,11 @@ ServerEvents.recipes(event => {
                 D: "gtceu:lv_electric_piston",
                 F: "gtceu:item_filter",
                 C: "#gtceu:circuits/lv"
+              });
+              event.shaped("gtceu:large_steam_sieve", ["WFW", "WCW", "WFW"], {
+                W: "gtceu:steam_machine_casing", // Corrected to MV Casing
+                F: "gtceu:item_filter",
+                C: "gtceu:lv_earth_sieve"
               });
             
               // MV Earth Sieve Example (Corrected Casing)

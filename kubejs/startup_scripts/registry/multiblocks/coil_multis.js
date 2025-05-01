@@ -1,4 +1,5 @@
 const CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine")
+Java.loadClass("com.gregtechceu.gtceu.api.GTValues")
 GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
     phoenixvine.create('emberwake_alloy_hearth')
         .category('multiblock')

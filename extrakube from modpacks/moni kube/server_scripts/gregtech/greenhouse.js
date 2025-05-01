@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
         'ASA',
         'WAW'
     ], {
-        A: '#gtceu:circuits/mv',
+        A: '#gtceu:circuits/lv',
         W: 'gtceu:copper_single_cable',
         S: 'gtceu:solid_machine_casing'
     }).id('kubejs:shaped/greenhouse')

@@ -6,7 +6,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeType('compressor')
         .recipeModifier((machine, recipe) => $SteamMulti.recipeModifier(machine, recipe), true)
-        .appearanceBlock(GTBlocks.CASING_PRIMITIVE_BRICKS)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCCCB", "BBCBB", "BBCBB", "BBBBB", "BBBBB")
         .aisle("CDDDC", "BDBDB", "BDEDB", "BBDBB", "BBBBB")

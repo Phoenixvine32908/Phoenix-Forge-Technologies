@@ -10,8 +10,19 @@ features:
 
   # What tier the Omni-breaker is, if enabled. (ULV = 0, LV = 1, MV = 2, ...)
   # (Unless the default recipe is overridden, can only support LV to IV!)
-  omnibreakerTier: 5
+  omnibreakerTier: 9
 
   # The energy capacity of the Omni-breaker.
-  omnibreakerEnergyCapacity: 40960000
+  omnibreakerEnergyCapacity: 409600000
+
+  # Whether the Power-Transfer Einstein-Rosen Bridge is enabled.
+  pterbEnabled: true
+
+  # Base amount of PTERB coolant to drain every second.
+  # (Setting both this amount and the IO multiplier to 0 disables the coolant mechanic.)
+  pterbCoolantBaseDrain: 10
+
+  # Multiplier over IO amount for additional coolant drain.
+  # (Setting both this and the base drain amount to 0 disables the coolant mechanic.)
+  pterbCoolantIOMultiplier: 0.01
 

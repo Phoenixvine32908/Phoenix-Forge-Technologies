@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/base_fission_casing_ctm"
+    }
+}

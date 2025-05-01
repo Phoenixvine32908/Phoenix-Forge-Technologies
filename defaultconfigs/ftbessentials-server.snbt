@@ -72,6 +72,7 @@ rtp: {
 			# Range: 0 ~ 604800
 			warmup: 0
 			# Teleportation-related settings
+		}
 	teleportation: {
 		# Allows users to return to their previous location after teleporting (or dying)
 		back: {
@@ -99,5 +100,6 @@ rtp: {
 			# Default: 0
 			# Range: 0 ~ 604800
 			warmup: 0
+		}
 		}
 { }

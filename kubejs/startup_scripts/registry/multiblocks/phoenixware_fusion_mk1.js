@@ -48,6 +48,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("E", Predicates.blocks("gtceu:fusion_casing").setMinGlobalLimited(10)
    .or(Predicates.abilities(PartAbility.MAINTENANCE).setMaxGlobalLimited(1))
    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
+   .or(Predicates.blocks(PartAbility.INPUT_ENERGY.getBlocks(GTValues.ZPM).toArray()).setMaxGlobalLimited(2))
    .or(Predicates.autoAbilities(definition.getRecipeTypes())))
    .where("F", Predicates.blocks("gtceu:superconducting_coil"))
    .where("G", Predicates.blocks("gtceu:fusion_glass"))
@@ -57,10 +58,8 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("K", Predicates.blocks("gtceu:tungsten_steel_frame"))
    .where("L", Predicates.blocks("kubejs:supercooled_reactor_core"))
    .where('N', Predicates.controller(Predicates.blocks(definition.get())))
-
-
-        .build()
+.build()
 )
 .workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor", false)
     
-}); // .or(Predicates.blocks(INPUT_ENERGY_HATCH[EV]))
+});

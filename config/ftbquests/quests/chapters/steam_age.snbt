@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "steam_age"
-	group: "55814AFD7ECBD9F9"
+	group: "693226878D58638A"
 	icon: "gtceu:bronze_brick_casing"
 	id: "3B89FB8839204148"
 	order_index: 0
@@ -61,9 +61,9 @@
 		{
 			dependencies: ["2CFEB88E19164138"]
 			description: [
-				"Use this little baby to control the flow of electricity in your circuit. The recipe gives you 2 of them which are needed to make each lv circuit. "
+				"Use this little baby to control the flow of electricity in your circuit. The recipe gives you 2 of them, which are needed to make each &aLV Circuit&r."
 				""
-				"I highly suggest making a system to provide everything to make these simpler. In my opinion, these are one of the easier parts of the lv circuit but can't hurt to plan ahead."
+				"I highly suggest making a system to provide everything to make these simpler. In my opinion, these are one of the easier parts of the &aLV Circuit&r but it can't hurt to plan ahead."
 			]
 			id: "2BC72A5C72232A0E"
 			rewards: [{
@@ -88,9 +88,9 @@
 				"0523918F1703CAA5"
 			]
 			description: [
-				"Now, you could call this a circuit. However, it is not quite strong enough to run anything by itself, so you will instead use it to make your first lv circuit.  "
+				"Now, you could call this a &bcircuit&r. However, it is not quite strong enough to run anything by itself, so you will instead use it to make your first &aLV Circuit&r."
 				""
-				"Vaccum tubes were used for a while in radios because of how low-power and reliable they were."
+				"&eVacuum tubes&r were used for a while in radios because of how low-power and reliable they were.."
 			]
 			id: "17C5B5A14018620C"
 			rewards: [
@@ -120,9 +120,9 @@
 		{
 			dependencies: ["3E25AEBD6AF89870"]
 			description: [
-				"The base for your first circuit. It has been inlayed with copper to allow basic conduction and the sticky resin acts as a solid adhesive. Of course you will want an upgrade soon but this works fine for now."
+				"The base for your first circuit. It has been inlayed with &6copper&r to allow basic conduction, and the &2sticky resin&r acts as a solid adhesive. Of course, you'll want an upgrade soon, but this works fine for now."
 				""
-				"A good upgrade when you reach lv is using 4 copper foil per board instead of 8 copper wires. Using a bender to get you the 4 copper foil saves you an entire 4 copper ingots per board."
+				"A good upgrade when you reach LV is using 4 &6copper foil&r per board instead of 8 &6copper wires&r. Using a &3bender&r to get you the 4 &6copper foil&r saves you an entire 4 &6copper ingots&r per board."
 			]
 			id: "5AAD01B2636E58EE"
 			rewards: [
@@ -151,7 +151,7 @@
 		{
 			dependencies: ["75C63892579D7900"]
 			description: [
-				"The &bSteam Grinder&r is a machine that uses &osteam&r to crush your ores, typically at a &b2:1 ratio.&r Pretty neat!"
+				"The &bSteam Grinder&r is a machine that uses &osteam&r to crush your ores, typically at a &b1:2 ratio.&r Pretty neat!"
 				""
 				"It crushes 8 ores in parallel. That effectively makes the Steam Grinder faster than 12 LV macerators (or 6 MV macerators)."
 				""
@@ -159,11 +159,11 @@
 				""
 				""
 				"{@pagebreak}"
-				"\"Using primitive methods had become too... impractical for your needs. "
+				"\"Using primitive methods had become too... &cimpractical&r for your needs."
 				""
-				"You begin brainstorming, think, searching for a way to speed up the breaking down of resources. You think about what you have, it comes to you. A steam powered grinder. "
+				"You begin brainstorming, think, searching for a way to &aspeed up&r the breaking down of resources. You think about what you have, it comes to you. A &3steam powered grinder&r."
 				""
-				"Using the steam you design a machine to rotate gears attached to thick hard grinding heads to break down and pulverize resources. It vents the steam after use allowing it to continue rotating, but this costs you quite a bit of steam.\""
+				"Using the &3steam&r you design a machine to rotate gears attached to thick hard grinding heads to break down and &apulverize&r resources. It vents the &3steam&r after use allowing it to continue rotating, but this costs you &ca quite a bit of steam&r.\""
 			]
 			id: "66DBDE53985F90F1"
 			rewards: [
@@ -219,15 +219,17 @@
 				""
 				"A major benefit to steam multiblocks is that they &bparallel&r recipes. This lets you run recipes many times faster than even your electric machines can handle. With this, you should be running these multis &6well into late HV&r."
 				""
+				""
 				"Because of this, its time to spin, spin, spin."
 				""
 				""
 				"{@pagebreak}"
-				"\"You find the traditional method of sieving resources calming and relaxing, however it has started to cost a toll on your health. "
 				""
-				"Deciding to not harm yourself further, you ponder a new way to seperate items, a way to sieve them. You think about the other machines you've created and decide to put to use your steam. You design a machine with hundreds of tiny hole in a chamber with a slotted bottom leading to seperate boxes on a grid pattern. "
+				"\"You find the traditional method of sieving resources &acalming and relaxing&r, however it has started to cost a &ctoll on your health&r. Deciding to &9not harm yourself further&r, you ponder a &anew way to separate items, a way to sieve them&r."
 				""
-				"It shoots steam at high speeds around the machine in such a  manner it seperates the resources similar to how people use to pan for gold.\""
+				"You think about the other machines you've created and decide to put to use your &3steam&r. You design a machine with hundreds of tiny holes in a chamber with a slotted bottom leading to separate boxes on a grid pattern."
+				""
+				"It shoots steam at &dhigh speeds&r around the machine in such a manner it separates the resources similar to how people use to &6pan for gold&r.\""
 			]
 			id: "7290D7D95A946CEE"
 			rewards: [{
@@ -275,20 +277,19 @@
 				"16E4DEA586D34E15"
 			]
 			description: [
-				"Ah yes, steam. A wonderful source of power that uses the pressure and heat of steam to move machinery to further increase the power of technology. With the buff to greg steam it is now even easier to use your steam to power all those delightful steam multiblocks"
+				"Ah yes, &3steam&r. A wonderful source of power that uses the pressure and heat of steam to move machinery to further increase the power of technology. With the buff to GregTech steam, it is now even easier to use your steam to power all those delightful &6steam multiblocks&r."
 				""
-				"Greg Solid Boilers: Use solid burnable fuels to produce steam. These are the easiest to fuel as you can just grab some logs or coal and you can get quite a decent amount of steam from coal."
+				"&aGreg Solid Boilers&r: Use solid burnable fuels to produce steam. These are the easiest to fuel; just grab some logs or coal, and you can get quite a decent amount of steam from coal."
 				""
-				"Greg Liquid Boilers: Use lava or creseote to make steam, creosote can be obtained quite nicely from the coke oven. Below are best fuels to sustain your creosote production. However, I do not suggest running liquid boilers because of the fast production of sugarcane from snad. "
-				"either coal => can sustain 8 HPLB"
-				"or logs => can sustain 4 HPLB"
+				"&aGreg Liquid Boilers&r: Use lava or creosote to make steam. Creosote can be obtained nicely from the &8coke oven&r. Below are the best fuels to sustain your creosote production:"
 				""
-				""
+				"coal => can sustain 8 HPLB"
+				"logs => can sustain 4 HPLB However, I do not suggest running liquid boilers because of the fast production of sugarcane from sand."
 				"{@pagebreak}"
 				""
-				"Greg Solar Boilers: Use the power of the sun to provide heat for your steam production. These are quite nice as they are passive steam during the day but have a higher intial investment than solid or liquid boilers. "
+				"&aGreg Solar Boilers&r: Use the power of the sun to provide heat for your steam production. These are quite nice as they are passive steam during the day but have a higher initial investment than solid or liquid boilers."
 				""
-				"Thermal Steam Boilers: Run very closely to the greg solid boilers in terms of what it needs to produce steam. However, the steam from thermal does not burn you when inside pipes, and the boilers can be upgraded with multi injectors to increase steam production. Do note that with the buffs to greg steam production it might be faster to run a few high pressure solid boilers. Feel free to test it out thou, thermal might still be stronger."
+				"&aThermal Boilers&r: Use more unconventional fuels to produce steam. However, the steam from thermal does not burn you when inside pipes, and the boilers can be upgraded with multi-injectors to increase steam production. Do note that with the buffs to GregTech steam production, it might be faster to run a few &bhigh-pressure solid boilers&r. Feel free to test it out though; thermal might still be stronger."
 			]
 			icon: "systeams:stirling_boiler"
 			id: "75C63892579D7900"
@@ -306,8 +307,8 @@
 					type: "item"
 				}
 				{
-					id: "5F289A13DB33FB72"
-					item: "systeams:stirling_boiler"
+					id: "32E3DBA9F0AC3C1B"
+					item: "gtceu:hp_steam_solid_boiler"
 					type: "item"
 				}
 			]
@@ -327,9 +328,13 @@
 				"0DDF4207C05814D2"
 			]
 			description: [
-				"Steel, ah yes, steel. A delightful alloy that changed how humanity used machines. It is stronger than iron, more flexible, and more resistant to oxidization. Normally, it is quite hard to obtain because of the high purity nessecary from the coke. "
+				"&7Steel&r, ah yes, &7steel&r. A delightful alloy that changed how humanity used machines. It is stronger than &7iron&r, more flexible, and more resistant to oxidization. "
 				""
-				"However, I decided to make it easier so now you can just craft and of the iron dusts with any of the coal dusts to make steel dust easily! Once you have a little bit of steel, you can also make an alloy smelter and do the same to save you some tool durability. I suggest making a stack or so of steel for now, and then making more later as you need it. "
+				"Normally, it is quite hard to obtain because of the high purity necessary from the coke."
+				""
+				"However, I decided to make it easier, so now you can just craft any of the &7iron dusts&r with any of the &8coal dusts&r to make &7steel dust&r easily! "
+				""
+				"Once you have a little bit of steel, you can also make an &5Alloy Smelter&r and do the same to save you some tool durability. I suggest making a stack or so of &7steel&r for now and then making more later as you need it."
 			]
 			id: "2B89ED5A0EF8B3D3"
 			rewards: [
@@ -359,9 +364,9 @@
 		{
 			dependencies: ["42FB4FBCDE41283B"]
 			description: [
-				"Rubber is used to make cables. These cables prevent you from being electrocuted when you stand on them versus wires. For now, you can just wrap rubber sheets around your wires in a crafting table."
+				"&6Rubber&r makes safer cables (prevents electrocution). Early on, craft them by wrapping &6rubber sheets&r around wires."
 				""
-				"These cables are also used in many crafting recipes as you go on. With how much rubber you need, i would suggest planting quite a few rubber trees and whacking the sticky resin in the large steam compressor. "
+				"You'll need a lot of rubber for later recipes, so plant many &2rubber trees&r and process the &2sticky resin&r in the &6Large Steam Compressor&r."
 			]
 			id: "3C3E9973F016C838"
 			rewards: [{
@@ -419,23 +424,19 @@
 		{
 			dependencies: ["53434BDCDB235F63"]
 			description: [
-				"These ores are just a slight portion of what you will need. The veins in gregtech are quite big, so there isnt really a need to worry about the &2scarcity of resources&r. "
-				""
-				"Furthermore, you can use the hv prospector you got at the start to &9search for ores&r. All you have to do is right click a prospector and it will show you all the ore veins in a general area, and it even has a &5search function&r.  "
-				""
+				"These ores are just a start. GregTech veins are huge, so &2resource scarcity isn't a worry&r. Use your starting &9hv prospector&r to &9find veins&r with a simple right-click and its &5search function&r."
 				""
 				"{@pagebreak}"
 				""
-				"&6Gold&r: You can find gold in the common magnetite veins near the surface. Seeing as how it's been valuable throghout human history as a currency and eventually for computers as traces for electricity, you will need quite a lot as you go on."
+				"&6Gold&r: Common in surface magnetite veins. Crucial for progression (currency, electronics). You'll need a lot."
 				""
-				"&7Iron&r: Found in iron veins or smelting the basaltic/granitic mineral sand veins. Iron has been crucial for humanities growth throughout the ages. It has been used for plates, silverware, armor, weapons, tools, movement of fluids, and much more. "
-				""
+				"&7Iron&r: Found in iron veins or basaltic/granitic mineral sand. Essential for early progression (plates, tools, etc.)."
 				""
 				"{@pagebreak}"
 				""
-				"&fTin&r: Can be found in some other veins, but the highest yeild will be cassiterite, found near the surface in big groups. Tin is needed to make a whole manner of alloys nessecary to progress. Because of this, you will keep running back to these veins as you go on."
+				"&fTin&r: Best yield from surface cassiterite veins. Key for many necessary alloys, so you'll revisit these often."
 				""
-				"&4Redstone&r: Found only in ruby veins in the otherworld, redstone spawns deep in the deepslate layer, providing a more challenging vein to mine as more mobs and the longer mining time of deepslate press against you. As it is the heart of minecraft automation, it will be used in a lot of machines, as well as being a good source of rare earth materiels and mercury."
+				"&4Redstone&r: Only in deep ruby veins in the otherworld (deepslate layer, more dangerous). Vital for automation; also yields rare earths and mercury."
 			]
 			id: "2BFC80C35BC5E8CD"
 			rewards: [
@@ -539,11 +540,10 @@
 		}
 		{
 			description: [
-				"Have you ever been mining and you wanted to go back to your base with a simple command? "
-				"To set a home do &5/sethome homename&r and then &lBOOM&r, you now have a &bhome&r. "
-				"You can have a total of 10 homes. Use this to get&2 easy acess to veins and cool places you find&r, also helpful to not have to spend travel time getting back to your base."
+				"Have you ever been mining and you wanted to go back to your base with a simple command?"
+				"To set a home do &5/sethome homename&r and then &lBOOM&r, you now have a &bhome&r. Use this to get&2 easy access to veins and cool places you find&r, also helpful to not have to spend travel time getting back to your base."
 				""
-				"Also, if you find that your spawn wasn't quite what you were expecting you can do &6&l/rtp&r&r to randomly teleport to a new area. Also good for finding new veins then popping right back to your home."
+				"Also, if you find that your spawn wasn't quite what you were expecting you can do &6&l/rtp&r to randomly teleport to a new area. Also good for finding new veins then popping right back to your home."
 			]
 			icon: "minecraft:oak_door"
 			id: "3812BC77530A7199"
@@ -567,7 +567,9 @@
 			dependencies: ["53434BDCDB235F63"]
 			description: [
 				"A mostly common ore, claimed to be the &cembers of a fire that once ravaged the world.&r "
+				""
 				"You will need to grab some from the aptly named &cHeat&r&bFrost&r vein to complete this quest, as well as using the dust to make &4fiery bronze&r, your road to steam machines. "
+				""
 				"Maybe grab some &bpermafrost&r while you are there, it will be helpful later."
 			]
 			id: "6FB492DF03483149"
@@ -598,17 +600,11 @@
 		}
 		{
 			description: [
-				"The &6Steam Compressor&r is a machine that uses the pressure of steam to compress some of your weaker materiels. I would suggest mainly using it to process rubber &aquickly&r. Perhaps a bit pricey on your fiery bronze, so its your choice if you make it. However, I &a&lHIGHLY&r&r suggest it."
-				""
-				"Maybe you can find some other use I missed? Knock yourself out. "
-				""
+				"The &6Large Steam Compressor&r uses steam pressure to quickly compress weaker materials, especially &aRubber&r. It's a bit pricey on fiery bronze, but I &a&lHIGHLY&r recommend it&r. Maybe you'll find other uses!"
 				""
 				"{@pagebreak}"
 				""
-				"\"You are jotting down ideas on how to improve your primitive compression methods on one of your note pads you found while looking around and come to an epiphany. "
-				""
-				""
-				"You could use the steam from your steam boilers to compress items in a similar manner to &1&lHydraulics&r&r!\""
+				"\"While pondering primitive compression on a found notepad, an epiphany strikes! You could use steam from your boilers to compress items, similar to &1&lHydraulics&r!\""
 			]
 			icon: "gtceu:large_steam_compressor"
 			id: "7811034596919240"
@@ -690,7 +686,7 @@
 			y: 5.0d
 		}
 		{
-			description: ["You will need &1water&r, and a&b lot of it&r. It's not exactly effcient to grab a million buckets of water every 5 seconds. So make one of these and have it&b passively get you water&r."]
+			description: ["You will need &1water&r, and a &bLOT of it&r. Grabbing a million buckets every 5 seconds isn't efficient. So, make one of these to &b passively generate water for you&r."]
 			icon: "watercollector:watercollector"
 			id: "015B71C49100E00E"
 			optional: true
@@ -714,20 +710,20 @@
 			description: [
 				"Your first task is to read this, then go mine all those tasty resources to start. &aAre you ready to begin?&r"
 				""
-				"Now, you don't want to continue &cwhacking trees by hand&r do you? Your journey should start with the free greg mining hammers, axe, and shovel, and hv prospector you obtain from the starting quest page. &9However&r, if these decide to break you can make more in your crafting table. "
+				"Now, you don't want to continue &cwhacking trees by hand&r do you? Your journey should start with the free &2greg mining hammers, axe, and shovel&r, and &2hv prospector&r you obtain from the starting quest page. &9However&r, if these decide to break you can make more in your crafting table."
 				""
-				"Just be sure to make the &8mining&r hammer and not the &1normal&r hammer okay? "
+				"Just be sure to make the &8mining&r hammer and not the &1normal&r hammer okay?"
 				""
-				"&oMade that mistake more than I would like to admit&r. "
+				"&oMade that mistake more than I would like to admit&r."
 				""
 				""
 				"{@pagebreak}"
 				""
-				"You might be wondering why I did not talk about vannilla minecraft tools, aren't you? Well, greg tools might be more exspensive in the initial investment but they are faster, have more durability, and have cool effects that minecraft tools simply, don't. "
+				"You might be wondering why I did not talk about &ev vanilla minecraft tools&r, aren't you? Well, &2greg tools&r might be more expensive in the initial investment but they are &afaster&r, have &amore durability&r, and have &bcool effects&r that vanilla minecraft tools simply, don't."
 				""
-				"For example, the greg axe has treefeller which takes the durability from the tool to mine an entire tree, which is nice to get those logs that always float above your head. "
+				"For example, the &2greg axe&r has &aTreefeller&r which takes the durability from the tool to mine an entire tree, which is nice to get those logs that always float above your head."
 				""
-				"Eventually, you will make electric tools to make mining and resource gathering even easier but that is a bit &olater&r."
+				"Eventually, you will make &3electric tools&r to make mining and resource gathering even &aeasier&r but that is a bit &olater&r."
 			]
 			icon: {
 				Count: 1
@@ -786,13 +782,13 @@
 		{
 			dependencies: ["2BFC80C35BC5E8CD"]
 			description: [
-				"The strongest physical storage options are here! As of now, you can either make the wrought iron backpack, or the bronze chest/barrel to store many types of items as you go through the tiers to increase space further. "
+				"The strongest physical storage options are here! As of now, you can either make the &7wrought iron backpack&r, or the &6bronze chest/barrel&r to store many types of items as you go through the tiers to increase space further."
 				""
-				"They both have two upgrade slots with many cool upgrades being obtainable now, or very soon such as the feeding upgrade, the magnet upgrade, and the stack upgrade. "
+				"They both have two upgrade slots with many cool upgrades being obtainable now, or very soon such as the &afeeding upgrade&r, the &amagnet upgrade&r, and the &astack upgrade&r."
 				""
-				"You can upgrade your chests later in the crafting table, or with a item upgrade by shift right clicking it on there. So feel free to make as many chests or backpacks and upgrades later."
+				"You can upgrade your chests later in the crafting table, or with an item upgrade by shift right-clicking it on there. So feel free to make as many chests or backpacks and upgrades later."
 				""
-				"They also fare really well when being used in tandem with the crafting station. Moreover, they can be easily and stronly filtered for all manner of automation needs!"
+				"They also fare really well when being used in tandem with the &3crafting station&r. Moreover, they can be easily and strongly filtered for all manner of automation needs!"
 			]
 			id: "5C5FFDA1372C8C26"
 			rewards: [
@@ -839,11 +835,11 @@
 		}
 		{
 			description: [
-				"You can store a decent amount of stuff in these portable cells, and with changed configs they are crafted with &9full power&r. "
+				"ortable cells offer good portable storage and, with config changes, are crafted with &9full power&r. "
 				""
-				"Not quite as good for all the microcrafts you will need to do, but still quite useful to have. Also, if you just like &3digital storage&r, this is a good choice!"
+				"While not the best for microcrafting, they're handy, especially if you like &3digital storage&r! "
 				""
-				"But maybe use &6soph chests,barrels, or drawers&r to store your items for your main system as well?"
+				"For your main base storage, consider using &6Sophisticated Storage chests, barrels, or drawers&r."
 			]
 			id: "78E09B101501CE54"
 			optional: true
@@ -871,9 +867,9 @@
 		{
 			dependencies: ["0AB5D310CCECAE8A"]
 			description: [
-				"The new Low Voltage casing materiel. You can make the dust in a crafting table then smelt said dust to get your first aurum steel ingots! "
+				"The new &eLow Voltage&r casing material. You can make the dust in a crafting table, then smelt said dust to get your first &6aurum steel ingots&r!"
 				""
-				"These allow you to unlock the wonderful world of electricity. The ratio for aurum steel is 2 steel dust, 2 dormant ember dust, 1 magma dust, and one gold dust. It is quite a complex alloy but its worth it."
+				"These allow you to unlock the wonderful world of &3electricity&r. The ratio for &6aurum steel&r is 2 &7steel dust&r, 2 &cdormant ember dust&r, 1 &4magma dust&r, and one &6gold dust&r. It is quite a complex alloy, but it's worth it."
 			]
 			id: "7979150B6C5A215A"
 			rewards: [
@@ -938,11 +934,11 @@
 		}
 		{
 			description: [
-				"You can make these once you obtain some iron. However, the upgrades to make them truly special &ccan not be made until later&r. "
+				"Fluid Drawers: You can make these once you obtain some iron. However, the upgrades to make them truly special &ccan not be made until later&r."
 				""
-				"Making the other divisons of drawers store the same amount of fluids equally across all the slots. "
+				"Making the other divisions of drawers store the same amount of fluids equally across all the slots."
 				""
-				"Processes that deal with oil will use quite a lot of fluid storage, so maybe &apair these with some drums and pipes to deal with excess fluids&r!"
+				"Processes that deal with oil will use quite a lot of fluid storage, so maybe &apair these with some drums and pipes to handle excess fluids&r!"
 			]
 			id: "1B8148B5662F6125"
 			optional: true
@@ -958,7 +954,7 @@
 		{
 			description: [
 				"It's important to realize that there are materials that should be consistently processed to minimize your workload."
-				"Check out the &b&lRenewability and You&r&r quest page for a more in-depth look into this"
+				"Check out the &b&lRenewability and You&r quest page for a more in-depth look into this."
 			]
 			icon: "minecraft:water_bucket"
 			id: "52E3A6E8717218A8"
@@ -988,7 +984,7 @@
 		}
 		{
 			dependencies: ["3B3BAB8CB6B7C5F1"]
-			description: ["Fuel is used quite a lot for a while. I suggest getting a few stacks but this quest will complete with only a little bit of both logs and coal. Your steam, smelting, and alloying will use a lot of fuels so stock up."]
+			description: ["Fuel is used quite a lot for a while. I suggest getting &aa few stacks&r, but this quest will complete with only a little bit of both logs and coal. Your &3steam&r, &6smelting&r, and &5alloying&r will use &ca lot of fuel&r so stock up!"]
 			id: "16E4DEA586D34E15"
 			rewards: [
 				{
@@ -1068,9 +1064,9 @@
 				"2A2DE8C29634494E"
 			]
 			description: [
-				"Making wires by hand with your tools is pretty ineffcient, but it is what must be done. I suggest perhaps making around half a stack of these to start with so you can make more than 2 resistors at a time."
+				"Making wires by hand with your tools is pretty &cinefficient&r, but it is what must be done. I suggest perhaps making around half a stack of these to start with so you can make more than 2 resistors at a time."
 				""
-				"Now, you also see the recipe using fine wires right? Making these in the crafting table takes one more ingot than the 1x wires, so it is not a good idea to do so quite yet. However, you can use the wiremill once you reach lv to get 8 fine wires per ingot. So perhaps switching to them then yes?"
+				"Now, you also see the recipe using &6fine wires&r, right? Making these in the crafting table takes one more ingot than the 1x wires, so it is &cnot a good idea&r to do so quite yet. However, you can use the &3wiremill&r once you reach LV to get 8 &6fine wires&r per ingot. So perhaps switching to them then, yes?"
 			]
 			id: "2CFEB88E19164138"
 			rewards: [
@@ -1099,7 +1095,11 @@
 			y: 0.5d
 		}
 		{
-			description: ["You will use a lot of iron for both steel, and wrought iron for the tiers going forward. So it is a good idea to gather quite a lot of iron to turn into steel later."]
+			description: [
+				"Here's the colored information about gathering iron:"
+				""
+				"You will use a lot of &7iron&r for both &7steel&r and &7wrought iron&r in the tiers ahead. So, it's a good idea to gather quite a lot of &7iron&r to turn into &7steel&r later."
+			]
 			icon: "gtceu:wrought_iron_dust"
 			id: "0DDF4207C05814D2"
 			rewards: [
@@ -1135,11 +1135,11 @@
 		}
 		{
 			description: [
-				"While charcoal dust isn't the only carbon based dust you can use for the resistor, it is however the easiest to keep a good stock of. "
+				"While &8charcoal dust&r isn't the only carbon-based dust you can use for the &bresistor&r, it is however the &aeasiest to keep a good stock of&r."
 				""
-				"I suggest growing a whole bunch of rubber trees for your charcoal because of how much you use rubber. However, you don't have to listen to me on this point. "
+				"I suggest growing a whole bunch of &2rubber trees&r for your &8charcoal&r because of how much you use &6rubber&r. However, you don't have to listen to me on this point."
 				""
-				"Also, you can make the greenhouse soon in MV. An absolute amazing multiblock that allows you to grow plants faster than in-world farms can produce."
+				"Also, you can make the &aGreenhouse&r soon in MV. An absolute &damazing multiblock&r that allows you to grow plants &dfaster than in-world farms&r can produce."
 			]
 			id: "2A2DE8C29634494E"
 			rewards: [{
@@ -1160,7 +1160,7 @@
 		}
 		{
 			dependencies: ["614A47C0FD24887D"]
-			description: ["This is one of the two big reasons you needed to make that snad setup. The resistor needs some paper to craft so this passive sugarcane will be very useful to help you get through these early tiers."]
+			description: ["This is one of the two big reasons you needed to make that &aSnad setup&r. The &bresistor&r needs some &epaper&r to craft, so this passive sugarcane will be very useful to help you get through these early tiers."]
 			id: "43F5194067DDCB4B"
 			rewards: [
 				{
@@ -1187,7 +1187,11 @@
 		}
 		{
 			dependencies: ["1AF8B97BAA3D6377"]
-			description: ["The structure of the boards for your first circuit. These require a lot of pressure so you need a compressor right? Well, you can use the large steam compressor if you &owant&r. However, you can also make these in the crafting table."]
+			description: [
+				"The structure of the boards for your first circuit. I would suggest using the &6Large Steam Compressor&r to make them."
+				""
+				"However, you can also make these in the crafting table."
+			]
 			id: "3E25AEBD6AF89870"
 			rewards: [{
 				id: "4E8A5837A181F363"
@@ -1206,9 +1210,9 @@
 		}
 		{
 			description: [
-				"Your best source of this delightful resource are rubber trees. Sticky resin is used to make basic rubber(which you need a ton of) and to make circuit materiels like the board and resistors. You can spam plant a bunch of rubber trees close together and knock them all down with your axe you got earlier."
+				"&2Rubber trees&r are your best source for &6sticky resin&r, needed for basic &6rubber&r (you'll need a lot) and circuit materials. Plant many &2rubber trees&r and chop them down with your early &aaxe&r."
 				""
-				"However, if you do not want to find or spend your hard earned feathers on saplings, you can also choose to use plant ballls. You can get these plant balls from whacking at some leaves with a hammer in a crafting table. "
+				"Alternatively, craft &agreen plant balls&r from leaves and a &a hammer&r if you lack saplings."
 			]
 			id: "42FB4FBCDE41283B"
 			rewards: [
@@ -1271,9 +1275,10 @@
 		{
 			dependencies: ["66DBDE53985F90F1"]
 			description: [
-				"What do you do with all these crushed ores you got from the steam grinder? Well, for now, you should just use the steam seperator to seperate the impure dusts once you grind the ores once again. "
+				"What do you do with all these crushed ores you got from the &3Steam Grinder&r? Well, for now, you should just use the &6Steam Separator&r to separate the &4impure dusts&r once you grind the ores once again."
 				""
-				"However, ore byproducts will be a huge thing as you go on so if you want to learn it now, check out the quest page aplty named Ore Processing to dip your toes in the wonderful world of ores."
+				"However, ore byproducts will be a huge thing as you go on, so if you want to learn it now, check out the quest page aptly named &bOre Processing&r to dip your toes in the wonderful world of ores!. "
+				"{ \"text\": \"Ore Processing Page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7FCFE4C40837CF5E\" } }"
 			]
 			icon: "gtceu:crushed_cobaltite_ore"
 			id: "701DE06B3BC74FEA"
@@ -1295,7 +1300,7 @@
 		}
 		{
 			dependencies: ["7290D7D95A946CEE"]
-			description: ["Sometimes when you have some crushed ores, you want to crush them again. The product of this process is impure dust. Now, you will want to put those in a ore washer or a centrifuge to get you useable dusts. With how slow ore washing is, I would suggest using the steam seperator."]
+			description: ["Sometimes when you have some crushed ores, you want to crush them again. The product of this process is &4impure dust&r. Now, you will want to put those in an &bOre Washer&r or a &5Centrifuge&r to get you &auseable dusts&r. With how slow ore washing is, I would suggest using the &6Steam Separator&r."]
 			icon: "gtceu:cobaltite_dust"
 			id: "02D63706DD3D563B"
 			rewards: [{
@@ -1315,7 +1320,7 @@
 			y: 6.0d
 		}
 		{
-			description: ["A basic componet for your first circuit. You can whack 6 glass panes in your crafting table to get one of these. However, your sand supply will dwindle fast as you use these for your vaccum tubes."]
+			description: ["A basic component for your first circuit. You can whack 6 &ftglass panes&r in your crafting table to get one of these. However, your &esand supply&r will dwindle fast as you use these for your &eVacuum Tubes&r."]
 			id: "0523918F1703CAA5"
 			subtitle: "Fragile"
 			tasks: [{
@@ -1327,7 +1332,7 @@
 			y: 3.0d
 		}
 		{
-			description: ["Steel bolts are used in your vaccum tube to provide structure. With these being a lot heavier on your resources than some other worked materiels, I suggest that you don't batch craft them quite yet. "]
+			description: ["&7Steel bolts&r are used in your &eVacuum Tube&r to provide structure. As these are more resource-intensive than some other worked materials, I suggest you don't batch craft them quite yet."]
 			id: "6828ABE839624DE6"
 			rewards: [{
 				id: "1384CB1616BF051E"
@@ -1346,17 +1351,17 @@
 		}
 		{
 			description: [
-				"Here are some more greg tools you will need as you go on."
+				"Here are some more GregTech tools you will need as you go on."
 				""
-				"Wrenches: Mainly used to rotate blocks, craft many items, and connect pipes together. They are also used to mine casings that would normally break when you try to grab them."
+				"&aWrenches&r: Mainly used to rotate blocks, craft many items, and connect pipes. Also used to mine normally breaking casings."
 				""
-				"Hammer: Used in a lot of crafting recipes, they can also be used to make dusts."
+				"&aHammer&r: Used in many crafting recipes and to make dusts."
 				""
-				"Mortars: The best tool to craft dusts. However, I would suggest using the steam grinder instead to save some resources."
+				"&aMortars&r: The best tool for crafting dusts, but consider using the &3Steam Grinder&r instead to save resources."
 				""
-				"Screwdriver: Used to change the modes of world accells, tell a drum to pour out its contents into pipes, and work with covers on machines."
+				"&aScrewdriver&r: Used to change world accel modes, tell drums to empty into pipes, and work with machine covers."
 				""
-				"Wirecutters: The main tool to make wires before the wiremill. These are also used to \"cut\" wires together for some more control of your power managment which is vastly more useful throughout your progression."
+				"&aWirecutters&r: The main tool for making wires before the wiremill. Also used to \"cut\" wires for better power management, which becomes very useful later."
 			]
 			icon: {
 				Count: 1
@@ -1401,17 +1406,17 @@
 		{
 			dependencies: ["75C63892579D7900"]
 			description: [
-				"Now, pipes are pretty simple. All you need to do is connect the pipes to your machines and they will move the fluid. Each tier of pipe have a tiny, small, normal, large, and huge variant, each holding different amounts of fluid. Greg pipes also have this neat little system where you can only move certain types of fluids in specialized pipes. "
+				"Now, pipes are pretty simple. Just connect them to your machines, add a pump, and they'll move fluid."
 				""
-				"For example, a bronze pipe can not move fluids such as acids while a gold pipe can. The recommended progression this early for the pipes are bronze-potin-steel. These pipes will server you very well as you go on and give you a while to upgrade to better pipes later. "
+				"Each pipe tier has tiny, small, normal, large, and huge variants with different fluid capacities. GregTech pipes have a system where specialized pipes move specific fluids."
 				""
+				"For example, &6bronze pipes&r can't move acids, but &e gold pipes&r can. The early recommended progression is &6bronze&r -> &5potin&r -> &7steel&r. These will serve you well for a while."
 				""
 				"{@pagebreak}"
 				""
-				"You can use a wrench on these pipes for two purposes. 1: You can lock the flow of the pipes to prevent them flowing in a certain direction by shift right clicking the pipe with a wrench and a empty offhand. This is very useful for large pipe networks moving an entire system. "
-				"2: You can also use a wrench to manually connect and disconnect pipes from a pipeline. This is useful when you need to troubleshoot a faulty connection."
+				"Use a wrench on pipes for two things: 1) Lock flow direction (shift-right click with wrench and empty offhand) – great for large systems. 2) Manually connect/disconnect – useful for troubleshooting."
 				""
-				"You can also use fluid conduits from enderio to pull liquids as well, without the fluid rules. For these you need an extraction upgrade to increase the speed."
+				"You can also use &bEnderIO fluid conduits&r to pull liquids without the fluid rules. Use an extraction upgrade for speed."
 			]
 			icon: "gtceu:steel_small_fluid_pipe"
 			id: "3A2DE5879E7D6837"
@@ -1433,18 +1438,15 @@
 		}
 		{
 			description: [
-				"Snad is a sand-like block that instantly grows sugar cane or cacti when it receives a redstone update."
+				"&aSnad&r instantly grows sugarcane or cacti with a redstone update."
 				""
-				"However, it's best to not use timers or any kind of redstone clocks; instead, you should attach a redstone conduit to a block of Snad, and force the connection by shift-left clicking the conduit with a Yeta Wrench or a Crescent Hammer, selecting the side you want to connect the conduit to, and clicking Output. After that, install a \"Redstone Sensor Filter\" to the input side of the conduit GUI."
-				""
-				"This will greatly increase the yield of sugar cane as the redstone conduit would emit a real lot of redstone updates into Snad, making it grow the cane at almost one layer per less than a second."
-				""
+				"For max yield, attach a redstone conduit to Snad (force output with Yeta Wrench/Crescent Hammer), then add a \"Redstone Sensor Filter\" to the conduit's input. This gives near-instant sugarcane growth."
 				""
 				"{@pagebreak}"
 				""
-				"You can use a piston and an observer to break the cane early (collect with vacuum chest), then switch to Actually Additions Auto-Breaker which is much superior. Doing that requires you to either loot a Void Crystal from the Lost Cities or the Nether, or just make one yourself when you reach early MV."
+				"Use a piston/observer to break cane early (collect with vacuum chest), then upgrade to the superior Actually Additions Auto-Breaker (requires Void Crystal from Lost Cities/Nether or early MV crafting)."
 				""
-				"Please, for the love of god, don't forget to void the overflow of the cane. As an easy solution, you can use the Storage Void Upgrade while storing the cane in a drawer. Don't let it overflow and possibly lag/corrupt your world!"
+				"&cIMPORTANT!&r Void sugarcane overflow! Use a Storage Void Upgrade in a drawer to prevent lag/corruption. Seriously, void it!"
 			]
 			id: "614A47C0FD24887D"
 			rewards: [{
@@ -1453,7 +1455,7 @@
 				item: "minecraft:sugar_cane"
 				type: "item"
 			}]
-			subtitle: "Sadn"
+			subtitle: "Snad"
 			tasks: [{
 				id: "6B4363239A4AF4BC"
 				item: "utilitarian:snad"
@@ -1463,8 +1465,16 @@
 			y: -1.5d
 		}
 		{
+			description: [
+				"The &bSteam Foundry&r is a machine that uses the &dpressure of steam&r to alloy useful materials into more complex forms. With the high need for steel, this machine will make that process much less painful."
+				""
+				"Furthermore, with the innate &aparallel processing&r that all steam-using multiblocks have, it is &afaster than 12 LV alloy smelters&r."
+				""
+				"{@pagebreak}"
+			]
 			id: "3AC1E101EF831C8D"
 			optional: true
+			subtitle: "Alloying"
 			tasks: [{
 				id: "102A36785D0F55CE"
 				item: "steamadditions:steam_foundry"

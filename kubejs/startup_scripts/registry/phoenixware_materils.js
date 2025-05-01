@@ -119,6 +119,7 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
     event_horizon_matter: shiny,
     antimatter: shiny,
     fiery_bronze: dull,
+    honey: shiny,
   };
 
   for (const key in iconSets) {
@@ -495,7 +496,15 @@ event.create('nitro')
     .color(0xDC143C) // Crimson
     .secondaryColor(0xFFD700) // Gold
     .iconSet('fiery_bronze');
+
+    
+event.create('honey')
+.ingot()
+.color(0xE79A3F) // Crimson
+.secondaryColor(0xCC8F00) // Gold
+.iconSet('honey')
 });
+
 
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
   event.create('infinity')

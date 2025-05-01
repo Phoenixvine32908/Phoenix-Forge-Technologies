@@ -50,6 +50,8 @@
   "gtceu:steam_boiler_info": null,
   "gtceu:transformer": null,
   "gtceu:workable_provider": null,
+  "gtmthings:wireless_energy_hatch_provider": null,
+  "gtmutils:pterb_info": null,
   "hammerlib:root": null,
   "integrateddynamicscompat:drying_basin": null,
   "integrateddynamicscompat:mechanical_drying_basin": null,
