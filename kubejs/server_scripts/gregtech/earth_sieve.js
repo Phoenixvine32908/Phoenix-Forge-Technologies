@@ -2,114 +2,114 @@ ServerEvents.recipes(event => {
  // Cobblestone Sieving (increased chances)
  event.recipes.gtceu.earth_sieve('from_cobblestone')
     .itemInputs('4x minecraft:cobblestone')
-    .chancedOutput('kubejs:mineral_sand_vein_traces', 40, 1) // Slightly lower
+    .chancedOutput('kubejs:mineral_sand_vein_traces', 5000, 1) // Slightly lower
     // Consider adding very low chances for other basic traces if desired
-    .duration(250)
+    .duration(500)
     .EUt(16);
 
   // Stone Sieving (slightly lower chances)
   event.recipes.gtceu.earth_sieve('from_stone')
     .itemInputs('4x minecraft:stone')
-    .chancedOutput('kubejs:redstone_vein_traces', 45, 1) // Slightly lower
-    .chancedOutput('kubejs:coal_vein_traces', 50, 1)    // Slightly lower
-    .chancedOutput('kubejs:iron_vein_traces', 35, 1)    // Slightly lower
-    .chancedOutput('kubejs:copper_vein_traces', 30, 1)   // Slightly lower
-    .chancedOutput('kubejs:apatite_vein_traces', 40, 1)  // Slightly lower
-    .chancedOutput('kubejs:mineral_sand_vein_traces', 45, 1) // Slightly lower
-    .duration(250)
+    .chancedOutput('kubejs:redstone_vein_traces', 4500, 1) // Slightly lower
+    .chancedOutput('kubejs:coal_vein_traces', 5000, 1)    // Slightly lower
+    .chancedOutput('kubejs:iron_vein_traces', 3500, 1)    // Slightly lower
+    .chancedOutput('kubejs:copper_vein_traces', 3000, 1)   // Slightly lower
+    .chancedOutput('kubejs:apatite_vein_traces', 4000, 1)  // Slightly lower
+    .chancedOutput('kubejs:mineral_sand_vein_traces', 4500, 1) // Slightly lower
+    .duration(500)
     .EUt(16);
 
   // Deepslate Sieving (slightly lower chances)
   event.recipes.gtceu.earth_sieve('from_deepslate')
     .itemInputs('4x minecraft:deepslate')
-    .chancedOutput('kubejs:sapphire_vein_traces', 35, 1)   // Slightly lower
-    .chancedOutput('kubejs:olivine_vein_traces', 40, 1)   // Slightly lower
-    .chancedOutput('kubejs:mica_vein_traces', 45, 1)      // Slightly lower
-    .chancedOutput('kubejs:manganese_vein_traces', 30, 1) // Slightly lower
-    .chancedOutput('kubejs:lapis_vein_traces', 45, 1)     // Slightly lower
-    .chancedOutput('kubejs:diamond_vein_traces', 12, 1)    // Slightly lower
-    .chancedOutput('kubejs:nickel_vein_traces', 30, 1)    // Slightly lower
-    .chancedOutput('kubejs:magnetite_vein_traces', 40, 1) // Slightly lower
-    .chancedOutput('kubejs:garnet_vein_traces', 43, 1)    // Slightly lower
-    .chancedOutput('kubejs:casseterite_vein_traces', 25, 1) // Slightly lower
-    .chancedOutput('kubejs:garnet_tin_vein_traces', 20, 1) // Slightly lower
-    .chancedOutput('kubejs:galena_vein_traces', 27, 1)    // Slightly lower
-    .chancedOutput('kubejs:copper_tin_vein_traces', 33, 1) // Slightly lower
-    .chancedOutput('kubejs:topaz_vein_traces', 35, 1)     // Slightly lower
-    .chancedOutput('kubejs:tetrahedrite_vein_traces', 33, 1) // Slightly lower
-    .duration(250)
+    .chancedOutput('kubejs:sapphire_vein_traces', 3500, 1)   // Slightly lower
+    .chancedOutput('kubejs:olivine_vein_traces', 4000, 1)   // Slightly lower
+    .chancedOutput('kubejs:mica_vein_traces', 4500, 1)      // Slightly lower
+    .chancedOutput('kubejs:manganese_vein_traces', 3000, 1) // Slightly lower
+    .chancedOutput('kubejs:lapis_vein_traces', 4500, 1)     // Slightly lower
+    .chancedOutput('kubejs:diamond_vein_traces', 1200, 1)    // Slightly lower
+    .chancedOutput('kubejs:nickel_vein_traces', 3000, 1)    // Slightly lower
+    .chancedOutput('kubejs:magnetite_vein_traces', 4000, 1) // Slightly lower
+    .chancedOutput('kubejs:garnet_vein_traces', 4300, 1)    // Slightly lower
+    .chancedOutput('kubejs:casseterite_vein_traces', 2500, 1) // Slightly lower
+    .chancedOutput('kubejs:garnet_tin_vein_traces', 2000, 1) // Slightly lower
+    .chancedOutput('kubejs:galena_vein_traces', 2700, 1)    // Slightly lower
+    .chancedOutput('kubejs:copper_tin_vein_traces', 3300, 1) // Slightly lower
+    .chancedOutput('kubejs:topaz_vein_traces', 3500, 1)     // Slightly lower
+    .chancedOutput('kubejs:tetrahedrite_vein_traces', 3300, 1) // Slightly lower
+    .duration(500)
     .EUt(16);
 
   event.recipes.gtceu.earth_sieve('from_cobbled_deepslate')
     .itemInputs('4x minecraft:cobbled_deepslate')
-    .chancedOutput('kubejs:sapphire_vein_traces', 40, 1)   // Slightly lower
-    .chancedOutput('kubejs:olivine_vein_traces', 45, 1)   // Slightly lower
-    .chancedOutput('kubejs:mica_vein_traces', 50, 1)      // Slightly lower
-    .chancedOutput('kubejs:manganese_vein_traces', 35, 1) // Slightly lower
-    .chancedOutput('kubejs:lapis_vein_traces', 50, 1)     // Slightly lower
-    .chancedOutput('kubejs:diamond_vein_traces', 17, 1)    // Slightly lower
-    .chancedOutput('kubejs:nickel_vein_traces', 30, 1)    // Slightly lower
-    .chancedOutput('kubejs:magnetite_vein_traces', 40, 1) // Slightly lower
-    .chancedOutput('kubejs:garnet_vein_traces', 43, 1)    // Slightly lower
-    .chancedOutput('kubejs:casseterite_vein_traces', 25, 1) // Slightly lower
-    .chancedOutput('kubejs:garnet_tin_vein_traces', 20, 1) // Slightly lower
-    .chancedOutput('kubejs:galena_vein_traces', 27, 1)    // Slightly lower
-    .chancedOutput('kubejs:copper_tin_vein_traces', 33, 1) // Slightly lower
-    .chancedOutput('kubejs:topaz_vein_traces', 35, 1)     // Slightly lower
-    .chancedOutput('kubejs:tetrahedrite_vein_traces', 33, 1) // Slightly lower
-    .duration(250)
+    .chancedOutput('kubejs:sapphire_vein_traces', 4000, 1)   // Slightly lower
+    .chancedOutput('kubejs:olivine_vein_traces', 4500, 1)   // Slightly lower
+    .chancedOutput('kubejs:mica_vein_traces', 5000, 1)      // Slightly lower
+    .chancedOutput('kubejs:manganese_vein_traces', 3500, 1) // Slightly lower
+    .chancedOutput('kubejs:lapis_vein_traces', 5000, 1)     // Slightly lower
+    .chancedOutput('kubejs:diamond_vein_traces', 1700, 1)    // Slightly lower
+    .chancedOutput('kubejs:nickel_vein_traces', 3000, 1)    // Slightly lower
+    .chancedOutput('kubejs:magnetite_vein_traces', 4000, 1) // Slightly lower
+    .chancedOutput('kubejs:garnet_vein_traces', 4300, 1)    // Slightly lower
+    .chancedOutput('kubejs:casseterite_vein_traces', 2500, 1) // Slightly lower
+    .chancedOutput('kubejs:garnet_tin_vein_traces', 2000, 1) // Slightly lower
+    .chancedOutput('kubejs:galena_vein_traces', 2700, 1)    // Slightly lower
+    .chancedOutput('kubejs:copper_tin_vein_traces', 3300, 1) // Slightly lower
+    .chancedOutput('kubejs:topaz_vein_traces', 3500, 1)     // Slightly lower
+    .chancedOutput('kubejs:tetrahedrite_vein_traces', 3300, 1) // Slightly lower
+    .duration(500)
     .EUt(16);
 
   // Dirt Sieving (slightly lower chances)
   event.recipes.gtceu.earth_sieve('from_dirt')
     .itemInputs('4x minecraft:dirt')
-    .chancedOutput('kubejs:oilsands_vein_traces', 40, 1) // Slightly lower
-    .chancedOutput('kubejs:salts_vein_traces', 35, 1)    // Slightly lower
-    .chancedOutput('kubejs:coal_vein_traces', 15, 1)     // Slightly lower
-    .chancedOutput('kubejs:apatite_vein_traces', 12, 1)   // Slightly lower
-    .chancedOutput('kubejs:mineral_sand_vein_traces', 25, 1) // Slightly lower
-    .chancedOutput('kubejs:iron_vein_traces', 8, 1)     // Slightly lower
-    .chancedOutput('kubejs:copper_vein_traces', 4, 1)    // Slightly lower
-    .chancedOutput('kubejs:lapis_vein_traces', 1, 1)    // Slightly lower
-    .chancedOutput('kubejs:redstone_vein_traces', 3, 1)  // Slightly lower
-    .duration(250)
+    .chancedOutput('kubejs:oilsands_vein_traces', 4000, 1) // Slightly lower
+    .chancedOutput('kubejs:salts_vein_traces', 3500, 1)    // Slightly lower
+    .chancedOutput('kubejs:coal_vein_traces', 1500, 1)     // Slightly lower
+    .chancedOutput('kubejs:apatite_vein_traces', 1200, 1)   // Slightly lower
+    .chancedOutput('kubejs:mineral_sand_vein_traces', 2500, 1) // Slightly lower
+    .chancedOutput('kubejs:iron_vein_traces', 800, 1)     // Slightly lower
+    .chancedOutput('kubejs:copper_vein_traces', 400, 1)    // Slightly lower
+    .chancedOutput('kubejs:lapis_vein_traces', 100, 1)    // Slightly lower
+    .chancedOutput('kubejs:redstone_vein_traces', 300, 1)  // Slightly lower
+    .duration(500)
     .EUt(16);
 
   // Gravel Sieving (slightly lower chances)
   event.recipes.gtceu.earth_sieve('from_gravel')
     .itemInputs('4x minecraft:gravel')
-    .chancedOutput('kubejs:copper_vein_traces', 35, 1)   // Slightly lower
-    .chancedOutput('kubejs:sapphire_vein_traces', 8, 1)   // Slightly lower
-    .chancedOutput('kubejs:redstone_vein_traces', 25, 1)  // Slightly lower
-    .chancedOutput('kubejs:olivine_vein_traces', 12, 1)  // Slightly lower
-    .chancedOutput('kubejs:mica_vein_traces', 14, 1)     // Slightly lower
-    .chancedOutput('kubejs:manganese_vein_traces', 6, 1)  // Slightly lower
-    .chancedOutput('kubejs:nickel_vein_traces', 5, 1)    // Slightly lower
-    .chancedOutput('kubejs:iron_vein_traces', 30, 1)    // Slightly lower
-    .chancedOutput('kubejs:magnetite_vein_traces', 10, 1) // Slightly lower
-    .chancedOutput('kubejs:garnet_vein_traces', 10, 1)   // Slightly lower
-    .chancedOutput('kubejs:casseterite_vein_traces', 3, 1) // Slightly lower
-    .chancedOutput('kubejs:galena_vein_traces', 5, 1)    // Slightly lower
-    .chancedOutput('kubejs:copper_tin_vein_traces', 7, 1) // Slightly lower
-    .chancedOutput('kubejs:coal_vein_traces', 20, 1)     // Slightly lower
-    .duration(250)
+    .chancedOutput('kubejs:copper_vein_traces', 3500, 1)   // Slightly lower
+    .chancedOutput('kubejs:sapphire_vein_traces', 800, 1)   // Slightly lower
+    .chancedOutput('kubejs:redstone_vein_traces', 2500, 1)  // Slightly lower
+    .chancedOutput('kubejs:olivine_vein_traces', 1200, 1)  // Slightly lower
+    .chancedOutput('kubejs:mica_vein_traces', 1400, 1)     // Slightly lower
+    .chancedOutput('kubejs:manganese_vein_traces', 600, 1)  // Slightly lower
+    .chancedOutput('kubejs:nickel_vein_traces', 5000, 1)    // Slightly lower
+    .chancedOutput('kubejs:iron_vein_traces', 3000, 1)    // Slightly lower
+    .chancedOutput('kubejs:magnetite_vein_traces', 1000, 1) // Slightly lower
+    .chancedOutput('kubejs:garnet_vein_traces', 1000, 1)   // Slightly lower
+    .chancedOutput('kubejs:casseterite_vein_traces', 3000, 1) // Slightly lower
+    .chancedOutput('kubejs:galena_vein_traces', 5000, 1)    // Slightly lower
+    .chancedOutput('kubejs:copper_tin_vein_traces', 5000, 1) // Slightly lower
+    .chancedOutput('kubejs:coal_vein_traces', 7000, 1)     // Slightly lower
+    .duration(500)
     .EUt(16);
 
   // Sand Sieving (slightly lower chances)
   event.recipes.gtceu.earth_sieve('from_sand')
     .itemInputs('4x minecraft:sand')
-    .chancedOutput('kubejs:oilsands_vein_traces', 35, 1) // Slightly lower
-    .chancedOutput('kubejs:salts_vein_traces', 60, 1)    // Slightly lower
-    .chancedOutput('kubejs:mineral_sand_vein_traces', 70, 1) // Slightly lower
-    .chancedOutput('kubejs:copper_vein_traces', 3, 1)    // Slightly lower
-    .chancedOutput('kubejs:apatite_vein_traces', 15, 1)   // Slightly lower
-    .chancedOutput('kubejs:topaz_vein_traces', 8, 1)     // Slightly lower
-    .chancedOutput('kubejs:tetrahedrite_vein_traces', 8, 1) // Slightly lower
-    .chancedOutput('kubejs:mineral_sand_vein_traces', 60, 1) // Slightly lower
-    .chancedOutput('kubejs:iron_vein_traces', 5, 1)     // Slightly lower
-    .chancedOutput('kubejs:lapis_vein_traces', 15, 1)    // Slightly lower
-    .chancedOutput('kubejs:diamond_vein_traces', 1, 1)   // Slightly lower
-    .duration(250)
+    .chancedOutput('kubejs:oilsands_vein_traces', 3500, 1) // Slightly lower
+    .chancedOutput('kubejs:salts_vein_traces', 6000, 1)    // Slightly lower
+    .chancedOutput('kubejs:mineral_sand_vein_traces', 7000, 1) // Slightly lower
+    .chancedOutput('kubejs:copper_vein_traces', 3000, 1)    // Slightly lower
+    .chancedOutput('kubejs:apatite_vein_traces', 1500, 1)   // Slightly lower
+    .chancedOutput('kubejs:topaz_vein_traces', 8000, 1)     // Slightly lower
+    .chancedOutput('kubejs:tetrahedrite_vein_traces', 8000, 1) // Slightly lower
+    .chancedOutput('kubejs:mineral_sand_vein_traces', 6000, 1) // Slightly lower
+    .chancedOutput('kubejs:iron_vein_traces', 5000, 1)     // Slightly lower
+    .chancedOutput('kubejs:lapis_vein_traces', 1500, 1)    // Slightly lower
+    .chancedOutput('kubejs:diamond_vein_traces', 100, 1)   // Slightly lower
+    .duration(500)
     .EUt(16);
   // Sifter Recipes for Vein Traces
   //.itemOutputsRanged("kubejs:oilsands_vein_traces", 10, 45)

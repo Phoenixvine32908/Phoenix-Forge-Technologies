@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "kubejs:block/conductive_honey_coil"
+    },
+    "active=true": {
+      "model": "kubejs:block/conductive_honey_coil_active"
+    }
+  }
+}

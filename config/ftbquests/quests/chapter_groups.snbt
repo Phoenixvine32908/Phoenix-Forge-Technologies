@@ -1,6 +1,5 @@
 {
 	chapter_groups: [
-		{ id: "55814AFD7ECBD9F9", title: "Going Through the Ages" }
 		{ id: "693226878D58638A", title: "Climbing the Ranks" }
 		{ id: "74E84404EE17A851", title: "Processing Lines" }
 		{ id: "288DA1F92F7C0A7A", title: "Guides + More" }

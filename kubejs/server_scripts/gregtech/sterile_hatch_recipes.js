@@ -1,7 +1,5 @@
 ServerEvents.recipes(event => {
 
-
-
  event.recipes.gtceu.assembly_line('sterile_cleaning_maintenance_hatch')
      .itemInputs('4x #gtceu:circuits/uhv',
       '2x gtceu:uhv_robot_arm',
@@ -12,7 +10,7 @@ ServerEvents.recipes(event => {
      .inputFluids('gtceu:soldering_alloy 1152','gtceu:tritanium 1152')
      .itemOutputs('gtmutils:sterile_cleaning_maintenance_hatch')
      .duration(600)
-     .EUt(1048576)
+     .EUt(GTValues.VA[GTValues.UHV]/2)
      .stationResearch(b => b.researchStack(Item.of('gtceu:cleaning_maintenance_hatch')).EUt(30720).CWUt(64, 32000))
 
 
@@ -86,7 +84,18 @@ ServerEvents.recipes(event => {
          .CWUt(96, 384000)
          .EUt(368640)
         )
-     
+        event.recipes.gtceu.assembler('uhv_wireless_energy_rec')
+        .itemInputs('gtceu:uhv_sensor','gtceu:uhv_emitter','4x gtceu:ender_pearl_plate','2x #gtceu:circuits/uhv','gtceu:uv_voltage_coil','2x gtceu:uhpic_chip','2x gtceu:ruthenium_trinium_americium_neutronate_single_wire','2x gtceu:red_alloy_single_wire','4x gtceu:darmstadtium_plate',)
+        .inputFluids('gtceu:soldering_alloy 1000')
+        .itemOutputs('gtmthings:uhv_wireless_energy_receive_cover')
+        .duration(200)
+        .EUt(1048576)
+        event.recipes.gtceu.assembler('uhv_wireless_energy_rec_4a')
+        .itemInputs('2x gtmthings:uhv_wireless_energy_receive_cover','32x gtceu:advanced_smd_inductor','2x gtceu:uv_voltage_coil','4x gtceu:ruthenium_trinium_americium_neutronate_quadruple_wire','2x gtceu:double_battery_alloy_plate',)
+        .inputFluids('gtceu:soldering_alloy 1000')
+        .itemOutputs('gtmthings:uhv_4a_wireless_energy_receive_cover')
+        .duration(200)
+        .EUt(1048576)
        // Emitters
        event.recipes.gtceu.assembly_line('uhv_emitter')
         .itemInputs('gtceu:neutronium_frame', 'gtceu:uhv_electric_motor', '4x gtceu:long_stabilized_antimatter_rod', '2x gtceu:gravi_star', '#gtceu:circuits/uhv', '64x gtceu:ruthenium_trinium_americium_neutronate_foil', '32x gtceu:ruthenium_trinium_americium_neutronate_foil', '4x gtceu:europium_single_cable', '2x gtceu:fine_ruthenium_trinium_americium_neutronate_wire')

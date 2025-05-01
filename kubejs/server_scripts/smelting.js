@@ -12,8 +12,9 @@ event.smelting('1x minecraft:oak_log', 'minecraft:charcoal')
     event.smelting('1x minecraft:charcoal', 'minecraft:acacia_log');
     event.smelting('1x minecraft:charcoal', 'minecraft:dark_oak_log');
     event.smelting('1x minecraft:charcoal', 'minecraft:mangrove_log');
-    event.smelting('1x minecraft:charcoal', 'minecraft:crimson_stem');
+    event.smelting('1x minecraft:charcoal', 'minecraft:crimson_stem');i
     event.smelting('1x minecraft:charcoal', 'minecraft:warped_stem');
+    event.smelting('1x minecraft:charcoal', 'gtceu:rubber_log');
     event.smelting('1x gtceu:gold_iron_alloy_ingot', '1x gtceu:gold_iron_alloy_dust');
     event.smelting('1x minecraft:glass', '1x minecraft:sand');
     event.smelting('1x gtceu:wrought_iron_ingot', '1x minecraft:iron_ingot');

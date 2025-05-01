@@ -289,7 +289,9 @@ const recipesToRemove = [
     "rftoolsbuilder:shape_card_quarry_silk",
     "minecraft:kjs/sophisticatedbackpacks_backpack",
     "thermal:fire_charge/invar_ingot_3",
-    ""
+    "gtmthings:shaped/wireless_energy_binding_tool",
+    "gtceu:assembler/tinted_glass",
+    "gtceu:alloy_smelter/tinted_glass",
 ];
 
 ServerEvents.recipes((event) => {

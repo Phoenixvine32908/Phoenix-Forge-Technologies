@@ -1,0 +1,14 @@
+{
+	// Enable or disable the welcome message
+	"enabled": true,
+	// The message to be displayed when a player joins the game for the first time
+	"welcomeMessage": "Welcome to Phoenix Forge Technologies! I hope you enjoy the pack! Report any issues on the discord or github.",
+	// The RGB color code for the welcome message. Examples: 'FF0000' for red, '00FF00' for green, '0000FF' for blue 'FFFF00' for yellow, 'FF00FF' for magenta, '00FFFF' for cyan
+	"welcomeMessageColor": "FF0000",
+	// The URL to be opened when the player clicks the link
+	"clickableUrl": "https://discord.gg/GDXtUDCzkb",
+	// clickable text
+	"clickhere": "[Discord Link]",
+	// The RGB color code for the clickable text '[Click here]'Examples: 'FF0000' for red, '00FF00' for green, '0000FF' for blue'FFFF00' for yellow, 'FF00FF' for magenta, '00FFFF' for cyan, 'FFFFFF' for white
+	"clickableTextColor": "EE82EE"
+}

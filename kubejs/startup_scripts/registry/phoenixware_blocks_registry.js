@@ -61,6 +61,7 @@ StartupEvents.registry("block", phoenixvine => {
           voidcore_actuator: "§dVoidcore Actuator",
           astral_projection_matrix: "§5Astral Projection Matrix",
           eidolon_stabilization_field: "§dEidolon Stabilization Field",
+          high_temperature_fission_casing: "High Temperature Fission Casing",
   
           // 🔥 Phoenix Infuser Components
           phoenix_heart_casing: "§cPhoenix Heart Casing",
@@ -72,6 +73,7 @@ StartupEvents.registry("block", phoenixvine => {
           phoenix_pyre_helix: "§cPhoenix Pyre Helix",
           phoenix_ignition_matrix: "§cPhoenix Ignition Matrix",
           entropy_well_coil: "§cEntropy Well Coil",
+          base_fission_casing: "Graphene Based Fission Rods"
 
       };
 
@@ -90,6 +92,16 @@ StartupEvents.registry("block", phoenixvine => {
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
     .soundType('metal')
+    phoenixvine.create('conductive_honey_coil', 'gtceu:active')
+    .bloom('gtceu:block/conductive_honey_coil_bloom') 
+    // The bloom texture should be 'gtceu:block/casings/fusion/superconducting_coil_bloom'
+    .displayName('Conductive Honey Coil')
+    .soundType('metal')
+    .resistance(6).hardness(5)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .requiresTool(true)
+
 
     phoenixvine.create('infinity_coil_block', 'gtceu:coil')
     .temperature(20000)
@@ -127,7 +139,7 @@ StartupEvents.registry("block", phoenixvine => {
     .soundType('metal')
     phoenixvine.create('akashic_coil_block', 'gtceu:coil')
     .temperature(20000)
-    .level(30)
+    .level(200)
     .energyDiscount(30)
     .tier(12)
     .coilMaterial(() => GTMaterials.get('akashic_chrono_metal'))

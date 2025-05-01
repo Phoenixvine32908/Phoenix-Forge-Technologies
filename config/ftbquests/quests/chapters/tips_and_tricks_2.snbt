@@ -739,7 +739,6 @@
 			y: 0.0d
 		}
 		{
-			dependencies: ["7DA20D65D09F5F6C"]
 			description: [
 				"Unfortunately, this is only an &lEmpty&r Spray Can, which you have to fill with Chemical Dye before using."
 				""

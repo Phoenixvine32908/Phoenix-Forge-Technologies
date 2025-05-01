@@ -5,7 +5,7 @@
 	group: "693226878D58638A"
 	icon: "gtceu:mv_electric_motor"
 	id: "43E779CEEB25D55B"
-	order_index: 1
+	order_index: 2
 	quest_links: [{
 		id: "6FCAD016C795DE93"
 		linked_quest: "7567E885B7166603"
@@ -792,48 +792,6 @@
 			title: "Advanced Assembler"
 			x: 1.125d
 			y: -0.75d
-		}
-		{
-			dependencies: [
-				"7567E885B7166603"
-				"0DBC148D92A9F69F"
-			]
-			description: [
-				"GregTech doesn't provide ways to farm plants or trees, so we made a custom multiblock for the modpack!"
-				""
-				"The multiblock &3Greenhouse&r will be your source of &aWood&r and other plants if you wish."
-				""
-				"Its &aWood&r production should be enough to run &32 Pyrolyse Ovens&r at their lowest Power."
-				""
-				"You can also use this for automated &aResin&r. The yields are kept low to incentivize other rubber sources later in the game."
-				"{@pagebreak}"
-				"&9Note: &rWith &d40 EU/t&r recipes, it needs either 1 &bMV&r energy hatch or 2 &7LV&r energy hatches. Multiblocks will &cnot&r use 2A of one tier to reach the next one for recipe voltage minimums. "
-				""
-				"In other words, the controller needs to say at least \"&bMV&r\" in the GUI to run recipes which say \"&bMV&r\" in EMI, even if they can draw enough EU/t with a lower tier hatch configuration."
-				""
-				"&9Note:&r The structure requires a lot of &9Wrought Iron&r. Make sure you have an &3Arc Furnace&r for that."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o We originally implemented a Chemical Reactor recipe for wood in the modpack to solve the tree problem. Our implementation turned out to be completely busted, so we decided that a rebalance was due. Hopefully, the Greenhouse is a happy middle ground."
-			]
-			icon: "minecraft:oak_sapling"
-			id: "2655B72C9FF3B372"
-			rewards: [{
-				count: 10
-				id: "7DCCFC3ADD071D57"
-				item: "gtceu:ulv_machine_casing"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.75d
-			subtitle: "The power of KubeJS"
-			tasks: [{
-				id: "35CFA225ADAD5D06"
-				item: "gtceu:greenhouse"
-				type: "item"
-			}]
-			title: "Greenhouse"
-			x: 0.0d
-			y: 2.625d
 		}
 		{
 			dependencies: [

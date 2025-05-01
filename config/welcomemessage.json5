@@ -1,13 +1,13 @@
 {
 	// If the mod should only run on dedicated servers. When enabled it's not sent when in a singleplayer world.
-	"onlyRunOnDedicatedServers": true,
+	"onlyRunOnDedicatedServers": false,
 	// Whether an empty line should be send before to first message to separate the welcome from other chat messages that might be sent.
-	"sendEmptyLineBeforeFirstMessage": true,
+	"sendEmptyLineBeforeFirstMessage": false,
 	// The first message a player will receive when joining the world. Can be left empty.
-	"messageOneText": "Welcome to the server!",
+	"messageOneText": "Welcome to Phoenix Forge Technologies!",
 	// 0: black, 1: dark_blue, 2: dark_green, 3: dark_aqua, 4: dark_red, 5: dark_purple, 6: gold, 7: gray, 8: dark_gray, 9: blue, 10: green, 11: aqua, 12: red, 13: light_purple, 14: yellow, 15: white
 	// min: 0, max: 15
-	"messageOneColourIndex": 2,
+	"messageOneColourIndex": 5,
 	// If a link is entered here, the complete message will be clickable.
 	"messageOneOptionalURL": "",
 	// The second message a player will receive when joining the world. Can be left empty.

@@ -26,16 +26,15 @@
 	quests: [
 		{
 			description: [
-				"A GTCEU modern pack focused on adding cool new machines and progression beyond base UHV. "
-				"With a theme of reclaimation of what once was lost, you go through many tiers ranging from wadding through lv to becoming a multiversal power in MAX."
+				"A &aGTCEU Modern&r pack focused on adding cool new machines and progression beyond base &bUHV&r. With a theme of &6reclamation of what once was lost&r, you'll journey through many tiers, starting by wading through &3LV&r and ultimately becoming a multiversal power in &5MAX&r voltage."
 				""
-				"Be sure to check out the other section's of this quest page to see how to start off!"
+				"Be sure to check out the other sections of this quest page to learn &ehow to get started!&r"
 				""
-				"Wanting the early game to be mostly easy, rubber can be made like any other plate with hammers, and steam production was been hugely buffed."
-				""
+				"The early game is intended to be mostly &aeasy&r. To that end, rubber can be made like any other plate using hammers, and steam production has been &2significantly buffed&r."
 				""
 				"{@pagebreak}"
-				"(Yes, the pack icon is ai generated, im quite bad at complicated textures/icons. If anyone has any suggestions would be quite glad to listen!)"
+				""
+				"(Yes, the pack icon is AI generated. I'm not very skilled with complicated textures or icons, so if anyone has any suggestions, I'd be &9very happy&r to hear them!)"
 			]
 			icon: "kubejs:pft_icon"
 			id: "10ED20D1ED4CABD8"
@@ -125,6 +124,12 @@
 					}
 					type: "item"
 				}
+				{
+					count: 10
+					id: "5CFF275DD87204D6"
+					item: "waystones:waystone"
+					type: "item"
+				}
 			]
 			shape: "gear"
 			size: 2.0d
@@ -141,14 +146,15 @@
 		{
 			dependencies: ["10ED20D1ED4CABD8"]
 			description: [
-				"Steam age progression has been removed in lieu of easier recipes, and instead steam has been buffed:"
+				"The Steam Age progression has been simplified with easier recipes, and steam power has been significantly buffed!"
 				""
-				"All steam multiblocks that give steam all give 400 more milibuckets per process."
+				"All steam multiblocks that generate steam now provide an additional &a2000 millibuckets&r per process."
 				""
-				"2 new steam machines are the Steam Foundry and Seperator, perfect for powerful automation using this buffed steam."
+				"Introducing two new steam-powered machines: the &6Steam Foundry&r and the &6Steam Separator&r! These are perfect for powerful automation leveraging this enhanced steam output."
 				""
 				"{@pagebreak}"
-				"The new steam tier materiel is fiery bronze, made with a ratio of 3:1:1 of copper, tin, and dormant ember dust, giving 4 fiery bronze dust, which can be smelted into the ingot."
+				""
+				"The new Steam Age tier material is &cFiery Bronze&r, crafted from a &e3:1:1&r ratio of &ecopper dust&r, &etin dust&r, and &cdormant ember dust&r to yield 4 &cFiery Bronze Dust&r, which can then be smelted into ingots."
 			]
 			icon: "gtceu:fiery_bronze_ingot"
 			id: "17E79085719EAE0B"
@@ -204,7 +210,7 @@
 		{
 			can_repeat: true
 			dependencies: ["4DC49AE1E9C61334"]
-			description: ["Now, you should not run out of juice before you are able to charge this again in hv. But &ojust in case&r, submit yours here and get a fully charged one back."]
+			description: ["You shouldn't run out of power before you can recharge this in HV. But &ojust in case&r, submit yours here and receive a fully charged one in return!"]
 			id: "202F9B4C5659A71F"
 			rewards: [{
 				id: "03AC2600EC04A886"
@@ -233,19 +239,19 @@
 		{
 			dependencies: ["10ED20D1ED4CABD8"]
 			description: [
-				"\"Noob traps\" refer to features or machines that might seem appealing to new players but are actually inefficient or useless. Here are some notable examples in the early game of GregTech (GT):"
+				"\"&cNoob Traps&r\" are early-game features or machines that appear helpful to new players but are inefficient or useless. Here are some examples:"
 				""
-				"HP Steam Macerator and Furnace: These machines are significantly slower – more than 150%! – compared to their multiblock counterparts, the Steam Grinder and Steam Oven. Additionally, the HP Steam Macerator requires Steel to craft."
+				"&bHP Steam Macerator&r and &bHP Steam Furnace&r: These are significantly &4slower&r (over 150%!) than the multiblock &aSteam Grinder&r and &aSteam Oven&r. The &bHP Steam Macerator&r also requires &fSteel&r to craft."
 				""
-				"LV Extruder: This is a classic noob trap because it doesn't have any functional recipes in the game."
-				""
+				"&bLV Extruder&r: A classic noob trap as it has &4no functional recipes&r."
 				""
 				"{@pagebreak}"
-				"LV Equivalents of Steam Machines (excluding the Extractor): These machines operate at the same speed as their HP Steam counterparts but are considerably more expensive to acquire."
 				""
-				"Electric Furnaces and Electric Alloy Smelters: While they might seem like an upgrade, these machines are eventually replaced by the much more powerful Multi-Smelter at the High Voltage (HV) tier. Until then, their steam-powered equivalents – the Steam Oven and HP Steam Alloy Smelter – are perfectly adequate."
+				"&bLV Equivalents of Steam Machines&r (excluding the Extractor): These run at the same slow speed as their HP Steam versions but are much more &cdifficult to acquire&r."
 				""
-				"MV Macerator: Surprisingly, the Medium Voltage (MV) Macerator is actually slower than the early-game Steam Grinder and, crucially, provides no bonus byproducts when processing materials."
+				"&eElectric Furnaces&r and &eElectric Alloy Smelters&r: While seemingly an upgrade, they are outclassed by the &6Multi-Smelter&r at &6HV&r. Until then, the &aSteam Oven&r and &bHP Steam Alloy Smelter&r are sufficient."
+				""
+				"&dMV Macerator&r: Surprisingly &4slower&r than the early &aSteam Grinder&r and provides &4no bonus byproducts&r."
 			]
 			icon: "gtceu:lv_electric_furnace"
 			id: "6510822FAAADED51"
@@ -337,9 +343,9 @@
 		}
 		{
 			description: [
-				"You got to start somewhere, why not here? No, seriously check these out (it will be worth it). "
+				"You've got to start somewhere, so why not right here? Seriously, check these out – it'll be worth your while!"
 				""
-				"While its possible to play base gtceu, adding some mods/recipes that change the gameplay to make it more rewarding, are a staple in modpacks."
+				"While playing base GregTech Community Edition (GTCEu) is certainly possible, many modpacks enhance the experience with additional mods and recipes that make progression feel even more rewarding."
 			]
 			icon: "ae2:guide"
 			id: "4DC49AE1E9C61334"
@@ -365,6 +371,7 @@
 			y: -4.5d
 		}
 		{
+			description: ["The &aIron Furnaces&r mod adds more furnaces to make smelting a little easier in the early game. While you won't be using these all the way through, they do add a nice touch as you begin your GregTech journey."]
 			icon: "ironfurnaces:rainbow_coal"
 			id: "2B4FED49B6A88B6C"
 			rewards: [{
@@ -385,11 +392,11 @@
 		{
 			dependencies: ["2B4FED49B6A88B6C"]
 			description: [
-				"The wrought iron furnace smelts at 160 ticks. "
+				"The &7Wrought Iron Furnace&r smelts in &a160 ticks&r."
 				""
-				"That's 9 seconds, 2 seconds faster than a vanilla furnace! "
+				"That's roughly &b9 seconds&r, a noticeable &22-second&r improvement over a vanilla furnace!"
 				""
-				"It's also pretty cheap with it just being 8 wrought iron ingots around a furnace"
+				"Plus, it's quite cheap to craft, requiring just 8 &fwrought iron ingots&r around a standard furnace."
 			]
 			icon: "ironfurnaces:iron_furnace"
 			id: "4FB345C6C739AD47"
@@ -406,11 +413,11 @@
 		{
 			dependencies: ["2B4FED49B6A88B6C"]
 			description: [
-				"The silver furnace is a direct upgrade to the wrought iron furnace. "
+				"The &esilver furnace&r is a direct upgrade to the &7wrought iron furnace&r."
 				""
-				"It now smelts at 160 ticks. Whoh, its a whole second faster!"
+				"It now smelts at &a140 ticks&r. Whoa, that's a whole &b1 second&r faster!"
 				""
-				"Also, not that exspensive clocking in at 8 silver ingots"
+				"Plus, it's not too expensive, costing just 8 &fsilver ingots&r to craft."
 			]
 			icon: "ironfurnaces:silver_furnace"
 			id: "498871142D981A12"
@@ -427,11 +434,11 @@
 		{
 			dependencies: ["2B4FED49B6A88B6C"]
 			description: [
-				"Upgrading your silver furnace will reward you with this golden furnace straight from Midas himself. "
+				"Upgrading your &esilver furnace&r will reward you with this &6golden furnace&r, straight from Midas himself!"
 				""
-				"It now smelts at 120 ticks, or 6 seconds, now you are gaining some speed!"
+				"It now smelts at &a120 ticks&r, or &b6 seconds&r – now you're gaining some serious speed!"
 				""
-				"Grab some gold from a magnetite vein and upgrade that bad boy. Takes 8 gold ingots and a silver furnace."
+				"Grab some &egold&r from a magnetite vein and upgrade that bad boy. It takes 8 &egold ingots&r and a &esilver furnace&r."
 			]
 			icon: "ironfurnaces:gold_furnace"
 			id: "557B7D9E831147E8"
@@ -448,11 +455,11 @@
 		{
 			dependencies: ["2B4FED49B6A88B6C"]
 			description: [
-				"You thought gold was strong enough? Not so, now it's time to upgrade to the diamond furnace."
+				"Thought &6gold&r was strong enough? Not quite! Now it's time to upgrade to the &bdiamond furnace&r."
 				""
-				"It smelts at 80 ticks which is a cool 5 seconds, your impatience will soon be quenched. "
+				"It smelts at a cool &a80 ticks&r, which is just &b5 seconds&r – your impatience will soon be quenched!"
 				""
-				"Diamonds should be pretty easy to find as of now, but maybe don't do ore processing on them right this second, okay?"
+				"&3Diamonds&r should be fairly easy to find by now, but maybe hold off on ore processing them just yet, okay?"
 			]
 			icon: "ironfurnaces:diamond_furnace"
 			id: "7B5B7B9187A4E157"
@@ -471,11 +478,11 @@
 			description: [
 				"Hrrmmm, wait, you aren't a villager? My bad, continue on."
 				""
-				"The emerald furnace and the crystal furnace smelts at 40 ticks, or 2 seconds per item. "
+				"The &aemerald furnace&r and the &bcrystal furnace&r both smelt at a blazing &a40 ticks&r, or just &b2 seconds&r per item!"
 				""
-				"Now, emeralds are a bit more difficult to get cause now you venture into the &4&lNether&r&r. You can also choose to make the crystal furnace, but it needs an eye of ender, so choose. I won't be responsible for this thou."
+				"Now, &2emeralds&r are a bit trickier to acquire, requiring a venture into the &4&lNether&r. Alternatively, you can craft the &bcrystal furnace&r, but it needs an &5eye of ender&r, so the choice is yours. I won't be responsible for any... unforeseen consequences."
 				""
-				"However, maybe the time is worth it? And the fact that making these furnaces is needed to go make the obsidian furnace. "
+				"However, perhaps the speed is worth the effort? And keep in mind that crafting one of these furnaces is necessary to create the &0obsidian furnace&r. "
 			]
 			icon: "ironfurnaces:emerald_furnace"
 			id: "3F35E9C4DF127F3B"
@@ -492,9 +499,9 @@
 		{
 			dependencies: ["2B4FED49B6A88B6C"]
 			description: [
-				"Cooks items at 20 ticks each. That's one second! This might be mildly insane but you do need to go through all the other furnaces, so it might be quite the project. "
+				"This &0obsidian furnace&r cooks items at a blistering &a20 ticks&r each – that's just &bONE SECOND&r! This might be a tad insane, but you do need to progress through all the other furnaces to get here, so it's quite the achievement!"
 				""
-				"If you have not made the emerald/crystal furnace and gone to the nether to collect the blaze rods, it is now time to do so. Maybe make some upgrades for this one? Please?"
+				"If you haven't crafted the &aemerald furnace&r/&bcrystal furnace&r and ventured into the &4&lNether&r for &6blaze rods&r, now's the time! Maybe even consider some upgrades for this beast? Please?"
 			]
 			icon: "ironfurnaces:obsidian_furnace"
 			id: "1905B775C1995FA2"
@@ -511,16 +518,17 @@
 		{
 			dependencies: ["2B4FED49B6A88B6C"]
 			description: [
-				"The best you can get before the ultimate source of smelting. "
+				"The pinnacle of single-block smelting before the ultimate smelting source!"
 				""
-				"Smelts items 5 ticks each, thats a fourth of a second. "
+				"The &bnetherite furnace&r smelts items in a mere &a5 ticks&r – that's a blazing &bquarter of a second&r per item!"
 				""
-				"Now this might seem insane but don't forget about the factory upgrade, since it smelts 5 items at a time thats 1.20 items smelted per fourth a second."
+				"And don't forget the &eFactory Upgrade&r! Smelting 5 items simultaneously at that speed means a staggering &a20 items processed per second&r!"
 				""
-				"However, you should now graduate to the multi smelter. What you don't know what it is? "
-				"The &2&lMulti Smelter&r&r is one of my favorite multiblocks that you unlock at HV. "
 				""
-				"Now, it might be more power hungry than anything else, but the overclock it can handle, and the parralel from its coils, are well worth it. Don't believe me? Go make it for yourself, you are welcome."
+				"{@pagebreak}"
+				"However, it's now time to graduate to the &2&lMulti Smelter&r! Don't know what that is? The &2&lMulti Smelter&r is one of my favorite High Voltage (HV) multiblocks."
+				""
+				"Yes, it's power-hungry, but its overclocking potential and the parallel processing from its coils are absolutely worth it. Don't believe me? Go build one yourself – you're welcome😊!"
 			]
 			icon: "ironfurnaces:netherite_furnace"
 			id: "65E536FA5C0FFB3E"
@@ -556,8 +564,9 @@
 		{
 			dependencies: ["1AC4E39729811BFB"]
 			description: [
-				"These machines are pretty simple, put em down and they will grab power during the day."
-				"Because they are not greg machines, they can be tick accelled with world acells (do with that info as you will). They aren't the most fun thou, so dw you got more coming on the way."
+				"These generators are straightforward: place them, and they'll passively collect power during the day."
+				""
+				"Since they aren't GregTech machines, they can be tick-accelerated with world accelerators (use that information wisely!). They're not the most engaging, though, so don't worry – more exciting power options are on their way!"
 			]
 			icon: "solarflux:sp_avaritia.neutronium"
 			id: "60C881C46640C2EE"
@@ -587,11 +596,11 @@
 		{
 			dependencies: ["1AC4E39729811BFB"]
 			description: [
-				"Thermal has been a stable of modpacks for years at this point. The dyanmos/boilers are the biggest boon to you as of now. "
+				"Thermal Expansion has been a core part of modpacks for ages! Right now, its &aDynamos&r and &aBoilers&r will be your biggest power boost."
 				""
-				"The sterling dynamo burns burnable items to give power, pretty cool right? "
+				"The &bSterling Dynamo&r generates power by burning items – pretty neat, huh?"
 				""
-				"All of these need upgrades to be really useful, but not 100% nessecary I suppose."
+				"While upgrades significantly enhance their output, they aren't strictly &cnecessary&r to get started."
 			]
 			icon: "thermal_extra:abyssal_upgrade_augment"
 			id: "16B036CDC5931E9C"
@@ -609,39 +618,37 @@
 		{
 			dependencies: ["1AC4E39729811BFB"]
 			description: [
-				"Let's dive into the fascinating world of GregTech power, starting with EU (Energy Units)."
+				"Let's dive into the fascinating world of GregTech power, starting with &6EU (Energy Units)&r."
 				""
-				"Now, the EU system operates quite differently from other power systems you might be familiar with. A crucial distinction is the voltage tier system. Be warned: connecting higher voltage tier machines or energy hatches to lower tier infrastructure will result in catastrophic failure – think explosions!"
+				"Now, the EU system operates quite differently from other power systems you might be familiar with. A crucial distinction is the &bvoltage tier system&r. &4BE WARNED&r: connecting higher voltage tier machines or energy hatches to lower tier infrastructure will result in &4CATASTROPHIC FAILURE – THINK EXPLOSIONS!&r"
 				""
-				"Therefore, heed this advice: never connect a Low Voltage (LV) machine to a Medium Voltage (MV) cable. Trust me on this; we want to safeguard our reliable machinery from voltage mishaps."
+				"Therefore, heed this advice: &cNEVER&r connect a &2Low Voltage (LV)&r machine to a &3Medium Voltage (MV)&r cable. Trust me on this; we want to safeguard our reliable machinery from voltage mishaps."
 				""
-				"Conversely, never connect an LV cable to an MV generator or machine. Doing so will overload and destroy the cable, leading to a frustrating waste of valuable resources."
-				""
-				""
+				"Conversely, &cNEVER&r connect an &2LV cable&r to an &3MV generator or machine&r. Doing so will overload and destroy the cable, leading to a frustrating waste of valuable resources."
 				""
 				"{@pagebreak}"
-				"GregTech wires serve as the conduits for transferring power between your energy generation and your EU-consuming machines. To establish a connection, simply Shift + Right-Click a machine with the wire in hand, or utilize wire cutters. For enhanced efficiency and safety, you can wrap these wires with rubber. This simple step slightly reduces power loss over longer distances and, importantly, prevents accidental electrocution."
 				""
-				"A word of caution: avoid standing on uncovered wires! The consequences are, well, shocking."
+				"&aGregTech wires&r serve as the conduits for transferring power between your energy generation and your EU-consuming machines. To establish a connection, simply &bShift + Right-Click&r a machine with the wire in hand, or utilize &9wire cutters&r. For enhanced efficiency and safety, you can wrap these wires with &eyellow rubber&r. This simple step slightly reduces power loss over longer distances and, importantly, prevents accidental &4electrocution&r."
 				""
-				"For long-distance power transmission without loss or personal risk, consider Superconductors. These advanced wires eliminate energy loss entirely and boast a significantly higher ampacity (current-carrying capacity) compared to their regular counterparts."
+				"A word of caution: &cAVOID&r standing on uncovered wires! The consequences are, well, &4shocking&r."
 				""
-				""
-				""
-				"{@pagebreak}"
-				"Speaking of transmission, let's address Cable Loss. This refers to the gradual depletion of EU as power travels along a cable over distance (per wire block). While this might seem insignificant initially, it can become a factor with longer cable runs. Fortunately, as you progress, you'll gain access to more efficient cables and, ultimately, superconductors, mitigating this issue. However, in the early stages, be mindful of power loss and prioritize superconductors whenever feasible. To quickly locate these advanced cables, use the #superconductor filter in EMI."
-				""
+				"For long-distance power transmission without loss or personal risk, consider &aSuperconductors&r. These advanced wires eliminate energy loss entirely and boast a significantly higher &bampacity&r (current-carrying capacity) compared to their regular counterparts."
 				""
 				"{@pagebreak}"
-				"Now, let's delve into the more intricate aspects of Amps and Converters."
 				""
-				"Amps represent the number of energy packets of a specific voltage tier. While the interplay between voltage and amps can be a bit abstract, remember this analogy: voltage is akin to the size of the energy packets, while amps represent the quantity of those packets. It's crucial to never use cables rated for a lower amperage than the power you intend to transmit. Overloading a cable in this way will cause it to overheat and burn out. Furthermore, exceeding a cable's ampacity can also damage its protective rubber insulation."
-				""
+				"Speaking of transmission, let's address &cCable Loss&r. This is the gradual depletion of EU as power travels along a cable over distance (per wire block). While seemingly minor at first, it can become significant over long runs. Fortunately, progression unlocks more efficient cables and, eventually, &aSuperconductors&r, which eliminate this issue. In the early game, be mindful of loss and prioritize &aSuperconductors&r (use &b#superconductor&r in EMI to find them quickly!)."
 				""
 				"{@pagebreak}"
-				"Converters provide a vital function: enabling the conversion of Forge Energy (FE) into EU, allowing you to integrate your FE-producing machines into the GregTech power system. While they can also convert EU back into FE, this is generally less efficient than utilizing wires, which perform this conversion natively. The current conversion ratio is 1 EU = 4 FE."
 				""
-				"Finally, we have Transformers. These essential devices allow you to step up the voltage tier of your power. For example, you can use them to transform multiple amps of Low Voltage (LV) power into the higher packet strength of Medium Voltage (MV) power. This is particularly useful for enhancing power efficiency over long distances. However, always remember the fundamental rule: you must still ensure that the amperage and voltage ratings of your cables and wires match the power being transmitted. Failure to do so will, without a doubt, result in a rather explosive situation."
+				"Now, let's delve into &eAmps and Converters&r."
+				""
+				"&eAmps&r represent the number of energy packets at a specific voltage. Think of &evoltages&r as the size of the packets and &eamps&r as the quantity. &cNEVER&r use cables with a lower amperage rating than the power you're transmitting! Overloading cables causes them to overheat and burn out, potentially damaging their &eyellow rubber insulation&r."
+				""
+				"&aConverters&r are vital for converting &2Forge Energy (FE)&r into &6EU&r, allowing integration of FE-producing machines into the GregTech power system. While they can also convert &6EU&r back to &2FE&r, using wires is generally more efficient for this native conversion (current ratio: &61 EU = 4 FE&r)."
+				""
+				"{@pagebreak}"
+				""
+				"Finally, we have &bTransformers&r. These essential devices allow you to step up voltage tiers (e.g., multiple LV amps to higher MV packet strength), improving power efficiency over long distances. However, always remember: cable and wire amperage and voltage ratings must match the transmitted power! Failure to do so will result in a rather &4explosive&r situation."
 			]
 			icon: "gtceu:plasma_large_turbine"
 			id: "2620DF5043F6FBF5"
@@ -690,11 +697,11 @@
 		{
 			dependencies: ["1BC893748CB03BEF"]
 			description: [
-				"Shift Right Clicking the multiblock controller with nothing in your hands will show a 3d preview of what it's supposed to look like. And doing so with the terminal will auto build the multi. "
+				"&bShift Right-Clicking&r a multiblock controller without anything in hand shows a &a3D preview&r of its structure. Doing the same while holding a &eTerminal&r will &2automatically build&r the multiblock."
 				""
-				"A word of advice with the terminal, leave your busses/hatches in ae2 or whatever you are using to store all your goodies. The terminal builds off of the jei preview, which means it will put your inputs/outputs where you do not want them. So put them on after the multi forms."
+				"&cImportant Tip for Terminal Building&r: Keep your input/output buses and hatches in your AE2 system (or other storage). The terminal builds based on the JEI preview, which might place your I/O in unwanted locations. Attach them after the multiblock is formed."
 				""
-				"Take a look over in the multiblock dilemmas quest page to see a list of the multis. Have fun building!"
+				"Check the &dMultiblock Dilemmas&r quest page for a list of available multiblocks. Happy building!"
 			]
 			icon: "gtceu:terminal"
 			id: "7AF3113C48ED81B3"
@@ -723,11 +730,9 @@
 		{
 			dependencies: ["1BC893748CB03BEF"]
 			description: [
-				"The Prospector is an amazing tool that'll help you find veins in no time."
+				"The &aProspector&r is an amazing tool that will help you find veins in no time!"
 				""
-				"Its GUI is interactive. Right-clicking will scan for ores, displaying them on a dynamic map."
-				""
-				"&l&3Lore:&r&o Back in OUR day, the portable Prospector was locked to &dLuV&f. Kids these days have it easy."
+				"Its GUI is interactive. &bRight-clicking&r will scan for ores, displaying them on a &3dynamic map&r."
 			]
 			id: "2E36E5755B2F551C"
 			shape: "rsquare"
@@ -744,8 +749,9 @@
 		}
 		{
 			description: [
-				"Shift right click on a machine will copy the settings such as the program and output settings. "
-				"And then right click on another machine to copy settings, this is very useful when making complicated systems and don't want to have to manually set everything."
+				"&bShift Right-Click&r a machine to &aCOPY&r its settings (like program and outputs). Then, simply &aRight-Click&r another machine to &2PASTE&r those settings."
+				""
+				"This is incredibly useful for setting up complex systems quickly without manual configuration!"
 			]
 			icon: "gtceu:machine_memory_card"
 			id: "1CC17AADE2C4156D"
@@ -761,11 +767,11 @@
 		}
 		{
 			description: [
-				"We've changed up the tier materiels a bit, dw thou, its just casings/hulls."
+				"We've tweaked the tier materials slightly – don't worry, it's just the casings/hulls!"
 				""
-				"Steam age now uses Fiery Bronze, Low Voltage now uses Aurum Steel, and MV uses aluminfrost."
+				"The &6Steam Age&r now uses &cFiery Bronze&r, &2Low Voltage (LV)&r uses &eAurum Steel&r, and &bMedium Voltage (MV)&r uses &3Aluminfrost&r."
 				""
-				"If you want to check out the recipes for them, there will be quests for them in each progression tier's quest page. "
+				"Check the quest page for each progression tier to find the crafting recipes! "
 			]
 			icon: "gtceu:aluminfrost_ingot"
 			id: "4FB0C8EE3CA3018C"
@@ -817,7 +823,13 @@
 			y: -6.0d
 		}
 		{
-			description: ["I will be consistently working on this pack on the github, so if any of you would like to pop over there and help/take a look would be greatly appreciated! If you want to collaberate just make a pull request and there is a very high chance I will approve it. I mainly work with kubejs while my friend Oktawia deals with the mod stuff. Oktawia is also the creator of crazyae2additons, which will be in the pack later. Much thanks!"]
+			description: [
+				"I'll be consistently working on this pack on GitHub, so if any of you would like to pop over there and help/take a look would be greatly appreciated! "
+				""
+				"If you want to collaborate just make a pull request and there is a very high chance I will approve it. "
+				""
+				"I mainly work with &bKubeJS&r while my friend &dOktawia&r deals with the mod stuff. &dOktawia&r is also the creator of &5CrazyAE2Additions&r, which will be in the pack later. Much thanks!"
+			]
 			icon: "minecraft:dragon_head"
 			id: "543731D1259C6F0A"
 			subtitle: "Github very nice, yes"
@@ -826,11 +838,15 @@
 				title: "Updates"
 				type: "checkmark"
 			}]
-			x: 0.0d
-			y: -8.0d
+			x: -1.0d
+			y: -7.5d
 		}
 		{
-			description: ["Drawers are cheap, early storage that you will find useful even going into late ev. They can be upgraded with drawer upgrades to increase storage space. Each upgrade is 4 times as strong as the earlier one."]
+			description: [
+				"&aDrawers&r are a cheap and effective early-game storage solution that remains useful even into Late EV!"
+				""
+				"You can significantly expand their capacity using &bDrawer Upgrades&r, with each upgrade providing &eFOUR TIMES&r the storage of the previous tier."
+			]
 			icon: "functionalstorage:oak_1"
 			id: "4316A4F7A5D21762"
 			size: 0.8d
@@ -845,7 +861,11 @@
 			y: -5.2d
 		}
 		{
-			description: ["Dealing with storage early on can be quite annoying. Because of this, sophiscticated storage and backpacks have been added to the pack to allow easier physical storage. To get started, you will need to make some fiery bronze and find some tin."]
+			description: [
+				"Dealing with early-game storage can be a real &cannoyance&r. That's why &aSophisticated Storage&r and &aBackpacks&r have been added to make physical storage much easier!"
+				""
+				"To get started, you'll need to craft some &cFiery Bronze&r and locate some &etin&r."
+			]
 			icon: {
 				Count: 1
 				id: "sophisticatedstorage:iron_chest"
@@ -868,14 +888,14 @@
 		{
 			description: [
 				"Claiming and Unclaiming Chunks:"
-				"Access the Claim Manager: Open your inventory and click the map icon, which is labeled \"Claim Manager\"."
-				"Claim Chunks: Click on the chunks you want to claim (or drag-click to select multiple)."
-				"Unclaim Chunks: Right-click on the chunks you want to unclaim (or drag-click to unclaim multiple). "
+				""
+				"Open the Claim Manager: Click the &aMap Icon&r labeled \"&aClaim Manager&r\" in your inventory."
+				"Claim Chunks: &bLeft-click&r the chunks you want to claim (or drag-click for multiple)."
+				"Unclaim Chunks: &cRight-click&r the chunks you want to unclaim (or drag-click for multiple)."
 				"Force-Loading Chunks:"
-				"1. Access the Claim Manager:"
-				"Open your inventory and click the map icon, which is labeled \"Claim Manager\"."
-				"2. Force-Load Chunks:"
-				"Hold down the Shift key while clicking or right-clicking on the chunks you want to force-load. "
+				""
+				"Access the Claim Manager: Click the &aMap Icon&r labeled \"&aClaim Manager&r\" in your inventory."
+				"Force-Load Chunks: Hold &dShift&r while &bLeft-clicking&r or &cRight-clicking&r the chunks you want to force-load."
 			]
 			icon: "minecraft:oak_door"
 			id: "50EABB8899E42D9D"
@@ -891,9 +911,9 @@
 		}
 		{
 			description: [
-				"Buckets are good till you can afford drums later. Wooden buckets are one time use but cheaper than making a normal bucket.  This is greg, you can't make a bucket with 3 iron ingots, instead use iron plates."
+				"Buckets are a good early option until you can afford &b drums&r later. &8Wooden buckets&r are single-use but cheaper than crafting a normal &f bucket&r (remember, in GregTech, you use &firon plates&r, not ingots!)."
 				""
-				"Once you are a bit farther along, I would advise that you make drums. They all have different tank spaces and rules of what they can hold. They are useful for unclogging machines until you unlock super tanks, which are even better."
+				"Once you progress a bit, I highly recommend making &b drums&r. They offer varying tank capacities and specific holding rules. Drums are especially useful for unclogging machines until you unlock even better &a super tanks&r."
 			]
 			icon: {
 				Count: 1
@@ -926,11 +946,11 @@
 		}
 		{
 			description: [
-				"The speed upgrade is used to double the speed, at the cost of double the fuel. I count this very worth it but you can beg to differ, if you so choose."
+				"&aSpeed Upgrade&r: Doubles smelting speed, but doubles fuel consumption. Personally, I find this trade-off worthwhile."
 				""
-				"The fuel upgrade does quite the opposite and saves fuel, on cost of speed. Not my favorite upgrade."
+				"&eFuel Upgrade&r: Reduces fuel consumption, but slows down smelting. Not my favorite."
 				""
-				"The factory upgrade, not THAT is some real speed. Uses FE to provide 5 slots for items to smelt in parallel and leave heat burning fuels behind. This can also be used in tandem with a speed upgrade for some &oreal&r speed."
+				"&bFactory Upgrade&r: Now THIS is where it's at! Uses &2Forge Energy (FE)&r for power, smelts 5 items in parallel, and doesn't consume fuel. Combine with a &aSpeed Upgrade&r for &oreal speed&r."
 			]
 			icon: "ironfurnaces:augment_speed"
 			id: "111CA73E950DA789"
@@ -943,6 +963,65 @@
 			title: "Furnace Upgrades"
 			x: 0.0d
 			y: 0.5d
+		}
+		{
+			description: [
+				"Certain &6items&r and &9fluids&r will require you to manage &aentire processing lines&r with multiple machines."
+				""
+				"You can figure these out using &a&lEMI&r, but we've also prepared a &2quest page&r to guide you through the exact steps."
+				""
+				"{ \"text\": \"Processing lines quest page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"58F8866781E05E78\" } }"
+			]
+			icon: "hostilenetworks:prediction_matrix"
+			id: "24C242D233AA7634"
+			subtitle: "Efficent"
+			tasks: [{
+				id: "4D30EF73C08FA638"
+				title: "Processing lines"
+				type: "checkmark"
+			}]
+			title: "Processing Lines"
+			x: 7.0d
+			y: -4.0d
+		}
+		{
+			description: [
+				"Remembering all the required circuits can be a bit of a &cchallenge&r."
+				""
+				"If you're ever confused, check the &acircircircuit progression&r quest page to see what &6lies ahead&r."
+				""
+				""
+				"{ \"text\": \"Circuit Quest Page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0DBC148D92A9F69F\" } }"
+			]
+			icon: "gtceu:basic_electronic_circuit"
+			id: "16878AE15F95DD6C"
+			subtitle: "Smart"
+			tasks: [{
+				id: "7CB5724B7F7D8195"
+				title: "Circuits"
+				type: "checkmark"
+			}]
+			title: "Circuit Progression"
+			x: 7.0d
+			y: -3.0d
+		}
+		{
+			description: [
+				"&cImportant Difficulty Information:&r This pack is &4not meant to be played on peaceful&r."
+				""
+				"For the intended gameplay experience, which includes running HNN and progressing with magic mobs, please set the difficulty to &aEasy&r, &eNormal&r, or &cHard&r. &bYou will need mobs to progress!&r"
+			]
+			icon: "minecraft:zombie_head"
+			id: "780F697E8A4E414A"
+			subtitle: "Don't Play On Peaceful!"
+			tasks: [{
+				id: "59BC981B60B84AF7"
+				title: "No Peaceful"
+				type: "checkmark"
+			}]
+			title: "Difficulty"
+			x: 1.0d
+			y: -7.5d
 		}
 	]
 	title: "Genesis"

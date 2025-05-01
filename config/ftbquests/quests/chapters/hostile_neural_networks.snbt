@@ -4,9 +4,126 @@
 	filename: "hostile_neural_networks"
 	group: "74E84404EE17A851"
 	icon: "hostilenetworks:sim_chamber"
-	id: "7C732F9F42D7E825"
-	order_index: 0
+	id: "73F2096CB38E65F6"
+	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			dependencies: ["048971EBF206E0E6"]
+			description: ["Combine clay balls and flaming dust in your alloy smelter to make flaming prediction matrixes"]
+			icon: "hostilenetworks:prediction_matrix"
+			id: "34D80B137BA82413"
+			subtitle: "The Matrix That Predicts Heat"
+			tasks: [{
+				id: "3DA1A16735D74785"
+				title: "Flaming Matrix"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["10E0E13904AAE11C"]
+			description: ["Use the extractor to obtain clay balls from clay blocks."]
+			icon: "minecraft:clay_ball"
+			id: "4301AF437F13241D"
+			subtitle: "Extracting"
+			tasks: [{
+				id: "048971EBF206E0E6"
+				title: "Clay Ball"
+				type: "checkmark"
+			}]
+			x: -0.5d
+			y: -0.5d
+		}
+		{
+			dependencies: ["6AFE867BB5F7A411"]
+			description: ["Unstable amounts of energy are present in this dust. This needs processed asap in order to maintain safe levels. For now, invest all into the flaming prediction matrixes."]
+			icon: "kubejs:flaming_dust"
+			id: "45CA98FEE17E1424"
+			subtitle: "Behold The Flames"
+			tasks: [{
+				id: "43B67900EB8CF2BC"
+				title: "Flaming Dust"
+				type: "checkmark"
+			}]
+			x: 0.5d
+			y: -0.5d
+		}
+		{
+			dependencies: [
+				"4E33CCFC6E4A9A24"
+				"4644112815B788F5"
+				"698677E63B9E4BF0"
+			]
+			description: ["Ignite your dormant ember in the ember igniter via lava and magma dust in order to unleash the power of flaming dust."]
+			icon: "gtceu:lv_ember_igniter"
+			id: "6AFE867BB5F7A411"
+			subtitle: "Ignition"
+			tasks: [{
+				id: "4BB2C901CB7C47AF"
+				title: "Ignite!"
+				type: "checkmark"
+			}]
+			title: "Ignite Your Flames!"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			description: ["{ \"text\": \"Check out here to get yourself some clay\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"00E35709F090336A\" } }"]
+			icon: "minecraft:clay"
+			id: "10E0E13904AAE11C"
+			subtitle: "Building The Base"
+			tasks: [{
+				id: "57B0CDA290ABEFDB"
+				title: "clay"
+				type: "checkmark"
+			}]
+			title: "Clay"
+			x: -0.5d
+			y: 0.5d
+		}
+		{
+			description: ["The basis of this whole system. With the power obtained from sparking this ember, you can simulate the process of mob farming."]
+			icon: "gtceu:dormant_ember_dust"
+			id: "4E33CCFC6E4A9A24"
+			subtitle: "Awaken"
+			tasks: [{
+				id: "48E2FDA18836B493"
+				title: "Dormant"
+				type: "checkmark"
+			}]
+			title: "Dormant Ember"
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			description: ["Macerate magma blocks to get this dust which is also needed to ignite dormant ember."]
+			icon: "gtceu:magma_dust"
+			id: "698677E63B9E4BF0"
+			subtitle: "Hot dusts"
+			tasks: [{
+				id: "473C7DBFE96D1D94"
+				title: "magma"
+				type: "checkmark"
+			}]
+			title: "Magma Dust"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			description: ["You need 1 milibucket of lava per flaming dust. This isn't hard to supply but you should be aware."]
+			icon: "minecraft:lava_bucket"
+			id: "4644112815B788F5"
+			subtitle: "Heat"
+			tasks: [{
+				id: "76652EF7F7DD9DB4"
+				title: "Lava"
+				type: "checkmark"
+			}]
+			x: 2.5d
+			y: 1.0d
+		}
+	]
 	title: "Hostile Neural Networks"
 }

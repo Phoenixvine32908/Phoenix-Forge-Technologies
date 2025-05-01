@@ -54,6 +54,9 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
+  "gtmutils": {
+    "pterb_info": true
+  },
   "avaritia": {
     "extreme_smithing": true,
     "crafting_table": true,
@@ -133,6 +136,9 @@
   "mbd2": {
     "recipe_logic_provider": true,
     "multiblock_provider": true
+  },
+  "gtmthings": {
+    "wireless_energy_hatch_provider": true
   },
   "ars_nouveau": {
     "mob_jar": true
