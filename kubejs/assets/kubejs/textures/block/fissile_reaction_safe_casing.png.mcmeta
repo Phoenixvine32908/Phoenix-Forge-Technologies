@@ -1,0 +1,5 @@
+{
+    "ldlib": {
+        "connection": "kubejs:block/fissile_reaction_safe_casing_ctm"
+    }
+}

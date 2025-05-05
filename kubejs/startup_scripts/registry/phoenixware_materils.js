@@ -450,7 +450,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xADD8E6)
         .secondaryColor(0xE0FFFF)
         .fluidPipeProperties(10000, 120, false, true, true, false)
-        .iconSet('aluminfrost')
+        .iconSet('shiny')
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
         event.create('magma')
         .dust()
@@ -467,6 +467,60 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xFFD700)
         .secondaryColor(0xC0C0C0)
         .iconSet('fiery_bronze')
+  event.create('lumium')
+    .ingot()
+    .color(0xFFFFE0)
+    .secondaryColor(0xFFD700)
+    .iconSet('shiny');
+
+  event.create('signalum')
+    .ingot()
+    .color(0xFF4500)
+    .secondaryColor(0xFFA07A)
+    .iconSet('shiny');
+  event.create('enderium')
+    .ingot()
+    .color(0x008080)
+    .secondaryColor(0x00CED1)
+    .iconSet('shiny');
+    event.create('zircalloy')
+    .ingot()
+    .color(0x002327)
+    .secondaryColor(0x000000)
+    .iconSet('dull');
+    event.create('uranium_oxide')
+    .fluid()
+    .color(0x00FF00)
+    .secondaryColor(0x000000)
+    .iconSet('dull');
+    event.create('haftnium')
+    .ingot()
+    .color(0xB8B8B8)
+    .iconSet('dull');
+
+  event.create('dark_steel')
+    .ingot()
+    .color(0x4F4F4F)
+    .secondaryColor(0x191970)
+    .iconSet('dull');
+
+  event.create('soularium')
+    .ingot()
+    .color(0xA020F0)
+    .secondaryColor(0x8B008B)
+    .iconSet('dull');
+
+  event.create('electrical_steel')
+    .ingot()
+    .color(0xB0E0E6)
+    .secondaryColor(0x87CEEB)
+    .iconSet('dull');
+
+  event.create('copper_alloy')
+    .ingot()
+    .color(0xB87333)
+    .secondaryColor(0xD2691E)
+    .iconSet('dull');
         event.create('blazing_crystal')
     .ingot()
     .color(0xFF8C00) // Dark Orange
@@ -511,8 +565,37 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
 })
 const $PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey')
 const $RotorBuilder = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.RotorProperty');
+const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty")
 
 GTCEuStartupEvents.registry('gtceu:material', event => {
   // Existing materials that get an item form
-  GTMaterials.Silver.setProperty($PropertyKey.ROTOR, new $RotorBuilder(21473, 21474, 28.0, 21474));
+  GTMaterials.Silver.setProperty($PropertyKey.ROTOR, new $RotorBuilder(200, 1000, 2.0, 50));
+GTMaterials.Francium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Zirconium.setProperty($PropertyKey.ORE, new $OreProperty())
+GTMaterials.Radium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Actinium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Polonium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Protactinium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Neptunium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Curium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Berkelium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Californium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Einsteinium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Fermium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Mendelevium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Nobelium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Lawrencium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+  GTMaterials.Strontium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+    GTMaterials.Strontium.addFlags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_BOLT_SCREW)
+
+})
+const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
+
+GTCEuStartupEvents.materialModification(event => {
+
+
+  
+  GTMaterials.get('aluminfrost').setProperty(PropertyKey.TOOL, new $ToolProperty.Builder.of(1.8, 1.7, 2000, 4, [GTToolType.SWORD, GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, GTToolType.WIRE_CUTTER, GTToolType.KNIFE, GTToolType.SOFT_MALLET]).build())
+  GTMaterials.get('akashic_zeronium').setProperty(PropertyKey.TOOL, new $ToolProperty.Builder.of(6.5, 5.9, 2147483647, 6, [GTToolType.SWORD, GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, GTToolType.WIRE_CUTTER, GTToolType.KNIFE, GTToolType.SOFT_MALLET]).build())
 })

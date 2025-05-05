@@ -42,7 +42,7 @@ ServerEvents.recipes(event => {
 
   event.recipes.gtceu.earth_sieve('from_cobbled_deepslate')
     .itemInputs('4x minecraft:cobbled_deepslate')
-    .chancedOutput('kubejs:sapphire_vein_traces', 4000, 1)   // Slightly lower
+    .chancedOutput(' kubejs:sapphire_vein_traces', 4000, 1)   // Slightly lower
     .chancedOutput('kubejs:olivine_vein_traces', 4500, 1)   // Slightly lower
     .chancedOutput('kubejs:mica_vein_traces', 5000, 1)      // Slightly lower
     .chancedOutput('kubejs:manganese_vein_traces', 3500, 1) // Slightly lower

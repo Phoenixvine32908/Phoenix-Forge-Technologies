@@ -1471,17 +1471,61 @@
 				"Furthermore, with the innate &aparallel processing&r that all steam-using multiblocks have, it is &afaster than 12 LV alloy smelters&r."
 				""
 				"{@pagebreak}"
+				"\"Needing a way to create alloys on a more industrial scale you decide to continue this trend of steam. You create a method of &b&lsuperheating&r steam, then using that steam to superheat alloys through heat transference and melt them allowing them to merge and form a new material. A &a&lstronger&r more &d&ldurable&r alloy. "
+				""
+				"Using an bronze base you make the steam transfer into a chamber outputting heat on the bronze base that is designed to withstand temperatures upwards of &425,000 Kelvin&r. This base allows the metals to melt and fuse to make alloys.\""
 			]
 			id: "3AC1E101EF831C8D"
 			optional: true
 			subtitle: "Alloying"
-			tasks: [{
-				id: "102A36785D0F55CE"
-				item: "steamadditions:steam_foundry"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "102A36785D0F55CE"
+					item: "steamadditions:steam_foundry"
+					type: "item"
+				}
+				{
+					count: 14L
+					id: "71FB01B71943B94B"
+					item: { Count: 14, id: "gtceu:steam_machine_casing" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2E7EC7E96839D919"
+					item: { Count: 8, id: "gtceu:bronze_firebox_casing" }
+					type: "item"
+				}
+				{
+					id: "4F9446BEAA21E050"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "7F755A6BDBFAC30A"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+				{
+					id: "1C88EE991A9E06EA"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+			]
 			x: -1.0d
 			y: 6.0d
+		}
+		{
+			id: "33BD1D6D8F30E1D3"
+			size: 0.75d
+			subtitle: "Upgrading Drawers"
+			tasks: [{
+				id: "0F1150B8DE01D871"
+				item: "functionalstorage:copper_upgrade"
+				type: "item"
+			}]
+			x: -3.375d
+			y: 4.875d
 		}
 	]
 	subtitle: ["Harness the power of Steam and learn the basics"]

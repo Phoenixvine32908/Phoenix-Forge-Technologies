@@ -25,6 +25,14 @@ ServerEvents.recipes((event) => {
   event.shapeless("minecraft:crying_obsidian", [
     "1x minecraft:obsidian",
   ]);
+  event.shapeless("gtceu:dormant_ember_dust", [
+    "#forge:tools/mortar",
+    "gtceu:dormant_ember_ingot"
+  ]);
+  event.shapeless("gtceu:permafrost_dust", [
+    "#forge:tools/mortar",
+    "gtceu:permafrost_ingot"
+  ]);
   event.shapeless("4x gtceu:fiery_bronze_dust", [
     "3x gtceu:copper_dust",
     "1x gtceu:tin_dust",
@@ -197,6 +205,33 @@ ServerEvents.recipes((event) => {
     W: "gtceu:copper_single_cable",
     Z: "gtceu:mv_machine_casing",
     S: "gtceu:wrought_iron_plate"
+  }); 
+  event.shaped("gtceu:distillation_tower", ["PWP", "ZSZ", "PWP"], {
+    P: "#gtceu:circuits/hv",
+    W: "gtceu:stainless_steel_large_fluid_pipe",
+    Z: "gtceu:hv_electric_pump",
+    S: "gtceu:hv_machine_hull"
+  });
+  event.shaped("gtceu:pyrolyse_oven", ["APW", "PSP", "AZW"], {
+    P: "#gtceu:circuits/lv",
+    W: "gtceu:tin_quadruple_wire",
+    Z: "gtceu:lv_electric_pump",
+    A: "gtceu:lv_electric_piston",
+    S: "gtceu:lv_machine_hull"
+  });
+  event.shaped("gtceu:pyrolyse_oven", ["APW", "PSP", "AZW"], {
+    P: "#gtceu:circuits/lv",
+    W: "gtceu:tin_quadruple_wire",
+    Z: "gtceu:lv_electric_pump",
+    A: "gtceu:lv_electric_piston",
+    S: "gtceu:lv_machine_hull"
+  });
+  event.shaped("minecraft:glass_bottle", ["   ", " P ", "P P"], {
+    P: "minecraft:glass",
+  });
+  event.shaped("enderio:energetic_conduit", ["BBB", "EEE", "BBB"], {
+    B: "enderio:conduit_binder",
+    E: "enderio:energetic_alloy_ingot"
   });
   event.shapeless("gtceu:steel_dust", [
     "1x gtceu:coke_dust",

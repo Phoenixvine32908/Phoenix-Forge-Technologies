@@ -51,6 +51,33 @@ phoenixvine.create("emberwake_alloy_hearth", "multiblock")
         .workableCasingRenderer('kubejs:block/reliable_naquadah_alloy_machine_casing', 'gtceu:block/multiblock/gcym/blast_alloy_smelter', false)
 
         const GTRecipeTypes = Java.loadClass("com.gregtechceu.gtceu.common.data.GTRecipeTypes")
+
+
+// Atmospheric Accumulator
+phoenixvine.create("atmospheric_accumulator", "multiblock")
+.rotationState(RotationState.NON_Y_AXIS)
+.recipeTypes(GTRecipeTypes.GAS_COLLECTOR_RECIPES)
+.recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
+.appearanceBlock(GCYMBlocks.CASING_CORROSION_PROOF)
+.pattern(definition => FactoryBlockPattern.start()
+    .aisle("CCCCC", "C   C", "CCCCC", "C   C", "CCCCC", "C   C", "CCCCC")
+    .aisle("CCCCC", " GIG ", "CGGGC", " GIG ", "CCCCC", " GIG ", "CIIIC")
+    .aisle("CCCCC", " IOI ", "CGOGC", " IOI ", "CCOCC", " IOI ", "CIOIC")
+    .aisle("CCCCC", " GIG ", "CGGGC", " GIG ", "CCCCC", " GIG ", "CIIIC")
+    .aisle("CC@CC", "C   C", "CCCCC", "C   C", "CCCCC", "C   C", "CCCCC")
+    .where("@", Predicates.controller(Predicates.blocks(definition.get())))
+    .where("I", Predicates.blocks(GTBlocks.CASING_ENGINE_INTAKE.get()))
+    .where("G", Predicates.blocks(GTBlocks.CASING_GRATE.get()))
+    .where("O", Predicates.blocks(GTBlocks.CASING_TITANIUM_PIPE.get()))
+    .where("C", Predicates.blocks(GCYMBlocks.CASING_CORROSION_PROOF.get()).setMinGlobalLimited(70)
+        .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+        .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
+        .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+    )
+    .where(" ", Predicates.air())
+    .build())
+.workableCasingRenderer("gtceu:block/casings/gcym/corrosion_proof_casing",
+    "gtceu:block/machines/gas_collector", false)
 })
 
 

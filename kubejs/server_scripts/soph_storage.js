@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
         ["", null, null],
         ['iron_', 'fiery_bronze', 'lead'],
         ['gold_', 'aurum_steel', 'tin'],
-        ['diamond_', 'alumin_frost', 'copper'],
+        ['diamond_', 'aluminfrost', 'copper'],
         ['netherite_', 'stainless_steel', 'gold'],
     ]
     const sophStorageTypes = [

@@ -129,6 +129,7 @@
 		}
 		{
 			id: "5B755243A1A01A64"
+			subtitle: "Your First Plastic"
 			tasks: [{
 				id: "514F52FD401FD700"
 				item: "gtceu:polyethylene_ingot"

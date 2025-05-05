@@ -1989,16 +1989,9 @@
 		{
 			dependencies: ["53F48B30CAA6163A"]
 			description: [
-				"These are your &bbest bet&r to move your non-GregTech power from the thermal &6dynamos&r. For now, you can use these &3basic energy conduits&r, but you will unlock &abetter ones later&r."
+				"These are your &bbest bet&r to move your non-GregTech power from thermal's &6dynamos&r. For now, you can use these &3basic energy conduits&r, but you will unlock &abetter ones later&r."
 				""
 				"You should also invest in &aextraction cards for EnderIO&r in order to increase power, fluid, and item movement speed."
-				""
-				"Crafting Basic Energy Conduits:"
-				""
-				"To craft these basic conduits, you will need:"
-				""
-				"&66x Conduit Binders&r"
-				"&73x Conductive Iron Ingots&r"
 			]
 			id: "1D92D3F59F0B2908"
 			shape: "circle"
@@ -2080,7 +2073,9 @@
 				""
 				"Be aware that this process can be quite slow in the early game, so setting up the system to passively electrolyze clay dust is highly recommended. "
 				""
-				"Additionally, the water byproduct can be somewhat &e&oannoying&r. To manage this, consider attaching a &bfluid trash can&r to the electrolyzer's fluid output to automatically void the excess water. "
+				"Grr, all this useless &dWater&r you're getting keeps clogging the machine! Maybe you should deal with it by using a &3Voiding Cover&r."
+				""
+				"You should use the Sodium and/or Lithium to make some &6MV Batteries&r."
 				""
 				"If you want to learn how this process line works more in-depth "
 				"{ \"text\": \"check out the quest page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4DE0E8E8A1220B1F\" } }"
@@ -2243,6 +2238,17 @@
 			}]
 			title: "Greenhouse"
 			x: 6.375d
+			y: 0.0d
+		}
+		{
+			id: "0CB698C3B830379A"
+			size: 0.75d
+			tasks: [{
+				id: "007EFEA1E0937099"
+				item: "functionalstorage:gold_upgrade"
+				type: "item"
+			}]
+			x: 7.5d
 			y: 0.0d
 		}
 	]

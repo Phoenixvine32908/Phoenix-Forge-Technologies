@@ -1,5 +1,4 @@
 ServerEvents.recipes(event => {
-
  event.recipes.gtceu.assembly_line('sterile_cleaning_maintenance_hatch')
      .itemInputs('4x #gtceu:circuits/uhv',
       '2x gtceu:uhv_robot_arm',
