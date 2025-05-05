@@ -47,6 +47,10 @@ StartupEvents.registry("block", phoenixvine => {
         stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
         entropy_logic_casing: "§cEntropy Logic Casing PW3",
         glitched_fusion_casing: "§cEntropy Fusion Casing",
+        fissile_heat_safe_casing: "Fissile Based Heat Safe Casing",
+        fissile_reaction_safe_casing: "Fissile Reaction Safe Casing",
+        fission_cooling_casing: "§bFission Cooling Casing",
+        fissile_safe_gearbox: "§bFissile Safe Gearbox",
 
           // 🌌 Voidglass & Finality Constructs
           voidglass_cocoon_shell: "§5Voidglass Cocoon Shell",

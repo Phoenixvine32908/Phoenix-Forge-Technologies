@@ -1,0 +1,8 @@
+
+#Crazy AE2 Addons - Config
+[general]
+	#Enables Circuited Pattern Provider
+	enableCPP = true
+	#Enables Spawner Controller to work also on peacefull mode
+	enablePeacefullSpawner = true
+

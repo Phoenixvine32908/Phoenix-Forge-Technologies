@@ -292,6 +292,17 @@ const recipesToRemove = [
     "gtmthings:shaped/wireless_energy_binding_tool",
     "gtceu:assembler/tinted_glass",
     "gtceu:alloy_smelter/tinted_glass",
+    "gtceu:shaped/distillation_tower",
+    "gtceu:shaped/pyrolyse_oven",
+    "crazyae2addons:energy_exporter",
+    "minecraft:kjs/sophisticatedbackpacks_backpack",
+    "gtceu:smelting/smelt_raw_dormant_ember_ore_to_ingot",
+    "gtceu:smelting/smelt_raw_permafrost_ore_to_ingot",
+    "gtceu:smelting/smelt_permafrost_ore_to_ingot",
+    "gtceu:smelting/smelt_deepslate_permafrost_ore_to_ingot",
+    "gtceu:smelting/smelt_raw_dormant_ember_ore_to_ingot",
+    "gtceu:smelting/smelt_dormant_ember_ore_to_ingot",
+    "gtceu:smelting/smelt_deepslate_dormant_ember_ore_to_ingot"
 ];
 
 ServerEvents.recipes((event) => {

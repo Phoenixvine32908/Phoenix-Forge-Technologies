@@ -60,9 +60,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ore().dust()
         .color(0xe4d6ff).iconSet('diamond')
         .components('1x calcium'); // Changed
-     
         event.create('permafrost')
-        .ore().dust()
+        .ore().ingot()
         .color(0xA7D1EB).iconSet('diamond')
 
     // 🍄 Overworld Addition
@@ -132,7 +131,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x111111).iconSet('diamond')
         .components('1x calcium'); // Changed
         event.create('dormant_ember')
-        .ore().dust()
+        .ore().ingot()
         .color(0x704214).iconSet('shiny')
         .components('1x calcium'); // Changed
         event.create('osmiridium_80_20')

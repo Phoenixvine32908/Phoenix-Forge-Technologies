@@ -269,7 +269,7 @@
 				""
 				"Quests in the top left corner of this Chapter are for the valuable Power options."
 				""
-				"If you stick to &9Steam&r for your Power generation, you'll probably need a &3Large Boiler&r."
+				"If you stick to &9Steam&r for your Power generation, you'll probably need a couple &3High Pressure Boilers&r."
 			]
 			icon: "gtceu:mv_steam_turbine"
 			id: "583D0CC4FAA4FC98"
@@ -308,19 +308,19 @@
 		{
 			dependencies: ["2AD44111B9B39C90"]
 			description: [
-				"Any Steel you encounter in day-to-day life is most likely &7Stainless Steel&r. It is extremely resilient against corrosion.&r"
+				"Any Steel you encounter in day-to-day life is most likely &7Stainless Steel&r. It is extremely resilient against corrosion.&r We have, however, gone with &bFrost Reinforced Stained Steel&r, a custom alloy made to withstand both high and cold temperatures."
 				""
-				"Stainless Steel is the material for &6HV&r components, like Aluminium for &bMV&r and Steel for &7LV&r. It is also used in high quantities for the &3Distillation Tower&r."
+				"Frost Reinforced Stained Steel is the material for &6HV&r components, like &bAluminfrost&r for &bMV&r and &6Aurum Steel&r for &7LV&r. It is also used in high quantities for the &3Distillation Tower&r."
 				""
-				"It requires &cChromium&r, obtained mainly from &cRuby&r, and &2Manganese&r, obtained from &2Pyrolusite&r and others in its vein."
+				"It requires &cChromium&r, obtained mainly from &cRuby&r, &2Manganese&r, obtained from &2Pyrolusite&r and others in its vein, &bFrost&r, obtained by extracting &3permafrost&r dust, and &8Carbon&r, obtained by electrolyzing either coal or charcoal dust."
 				"{@pagebreak}"
-				"Smelting Stainless Steel requires &dHV Power&r, which you likely do not have at this point. Scaling Power Production is crucial."
+				"Smelting Frost Reinforced Stained Steel requires &dHV Power&r, which you likely do not have at this point. Scaling Power Production is crucial."
 				""
 				"If you &9haven't already&r, it would be a good idea to get a second EBF going. They can share blocks, so that means your second EBF only requires &a10 Cupronickel Coils&r instead of 16."
 				""
 				"Have one EBF run off &bMV&r for Aluminium and any other recipes requiring &bMV&r Power, and one running off &6HV&r with &32 MV Energy Hatches&r."
 			]
-			icon: "gtceu:stainless_steel_ingot"
+			icon: "gtceu:frost_reinforced_stained_steel_ingot"
 			id: "16A6AE5C770DB83A"
 			rewards: [{
 				exclude_from_claim_all: true
@@ -332,11 +332,11 @@
 			size: 1.3d
 			subtitle: "HV is in your grasp"
 			tasks: [{
-				id: "3192FF80FBDC7A28"
-				item: "gtceu:stainless_steel_ingot"
+				id: "688A2B0E8F359F8C"
+				item: "gtceu:frost_reinforced_stained_steel_ingot"
 				type: "item"
 			}]
-			title: "Stainless Steel"
+			title: "Frost Reinforced Stained Steel"
 			x: 3.375d
 			y: 0.375d
 		}
@@ -370,7 +370,7 @@
 			}]
 			title: "Transformers"
 			x: 2.25d
-			y: 1.5d
+			y: 1.875d
 		}
 		{
 			dependencies: [
@@ -465,57 +465,6 @@
 			}]
 			title: "Advanced Electrolyser"
 			x: -1.125d
-			y: 1.5d
-		}
-		{
-			dependencies: ["0EFEE489906256AA"]
-			description: [
-				"All four output Dusts obtained from Clay electrolysis are immensely useful."
-				""
-				"We'll ask you to give us a total of &a416 Clay Dust&r for this quest. You may also want to look into other sources of similar materials, such as &aSodalite&r. Check EMI for some ideas."
-				""
-				"You should use the Sodium and/or Lithium to make some &6MV Batteries&r."
-				""
-				"Grr, all this useless &dWater&r you're getting keeps clogging the machine! Maybe you should deal with it by using a &3Voiding Cover&r."
-			]
-			icon: "minecraft:clay_ball"
-			id: "2273DD7E5CD49017"
-			rewards: [{
-				count: 4
-				id: "52A043C0F3795CC8"
-				item: "gtceu:mv_battery_hull"
-				type: "item"
-			}]
-			size: 0.66d
-			subtitle: "Clay is an extremely &mbalanced&r useful material for electrolysis"
-			tasks: [
-				{
-					count: 64L
-					id: "0BE33D992F7761EA"
-					item: "gtceu:sodium_dust"
-					type: "item"
-				}
-				{
-					count: 32L
-					id: "3C7B4B2F850620FB"
-					item: "gtceu:lithium_dust"
-					type: "item"
-				}
-				{
-					count: 64L
-					id: "531FE43ADBEE689B"
-					item: "gtceu:aluminium_dust"
-					type: "item"
-				}
-				{
-					count: 64L
-					id: "0048C85BB03C4811"
-					item: "gtceu:silicon_dust"
-					type: "item"
-				}
-			]
-			title: "A Balanced Quest"
-			x: -2.25d
 			y: 1.5d
 		}
 		{
@@ -851,8 +800,8 @@
 				type: "item"
 			}]
 			title: "250IQ"
-			x: 3.375d
-			y: -1.875d
+			x: 4.29d
+			y: -1.98d
 		}
 		{
 			dependencies: [
@@ -1256,6 +1205,8 @@
 				""
 				"&aPolyethylene (PE)&r is the key to unlocking &6many new things&r. It's commonly used as &dSheets&r, or in &dFluid&r form."
 				""
+				"{ \"text\": \"For a more visual look, go here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"6AB75FDA5C7B873D\" } }"
+				""
 				"&l&3Lore:&r&o The OreDict and fluid name for Polyethylene in 1.12.2 GTCEu was &bplastic&f, for cross-mod compatibility."
 			]
 			icon: "gtceu:polyethylene_plate"
@@ -1551,8 +1502,8 @@
 				type: "item"
 			}]
 			title: "Better Batteries"
-			x: 4.5d
-			y: -1.875d
+			x: 2.25d
+			y: 1.125d
 		}
 		{
 			dependencies: [
@@ -1595,26 +1546,6 @@
 			y: 0.375d
 		}
 		{
-			dependencies: ["22B5AD670496C02D"]
-			description: [
-				"Aluminium Cells are a big upgrade over the Steel Cells or Universal Fluid Cells."
-				""
-				"They can hold any fraction of Fluid - up to &d32 buckets&r!"
-			]
-			icon: "gtceu:aluminium_fluid_cell"
-			id: "53B0D08DB90EC369"
-			size: 0.66d
-			subtitle: "Like cells... only larger!"
-			tasks: [{
-				id: "105EA8621A99C1EC"
-				item: "gtceu:aluminium_fluid_cell"
-				type: "item"
-			}]
-			title: "Large Cells"
-			x: 2.25d
-			y: 0.375d
-		}
-		{
 			dependencies: [
 				"7567E885B7166603"
 				"0DBC148D92A9F69F"
@@ -1622,11 +1553,10 @@
 			description: [
 				"It's quite the investment to own a &3Fluid Drilling Rig&r, but it is &oby far&r the most prominent &6source of Oil&r."
 				""
-				"It pumps fluids from underneath Bedrock itself. Note that the fluids aren't actually there, instead being simulated."
+				"It pumps fluids from underneath Bedrock itself. Note that the fluids aren't actually there, instead being simulated. "
 				""
-				"Fluid veins are stored within &cchunk-sized regions&r. Each vein has a different fluid, but they are mostly types of Oil."
+				"Fluid veins are stored within &cchunk-sized regions&r. Each vein has a different fluid, but they are mostly types of Oil. To check what the veins hold, shift right click your prospector to turn it on to fluid veins mode."
 				""
-				"You can't carry out prospecting for fluid veins &oyet&r - this will come at &6HV&r."
 				"{@pagebreak}"
 				"Each vein generates with a different base yield. This is typically between &d150L&r to &d300L per second&r."
 				""
@@ -1647,8 +1577,6 @@
 				""
 				"&9Natural Gas:&r grants &aRefinery Gas&r but with higher yield than the Overworld vein."
 				"&9Lava:&r hopefully, you know what this is."
-				""
-				"When starting out, you may have to tap randomly until you find something you like. Remember that whatever you pump could also be used to refuel your Fluid Rig."
 			]
 			icon: "gtceu:mv_fluid_drilling_rig"
 			id: "05ADBAE5B6F38956"
@@ -2329,6 +2257,108 @@
 			title: "200IQ"
 			x: -1.123469387755101d
 			y: 2.445153061224488d
+		}
+		{
+			dependencies: ["7567E885B7166603"]
+			description: ["Now that you have some &bAluminium,&r these are a further upgrade to your chests and backpacks. Unlocks another upgrade slot as a bonus."]
+			id: "0DB46141978BE703"
+			size: 0.6d
+			subtitle: "Stronger"
+			tasks: [{
+				id: "58E709FB97CD5AD0"
+				item: "sophisticatedbackpacks:gold_backpack"
+				type: "item"
+			}]
+			x: -2.1d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7567E885B7166603"]
+			description: ["Increases the storage space of your &bfluid&r and &8item&r drawers by 4 times!"]
+			id: "76E52A2C71962757"
+			size: 0.6d
+			subtitle: "Upgrade Your Drawers"
+			tasks: [{
+				id: "484B039DF6C2F1A0"
+				item: "functionalstorage:diamond_upgrade"
+				type: "item"
+			}]
+			x: -2.6999999999999997d
+			y: 1.5d
+		}
+		{
+			description: [
+				"This &bdynamo&r uses &cburnable&r fuels to produce power. While it is less effcient than the steam dynamo in terms of fuel use, the power output is worth it. "
+				""
+				"&oDon't forget to upgrade this with integral componets and multi cycle injectors.&r"
+			]
+			id: "050EE53096074290"
+			shape: "square"
+			size: 0.75d
+			subtitle: "Burning Fuels"
+			tasks: [{
+				id: "10E96352693AC276"
+				item: "thermal:dynamo_stirling"
+				type: "item"
+			}]
+			x: 3.375d
+			y: -1.5d
+		}
+		{
+			dependencies: ["050EE53096074290"]
+			description: [
+				"This upgrade makes all the stats of a machine &aincrease&r. "
+				""
+				"Moreover, because it applies the upgraded stats after other upgrades, these componets also increase the power of other &bupgrades&r."
+			]
+			id: "44D251E5D13F32C5"
+			size: 0.6d
+			subtitle: "Integrity"
+			tasks: [{
+				id: "0A6EA41AF011361C"
+				item: "thermal:upgrade_augment_1"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -2.4d
+		}
+		{
+			dependencies: ["050EE53096074290"]
+			description: [
+				"These are an upgrade to the base &aenergy conduits&r. "
+				""
+				"They move 400 more &bFE/t&r. While &cGreg wires&r do autoconvert to &bFE&r (and are faster eventually), these are &dcheaper&r to spam everywhere."
+			]
+			id: "6341508D7D62AC07"
+			size: 0.6d
+			subtitle: "Energetic Power Movement"
+			tasks: [{
+				id: "7B22131C8FFB15FE"
+				item: "enderio:energetic_conduit"
+				type: "item"
+			}]
+			x: 3.5999999999999996d
+			y: -2.4d
+		}
+		{
+			dependencies: ["050EE53096074290"]
+			description: [
+				"Another option to &bgt pipes&r. "
+				""
+				"These can be upgraded with &aextraction upgrades&r to increase the throughput. "
+				""
+				"While these are strong, &bGreg pipes&r will still pull thier weight. Even steel pipes move more fluids per tick without any upgrades."
+			]
+			id: "1FAF572E0EB00A94"
+			size: 0.6d
+			subtitle: "Fluids Go Brr"
+			tasks: [{
+				id: "5A9911F16180CB1E"
+				item: "enderio:pressurized_fluid_conduit"
+				type: "item"
+			}]
+			x: 2.6999999999999997d
+			y: -1.2d
 		}
 	]
 	subtitle: ["Venture into petrochemistry and refine electronics"]

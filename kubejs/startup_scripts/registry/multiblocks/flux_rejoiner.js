@@ -28,4 +28,5 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))
             .build())
             .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_robust_tungstensteel", "gtceu:block/multiblock/large_miner", false)
+            
 });

@@ -98,7 +98,7 @@
 			y: 1.0d
 		}
 		{
-			description: ["Macerate magma blocks to get this dust which is also needed to ignite dormant ember."]
+			description: ["Macerate magma blocks to get this dust, which is also needed to ignite dormant ember."]
 			icon: "gtceu:magma_dust"
 			id: "698677E63B9E4BF0"
 			subtitle: "Hot dusts"

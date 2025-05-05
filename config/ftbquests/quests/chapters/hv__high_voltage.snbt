@@ -559,10 +559,12 @@
 				"727075AAF9F91FAE"
 			]
 			description: [
-				"&aTitanium&r has the highest corrosion resistance and strength-to-density ratio of any metallic element, so it's only natural that we'll be using it as the main material in our &5EV&r machinery."
+				"&aSource Strengthend Titanium&r has the highest corrosion resistance, magic resistance, and strength-to-density ratio of any metallic element, so it's only natural that it will be used as a base for &5EV&r machinery."
 				""
-				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours."
+				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source&r, which is obtained by running any plants through the Alchemical Imbuer multiblock and then mixing that weakened &5Source&r with &bdiamond&r, &cruby&r, &1lapis&r, &aemerald&r, or &damethyst&r. "
 				""
+				""
+				"{@pagebreak}"
 				"A quick aside - now we're at &5EV&r, single block generators are about to fall out of style! You'll need to run several &3HV Generators&r to keep up - later, upgrades to Multiblock Generators will be required."
 				""
 				"Whilst Multiblock generators are much more expensive, you'll find them to be much more energy efficient!"

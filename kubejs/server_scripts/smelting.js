@@ -12,12 +12,19 @@ event.smelting('1x minecraft:oak_log', 'minecraft:charcoal')
     event.smelting('1x minecraft:charcoal', 'minecraft:acacia_log');
     event.smelting('1x minecraft:charcoal', 'minecraft:dark_oak_log');
     event.smelting('1x minecraft:charcoal', 'minecraft:mangrove_log');
-    event.smelting('1x minecraft:charcoal', 'minecraft:crimson_stem');i
+    event.smelting('1x minecraft:charcoal', 'minecraft:crimson_stem');
     event.smelting('1x minecraft:charcoal', 'minecraft:warped_stem');
     event.smelting('1x minecraft:charcoal', 'gtceu:rubber_log');
     event.smelting('1x gtceu:gold_iron_alloy_ingot', '1x gtceu:gold_iron_alloy_dust');
     event.smelting('1x minecraft:glass', '1x minecraft:sand');
     event.smelting('1x gtceu:wrought_iron_ingot', '1x minecraft:iron_ingot');
+    event.smelting('1x gtceu:dormant_ember_dust', '1x gtceu:raw_dormant_ember')
+    event.smelting('1x gtceu:dormant_ember_dust', '1x gtceu:deepslate_dormant_ember_ore')
+    event.smelting('1x gtceu:dormant_ember_dust', '1x gtceu:dormant_ember_ore')
+    event.smelting('1x gtceu:permafrost_dust', '1x gtceu:raw_permafrost')
+    event.smelting('1x gtceu:permafrost_dust', '1x gtceu:permafrost_ore')
+    event.smelting('1x gtceu:permafrost_dust', '1x gtceu:deepslate_permafrost_ore')
+
   
     // --- Wood (Bark Block) to Charcoal Recipes ---
     event.smelting('1x minecraft:charcoal', 'minecraft:oak_wood');

@@ -1,6 +1,6 @@
 ServerEvents.recipes(event => {
 
-
+    Java.loadClass("com.gregtechceu.gtceu.api.GTValues")
 
     event.recipes.gtceu.assembly_line('high_pressure_arc_furnace')
         .itemInputs('4x #gtceu:circuits/zpm',
