@@ -31,19 +31,4 @@ const WorldGenLayers = Java.loadClass("com.gregtechceu.gtceu.api.data.worldgen.W
             )
         )
     })
-    event.add("nether/zirconim", vein => {
-        vein.weight(35)
-        vein.density(0.4)
-        vein.clusterSize(25)
-        vein.layer("netherrack")
-        vein.dimensions("minecraft:the_nether")
-        vein.heightRangeUniform(-50, -1)
-        vein.layeredVeinGenerator(generator => generator
-            .buildLayerPattern(pattern => pattern
-                .layer(l => l.weight(3).mat(GTMaterials.Uraninite).size(1, 2))
-                .layer(l => l.weight(3).mat(GTMaterials.Zirconium).size(3, 2))
-
-            )
-        )
-    })
 })

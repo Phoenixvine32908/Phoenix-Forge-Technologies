@@ -15,7 +15,7 @@ ServerEvents.recipes(event => {
             .duration(100)
             .EUt(20)
     const assemblerRecipes = [
-        //["hostilenetworks:framework", ["4x minecraft:clay_ball", "2x minecraft:redstone", "1x minecraft:smooth_stone", "2x #gtceu:circuits/lv"], ["1x hostilenetworks:blank_data_model"], 600, 16],
+        ["hostilenetworks:framework", ["4x minecraft:clay_ball", "2x minecraft:redstone", "1x minecraft:smooth_stone", "2x #gtceu:circuits/lv"], ["1x hostilenetworks:blank_data_model"], 600, 16],
       ]
 
     assemblerRecipes.forEach(([id, inputs, outputs, dur, power]) => {

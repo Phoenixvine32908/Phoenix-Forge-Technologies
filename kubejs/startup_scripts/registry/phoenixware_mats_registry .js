@@ -9,9 +9,14 @@ function makeDust(event, id, color, cmp){
 
 StartupEvents.registry('item', event => {
 
-    event.create('galaxium_core')
-    .displayName("§6Galaxium Core")
-    .texture("kubejs:item/galaxium_core")
+    event.create('basic_fuel_rod')
+    .displayName("§2Basic Fuel Rod")
+    .texture("kubejs:item/basic_fuel_rod")
+
+    event.create('zirconium_rod')
+    .displayName("§2Zirconium Fission Rod")
+    .texture("kubejs:item/zirconium_rod")
+
     event.create('flaming_mesh')
     .displayName("§cFlaming Mesh")
     .texture("kubejs:item/flaming_mesh")

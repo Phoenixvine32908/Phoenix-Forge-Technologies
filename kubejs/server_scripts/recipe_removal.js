@@ -302,7 +302,11 @@ const recipesToRemove = [
     "gtceu:smelting/smelt_deepslate_permafrost_ore_to_ingot",
     "gtceu:smelting/smelt_raw_dormant_ember_ore_to_ingot",
     "gtceu:smelting/smelt_dormant_ember_ore_to_ingot",
-    "gtceu:smelting/smelt_deepslate_dormant_ember_ore_to_ingot"
+    "gtceu:smelting/smelt_deepslate_dormant_ember_ore_to_ingot",
+    "ars_nouveau/imbuement_lapis",
+    "gtceu:shaped/casing_hv",
+    "gtceu:assembler/casing_hv",
+    "gtceu:shaped/hv_machine_hull",
 ];
 
 ServerEvents.recipes((event) => {
