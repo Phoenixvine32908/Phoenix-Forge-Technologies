@@ -155,12 +155,6 @@
 			y: 4.5d
 		}
 		{
-			id: "18F88B89C6DD238E"
-			linked_quest: "1137D2BA7E03D685"
-			x: 3.0d
-			y: 6.0d
-		}
-		{
 			id: "052E542D4D30CC93"
 			linked_quest: "466AC4DD902115EF"
 			shape: "rsquare"

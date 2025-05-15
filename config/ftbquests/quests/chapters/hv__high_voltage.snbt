@@ -557,6 +557,7 @@
 			dependencies: [
 				"6958029B5514D4EC"
 				"727075AAF9F91FAE"
+				"76681EFD9B76F401"
 			]
 			description: [
 				"&aSource Strengthend Titanium&r has the highest corrosion resistance, magic resistance, and strength-to-density ratio of any metallic element, so it's only natural that it will be used as a base for &5EV&r machinery."
@@ -665,10 +666,7 @@
 			y: -4.125d
 		}
 		{
-			dependencies: [
-				"41D32C5178760F47"
-				"4AFD3073C731A1E4"
-			]
+			dependencies: ["4AFD3073C731A1E4"]
 			description: [
 				"The next &3Circuit Assembler&r. This tier of Circuit Assembler is only required for one type of Circuit - your first ever &aMainframe&r."
 				""
@@ -685,44 +683,6 @@
 			title: "HV Circuit Assembler"
 			x: 7.875d
 			y: -3.0d
-		}
-		{
-			dependencies: [
-				"124B32A0583A636A"
-				"16E3465CF94E2BDD"
-				"4024C831C77101CA"
-			]
-			description: [
-				"Regardless of whether you're playing on Peaceful or not, you will have to defeat the &4Ender Dragon&r to return to the Overworld safely."
-				""
-				"Prepare yourself with a bow, a few arrows, a blade, and some beds &7(speedrunner strats!)&r."
-				""
-				"This quest will print the &alocation of the nearest Stronghold&r in chat. This &cwon't work&r if you have cheats disabled, unfortunately."
-				"{@pagebreak}"
-				"&9The End&r has even more new veins and materials to harvest, such as &ePlatinum&r and &7Naquadah&r! Similar to Nether ores, End ores are &6worth two Overworld ores&r."
-				""
-				"&aEyes of Ender&r are additionally used in crafting certain components, or for creating &5Quantum Eyes&r."
-			]
-			icon: "minecraft:end_portal_frame"
-			id: "41D32C5178760F47"
-			rewards: [{
-				command: "/locate structure minecraft:stronghold"
-				icon: "minecraft:end_portal_frame"
-				id: "30A15D4EF08A423C"
-				title: "Nearest Stronghold location printed in chat"
-				type: "command"
-			}]
-			size: 0.75d
-			subtitle: "...but not the end of your playthrough"
-			tasks: [{
-				count: 12L
-				id: "30A89DD2A22EE314"
-				item: "minecraft:ender_eye"
-				type: "item"
-			}]
-			title: "The End of an Era"
-			x: 7.875d
-			y: -1.875d
 		}
 		{
 			dependencies: [
@@ -813,33 +773,6 @@
 			title: "The Cleanroom"
 			x: 6.75d
 			y: -3.0d
-		}
-		{
-			dependencies: ["41D32C5178760F47"]
-			description: [
-				"This prospector boasts a &6higher range&r than its &7LV&r counterpart."
-				""
-				"Sneak right-clicking with the Prospector in your hand will change its mode to &6Fluid Prospection&r. This will instead display the base &dyield&r of Fluid veins, along with how full they are."
-				""
-				"&9Reminder:&r The yield of a &3Fluid Drilling Rig&r is directly proportional to the \"fullness\" of the vein. When low enough, the output will default to a yield that can be defined in the CEu config."
-				"{@pagebreak}"
-				"&9Tip:&r When the fullness drops below 30% &7(alright, rough estimate)&r, you should consider moving to another vein for the sake of power-to-yield efficiency. Aiming for the &3Advanced Fluid Drilling Rig&r in &5EV&r may interest you, as not only does it significantly boost the output, but it also reduces the rate at which it drains the vein!"
-				""
-				"&cCaution:&r Due to a bug, the Prospector display may be offset by one chunk, so avoid placing your Rig in the corners of a fluid vein, or you may end up pumping the wrong fluid!"
-			]
-			icon: "gtceu:prospector.hv"
-			id: "2124BF15006733D5"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Fluids just got easier"
-			tasks: [{
-				id: "1ED12D379EEE0CBA"
-				item: "gtceu:prospector.hv"
-				type: "item"
-			}]
-			title: "HV Prospector"
-			x: 9.0d
-			y: -1.875d
 		}
 		{
 			dependencies: ["0EFEE489906256AA"]
@@ -1009,118 +942,6 @@
 			y: 1.5d
 		}
 		{
-			dependencies: [
-				"316FF60D6FFE97CE"
-				"6A304E453D74C57C"
-			]
-			description: [
-				"&cTNT&r (Trinitrotoluene, to be pedantic) can't be prepared with the usual \"Gunpowder and Sand\" routine anymore. Instead, you'll have to produce &aGelled Toluene&r and react it with Sulfuric Acid to make TNT."
-				""
-				"Using the &3HV Chemical Reactor&r recipe will double the yield of &aGelled Toluene&r at the cost of requiring additional inputs."
-				"{@pagebreak}"
-				"We don't have any easy tips to give you for &aToluene&r. We regret to inform you that making TNT is going to be tricky no matter which route you take."
-				""
-				"That being said, don't miss out on the direct &aHeavy Fuel&r to &aToluene&r recipe in the single block &3Distillery&r."
-				""
-				"&aToluene&r can also optionally be used in &5EV&r to make &dGasoline&r."
-				""
-				"&cTNT&r is used in the &3Implosion Compressor&r to make Gems. It also blows stuff (and your friends) up."
-				""
-				"Technically, Dynamite or Powerbarrels could also be used... but Dynamite is a pain to obtain, whereas Powerbarrels are weaker."
-			]
-			icon: "minecraft:tnt"
-			id: "2B7B214EDE0B45A2"
-			size: 0.75d
-			subtitle: "An explosive discovery"
-			tasks: [
-				{
-					id: "1CB85F57BA45252D"
-					item: "gtceu:gelled_toluene"
-					type: "item"
-				}
-				{
-					id: "04BF6A36E965C348"
-					item: "minecraft:tnt"
-					type: "item"
-				}
-			]
-			title: "TNT"
-			x: 7.875d
-			y: 0.375d
-		}
-		{
-			dependencies: ["390E59F05132FCB8"]
-			description: [
-				"If you've killed a Blaze before, you may have noticed it dropped &eSulfur Dust&r instead of a &cBlaze Rod&r."
-				""
-				"In order to get &6Blaze Powder&r, you must instead combine &7Carbon Dust&r and &eSulfur Dust&r in a &3HV Chemical Reactor&r."
-			]
-			icon: "minecraft:blaze_powder"
-			id: "16E3465CF94E2BDD"
-			size: 0.75d
-			subtitle: "Took a while to get some of this, right?"
-			tasks: [{
-				count: 12L
-				id: "00CC416ACB6CA99F"
-				item: "minecraft:blaze_powder"
-				type: "item"
-			}]
-			title: "Blaze Powder"
-			x: 6.75d
-			y: -1.875d
-		}
-		{
-			dependencies: [
-				"1137D2BA7E03D685"
-				"2B7B214EDE0B45A2"
-			]
-			description: [
-				"If you've killed an Enderman before, you may have noticed it dropped &aEnderpearl Dust&r instead of an Ender Pearl. In order to get &aEnder Pearls&r, you must make them from Enderpearl Dust in the &3Implosion Compressor&r."
-				""
-				"&9Pro tip for non-Peaceful players&r: Trapping Endermen in Boats makes them much easier to kill! Use a &dButchery Knife&r when slaying Endermen for the Looting 3 bonus."
-				""
-				"In the long term, &aEnderpearl Dust&r should be made in an &3HV Mixer&r."
-			]
-			icon: "minecraft:ender_pearl"
-			id: "4024C831C77101CA"
-			rewards: [{
-				id: "3A4CB6D323D4FAEE"
-				item: {
-					Count: 1
-					id: "minecraft:enchanted_book"
-					tag: {
-						RepairCost: 0
-						StoredEnchantments: [{
-							id: "minecraft:sharpness"
-							lvl: 5s
-						}]
-						display: {
-							Name: "{\"text\":\":)\"}"
-						}
-					}
-				}
-				type: "item"
-			}]
-			size: 0.75d
-			subtitle: "Darn \"artificial gating\""
-			tasks: [
-				{
-					id: "3DC62CA60F006A06"
-					item: "gtceu:ender_pearl_dust"
-					optional_task: true
-					type: "item"
-				}
-				{
-					id: "20403A639228B809"
-					item: "minecraft:ender_pearl"
-					type: "item"
-				}
-			]
-			title: "Ender Pearls"
-			x: 7.875d
-			y: -0.75d
-		}
-		{
 			dependencies: ["3568BC9742092FC5"]
 			description: [
 				"Doping is the process of intentionally introducing impurities into semiconductors to alter their properties."
@@ -1156,28 +977,6 @@
 			title: "Phosphorus Boules"
 			x: 9.0d
 			y: -3.0d
-		}
-		{
-			dependencies: ["26394C1290D70AB6"]
-			description: [
-				"The &3Implosion Compressor&r turns the Dust form of Gems into their Gem form."
-				""
-				"It's required to get &aEnder Pearls&r."
-				""
-				"In descending order of efficiency, &4ITNT&r, &cTNT&r, &6Dynamite&r, or &ePowerbarrels&r can be used for the Implosion."
-			]
-			icon: "gtceu:implosion_compressor"
-			id: "1137D2BA7E03D685"
-			size: 0.75d
-			subtitle: "Controlled GregTech Explosion"
-			tasks: [{
-				id: "52E617BBF3718471"
-				item: "gtceu:implosion_compressor"
-				type: "item"
-			}]
-			title: "Implosion Compressor"
-			x: 9.0d
-			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -1367,7 +1166,6 @@
 			y: -0.75d
 		}
 		{
-			dependencies: ["4024C831C77101CA"]
 			description: [
 				"If you're looking for a change of scene, the &5Void Dimension&r is a perfectly empty area for you to build your factory."
 				""
@@ -1375,6 +1173,7 @@
 			]
 			icon: "javd:portal_block"
 			id: "1011551290D3D7EA"
+			optional: true
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Goodbye, cruel Overworld"
@@ -1384,14 +1183,12 @@
 				type: "item"
 			}]
 			title: "Void Dimension Portal"
-			x: 9.0d
-			y: 0.375d
+			x: 0.0d
+			y: -3.96d
 		}
 		{
 			dependencies: ["55552589C581EE9E"]
 			description: [
-				"If you heeded our suggestion for Peaceful mode, you shouldn't need to defend yourself from pesky mobs - but this armor provides some nice QoL that you may enjoy!"
-				""
 				"&9Helmet:&r Provides &dNight vision&r (the default keybind is &4M&r, but check for conflicts)"
 				""
 				"&9Chestplate:&r Provides nothing interesting right now, but can be further upgraded into the &aAdvanced&r version at the very end of &6HV&r."
@@ -1506,6 +1303,47 @@
 			title: "Dense Coprocessors"
 			x: 9.0d
 			y: -5.25d
+		}
+		{
+			id: "76681EFD9B76F401"
+			size: 0.75d
+			tasks: [{
+				id: "5C933AA40CF32815"
+				item: "gtceu:source_of_magic_bucket"
+				type: "item"
+			}]
+			x: 5.625d
+			y: -6.375d
+		}
+		{
+			id: "79333AE8A6745E5D"
+			tasks: [{
+				id: "658EAD49B69975D1"
+				item: "ars_nouveau:source_gem"
+				type: "item"
+			}]
+			x: 2.0d
+			y: -7.5d
+		}
+		{
+			id: "2D6F0875CC953C16"
+			tasks: [{
+				id: "1E8A3856666013E7"
+				item: "gtceu:alchemical_imbuer"
+				type: "item"
+			}]
+			x: 5.0d
+			y: -8.0d
+		}
+		{
+			id: "2892D18FFD789666"
+			tasks: [{
+				id: "16B3934E77DC8D7E"
+				item: "minecraft:amethyst_shard"
+				type: "item"
+			}]
+			x: 3.0d
+			y: -9.5d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]

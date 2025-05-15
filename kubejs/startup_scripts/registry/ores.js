@@ -133,6 +133,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create('dormant_ember')
         .ore().ingot()
         .color(0x704214).iconSet('shiny')
+        .addOreByproducts('iron')
         .components('1x calcium'); // Changed
         event.create('osmiridium_80_20')
         .ore().dust()

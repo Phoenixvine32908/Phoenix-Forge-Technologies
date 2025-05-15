@@ -1,0 +1,406 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "crazy_ae2"
+	group: "288DA1F92F7C0A7A"
+	icon: {
+		Count: 1
+		id: "crazyae2addons:mob_storage_cell_256k"
+		tag: { }
+	}
+	id: "7A47CC76362F9CE0"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Crazy AE2 Addons is an extension mod for Applied Energistics 2, aimed at introducing highly specialized, creative, and often &9crazy&r tools to automate, monitor, and manipulate your ME network in ways never thought possible. "
+				"Whether you're optimizing fluid logistics, experimenting with redstone driven crafting or just want to inject some madness into your automation chains - this mod has something for you."
+			]
+			id: "347369BDEB49D3BE"
+			subtitle: "Welcome to the Crazy AE2 Addons"
+			tasks: [{
+				id: "3809B241458880EE"
+				title: "Introduction"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependency_requirement: "one_completed"
+			description: [
+				"Some GregTech machines require a specific circuit value to perform certain recipes. The Crazy Pattern Modifier allows you to assign a circuit number directly to a processing pattern - ensuring the machine runs with the correct configuration every time."
+				""
+				"Hints:"
+				"- Enable \"ignore NBT\" mode to allow more flexible crafting (e.g., any enchanted book, not just Sharpness V)."
+			]
+			id: "12D3177401E08197"
+			tasks: [{
+				id: "6356AE1A3CD69BE1"
+				item: "crazyae2addons:crazy_pattern_modifier"
+				type: "item"
+			}]
+			x: -1.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"Managing large-scale crafting tasks just got easier! The Crazy Pattern Multiplier acts like a backpack for your patterns (holding up to 36 of them) and allows you to multiply all quantities using simple math expressions. Scale your recipes effortlessly and craft smarter, not harder."
+				""
+				"Hints:"
+				""
+				"- Supports expressions like 2x(3+1), 1/2, or 1k."
+				""
+				"- To divide enter a fraction like 0.5 to halfen or 0.25 to quater it."
+				""
+				"- Can apply multipliers to patterns in its own inventory or any other inventory on right-click."
+			]
+			id: "0CD95312DB6114BA"
+			tasks: [{
+				id: "2A05E538FA5348D5"
+				item: "crazyae2addons:crazy_pattern_multiplier"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			description: [
+				"Some machines—especially in modpacks with GregTech or other tech-heavy mods—feature recipes with a probability of success. Automating these can be tricky, as failed crafts might waste resources or clog your system."
+				""
+				"Crazy AE2 Addons introduces tools specifically designed to handle such scenarios, allowing for reliable and intelligent automation of chance-based recipes."
+			]
+			id: "0498146C53045DEF"
+			tasks: [{
+				id: "73999EAD724776B7"
+				title: "Chanced Recipes"
+				type: "checkmark"
+			}]
+			x: -2.0d
+			y: 0.5d
+		}
+		{
+			description: ["With the Impulsed Pattern Provider, you gain precise control over crafting throughput. It sends patterns, and repeats on redstone pulse. This allows external logic (like detecting output success) to decide when the next attempt should be made - perfect for crafting systems where retries are expected."]
+			id: "7FFACF69235B73F7"
+			tasks: [{
+				id: "0C565B12296BF125"
+				item: "crazyae2addons:impulsed_pattern_provider"
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.0d
+		}
+		{
+			description: [
+				"Automation meets awareness! The Signalling Interface detects when set items enter its inventory and emits a redstone signal in response. "
+				""
+				"- Insert items using automation other than AE2, otherwise they may bypass the interface by instantly moving to the network's storage."
+				""
+				"- Requires a Redstone Card upgrade to function."
+				""
+				"- With a Fuzzy Card, it emits signal even if the item only fuzzy matches the filter."
+				""
+				"- With an Inverter Card, it emits signal when an item not matching the filter is inserted."
+			]
+			id: "14A974262FAB1001"
+			tasks: [{
+				id: "10CE0877BD4EEF46"
+				item: "crazyae2addons:signalling_interface"
+				type: "item"
+			}]
+			x: -2.5d
+			y: 2.0d
+		}
+		{
+			description: ["Crazy AE2 Addons introduces a unique way to interact with mobs through the ME network using specialized storage mechanics. With Mob Containment Units and related infrastructure, you can capture, store, and utilize mobs just like items."]
+			id: "50518D541CE80A33"
+			tasks: [{
+				id: "1FE2BF30FA4BF0F5"
+				title: "Mob Storage"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.5d
+		}
+		{
+			description: ["The Mob Annihilation Plane is a specialized variant of the AE2 annihilation plane that targets living entities instead of blocks or items. When placed in the world and connected to the ME network, it automatically tranfers any mob that touches its face directly to your storage."]
+			id: "6733801BA8BD7BEF"
+			tasks: [{
+				id: "34F77FD8D7086BE6"
+				item: "crazyae2addons:mob_annihilation_plane"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 2.0d
+		}
+		{
+			description: ["Similar to the regular export bus, but made for mobs, it enables automated deployment of stored creatures into the world."]
+			id: "3B1F8FA18F3A9BA5"
+			tasks: [{
+				id: "5262844FB1361EA6"
+				item: "crazyae2addons:mob_export_bus"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.0d
+		}
+		{
+			description: [
+				"The Mob Farm Multiblock is a fully automated structure that harvests mob drops from mobs stored inside your ME network. It functions as an industrial-grade alternative to traditional mob farms, providing consistent output with precise control."
+				""
+				"Key Features:"
+				""
+				"- Drops are automatically stripped of any NBT data and routed to the ME network."
+				""
+				"- Energy-hungry—make sure your ME system has enough power."
+				""
+				"- Can be configured for spawn rate, loot amount and mob type."
+			]
+			id: "550D57863000ED35"
+			tasks: [{
+				id: "5189A5AFBFD7E131"
+				item: "crazyae2addons:mob_farm_wall"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			description: [
+				"The Spawner Controller is a multiblock system that simulates mob spawning from real Spawner blocks and inserts mobs directly into your ME network. This lets you capture mobs automatically without lag or real entity spawns."
+				""
+				"How It Works"
+				""
+				"- Once formed, the structure disables all spawners inside."
+				""
+				"- Every 20 ticks, some mobs are inserted into the ME network."
+				""
+				"- The controller reads the mob type."
+				""
+				"- No real mob spawns - just clean, repeatable mob capture."
+			]
+			id: "4E9FAACE0EBAF7D3"
+			tasks: [{
+				id: "741A18A1954923F1"
+				item: "crazyae2addons:spawner_controller_wall"
+				type: "item"
+			}]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			description: [
+				"Crazy AE2 Addons introduces a powerful variable system that allows your ME network to store, process, and react to integer-based data in real time. These data variables serve as the foundation for logic circuits, automation control, monitoring systems, and more."
+				""
+				"&lWhat Are Data Variables?&r"
+				""
+				"Data variables are network-wide integer values stored in a ME Data Controller Block. They can represent anything—from machine status and resource counts to timers, counters, and crafting logic flags."
+			]
+			id: "315EBF16E6301668"
+			tasks: [{
+				id: "07DBA6C58E61C0C6"
+				title: "Data Variables"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: 2.5d
+		}
+		{
+			description: [
+				"The ME Data Controller is the heart of Crazy AE2 Addons data system. It stores network variables extracted by Data Extractor and allows other blocks (like Display, Data Tracker or Data Processor) to use them."
+				""
+				"- Insert AE Cell Components into the controllers slots."
+				""
+				"- Each 1K of a Cell Component equals 1 variable of storage (16K = 16 variables, etc.)."
+			]
+			id: "273715FB87E65585"
+			tasks: [{
+				id: "752DA83E3CC86BF2"
+				item: "crazyae2addons:me_data_controller"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.0d
+		}
+		{
+			description: [
+				"The Data Extractor is a specialized part that reads numeric data from the adjacent block entity and sends these values into your ME network as variables. It works together with the ME Data Controller to store dynamic data like machine progress, energy levels, or anything else."
+				""
+				"How to Use"
+				""
+				"- Place the part: Attach the Data Extractor to an ME cable on the side facing the block entity you want to monitor."
+				""
+				"- Ensure a Data Controller: Your network needs a ME Data Controller somewhere in the same network to receive extracted variables."
+				""
+				"- Open its GUI: Right click the part to view the available data paths."
+				""
+				"- Fetch available data: Click the Fetch button to scan the target block entity. The top list will show all numeric fields."
+				""
+				"- Select data: Use the numbered buttons to choose which data value to extract."
+				""
+				"- Name your variable: Enter a variable name (ASCII only, and must start with a \\&) in the text field and click Save. This will label the data inside the ME Data Controller."
+				""
+				"- Set extraction delay: Enter the number of ticks between reads in the Delay field (default 20) and save."
+			]
+			id: "014317DBF306661D"
+			tasks: [{
+				id: "122CE5AD0A112B2B"
+				item: "crazyae2addons:data_extractor"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 4.0d
+		}
+		{
+			description: [
+				"The Data Processor is an advanced block that allows you to perform basic logical and mathematical operations on variables from your ME Data Controller, creating a new variable based on formula you design."
+				"How to Use"
+				""
+				"- Place the block: Connect the Data Processor to your ME network."
+				""
+				"- Input a variable: Right click the block and type in the name of a variable you want to operate on. Must start with a \\&."
+				""
+				"- Insert cards:"
+				"    - Place Logic Cards into the slots."
+				"    - Each card represents an operation that will be performed."
+				""
+				"- Configure operations:"
+				"    - Click the wrench button next to a card slot to open detailed settings."
+				"    - Assign input values (direct numbers, other variables, or registers) and specify where the result should go."
+				""
+				"- Registers:"
+				"    - Use temporary registers (\\&\\&0, \\&\\&1, \\&\\&2, \\&\\&3) for intermediate results between operations."
+				""
+				"- Outputs:"
+				"    - You can write results into new variables inside the ME Data Controller. The operation will terminate on any write to the Controller's storage."
+				""
+				"- Loops:"
+				"    - The system prevents infinite loops automatically."
+				""
+				"- Speed: The system is not tick based. All updates/calculations/reads/writes happen instantly."
+			]
+			id: "119C80D7AAA9965F"
+			tasks: [{
+				id: "580819F9AC5FF27C"
+				item: "crazyae2addons:data_processor"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 5.0d
+		}
+		{
+			description: [
+				"The Isolated Data Processor is a high-speed logic block that works similarly to the standard Data Processor but executes its logic continuously every tick on its own without waiting for external triggers."
+				"How to Use"
+				""
+				"- Place the block: Connect the Isolated Data Processor to your ME network."
+				""
+				"- Insert cards:"
+				""
+				"- Configure operations the same as in normal data processor."
+				""
+				"- Looping logic:"
+				"    - Every tick, the processor automatically reads the next card and executes the associated operation."
+				"    - Conditional jump cards (HIT, HIF) allow skipping to other slots dynamically."
+				"    - Multiple writes: It wont stop on a write to ME Data Controller. But each write overwrites the previous one."
+				""
+				"Because it runs independently and constantly, the Isolated Data Processor is perfect for creating always-on logic like counters or timers."
+			]
+			id: "3283C12B5D3D61BB"
+			tasks: [{
+				id: "63342E850A0B4F79"
+				item: "crazyae2addons:isolated_data_processor"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 5.0d
+		}
+		{
+			description: [
+				"The Display is a visual part you can attach to any ME cable to show text or network variables directly in the world. It is updating dynamically as variables change."
+				"How to Use"
+				""
+				"- Place the part: Attach the Display to an ME cable."
+				""
+				"- Configure text: Right-click to open its screen and input the text you want to display."
+				"    - Use \\&NAME to insert a variable’s value."
+				"    - Use \\&nl to create a new line."
+				""
+				" - Variable linking:"
+				"    - When you reference \\&NAME, the Display automatically subscribes to that variable from your ME Data Controller."
+				"    - When the variable changes, the Display updates instantly."
+				""
+				"- Rendering: Display scales text to fit the available space."
+			]
+			id: "59BD4E61E04AD7D0"
+			tasks: [{
+				id: "2C63B35ED0EDC093"
+				item: "crazyae2addons:display_monitor"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 6.0d
+		}
+		{
+			description: [
+				"The Data Tracker is a simple block that watches the value of a specific ME network variable and emits a redstone signal based on its state. When the value is greater than zero, the block outputs full redstone power; no power otherwise."
+				"How to Use"
+				""
+				"- Place the block: Attach the Data Tracker to any spot in your ME network."
+				""
+				"- Set the tracked variable: Right-click the block to open its interface. Enter the name of the variable you want to monitor (for example, \\&ABC)."
+				""
+				"- Save and apply: Press the \"Save\"."
+				""
+				"- Redstone output: Whenever the value of the tracked variable is greater than 0, the Data Tracker will emit a redstone signal. Otherwise, it stays off."
+				""
+				"You can use the Data Tracker to trigger external systems based on for example the progress of your furnace smelting things."
+			]
+			id: "65C570A2AF7192F1"
+			tasks: [{
+				id: "509F8558D8C69EC9"
+				item: "crazyae2addons:data_tracker"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 6.0d
+		}
+		{
+			description: [
+				"When configuring Data Processors and Isolated Data Processors, you will use logic cards to define operations:"
+				""
+				"- Add Card: Adds two numbers."
+				""
+				"- Sub Card: Subtracts the second number from the first."
+				""
+				"- Mul Card: Multiplies two numbers."
+				""
+				"- Div Card: Divides the first number by the second (only if the second is not zero)."
+				""
+				"- Min Card: Returns the smaller of two numbers."
+				""
+				"- Max Card: Returns the larger of two numbers."
+				""
+				"- BSR Card: Bitwise right shift (shifts bits of the first number to the right by the second number)."
+				""
+				"- BSL Card: Bitwise left shift (shifts bits of the first number to the left by the second number)."
+				""
+				"- HIT Card: Conditional jump. If the first number is greater than 0, jumps to the slot number specified by the second number."
+				""
+				"- HIF Card: Conditional jump. If the first number is less than or equal to 0, jumps to the slot number specified by the second number."
+				""
+				"Logic cards allow you to create complex math operations, conditional checks, loops, and branching behaviors."
+			]
+			id: "74B29BD134A937B1"
+			tasks: [{
+				id: "678821523FF0DD0A"
+				item: "crazyae2addons:logic_card"
+				type: "item"
+			}]
+			x: 0.0d
+			y: 7.0d
+		}
+	]
+	title: "Crazy AE2"
+}

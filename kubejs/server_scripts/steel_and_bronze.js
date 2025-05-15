@@ -41,6 +41,10 @@ ServerEvents.recipes((event) => {
   event.shapeless("1x gtceu:programmed_circuit", [
     "#gtceu:circuits",
   ]);
+  event.shapeless("4x gtceu:tin_alloy_dust", [
+    "3x gtceu:iron_dust",
+    "gtceu:tin_dust"
+  ]);
   event.shapeless("1x gtceu:red_alloy_dust", [
     "4x minecraft:redstone",
     "1x gtceu:copper_dust"
@@ -67,10 +71,6 @@ ServerEvents.recipes((event) => {
     S: "gtceu:wrought_iron_ingot",
     L: "ironfurnaces:copper_furnace",
     G: "minecraft:glass"
-  });
-  event.shaped("gtceu:wood_plate", [" L ", " S ", " S "], {
-    S: "#minecraft:planks",
-    L: "#forge:tools/hammers",
   });
   event.shaped("gtceu:large_steam_compressor", ["SPS", "PCP", "SLS"], {
     S: "gtceu:steam_machine_casing",
@@ -152,7 +152,7 @@ ServerEvents.recipes((event) => {
     Z: "minecraft:stick",
     R: "minecraft:iron_ingot"
   });
-  event.shaped("gtceu:steam_machine_casing", ["PFP", "PZP", "PWP"], {
+  event.shaped("2x gtceu:steam_machine_casing", ["PFP", "PZP", "PWP"], {
     P: "gtceu:fiery_bronze_plate",
     W: "#forge:tools/wrenches",
     F: "#forge:tools/hammers",
@@ -164,7 +164,7 @@ ServerEvents.recipes((event) => {
     F: "#forge:tools/hammers",
     Z: "gtceu:steel_frame"
   });
-  event.shaped("gtceu:bronze_firebox_casing", ["PRP", "RFR", "PRP"], {
+  event.shaped("2x gtceu:bronze_firebox_casing", ["PRP", "RFR", "PRP"], {
     P: "gtceu:fiery_bronze_plate",
     F: "gtceu:fiery_bronze_frame",
     R: "gtceu:fiery_bronze_rod",
@@ -190,6 +190,14 @@ ServerEvents.recipes((event) => {
     P: "gtceu:aluminfrost_plate",
     W: "#forge:tools/wrenches",
   });
+  event.shaped("gtceu:hv_machine_casing", ["PPP", "PWP", "PPP"], {
+    P: "gtceu:frost_reinforced_stained_steel_plate",
+    W: "#forge:tools/wrenches",
+  });
+  event.shaped("gtceu:ev_machine_casing", ["PPP", "PWP", "PPP"], {
+    P: "gtceu:source_imbued_titanium_plate",
+    W: "#forge:tools/wrenches",
+  });
   event.shaped("gtceu:bronze_machine_casing", ["PPP", "PWP", "PPP"], {
     P: "gtceu:fiery_bronze_plate",
     W: "#forge:tools/wrenches",
@@ -200,11 +208,24 @@ ServerEvents.recipes((event) => {
     Z: "gtceu:lv_machine_casing",
     S: "gtceu:wrought_iron_plate"
   });
+
   event.shaped("gtceu:mv_machine_hull", ["SPS", "WZW", "   "], {
     P: "gtceu:aluminfrost_plate",
     W: "gtceu:copper_single_cable",
     Z: "gtceu:mv_machine_casing",
     S: "gtceu:wrought_iron_plate"
+  }); 
+  event.shaped("gtceu:hv_machine_hull", ["SPS", "WZW", "   "], {
+    P: "gtceu:frost_reinforced_stained_steel_plate",
+    W: "gtceu:gold_single_cable",
+    Z: "gtceu:hv_machine_casing",
+    S: "gtceu:polyethylene_plate"
+  }); 
+  event.shaped("gtceu:ev_machine_hull", ["SPS", "WZW", "   "], {
+    P: "gtceu:source_imbued_titanium_plate",
+    W: "gtceu:aluminium_single_cable",
+    Z: "gtceu:evv_machine_casing",
+    S: "gtceu:polyethylene_plate"
   }); 
   event.shaped("gtceu:distillation_tower", ["PWP", "ZSZ", "PWP"], {
     P: "#gtceu:circuits/hv",

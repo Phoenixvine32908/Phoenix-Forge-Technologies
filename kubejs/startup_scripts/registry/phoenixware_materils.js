@@ -84,11 +84,15 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
 GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
   const shiny = GTMaterialIconSet.SHINY;
   const dull = GTMaterialIconSet.DULL;
+  const radioactive = GTMaterialIconSet.RADIOACTIVE;
+  const bright = GTMaterialIconSet.BRIGHT;
 
   const iconSets = {
     omnium: shiny,
     sculk_alloy: dull,
+    chemical: bright,
     eltz: shiny,
+    radio: radioactive,
     monium: shiny,
     phoenix_enriched_tritanium: shiny,
     phoenix_enriched_naquad: shiny,
@@ -422,7 +426,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
   event.create('infinity')
         .ingot()
         .element(GTElements.get("infinity"))
-        .color(0xffffff)
         .iconSet('infinity')
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_SMALL_GEAR)
         event.create('fiery_bronze')
@@ -478,26 +481,45 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .color(0xFF4500)
     .secondaryColor(0xFFA07A)
     .iconSet('shiny');
+    event.create('low_level_radioactive_waste')
+    .ingot()
+    .color(0x262a23)
+    .secondaryColor(0x365320)
+    .iconSet('radio');
   event.create('enderium')
     .ingot()
     .color(0x008080)
     .secondaryColor(0x00CED1)
     .iconSet('shiny');
+    event.create('source_imbued_titanium')
+    .ingot()
+    .color(0xc600ff)
+    .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
+    .iconSet('metallic');
+    event.create('hafnium_chloride')
+    .fluid()
+    .color(0xC0C0C0)
+    .iconSet('bright');
+    event.create('source_of_magic')
+    .fluid()
+    .color(0x8F00FF)
+    .iconSet('bright');
+    event.create('medium_pressure_fissile_steam')
+    .fluid()
+    .color(0x7da10e)
+    .iconSet('bright');
     event.create('zircalloy')
     .ingot()
     .color(0x002327)
     .secondaryColor(0x000000)
+    .blastTemp(2700, 'low', GTValues.VA[GTValues.HV], 600)
+    .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_ROD,GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_SPRING,GTMaterialFlags.GENERATE_FRAME)
     .iconSet('dull');
     event.create('uranium_oxide')
     .fluid()
     .color(0x00FF00)
     .secondaryColor(0x000000)
     .iconSet('dull');
-    event.create('haftnium')
-    .ingot()
-    .color(0xB8B8B8)
-    .iconSet('dull');
-
   event.create('dark_steel')
     .ingot()
     .color(0x4F4F4F)
@@ -557,6 +579,12 @@ event.create('honey')
 .color(0xE79A3F) // Crimson
 .secondaryColor(0xCC8F00) // Gold
 .iconSet('honey')
+event.create('zircon')
+.ingot()
+.color(0xF4F8FF) // Crimson
+.secondaryColor(0xF4F8FF) // Gold
+.iconSet('radio')
+
 });
 
 
@@ -572,6 +600,8 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
   GTMaterials.Silver.setProperty($PropertyKey.ROTOR, new $RotorBuilder(200, 1000, 2.0, 50));
 GTMaterials.Francium.setProperty($PropertyKey.INGOT, new $IngotProperty())
 GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Hafnium.setProperty($PropertyKey.INGOT, new $IngotProperty())
+GTMaterials.Hafnium.setProperty($PropertyKey.ORE, new $OreProperty())
 GTMaterials.Zirconium.setProperty($PropertyKey.ORE, new $OreProperty())
 GTMaterials.Radium.setProperty($PropertyKey.INGOT, new $IngotProperty())
 GTMaterials.Actinium.setProperty($PropertyKey.INGOT, new $IngotProperty())
