@@ -40,7 +40,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
    .where('C', Predicates.blocks('gtceu:steam_machine_casing').setMinGlobalLimited(10) // Corrected line
    .or(Predicates.abilities(PartAbility.STEAM_IMPORT_ITEMS).setMaxGlobalLimited(1))
    .or(Predicates.abilities(PartAbility.STEAM).setMaxGlobalLimited(1))
-   .or(Predicates.abilities(PartAbility.STEAM_EXPORT_ITEMS).setMaxGlobalLimited(1)))
+   .or(Predicates.abilities(PartAbility.STEAM_EXPORT_ITEMS).setMaxGlobalLimited(6)))
    .where('E', Predicates.controller(Predicates.blocks(definition.get())))
    .where("D", Predicates.blocks("gtceu:steel_frame"))
         .build())

@@ -33,7 +33,7 @@ ServerEvents.recipes((event) => {
       .notConsumable(woodType[0])
       .inputFluids("water 1000")
       .itemOutputs(`64x ${woodType[1]}`, `6x ${woodType[0]}`)
-      .duration(1200)
+      .duration(600)
       .EUt(32)
       .circuit(1);
 
@@ -58,7 +58,7 @@ ServerEvents.recipes((event) => {
       .notConsumable(seedType[0])
       .inputFluids("water 1000")
       .itemOutputs(`${seedType[2]}x ${seedType[1]}`)
-      .duration(1200)
+      .duration(600)
       .EUt(32)
       .circuit(1);
     greg
@@ -76,11 +76,11 @@ ServerEvents.recipes((event) => {
     .notConsumable("gtceu:rubber_sapling")
     .inputFluids("water 1000")
     .itemOutputs(
-      "16x gtceu:rubber_log",
+      "32x gtceu:rubber_log",
       "3x gtceu:rubber_sapling",
-      "4x gtceu:sticky_resin"
+      "16x gtceu:sticky_resin"
     )
-    .duration(1200)
+    .duration(800)
     .EUt(32)
     .circuit(1);
   greg
@@ -103,7 +103,7 @@ ServerEvents.recipes((event) => {
     .itemOutputs(
       "4x pamhc2crops:peanutitem",
     )
-    .duration(1200)
+    .duration(600)
     .EUt(32)
     .circuit(1);
     greg
@@ -123,7 +123,7 @@ ServerEvents.recipes((event) => {
     .itemOutputs(
       "4x pamhc2crops:waterchestnutitem",
     )
-    .duration(1200)
+    .duration(600)
     .EUt(32)
     .circuit(1);
     greg

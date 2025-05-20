@@ -322,6 +322,7 @@ function mixerRecipe(event, id, inputs, outputs, dur, power, program) {
 ServerEvents.recipes(event => {
   const alloySmelterRecipes = [
     ["steel_ingot_coal_iron_ingot", ["1x minecraft:coal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
+    ["steel_ingot_charcoal_iron_ingot", ["1x minecraft:charcoal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
     ["steel_ingot_coal_dust_iron_ingot", ["1x #forge:dusts/coal", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
     ["steel_ingot_coal_dust_iron_dust", ["1x #forge:dusts/coal", "1x gtceu:iron_dust"], ["1x gtceu:steel_ingot"], 200, 7],
     ["steel_ingot_coal_dust_wrought_iron_ingot", ["1x #forge:dusts/coal", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],

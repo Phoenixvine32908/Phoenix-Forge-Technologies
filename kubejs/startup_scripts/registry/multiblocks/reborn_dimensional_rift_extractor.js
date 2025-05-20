@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('reborn_dimensional_rift_extractor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('dimensional_rift_extractor')
+        .recipeTypes('dimensional_anchor')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()

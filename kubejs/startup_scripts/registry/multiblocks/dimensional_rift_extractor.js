@@ -1,5 +1,5 @@
 GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
-    phoenixvine.create('dimensional_rift_anchor')
+    phoenixvine.create('dimensional_anchor')
         .category('multiblock')
         .setEUIO('in') 
         .setMaxIOSize(1, 1, 1, 1)

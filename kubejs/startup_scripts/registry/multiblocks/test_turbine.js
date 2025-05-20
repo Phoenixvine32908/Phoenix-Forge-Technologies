@@ -54,7 +54,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
                 
             )
         phoenixvine.create("confectionery_fabricator", "simple")
-        .tiers(GTValues.LV, GTValues.MV, GTValues.HV, GTValues.EV, GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
+        .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
         .definition((tier, builder) =>
             builder 
                 .rotationState(RotationState.NON_Y_AXIS)

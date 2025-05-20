@@ -44,6 +44,6 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("K", Predicates.controller(Predicates.blocks(definition.get())))
     .build()
     )
-    .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/large_miner", false)
+    .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/implosion_compressor", false)
     }); // .or(Predicates.blocks(INPUT_ENERGY_HATCH[EV]))
 

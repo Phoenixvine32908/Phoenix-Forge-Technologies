@@ -1381,23 +1381,9 @@
 			id: "1AF8B97BAA3D6377"
 			subtitle: "Whack and Fix"
 			tasks: [{
-				id: "54109BE857734921"
-				item: {
-					Count: 1
-					id: "gtceu:diamond_hammer"
-					tag: {
-						DisallowContainerItem: 0b
-						GT.Behaviours: { }
-						GT.Tool: {
-							Damage: 0
-							HarvestLevel: 3
-							MaxDamage: 767
-							ToolSpeed: 10.0f
-						}
-						HideFlags: 2
-					}
-				}
-				type: "item"
+				id: "749778BA134B6D75"
+				title: "Tools"
+				type: "checkmark"
 			}]
 			title: "Workable Tools"
 			x: 7.0d
