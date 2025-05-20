@@ -146,6 +146,7 @@
 				"This is because of the &9Amperage&r mechanic... but that will be explained later so you can enjoy playing. Don't worry!"
 			]
 			id: "6E186F9C57155BFA"
+			optional: true
 			size: 0.75d
 			subtitle: "You must construct more turbines"
 			tasks: [{
@@ -1879,7 +1880,7 @@
 				""
 				"The &aearth sieve&r cleverly utilizes your surplus &8earth-based materials&r to generate &e vein traces&r."
 				""
-				"By processing &fdirt&r, &fcobblestone&r, &fstone&r, &fgravel&r, &fsand&r, and &0deepslate&r, you'll obtain various &e vein traces&r depending on the input. Further sifting these traces will then provide you with valuable &9 dusts&r from underground veins."
+				"By processing &fdirt&r, &fcobblestone&r, &fstone&r, &fgravel&r, &fsand&r, and &0deepslate&r, you'll obtain various &evein traces&r depending on the input. Further sifting these traces will then provide you with valuable &9dusts&r from underground veins."
 				""
 				"{@pagebreak}"
 				""
@@ -1899,7 +1900,7 @@
 		{
 			dependencies: ["0513EEE54038CBD4"]
 			description: [
-				"A multiblock upgrade of the &bEarth Sieve&r that runs the recipes at a parallel of &a16&r, effectively making it &a8 times faster&r than the single-block."
+				"A multiblock upgrade of the &bEarth Sieve&r that runs the recipes at a parallel of &a16&r, effectively making it &a8 times faster&r than the single-block. (Note: you need 4 steam output busses to run the gravel seive recipe)"
 				""
 				"I do hope you have some decent &7steel production&r up as well as having your &3steam infrastructure&r still going strong with the initial cost of this machine!"
 				""
@@ -1910,11 +1911,46 @@
 			id: "3F44787140E21367"
 			size: 0.66d
 			subtitle: "Large Earth Processing"
-			tasks: [{
-				id: "008B3538B9FA5AB8"
-				item: "gtceu:large_steam_sieve"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "008B3538B9FA5AB8"
+					item: "gtceu:large_steam_sieve"
+					type: "item"
+				}
+				{
+					id: "3272CBCB6BA37718"
+					item: "gtceu:steam_input_bus"
+					type: "item"
+				}
+				{
+					id: "3892AECC4C79B78F"
+					item: "gtceu:steam_input_hatch"
+					type: "item"
+				}
+				{
+					id: "026028BAB67539B3"
+					item: "gtceu:steam_output_bus"
+					type: "item"
+				}
+				{
+					count: 27L
+					id: "3016F23663E0B3E0"
+					item: { Count: 27, id: "gtceu:steel_frame" }
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "64FF37BAE1C4CA00"
+					item: { Count: 16, id: "gtceu:bronze_firebox_casing" }
+					type: "item"
+				}
+				{
+					count: 57L
+					id: "0D7D540C951574F7"
+					item: { Count: 57, id: "gtceu:steam_machine_casing" }
+					type: "item"
+				}
+			]
 			x: 0.66d
 			y: 3.3d
 		}
@@ -2212,11 +2248,8 @@
 				""
 				"You can also use this for automated &aResin&r. The yields are kept low to incentivize other rubber sources later in the game."
 				"{@pagebreak}"
-				"&9Note: &rWith &d40 EU/t&r recipes, it needs either 1 &bMV&r energy hatch or 2 &7LV&r energy hatches. Multiblocks will &cnot&r use 2A of one tier to reach the next one for recipe voltage minimums. "
 				""
-				"In other words, the controller needs to say at least \"&bMV&r\" in the GUI to run recipes which say \"&bMV&r\" in EMI, even if they can draw enough EU/t with a lower tier hatch configuration."
-				""
-				"&9Note:&r The structure requires a lot of &9Wrought Iron&r. Make sure you have an &3Arc Furnace&r for that."
+				"&9Note:&r The structure requires a lot of &9Wrought Iron&r."
 				"{@pagebreak}"
 				"&l&3Lore:&r&o We originally implemented a Chemical Reactor recipe for wood in the modpack to solve the tree problem. Our implementation turned out to be completely busted, so we decided that a rebalance was due. Hopefully, the Greenhouse is a happy middle ground."
 			]

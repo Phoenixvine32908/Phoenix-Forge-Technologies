@@ -63,7 +63,7 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
     ["entangled_neutron_alloy", -1, -1, "ENeA"], // Placeholder protons/neutrons for alloy
     ["superposition_tungsten_matrix", -1, -1, "SWM"], // Placeholder protons/neutrons for alloy
     ["exo_temporal_orichalcum", -1, -1, "ETO"], // Placeholder protons/neutrons for alloy
-    ["infinity", -1, -1, "Inf"], // Placeholder protons/neutrons for alloy
+    ["infinity", -1, -1, "∞"], // Placeholder protons/neutrons for alloy
     ["galaxium_core_alloy", -1, -1, "GCA"], // Placeholder protons/neutrons for alloy
     ["dark_nebula_infused_iridium", 77, 118, "DNIIr"],
     ["eldritch_voidsteel", -1, -1, "EVSt"], // Placeholder protons/neutrons for alloy
@@ -86,9 +86,8 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
   const dull = GTMaterialIconSet.DULL;
   const radioactive = GTMaterialIconSet.RADIOACTIVE;
   const bright = GTMaterialIconSet.BRIGHT;
-
+  const metallic = GTMaterialIconSet.METALLIC;
   const iconSets = {
-    omnium: shiny,
     sculk_alloy: dull,
     chemical: bright,
     eltz: shiny,
@@ -158,6 +157,84 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     GTMaterialFlags.GENERATE_DENSE,
     GTMaterialFlags.GENERATE_FINE_WIRE,
   ];
+  function makeLimitedMaterialWithCable(event, id, color, color2, icon, cableProps) {
+    const mat = event.create(id)
+        .ingot()
+        .element(GTElements.get(id))
+        .color(color)
+        .secondaryColor(color2)
+        .iconSet(icon)
+        .flags([
+            GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_GEAR,
+            GTMaterialFlags.GENERATE_SMALL_GEAR,
+            GTMaterialFlags.GENERATE_DENSE,
+            GTMaterialFlags.GENERATE_FINE_WIRE,
+        ])
+        .fluid();
+    if (cableProps && Array.isArray(cableProps)) {
+        mat.cableProperties.apply(mat, cableProps);
+    }
+}
+  function makeLimitedMaterial(event, id, color, color2, icon) {
+    const mat = event.create(id)
+        .ingot()
+        .color(color)
+        .secondaryColor(color2)
+        .iconSet(icon)
+        .flags([
+            GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_GEAR,
+            GTMaterialFlags.GENERATE_SMALL_GEAR,
+            GTMaterialFlags.GENERATE_DENSE,
+        ])
+        .fluid();
+}
+    makeLimitedMaterial(
+        event,
+        'lumium',
+        0xFFFFE0,
+        0xFFD700,
+        'shiny',
+    );
+    makeLimitedMaterialWithCable(
+        event,
+        'magmatic_manganese_lead',
+        0x8B4513,
+        0xFF4500,
+        'magmatic_manganese_lead',
+        [GTValues.V[GTValues.LV], 32, 2, true]
+    );
+
+    // MV Superconductor Material (Cryo Aluminum)
+    makeLimitedMaterialWithCable(
+        event,
+        'cryogenic_aluminum_strand',
+        0xADD8E6,
+        0x87CEFA,
+        'cryo_aluminum_supercon',
+        [GTValues.V[GTValues.MV], 16, 0, true]
+    );
+
+    // HV Superconductor Material (Cryo Steel)
+    makeLimitedMaterialWithCable(
+        event,
+        'icy_steel_matrix',
+        0xE0FFFF,
+        0x696969,
+        'cryo_steel_supercon',
+        [GTValues.V[GTValues.HV], 32, 0, true]
+    );
+
+    // EV Superconductor Material (Source Titanium)
+    makeLimitedMaterialWithCable(
+        event,
+        'source_titanium_filament',
+     0x800080, 
+        0xFF00FF,
+        'source_titanium_supercon',
+        [GTValues.V[GTValues.EV], 64, 0, true] // Changed amperage to be consistent with previous
+    );
   const materials = [
     [
       "akashic_zeronium",
@@ -447,14 +524,42 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .secondaryColor(0xc0c0c0)
         .fluidPipeProperties(4000, 80, false, false, false, false)
         .iconSet('aluminfrost')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
+           .flags( GTMaterialFlags.GENERATE_PLATE,
+    GTMaterialFlags.GENERATE_LONG_ROD,
+    GTMaterialFlags.GENERATE_RING,
+    GTMaterialFlags.GENERATE_ROUND,
+    GTMaterialFlags.GENERATE_GEAR,
+    GTMaterialFlags.GENERATE_SMALL_GEAR,
+    GTMaterialFlags.GENERATE_SPRING,
+    GTMaterialFlags.PHOSPHORESCENT,
+    GTMaterialFlags.GENERATE_ROD,
+    GTMaterialFlags.GENERATE_BOLT_SCREW,
+    GTMaterialFlags.GENERATE_FRAME,
+    GTMaterialFlags.GENERATE_DENSE,
+    GTMaterialFlags.GENERATE_FINE_WIRE,
+    GTMaterialFlags.GENERATE_FOIL,
+    GTMaterialFlags.GENERATE_ROTOR)
         event.create('frost_reinforced_stained_steel')
         .ingot()
         .color(0xADD8E6)
         .secondaryColor(0xE0FFFF)
         .fluidPipeProperties(10000, 120, false, true, true, false)
         .iconSet('shiny')
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
+           .flags( GTMaterialFlags.GENERATE_PLATE,
+    GTMaterialFlags.GENERATE_LONG_ROD,
+    GTMaterialFlags.GENERATE_RING,
+    GTMaterialFlags.GENERATE_ROUND,
+    GTMaterialFlags.GENERATE_GEAR,
+    GTMaterialFlags.GENERATE_SMALL_GEAR,
+    GTMaterialFlags.GENERATE_SPRING,
+    GTMaterialFlags.PHOSPHORESCENT,
+    GTMaterialFlags.GENERATE_ROD,
+    GTMaterialFlags.GENERATE_BOLT_SCREW,
+    GTMaterialFlags.GENERATE_FRAME,
+    GTMaterialFlags.GENERATE_DENSE,
+    GTMaterialFlags.GENERATE_FINE_WIRE,
+    GTMaterialFlags.GENERATE_FOIL,
+    GTMaterialFlags.GENERATE_ROTOR)
         event.create('magma')
         .dust()
         .color(0xff6d00)
@@ -470,11 +575,27 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xFFD700)
         .secondaryColor(0xC0C0C0)
         .iconSet('fiery_bronze')
-  event.create('lumium')
-    .ingot()
-    .color(0xFFFFE0)
-    .secondaryColor(0xFFD700)
-    .iconSet('shiny');
+        event.create('space_grade_steel')
+        .ingot()
+        .color(0xA9A9A9)
+        .secondaryColor(0xB0B0B0)
+        .blastTemp(2700, 'low', GTValues.VA[GTValues.EV], 600)
+        .iconSet('metallic')
+        .flags( GTMaterialFlags.GENERATE_PLATE,
+    GTMaterialFlags.GENERATE_LONG_ROD,
+    GTMaterialFlags.GENERATE_RING,
+    GTMaterialFlags.GENERATE_ROUND,
+    GTMaterialFlags.GENERATE_GEAR,
+    GTMaterialFlags.GENERATE_SMALL_GEAR,
+    GTMaterialFlags.GENERATE_SPRING,
+    GTMaterialFlags.PHOSPHORESCENT,
+    GTMaterialFlags.GENERATE_ROD,
+    GTMaterialFlags.GENERATE_BOLT_SCREW,
+    GTMaterialFlags.GENERATE_FRAME,
+    GTMaterialFlags.GENERATE_DENSE,
+    GTMaterialFlags.GENERATE_FINE_WIRE,
+    GTMaterialFlags.GENERATE_FOIL,
+    GTMaterialFlags.GENERATE_ROTOR)
 
   event.create('signalum')
     .ingot()
@@ -494,7 +615,21 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     event.create('source_imbued_titanium')
     .ingot()
     .color(0xc600ff)
-    .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR,GTMaterialFlags.GENERATE_PLATE)
+    .flags( GTMaterialFlags.GENERATE_PLATE,
+    GTMaterialFlags.GENERATE_LONG_ROD,
+    GTMaterialFlags.GENERATE_RING,
+    GTMaterialFlags.GENERATE_ROUND,
+    GTMaterialFlags.GENERATE_GEAR,
+    GTMaterialFlags.GENERATE_SMALL_GEAR,
+    GTMaterialFlags.GENERATE_SPRING,
+    GTMaterialFlags.PHOSPHORESCENT,
+    GTMaterialFlags.GENERATE_ROD,
+    GTMaterialFlags.GENERATE_BOLT_SCREW,
+    GTMaterialFlags.GENERATE_FRAME,
+    GTMaterialFlags.GENERATE_DENSE,
+    GTMaterialFlags.GENERATE_FINE_WIRE,
+    GTMaterialFlags.GENERATE_FOIL,
+    GTMaterialFlags.GENERATE_ROTOR)
     .iconSet('metallic');
     event.create('hafnium_chloride')
     .fluid()
@@ -520,12 +655,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .color(0x00FF00)
     .secondaryColor(0x000000)
     .iconSet('dull');
-  event.create('dark_steel')
-    .ingot()
-    .color(0x4F4F4F)
-    .secondaryColor(0x191970)
-    .iconSet('dull');
-
   event.create('soularium')
     .ingot()
     .color(0xA020F0)
@@ -536,12 +665,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     .ingot()
     .color(0xB0E0E6)
     .secondaryColor(0x87CEEB)
-    .iconSet('dull');
-
-  event.create('copper_alloy')
-    .ingot()
-    .color(0xB87333)
-    .secondaryColor(0xD2691E)
     .iconSet('dull');
         event.create('blazing_crystal')
     .ingot()

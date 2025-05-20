@@ -138,10 +138,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         event.create('osmiridium_80_20')
         .ore().dust()
         .color(0xD3D3D3).iconSet('shiny')
-        .components('4x calcium'); // Changed
+        .components('4x osmium', '1x iridium'); // Changed
         event.create('ismiridium_80_20')
         .ore().dust()
         .color(0xE0E0E0).iconSet('shiny')
-        .components('calcium'); // Changed
+        .components('4x iridium', '1x osmium'); // Changed
 
 });
