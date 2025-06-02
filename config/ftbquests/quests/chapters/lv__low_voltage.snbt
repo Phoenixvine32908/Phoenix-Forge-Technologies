@@ -168,6 +168,12 @@
 				"&6This quest unlocks a new tutorial on Amperage in the &lTips and Tricks&r&6 tab - check it out to learn more!&r"
 			]
 			id: "7B0FF43022F6C2EC"
+			rewards: [{
+				count: 4
+				id: "25C3EF87B90CC386"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Amps and You: a how-to"
@@ -364,12 +370,19 @@
 				"Once you make this machine, your foray into the electric world will truly begin!"
 			]
 			id: "32EA7E81885C8E87"
-			rewards: [{
-				count: 4
-				id: "2B736C4992CDC8D1"
-				item: "gtceu:copper_single_wire"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "2B736C4992CDC8D1"
+					item: "gtceu:copper_single_wire"
+					type: "item"
+				}
+				{
+					id: "26AC42B44F51E53A"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "No more painful wires!"
 			tasks: [{
@@ -416,12 +429,19 @@
 				"&oThe GT6 Lathe acts like GT5's, but Bolts lathe into one Screw and 1/72 of a pile of Dust. Disgusting!"
 			]
 			id: "07E7678095258EDB"
-			rewards: [{
-				count: 4
-				id: "09FC4530E70B9105"
-				item: "gtceu:steel_rod"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "09FC4530E70B9105"
+					item: "gtceu:steel_rod"
+					type: "item"
+				}
+				{
+					id: "0914FD400419E94A"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "The Lathe lathes!"
 			tasks: [{
@@ -664,6 +684,12 @@
 			]
 			icon: "gtceu:crushed_sulfur_ore"
 			id: "701BCADAE5CF6CA5"
+			rewards: [{
+				count: 2
+				id: "5D5B9E07824E0C98"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "You can't escape Greg..."
@@ -688,6 +714,12 @@
 			]
 			icon: "gtceu:basic_electronic_circuit"
 			id: "648BCF486E16CCB2"
+			rewards: [{
+				count: 3
+				id: "2DE6FFEF31961753"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "Too many options, too little time!"
@@ -709,11 +741,20 @@
 				"There will be more Fluids to solidify, so you may re-purpose your &3Fluid Solidifier&r when not crafting Rubber - or make a second one!"
 			]
 			id: "581CDF545E1EA1FD"
-			rewards: [{
-				id: "2B85DCFFF22770D8"
-				item: "gtceu:rubber_bucket"
-				type: "item"
-			}]
+			optional: true
+			rewards: [
+				{
+					id: "2B85DCFFF22770D8"
+					item: "gtceu:rubber_bucket"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "174090527F0F0F52"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "The Fluid Solidifier solidifies..."
 			tasks: [{
@@ -726,10 +767,7 @@
 			y: 4.5d
 		}
 		{
-			dependencies: [
-				"5B2696206205CB2E"
-				"70432F650591353C"
-			]
+			dependencies: ["5B2696206205CB2E"]
 			description: [
 				"Prepare &a128 Cupronickel&r, &a32 Bronze&r and &a16 Tin Alloy&r to craft the Heating Coils required for your first Electric Blast Furnace."
 				""
@@ -807,6 +845,7 @@
 			]
 			icon: "gtceu:rotor_casting_mold"
 			id: "115C4226F6473F0C"
+			optional: true
 			rewards: [{
 				count: 2
 				id: "7162E47A4FB3EDB1"
@@ -929,6 +968,12 @@
 				"It is used to make &egem&r plates, your cheaper &8bolts&r for now, and your &7wafers&r for circuits. I would suggest you use &9&lwater&r, and go for distilled water/lubricant &olater&r."
 			]
 			id: "3A8D7FC6F316C38C"
+			rewards: [{
+				count: 2
+				id: "0552168B6AD80B0A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "The Cutter... cuts..."
@@ -955,11 +1000,19 @@
 				"The &ccatch&r with the Steam seperator however, is that steam multiblocks can &4&lNot&r&r accept &9fluid outputs/inputs&r. However, since you don't need liquids for centrifuge ore processing, it is your best bet for &bspeed&r right now."
 			]
 			id: "5263F866638D875C"
-			rewards: [{
-				id: "525C65CA6AFD3C11"
-				item: "minecraft:cauldron"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "525C65CA6AFD3C11"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "062B00393757AE04"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "Jack of Many Trades"
 			tasks: [{
@@ -979,6 +1032,12 @@
 				"Some alloys previously made by hand can also be made in the mixer, except at &ahigher yield&r."
 			]
 			id: "257DB4B39B2A928E"
+			rewards: [{
+				count: 3
+				id: "62DB7620B92E6840"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "The Mixer mixes..."
 			tasks: [{
@@ -1022,6 +1081,12 @@
 				{
 					id: "3AF49D4A68D17C1A"
 					item: "gtceu:lv_machine_hull"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "20A06E6C9FFEA2B4"
+					item: "kubejs:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1091,10 +1156,7 @@
 			y: 6.75d
 		}
 		{
-			dependencies: [
-				"63CD0236B337EAAD"
-				"581CDF545E1EA1FD"
-			]
+			dependencies: ["63CD0236B337EAAD"]
 			description: [
 				"&8Wait, we're not in the Steam Age anymore!"
 				""
@@ -1314,11 +1376,19 @@
 				"&l&3Lore:&r&o Back in GTCEu 1.12.2, these circuit boards were called \"&2Good Circuit Boards&f\". Not exactly a fitting name, as they're &4rather evil&f to craft."
 			]
 			id: "3647B1B964A15E4E"
-			rewards: [{
-				id: "2B815290D1F7D038"
-				item: "gtceu:resin_printed_circuit_board"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "2B815290D1F7D038"
+					item: "gtceu:resin_printed_circuit_board"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "6A38FF0161D06BDB"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "A Good Board"
 			tasks: [{
@@ -1801,6 +1871,20 @@
 				"Memory: The &bLoot Fabricator&r remembers your preferred mob drop, even if the active predictions change."
 			]
 			id: "7826E9A1E4265AFA"
+			rewards: [
+				{
+					count: 3
+					id: "3C88882D15B3EE6E"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "76BA3E29FB72C578"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+			]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "Fabrication And Simulation"
@@ -1887,6 +1971,12 @@
 				"\"Starting to run into a storage issue with excess &cminerals&r, you decide to design a machine to process them. This machine will use a combination of &asieving&r, &asifting&r, and &apurifying&r to extract trace amounts of &b resources&r.\""
 			]
 			id: "0513EEE54038CBD4"
+			rewards: [{
+				count: 2
+				id: "61C0B992B9A54E4F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Process Your Earth!"
 			tasks: [{
@@ -2025,18 +2115,19 @@
 		{
 			dependencies: ["53F48B30CAA6163A"]
 			description: [
-				"These are your &bbest bet&r to move your non-GregTech power from thermal's &6dynamos&r. For now, you can use these &3basic energy conduits&r, but you will unlock &abetter ones later&r."
+				"The enderio energy conduits are your &bbest bet&r to move your non-GregTech power from thermal's &6dynamos&r. For now, you can use these &3basic energy conduits&r, but you will unlock &abetter ones later&r."
 				""
 				"You should also invest in &aextraction cards for EnderIO&r in order to increase power, fluid, and item movement speed."
 			]
+			icon: "enderio:energy_conduit"
 			id: "1D92D3F59F0B2908"
 			shape: "circle"
 			size: 0.45d
 			subtitle: "Moving FE"
 			tasks: [{
-				id: "3A38F3B832A27AE1"
-				item: "enderio:energy_conduit"
-				type: "item"
+				id: "63AE7B9992220462"
+				title: "Energy Movement"
+				type: "checkmark"
 			}]
 			x: 2.6999999999999997d
 			y: 3.375d
@@ -2050,6 +2141,7 @@
 			]
 			icon: "gtceu:lv_macerator"
 			id: "26120EAC5DAAA965"
+			optional: true
 			shape: "circle"
 			size: 0.6d
 			subtitle: "Crushing"
@@ -2070,6 +2162,7 @@
 				"There is no speed difference between &8purified/crushed&r ores, with the only difference being the &9added byproducts&r from putting the crushed ores in the ore washer &a&lfirst&r&r."
 			]
 			id: "6555C981EDD818CA"
+			optional: true
 			shape: "circle"
 			size: 0.6d
 			subtitle: "Hot Spin"
@@ -2091,6 +2184,7 @@
 				"Program 2: Accepts &1water&r or &bdistilled water&r, processing at a slower rate to yield byproducts. Using &bdistilled water&r makes this program twice as fast."
 			]
 			id: "044FF4E99087CCC9"
+			optional: true
 			shape: "circle"
 			size: 0.6d
 			subtitle: "Washing Your Ores"
@@ -2139,6 +2233,7 @@
 				"You will need the multiblock version of this later for some more complicated recipes. "
 			]
 			id: "4DFF6152B7002274"
+			optional: true
 			shape: "circle"
 			size: 0.6d
 			subtitle: "Precious Gems"
@@ -2164,6 +2259,7 @@
 				"&eCreating Colored Lenses&r: Bathing white lenses in specific liquid dyes creates colored lenses used for wafer engraving in advanced circuits. Note that recipes for certain lenses are locked behind higher-tier machines."
 			]
 			id: "4FE7094AD6ED7658"
+			optional: true
 			shape: "circle"
 			size: 0.6d
 			subtitle: "Bath Time"

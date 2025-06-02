@@ -10,6 +10,10 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ore().dust()
         .color(0x7e00ff).iconSet('diamond')
         .components('1x calcium'); // Changed
+        event.create('nevvonian_iron')
+        .ore().ingot()
+        .color(0x7A687F).iconSet('diamond')
+        .components('1x calcium'); // Changed
 
     event.create('phoenixite')
         .ore().dust()
@@ -88,7 +92,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .components('1x calcium'); // Changed
 
     // 🔥 Nether Addition
-    event.create('ignisium_ore')
+    event.create('ignisium')
         .ore().dust() // Could be a fiery dust
         .color(0xFF4500).iconSet('diamond') // Orange-red color
         .components('1x calcium'); // Changed
@@ -99,7 +103,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xbfffff).iconSet('diamond')
         .components('1x calcium'); // Changed
 
-    event.create('irreality_ore')
+    event.create('irreality_shard')
         .ore().dust()
         .color(0x8888ff).iconSet('diamond')
         .components('1x calcium'); // Changed
@@ -116,12 +120,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .components('1x calcium'); // Changed
 
     // 🔆 MAX Tier
-    event.create('akashic_resonant_ore')
+    event.create('akashic_resonance_crystal')
         .ore().gem()
         .color(0xffffff).iconSet('diamond')
         .components('1x calcium'); // Changed
 
-    event.create('finality_ore')
+    event.create('finality_shard')
         .ore().gem()
         .color(0xf6f6f6).iconSet('diamond')
         .components('1x calcium'); // Changed

@@ -3,7 +3,7 @@
 [general]
 	#Defines how much XP will be drained from player when flying by wearing classic Angel Ring? Put 0 if you need to disable XP requirement for flight.
 	#Range: > 0
-	XPCost = 3
+	XPCost = 0
 	#Defines how much ticks is required to pass between each XP drain event of classic Angel Ring?
 	#Range: > 1
 	TicksPerDrain = 50

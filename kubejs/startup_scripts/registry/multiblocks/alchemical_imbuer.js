@@ -29,7 +29,6 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
 .aisle("CDDDDDC", "BCEEECB", "BBFFFBB", "BBFFFBB", "BBFFFBB", "BCDDDCB", "CDGGGDC")
 .aisle("BCDDDCB", "BBCCCBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBCCCBB", "BCDDDCB")
 .aisle("BBCKCBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBCCCBB")
-   .where("A", Predicates.blocks("minecraft:air"))
    .where("B", Predicates.any())
    .where("C", Predicates.blocks("gtceu:clean_machine_casing")
        .or(Predicates.autoAbilities(definition.getRecipeTypes()))

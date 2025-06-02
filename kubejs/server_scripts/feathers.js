@@ -1,14 +1,6 @@
 
 ServerEvents.recipes(event => {
     {
-        // moniPENNY RECIPES
-        event.shaped(Item.of('minecraft:clay_ball', 64), [
-            'AAA',
-            '  A',
-            '   '
-        ], {
-            A: 'kubejs:phoenix_feather'
-        }).noMirror().noShrink()
   
         event.shaped(Item.of('gtceu:pitchblende_ore', 32), [
             'A  ',

@@ -46,7 +46,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("C", Predicates.blocks("gtceu:advanced_computer_casing"))
    .where("D", Predicates.blocks("gtceu:computer_casing"))
    .where("E", Predicates.blocks("gtceu:fusion_casing").setMinGlobalLimited(10)
-   .or(Predicates.abilities(PartAbility.MAINTENANCE).setMaxGlobalLimited(1))
+   .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
    .or(Predicates.abilities(PartAbility.EXPORT_FLUIDS))
    .or(Predicates.abilities(PartAbility.IMPORT_FLUIDS))

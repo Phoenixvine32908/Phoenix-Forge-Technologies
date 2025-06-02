@@ -24,7 +24,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.assembler('ev_machine_casing')
         .circuit(8)
         .itemInputs('8x gtceu:source_imbued_titanium_plate')
-        .itemOutputs('1x gtceu:lv_machine_casing')
+        .itemOutputs('1x gtceu:ev_machine_casing')
         .duration(70)
         .EUt(32)
         event.recipes.gtceu.macerator('magma_dust')
@@ -46,14 +46,14 @@ ServerEvents.recipes(event => {
         .EUt(32)
         event.recipes.gtceu.extractor('frost')
         .itemInputs('1x gtceu:permafrost_dust')
-        .outputFluids('kubejs:frost 500')
+        .outputFluids('kubejs:frost 144')
         .duration(150)
-        .EUt(64)
+        .EUt(32)
         event.recipes.gtceu.extractor('magma')
         .itemInputs('1x gtceu:magma_dust')
         .outputFluids('kubejs:magma 500')
         .duration(150)
-        .EUt(64)
+        .EUt(32)
         event.recipes.gtceu.assembler('steam_machine_casing')
         .circuit(6)
         .itemInputs('6x gtceu:fiery_bronze_plate', '1x minecraft:bricks')
@@ -96,10 +96,10 @@ ServerEvents.recipes(event => {
         .EUt(32)
         event.recipes.gtceu.electric_blast_furnace('aluminfrost')
         .circuit(2)
-        .itemInputs('1x gtceu:unrefined_aluminfrost_dust', '1x gtceu:cobalt_dust')
-        .inputFluids('kubejs:frost 1000')
-        .itemOutputs('1x gtceu:aluminfrost_ingot')
-        .duration(600)
+        .itemInputs('32x gtceu:unrefined_aluminfrost_dust', '1x gtceu:cobalt_dust')
+        .inputFluids('kubejs:frost 6000')
+        .itemOutputs('32x gtceu:aluminfrost_ingot')
+        .duration(4200)
         .EUt(100)
         .blastFurnaceTemp(1700)
         event.recipes.gtceu.electric_blast_furnace('frost_reinforced_stained_steelv2')
@@ -119,10 +119,11 @@ ServerEvents.recipes(event => {
         .blastFurnaceTemp(1700)
         event.recipes.gtceu.electric_blast_furnace('aluminfrost2')
         .circuit(1)
-        .itemInputs('1x gtceu:unrefined_aluminfrost_dust', '1x gtceu:cobalt_dust')
-        .itemOutputs('1x gtceu:aluminfrost_ingot')
-        .duration(882)
+        .itemInputs('32x gtceu:unrefined_aluminfrost_dust', '1x gtceu:cobalt_dust')
+        .itemOutputs('32x gtceu:aluminfrost_ingot')
+        .duration(5000)
         .EUt(100)
+         .blastFurnaceTemp(1700)
         event.recipes.gtceu.mixer('cryo_ember_fluid')
         .circuit(1)
         .itemInputs('2x gtceu:dormant_ember_dust', '1x gtceu:permafrost_dust')
@@ -173,7 +174,38 @@ event.recipes.gtceu.alloy_smelter('copper_alloy_dust_dust')
                 F: "gtceu:item_filter",
                 C: "gtceu:lv_earth_sieve"
               });
-            
+           event.shaped("kubejs:aurum_steel_drill_head", ["FWF", "FWF", "WCW"], {
+        W: "gtceu:dense_steel_plate",
+        F: "gtceu:dense_aurum_steel_plate",
+        C: "#forge:tools/hammers"
+    });
+
+    // Recipe for Frost Reinforced Stained Steel Drill Head
+    event.shaped("kubejs:frost_reinforced_stained_steel_drill_head", ["FWF", "FWF", "WCW"], {
+        W: "gtceu:dense_steel_plate",
+        F: "gtceu:dense_frost_reinforced_stained_steel_plate", // Assuming this item ID exists
+        C: "#forge:tools/hammers"
+    });
+     event.shaped("kubejs:source_imbued_titanium_drill_head", ["FWF", "FWF", "WCW"], {
+        W: "gtceu:dense_source_imbued_titanium_plate",
+        F: "gtceu:dense_frost_reinforced_stained_steel_plate", // Assuming this item ID exists
+        C: "#forge:tools/hammers"
+    });
+
+
+    // Recipe for Aluminfrost Drill Head
+    event.shaped("kubejs:aluminfrost_drill_head", ["FWF", "FWF", "WCW"], {
+        W: "gtceu:dense_steel_plate",
+        F: "gtceu:dense_aluminfrost_plate", // Assuming this item ID exists
+        C: "#forge:tools/hammers"
+    });
+
+    // Recipe for Space Grade Steel Drill Head
+    event.shaped("kubejs:space_grade_steel_drill_head", ["FWF", "FWF", "WCW"], {
+        W: "gtceu:dense_steel_plate",
+        F: "gtceu:dense_space_grade_steel_plate", // Assuming this item ID exists
+        C: "#forge:tools/hammers"
+    });
               // MV Earth Sieve Example (Corrected Casing)
               event.shaped("gtceu:mv_earth_sieve", ["OFO", "DWD", "CFC"], {
                 O: "gtceu:aluminfrost_plate",
