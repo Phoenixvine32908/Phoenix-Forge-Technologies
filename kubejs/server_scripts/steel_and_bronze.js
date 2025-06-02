@@ -224,7 +224,7 @@ ServerEvents.recipes((event) => {
   event.shaped("gtceu:ev_machine_hull", ["SPS", "WZW", "   "], {
     P: "gtceu:source_imbued_titanium_plate",
     W: "gtceu:aluminium_single_cable",
-    Z: "gtceu:evv_machine_casing",
+    Z: "gtceu:ev_machine_casing",
     S: "gtceu:polyethylene_plate"
   }); 
   event.shaped("gtceu:distillation_tower", ["PWP", "ZSZ", "PWP"], {
@@ -345,7 +345,7 @@ ServerEvents.recipes(event => {
   const mixerRecipes = [
     ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x gtceu:dormant_ember_dust"], ["4x gtceu:fiery_bronze_dust"], 300, 7, 4],
     ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:magma_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7, 2],
-    ["unrefined_aluminfrost_dust_from_mixer", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 300, 34, 3],
+    ["unrefined_aluminfrost_dust_from_mixer", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 300, 32, 3],
     // You can add more mixer recipes here following the same format
     // ["recipe_id", ["input1", "input2", ...], ["output1", "output2", ...], duration, power],
   ];

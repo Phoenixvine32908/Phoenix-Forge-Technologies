@@ -26,7 +26,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where('B', Predicates.any())
    .where("1", Predicates.blocks("minecraft:dirt"))
    .where("C", Predicates.blocks("gtceu:sturdy_machine_casing").setMinGlobalLimited(10)
-   .or(Predicates.abilities(PartAbility.MAINTENANCE).setMaxGlobalLimited(1))
+   .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
    .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
    .or(Predicates.autoAbilities(definition.getRecipeTypes())))
    .where("D", Predicates.blocks("gtceu:tungsten_steel_frame"))

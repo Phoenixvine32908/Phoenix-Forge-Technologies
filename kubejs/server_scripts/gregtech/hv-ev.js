@@ -6,6 +6,13 @@ ServerEvents.recipes(event => {
     .outputFluids('gtceu:hafnium_chloride 2000')
     .duration(200)
     .EUt(GTValues.VA[GTValues.HV]/2)
+        event.recipes.gtceu.assembler('thermal_power_upgrade')
+    .itemInputs('1x gtceu:aurum_steel_gear','4x gtceu:fiery_bronze_plate','2x gtceu:tempered_glass')
+    .inputFluids('gtceu:glue 500')
+    .itemOutputs('thermal:dynamo_output_augment')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.LV]/2)
+
     event.recipes.gtceu.centrifuge('zircon_dust_from_blackstone_dust')
     .itemInputs('4x gtceu:blackstone_dust')
     .itemOutputs('6x gtceu:magma_dust', '2x gtceu:dormant_ember_dust', 'gtceu:zircon_dust', 'gtceu:silicon_dust')
@@ -29,6 +36,64 @@ ServerEvents.recipes(event => {
     .inputFluids('minecraft:water 1000')
     .duration(200)
     .EUt(GTValues.VA[GTValues.HV]/2)
+    event.recipes.gtceu.chemical_bath('cooling_magmatic_manganese_lead_distilled')
+        .itemInputs('gtceu:hot_magmatic_manganese_lead_ingot')
+        .inputFluids('gtceu:distilled_water 1000')
+        .itemOutputs('1x gtceu:magmatic_manganese_lead_ingot')
+        .duration(150)
+        .EUt(GTValues.VA[GTValues.LV] / 2);
+
+    event.recipes.gtceu.chemical_bath('cooling_magmatic_manganese_lead_water')
+        .itemInputs('gtceu:hot_magmatic_manganese_lead_ingot')
+        .inputFluids('minecraft:water 1000')
+        .itemOutputs('1x gtceu:magmatic_manganese_lead_ingot')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.LV] / 2);
+
+    // Cooling recipes for Cryogenic Aluminum Strand
+    event.recipes.gtceu.chemical_bath('cooling_cryogenic_aluminum_strand_distilled')
+        .itemInputs('gtceu:hot_cryogenic_aluminum_strand_ingot')
+        .inputFluids('gtceu:distilled_water 1000')
+        .itemOutputs('1x gtceu:cryogenic_aluminum_strand_ingot')
+        .duration(150)
+        .EUt(GTValues.VA[GTValues.MV] / 2);
+
+    event.recipes.gtceu.chemical_bath('cooling_cryogenic_aluminum_strand_water')
+        .itemInputs('gtceu:hot_cryogenic_aluminum_strand_ingot')
+        .inputFluids('minecraft:water 1000')
+        .itemOutputs('1x gtceu:cryogenic_aluminum_strand_ingot')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.MV] / 2);
+
+    // Cooling recipes for Icy Steel Matrix
+    event.recipes.gtceu.chemical_bath('cooling_icy_steel_matrix_distilled')
+        .itemInputs('gtceu:hot_icy_steel_matrix_ingot')
+        .inputFluids('gtceu:distilled_water 1000')
+        .itemOutputs('1x gtceu:icy_steel_matrix_ingot')
+        .duration(150)
+        .EUt(GTValues.VA[GTValues.HV] / 2);
+
+    event.recipes.gtceu.chemical_bath('cooling_icy_steel_matrix_water')
+        .itemInputs('gtceu:hot_icy_steel_matrix_ingot')
+        .inputFluids('minecraft:water 1000')
+        .itemOutputs('1x gtceu:icy_steel_matrix_ingot')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.HV] / 2);
+
+    // Cooling recipes for Source Titanium Filament
+    event.recipes.gtceu.chemical_bath('cooling_source_titanium_filament_distilled')
+        .itemInputs('gtceu:hot_source_titanium_filament_ingot')
+        .inputFluids('gtceu:distilled_water 1000')
+        .itemOutputs('1x gtceu:source_titanium_filament_ingot')
+        .duration(150)
+        .EUt(GTValues.VA[GTValues.EV] / 2);
+
+    event.recipes.gtceu.chemical_bath('cooling_source_titanium_filament_water')
+        .itemInputs('gtceu:hot_source_titanium_filament_ingot')
+        .inputFluids('minecraft:water 1000')
+        .itemOutputs('1x gtceu:source_titanium_filament_ingot')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.EV] / 2);
     event.recipes.gtceu.assembler('fissile_heat_safe_casing')
     .itemInputs('6x gtceu:zircalloy_plate', '1x gtceu:stainless_steel_frame', '2x gtceu:aluminfrost_large_fluid_pipe')
     .circuit(2)
@@ -37,7 +102,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(GTValues.VA[GTValues.LV]/2)
     event.recipes.gtceu.assembler('fissile_reaction_safe_casing')
-    .itemInputs('3x gtceu:zircalloy_plate','2x gtceu:stainless_steel_plate', '1x gtceu:zircalloy_frame', '2x #gtceu:circuits/hv')
+    .itemInputs('3x gtceu:zircalloy_plate','2x gtceu:stainless_steel_plate', '1x gtceu:zircalloy_frame')
     .circuit(6)
     .itemOutputs('2x kubejs:fissile_reaction_safe_casing')
     .inputFluids('gtceu:stainless_steel 250')
@@ -65,7 +130,7 @@ ServerEvents.recipes(event => {
     .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.assembler('zirconium_rod')
     .itemInputs('4x gtceu:lead_plate', 'gtceu:universal_fluid_cell', '2x gtceu:stainless_steel_plate')
-    .itemOutputs('12 kubejs:zirconium_rod')
+    .itemOutputs('12x kubejs:zirconium_rod')
     .duration(200)
     .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.canner('zirconium_rod')
@@ -92,12 +157,48 @@ ServerEvents.recipes(event => {
     .itemOutputs('1x gtceu:advanced_pressurized_fission_reactor')
     .duration(150)
     .EUt(GTValues.VA[GTValues.EV]/2)
+    event.recipes.gtceu.assembler('dimensional_anchor')
+    .itemInputs('4x kubejs:frost_reinforced_stained_steel_drilling_kit', '2x gtceu:frost_reinforced_stained_steel_gear', 
+        '8x gtceu:dense_frost_reinforced_stained_steel_plate', '3x #gtceu:circuits/ev', '3x gtceu:dense_zircalloy_plate','4x gtceu:icy_steel_matrix_single_wire')
+    .inputFluids('gtceu:soldering_alloy 4200')
+    .itemOutputs('1x gtceu:dimensional_anchor12')
+    .duration(150)
+    .EUt(GTValues.VA[GTValues.EV]/2)
+    event.recipes.gtceu.assembler('aetherial_fabricator')
+    .itemInputs('4x kubejs:source_imbued_titanium_drill_head', '2x gtceu:source_imbued_titanium_gear', 
+        '8x gtceu:source_imbued_titanium_plate', '5x #gtceu:circuits/ev', '3x gtceu:dense_zircalloy_plate', '4x gtceu:source_titanium_filament_single_wire')
+    .inputFluids('gtceu:soldering_alloy 4200')
+    .itemOutputs('1x gtceu:aetherial_fabricator12')
+    .duration(150)
+    .EUt(GTValues.VA[GTValues.EV]/2)
     event.recipes.gtceu.assembler('pressurized_fission_turbine')
     .itemInputs('2x kubejs:fissile_reaction_safe_casing','8x kubejs:fissile_heat_safe_casing', '2x gtceu:dense_zircalloy_plate','1x #gtceu:circuits/ev', '2x gtceu:titanium_large_fluid_pipe' )
     .inputFluids('gtceu:soldering_alloy 613')
     .itemOutputs('1x gtceu:pressurized_fission_turbine')
     .duration(150)
     .EUt(GTValues.VA[GTValues.EV]/2)
+    event.recipes.gtceu.assembler('budding_amethyst_assembly')
+        .itemInputs(
+            '4x minecraft:amethyst_block',   // Amethyst blocks for structure
+            '4x minecraft:amethyst_shard',   // Amethyst shards for crystal growth
+            'minecraft:ender_eye'            // Ender Eye for mystical growth/energy
+        )
+        .itemOutputs('minecraft:budding_amethyst')
+        .duration(200)                      // Processing time (ticks)
+        .EUt(GTValues.VA[GTValues.MV]);     // Energy consumption: MV tier (512 EU/t)
+
+    // --- AE2 Flawless Budding Certus Quartz Recipe (GTCEu Assembler) ---
+    // A higher-tier recipe using the Assembler, requiring HV voltage for precision and power.
+    event.recipes.gtceu.assembler('flawless_budding_certus_quartz_assembly')
+        .itemInputs(
+            '4x ae2:charged_certus_quartz_crystal', // Charged Certus for pure energy/perfection
+            '4x ae2:certus_quartz_crystal',         // Regular Certus for bulk material
+            'ae2:growth_accelerator',               // AE2 Growth Accelerator to symbolize crystal perfection
+            'ae2:fluix_crystal'                     // Fluix Crystal for AE2 integration
+        )
+        .itemOutputs('ae2:flawless_budding_quartz')
+        .duration(400)                      // Longer processing time
+        .EUt(GTValues.VA[GTValues.HV]);
     event.recipes.gtceu.assembler('pressurized_fission_reactor')
     .itemInputs('4x kubejs:fissile_reaction_safe_casing', '8x gtceu:stainless_steel_large_fluid_pipe', '4x gtceu:zircalloy_frame', '2x #gtceu:circuits/hv')
     .inputFluids('gtceu:soldering_alloy 613')
@@ -110,6 +211,18 @@ ServerEvents.recipes(event => {
     .duration(100)
     .circuit(15)
     .EUt(GTValues.VA[GTValues.HV]/2)
+        event.recipes.gtceu.mixer('space_grade_steel_dust')
+        .itemInputs(
+            '1x gtceu:zircalloy_dust', 
+            '2x gtceu:tungsten_dust', 
+            '4x gtceu:icy_steel_matrix_dust',
+            '2x gtceu:stainless_steel_dust',
+        )
+        .inputFluids('gtceu:steel 750')
+        .itemOutputs('4x gtceu:space_grade_steel_dust')
+        .duration(200)
+        .circuit(12)
+        .EUt(GTValues.VA[GTValues.EV]); 
     event.recipes.gtceu.pressurized_fission_reactor('fission1')
     .itemInputs('3x kubejs:basic_fuel_rod')
     .itemOutputs('10x gtceu:low_level_radioactive_waste_ingot')
@@ -491,94 +604,163 @@ event.recipes.gtceu.source_extraction('source_from_lava')
     // Space Grade Steel Drilling Kit - EV Assembler
 event.recipes.gtceu.assembler('space_grade_steel_drilling_kit')
     .itemInputs(
-        'gtceu:space_grade_steel_plate', 8,
-        'gtceu:space_grade_steel_screw', 16,
-        'gtceu:ev_field_generator', 2,
-        'gtceu:ev_electric_motor', 4,
-        'gtceu:source_titanium_filament_single_wire', 4,
-        'kubejs:space_grade_steel_drill_head', 1,
-        'gtceu:ev_machine_hull', 2
-    )
+        '8x gtceu:space_grade_steel_plate',
+        '16x gtceu:space_grade_steel_screw',
+        '2x gtceu:ev_field_generator',
+        '4x gtceu:ev_electric_motor',
+        '20x #gtceu:circuits/ev',
+        '4x gtceu:source_titanium_filament_single_wire',
+        '8x kubejs:space_grade_steel_drill_head',
+        '1x gtceu:ev_machine_hull')
+    .inputFluids('gtceu:soldering_alloy 1200')
     .itemOutputs('kubejs:space_grade_steel_drilling_kit')
     .duration(400)
     .EUt(GTValues.VA[GTValues.EV]);
 
-// Frost Reinforced Stained Steel Drilling Kit - EV Assembler
+/// Frost Reinforced Stained Steel Drilling Kit - EV Assembler
 event.recipes.gtceu.assembler('frost_reinforced_stained_steel_drilling_kit')
     .itemInputs(
-        'gtceu:frost_reinforced_stained_steel_plate', 6,
-        'gtceu:frost_reinforced_stained_steel_bolt', 12,
-        'gtceu:ev_electric_motor', 4,
-        'gtceu:icy_steel_matrix_single_wire', 8,
-        'gtceu:reinforced_diamond_drill_head', 1,
-        'gtceu:ev_machine_hull', 1,
-        'kubejs:frost_reinforced_stained_steel_drill_head', 2
-    )
+        '8x gtceu:frost_reinforced_stained_steel_plate',
+        '16x gtceu:frost_reinforced_stained_steel_screw',
+        '2x gtceu:hv_field_generator',
+        '4x gtceu:hv_electric_motor',
+        '20x #gtceu:circuits/hv',
+        '4x gtceu:icy_steel_matrix_single_wire',
+        '12x kubejs:frost_reinforced_stained_steel_drill_head',
+        '1x gtceu:hv_machine_hull')
+    .inputFluids('gtceu:soldering_alloy 1200')
     .itemOutputs('kubejs:frost_reinforced_stained_steel_drilling_kit')
-    .duration(300)
+    .duration(400)
     .EUt(GTValues.VA[GTValues.EV]);
 
 // Aluminfrost Drilling Kit - EV Assembler
 event.recipes.gtceu.assembler('aluminfrost_drilling_kit')
     .itemInputs(
-        'gtceu:aluminfrost_plate', 8,
-        'gtceu:aluminfrost_gear', 4,
-        'gtceu:ev_electric_pump', 2,
-        'gtceu:ev_field_generator', 1,
-        'gtceu:plastic_printed_board', 2,
-        'gtceu:aluminfros_drill_head', 1,
-        'gtceu:ev_machine_casing', 1
-    )
-    .itemOutputs('gtceu:liquid_helium', Fluid.of('gtceu:liquid_helium', 250))
+        '8x gtceu:aluminfrost_plate',
+        '16x gtceu:aluminfrost_screw',
+        '2x gtceu:mv_field_generator',
+        '4x gtceu:mv_electric_motor',
+        '20x #gtceu:circuits/mv',
+        '4x gtceu:cryogenic_aluminum_strand_single_wire',
+        '10x kubejs:aluminfrost_drill_head',
+        '1x gtceu:mv_machine_hull')
+    .inputFluids('gtceu:soldering_alloy 1200')
     .itemOutputs('kubejs:aluminfrost_drilling_kit')
-    .duration(250)
+    .duration(400)
     .EUt(GTValues.VA[GTValues.EV]);
 
 // Aurum Steel Drilling Kit - EV Assembler
 event.recipes.gtceu.assembler('aurum_steel_drilling_kit')
     .itemInputs(
-        'gtceu:aurum_steel_frame', 4,
-        'gtceu:aurum_steel_rotor', 2,
-        'gtceu:ev_field_generator', 2,
-        'gtceu:ev_electric_motor', 4,
-        'gtceu:advanced_circuit_board', 2,
-        'gtceu:tungsten_steel_drill_head', 1,
-        'gtceu:ev_machine_casing', 2,
-        'gtceu:cryo_steel_supercon_wire', 8
-    )
+        '8x gtceu:aurum_steel_plate',
+        '16x gtceu:aurum_steel_screw',
+        '2x gtceu:lv_field_generator',
+        '4x gtceu:lv_electric_motor',
+        '20x #gtceu:circuits/lv',
+        '4x gtceu:magmatic_manganese_lead_single_wire',
+        '8x kubejs:aurum_steel_drill_head',
+        '1x gtceu:lv_machine_hull')
+    .inputFluids('gtceu:soldering_alloy 1200')
     .itemOutputs('kubejs:aurum_steel_drilling_kit')
-    .duration(500)
+    .duration(400)
     .EUt(GTValues.VA[GTValues.EV]);
+    event.recipes.gtceu.mixer('magmatic_manganese_lead_alloy')
+        .itemInputs(
+            '2x gtceu:manganese_dust', // Manganese component (LV)
+            '2x gtceu:lead_dust',
+            '8x gtceu:dormant_ember_dust',
+                  // Lead component (LV)
+        )
+        .inputFluids('minecraft:lava 288') // "Magmatic" implies lava/heat
+        .itemOutputs('12x gtceu:magmatic_manganese_lead_dust') // Output the custom material dust
+        .duration(200) // LV tier duration
+        .EUt(GTValues.VA[GTValues.LV]); // LV voltage
 
+
+    // 2. Cryogenic Aluminum Strand (MV Mixer) - NO CHANGE
+    // Create the Cryogenic Aluminum Strand alloy/compound.
+    // Niobium is HV, which is appropriate for an MV output.
+    event.recipes.gtceu.mixer('cryo_aluminum_superconductor_alloy')
+        .itemInputs(
+            '4x gtceu:aluminium_dust', // Aluminum component (LV)
+            '1x gtceu:niobium_dust',
+            '6x gtceu:permafrost_dust', // Niobium component (HV) - OK for MV output
+        )
+        .inputFluids('gtceu:nitrogen 250') // "Cryogenic" implies liquid nitrogen
+        .itemOutputs('5x gtceu:cryogenic_aluminum_strand_dust') // Output the custom material dust
+        .duration(300) // MV tier duration
+        .EUt(GTValues.VA[GTValues.MV]); // MV voltage
+
+    // 3. Icy Steel Matrix (HV Mixer) - REVISED
+    // Create the Icy Steel Matrix alloy/compound, replacing Tungsten (IV) with Titanium (EV).
+    event.recipes.gtceu.mixer('icy_steel_matrix_alloy')
+        .itemInputs(
+            '4x gtceu:steel_dust',    // Steel component (HV)
+            '2x gtceu:stainless_steel_dust',
+            '4x gtceu:unrefined_aluminfrost_dust',
+            '12x gtceu:permafrost_dust',  // Titanium component (EV) - Appropriate for HV output
+        )
+        .inputFluids('gtceu:nitrogen 50') 
+        .itemOutputs('18x gtceu:icy_steel_matrix_dust') // Output the custom material dust
+        .duration(600) // HV tier duration
+        .EUt(GTValues.VA[GTValues.HV]); // HV voltage
+
+    event.recipes.gtceu.mixer('source_titanium_filament_alloy')
+        .itemInputs(
+            '4x gtceu:titanium_dust',
+            '64x ars_nouveau:source_gem',
+            '2x gtceu:molybdenum_dust',
+
+        )
+        .inputFluids('gtceu:source_of_magic 1200')
+        .itemOutputs('14x gtceu:source_titanium_filament_dust') // Output the custom material dust
+        .duration(500) // EV tier duration
+        .EUt(GTValues.VA[GTValues.EV]); // EV voltage
+        event.recipes.gtceu.assembler('diamond_ring')
+        .itemInputs(
+            '4x gtceu:double_iridium_plate',
+            '32x gtceu:tungsten_steel_plate',
+            '2x gtceu:molybdenum_dust',
+            '1x gtceu:advanced_electric_jetpack'
+
+        )
+        .inputFluids('gtceu:void_touched_tungsten 670') 
+        .itemOutputs('1x angelring:diamond_ring') // Output the custom material dust
+        .duration(500) // EV tier duration
+        .EUt(GTValues.VA[GTValues.EV]); // EV voltage
 // Space Miner Module - EV Assembler
 event.recipes.gtceu.assembler('space_miner_module')
     .itemInputs(
-        'kubejs:space_grade_steel_drilling_kit', 1,
-        'gtceu:ev_robot_arm', 4,
-        'gtceu:ev_sensor', 4,
-        'gtceu:gravitation_unit', 1,
-        'gtceu:advanced_circuit_board', 4,
-        'gtceu:emitter', 2,
-        'gtceu:ev_machine_casing', 1
+        '1x kubejs:space_grade_steel_drilling_kit',       // Slot 1: Core custom drilling kit
+        '1x gtceu:ev_machine_hull',                     // Slot 2: Base machine structure
+        '4x gtceu:ev_robot_arm',                          // Slot 3: Key robotic components
+        '4x gtceu:ev_sensor',                             // Slot 4: Key sensor components
+        '2x gtceu:ev_field_generator',                    // Slot 5: High-end EV power/control
+        '8x #gtceu:circuits/ev',                          // Slot 6: Logic (highest available EV circuit)
+        '4x gtceu:ev_emitter',                            // Slot 7: Energy emission/cutting
+        '8x gtceu:space_grade_steel_plate',               // Slot 8: Primary custom structural material
+        '8x gtceu:source_titanium_filament_single_wire'  // Slot 9: High-tech custom wiring
     )
+    .inputFluids('kubejs:cryo_ember_fluid 16000')
     .itemOutputs('kubejs:space_miner_module')
     .duration(600)
     .EUt(GTValues.VA[GTValues.EV]);
 
-// Earthbound Miner Module - EV Assembler
+// Earthbound Miner Module - EV Assembler 
 event.recipes.gtceu.assembler('earthbound_miner_module')
     .itemInputs(
-        'kubejs:frost_reinforced_stained_steel_drilling_kit', 1,
-        'gtceu:ev_robot_arm', 2,
-        'gtceu:ev_sensor', 2,
-        'gtceu:anchor_casing', 4,
-        'gtceu:ev_electric_pump', 4,
-        'gtceu:ev_fluid_regulator', 2,
-        'gtceu:ground_penetrating_radar', 1,
-        'gtceu:ev_machine_hull', 1
+        '1x kubejs:frost_reinforced_stained_steel_drilling_kit', // Slot 1: Core custom drilling kit 1
+        '1x kubejs:aurum_steel_drilling_kit',     // Slot 2: Core custom drilling kit 2
+        '1x kubejs:aluminfrost_drilling_kit',                   // Slot 3: Core custom drilling kit 3
+        '1x gtceu:ev_machine_hull',                             // Slot 4: Base machine structure (essential)
+        '4x gtceu:ev_robot_arm',                                // Slot 5: Key robotic components for automation
+        '8x gtceu:stable_machine_casing',                     // Slot 6: REPLACED anchor_casing. A robust EV-tier structural component.
+        '4x gtceu:ev_electric_pump',                            // Slot 7: For fluid/material extraction
+        '8x #gtceu:circuits/ev',                                // Slot 8: Logic (should resolve to advanced_circuit_board or similar in your setup)
+        '8x gtceu:icy_steel_matrix_single_wire'                 // Slot 9: Custom cryogenic/structural wiring
     )
+    .inputFluids('kubejs:cryo_ember_fluid 12000')
     .itemOutputs('kubejs:earthbound_miner_module')
-    .duration(500)
+    .duration(600)
     .EUt(GTValues.VA[GTValues.EV]);
-
 })

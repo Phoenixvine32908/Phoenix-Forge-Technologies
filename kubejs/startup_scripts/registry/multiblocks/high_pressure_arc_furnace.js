@@ -24,7 +24,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
 .aisle("BBBBBBB", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "BBBKBBB", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC")
    .where("A", Predicates.blocks("minecraft:air"))
    .where('B', Predicates.blocks('gtceu:high_temperature_smelting_casing').setMinGlobalLimited(10) // Corrected line
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))

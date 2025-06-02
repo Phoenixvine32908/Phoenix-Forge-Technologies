@@ -11,7 +11,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('reborn_dimensional_rift_extractor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('dimensional_anchor')
+        .recipeTypes('chemical_reactor')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
@@ -24,7 +24,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
 .aisle("BBBHBBB", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC")
    .where("A", Predicates.blocks("minecraft:air"))
    .where('B', Predicates.blocks('kubejs:reliable_naquadah_alloy_machine_casing').setMinGlobalLimited(10) // Corrected line
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setMaxGlobalLimited(1))
+                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
                 .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.abilities(PartAbility.INPUT_LASER).setMaxGlobalLimited(1))
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))

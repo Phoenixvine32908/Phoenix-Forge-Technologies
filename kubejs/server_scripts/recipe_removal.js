@@ -425,7 +425,14 @@ const recipesToRemove = [
 "thermal:machines/press/press_constantan_ingot_to_gear",
 "thermal:machines/press/press_signalum_ingot_to_gear",
 "thermal:machines/press/press_lumium_ingot_to_gear",
-"thermal:machines/press/press_enderium_ingot_to_gear"
+"thermal:machines/press/press_enderium_ingot_to_gear",
+"ad_astra:steel_rod",
+"ad_astra:iron_rod",
+"thermal:augments/dynamo_output_augment",
+"gtceu:shaped/casing_ev",
+"gtceu:shaped/ev_machine_hull",
+"gtceu:assembler/casing_ev",
+"gtceu:vacuum_freezer/cool_hot_85_percent_pure_nevonian_steel_ingot"
 ];
 
 ServerEvents.recipes((event) => {

@@ -1,8 +1,15 @@
 
 #Crazy AE2 Addons - Config
 [general]
-	#Enables Circuited Pattern Provider
+	#Enables The functionality of pattern providers to set the circuit of the GregTech's machine its pushing to
 	enableCPP = true
 	#Enables Spawner Controller to work also on peacefull mode
 	enablePeacefullSpawner = true
+	#Enables/disables the entity ticker
+	enableEntityTicker = true
+	#You can set the power cost multiplayer for the entity ticker here
+	#Range: 0 ~ 1024
+	EntityTickerCost = 256
+	#Blocks on which entity ticker should not work
+	EntityTickerBlackList = ["gtceu:luv_fusion_reactor", "gtceu:zpm_fusion_reactor", "gtceu:uv_fusion_reactor"]
 
