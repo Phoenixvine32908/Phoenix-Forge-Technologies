@@ -12,7 +12,63 @@ ServerEvents.recipes(event => {
     .itemOutputs('thermal:dynamo_output_augment')
     .duration(200)
     .EUt(GTValues.VA[GTValues.LV]/2)
+   event.recipes.gtceu.assembler("kubejs:epp/assembler_matrix_frame")
+        .itemInputs("2x gtceu:dense_85_percent_pure_nevonian_steel_plate", "4x gtceu:blue_steel_frame", "gtceu:plascrete", "#gtceu:circuits/ev")
+        .inputFluids('gtceu:polytetrafluoroethylene 288')
+        .itemOutputs("4x expatternprovider:assembler_matrix_frame")
+        .duration(150)
+        .EUt(1920)
+         event.recipes.gtceu.assembler("kubejs:epp/assembler_matrix_glass")
+        .itemInputs("4x gtceu:dense_85_percent_pure_nevonian_steel_plate", "4x gtceu:blue_steel_frame", "gtceu:cleanroom_glass", "#gtceu:circuits/ev")
+        .inputFluids('gtceu:polytetrafluoroethylene 288')
+        .itemOutputs("4x expatternprovider:assembler_matrix_glass")
+        .duration(150)
+        .EUt(1920)
 
+
+    // Assembler Matrix Wall
+    event.recipes.gtceu.assembler("kubejs:epp/assembler_matrix_wall")
+        .itemInputs("expatternprovider:assembler_matrix_frame", "gtceu:hv_electric_motor", "gtceu:small_85_percent_pure_nevonian_steel_gear")
+        .itemOutputs("expatternprovider:assembler_matrix_wall")
+        .duration(100)
+        .EUt(1920)
+
+    // Assembler Matrix Pattern Core
+    event.recipes.gtceu.assembler("kubejs:epp/assembler_matrix_pattern")
+        .itemInputs("4x expatternprovider:assembler_matrix_frame", "4x ae2:engineering_processor", "expatternprovider:ex_pattern_provider", "6x ae2:blue_lumen_paint_ball", "2x gtceu:85_percent_pure_nevonian_steel_spring")
+        .inputFluids('gtceu:polytetrafluoroethylene 288')
+        .itemOutputs("expatternprovider:assembler_matrix_pattern")
+        .duration(150)
+        .EUt(1920)
+
+    // Assembler Matrix Craft Core
+    event.recipes.gtceu.assembler("kubejs:epp/assembler_matrix_crafter")
+        .itemInputs("4x expatternprovider:assembler_matrix_frame", "4x ae2:engineering_processor", "expatternprovider:ex_molecular_assembler", "6x ae2:purple_lumen_paint_ball","2x gtceu:85_percent_pure_nevonian_steel_screw")
+        .inputFluids('gtceu:polytetrafluoroethylene 288')
+        .itemOutputs("expatternprovider:assembler_matrix_crafter")
+        .duration(150)
+        .EUt(1920)
+
+    // Assembler Matrix Speed Core
+    event.recipes.gtceu.assembler("kubejs:epp/assembler_matrix_speed")
+        .itemInputs("4x expatternprovider:assembler_matrix_frame", "4x megacells:accumulation_processor", "mae2:4x_crafting_accelerator", "expatternprovider:ex_pattern_provider", "expatternprovider:ex_molecular_assembler", "6x ae2:red_lumen_paint_ball", "16x gtceu:85_percent_pure_nevonian_steel_frame")
+        .inputFluids('gtceu:polytetrafluoroethylene 288')
+        .itemOutputs("expatternprovider:assembler_matrix_speed")
+        .duration(150)
+        .EUt(1920)
+
+ event.recipes.gtceu.large_chemical_reactor("printed_accumulation_processor")
+        .itemInputs("2x gtceu:85_percent_pure_nevonian_steel_gear", "4x megacells:sky_steel_ingot", "gtceu:tempered_glass")
+        .inputFluids('gtceu:hydrofluoric_acid 288')
+        .itemOutputs("2x megacells:printed_accumulation_processor")
+        .duration(150)
+        .EUt(1920)
+        event.recipes.gtceu.circuit_assembler("accumulation_processor")
+        .itemInputs("4x gtceu:85_percent_pure_nevonian_steel_rod", "gtceu:tungsten_steel_frame", "#gtceu:circuits/ev")
+        .inputFluids('gtceu:soldering_alloy 288')
+        .itemOutputs("1x megacells:accumulation_processor")
+        .duration(150)
+        .EUt(1920)
     event.recipes.gtceu.centrifuge('zircon_dust_from_blackstone_dust')
     .itemInputs('4x gtceu:blackstone_dust')
     .itemOutputs('6x gtceu:magma_dust', '2x gtceu:dormant_ember_dust', 'gtceu:zircon_dust', 'gtceu:silicon_dust')
@@ -211,6 +267,13 @@ ServerEvents.recipes(event => {
     .duration(100)
     .circuit(15)
     .EUt(GTValues.VA[GTValues.HV]/2)
+    event.recipes.gtceu.mixer('void_touched_tungsten_steel')
+    .itemInputs('4x gtceu:tungsten_dust', '4x gtceu:voidglass_shard_dust', '2x gtceu:vanadium_steel_dust')
+    .inputFluids('gtceu:liquid_ender_air 500')
+    .itemOutputs('8x gtceu:void_touched_tungsten_steel_dust')
+    .duration(160)
+    .circuit(15)
+    .EUt(GTValues.VA[GTValues.EV]/2)
         event.recipes.gtceu.mixer('space_grade_steel_dust')
         .itemInputs(
             '1x gtceu:zircalloy_dust', 
@@ -247,13 +310,20 @@ ServerEvents.recipes(event => {
     .itemOutputs('5x gtceu:lead_dust', '3x gtceu:thorium_dust')
     .outputFluids('gtceu:helium 500')
     .duration(500)
-    .EUt(GTValues.VA[GTValues.HV]/2)
+    .EUt(GTValues.VA[GTValues.EV]/2)
     event.recipes.gtceu.source_imbument('source_gem')
     .itemInputs('1x minecraft:amethyst_shard')
     .inputFluids('gtceu:source_of_magic 250')
     .itemOutputs('2x ars_nouveau:source_gem')
     .duration(40)
     .EUt(GTValues.VA[GTValues.HV]/2)
+
+      event.recipes.gtceu.source_imbument('85_percent_pure_nevonian_steel_cooling')
+    .itemInputs('1x gtceu:hot_85_percent_pure_nevonian_steel_ingot')
+    .inputFluids('gtceu:source_of_magic 2500')
+    .itemOutputs('1x gtceu:85_percent_pure_nevonian_steel_ingot')
+    .duration(400)
+    .EUt(GTValues.VA[GTValues.EV]/2)
     event.recipes.gtceu.source_imbument('source_gem_without_source')
     .itemInputs('1x minecraft:amethyst_shard')
     .itemOutputs('1x ars_nouveau:source_gem')
@@ -647,6 +717,16 @@ event.recipes.gtceu.assembler('aluminfrost_drilling_kit')
     .inputFluids('gtceu:soldering_alloy 1200')
     .itemOutputs('kubejs:aluminfrost_drilling_kit')
     .duration(400)
+    .EUt(GTValues.VA[GTValues.EV]);
+    event.recipes.gtceu.large_chemical_reactor('85_percent_pure_nevonian_steel_dust')
+    .itemInputs(
+        '4x gtceu:exquisite_coke_gem',
+        '16x gtceu:diamond_dust',
+        '2x gtceu:nevvonian_iron_dust')
+    .inputFluids('gtceu:source_of_magic 1200', "gtceu:titanium 250")
+    .outputFluids("gtceu:titanium_tetrachloride 100")
+    .itemOutputs('4x gtceu:85_percent_pure_nevonian_steel_dust')
+    .duration(800)
     .EUt(GTValues.VA[GTValues.EV]);
 
 // Aurum Steel Drilling Kit - EV Assembler

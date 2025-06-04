@@ -259,10 +259,10 @@ event.recipes.gtceu.dimensional_anchoring12('overworld_blazing_drill_better')
             '30x gtceu:fluorite_ore',
             '128x gtceu:magnetite_ore',
             '128x gtceu:cooperite_ore',
-            '30x gtceu:nevvonian_iron_ore',
+            '10x gtceu:nevvonian_iron_ore',
             '30x gtceu:crystallized_fluxstone_ore',
-            '30x gtceu:polarity_flipped_bismuthite_ore',
-            '32x gtceu:ignisium_ore'
+            '10x gtceu:polarity_flipped_bismuthite_ore',
+            '15x gtceu:ignisium_ore'
         )
         .duration(2700)
         .EUt(GTValues.VA[GTValues.EV] / 2)

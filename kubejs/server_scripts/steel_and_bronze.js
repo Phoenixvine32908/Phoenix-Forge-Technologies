@@ -194,6 +194,10 @@ ServerEvents.recipes((event) => {
     P: "gtceu:frost_reinforced_stained_steel_plate",
     W: "#forge:tools/wrenches",
   });
+  event.shaped("gtceu:iv_machine_casing", ["PPP", "PWP", "PPP"], {
+    P: "gtceu:void_touched_tungsten_steel_plate",
+    W: "#forge:tools/wrenches",
+  });
   event.shaped("gtceu:ev_machine_casing", ["PPP", "PWP", "PPP"], {
     P: "gtceu:source_imbued_titanium_plate",
     W: "#forge:tools/wrenches",
@@ -207,6 +211,12 @@ ServerEvents.recipes((event) => {
     W: "gtceu:tin_single_cable",
     Z: "gtceu:lv_machine_casing",
     S: "gtceu:wrought_iron_plate"
+  });
+    event.shaped("gtceu:iv_machine_hull", ["SPS", "WZW", "   "], {
+    P: "gtceu:void_touched_tungsten_steel_plate",
+    W: "gtceu:tin_single_cable",
+    Z: "gtceu:iv_machine_casing",
+    S: "gtceu:polytetrafluoroethylene_plate"
   });
 
   event.shaped("gtceu:mv_machine_hull", ["SPS", "WZW", "   "], {
