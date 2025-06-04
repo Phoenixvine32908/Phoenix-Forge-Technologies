@@ -56,7 +56,6 @@ function makeLimitedMaterialWithCable(event, id, color, color2, icon, cableProps
         .color(color)
         .secondaryColor(color2)
         .iconSet(icon)
-        .blastTemp(blastTempData[0], blastTempData[1], blastTempData[2], blastTempData[3])
         .flags([
             GTMaterialFlags.GENERATE_FINE_WIRE,
         ])
@@ -105,7 +104,7 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
         ["phoenix_enriched_naquad", 25, 32, "PENaq"],
         ["akashic_zeronium", 24, 12, "ASHK"],
         ["aetherium_steel", 26, 30, "AES"],
-        ["void_touched_tungsten", 74, 110, "VTT"],
+        ["void_touched_tungsten_steel", 74, 110, "VTT"],
         ["celestial_aurorium", -1, -1, "CAu"],
         ["primordial_flux_metal", -1, -1, "PFM"],
         ["eternal_starforged_steel", -1, -1, "ESS"],
@@ -164,7 +163,7 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
         phoenix_enriched_naquad: shiny,
         akashic_zeronium: shiny,
         aetherium_steel: shiny,
-        void_touched_tungsten: dull,
+        void_touched_tungsten_steel: dull,
         subspace_cobalt: shiny,
         singularity_forged_titanium: shiny,
         exotic_vanadium_composite: dull,
@@ -240,14 +239,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
     // NOTE: Removed the 'lumium' call here to prevent duplicate registration.
     // Lumium should be provided by GTCEu or another mod.
 
-    makeLimitedMaterialEBF(
-        event,
-        '85_percent_pure_nevonian_steel',
-        0xFFFFE0,
-        0xFFD700,
-        'shiny',
-        [3800, 'mid', GTValues.VA[GTValues.EV], 1200]
-    );
 
     makeLimitedMaterialWithCable(
         event,
@@ -256,7 +247,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         0xFF4500,
         'magmatic_manganese_lead',
         [GTValues.V[GTValues.LV], 2, 2, true],
-        [1800, 'low', GTValues.VA[GTValues.LV], 500]
     );
 
     makeLimitedMaterialWithCable(
@@ -266,7 +256,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         0x87CEFA,
         'cryo_aluminum_supercon',
         [GTValues.V[GTValues.MV], 4, 0, true],
-        [2700, 'low', GTValues.VA[GTValues.MV], 450]
     );
 
     makeLimitedMaterialWithCable(
@@ -276,7 +265,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         0x696969,
         'cryo_steel_supercon',
         [GTValues.V[GTValues.HV], 8, 0, true],
-        [2700, 'low', GTValues.VA[GTValues.HV], 550]
     );
 
     makeLimitedMaterialWithCable(
@@ -286,7 +274,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         0xFF00FF,
         'source_titanium_supercon',
         [GTValues.V[GTValues.EV], 16, 0, true],
-        [3600, 'low', GTValues.VA[GTValues.EV], 450]
     );
 
     // --- Materials defined using the generic 'makeMaterial' helper ---
@@ -296,7 +283,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         ["phoenix_enriched_naquad", 0xFFA500, 0x000000, materialFlags, [GTValues.V[GTValues.ZPM], 64, 8, true], [1500, 400, 12.0, 750000]],
         ["phoenix_enriched_tritanium", 0xFF0000, 0x000000, materialFlags, [GTValues.V[GTValues.ZPM], 64, 8, true], [1800, 450, 14.0, 900000]],
         ["aetherium_steel", 0xADD8E6, 0x808080, materialFlags, [GTValues.V[GTValues.ZPM], 32, 4, true], [1300, 350, 11.0, 600000]],
-        ["void_touched_tungsten", 0x4B0082, 0x000000, materialFlags, [GTValues.V[GTValues.UV], 16, 2, true], [1000, 250, 18.0, 800000]],
         ["subspace_cobalt", 0x00FFFF, 0x008B8B, materialFlags, [GTValues.V[GTValues.UV], 32, 4, true], [1600, 420, 13.5, 700000]],
         ["singularity_forged_titanium", 0x808080, 0x696969, materialFlags, [GTValues.V[GTValues.UV], 64, 8, true], [1700, 430, 14.5, 850000]],
         ["exotic_vanadium_composite", 0xFFA07A, 0xCD5C5C, materialFlags, [GTValues.V[GTValues.UV], 32, 4, true], [1400, 380, 16.0, 780000]],
@@ -380,6 +366,38 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             GTMaterialFlags.GENERATE_FINE_WIRE,
             GTMaterialFlags.GENERATE_FOIL,
             GTMaterialFlags.GENERATE_ROTOR);
+event.create('85_percent_pure_nevonian_steel')
+        .ingot()
+        .color(0xFFFFE0)
+        .secondaryColor(0xFFD700)
+        .iconSet('shiny')
+        .blastTemp(3800, 'mid', GTValues.VA[GTValues.EV], 1200)
+        .flags(GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_GEAR,
+            GTMaterialFlags.GENERATE_SMALL_GEAR,
+            GTMaterialFlags.GENERATE_SPRING,
+            GTMaterialFlags.PHOSPHORESCENT,
+            GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_DENSE,
+            GTMaterialFlags.GENERATE_BOLT_SCREW,
+            GTMaterialFlags.GENERATE_FRAME,
+            GTMaterialFlags.GENERATE_DENSE,);
+        event.create('void_touched_tungsten_steel')
+        .ingot()
+        .color(0x4B0082)
+        .secondaryColor(0x000000)
+        .iconSet('shiny')
+        .blastTemp(3800, 'mid', GTValues.VA[GTValues.IV], 850)
+        .flags(GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_GEAR,
+            GTMaterialFlags.GENERATE_SMALL_GEAR,
+            GTMaterialFlags.GENERATE_SPRING,
+            GTMaterialFlags.PHOSPHORESCENT,
+            GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_DENSE,
+            GTMaterialFlags.GENERATE_BOLT_SCREW,
+            GTMaterialFlags.GENERATE_FRAME,
+            GTMaterialFlags.GENERATE_DENSE,);
 
     event.create('frost_reinforced_stained_steel')
         .ingot()

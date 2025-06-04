@@ -432,7 +432,15 @@ const recipesToRemove = [
 "gtceu:shaped/casing_ev",
 "gtceu:shaped/ev_machine_hull",
 "gtceu:assembler/casing_ev",
-"gtceu:vacuum_freezer/cool_hot_85_percent_pure_nevonian_steel_ingot"
+"gtceu:vacuum_freezer/cool_hot_85_percent_pure_nevonian_steel_ingot",
+"expatternprovider/cutter/accumulation",
+"expatternprovider:assembler_matrix_glass",
+"expatternprovider/cutter/calculation",
+"expatternprovider/cutter/silicon",
+"expatternprovider/cutter/engineering",
+"gtceu:assembler/casing_iv",
+"gtceu:shaped/casing_iv",
+"gtceu:shaped/iv_machine_hull",
 ];
 
 ServerEvents.recipes((event) => {

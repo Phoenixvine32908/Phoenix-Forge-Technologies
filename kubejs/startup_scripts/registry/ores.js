@@ -86,11 +86,6 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0x77e3ff).iconSet('diamond')
         .components('1x calcium'); // Changed
 
-    event.create('voidglass_vein')
-        .ore().gem()
-        .color(0x2b0033).iconSet('diamond')
-        .components('1x calcium'); // Changed
-
     // 🔥 Nether Addition
     event.create('ignisium')
         .ore().dust() // Could be a fiery dust
