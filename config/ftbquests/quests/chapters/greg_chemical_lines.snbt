@@ -245,6 +245,192 @@
 			x: 3.6d
 			y: 0.8d
 		}
+		{
+			id: "5325F8C2C80B77BE"
+			size: 0.9d
+			tasks: [{
+				id: "15D2CBBED79C8832"
+				item: "gtceu:polytetrafluoroethylene_bucket"
+				type: "item"
+			}]
+			x: -3.15d
+			y: -0.44999999999999996d
+		}
+		{
+			dependencies: ["012C03ED5DBADBBD"]
+			description: [
+				"Silicone rubber is used to cover higher tier cables, typical rubber will not last enough."
+				""
+				"Silicone rubber is capable of covering all tiers of cables, but as an alternative you can also use styrene-butadiene rubber, which is also capable of covering all types of cables, however, it does require some petrochem stuff that you might have not done yet. I recommend you checking out the oil distillation quest too."
+				""
+				"Also, it's &lrequired&r for LuV+ electric pumps."
+			]
+			id: "6142DB85A24CEDB9"
+			rewards: [{
+				id: "61A11B9367DC7552"
+				item: "gtceu:doge_coin"
+				type: "item"
+			}]
+			size: 0.8d
+			tasks: [{
+				id: "48B16C3BE1661456"
+				item: "gtceu:silicone_rubber_bucket"
+				type: "item"
+			}]
+			x: 10.8d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3917F3EB03C1EBD0"
+				"4F4EA00A88BD951A"
+			]
+			id: "012C03ED5DBADBBD"
+			rewards: [{
+				id: "5B2EF91D587D65B4"
+				item: "gtceu:doge_coin"
+				type: "item"
+			}]
+			size: 0.8d
+			subtitle: "Decently easy to make, and very useful"
+			tasks: [{
+				id: "48C62E45E2FCF1E4"
+				item: "gtceu:polydimethylsiloxane_dust"
+				type: "item"
+			}]
+			x: 10.8d
+			y: 0.8d
+		}
+		{
+			description: [
+				"You can also search for salt water on an ocean biome by using the fluid prospector module."
+				""
+				"Which gives free hydrogen and chlorine."
+			]
+			id: "4F4EA00A88BD951A"
+			rewards: [{
+				id: "1F9C296A0AFDC405"
+				item: "gtceu:doge_coin"
+				type: "item"
+			}]
+			size: 0.8d
+			tasks: [{
+				id: "36FEE7E206DFBD0C"
+				item: "gtceu:chlorine_bucket"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.8d
+		}
+		{
+			id: "4986431778B395CF"
+			size: 0.8d
+			tasks: [{
+				id: "0B11C002BC66E6B6"
+				item: "gtceu:hydrochloric_acid_bucket"
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			id: "4F7608C3B5C51E13"
+			size: 0.8d
+			tasks: [{
+				id: "677A7F79C1C45D33"
+				item: "gtceu:hydrogen_bucket"
+				type: "item"
+			}]
+			x: 9.2d
+			y: 0.0d
+		}
+		{
+			id: "3F2EE118EC2B24E9"
+			size: 0.8d
+			tasks: [{
+				id: "4C34BD773C73FA3C"
+				item: "gtceu:methanol_bucket"
+				type: "item"
+			}]
+			x: 9.2d
+			y: 0.8d
+		}
+		{
+			id: "44F31C417B54D593"
+			size: 0.8d
+			tasks: [{
+				id: "05830BE233B54884"
+				item: "gtceu:wood_vinegar_bucket"
+				type: "item"
+			}]
+			x: 8.4d
+			y: 0.0d
+		}
+		{
+			id: "070BFA841E17EDF9"
+			size: 0.8d
+			tasks: [{
+				id: "37861D6F36ED3D30"
+				item: "gtceu:hydrofluoric_acid_bucket"
+				type: "item"
+			}]
+			x: -3.6d
+			y: 0.4d
+		}
+		{
+			id: "4BB727B5A2207D7D"
+			size: 0.8d
+			tasks: [{
+				id: "314171ECC06BBC41"
+				item: "gtceu:chloroform_bucket"
+				type: "item"
+			}]
+			x: -2.4d
+			y: 0.4d
+		}
+		{
+			id: "689AB33E56E39E33"
+			size: 0.8d
+			tasks: [{
+				id: "52A5EFA7F9E4E851"
+				item: "gtceu:hydrogen_bucket"
+				type: "item"
+			}]
+			x: -4.4d
+			y: 0.4d
+		}
+		{
+			id: "01DA0FB8F9CC2C2E"
+			size: 0.8d
+			tasks: [{
+				id: "1D6AB94C013FEDB1"
+				item: "gtceu:fluorine_bucket"
+				type: "item"
+			}]
+			x: -4.0d
+			y: 1.2d
+		}
+		{
+			id: "79F6178EE9B53021"
+			size: 0.8d
+			tasks: [{
+				id: "2D118D2EABF6662D"
+				item: "gtceu:methane_bucket"
+				type: "item"
+			}]
+			x: -2.4d
+			y: 1.2d
+		}
+		{
+			id: "4F74DD2600E5B4B2"
+			tasks: [{
+				id: "05B4507F3F3A302B"
+				item: "gtceu:polyvinyl_chloride_bucket"
+				type: "item"
+			}]
+			x: 6.0d
+			y: -0.5d
+		}
 	]
 	title: "Greg Chemical Lines"
 }

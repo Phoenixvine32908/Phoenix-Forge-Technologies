@@ -449,3 +449,9 @@ recipesToRemove.forEach(recipeId => {
     event.remove({ id: recipeId });
   });
 })
+
+crazyae2addons:signalling_interface
+crazyae2addons:impulsed_pattern_provider
+crazyae2addons:crazy_pattern_modifier
+crazyae2addons:right_click_provider
+crazyae2addons:circuit_upgrade_card

@@ -503,7 +503,7 @@
 			description: [
 				"&6Superconductors&r are special Wires available for each Voltage tier. They don't come with a Cable counterpart, but that isn't necessary, as they have absolutely &6zero cable loss&r."
 				""
-				"They also won't electrocute you when you step on them. This makes them the best choice for wiring, if not a little expensive in comparison to the other wires."
+				"They also won't electrocute you when you step on them. This makes them the &6best&r choice for wiring, if not a little expensive in comparison to the other wires. (Also, a &oslight&r note here. &aAll&r custom &bsuperconductors&r can be smelted in a furnace. No need to worry about ebf times!)"
 				""
 				"If this did not already excite you, the 1x wire can support up to 2 amps!"
 				""
@@ -511,8 +511,8 @@
 			]
 			id: "46AD7A6F3B6775F5"
 			rewards: [{
-				id: "3F8346637D7277E1"
-				item: "gtceu:manganese_phosphide_single_wire"
+				id: "6406192721336191"
+				item: "gtceu:magmatic_manganese_lead_single_wire"
 				random_bonus: 3
 				type: "item"
 			}]
@@ -520,8 +520,8 @@
 			size: 0.66d
 			subtitle: "We aren't losing a single Amp more"
 			tasks: [{
-				id: "4477AB06651827D6"
-				item: "gtceu:manganese_phosphide_single_wire"
+				id: "0FD6FBCF5C181E00"
+				item: "gtceu:magmatic_manganese_lead_single_wire"
 				type: "item"
 			}]
 			title: "LV Superconductor"
