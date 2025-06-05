@@ -176,6 +176,16 @@
 			x: -1.05d
 			y: 3.15d
 		}
+		{
+			id: "19B04B95E6F75AB6"
+			tasks: [{
+				id: "052A953A9B8AB7FC"
+				item: "gtceu:titanium_ingot"
+				type: "item"
+			}]
+			x: -4.5d
+			y: 0.0d
+		}
 	]
 	title: "Greg Material Lines"
 }

@@ -1028,30 +1028,6 @@
 			y: 11.25d
 		}
 		{
-			dependencies: ["16B735F9C391D260"]
-			description: [
-				"In lieu of GTCEu's &3Ender Fluid Links&r being fully implemented, &dEnder Storage&r makes its way into the pack."
-				""
-				"Recipes have been adjusted to a &asimilar tier&r. You can change the \"frequency\" of &6each tank&r by using dye on the wool pads on top."
-				""
-				"You can also make similar &3Ender Chests&r to transport items - which is nice, because there's currently &cno way&r to wirelessly transport items in base &bGTCEu&r! Don't ever say we don't treat you!"
-				""
-				"Lastly, using a &eDiamond&r on an Ender Tank will lock the tank to your own &dprivate frequency&r, which is helpful if you're playing on a server."
-			]
-			id: "23A7E6D95549B1F8"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Ender? I ha- Ok, this joke is old"
-			tasks: [{
-				id: "5AAF6386B4AA7C69"
-				item: "enderstorage:ender_tank"
-				type: "item"
-			}]
-			title: "Ender Fluid Linking"
-			x: 6.75d
-			y: 9.0d
-		}
-		{
 			description: [
 				"The &aAdvanced Energy Detector&r is an RS-latch for Energy Control."
 				""
@@ -1750,7 +1726,7 @@
 			description: [
 				"You probably have some old machines lying around, right?"
 				""
-				"You most likely know by now that Arc Furnaces can recycle machines, but by &5EV&r, they upgrade to &a9 slots&r!"
+				"You most likely know by now that Arc Furnaces can recycle machines, so use them to get some materiels back!"
 				""
 				"&eNote&r: This quest accepts either an &5EV&r or &9IV&r Arc Furnace. You don't have to make both."
 			]
@@ -2021,24 +1997,12 @@
 		}
 		{
 			dependencies: ["39E7997F3080250A"]
-			description: [
-				"To turn a P2P Tunnel into a &aGTEU P2P Tunnel&r, right-click it in the world with a &dWire&r or &dCable&r."
-				""
-				"This is ideal in lategame situations to negate Cable or Transformer spam. You can also use them in conjunction with the AE2 Quantum Bridge to power your high tier Miners and Drills outside your base."
-				""
-				"There is a &45% Voltage Tax&r on the output side of the P2P, resulting in 5% energy loss."
-			]
+			description: ["."]
 			icon: "mae2:pattern_p2p_tunnel"
 			id: "40FB56274D296BFC"
 			shape: "rsquare"
 			size: 0.5d
-			subtitle: "Unfortunately, unavailable to any British players"
-			tasks: [{
-				id: "74B6B5BE046E9810"
-				item: "mae2:eu_p2p_tunnel"
-				type: "item"
-			}]
-			title: "EU P2P Tunnels"
+			title: "Round Robin Item P2P"
 			x: 8.418367346938766d
 			y: 2.7806122448979593d
 		}

@@ -171,7 +171,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('phoenix_enriched_naquad', Text.of("§cNaquadah, infused with the regenerative power of the Phoenix Force, for ultimate energy generation."));
     addGTCEuMaterialTooltips('phoenix_enriched_tritanium', Text.of("§cTritanium, supercharged by phoenix energy, offering unmatched resilience and conductivity."));
     addGTCEuMaterialTooltips('aetherium_steel', Text.of("§9Steel alloyed with ethereal Aetherium, granting lightweight strength and magical resonance."));
-    addGTCEuMaterialTooltips('void_touched_tungsten', Text.of("§8Tungsten exposed to the void, becoming incredibly dense and resistant to exotic energies."));
+    addGTCEuMaterialTooltips('void_touched_tungsten_steel', Text.of("§6A rare and potent alloy: tungsten, meticulously gilded with the essence of the void. Its unique composition grants it unparalleled strength and an unsettling shimmer."));
     addGTCEuMaterialTooltips('subspace_cobalt', Text.of("§3Cobalt existing partially in subspace, allowing for unique dimensional interactions."));
     addGTCEuMaterialTooltips('singularity_forged_titanium', Text.of("§7Titanium forged at the edge of a singularity, imbued with impossible durability."));
     addGTCEuMaterialTooltips('exotic_vanadium_composite', Text.of("§6A composite of exotic vanadium, pushing the limits of material science with its unique properties."));

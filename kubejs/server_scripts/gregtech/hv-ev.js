@@ -274,6 +274,14 @@ ServerEvents.recipes(event => {
     .duration(160)
     .circuit(15)
     .EUt(GTValues.VA[GTValues.EV]/2)
+    event.recipes.gtceu.alloy_blast_smelter('void_touched_tungsten_steel')
+        .circuit(2)
+        .itemInputs('32x gtceu:unrefined_aluminfrost_dust', '1x gtceu:cobalt_dust')
+        .inputFluids('kubejs:frost 6000')
+        .outputFluids('gtceu:molten_void_touched_tungsten_steel')
+        .duration(4200)
+        .EUt(100)
+        .blastFurnaceTemp(1700)
         event.recipes.gtceu.mixer('space_grade_steel_dust')
         .itemInputs(
             '1x gtceu:zircalloy_dust', 

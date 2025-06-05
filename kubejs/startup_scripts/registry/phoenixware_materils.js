@@ -384,10 +384,11 @@ event.create('85_percent_pure_nevonian_steel')
             GTMaterialFlags.GENERATE_DENSE,);
         event.create('void_touched_tungsten_steel')
         .ingot()
+        .fluid()
         .color(0x4B0082)
         .secondaryColor(0x000000)
-        .iconSet('shiny')
-        .blastTemp(3800, 'mid', GTValues.VA[GTValues.IV], 850)
+        .iconSet('metallic')
+        .blastTemp(4200, 'mid', GTValues.VA[GTValues.EV], 850)
         .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_GEAR,
             GTMaterialFlags.GENERATE_SMALL_GEAR,

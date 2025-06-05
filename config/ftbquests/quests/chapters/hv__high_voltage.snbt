@@ -517,11 +517,19 @@
 			id: "45F9AAE4ABE32033"
 			shape: "rsquare"
 			size: 0.66d
-			tasks: [{
-				id: "2C582DDA7BC36951"
-				item: "gtceu:mercury_barium_calcium_cuprate_single_wire"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2C582DDA7BC36951"
+					item: "gtceu:mercury_barium_calcium_cuprate_single_wire"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "0E85C09407FF7949"
+					item: "gtceu:icy_steel_matrix_single_wire"
+					type: "item"
+				}
+			]
 			title: "HV Superconductors"
 			x: 4.5d
 			y: -4.125d
@@ -560,9 +568,9 @@
 				"76681EFD9B76F401"
 			]
 			description: [
-				"&aSource Strengthend Titanium&r has the highest corrosion resistance, magic resistance, and strength-to-density ratio of any metallic element, so it's only natural that it will be used as a base for &5EV&r machinery."
+				"&5Source Imbued Titanium&r&r has the highest corrosion resistance, magic resistance, and strength-to-density ratio of any metallic element, so it's only natural that it will be used as a base for &5EV&r machinery."
 				""
-				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source&r, which is obtained by running any plants through the Alchemical Imbuer multiblock and then mixing that weakened &5Source&r with &bdiamond&r, &cruby&r, &1lapis&r, &aemerald&r, or &damethyst&r. "
+				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source Of Magic&r, which is obtained by running any plants through the Alchemical Imbuer multiblock. "
 				""
 				""
 				"{@pagebreak}"
@@ -570,7 +578,7 @@
 				""
 				"Whilst Multiblock generators are much more expensive, you'll find them to be much more energy efficient!"
 			]
-			icon: "gtceu:titanium_ingot"
+			icon: "gtceu:source_imbued_titanium_ingot"
 			id: "7FA0ACB7F161F378"
 			rewards: [{
 				exclude_from_claim_all: true
@@ -580,13 +588,13 @@
 			}]
 			shape: "gear"
 			size: 1.2d
-			subtitle: "Titanite Slab"
+			subtitle: "Magical Titanite Slab"
 			tasks: [{
-				id: "6D3E269567F419DE"
-				item: "gtceu:titanium_ingot"
+				id: "5E6A00C5E2682B89"
+				item: "gtceu:source_imbued_titanium_ingot"
 				type: "item"
 			}]
-			title: "Titanium"
+			title: "Source Imbued Titanium"
 			x: 5.625d
 			y: -5.25d
 		}
@@ -654,13 +662,27 @@
 			description: ["&a4A&r of &bMV&r energy transmission may be appealing, but you probably don't need these at this point. The option is always there if you need it."]
 			icon: "gtceu:magnesium_diboride_double_wire"
 			id: "72F0DFAF5CC6D0FE"
-			shape: "rsquare"
-			size: 0.66d
-			tasks: [{
-				id: "4CCBDA5AC16CBB48"
-				item: "gtceu:magnesium_diboride_single_wire"
+			rewards: [{
+				id: "2B2B0CA327A4FA77"
+				item: "gtceu:cryogenic_aluminum_strand_single_wire"
+				random_bonus: 3
 				type: "item"
 			}]
+			shape: "rsquare"
+			size: 0.66d
+			tasks: [
+				{
+					id: "4CCBDA5AC16CBB48"
+					item: "gtceu:magnesium_diboride_single_wire"
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "67A94C92497B01D6"
+					item: "gtceu:cryogenic_aluminum_strand_single_wire"
+					type: "item"
+				}
+			]
 			title: "MV Superconductors"
 			x: 6.75d
 			y: -4.125d
@@ -805,8 +827,6 @@
 				"&3Chlorine&r is required in the process, which is fully recycled if you electrolyze the &aHydrochloric Acid&r waste."
 				""
 				"&bFluorine&r will also be used in the &aUranium&r and &7Naquadah&r refinement processes."
-				""
-				"&9Tip:&r From this point onwards, you should be solidifying Polymers as &dBar&r (Ingot) form, as they can easily be shaped to whichever form you will need using the &3Extruder&r."
 			]
 			icon: "gtceu:polytetrafluoroethylene_plate"
 			id: "7CC79617A4965F25"
@@ -1305,8 +1325,14 @@
 			y: -5.25d
 		}
 		{
+			description: [
+				"Unlock the power of &5Source of Magic!&r In an &eAlchemical Imbuer&r (set to &6Source Extraction Mode&r), process &oplants, fuels, or lava&r to obtain this wonderful liquid."
+				""
+				"Your first step with this fluid is making &5Source-Imbued Titanium&r. (Also used for the &dev superconductor&r but we will see that later)."
+			]
 			id: "76681EFD9B76F401"
 			size: 0.75d
+			subtitle: "Ooooh, Magic"
 			tasks: [{
 				id: "5C933AA40CF32815"
 				item: "gtceu:source_of_magic_bucket"
@@ -1332,8 +1358,8 @@
 				item: "gtceu:alchemical_imbuer"
 				type: "item"
 			}]
-			x: 5.0d
-			y: -8.0d
+			x: 4.0d
+			y: -7.5d
 		}
 		{
 			id: "2892D18FFD789666"
@@ -1343,7 +1369,18 @@
 				type: "item"
 			}]
 			x: 3.0d
-			y: -9.5d
+			y: -7.5d
+		}
+		{
+			id: "61885813E9823B9C"
+			subtitle: "Display Your Data"
+			tasks: [{
+				id: "3D7B2A4B314AAA9B"
+				item: "crazyae2addons:display_monitor"
+				type: "item"
+			}]
+			x: 1.0d
+			y: -7.0d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]
