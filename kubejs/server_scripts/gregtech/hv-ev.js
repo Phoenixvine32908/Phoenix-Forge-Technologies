@@ -278,7 +278,7 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .itemInputs('32x gtceu:unrefined_aluminfrost_dust', '1x gtceu:cobalt_dust')
         .inputFluids('kubejs:frost 6000')
-        .outputFluids('gtceu:molten_void_touched_tungsten_steel')
+        .outputFluids('gtceu:void_touched_tungsten_steel')
         .duration(4200)
         .EUt(100)
         .blastFurnaceTemp(1700)
@@ -812,7 +812,7 @@ event.recipes.gtceu.assembler('aurum_steel_drilling_kit')
             '1x gtceu:advanced_electric_jetpack'
 
         )
-        .inputFluids('gtceu:void_touched_tungsten 670') 
+        .inputFluids('gtceu:void_touched_tungsten_steel 670') 
         .itemOutputs('1x angelring:diamond_ring') // Output the custom material dust
         .duration(500) // EV tier duration
         .EUt(GTValues.VA[GTValues.EV]); // EV voltage

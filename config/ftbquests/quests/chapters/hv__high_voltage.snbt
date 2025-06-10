@@ -1343,44 +1343,55 @@
 		}
 		{
 			id: "79333AE8A6745E5D"
+			size: 0.66d
 			tasks: [{
+				count: 8L
 				id: "658EAD49B69975D1"
 				item: "ars_nouveau:source_gem"
 				type: "item"
 			}]
-			x: 2.0d
-			y: -7.5d
+			x: 4.95d
+			y: -7.26d
 		}
 		{
 			id: "2D6F0875CC953C16"
+			size: 0.75d
 			tasks: [{
 				id: "1E8A3856666013E7"
 				item: "gtceu:alchemical_imbuer"
 				type: "item"
 			}]
-			x: 4.0d
-			y: -7.5d
+			x: 5.625d
+			y: -7.125d
 		}
 		{
 			id: "2892D18FFD789666"
+			size: 0.66d
 			tasks: [{
+				count: 32L
 				id: "16B3934E77DC8D7E"
 				item: "minecraft:amethyst_shard"
 				type: "item"
 			}]
-			x: 3.0d
-			y: -7.5d
+			x: 6.2700000000000005d
+			y: -7.26d
 		}
 		{
+			description: [
+				"The heart of any grand industrial symphony is its conductor. With &6&lCrazy AE2 Addons&r, you are granted the baton, transforming your basic ME network into a truly intelligent system. This isn't merely about moving items; it's about making your automation &a&othink&r."
+				""
+				"A powerful &bdata system&r lies at its very core, a nexus of raw information waiting to be harnessed. Discover how to read the ebb and flow of these data streams and direct your automated processes with unparalleled precision. Proceed to the dedicated &9&lCrazy AE2 Addons Chapter&r for an in-depth explanation of these groundbreaking features."
+			]
 			id: "61885813E9823B9C"
+			size: 0.75d
 			subtitle: "Display Your Data"
 			tasks: [{
-				id: "3D7B2A4B314AAA9B"
-				item: "crazyae2addons:display_monitor"
-				type: "item"
+				id: "0731B6B4F6959F67"
+				title: "Crazy"
+				type: "checkmark"
 			}]
-			x: 1.0d
-			y: -7.0d
+			x: 9.0d
+			y: -6.0d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]

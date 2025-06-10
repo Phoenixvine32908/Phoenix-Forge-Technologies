@@ -212,6 +212,13 @@ ServerEvents.recipes((event) => {
     Z: "gtceu:lv_machine_casing",
     S: "gtceu:wrought_iron_plate"
   });
+  event.shaped("ad_astra:nasa_workbench", ["APW", "SZS", "WPA"], {
+    P: "gtceu:dense_frost_reinforced_stained_steel_plate",
+    W: "#gtceu:circuits/ev",
+    Z: "gtceu:ev_machine_hull",
+    S: "gtceu:aluminfrost_gear",
+    A: "gtceu:ev_robot_arm"
+  });
     event.shaped("gtceu:iv_machine_hull", ["SPS", "WZW", "   "], {
     P: "gtceu:void_touched_tungsten_steel_plate",
     W: "gtceu:tin_single_cable",

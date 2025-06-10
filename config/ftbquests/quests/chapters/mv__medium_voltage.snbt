@@ -1205,8 +1205,6 @@
 				""
 				"&aPolyethylene (PE)&r is the key to unlocking &6many new things&r. It's commonly used as &dSheets&r, or in &dFluid&r form."
 				""
-				"{ \"text\": \"For a more visual look, go here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"6AB75FDA5C7B873D\" } }"
-				""
 				"&l&3Lore:&r&o The OreDict and fluid name for Polyethylene in 1.12.2 GTCEu was &bplastic&f, for cross-mod compatibility."
 			]
 			icon: "gtceu:polyethylene_plate"
