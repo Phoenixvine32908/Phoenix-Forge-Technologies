@@ -191,11 +191,11 @@
 		}
 		{
 			description: [
-				"Crazy AE2 Addons introduces a powerful variable system that allows your ME network to store, process, and react to integer-based data in real time. These data variables serve as the foundation for logic circuits, automation control, monitoring systems, and more."
+				"The heart of any grand industrial symphony is its conductor. With &6&lCrazy AE2 Addons&r, you are granted the baton, transforming your basic ME network into a truly intelligent system. This isn't merely about moving items; it's about making your automation &a&othink&r."
 				""
-				"&lWhat Are Data Variables?&r"
+				"A powerful &bdata system&r lies at its very core, a base of raw information waiting to be harnessed. Discover how to control data and direct your automated processes with unparalleled precision. Proceed to the dedicated &9&lCrazy AE2 Addons Chapter&r for an in-depth explanation of these groundbreaking features."
 				""
-				"Data variables are network-wide integer values stored in a ME Data Controller Block. They can represent anything—from machine status and resource counts to timers, counters, and crafting logic flags."
+				"{ \"text\": \"Go Here\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0CD95312DB6114BA\" } }"
 			]
 			id: "315EBF16E6301668"
 			tasks: [{
