@@ -50,7 +50,7 @@ function makeMaterial(event, id, color, color2, icon, flagsArray, cableProps, ro
 }
 
 // Helper for 'limited' materials (from your previous context)
-function makeLimitedMaterialWithCable(event, id, color, color2, icon, cableProps, blastTempData) {
+function makeLimitedMaterialWithCable(event, id, color, color2, icon, cableProps) {
     const mat = event.create(id)
         .ingot()
         .color(color)

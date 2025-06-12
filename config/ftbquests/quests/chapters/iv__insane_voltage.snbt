@@ -1127,6 +1127,110 @@
 			x: -1.6492346938775455d
 			y: 3.7466326530612264d
 		}
+		{
+			dependencies: ["207036E606B325DE"]
+			id: "2FCC0401AFD921D9"
+			size: 0.75d
+			tasks: [{
+				id: "57ED7A5EE3DC2408"
+				item: "expatternprovider:assembler_matrix_wall"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 6.75d
+		}
+		{
+			dependencies: ["207036E606B325DE"]
+			id: "2F67F502BAD01E3E"
+			size: 0.75d
+			tasks: [{
+				id: "15123B87AEEB0C12"
+				item: "expatternprovider:assembler_matrix_glass"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 6.75d
+		}
+		{
+			dependencies: ["77B7B1EDD19831E0"]
+			id: "207036E606B325DE"
+			shape: "gear"
+			size: 0.8d
+			tasks: [{
+				id: "445108634E956173"
+				item: "expatternprovider:assembler_matrix_frame"
+				type: "item"
+			}]
+			x: 3.75d
+			y: 6.0d
+		}
+		{
+			dependencies: ["207036E606B325DE"]
+			id: "2DF05C03B33C5586"
+			size: 0.75d
+			tasks: [{
+				id: "6CCD88BBE9E916DC"
+				item: "expatternprovider:assembler_matrix_pattern"
+				type: "item"
+			}]
+			x: 3.75d
+			y: 7.125d
+		}
+		{
+			dependencies: ["207036E606B325DE"]
+			id: "6437514DF0A2C550"
+			size: 0.75d
+			tasks: [{
+				id: "782870C65502D513"
+				item: "expatternprovider:assembler_matrix_crafter"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["207036E606B325DE"]
+			id: "5190B80ADCB35329"
+			size: 0.75d
+			tasks: [{
+				id: "6D82C43209521347"
+				item: "expatternprovider:assembler_matrix_speed"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 7.5d
+		}
+		{
+			id: "4C727D2C208400A9"
+			shape: "diamond"
+			size: 0.75d
+			tasks: [{
+				id: "3ABAFE851748FAD2"
+				item: "gtceu:85_percent_pure_nevonian_steel_ingot"
+				type: "item"
+			}]
+			x: 3.75d
+			y: 7.875d
+		}
+		{
+			dependencies: ["6B128610C7D2825D"]
+			description: [
+				"&l&9I Believe I can touch the sky&r&r! At last, &aCreative Flight&r is within your grasp! You might wonder why this ultimate freedom took so long to achieve. The Angel Ring demands considerable effort, specifically requiring &cNether Stars&r – truly an &4IV tier material&r."
+				""
+				"Beyond that, you needed to craft the Diamond Ring. This calls for a significant choice: either embark on a challenging journey to &dfind an Elytra&r, or utilize the slightly more &eexpensive Assembler recipe&r for its creation."
+			]
+			id: "3C7D927BA16E2E19"
+			shape: "heart"
+			size: 0.8d
+			subtitle: "I Believe I Can Fly!"
+			tasks: [{
+				id: "279CDDFB4DE9D6AB"
+				item: "angelring:angel_ring"
+				type: "item"
+			}]
+			x: 5.6d
+			y: 4.4d
+		}
 	]
 	subtitle: ["Automate everything and learn how to assemble"]
 	title: "&9IV&r - Insane Voltage"

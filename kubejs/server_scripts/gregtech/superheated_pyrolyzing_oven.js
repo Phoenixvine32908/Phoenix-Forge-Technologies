@@ -1,8 +1,7 @@
-
-
 ServerEvents.recipes(event => {
 
     const addSuperheatedPyrolyzingOvenRecipe = (recipeConfig) => {
+        // Log the ID of the recipe being created for debugging
         console.log(`[KubeJS] Creating Superheated Pyrolyzing Oven recipe: ${recipeConfig.id}`);
 
         let recipeBuilder = event.recipes.gtceu.superheated_pyrolyzing_oven(recipeConfig.id)
@@ -64,12 +63,13 @@ ServerEvents.recipes(event => {
   
         const newEUt = GTValues.VA[GTValues.ZPM] / 2;
 
-
+        // Scale inputs and outputs
         const newItems = recipe.itemInputs.map(input => scaleIngredient(input, 1000));
         const newFluids = recipe.inputFluids.map(input => scaleIngredient(input, 1000));
         const newOutputItems = recipe.itemOutputs.map(output => scaleIngredient(output, 1000));
         const newOutputFluids = recipe.outputFluids.map(output => scaleIngredient(output, 1000));
 
+        // Call the helper function with the constructed config object
         addSuperheatedPyrolyzingOvenRecipe({
             id: newId,
             duration: originalDuration,

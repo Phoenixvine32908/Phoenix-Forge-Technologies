@@ -233,15 +233,13 @@ ServerEvents.recipes(event => {
     .itemOutputs('1x gtceu:pressurized_fission_turbine')
     .duration(150)
     .EUt(GTValues.VA[GTValues.EV]/2)
-    event.recipes.gtceu.assembler('budding_amethyst_assembly')
+    event.recipes.gtceu.compressor('budding_amethyst_assembly')
         .itemInputs(
-            '4x minecraft:amethyst_block',   // Amethyst blocks for structure
-            '4x minecraft:amethyst_shard',   // Amethyst shards for crystal growth
-            'minecraft:ender_eye'            // Ender Eye for mystical growth/energy
+            '16x minecraft:amethyst_block',   // Amethyst blocks for structure
         )
         .itemOutputs('minecraft:budding_amethyst')
-        .duration(200)                      // Processing time (ticks)
-        .EUt(GTValues.VA[GTValues.MV]);     // Energy consumption: MV tier (512 EU/t)
+        .duration(1200)                      
+        .EUt(GTValues.VA[GTValues.HV]);     
 
     // --- AE2 Flawless Budding Certus Quartz Recipe (GTCEu Assembler) ---
     // A higher-tier recipe using the Assembler, requiring HV voltage for precision and power.
@@ -296,7 +294,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.EV]); 
     event.recipes.gtceu.pressurized_fission_reactor('fission1')
     .itemInputs('3x kubejs:basic_fuel_rod')
-    .itemOutputs('10x gtceu:low_level_radioactive_waste_ingot')
+    .itemOutputs('10x gtceu:low_level_radioactive_waste_dust')
     .duration(1000)
     .EUt(-GTValues.VA[GTValues.HV]*4)
     event.recipes.gtceu.advanced_pressurized_fission_reactor('fission2')
@@ -314,7 +312,7 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(-GTValues.VA[GTValues.EV]*4)
     event.recipes.gtceu.centrifuge('fissio')
-    .itemInputs('1x gtceu:low_level_radioactive_waste_dust')
+    .itemInputs('5x gtceu:low_level_radioactive_waste_dust')
     .itemOutputs('5x gtceu:lead_dust', '3x gtceu:thorium_dust')
     .outputFluids('gtceu:helium 500')
     .duration(500)
