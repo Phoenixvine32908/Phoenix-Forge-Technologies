@@ -459,33 +459,30 @@
 		{
 			dependencies: ["478B0D55369C0F7F"]
 			description: [
-				"50% of &aTungstensteel's&r composition is Steel... suffice to say, you'll need large quantities of both &aIron&r and &aTungsten&r!"
+				"This advanced alloy, &bVoid Touched Tungsten Steel&r, commands respect with its complex composition. You'll produce its dust by mixing &5liquid ender air&r, &32 Vanadium Steel Dust&r, &34 Tungsten Dust&r, and &34 Voidglass Shard Dust&r. Once mixed, this dust will need to be smelted into its final form."
 				""
-				"Right now, it's a crucial ingredient for &3Energy&r or &3Dynamo Hatches&r. You're one step closer to moving away from those pesky single block Generators!"
+				"Right now, it's a crucial ingredient for &3Energy&r or &3Dynamo Hatches&r, bringing you one step closer to moving beyond those pesky single-block Generators!"
 				""
-				"Boosting the smelting recipe in the &3Electric Blast Furnace&r will require &eHelium&r. You can get an initial supply from &aextracting Monazite&r or &acentrifuging Endstone&r."
-				""
-				"In the long term, you will want to get Helium via &aLiquid Air Distillation&r."
+				"Boosting the &eElectric Blast Furnace&r smelting of this dust will require &eHelium&r. You can get an initial supply from &aextracting Monazite&r or &acentrifuging Endstone&r. In the long term, you will want to get Helium via &aLiquid Air Distillation&r."
 			]
-			icon: "gtceu:tungsten_steel_ingot"
+			icon: "gtceu:void_touched_tungsten_steel_ingot"
 			id: "30A6EDDF25A5E5F8"
 			shape: "gear"
 			size: 1.3d
 			subtitle: "The main &9IV&r Material!"
 			tasks: [
 				{
-					id: "4BEA3166CD486845"
-					item: "gtceu:tungsten_steel_dust"
-					optional_task: true
+					id: "57E3C2210939C4F0"
+					item: "gtceu:void_touched_tungsten_steel_ingot"
 					type: "item"
 				}
 				{
-					id: "6D93081E44DD9678"
-					item: "gtceu:tungsten_steel_ingot"
+					id: "5684B23CA3EC7823"
+					item: "gtceu:void_touched_tungsten_steel_dust"
 					type: "item"
 				}
 			]
-			title: "Tungstensteel"
+			title: "Void Touched Tungsten Steel"
 			x: 6.75d
 			y: 2.25d
 		}
@@ -633,8 +630,8 @@
 				type: "item"
 			}]
 			title: "Diode"
-			x: 2.25d
-			y: 5.625d
+			x: 0.33d
+			y: 5.61d
 		}
 		{
 			dependencies: [
@@ -669,8 +666,8 @@
 				}
 			]
 			title: "Worse Combustion"
-			x: 3.375d
-			y: 5.625d
+			x: 1.32d
+			y: 5.61d
 		}
 		{
 			dependencies: [
@@ -1013,16 +1010,23 @@
 				"06B4AAC7DD796182"
 				"069FD86133D7D582"
 			]
-			description: ["Amperage goes up - we're now at a whopping &e6A&r per Superconductor."]
+			description: ["Amperage goes up - we're now at a whopping &e6A&r per Superconductor (12 if using &5Source Titanium Fillament&r)."]
 			id: "4A96337843BAC13A"
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Power Creep"
-			tasks: [{
-				id: "478E2D7B59664F86"
-				item: "gtceu:uranium_triplatinum_double_wire"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "478E2D7B59664F86"
+					item: "gtceu:uranium_triplatinum_double_wire"
+					type: "item"
+				}
+				{
+					id: "3D11AA3EA8C2D174"
+					item: "gtceu:source_titanium_filament_double_wire"
+					type: "item"
+				}
+			]
 			title: "EV Superconductors"
 			x: 9.0d
 			y: 11.25d
@@ -1036,6 +1040,7 @@
 				"The Cover will output a &4Redstone&r signal until the high threshold is reached, and then it will wait until the low threshold is reached to output redstone again."
 				""
 				"This is a must to automate inertia-based power generators such as Boilers, or more importantly &3Large Turbines&r."
+				">?"
 			]
 			id: "7F2FE3AF6F0C1190"
 			shape: "rsquare"
@@ -1848,7 +1853,7 @@
 				type: "item"
 			}]
 			title: "Platinum Group Processing"
-			x: 4.5d
+			x: 6.75d
 			y: 1.125d
 		}
 		{
@@ -1887,7 +1892,7 @@
 				}
 			]
 			title: "Ruthenium and Rhodium"
-			x: 7.875d
+			x: 9.0d
 			y: 1.125d
 		}
 		{
@@ -1900,7 +1905,7 @@
 			icon: "gtceu:iridium_dust"
 			id: "28ED66F775111A17"
 			shape: "rsquare"
-			size: 0.66d
+			size: 0.75d
 			subtitle: "Hold your fire just for now"
 			tasks: [{
 				id: "3680AE17E8BA3E4E"
@@ -1908,7 +1913,7 @@
 				type: "checkmark"
 			}]
 			title: "Iridium, Osmium, and EV"
-			x: 6.75d
+			x: 7.875d
 			y: 1.125d
 		}
 		{
@@ -1996,15 +2001,122 @@
 			y: 4.658163265306122d
 		}
 		{
-			dependencies: ["39E7997F3080250A"]
-			description: ["."]
-			icon: "mae2:pattern_p2p_tunnel"
-			id: "40FB56274D296BFC"
+			dependencies: ["5E6A00C5E2682B89"]
+			id: "3C7041C2CB161C46"
 			shape: "rsquare"
-			size: 0.5d
-			title: "Round Robin Item P2P"
-			x: 8.418367346938766d
-			y: 2.7806122448979593d
+			size: 0.66d
+			tasks: [{
+				id: "3341CA14D86A3877"
+				item: "gtceu:advanced_pressurized_fission_reactor"
+				type: "item"
+			}]
+			x: 3.3d
+			y: 5.61d
+		}
+		{
+			dependencies: ["5E6A00C5E2682B89"]
+			id: "7CD49363C939608E"
+			shape: "rsquare"
+			size: 0.66d
+			tasks: [{
+				id: "29563D5616E8AE4B"
+				item: "gtceu:pressurized_fission_turbine"
+				type: "item"
+			}]
+			x: 2.31d
+			y: 5.61d
+		}
+		{
+			dependencies: ["2274AC3BBA5DEEB5"]
+			id: "3D22DE5CE497D65D"
+			size: 0.75d
+			tasks: [{
+				id: "0DE96574EE6D41CC"
+				item: "gtceu:aetherial_fabricator12"
+				type: "item"
+			}]
+			x: 4.125d
+			y: 0.375d
+		}
+		{
+			id: "689182D74CD2B0DA"
+			size: 0.75d
+			tasks: [{
+				id: "7EC1982676B8F60A"
+				item: "gtceu:space_grade_steel_ingot"
+				type: "item"
+			}]
+			x: 5.25d
+			y: -0.375d
+		}
+		{
+			id: "533A98A019B5DF9F"
+			size: 0.75d
+			tasks: [{
+				id: "6C497FABAB72B374"
+				item: "kubejs:space_grade_steel_drilling_kit"
+				type: "item"
+			}]
+			x: 3.75d
+			y: -0.375d
+		}
+		{
+			dependencies: ["7A55CC71442CC854"]
+			id: "2A7EB67677B93C2A"
+			size: 0.75d
+			tasks: [{
+				id: "01C2A2F0D68B79D7"
+				item: "ad_astra:nasa_workbench"
+				type: "item"
+			}]
+			x: 4.5d
+			y: 1.125d
+		}
+		{
+			dependencies: [
+				"2A7EB67677B93C2A"
+				"689182D74CD2B0DA"
+			]
+			id: "2274AC3BBA5DEEB5"
+			size: 0.75d
+			tasks: [{
+				id: "524DFA229664674F"
+				item: {
+					Count: 1
+					id: "ad_astra:tier_1_rocket"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 4.875d
+			y: 0.375d
+		}
+		{
+			dependencies: ["533A98A019B5DF9F"]
+			id: "06F7673CDEFCDA87"
+			size: 0.75d
+			tasks: [{
+				id: "71E0478C98D33BEA"
+				item: "gtceu:dimensional_anchor12"
+				type: "item"
+			}]
+			x: 4.5d
+			y: -0.375d
+		}
+		{
+			dependencies: ["06F7673CDEFCDA87"]
+			icon: "kubejs:space_miner_module"
+			id: "27A301C0EE7BFA1E"
+			size: 0.75d
+			subtitle: "Better Dimensional Mining!"
+			tasks: [{
+				id: "2AA46BB16F073D89"
+				item: "kubejs:earthbound_miner_module"
+				type: "item"
+			}]
+			title: "Mining Modules"
+			x: 4.5d
+			y: -1.125d
 		}
 	]
 	subtitle: ["Improve your infrastructure and parallelise your setups"]

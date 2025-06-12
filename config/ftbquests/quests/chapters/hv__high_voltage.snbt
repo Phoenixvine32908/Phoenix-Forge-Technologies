@@ -1204,7 +1204,7 @@
 			}]
 			title: "Void Dimension Portal"
 			x: 0.0d
-			y: -3.96d
+			y: -0.99d
 		}
 		{
 			dependencies: ["55552589C581EE9E"]
@@ -1325,6 +1325,7 @@
 			y: -5.25d
 		}
 		{
+			dependencies: ["2D6F0875CC953C16"]
 			description: [
 				"Unlock the power of &5Source of Magic!&r In an &eAlchemical Imbuer&r (set to &6Source Extraction Mode&r), process &oplants, fuels, or lava&r to obtain this wonderful liquid."
 				""
@@ -1342,8 +1343,14 @@
 			y: -6.375d
 		}
 		{
+			description: [
+				"These are the solid manifestation of &bSource&r (obtained through the &9imbuement chamber&r&r block), and they store a great deal of &5magical energy&r. You'll use them to build the &6Alchemical Imbuer&r multiblock and, later on, the &6EV tier superconductor source titanium filaments&r."
+				""
+				"When crafting &9Source Gems&r, you have a choice: either cycle some of your &bSource&r back into the imbuer to create these gems &amuch faster&r, or produce them without additional source at a &csignificantly slower rate&r."
+			]
 			id: "79333AE8A6745E5D"
 			size: 0.66d
+			subtitle: "Magical"
 			tasks: [{
 				count: 8L
 				id: "658EAD49B69975D1"
@@ -1354,19 +1361,86 @@
 			y: -7.26d
 		}
 		{
+			dependencies: [
+				"79333AE8A6745E5D"
+				"2892D18FFD789666"
+			]
+			description: [
+				"This is your primary multiblock for handling all &5magical processes&r. Initially, its main purpose is to craft &9Source Gems&r and &5Source Imbued Titanium&r. Later in your journey, this very machine will be essential for cooling a &cvery special metal&r."
+				""
+				"To construct this vital multiblock, you'll need unique materials from &aArs Nouveau&r, such as the &aArcane Core&r. These aren't overly difficult to acquire. We highly recommend exploring &aArs Nouveau&r; its power will prove invaluable throughout your journey. As a tip, one of the most delightful uses of its spellbook is the creation of &bMagelights&r, which you can even customize with your preferred color!"
+				""
+				"{@pagebreak}"
+				""
+				"\"Through your time reclaiming the lost &cPhoenix Technologies&r you've learned that it's more than just &btechnology&r needed. It's also &5magic&r. You learn about an old source of power called &aArs Nouveau&r. Designed around the power of ironically &bSource&r you develop a machine to harness this power. You create an &6Imbuer&r that manipulates &bSource&r to push into resources to create new and improved items.\""
+			]
 			id: "2D6F0875CC953C16"
 			size: 0.75d
-			tasks: [{
-				id: "1E8A3856666013E7"
-				item: "gtceu:alchemical_imbuer"
-				type: "item"
-			}]
+			subtitle: "Imbuement!"
+			tasks: [
+				{
+					id: "1E8A3856666013E7"
+					item: "gtceu:alchemical_imbuer"
+					type: "item"
+				}
+				{
+					id: "5FBE09842D951B8A"
+					item: "ars_nouveau:arcane_core"
+					type: "item"
+				}
+				{
+					id: "0D36BDF5C7F64CDA"
+					item: "ars_nouveau:agronomic_sourcelink"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "33B87AA4ACDCD456"
+					item: { Count: 24, id: "gtceu:tempered_glass" }
+					type: "item"
+				}
+				{
+					count: 49L
+					id: "3F9D7633D7DBD115"
+					item: { Count: 49, id: "gtceu:clean_machine_casing" }
+					type: "item"
+				}
+				{
+					count: 11L
+					id: "2272F2FAF80B7192"
+					item: { Count: 11, id: "ars_nouveau:magebloom_block" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "128CA71970D985CE"
+					item: "ars_nouveau:void_prism"
+					type: "item"
+				}
+				{
+					id: "3443115B56E01931"
+					item: "ars_nouveau:source_gem_block"
+					type: "item"
+				}
+				{
+					count: 41L
+					id: "7BD8BA2E7B373987"
+					item: "ars_nouveau:sourcestone"
+					type: "item"
+				}
+			]
 			x: 5.625d
 			y: -7.125d
 		}
 		{
+			description: [
+				"You will need a lot of &dAmethyst&r for your &9Source Gems&r as you go on. Not to worry though! You can use the &aAE2 Growth Accelerators&r on &5Budding Amethyst&r to grow it quite quickly."
+				""
+				"If you are worried about being able to get Budding Amethyst, don't worry! You can take &316 Amethyst Blocks&r and then compress them into a &5Budding Amethyst&r version. This ensures a steady supply for your progression."
+			]
 			id: "2892D18FFD789666"
 			size: 0.66d
+			subtitle: "Pretty"
 			tasks: [{
 				count: 32L
 				id: "16B3934E77DC8D7E"
@@ -1382,6 +1456,7 @@
 				""
 				"A powerful &bdata system&r lies at its very core, a nexus of raw information waiting to be harnessed. Discover how to read the ebb and flow of these data streams and direct your automated processes with unparalleled precision. Proceed to the dedicated &9&lCrazy AE2 Addons Chapter&r for an in-depth explanation of these groundbreaking features."
 			]
+			icon: "crazyae2addons:display_monitor"
 			id: "61885813E9823B9C"
 			size: 0.75d
 			subtitle: "Display Your Data"
@@ -1392,6 +1467,125 @@
 			}]
 			x: 9.0d
 			y: -6.0d
+		}
+		{
+			dependencies: [
+				"7CB0B82B219B75DC"
+				"06F2DEB21E1A7084"
+			]
+			description: [
+				"The &ePressurized Fission Reactor&r stands ready to provide immense power for your operations. Fuel it with &aUranium Oxide Fuel Rods&r to generate a significant output of energy."
+				""
+				"As a byproduct of its operation, this reactor produces &8waste&r. You can then centrifuge the dust to recover valuable &7Lead&r and &7Thorium&r."
+				""
+				"Construct the reactor's robust casings using the &bZircalloy&r you previously obtained. The process gives off &e4 HV amps&r (you will need at least &e2 HV Dynamos&r to handle this power!). "
+				""
+				""
+				"{@pagebreak}"
+				"\"&f&lNecessity is the mother of invention.&r You've learned this throughout the ages, and now, once again, you face its truth. You scan your progress, seeking the &cbottleneck&r, the very thing holding you back. Your gaze settles on your &bpower supply&r, and you decide it's time for a crucial &aupgrade&r."
+				""
+				"You uncover an &7old design&r from the &7lost ages&r: a reactor. It's not super efficient, but it will &asuffice&r. You note its reliance on an &cinefficient method of fission&r to generate power, yet your current materials aren't &cstrong enough&r. Then, it clicks: &bZircalloy&r!"
+				""
+				"Being a &anear-perfect choice&r, you decide to use it. This allows you to almost &aflawlessly sustain fission without damage&r. A &eproud smile&r touches your lips as you survey all you've accomplished. You're &eready, even excited&r, to have survived this long and come this far in &6reclaiming what was once lost&r.\""
+			]
+			id: "70FC1FF864DAB532"
+			size: 0.9d
+			subtitle: "Your First Taste of Fission"
+			tasks: [
+				{
+					id: "15FE5AE8606B3F6E"
+					item: "gtceu:pressurized_fission_reactor"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2B3C52B0526E9F8A"
+					item: { Count: 4, id: "kubejs:fissile_heat_safe_casing" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "59B888F24A171F9D"
+					item: { Count: 12, id: "kubejs:fissile_reaction_safe_casing" }
+					type: "item"
+				}
+				{
+					count: 7L
+					id: "23671CFAF6AB71D7"
+					item: { Count: 7, id: "kubejs:base_fission_casing" }
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "55A3998E3C8BC6D5"
+					item: { Count: 6, id: "gtceu:kanthal_coil_block" }
+					type: "item"
+				}
+				{
+					count: 40L
+					id: "6C1033E035EC8D0E"
+					item: { Count: 40, id: "minecraft:tinted_glass" }
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "701BF1E191A90A04"
+					item: { Count: 24, id: "minecraft:ice" }
+					type: "item"
+				}
+			]
+			x: 6.75d
+			y: -1.7999999999999998d
+		}
+		{
+			description: [
+				"&bZircalloy&r, a crucial alloy, is a precise mixture of &3zirconium&r and &3hafnium dust&r. Its unique properties make it highly &aresistant to extreme heat and fissile reactions&r."
+				""
+				"You'll obtain these essential dusts by &acentrifuging zircon dust&r. And where does zircon dust come from? By &acentrifuging blackstone dust&r."
+				""
+				"To efficiently acquire blackstone, it's highly recommended you utilize your &eHV Rock Crusher&r; it's perfect for automating this process and ensuring a steady supply!"
+			]
+			id: "7CB0B82B219B75DC"
+			size: 0.75d
+			subtitle: "Your First Fissile Safe Materiel."
+			tasks: [{
+				id: "1694AE728C4AE44F"
+				item: "gtceu:zircalloy_ingot"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.125d
+		}
+		{
+			dependencies: ["6FD5C824C3B24F29"]
+			description: [
+				"These &aspecialized fuel rods&r are for your &ePressurized Fission Reactor&r. Designed for &9longevity&r, they'll make generating &bHV power&r a much &asmoother process&r."
+				""
+				"Crafting them is &fstraightforward&r: simply &3can&r an &7empty fuel rod&r with &6uranium oxide&r. While the recipe runs for a &9long time&r (so you won't need constant production), feel free to &aautomate their creation&r if you wish!"
+			]
+			id: "06F2DEB21E1A7084"
+			size: 0.75d
+			subtitle: "Ready for Reaction"
+			tasks: [{
+				id: "361ECE951FF49853"
+				item: "kubejs:basic_fuel_rod"
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.875d
+		}
+		{
+			description: ["Your &efirst fuel&r for fission has arrived! Obtain this wonderful fuel by &3reacting urananite dust with oxygen&r."]
+			id: "6FD5C824C3B24F29"
+			size: 0.6d
+			subtitle: "The Start Of Fissile Fuel!"
+			tasks: [{
+				id: "6804EA49F0122E8F"
+				item: "gtceu:uranium_oxide_bucket"
+				type: "item"
+			}]
+			x: 8.25d
+			y: -1.875d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]

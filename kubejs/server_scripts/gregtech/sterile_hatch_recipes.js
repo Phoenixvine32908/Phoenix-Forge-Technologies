@@ -27,6 +27,7 @@ ServerEvents.recipes(event => {
      .outputFluids('kubejs:chaos 6000')
      .duration(1000)
      .EUt(1048576)
+  
       // Motors
        // Motors
        event.recipes.gtceu.assembly_line('uhv_motor')
