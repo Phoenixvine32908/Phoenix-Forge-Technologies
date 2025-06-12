@@ -622,7 +622,7 @@ dev:
 
   # Dump all registered GT recipes?
   # Default: false
-  dumpRecipes: false
+  dumpRecipes: true
 
   # Dump all registered GT models/blockstates/etc?
   # Default: false

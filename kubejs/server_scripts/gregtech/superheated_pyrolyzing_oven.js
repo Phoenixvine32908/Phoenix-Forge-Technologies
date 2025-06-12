@@ -1,6 +1,8 @@
 ServerEvents.recipes(event => {
 
     const addSuperheatedPyrolyzingOvenRecipe = (recipeConfig) => {
+      
+      
         // Log the ID of the recipe being created for debugging
         console.log(`[KubeJS] Creating Superheated Pyrolyzing Oven recipe: ${recipeConfig.id}`);
 
