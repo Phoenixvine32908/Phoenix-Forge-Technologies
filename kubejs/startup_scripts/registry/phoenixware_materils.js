@@ -11,10 +11,6 @@ const $RotorProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.m
 const $IngotProperty = Java.loadClass("com.gregtechceu.gtceu.api.data.chemical.material.properties.IngotProperty");
 const $ToolProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.ToolProperty');
 
-// KubeJS Item Registration (for generic KubeJS items, not GTCEu materials)
-StartupEvents.registry('item', event => {
-    event.create('phoenix_feather').displayName('§cFeather §6Of §cRebirth').texture("kubejs:item/phoenix_feather");
-});
 
 // Helper Function for Icon Sets
 function makeIconSet(event, id, parent) {
