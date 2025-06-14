@@ -1,86 +1,60 @@
-ServerEvents.recipes(event => {
+/*ServerEvents.recipes(allthemods => {
+    allthemods.forEachRecipe({ type: 'gtceu:pyrolyse_oven' }, rawRecipe => {
+        let recipe = JSON.parse(rawRecipe.json)
+        let inputItemsArray = recipe.inputs.item
+        let inputFluidsArray = recipe.inputs.fluid
+        let outputItemsArray = recipe.outputs.item
+        let outputFluidsArray = recipe.outputs.fluid
 
-    const addSuperheatedPyrolyzingOvenRecipe = (recipeConfig) => {
-      
-      
-        // Log the ID of the recipe being created for debugging
-        console.log(`[KubeJS] Creating Superheated Pyrolyzing Oven recipe: ${recipeConfig.id}`);
+        let duration = recipe.duration
+        let circuit = -1
+        let notConsumable = []
+        let itemInputs = [itemI]
+        let fluidInputs = [fluidI]
+        let itemOutputs = [itemO]
+        let fluidOutputs = [fluidO]
+        
+        inputItemsArray.forEach(inputItem => {
+            if (inputItem.content.type == 'gtceu:circuit') {
+                circuit = inputItem.content.configuration // just grab the circuit number
+            } else if (inputItem.content.type == 'gtceu:sized') {
+                if (inputItem.chance == 0) {
+                    notConsumable.push(Ingredient.of(inputItem.content.ingredient, inputItem.content.count))
+                } else {
+                    itemInputs.push(Ingredient.of(inputItem.content.ingredient, inputItem.content.count))
+                }
+            }
+        })
 
-        let recipeBuilder = event.recipes.gtceu.superheated_pyrolyzing_oven(recipeConfig.id)
-            .duration(recipeConfig.duration)
-            .EUt(recipeConfig.EUt)
-            .circuit(recipeConfig.circuit || 0);
+        inputFluidsArray.forEach(fluidInput => {
+            fluidInputs.push(Fluid.of(fluidInput.content.value, fluidInput.content.amount))
+        })
 
-     
-        if (recipeConfig.itemInputs && Array.isArray(recipeConfig.itemInputs) && recipeConfig.itemInputs.length > 0) {
-            recipeBuilder.itemInputs(recipeConfig.itemInputs);
-        }
-        if (recipeConfig.inputFluids && Array.isArray(recipeConfig.inputFluids) && recipeConfig.inputFluids.length > 0) {
-            recipeBuilder.inputFluids(recipeConfig.inputFluids);
-        }
-        if (recipeConfig.itemOutputs && Array.isArray(recipeConfig.itemOutputs) && recipeConfig.itemOutputs.length > 0) {
-            recipeBuilder.itemOutputs(recipeConfig.itemOutputs);
-        }
-        if (recipeConfig.outputFluids && Array.isArray(recipeConfig.outputFluids) && recipeConfig.outputFluids.length > 0) {
-            recipeBuilder.outputFluids(recipeConfig.outputFluids);
-        }
-    };
+        outputItemsArray.forEach(outputItem => {
+            itemOutputs.push(Ingredient.of(outputItem.content.ingredient, outputItem.content.count))
+        })
 
- 
-    const scaleIngredient = (ingredient, multiplier) => {
-
-        if (ingredient.item && ingredient.getCount) {
-
-        }
-
-        if (ingredient.fluid && ingredient.getAmount) {
-            return `${ingredient.fluid.id} ${ingredient.getAmount() * multiplier}`;
-
-        }
-        console.warn(`[KubeJS] Unhandled ingredient type in scaleIngredient: ${JSON.stringify(ingredient)}`);
-        return ingredient.toString();
-    };
-
-
-
-    event.forEachRecipe('gtceu:pyrolyse_oven', recipe => {
-        const originalId = recipe.getId();
-
-        console.log(`[KubeJS] Considering original Pyrolyse Oven recipe: ${originalId}`);
-
-        if (originalId.includes('superheated_pyrolyzing_oven') || originalId.endsWith('_1000x')) {
-            console.log(`[KubeJS] Skipping already processed or superheated recipe: ${originalId}`);
-            return;
-        }
-
-
-        const originalPath = originalId.substring(originalId.indexOf('/') + 1);
-
-
-        const newId = `gtceu:superheated_pyrolyzing_oven/${originalPath}_1000x`;
-
-        const originalDuration = recipe.duration;
-        const originalCircuit = recipe.circuit || 0;
-
-  
-        const newEUt = GTValues.VA[GTValues.ZPM] / 2;
-
-        // Scale inputs and outputs
-        const newItems = recipe.itemInputs.map(input => scaleIngredient(input, 1000));
-        const newFluids = recipe.inputFluids.map(input => scaleIngredient(input, 1000));
-        const newOutputItems = recipe.itemOutputs.map(output => scaleIngredient(output, 1000));
-        const newOutputFluids = recipe.outputFluids.map(output => scaleIngredient(output, 1000));
-
-        // Call the helper function with the constructed config object
-        addSuperheatedPyrolyzingOvenRecipe({
-            id: newId,
-            duration: originalDuration,
-            EUt: newEUt,
-            circuit: originalCircuit,
-            itemInputs: newItems,
-            inputFluids: newFluids,
-            itemOutputs: newOutputItems,
-            outputFluids: newOutputFluids
-        });
-    });
-});
+        outputFluidsArray.forEach(fluidOutput => {
+            fluidOutputs.push(Fluid.of(fluidOutput.content.ingredient, fluidOutput.content.amount))
+        })
+        let base_id = rawRecipe.getId() + '_base'
+        allthemods.recipes.gtceu.superheated_pyrolyzing_oven(base_id)
+        .circuit(circuit)
+        .duration(duration)
+        .itemInputs(itemI)
+        .itemOutputs(itemO)
+        .fluidInputs(fluidI)
+        .fluidOutputs(fluidO)
+        .EUt(power)
+        let multiplier = 1000
+        let boosted_id = rawRecipe.getId() + '_boosted'
+        allthemods.recipes.gtceu.superheated_pyrolyzing_oven(boosted_id)
+        .circuit(circuit)
+        .itemInputs(Ingredient.of(itemInputs.getCount() * multiplier))
+        .itemOutputs(Ingredient.of(itemOutputs.getCount() * multiplier))
+        .inputFluids(Fluid.of(inputFluids.getId * multiplier))
+        .fluidOutputs(Fluid.of(fluidOutputs.getId * multiplier))
+        .duration(duration)
+        .EUt(power)
+    })
+});*/

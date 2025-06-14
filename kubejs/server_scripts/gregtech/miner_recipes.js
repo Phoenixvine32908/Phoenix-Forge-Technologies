@@ -1,4 +1,4 @@
-ServerEvents.recipes(event => {
+ServerEvents.recipes(event => { // Start of the main recipe event listener
 
     // --- Chemical Reactor Recipes for Custom Fluids ---
 
@@ -44,7 +44,8 @@ ServerEvents.recipes(event => {
         .outputFluids('kubejs:voidic_drilling_fluid 1000')
         .duration(300)
         .EUt(GTValues.VA[GTValues.EV]/2);
-        event.recipes.gtceu.large_chemical_reactor('voidic_drilling_fluid_recipe_better') // Renamed ID
+
+    event.recipes.gtceu.large_chemical_reactor('voidic_drilling_fluid_recipe_better') // Renamed ID
         .inputFluids([
             'gtceu:drilling_fluid 500',
             'gtceu:source_of_magic 1000'
@@ -56,245 +57,244 @@ ServerEvents.recipes(event => {
         .duration(300)
         .EUt(GTValues.VA[GTValues.EV]/2);
 
-    // Removed the duplicate 'voidic_drilling_fluid_better' as it was identical.
+    // --- Dimensional Anchoring Recipes (Nerfed) ---
 
-    // --- Drilling Recipes ---
-event.recipes.gtceu.dimensional_anchoring12('overworld_blazing_drill_better')
-        .notConsumable('kubejs:aurum_steel_drilling_kit') // Separate notConsumable
-        .notConsumable('kubejs:earthbound_miner_module')  // Separate notConsumable
+    // Overworld Blazing Drill (Better) - Nerf Round 3
+    event.recipes.gtceu.dimensional_anchoring12('overworld_blazing_drill_better')
+        .notConsumable('kubejs:aurum_steel_drilling_kit')
+        .notConsumable('kubejs:earthbound_miner_module')
         .inputFluids([
             'kubejs:blazing_drilling_fluid 1000'
         ])
         .itemOutputs(
-            '80x gtceu:chalcopyrite_ore',
-            '64x gtceu:cassiterite_ore',
-            '56x gtceu:galena_ore',
-            '96x gtceu:magnetite_ore',
-            '30x gtceu:gold_ore',
-            '30x gtceu:silver_ore',
-            '30x gtceu:pentlandite_ore',
-            '128x gtceu:coal_ore',
-            '80x gtceu:redstone_ore',
-            '80x gtceu:lapis_ore',
-            '48x gtceu:graphite_ore',
-            '80x gtceu:sulfur_ore',
-            '30x gtceu:diamond_ore',
-            '30x gtceu:ruby_ore',
-            '30x gtceu:sapphire_ore',
-            '30x gtceu:topaz_ore',
-            '30x gtceu:amethyst_ore',
-            '30x gtceu:uraninite_ore',
-            '30x gtceu:pyrolusite_ore',
-            '30x gtceu:stibnite_ore'
+            '35x gtceu:chalcopyrite_ore',
+            '28x gtceu:cassiterite_ore',
+            '23x gtceu:galena_ore',
+            '42x gtceu:magnetite_ore',
+            '12x gtceu:gold_ore',
+            '12x gtceu:silver_ore',
+            '12x gtceu:pentlandite_ore',
+            '55x gtceu:coal_ore',
+            '35x gtceu:redstone_ore',
+            '35x gtceu:lapis_ore',
+            '21x gtceu:graphite_ore',
+            '35x gtceu:sulfur_ore',
+            '12x gtceu:diamond_ore',
+            '12x gtceu:ruby_ore',
+            '12x gtceu:sapphire_ore',
+            '12x gtceu:topaz_ore',
+            '12x gtceu:amethyst_ore',
+            '12x gtceu:uraninite_ore',
+            '12x gtceu:pyrolusite_ore',
+            '12x gtceu:stibnite_ore'
         )
-        .duration(2400)
+        .duration(4100)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:overworld');
 
-    // Overworld Blazing Drill (Lesser)
+    // Overworld Blazing Drill (Lesser) - Nerf Round 3
     event.recipes.gtceu.dimensional_anchoring12('overworld_blazing_drill_lesser')
-        .notConsumable('kubejs:aurum_steel_drilling_kit') // Separate notConsumable
+        .notConsumable('kubejs:aurum_steel_drilling_kit')
         .inputFluids([
             'kubejs:blazing_drilling_fluid 1000'
         ])
         .itemOutputs(
-            '48x gtceu:chalcopyrite_ore',
-            '40x gtceu:cassiterite_ore',
-            '32x gtceu:galena_ore',
-            '32x gtceu:sphalerite_ore',
-            '64x gtceu:magnetite_ore',
-            '30x gtceu:gold_ore',
-            '30x gtceu:silver_ore',
-            '30x gtceu:pentlandite_ore',
-            '80x gtceu:coal_ore',
-            '48x gtceu:redstone_ore',
-            '48x gtceu:lapis_ore',
-            '30x gtceu:graphite_ore',
-            '48x gtceu:sulfur_ore',
-            '30x gtceu:diamond_ore'
+            '23x gtceu:chalcopyrite_ore',
+            '18x gtceu:cassiterite_ore',
+            '14x gtceu:galena_ore',
+            '14x gtceu:sphalerite_ore',
+            '29x gtceu:magnetite_ore',
+            '14x gtceu:gold_ore',
+            '14x gtceu:silver_ore',
+            '14x gtceu:pentlandite_ore',
+            '39x gtceu:coal_ore',
+            '23x gtceu:redstone_ore',
+            '23x gtceu:lapis_ore',
+            '14x gtceu:graphite_ore',
+            '23x gtceu:sulfur_ore',
+            '14x gtceu:diamond_ore'
         )
-        .duration(1800)
+        .duration(3000)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:overworld');
 
-    // Nether Blazing Drill (Better)
+    // Nether Blazing Drill (Better) - Nerf Round 3
     event.recipes.gtceu.dimensional_anchoring12('nether_blazing_drill_better')
-        .notConsumable('kubejs:aluminfrost_drilling_kit') // Separate notConsumable
-        .notConsumable('kubejs:earthbound_miner_module')  // Separate notConsumable
+        .notConsumable('kubejs:aluminfrost_drilling_kit')
+        .notConsumable('kubejs:earthbound_miner_module')
         .inputFluids([
             'kubejs:blazing_drilling_fluid 1000'
         ])
         .itemOutputs(
-            '100x gtceu:sulfur_ore',
-            '30x gtceu:dormant_ember_ore',
-            '80x gtceu:pyrite_ore',
-            '96x gtceu:nether_quartz_ore',
-            '80x gtceu:magnetite_ore',
-            '30x gtceu:cobaltite_ore',
-            '30x gtceu:barite_ore',
-            '30x gtceu:tetrahedrite_ore',
-            '64x gtceu:copper_ore',
-            '30x gtceu:stibnite_ore',
-            '30x gtceu:bastnasite_ore',
-            '30x gtceu:monazite_ore',
-            '64x gtceu:redstone_ore',
-            '30x gtceu:ruby_ore',
-            '30x gtceu:electrotine_ore',
-            '30x gtceu:alunite_ore',
-            '30x gtceu:saltpeter_ore',
-            '30x gtceu:diatomite_ore',
-            '30x gtceu:beryllium_ore',
-            '30x gtceu:emerald_ore',
-            '30x gtceu:pyrolusite_ore',
-            '30x gtceu:tantalite_ore',
-            '30x gtceu:certus_quartz_ore',
-            '48x gtceu:chalcocite_ore',
-            '30x gtceu:topaz_ore',
-            '30x gtceu:bornite_ore',
-            '64x gtceu:sphalerite_ore',
-            '64x gtceu:cinnabar_ore'
-        )
-        .chancedOutput('gtceu:platinum_ore', 5000, 500) // Added tier for chanced output
-        .duration(3600)
-        .EUt(GTValues.VA[GTValues.EV] / 2)
-        .dimension('minecraft:the_nether');
-
-    // Nether Blazing Drill (Lesser, No Module)
-    event.recipes.gtceu.dimensional_anchoring12('nether_blazing_drill_lesser_no_module')
-        .notConsumable('kubejs:aluminfrost_drilling_kit') // Separate notConsumable
-        .inputFluids([
-            'kubejs:blazing_drilling_fluid 1000'
-        ])
-        .itemOutputs(
-            '64x gtceu:sulfur_ore',
-            '48x gtceu:pyrite_ore',
-            '30x gtceu:dormant_ember_ore',
-            '32x gtceu:cinnabar_ore',
-            '64x gtceu:nether_quartz_ore',
-            '48x gtceu:magnetite_ore',
-            '30x gtceu:barite_ore',
-            '30x gtceu:tetrahedrite_ore',
-            '30x gtceu:stibnite_ore',
-            '30x gtceu:bastnasite_ore',
+            '50x gtceu:sulfur_ore',
+            '17x gtceu:dormant_ember_ore', // KEPT AS IS
+            '38x gtceu:pyrite_ore',
+            '46x gtceu:nether_quartz_ore',
+            '38x gtceu:magnetite_ore',
+            '12x gtceu:cobaltite_ore',
+            '12x gtceu:barite_ore',
+            '12x gtceu:tetrahedrite_ore',
+            '32x gtceu:copper_ore',
+            '12x gtceu:stibnite_ore',
+            '12x gtceu:bastnasite_ore',
+            '12x gtceu:monazite_ore',
             '32x gtceu:redstone_ore',
-            '30x gtceu:electrotine_ore',
-            '30x gtceu:saltpeter_ore',
-            '30x gtceu:gold_ore',
-            '30x gtceu:chalcocite_ore',
-            '32x gtceu:sphalerite_ore'
+            '4x minecraft:ancient_debris',
+            '12x gtceu:ruby_ore',
+            '12x gtceu:electrotine_ore',
+            '12x gtceu:alunite_ore',
+            '12x gtceu:saltpeter_ore',
+            '12x gtceu:diatomite_ore',
+            '12x gtceu:beryllium_ore',
+            '12x gtceu:emerald_ore',
+            '12x gtceu:pyrolusite_ore',
+            '12x gtceu:tantalite_ore',
+            '12x gtceu:certus_quartz_ore',
+            '24x gtceu:chalcocite_ore',
+            '12x gtceu:topaz_ore',
+            '12x gtceu:bornite_ore',
+            '28x gtceu:sphalerite_ore',
+            '28x gtceu:cinnabar_ore'
         )
-        .duration(1500)
+        .chancedOutput('gtceu:platinum_ore', 2000, 200)
+        .duration(6000)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_nether');
 
-    // End Blazing Drill (Better)
+    // Nether Blazing Drill (Lesser, No Module) - Nerf Round 3
+    event.recipes.gtceu.dimensional_anchoring12('nether_blazing_drill_lesser_no_module')
+        .notConsumable('kubejs:aluminfrost_drilling_kit')
+        .inputFluids([
+            'kubejs:blazing_drilling_fluid 1000'
+        ])
+        .itemOutputs(
+            '29x gtceu:sulfur_ore',
+            '23x gtceu:pyrite_ore',
+            '20x gtceu:dormant_ember_ore', // KEPT AS IS
+            '14x gtceu:cinnabar_ore',
+            '29x gtceu:nether_quartz_ore',
+            '23x gtceu:magnetite_ore',
+            '14x gtceu:barite_ore',
+            '14x gtceu:tetrahedrite_ore',
+            '14x gtceu:stibnite_ore',
+            '14x gtceu:bastnasite_ore',
+            '14x gtceu:redstone_ore',
+            '14x gtceu:electrotine_ore',
+            '14x gtceu:saltpeter_ore',
+            '14x gtceu:gold_ore',
+            '14x gtceu:chalcocite_ore',
+            '14x gtceu:sphalerite_ore'
+        )
+        .duration(2500)
+        .EUt(GTValues.VA[GTValues.EV] / 2)
+        .dimension('minecraft:the_nether');
+
+    // End Blazing Drill (Better) - Nerf Round 3
     event.recipes.gtceu.dimensional_anchoring12('end_blazing_drill_better')
-        .notConsumable('kubejs:frost_reinforced_stained_steel_drilling_kit') // Separate notConsumable
-        .notConsumable('kubejs:earthbound_miner_module')                    // Separate notConsumable
+        .notConsumable('kubejs:frost_reinforced_stained_steel_drilling_kit')
+        .notConsumable('kubejs:earthbound_miner_module')
         .inputFluids([
             'kubejs:blazing_drilling_fluid 1500'
         ])
         .itemOutputs(
-            '30x gtceu:naquadah_ore',
-            '30x gtceu:crystallized_fluxstone_ore',
-            '30x gtceu:permafrost_ore',
-            '30x gtceu:palladium_ore',
-            '30x gtceu:platinum_ore',
-            '30x gtceu:molybdenite_ore',
-            '80x gtceu:magnetite_ore',
-            '48x gtceu:aluminium_ore',
-            '30x gtceu:plutonium_ore',
-            '30x gtceu:chromite_ore',
-            '30x gtceu:vanadium_magnetite_ore',
-            '30x gtceu:lithium_ore',
-            '80x gtceu:scheelite_ore',
-            '100x gtceu:tungstate_ore',
-            '30x gtceu:cooperite_ore',
-            '30x gtceu:bornite_ore',
-            '30x gtceu:pitchblende_ore',
-            '30x gtceu:uraninite_ore'
+            '12x gtceu:naquadah_ore',
+            '17x gtceu:crystallized_fluxstone_ore', // KEPT AS IS
+            '17x gtceu:permafrost_ore', // KEPT AS IS
+            '12x gtceu:palladium_ore',
+            '12x gtceu:platinum_ore',
+            '12x gtceu:molybdenite_ore',
+            '35x gtceu:magnetite_ore',
+            '21x gtceu:aluminium_ore',
+            '12x gtceu:plutonium_ore',
+            '12x gtceu:chromite_ore',
+            '12x gtceu:vanadium_magnetite_ore',
+            '12x gtceu:lithium_ore',
+            '35x gtceu:scheelite_ore',
+            '46x gtceu:tungstate_ore',
+            '12x gtceu:cooperite_ore',
+            '12x gtceu:bornite_ore',
+            '12x gtceu:pitchblende_ore',
+            '12x gtceu:uraninite_ore'
         )
-        .duration(2700)
+        .duration(4600)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_end');
 
-    // End Blazing Drill (Lesser)
+    // End Blazing Drill (Lesser) - Nerf Round 3
     event.recipes.gtceu.dimensional_anchoring12('end_blazing_drill_lessersa')
-        .notConsumable('kubejs:frost_reinforced_stained_steel_drilling_kit') // Separate notConsumable
+        .notConsumable('kubejs:frost_reinforced_stained_steel_drilling_kit')
         .inputFluids([
             'kubejs:blazing_drilling_fluid 1500'
         ])
         .itemOutputs(
-            '30x gtceu:naquadah_ore',
-            '30x gtceu:permafrost_ore',
-            '30x gtceu:palladium_ore',
-            '30x gtceu:platinum_ore',
-            '30x gtceu:molybdenite_ore',
-            '64x gtceu:magnetite_ore',
-            '32x gtceu:aluminium_ore',
-            '30x gtceu:plutonium_ore',
-            '30x gtceu:chromite_ore',
-            '30x gtceu:vanadium_magnetite_ore',
-            '30x gtceu:lithium_ore',
-            '30x gtceu:scheelite_ore',
-            '30x gtceu:cooperite_ore',
-            '30x gtceu:bornite_ore',
-            '30x gtceu:pitchblende_ore',
-            '30x gtceu:uraninite_ore'
+            '17x gtceu:naquadah_ore',
+            '20x gtceu:permafrost_ore', // KEPT AS IS
+            '17x gtceu:palladium_ore',
+            '17x gtceu:platinum_ore',
+            '17x gtceu:molybdenite_ore',
+            '29x gtceu:magnetite_ore',
+            '17x gtceu:aluminium_ore',
+            '17x gtceu:plutonium_ore',
+            '17x gtceu:chromite_ore',
+            '17x gtceu:vanadium_magnetite_ore',
+            '17x gtceu:lithium_ore',
+            '17x gtceu:scheelite_ore',
+            '17x gtceu:cooperite_ore',
+            '17x gtceu:bornite_ore',
+            '17x gtceu:pitchblende_ore',
+            '17x gtceu:uraninite_ore'
         )
-        .duration(1800)
+        .duration(3000)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_end');
 
-    // Moon Voidic Drill (Better) - Aetherial Fabrication
+    // Moon Voidic Drill (Better) - Aetherial Fabrication - Nerf Round 3
     event.recipes.gtceu.aetherial_fabrication12('moon_voidic_drill_bette')
-        .notConsumable('kubejs:space_grade_steel_drilling_kit') // Separate notConsumable
-        .notConsumable('kubejs:space_miner_module')             // Separate notConsumable
+        .notConsumable('kubejs:space_grade_steel_drilling_kit')
+        .notConsumable('kubejs:space_miner_module')
         .inputFluids([
             'kubejs:voidic_drilling_fluid 2000'
         ])
         .itemOutputs(
-            '128x gtceu:ilmenite_ore',
-            '100x gtceu:bauxite_ore',
-            '30x gtceu:fluorite_ore',
-            '128x gtceu:magnetite_ore',
-            '128x gtceu:cooperite_ore',
-            '10x gtceu:nevvonian_iron_ore',
-            '30x gtceu:crystallized_fluxstone_ore',
-            '10x gtceu:polarity_flipped_bismuthite_ore',
-            '15x gtceu:ignisium_ore'
+            '58x gtceu:ilmenite_ore',
+            '47x gtceu:bauxite_ore',
+            '12x gtceu:fluorite_ore',
+            '58x gtceu:magnetite_ore',
+            '58x gtceu:cooperite_ore',
+            '3x gtceu:nevvonian_iron_ore',
+            '12x gtceu:crystallized_fluxstone_ore',
+            '3x gtceu:polarity_flipped_bismuthite_ore',
+            '6x gtceu:ignisium_ore'
         )
-        .duration(2700)
+        .duration(4600)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 
-    // Moon Voidic Drill (Lesser) - Aetherial Fabrication
+    // Moon Voidic Drill (Lesser) - Aetherial Fabrication - Nerf Round 3
     event.recipes.gtceu.aetherial_fabrication12('moon_voidic_drill_lesser')
-        .notConsumable('kubejs:space_grade_steel_drilling_kit') // Separate notConsumable
+        .notConsumable('kubejs:space_grade_steel_drilling_kit')
         .inputFluids([
             'kubejs:voidic_drilling_fluid 2000'
         ])
         .itemOutputs(
-            '64x gtceu:ilmenite_ore',
-            '64x gtceu:bauxite_ore',
-            '30x gtceu:fluorite_ore',
-            '64x gtceu:magnetite_ore',
-            '64x gtceu:cooperite_ore',
-            '30x gtceu:nevvonian_iron_ore',
-            '30x gtceu:ignisium_ore'
+            '28x gtceu:ilmenite_ore',
+            '28x gtceu:bauxite_ore',
+            '17x gtceu:fluorite_ore',
+            '28x gtceu:magnetite_ore',
+            '28x gtceu:cooperite_ore',
+            '12x gtceu:nevvonian_iron_ore',
+            '12x gtceu:ignisium_ore'
         )
-        .duration(1800)
+        .duration(3000)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 
-    // Calcite Generator (using chemical_reactor as discussed)
+    // Calcite Generator (using chemical_reactor as discussed) - Nerf Round 3
     event.recipes.gtceu.chemical_reactor('calcite_generator')
         .notConsumable('minecraft:calcite')
-        .inputFluids(['minecraft:water 1000', 'minecraft:lava 1000'])
-        .itemOutputs('minecraft:calcite')
-        .duration(200)
+        .inputFluids(['minecraft:water 1000', 'minecraft:lava 20'])
+        .itemOutputs('10x minecraft:calcite')
+        .duration(360)
         .EUt(GTValues.VA[GTValues.HV]/2);
 
-   
-
-});
+}); 

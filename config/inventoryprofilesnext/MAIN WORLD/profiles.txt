@@ -1,0 +1,18 @@
+
+
+
+
+profile Saved activate HOT7
+	HOT1
+		"minecraft:budding_amethyst"
+	HOT2
+		"ae2:growth_accelerator"
+	HOT3
+		"ae2:magenta_smart_cable"
+	HOT4
+		"apotheosis:augmenting_table"
+	HOT5
+		"apotheosis:reforging_table"
+	HOT6
+		"minecraft:diamond_sword"
+

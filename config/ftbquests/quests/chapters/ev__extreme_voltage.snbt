@@ -2002,45 +2002,162 @@
 		}
 		{
 			dependencies: ["5E6A00C5E2682B89"]
+			description: [
+				"This is the more advanced version of the Pressurized Fission Reactor, operating at &bHV tier&r. Just like its predecessor, it utilizes &aUranium Oxide Fuel Rods&r as fuel."
+				""
+				"However, your primary focus for this machine shifts to the &bspecial steam&r it produces, as the direct power generation from the main reactor unit isn't its strongest aspect. You will then push this steam into the &ePressurized Fissile Turbine&r to extract the bulk of your power, bringing you into the &eEV tier&r."
+				""
+				"While the initial setup cost might seem daunting, these machines are designed to scale significantly, making them viable far into your progression."
+			]
 			id: "3C7041C2CB161C46"
 			shape: "rsquare"
 			size: 0.66d
-			tasks: [{
-				id: "3341CA14D86A3877"
-				item: "gtceu:advanced_pressurized_fission_reactor"
-				type: "item"
-			}]
+			subtitle: "Advanced Fission!"
+			tasks: [
+				{
+					id: "3341CA14D86A3877"
+					item: "gtceu:advanced_pressurized_fission_reactor"
+					type: "item"
+				}
+				{
+					count: 24L
+					id: "64D8031E00E61F1E"
+					item: { Count: 24, id: "kubejs:fission_cooling_casing" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "6CBF9877C137F035"
+					item: "kubejs:fissile_reaction_safe_casing"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "2C88A9E908BE8F48"
+					item: "kubejs:fissile_heat_safe_casing"
+					type: "item"
+				}
+				{
+					count: 38L
+					id: "5417FF8E99E672E4"
+					item: "kubejs:base_fission_casing"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "630D8A2C8E7BEC28"
+					item: "gtceu:nichrome_coil_block"
+					type: "item"
+				}
+				{
+					count: 112L
+					id: "6A4D76D29DA421CF"
+					item: "minecraft:tinted_glass"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "50477682EFFE0BE5"
+					item: "minecraft:ice"
+					type: "item"
+				}
+			]
 			x: 3.3d
 			y: 5.61d
 		}
 		{
 			dependencies: ["5E6A00C5E2682B89"]
+			description: [
+				"This is where you utilize that &bspecial steam&r we discussed: &aMedium Pressure Fissile Steam&r. As a turbine, its power generation &9scales significantly&r with better &9rotor&r and &9rotor holder&r components. The immense power from this machine will serve you for a &along time to come&r, so prepare accordingly!"
+				""
+				"&7(Side Note: Balancing power generation, especially turbine recipes, is tricky. If you notice any issues or have suggestions, we'd love to hear them in the Discord!)&r"
+			]
 			id: "7CD49363C939608E"
 			shape: "rsquare"
 			size: 0.66d
-			tasks: [{
-				id: "29563D5616E8AE4B"
-				item: "gtceu:pressurized_fission_turbine"
-				type: "item"
-			}]
+			subtitle: "Spinning For Power?"
+			tasks: [
+				{
+					id: "29563D5616E8AE4B"
+					item: "gtceu:pressurized_fission_turbine"
+					type: "item"
+				}
+				{
+					count: 11L
+					id: "0CA90FE97F4B121E"
+					item: { Count: 11, id: "kubejs:fissile_safe_gearbox" }
+					type: "item"
+				}
+				{
+					count: 91L
+					id: "0322A536674671CE"
+					item: { Count: 99, id: "kubejs:fissile_reaction_safe_casing" }
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "193EA28F2CCA90DD"
+					item: { Count: 6, id: "kubejs:fissile_heat_safe_casing" }
+					type: "item"
+				}
+			]
 			x: 2.31d
 			y: 5.61d
 		}
 		{
 			dependencies: ["2274AC3BBA5DEEB5"]
+			description: [
+				"Your journey takes you to the &3Moon&r, anticipating vast resources. However, the lunar surface proves largely &7desolate of useful ores&r. Instead, you must learn to tap into parallel dimensions to extract the truly valuable materials."
+				""
+				"This powerful &6multiblock&r is engineered exclusively for &bspace environments&r. (Remember, you'll need the Dimensional Anchor for non-space dimensions!) To access these extra-dimensional space veins, prepare a &6Space Grade Steel Drilling Kit&r and the unique &cVoidic Drilling Fluid&r."
+				""
+				"From these hidden realms, you can obtain crucial ores like &ePlatinum&r, &eIgnisium&r, and &eMagnetite&r. However, for now, its paramount purpose is to secure &5Voidglass Shards&r – essential for your &bVoid Touched Tungsten&r."
+				""
+				"A word of advice: Always use the &aSpace Mining Module&r to significantly boost your yield from these exotic recipes!"
+			]
 			id: "3D22DE5CE497D65D"
 			size: 0.75d
-			tasks: [{
-				id: "0DE96574EE6D41CC"
-				item: "gtceu:aetherial_fabricator12"
-				type: "item"
-			}]
+			subtitle: "Space Resources"
+			tasks: [
+				{
+					id: "0DE96574EE6D41CC"
+					item: "gtceu:aetherial_fabricator12"
+					type: "item"
+				}
+				{
+					count: 33L
+					id: "28FA0C369B11DD3F"
+					item: { Count: 32, id: "gtceu:stainless_steel_frame" }
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "580C6DC246342CBD"
+					item: { Count: 10, id: "gtceu:kanthal_coil_block" }
+					type: "item"
+				}
+				{
+					count: 31L
+					id: "5E8A59CDA12B64E6"
+					item: { Count: 32, id: "gtceu:clean_machine_casing" }
+					type: "item"
+				}
+			]
 			x: 4.125d
 			y: 0.375d
 		}
 		{
+			description: [
+				"&3The Space-Resistant Alloy&r"
+				"This is the crucial material you need for your &cTier 1 Rocket&r and the &3Space Grade Steel Drilling Kit&r."
+				""
+				"We hope you've already established your &atungsten processing&r, and have some of that custom &bHV superconductor&r, &bIcy Steel Matrix&r, left over. These vital dusts are used to alloy with other metals, forging this incredibly &aspace-resistant metal&r."
+				""
+				"Not much else needs to be said. &eEnjoy space!&r"
+			]
 			id: "689182D74CD2B0DA"
 			size: 0.75d
+			subtitle: "Resistant to Atmospheric Heat"
 			tasks: [{
 				id: "7EC1982676B8F60A"
 				item: "gtceu:space_grade_steel_ingot"
@@ -2050,8 +2167,18 @@
 			y: -0.375d
 		}
 		{
+			description: [
+				"&eAurum Steel Drill Kit:&r The most basic, this gets you &aOverworld ores&r."
+				""
+				"&bAluminifrost Drill Kit:&r This second kit unlocks &cNether ores&r."
+				""
+				"&dFrost Reinforced Stained Steel Drill Kit:&r The third in line, designed for &5End ores&r."
+				""
+				"&3Space Grade Steel Drill Kit:&r This fourth kit yields &bMoon ores&r along with some &6custom ones needed to progress later&r."
+			]
 			id: "533A98A019B5DF9F"
 			size: 0.75d
+			subtitle: "Your Path To Drilling"
 			tasks: [{
 				id: "6C497FABAB72B374"
 				item: "kubejs:space_grade_steel_drilling_kit"
@@ -2062,8 +2189,14 @@
 		}
 		{
 			dependencies: ["7A55CC71442CC854"]
+			description: [
+				"Oh, Ok. This &o&3is&r rocket science, but don't fret; it's quite manageable! This component is absolutely vital for constructing your &afirst rocket&r, and every one thereafter."
+				""
+				"The recipe itself is straightforward: a few &bHV material plates&r combined with some &eEV components&r. However, the true challenge lies ahead, as you must now prepare to build your &crocket&r itself..."
+			]
 			id: "2A7EB67677B93C2A"
 			size: 0.75d
+			subtitle: "This Isn't Rocket Science"
 			tasks: [{
 				id: "01C2A2F0D68B79D7"
 				item: "ad_astra:nasa_workbench"
@@ -2077,8 +2210,14 @@
 				"2A7EB67677B93C2A"
 				"689182D74CD2B0DA"
 			]
+			description: [
+				"With your &eNASA Workbench&r now complete, the true preparations for your journey to the stars begin! It's time to gather critical supplies: secure plenty of &arocket fuel&r and forge ample &espace grade steel&r."
+				""
+				"For each new destination, a dedicated &claunch pad&r is essential. Furthermore, you'll need vital &boxygen gear&r, including a &bspace suit&r and &bgas tanks&r. (A word of advice: securing these is highly recommended if you intend to return from your travels!)"
+			]
 			id: "2274AC3BBA5DEEB5"
 			size: 0.75d
+			subtitle: "Off To Space"
 			tasks: [{
 				id: "524DFA229664674F"
 				item: {
@@ -2093,27 +2232,90 @@
 		}
 		{
 			dependencies: ["533A98A019B5DF9F"]
+			description: [
+				"The &3Dimensional Anchor&r harnesses the power of &bparallel dimensions&r to extract &evaluable ores&r, requiring some &cBlazing Drilling Fluid&r as a cost. You'll need at least the corresponding &6drilling kit&r for each dimension you wish to tap. Hopefully, you'll also use the &aEarthbound Mining Module&r to significantly increase your yields. While this system can be &cexpensive&r to establish, its worth becomes &aevident over time&r."
+				""
+				"Remember, the Dimensional Anchor must be built and operated within the &fOverworld, Nether, or End&r to process its associated recipes. For its space-capable counterpart, you'll need the &bAetherial Fabricator&r."
+				""
+				""
+				"{@pagebreak}"
+				""
+				"&6Unveiling Imaginary Materials&r"
+				"Learning of &cPhoenixForge Technologies&r has taught you many things, but one of the innumerable you've yet to learn is how they had so many seemingly &5imaginary materials&r. Thinking of this, you decide to wander around the remnants of &cPhoenixForge Technologies&r and discover they were harnessing the power of &bdimensions&r and the &binfinite void of space&r to pull resources from their deposits without being in the area. (it doesn't drain resources, it &a**generates**&r it!) Whilst you learn, you discover it's not one but &e**two machines**&r that did this: the &3Dimensional Anchor&r and the &3Aetherial Fabricator&r."
+			]
 			id: "06F7673CDEFCDA87"
 			size: 0.75d
-			tasks: [{
-				id: "71E0478C98D33BEA"
-				item: "gtceu:dimensional_anchor12"
-				type: "item"
-			}]
+			subtitle: "Dimensional Mining Begins!"
+			tasks: [
+				{
+					id: "71E0478C98D33BEA"
+					item: "gtceu:dimensional_anchor12"
+					type: "item"
+				}
+				{
+					count: 41L
+					id: "738A341346A9CEDA"
+					item: "gtceu:titanium_frame"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "3DBC3A039BB14408"
+					item: { Count: 3, id: "gtceu:titanium_firebox_casing" }
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "2F145B950F478EB0"
+					item: { Count: 5, id: "gtceu:nichrome_coil_block" }
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1B42E274C3369AC8"
+					item: { Count: 8, id: "gtceu:titanium_gearbox" }
+					type: "item"
+				}
+				{
+					id: "4BB6AC81FCA4716F"
+					item: "gtceu:high_temperature_smelting_casing"
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "6827F677425F4C57"
+					item: { Count: 12, id: "gtceu:stable_machine_casing" }
+					type: "item"
+				}
+			]
 			x: 4.5d
 			y: -0.375d
 		}
 		{
 			dependencies: ["06F7673CDEFCDA87"]
+			description: [
+				"These modules significantly enhance your yields, providing &amore (and sometimes unique ores)&r than when doing the recipes without them. What more can one really say?"
+				""
+				"&aEarthbound Mining Module:&r Used to boost the recipes of the &3Dimensional Anchor&r multiblock."
+				""
+				"&bSpace Mining Module:&r Used to boost the recipes of the &bAetherial Fabricator&r multiblock. You will &cneed this to progress to IV&r."
+			]
 			icon: "kubejs:space_miner_module"
 			id: "27A301C0EE7BFA1E"
 			size: 0.75d
 			subtitle: "Better Dimensional Mining!"
-			tasks: [{
-				id: "2AA46BB16F073D89"
-				item: "kubejs:earthbound_miner_module"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "2AA46BB16F073D89"
+					item: "kubejs:earthbound_miner_module"
+					type: "item"
+				}
+				{
+					id: "5931D115B0023308"
+					item: "kubejs:space_miner_module"
+					type: "item"
+				}
+			]
 			title: "Mining Modules"
 			x: 4.5d
 			y: -1.125d

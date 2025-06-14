@@ -43,28 +43,28 @@ ServerEvents.recipes((event) => {
 });
 
 ServerEvents.recipes((event) => {
-  const createFluxRejoinerRecipe = (outputId, inputTag) => {
-    event.recipes.gtceu.flux_rejoiner(outputId)
+  const createUniversalCircuitRecipe = (outputId, inputTag) => {
+    event.recipes.gtceu.forming_press(outputId)
       .itemInputs(`#${inputTag}`)
       // You'll likely need to add other inputs, outputs, duration, and EUt
       // based on what the flux_rejoiner recipe should actually do.
       // For example:
       .itemOutputs(`kubejs:${outputId}`) // Assuming you want to output your universal circuit
-      .duration(200) // Example duration
-      .EUt(120);    // Example energy per tick
+      .duration(600) // Example duration
+      .EUt(GTValues.VA[GTValues.LV]/2);    // Example energy per tick
   };
 
-  createFluxRejoinerRecipe('zpm_universal_circuit', 'gtceu:circuits/zpm');
-  createFluxRejoinerRecipe('uv_universal_circuit', 'gtceu:circuits/uv');
-  createFluxRejoinerRecipe('uhv_universal_circuit', 'gtceu:circuits/uhv');
-  createFluxRejoinerRecipe('uev_universal_circuit', 'gtceu:circuits/uev');
-  createFluxRejoinerRecipe('uiv_universal_circuit', 'gtceu:circuits/uiv');
-  createFluxRejoinerRecipe('iv_universal_circuit', 'gtceu:circuits/iv');
-  createFluxRejoinerRecipe('uxv_universal_circuit', 'gtceu:circuits/uxv');
-  createFluxRejoinerRecipe('max_universal_circuit', 'gtceu:circuits/max');
-  createFluxRejoinerRecipe('luv_universal_circuit', 'gtceu:circuits/luv');
-  createFluxRejoinerRecipe('ev_universal_circuit', 'gtceu:circuits/ev');
-  createFluxRejoinerRecipe('hv_universal_circuit', 'gtceu:circuits/hv');
-  createFluxRejoinerRecipe('mv_universal_circuit', 'gtceu:circuits/mv');
-  createFluxRejoinerRecipe('lv_universal_circuit', 'gtceu:circuits/lv');
+  createUniversalCircuitRecipe('zpm_universal_circuit', 'gtceu:circuits/zpm');
+  createUniversalCircuitRecipe('uv_universal_circuit', 'gtceu:circuits/uv');
+  createUniversalCircuitRecipe('uhv_universal_circuit', 'gtceu:circuits/uhv');
+  createUniversalCircuitRecipe('uev_universal_circuit', 'gtceu:circuits/uev');
+  createUniversalCircuitRecipe('uiv_universal_circuit', 'gtceu:circuits/uiv');
+  createUniversalCircuitRecipe('iv_universal_circuit', 'gtceu:circuits/iv');
+  createUniversalCircuitRecipe('uxv_universal_circuit', 'gtceu:circuits/uxv');
+  createUniversalCircuitRecipe('max_universal_circuit', 'gtceu:circuits/max');
+  createUniversalCircuitRecipe('luv_universal_circuit', 'gtceu:circuits/luv');
+  createUniversalCircuitRecipe('ev_universal_circuit', 'gtceu:circuits/ev');
+  createUniversalCircuitRecipe('hv_universal_circuit', 'gtceu:circuits/hv');
+  createUniversalCircuitRecipe('mv_universal_circuit', 'gtceu:circuits/mv');
+  createUniversalCircuitRecipe('lv_universal_circuit', 'gtceu:circuits/lv');
 });
