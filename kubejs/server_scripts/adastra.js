@@ -9,7 +9,7 @@ const rocket = [ // Plate mats currently just based on color of rocket for testi
         ['tier_3_rocket', "ostrum", 'hsss'],
         ['tier_4_rocket', "calorite", 'cryolobus'],
     ]
-    rocket.forEach(([rocket, tier, platematerial]) => {
+    rocket.forEach(([rocket, tier, rocketmaterial]) => {
         event.custom({
             "type": "ad_astra:nasa_workbench",
             "ingredients": [
@@ -17,22 +17,22 @@ const rocket = [ // Plate mats currently just based on color of rocket for testi
                     "item": "ad_astra:rocket_nose_cone"
                 },
                 {
-                    "item": `gtceu:double_${platematerial}_plate`
+                    "item": `gtceu:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:double_${platematerial}_plate`
+                    "item": `gtceu:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:double_${platematerial}_plate`
+                    "item": `gtceu:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:double_${platematerial}_plate`
+                    "item": `gtceu:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:double_${platematerial}_plate`
+                    "item": `gtceu:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:double_${platematerial}_plate`
+                    "item": `gtceu:${rocketmaterial}_block`
                 },
                 {
                     "item": "ad_astra:rocket_fin"
@@ -62,4 +62,9 @@ const rocket = [ // Plate mats currently just based on color of rocket for testi
             }
         })
     })
+})
+ServerEvents.tags("fluid", event => {
+    // Fuel
+    event.add("ad_astra:fuel", "gtceu:rocket_fuel")
+    event.add("ad_astra:efficient_fuel", "gtceu:high_octane_gasoline")
 })

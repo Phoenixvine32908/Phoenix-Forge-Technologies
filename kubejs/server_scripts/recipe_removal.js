@@ -446,7 +446,8 @@ const recipesToRemove = [
 "crazyae2addons:crazy_pattern_modifier",
 "crazyae2addons:right_click_provider",
 "crazyae2addons:circuit_upgrade_card",
-"minecraft:kjs/gtceu_pyrolyse_oven"
+"minecraft:kjs/gtceu_pyrolyse_oven",
+"ad_astra:fuel_refinery",
 ];
 
 ServerEvents.recipes((event) => {
