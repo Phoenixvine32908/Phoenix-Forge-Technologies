@@ -19,7 +19,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('dimensional_anchor12', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('dimensional_anchoring12')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.PARALLEL_HATCH])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH,GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCDCB", "BBEBB", "BBEBB", "BBEBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB")

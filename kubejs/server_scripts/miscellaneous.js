@@ -46,9 +46,6 @@ ServerEvents.recipes((event) => {
   const createUniversalCircuitRecipe = (outputId, inputTag) => {
     event.recipes.gtceu.forming_press(outputId)
       .itemInputs(`#${inputTag}`)
-      // You'll likely need to add other inputs, outputs, duration, and EUt
-      // based on what the flux_rejoiner recipe should actually do.
-      // For example:
       .itemOutputs(`kubejs:${outputId}`) // Assuming you want to output your universal circuit
       .duration(600) // Example duration
       .EUt(GTValues.VA[GTValues.LV]/2);    // Example energy per tick
