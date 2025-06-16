@@ -13,7 +13,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('phoenixware_fusion_mk3', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.UXV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('phoenixware_fusion_mk3')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
         .pattern(definition => FactoryBlockPattern.start()  
         .aisle("BBBBBBBBCCDDDCCBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBCCDDDCCBBBBBBBB")

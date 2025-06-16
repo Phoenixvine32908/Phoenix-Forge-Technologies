@@ -77,7 +77,8 @@ StartupEvents.registry("block", phoenixvine => {
           phoenix_pyre_helix: "§cPhoenix Pyre Helix",
           phoenix_ignition_matrix: "§cPhoenix Ignition Matrix",
           entropy_well_coil: "§cEntropy Well Coil",
-          base_fission_casing: "Graphene Based Fission Rods"
+          base_fission_casing: "Graphene Based Fission Rods",
+          green_fission_casing: "§cBerrylium Fission Rods"
 
       };
 
