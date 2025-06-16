@@ -539,8 +539,8 @@ event.create('85_percent_pure_nevonian_steel')
         .iconSet('dull');
          event.create('methyl_methacrylate')
         .fluid()
-        .color(0xF0F8FF)
-        .secondaryColor(0xF5FFFA)
+        .color(0xE8F8F8)
+        .secondaryColor(0xFFFFF0)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FRAME)
         .iconSet('dull');
 
