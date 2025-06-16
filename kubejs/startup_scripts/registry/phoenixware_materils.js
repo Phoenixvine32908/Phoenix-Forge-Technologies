@@ -517,6 +517,33 @@ event.create('85_percent_pure_nevonian_steel')
         .color(0x00FF00)
         .secondaryColor(0x000000)
         .iconSet('dull');
+ event.create('sucrose')
+        .fluid()
+        .color(0xF8F8F8)
+        .iconSet('dull');
+        event.create('fructose')
+        .fluid()
+        .color(0xF0F0F0)
+        .iconSet('dull');
+        event.create('glucose')
+        .fluid()
+        .color(0xFFFAF0)
+        .iconSet('dull');
+        event.create('polymethyl_methacrylate')
+        .ingot()
+        .polymer()
+        .fluid()
+        .color(0xF0F8FF)
+        .secondaryColor(0xF5FFFF)
+        .flags(GTMaterialFlags.GENERATE_PLATE)
+        .iconSet('dull');
+         event.create('methyl_methacrylate')
+        .fluid()
+        .color(0xF0F8FF)
+        .secondaryColor(0xF5FFFA)
+        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FRAME)
+        .iconSet('dull');
+
 
     event.create('zircalloy')
         .ingot()

@@ -9,10 +9,10 @@
         let duration = recipe.duration
         let circuit = -1
         let notConsumable = []
-        let itemInputs = [itemI]
-        let fluidInputs = [fluidI]
-        let itemOutputs = [itemO]
-        let fluidOutputs = [fluidO]
+        let itemInputs = [itemInputs]
+        let fluidInputs = [fluidInputs]
+        let itemOutputs = [itemOutputs]
+        let outputFluids = [outputFluids]
         
         inputItemsArray.forEach(inputItem => {
             if (inputItem.content.type == 'gtceu:circuit') {
@@ -35,16 +35,16 @@
         })
 
         outputFluidsArray.forEach(fluidOutput => {
-            fluidOutputs.push(Fluid.of(fluidOutput.content.ingredient, fluidOutput.content.amount))
+            outputFluids.push(Fluid.of(fluidOutput.content.ingredient, fluidOutput.content.amount))
         })
         let base_id = rawRecipe.getId() + '_base'
         allthemods.recipes.gtceu.superheated_pyrolyzing_oven(base_id)
         .circuit(circuit)
         .duration(duration)
-        .itemInputs(itemI)
-        .itemOutputs(itemO)
-        .fluidInputs(fluidI)
-        .fluidOutputs(fluidO)
+        .itemInputs(itemInputs)
+        .itemOutputs(itemOutputs)
+        .itemOutputs(itemOutputs)
+        .outputFluids(outputFluids)
         .EUt(power)
         let multiplier = 1000
         let boosted_id = rawRecipe.getId() + '_boosted'
@@ -52,9 +52,10 @@
         .circuit(circuit)
         .itemInputs(Ingredient.of(itemInputs.getCount() * multiplier))
         .itemOutputs(Ingredient.of(itemOutputs.getCount() * multiplier))
-        .inputFluids(Fluid.of(inputFluids.getId * multiplier))
-        .fluidOutputs(Fluid.of(fluidOutputs.getId * multiplier))
+        .inputFluids(Fluid.of(inputFluids.getCount() * multiplier))
+        .outputFluids(Fluid.of(outputFluids.getCount() * multiplier))
         .duration(duration)
         .EUt(power)
     })
-});*/
+});
+*/

@@ -120,6 +120,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     ]);
     event.add("ae2:controller", Text.of("§7Channels are §cdisabled§7."));
     event.add("expatternprovider:fishbig", Text.of("§7Congratulations! You won Minecraft."));
+    event.add("kubejs:honey_comb_base_mold", Text.of("§6Finnaly, your first honey comb is in your grasp."));
 
     // --- GTCEu Materials with Generic Tooltips ---
     addGTCEuMaterialTooltips('antimatter', Text.of("§cPure antimatter, capable of immense destruction upon contact with normal matter. Handle with extreme caution."));
