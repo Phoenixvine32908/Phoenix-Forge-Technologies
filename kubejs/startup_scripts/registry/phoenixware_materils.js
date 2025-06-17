@@ -518,7 +518,7 @@ event.create('85_percent_pure_nevonian_steel')
         .secondaryColor(0x000000)
         .iconSet('dull');
  event.create('sucrose')
-        .fluid()
+       .fluid()
         .color(0xF8F8F8)
         .iconSet('dull');
         event.create('fructose')
@@ -528,8 +528,27 @@ event.create('85_percent_pure_nevonian_steel')
         event.create('glucose')
         .fluid()
         .color(0xFFFAF0)
+        .iconSet('dull')
+          event.create('acetone_cyanohydrin')
+        .fluid()
+        .color(0xFFF8DC)
         .iconSet('dull');
-        event.create('polymethyl_methacrylate')
+       event.create('ammonium_persulfate')
+    .fluid()
+    .color(0xF0FFFF) // Azure - a very pale, clean blue, fitting for a chemical solution
+    .iconSet('dull');
+        
+    event.create('ammonium_bisulfate_solution')
+    .fluid()
+    .color(0xF0F0F0) // Light Gray/White
+    .iconSet('dull');
+               
+    event.create('ammonium_bisulfate')
+    .dust()
+    .color(0xF0F0F0) // Light Gray/White
+    .iconSet('dull');
+
+    event.create('polymethyl_methacrylate')
         .ingot()
         .polymer()
         .fluid()
@@ -537,13 +556,23 @@ event.create('85_percent_pure_nevonian_steel')
         .secondaryColor(0xF5FFFF)
         .flags(GTMaterialFlags.GENERATE_PLATE)
         .iconSet('dull');
-         event.create('methyl_methacrylate')
+    event.create('methyl_methacrylate')
         .fluid()
         .color(0xE8F8F8)
-        .secondaryColor(0xFFFFF0)
-        .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FRAME)
+        .secondaryColor(0xF5FFFF)
         .iconSet('dull');
-
+ event.create('concentrated_sulfuric_acid')
+        .fluid()
+        .color(0xFF8C00)
+        .iconSet('dull'); 
+event.create('hydrogen_peroxide')
+        .fluid()
+        .color(0xFF8C00)
+        .iconSet('dull'); 
+    event.create('oleum')
+        .fluid()
+        .color(0xDA6600) 
+        .iconSet('dull');
 
     event.create('zircalloy')
         .ingot()
