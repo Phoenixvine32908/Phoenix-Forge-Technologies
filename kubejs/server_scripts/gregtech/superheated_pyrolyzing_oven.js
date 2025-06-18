@@ -21,9 +21,9 @@ ServerEvents.recipes(allthemods => {
         let circuit = -1
         let notConsumable = []
         let itemInputs = []
-        let fluidInputs = []
+        let inputFluids = []
         let itemOutputs = []
-        let fluidOutputs = []
+        let outputFluids = []
 
            // take our JSON recipe input items and determine if they are circuits or items, consumed or not consumed
         // then add them to our itemInputs array as Ingredient objects
@@ -48,7 +48,7 @@ ServerEvents.recipes(allthemods => {
         // TODO: are there any input fluids in this recipe? 
         //       add an if loop to check
         inputFluidsArray.forEach(fluidInput => {
-            fluidInputs.push(Fluid.of(fluidInput.content.value, fluidInput.content.amount))
+            inputFluids.push(Fluid.of(fluidInput.content.value, fluidInput.content.amount))
         })
 
         // take our JSON recipe output items and add them into an array of Ingredient objects
@@ -62,44 +62,55 @@ ServerEvents.recipes(allthemods => {
         // TODO: are there any output fluids in this recipe? 
         //       add an if loop to check
         outputFluidsArray.forEach(fluidOutput => {
-            fluidOutputs.push(Fluid.of(fluidOutput.content.ingredient, fluidOutput.content.amount))
+            outputFluids.push(Fluid.of(fluidOutput.content.ingredient, fluidOutput.content.amount))
         })
 
         baseRecipe.duration(duration)
         baseRecipe.EUt(power)
 
-        // TODO: was there a circuit number for this recipe?
-        //       add an if statement to conditionally call the .circuit() method if there was a circuit number
         if (circuit != -1) {
             baseRecipe.circuit(circuit)
             boostedRecipe.circuit(circuit)
         }
-        // TODO: are there any Ingredient objects in our itemInputs array?
-        //       if present, add them to the baseRecipe
+ if (itemInputs.length > 0) {
+    baseRecipe.itemInputs(itemInputs)
+}
 
-        // TODO: are there any Fluid objects in our fluidInputs array?
-        //       if present, add them to the baseRecipe
+// Add fluid inputs if present
+if (inputFluids.length > 0) {
+    baseRecipe.inputFluids(inputFluids)
+}
+
+// Add item outputs if present
+if (itemOutputs.length > 0) {
+    baseRecipe.itemOutputs(itemOutputs)
+}
+
+// Add fluid outputs if present
+if (outputFluids.length > 0) {
+    baseRecipe.outputFluids(outputFluids)
+}
         
         // TODO: are there any Ingredient objects in our itemOutputs array?
         //       if present, add them to the baseRecipe
 
-        // TODO: are there any Fluid objects in our fluidOutputs array?
+        // TODO: are there any Fluid objects in our outputFluids array?
         //       if present, add them to the baseRecipe
  allthemods.recipes.gtceu.superheated_pyrolyzing_oven(baseId)
             .circuit(circuit)
             .duration(duration)
             .itemInputs(itemInputs)
-            .inputFluids(fluidInputs)
+            .inputFluids(inputFluids)
             .itemOutputs(itemOutputs)
-            .outputFluids(fluidOutputs)
+            .outputFluids(outputFluids)
             .EUt(power)
 
         allthemods.recipes.gtceu.superheated_pyrolyzing_oven(boostedId)
             .circuit(circuit)
             .itemInputs(Ingredient.of(itemInputs, itemInputs.getCount() * multiplier))
             .itemOutputs(Ingredient.of(itemOutputs, itemOutputs.getCount() * multiplier))
-            .inputFluids(Fluid.of(fluidInputs, fluidInputs.getCount() * multiplier))
-            .outputFluids(Fluid.of(fluidOutputs, fluidOutputs.getCount() * multiplier))
+            .inputFluids(Fluid.of(inputFluids, inputFluids.getCount() * multiplier))
+            .outputFluids(Fluid.of(outputFluids, outputFluids.getCount() * multiplier))
             .duration(duration)
             .EUt(power)
        

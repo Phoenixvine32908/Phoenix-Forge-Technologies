@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('phoenixware_fusion_mk3')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
-        .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
+        .appearanceBlock(() => Block.getBlock("kubejs:reliable_naquadah_alloy_machine_casing"))
         .pattern(definition => FactoryBlockPattern.start()  
         .aisle("BBBBBBBBCCDDDCCBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBCCDDDCCBBBBBBBB")
         .aisle("BBBBBBCCCCCCCCCCCBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBCCCCCCCCCCCBBBBBB")

@@ -24,11 +24,11 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('pressurized_fission_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.IV))
+    phoenixvine.create('pressurized_fission_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.EV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('pressurized_fission_turbine')
         .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
-        .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
+        .appearanceBlock(() => Block.getBlock("kubejs:fissile_heat_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBBBBBB", "BCCCCCB", "BCCCCCB", "BCCCCCB", "BBBBBBB")
         .aisle("BBBBBBB", "BAAAAAB", "BAAEAAB", "BAAAAAB", "BBCBCBB")
@@ -56,7 +56,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .recipeTypes('pressurized_fission_reactor')
         .generator(true)
         .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
-        .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
+        .appearanceBlock(() => Block.getBlock("kubejs:fissile_reaction_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCCCB", "CDDDC", "CDDDC", "CDDDC", "BCCCB")
         .aisle("CEFEC", "DGGGD", "DGGGD", "DGGGD", "CDHDC")
@@ -87,7 +87,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .recipeTypes('advanced_pressurized_fission_reactor')
         .generator(true)
         .noRecipeModifier()
-        .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
+        .appearanceBlock(() => Block.getBlock("kubejs:fissile_reaction_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCCCCCB", "CDDDDDC", "CDDDDDC", "CDDDDDC", "CDDDDDC", "CDDDDDC", "BCCCCCB")
         .aisle("CCCCCCC", "DAAEAAD", "DAAEAAD", "DAAEAAD", "DAAEAAD", "DAAEAAD", "CDDFDDC")
