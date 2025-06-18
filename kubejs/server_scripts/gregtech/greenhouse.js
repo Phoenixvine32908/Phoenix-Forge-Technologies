@@ -25,6 +25,25 @@ ServerEvents.recipes((event) => {
     ["minecraft:red_mushroom", "minecraft:red_mushroom", 12],
     ["minecraft:nether_wart", "minecraft:nether_wart", 12],
     ["minecraft:bamboo", "minecraft:bamboo", 16],
+    // Minecraft flowers
+    ["minecraft:dandelion", "minecraft:dandelion", 12],
+    ["minecraft:poppy", "minecraft:poppy", 12],
+    ["minecraft:blue_orchid", "minecraft:blue_orchid", 12],
+    ["minecraft:allium", "minecraft:allium", 12],
+    ["minecraft:azure_bluet", "minecraft:azure_bluet", 12],
+    ["minecraft:red_tulip", "minecraft:red_tulip", 12],
+    ["minecraft:orange_tulip", "minecraft:orange_tulip", 12],
+    ["minecraft:white_tulip", "minecraft:white_tulip", 12],
+    ["minecraft:pink_tulip", "minecraft:pink_tulip", 12],
+    ["minecraft:oxeye_daisy", "minecraft:oxeye_daisy", 12],
+    ["minecraft:cornflower", "minecraft:cornflower", 12],
+    ["minecraft:lily_of_the_valley", "minecraft:lily_of_the_valley", 12],
+    ["minecraft:wither_rose", "minecraft:wither_rose", 12],
+    // Tall flowers (output is 2 because they drop 2 on bonemeal)
+    ["minecraft:sunflower", "minecraft:sunflower", 8],
+    ["minecraft:lilac", "minecraft:lilac", 8],
+    ["minecraft:rose_bush", "minecraft:rose_bush", 8],
+    ["minecraft:peony", "minecraft:peony", 8],
   ];
   
   trees.forEach((woodType) => {

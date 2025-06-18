@@ -100,6 +100,7 @@ ServerEvents.recipes((event) => {
     B: "minecraft:glass",
     F: "gtceu:fiery_bronze_small_fluid_pipe",
   });
+  
   event.shaped("gtceu:lp_steam_extractor", ["FFF", "ZWB", "FFF"], {
     W: "gtceu:bronze_brick_casing",
     B: "minecraft:glass",
@@ -351,7 +352,6 @@ ServerEvents.recipes(event => {
     ["steel_ingot_charcoal_dust_iron_ingot", ["1x gtceu:charcoal_dust", "1x minecraft:iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
     ["steel_ingot_coke_wrought_iron_ingot_gt", ["1x gtceu:coke_gem", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 100, 7],
     ["steel_ingot_charcoal_dust_wrought_iron_ingot_gt", ["1x gtceu:charcoal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:steel_ingot"], 200, 7],
-    ["fiery_bronze1", ["1x gtceu:charcoal_dust", "1x gtceu:wrought_iron_ingot"], ["1x gtceu:fiery_bronze_ingot"], 200, 7],
 
     ["steel_block1", ["1x minecraft:coal_block", "1x minecraft:iron_block"], ["1x gtceu:steel_block"], 600, 112],
   ];

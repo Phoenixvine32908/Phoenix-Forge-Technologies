@@ -15,7 +15,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('phoenixware_fusion_mk1')
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT, MachineModifiers.FUSION_REACTOR])
-        .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
+        .appearanceBlock(() => Block.getBlock("kubejs:strongest_rhodium_plated_machne_casing"))
         .pattern(definition => FactoryBlockPattern.start()  
 .aisle("########BBCCCBB########", "########DDEEEDD########", "########DDEEEDD########", "########DDEEEDD########", "########BBCCCBB########")
 .aisle("######BBBBBBBBBBB######", "######FFAAAAAAAFF######", "######FFAAAAAAAFF######", "######FFAAAAAAAFF######", "######BBBBBBBBBBB######")

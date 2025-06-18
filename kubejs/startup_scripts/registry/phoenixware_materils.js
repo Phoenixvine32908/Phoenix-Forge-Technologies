@@ -537,17 +537,43 @@ event.create('85_percent_pure_nevonian_steel')
     .fluid()
     .color(0xF0FFFF) // Azure - a very pale, clean blue, fitting for a chemical solution
     .iconSet('dull');
+      event.create('invert_sugar_solution')
+    .fluid()
+    .color(0xFFFCDE) // Azure - a very pale, clean blue, fitting for a chemical solution
+    .iconSet('dull');
         
     event.create('ammonium_bisulfate_solution')
     .fluid()
     .color(0xF0F0F0) // Light Gray/White
     .iconSet('dull');
-               
+     event.create('honey_comb_base_mixture')
+    .fluid()
+    .color(0xFFF0F5) // Light Gray/White
+    .iconSet('dull');     
     event.create('ammonium_bisulfate')
     .dust()
     .color(0xF0F0F0) // Light Gray/White
     .iconSet('dull');
-
+     event.create('protein_solution')
+    .fluid()
+    .color(0xFFE0C0) // Light Gray/White
+    .iconSet('dull');
+     event.create('amino_acids')
+    .fluid()
+    .color(0xFFFFFF8) // Light Gray/White
+    .iconSet('dull'); 
+      event.create('pollen_concentrate_fluid')
+    .fluid()
+    .color(0xFFC200) // Light Gray/White
+    .iconSet('dull');
+event.create('honey_catalyst')
+    .fluid()
+    .color(0xFFF9E3) // Light Gray/White
+    .iconSet('dull');
+    event.create('sugar_water')
+        .fluid()
+        .color(0xFFFFF0) // Ivory (very pale yellow, almost colorless)
+        .iconSet('dull');
     event.create('polymethyl_methacrylate')
         .ingot()
         .polymer()
