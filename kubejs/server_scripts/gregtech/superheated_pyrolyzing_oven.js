@@ -27,43 +27,43 @@ ServerEvents.recipes(allthemods => {
 
            // take our JSON recipe input items and determine if they are circuits or items, consumed or not consumed
         // then add them to our itemInputs array as Ingredient objects
-        inputItemsArray.forEach(inputItem => {
-            // check if it is a circuit
+        // Handle input items
+        if (Array.isArray(inputItemsArray)) {
+            inputItemsArray.forEach(inputItem => {
             if (inputItem.content.type == 'gtceu:circuit') {
-                circuit = inputItem.content.configuration // if it is, just grab the circuit number
+                circuit = inputItem.content.configuration
             } else if (inputItem.content.type == 'gtceu:sized') {
-                // check if the chance on consuming this input is 10000
                 if (inputItem.chance == 10000) {
-                    itemInputs.push(Ingredient.of(inputItem.content.ingredient, inputItem.content.count))
-                } else { // otherwise log it
-                    console.log("Oops, chance was not 10000 for " + JSON.stringify(inputItem.content.ingredient))
+                itemInputs.push(Ingredient.of(inputItem.content.ingredient, inputItem.content.count))
+                } else {
+                console.log("Oops, chance was not 10000 for " + JSON.stringify(inputItem.content.ingredient))
                 }
-            } else { // we did not account for this type of ingredient...
+            } else {
                 console.log("Ingredient type " + inputItem.content.type + " not accounted for, please report this")
             }
-        })
+            })
+        }
 
-        // take our JSON recipe input fluids and add them into an array of Fluid objects
-        // TODO: advanced - handle chanced fluid inputs
-        // TODO: are there any input fluids in this recipe? 
-        //       add an if loop to check
-        inputFluidsArray.forEach(fluidInput => {
+        // Handle input fluids
+        if (Array.isArray(inputFluidsArray)) {
+            inputFluidsArray.forEach(fluidInput => {
             inputFluids.push(Fluid.of(fluidInput.content.value, fluidInput.content.amount))
-        })
+            })
+        }
 
-        // take our JSON recipe output items and add them into an array of Ingredient objects
-        // TODO: advanced - handle chanced item outputs
-        outputItemsArray.forEach(outputItem => {
+        // Handle output items
+        if (Array.isArray(outputItemsArray)) {
+            outputItemsArray.forEach(outputItem => {
             itemOutputs.push(Ingredient.of(outputItem.content.ingredient, outputItem.content.count))
-        })
+            })
+        }
 
-        // take our JSON recipe output fluids and add them into an array of Fluid objects
-        // TODO: advanced - handle chanced fluid outputs
-        // TODO: are there any output fluids in this recipe? 
-        //       add an if loop to check
-        outputFluidsArray.forEach(fluidOutput => {
+        // Handle output fluids
+        if (Array.isArray(outputFluidsArray)) {
+            outputFluidsArray.forEach(fluidOutput => {
             outputFluids.push(Fluid.of(fluidOutput.content.ingredient, fluidOutput.content.amount))
-        })
+            })
+        }
 
         baseRecipe.duration(duration)
         baseRecipe.EUt(power)
@@ -96,23 +96,7 @@ if (outputFluids.length > 0) {
 
         // TODO: are there any Fluid objects in our outputFluids array?
         //       if present, add them to the baseRecipe
- allthemods.recipes.gtceu.superheated_pyrolyzing_oven(baseId)
-            .circuit(circuit)
-            .duration(duration)
-            .itemInputs(itemInputs)
-            .inputFluids(inputFluids)
-            .itemOutputs(itemOutputs)
-            .outputFluids(outputFluids)
-            .EUt(power)
 
-        allthemods.recipes.gtceu.superheated_pyrolyzing_oven(boostedId)
-            .circuit(circuit)
-            .itemInputs(Ingredient.of(itemInputs, itemInputs.getCount() * multiplier))
-            .itemOutputs(Ingredient.of(itemOutputs, itemOutputs.getCount() * multiplier))
-            .inputFluids(Fluid.of(inputFluids, inputFluids.getCount() * multiplier))
-            .outputFluids(Fluid.of(outputFluids, outputFluids.getCount() * multiplier))
-            .duration(duration)
-            .EUt(power)
        
     })
 });

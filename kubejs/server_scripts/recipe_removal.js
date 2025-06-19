@@ -448,6 +448,13 @@ const recipesToRemove = [
 "crazyae2addons:circuit_upgrade_card",
 "minecraft:kjs/gtceu_pyrolyse_oven",
 "ad_astra:fuel_refinery",
+"productivebees:heated_centrifuge",
+"productivebees:powered_centrifuge/thermal",
+"productivebees:centrifuge",
+"productivebees:centrifuge_cauldron",
+"gtceu:assembler/beehive",
+"minecraft:beehive",
+"productivebees:nests/beehive",
 ];
 
 ServerEvents.recipes((event) => {
@@ -456,7 +463,4 @@ recipesToRemove.forEach(recipeId => {
     event.remove({ id: recipeId });
   });
 })
-
-
-
 

@@ -4,7 +4,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
   allthemods.create('superheated_pyrolyzing_oven')
     .category('dim')
     .setEUIO('in')
-    .setMaxIOSize(1, 1, 1, 1) // Adjusted values
+    .setMaxIOSize(2, 1, 1, 1) // Adjusted values
     .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
     .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
     .setSound(GTSoundEntries.CHEMICAL);
