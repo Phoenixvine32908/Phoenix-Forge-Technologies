@@ -529,36 +529,67 @@ event.create('85_percent_pure_nevonian_steel')
         .fluid()
         .color(0xFFFAF0)
         .iconSet('dull')
+          event.create('peanut_butter')
+    .fluid()
+    .color(0xD8BC9D) // Light peanut butter color
+    .iconSet('dull');
+
+     event.create('cream')
+        .fluid()
+        .color(0xFFFBE6) 
+        .iconSet('dull'); 
+    event.create('ammonium_bisulfate')
+    .dust()
+    .color(0xF0F0F0) 
+    .iconSet('dull');
+     event.create('protein_solution')
+    .fluid()
+    .color(0xFFE0C0) 
+    .iconSet('dull');
+     
+event.create('honey_catalyst')
+    .fluid()
+    .color(0xFFF9E3) 
+    .iconSet('dull');
+    event.create('sugar_water')
+        .fluid()
+        .color(0xFFFFF0) 
+        .iconSet('dull');
+        event.create('ammonium_persulfate')
+    .fluid()
+    .color(0xF0FFFF) 
+    .iconSet('dull');
+    event.create('molasses')
+        .fluid()
+        .color(0x82574C) // Dark, rich brown (from our previous discussion)
+        .iconSet('dull');
+event.create('peanut')
+        .dust() // Registers it as a dust material
+        .color(0xE0C8A0) // Light, warm beige-brown for peanut dust
+    // Skim Milk Fluid (byproduct)
+   event.create('skim_milk')
+        .fluid()
+        .color(0xF8F8FF) 
+        .iconSet('dull');
           event.create('acetone_cyanohydrin')
         .fluid()
         .color(0xFFF8DC)
         .iconSet('dull');
-       event.create('ammonium_persulfate')
+
+event.create('invert_sugar_solution')
     .fluid()
-    .color(0xF0FFFF) // Azure - a very pale, clean blue, fitting for a chemical solution
-    .iconSet('dull');
-      event.create('invert_sugar_solution')
-    .fluid()
-    .color(0xFFFCDE) // Azure - a very pale, clean blue, fitting for a chemical solution
+    .color(0xFFFCDE) 
     .iconSet('dull');
         
-    event.create('ammonium_bisulfate_solution')
+        event.create('ammonium_bisulfate_solution')
     .fluid()
-    .color(0xF0F0F0) // Light Gray/White
+    .color(0xF0F0F0)
     .iconSet('dull');
      event.create('honey_comb_base_mixture')
     .fluid()
     .color(0xFFF0F5) // Light Gray/White
-    .iconSet('dull');     
-    event.create('ammonium_bisulfate')
-    .dust()
-    .color(0xF0F0F0) // Light Gray/White
-    .iconSet('dull');
-     event.create('protein_solution')
-    .fluid()
-    .color(0xFFE0C0) // Light Gray/White
-    .iconSet('dull');
-     event.create('amino_acids')
+    .iconSet('dull');  
+      event.create('amino_acids')
     .fluid()
     .color(0xFFFFFF8) // Light Gray/White
     .iconSet('dull'); 
@@ -566,14 +597,6 @@ event.create('85_percent_pure_nevonian_steel')
     .fluid()
     .color(0xFFC200) // Light Gray/White
     .iconSet('dull');
-event.create('honey_catalyst')
-    .fluid()
-    .color(0xFFF9E3) // Light Gray/White
-    .iconSet('dull');
-    event.create('sugar_water')
-        .fluid()
-        .color(0xFFFFF0) // Ivory (very pale yellow, almost colorless)
-        .iconSet('dull');
     event.create('polymethyl_methacrylate')
         .ingot()
         .polymer()
@@ -685,7 +708,7 @@ event.create('hydrogen_peroxide')
     GTMaterials.Lawrencium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Strontium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Strontium.addFlags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_BOLT_SCREW);
-
+    
 });
 
 
@@ -733,3 +756,7 @@ GTCEuStartupEvents.materialModification(event => {
         .addTypes(GTToolType.BUTCHERY_KNIFE)
         .addTypes(GTToolType.FILE)
         .addTypes(GTToolType.CROWBAR)*/
+        /*if(mat.getProperties().hasProperty(PropertyKey.TOOL)) {
+  mat.getProperties().removeProperty(PropertyKey.TOOL)
+}
+mat.getProperties().addProperty(PropertyKey.TOOL, new MyCustomPropertyProps())*/

@@ -699,7 +699,36 @@ makeStandardMatrixRecipe('kubejs:gtceu/melferious_matrix/fluix', 'fluix', Item.o
         'productivebees:upgrade_productivity_2',
    
     );*/
-
+  function addLumberBeeRecipes() {
+        const bee = Item.of('productivebees:bee_cage', '{type:"productivebees:lumber", entity:"productivebees:configurable_bee"}');
+        const pollinationBlock = Item.of('minecraft:oak_log');
+        const omegaUpgrade = Item.of('productivebees:upgrade_productivity_4');
+        for (let circuit = 1; circuit <= 32; circuit++) {
+            // Define a list of logs and their corresponding pollination blocks
+            const logTypes = [
+                { log: 'minecraft:oak_log', pollination: 'minecraft:oak_log' },
+                { log: 'minecraft:spruce_log', pollination: 'minecraft:spruce_log' },
+                { log: 'minecraft:birch_log', pollination: 'minecraft:birch_log' },
+                { log: 'minecraft:jungle_log', pollination: 'minecraft:jungle_log' },
+                { log: 'minecraft:acacia_log', pollination: 'minecraft:acacia_log' },
+                { log: 'minecraft:dark_oak_log', pollination: 'minecraft:dark_oak_log' },
+                { log: 'minecraft:mangrove_log', pollination: 'minecraft:mangrove_log' },
+                { log: 'minecraft:cherry_log', pollination: 'minecraft:cherry_log' },
+                { log: 'minecraft:crimson_stem', pollination: 'minecraft:crimson_stem' },
+                { log: 'minecraft:warped_stem', pollination: 'minecraft:warped_stem' }
+            ];
+            logTypes.forEach(type => {
+                phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/lumber_${type.log.replace(':', '_')}_circuit_${circuit}`)
+                    .circuit(circuit)
+                    .EUt(1048)
+                    .duration(300)
+                    .notConsumable(bee.withCount(circuit))
+                    .notConsumable(omegaUpgrade.withCount(circuit))
+                    .notConsumable(Item.of(type.pollination))
+                    .itemOutputs(Item.of(type.log).withCount(2 * circuit));
+            });
+        }
+    }
     function addWannaBeeRecipe(beeName, mobEntityType, upgrade) {
         const recipeBuilder = phoenixvine.recipes.gtceu.melferious_matrix(`kubejs:gtceu/melferious_matrix/wanna_${beeName.toLowerCase().replace(' ', '_')}_${upgrade.split('_').pop()}`)
             .EUt(1048)

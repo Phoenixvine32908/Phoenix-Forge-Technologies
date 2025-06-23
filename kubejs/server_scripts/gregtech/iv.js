@@ -1,5 +1,22 @@
 ServerEvents.recipes(event => {
-    
+    function replaceBaseMaterials(event, replacements) {
+        replacements.forEach(([original, custom]) => {
+            event.replaceInput(
+                { input: original },
+                original,
+                custom
+            )
+        });
+    }
+
+    // Define your replacements as [original, custom] pairs
+    replaceBaseMaterials(event, [
+        ['gtceu:titanium_gear', 'gtceu:source_imbued_titanium_gear'],
+
+        // Add more replacements here:
+        // ['gtceu:steel_plate', 'kubejs:custom_steel_plate'],
+        // ['gtceu:copper_wire', 'kubejs:custom_copper_wire'],
+    ]);
     event.recipes.gtceu.large_chemical_reactor('oleum')
     .inputFluids('gtceu:sulfur_trioxide 244', 'gtceu:sulfuric_acid 1000')
     .outputFluids('gtceu:oleum 1000')
@@ -134,11 +151,63 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
     .outputFluids('productivebees:honey 500') 
     .duration(2000) 
     .EUt(GTValues.VA[GTValues.IV])
-      event.recipes.gtceu.mixer('sugar_water')
-    .inputFluids('minecraft:water 1000', 'gtceu:sucrose 20')
-    .circuit(12)
-    .outputFluids('gtceu:sugar_water 1000') 
-    .duration(80) 
-    .EUt(GTValues.VA[GTValues.EV])
+    event.recipes.gtceu.assembler('honeycomb_assembly')
+        .inputFluids('productivebees:honey 144', 'gtceu:invert_sugar_solution 144')
+        .notConsumable('kubejs:honey_comb_base')
+        .itemOutputs('minecraft:honeycomb')
+        .duration(400)
+        .EUt(GTValues.VA[GTValues.IV]/2)
+
+           event.recipes.gtceu.distillation_tower('invert_sugar_solution_separation')
+        .inputFluids('gtceu:invert_sugar_solution 1000')
+        .outputFluids('gtceu:glucose 500', 'gtceu:fructose 500')
+        .duration(300)
+        .EUt(GTValues.VA[GTValues.IV]/2)
+
+        event.recipes.gtceu.mixer('sugar_water')
+        .inputFluids('gtceu:glucose 250', 'gtceu:fructose 250', 'gtceu:distilled_water 1000')
+        .outputFluids('gtceu:sugar_water 1500')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.HV]/2)
+        event.recipes.gtceu.chemical_reactor('sugar_and_molasses_production')
+    .inputFluids('gtceu:sugar_water 1000') 
+    .itemOutputs('4x minecraft:sugar')    
+    .outputFluids('gtceu:molasses 200')  
+    .duration(180) 
+    .EUt(GTValues.VA[GTValues.HV]); 
+
+    event.recipes.gtceu.centrifuge('cream_from_milk')
+    .inputFluids('minecraft:milk 1000') 
+    .outputFluids('gtceu:cream 250', 'gtceu:skim_milk 750')
+    .duration(600) 
+    .EUt(GTValues.VA[GTValues.LV]); 
+
+    event.recipes.gtceu.mixer('dough')
+    .inputFluids('gtceu:skim_milk 250', 'minecraft:water 500') 
+    .itemInputs('12x gtceu:wheat_dust', 'gtceu:salt_dust')
+    .itemOutputs("10x gtceu:dough")
+    .duration(300) 
+    .EUt(GTValues.VA[GTValues.LV]); 
+
+    event.recipes.gtceu.confectionery_fabricator('honeytreat')
+   .itemInputs('5x gtceu:dough')
+   .notConsumable('kubejs:honey_comb_base')
+   .inputFluids('productivebees:honey 1000', 'gtceu:molasses 500', 'gtceu:cream 250', "gtceu:pollen_concentrate_fluid 250", "gtceu:peanut_butter 250")
+    .itemOutputs('productivebees:honey_treat')
+    .duration(300)
+    .EUt(GTValues.VA[GTValues.IV]);
+
+    event.recipes.gtceu.macerator('peanut_dust')
+    .itemInputs('pamhc2crops:roastedpeanutitem') 
+    .itemOutputs('gtceu:peanut_dust')
+    .duration(300)
+    .EUt(GTValues.VA[GTValues.LV]); 
+
+    event.recipes.gtceu.mixer('nut_butter_from_dust')
+    .itemInputs('8x gtceu:peanut_dust', '2x minecraft:sugar')  
+    .inputFluids('minecraft:water 500', 'gtceu:seed_oil 250')     
+    .outputFluids('gtceu:nut_butter 1000')
+    .duration(200) 
+    .EUt(GTValues.VA[GTValues.EV]); 
 
 })
