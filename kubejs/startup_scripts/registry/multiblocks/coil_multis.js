@@ -2,7 +2,7 @@ const CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gt
 Java.loadClass("com.gregtechceu.gtceu.api.GTValues")
 GTCEuStartupEvents.registry('gtceu:recipe_type', allthemods => {
   allthemods.create('superheated_pyrolyzing_oven')
-    .category('dim')
+    .category('gregstar')
     .setEUIO('in')
     .setMaxIOSize(2, 1, 1, 1) // Adjusted values
     .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)

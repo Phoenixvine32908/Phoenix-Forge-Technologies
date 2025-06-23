@@ -23,7 +23,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         phoenixvine.create("confectionery_fabricator")
         .setEUIO("in")
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setMaxIOSize(2, 1, 2, 0)
+        .setMaxIOSize(2, 1, 5, 0)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.SCIENCE)
         phoenixvine.create("thermo_generator")

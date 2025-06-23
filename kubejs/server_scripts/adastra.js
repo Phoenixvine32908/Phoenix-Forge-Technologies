@@ -2,13 +2,14 @@ ServerEvents.recipes(event => {
     // Replace all Steel plates & rods
     event.replaceInput({ id: /^ad_astra:.*/ }, "ad_astra:steel_rod", "gtceu:steel_rod")
     event.replaceInput({ id: /^ad_astra:.*/ }, "ad_astra:steel_plate", "gtceu:steel_plate")
+ 
 event.remove({ id: /nasa_workbench/ })
 const rocket = [ // Plate mats currently just based on color of rocket for testing
         ['tier_1_rocket', "steel", 'space_grade_steel'],
         ['tier_2_rocket', "desh", 'signalum'],
         ['tier_3_rocket', "ostrum", 'hsss'],
         ['tier_4_rocket', "calorite", 'cryolobus'],
-    ]
+    ] 
     rocket.forEach(([rocket, tier, rocketmaterial]) => {
         event.custom({
             "type": "ad_astra:nasa_workbench",
