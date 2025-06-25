@@ -128,6 +128,7 @@ ServerEvents.recipes((event) => {
     greg
     .greenhouse("peanut_fertiliser")
     .notConsumable("pamhc2crops:peanutseeditem")
+    .itemInputs("4x gtceu:fertilizer")
     .inputFluids("water 1000")
     .itemOutputs(
       "8x pamhc2crops:peanutitem",
