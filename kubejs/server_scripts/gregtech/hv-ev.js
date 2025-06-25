@@ -222,7 +222,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.assembler('advanced_pressurized_fission_reactor')
-    .itemInputs('4x kubejs:fissile_reaction_safe_casing', '2x gtceu:titanium_gear', '8x gtceu:dense_frost_reinforced_stained_steel_plate', '3x #gtceu:circuits/ev', '3x gtceu:dense_zircalloy_plate')
+    .itemInputs('4x kubejs:fissile_reaction_safe_casing', '2x gtceu:source_imbued_titanium_gear', '8x gtceu:dense_frost_reinforced_stained_steel_plate', '3x #gtceu:circuits/ev', '3x gtceu:dense_zircalloy_plate')
     .inputFluids('gtceu:soldering_alloy 613')
     .itemOutputs('1x gtceu:advanced_pressurized_fission_reactor')
     .duration(150)
@@ -544,7 +544,7 @@ event.recipes.gtceu.assembler('aurum_steel_drilling_kit')
         )
         .inputFluids('gtceu:source_of_magic 1200')
         .itemOutputs('14x gtceu:source_titanium_filament_dust') // Output the custom material dust
-        .duration(500) // EV tier duration
+        .duration(200) // EV tier duration
         .EUt(GTValues.VA[GTValues.EV]); // EV voltage
         event.recipes.gtceu.assembler('diamond_ring')
         .itemInputs(
