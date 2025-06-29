@@ -8,6 +8,7 @@ JEIEvents.hideItems(event => {
     event.hide({ mod: "productivebees", output: /breeding_chamber/ })
     event.hide({ mod: "productivebees", output: /incubater/ })
     event.hide({ mod: "productivebees", output: /gene_indexer/ })
+    
 
 
 

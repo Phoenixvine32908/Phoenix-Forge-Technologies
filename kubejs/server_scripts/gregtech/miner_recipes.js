@@ -58,20 +58,19 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .EUt(GTValues.VA[GTValues.EV]/2);
 
     // --- Dimensional Anchoring Recipes (Nerfed) ---
-
     // Overworld Blazing Drill (Better) - Nerf Round 3
     event.recipes.gtceu.dimensional_anchoring12('overworld_blazing_drill_better')
         .notConsumable('kubejs:aurum_steel_drilling_kit')
         .notConsumable('kubejs:earthbound_miner_module')
         .inputFluids([
-            'kubejs:blazing_drilling_fluid 1000'
+            'kubejs:blazing_drilling_fluid 16000'
         ])
         .itemOutputs(
             '35x gtceu:raw_chalcopyrite',
             '28x gtceu:raw_cassiterite',
             '23x gtceu:raw_galena',
             '42x gtceu:raw_magnetite',
-            '12x gtceu:raw_gold',
+            '12x minecraft:raw_gold',
             '12x gtceu:raw_silver',
             '12x gtceu:raw_pentlandite',
             '55x gtceu:raw_coal',
@@ -88,7 +87,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_pyrolusite',
             '12x gtceu:raw_stibnite'
         )
-        .duration(5000)
+        .duration(10000) // Increased from 5000
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:overworld');
 
@@ -96,7 +95,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.dimensional_anchoring12('overworld_blazing_drill_lesser')
         .notConsumable('kubejs:aurum_steel_drilling_kit')
         .inputFluids([
-            'kubejs:blazing_drilling_fluid 1000'
+            'kubejs:blazing_drilling_fluid 16000'
         ])
         .itemOutputs(
             '23x gtceu:raw_chalcopyrite',
@@ -104,7 +103,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '14x gtceu:raw_galena',
             '14x gtceu:raw_sphalerite',
             '29x gtceu:raw_magnetite',
-            '14x gtceu:raw_gold',
+            '14x minecraft:raw_gold',
             '14x gtceu:raw_silver',
             '14x gtceu:raw_pentlandite',
             '39x gtceu:raw_coal',
@@ -114,7 +113,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '23x gtceu:raw_sulfur',
             '14x gtceu:raw_diamond'
         )
-        .duration(5500)
+        .duration(11000) // Increased from 5500
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:overworld');
 
@@ -123,7 +122,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable('kubejs:aluminfrost_drilling_kit')
         .notConsumable('kubejs:earthbound_miner_module')
         .inputFluids([
-            'kubejs:blazing_drilling_fluid 1000'
+            'kubejs:blazing_drilling_fluid 16000'
         ])
         .itemOutputs(
             '50x gtceu:raw_sulfur',
@@ -134,7 +133,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_cobaltite',
             '12x gtceu:raw_barite',
             '12x gtceu:raw_tetrahedrite',
-            '32x gtceu:raw_copper',
+            '32x minecraft:raw_copper',
             '12x gtceu:raw_stibnite',
             '12x gtceu:raw_bastnasite',
             '12x gtceu:raw_monazite',
@@ -157,7 +156,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '28x gtceu:raw_cinnabar'
         )
         .chancedOutput('gtceu:raw_platinum', 2000, 200)
-        .duration(5500)
+        .duration(11000) // Increased from 5500
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_nether');
 
@@ -165,7 +164,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.dimensional_anchoring12('nether_blazing_drill_lesser_no_module')
         .notConsumable('kubejs:aluminfrost_drilling_kit')
         .inputFluids([
-            'kubejs:blazing_drilling_fluid 1000'
+            'kubejs:blazing_drilling_fluid 16000'
         ])
         .itemOutputs(
             '29x gtceu:raw_sulfur',
@@ -181,11 +180,11 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '14x gtceu:raw_redstone',
             '14x gtceu:raw_electrotine',
             '14x gtceu:raw_saltpeter',
-            '14x gtceu:raw_gold',
+            '14x minecraft:raw_gold',
             '14x gtceu:raw_chalcocite',
             '14x gtceu:raw_sphalerite'
         )
-        .duration(6500)
+        .duration(13000) // Increased from 6500
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_nether');
 
@@ -194,7 +193,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable('kubejs:frost_reinforced_stained_steel_drilling_kit')
         .notConsumable('kubejs:earthbound_miner_module')
         .inputFluids([
-            'kubejs:blazing_drilling_fluid 1500'
+            'kubejs:blazing_drilling_fluid 16000'
         ])
         .itemOutputs(
             '12x gtceu:raw_naquadah',
@@ -216,7 +215,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_pitchblende',
             '12x gtceu:raw_uraninite'
         )
-        .duration(5600)
+        .duration(11200) // Increased from 5600
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_end');
 
@@ -224,7 +223,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.dimensional_anchoring12('end_blazing_drill_lesser')
         .notConsumable('kubejs:frost_reinforced_stained_steel_drilling_kit')
         .inputFluids([
-            'kubejs:blazing_drilling_fluid 1500'
+            'kubejs:blazing_drilling_fluid 16000'
         ])
         .itemOutputs(
             '17x gtceu:raw_naquadah',
@@ -244,7 +243,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '17x gtceu:raw_pitchblende',
             '17x gtceu:raw_uraninite'
         )
-        .duration(6300)
+        .duration(12600) // Increased from 6300
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_end');
 
@@ -253,9 +252,10 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable('kubejs:space_grade_steel_drilling_kit')
         .notConsumable('kubejs:space_miner_module')
         .inputFluids([
-            'kubejs:voidic_drilling_fluid 2000'
+            'kubejs:voidic_drilling_fluid 12000'
         ])
         .itemOutputs(
+            '15x gtceu:raw_voidglass_shard',
             '58x gtceu:raw_ilmenite',
             '47x gtceu:raw_bauxite',
             '12x gtceu:raw_fluorite',
@@ -264,9 +264,9 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '3x gtceu:raw_nevvonian_iron',
             '12x gtceu:raw_crystallized_fluxstone',
             '3x gtceu:raw_polarity_flipped_bismuthite',
-            '6x gtceu:raw_ignisium'
+            '6x gtceu:raw_ignisium',
         )
-        .duration(4600)
+        .duration(9200) // Increased from 4600
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 
@@ -274,9 +274,10 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.aetherial_fabrication12('moon_voidic_drill_lesser')
         .notConsumable('kubejs:space_grade_steel_drilling_kit')
         .inputFluids([
-            'kubejs:voidic_drilling_fluid 2000'
+            'kubejs:voidic_drilling_fluid 12000'
         ])
         .itemOutputs(
+            '10x gtceu:raw_voidglass_shard',
             '28x gtceu:raw_ilmenite',
             '28x gtceu:raw_bauxite',
             '17x gtceu:raw_fluorite',
@@ -285,7 +286,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_nevvonian_iron',
             '12x gtceu:raw_ignisium'
         )
-        .duration(4000)
+        .duration(8000) // Increased from 4000
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 

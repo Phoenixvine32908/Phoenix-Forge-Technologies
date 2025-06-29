@@ -10,59 +10,59 @@ StartupEvents.registry('item', event => {
   const circuitsDir = "kubejs:item/phoenixware/circuits";
   const universalCircuitsDir = "kubejs:item/universal_circuits";
 
-  const AscendedPhoenixWare = [ // Better name for perfected phoenixware
-    [
-      "ascended_phoenixware_processor_mainframe",
-      `${circuitsDir}/perfected_phoenixware_processor_mainframe`,
-      "§aAscended PhoenixWare Mainframe - “Singularity-Convergent Mind”",
-      "gtceu:circuits/max",
-      true
-    ],
-    [
-      "ascended_phoenixware_processing_unit",
-      `${circuitsDir}/perfected_phoenixware_processing_unit`,
-      "§aAscended PhoenixWare Processing Unit - “Singularity-Convergent Mind”",
-      null,
-      true
-    ],
-    [
-      "ascended_phoenixware_processor_super_computer",
-      `${circuitsDir}/perfected_phoenixware_processor_super_computer`,
-      "§aAscended PhoenixWare Supercomputer - “Hypercosmic Intelligence Engine”",
-      "gtceu:circuits/uiv",
-      true
-    ],
-    [
-      "ascended_phoenixware_processor_assembly",
-      `${circuitsDir}/perfected_phoenixware_processor_assembly`,
-      "§aAscended PhoenixWare Assembly - “Dimensional Computation Array”",
-      "gtceu:circuits/uev",
-      true
-    ],
-    [
-      "ascended_phoenixware_processor",
-      `${circuitsDir}/perfected_phoenixware_processor`,
-      "§aAscended PhoenixWare Processor - “Omniversal Logic Core”",
-      "gtceu:circuits/uhv",
-      true
-    ],
-    [
-      "ascended_phoenixware_printed_board",
-      `${circuitsDir}/perfected_phoenixware_printed_board`,
-      "§aAscended PhoenixWare Printed Circuit Board - “Aurum Phoenix”",
-      null,
-      true
-    ],
-    [
-      "ascended_phoenixware_circuit_board",
-      `${circuitsDir}/perfected_phoenixware_circuit_board`,
-      "§aAscended PhoenixWare Circuit Board - “Inferno Zenith”",
-      null,
-      true
-    ]
-  ];
+ // const AscendedPhoenixWare = [ // Better name for perfected phoenixware
+ //   [
+    //  "ascended_phoenixware_processor_mainframe",
+    //  `${circuitsDir}/perfected_phoenixware_processor_mainframe`,
+    //  "§aAscended PhoenixWare Mainframe - “Singularity-Convergent Mind”",
+   //   "gtceu:circuits/max",
+   //   true
+   // ],
+   // [
+     // "ascended_phoenixware_processing_unit",
+     // `${circuitsDir}/perfected_phoenixware_processing_unit`,
+     // "§aAscended PhoenixWare Processing Unit - “Singularity-Convergent Mind”",
+    //  null,
+    //  true
+    //],
+    //[
+    //  "ascended_phoenixware_processor_super_computer",
+     // `${circuitsDir}/perfected_phoenixware_processor_super_computer`,
+    //  "§aAscended PhoenixWare Supercomputer - “Hypercosmic Intelligence Engine”",
+    //  "gtceu:circuits/uiv",
+    //  true
+   // ],
+   // [
+   //   "ascended_phoenixware_processor_assembly",
+     // `${circuitsDir}/perfected_phoenixware_processor_assembly`,
+    //  "§aAscended PhoenixWare Assembly - “Dimensional Computation Array”",
+    //  "gtceu:circuits/uev",
+    //  true
+    //],
+    //[
+    //  "ascended_phoenixware_processor",
+    //  `${circuitsDir}/perfected_phoenixware_processor`,
+    //  "§aAscended PhoenixWare Processor - “Omniversal Logic Core”",
+     // "gtceu:circuits/uhv",
+     // true
+    //],
+   // [
+    //  "ascended_phoenixware_printed_board",
+     // `${circuitsDir}/perfected_phoenixware_printed_board`,
+    //  "§aAscended PhoenixWare Printed Circuit Board - “Aurum Phoenix”",
+    //  null,
+    //  true
+    //],
+    //[
+    //  "ascended_phoenixware_circuit_board",
+    //  `${circuitsDir}/perfected_phoenixware_circuit_board`,
+    //  "§aAscended PhoenixWare Circuit Board - “Inferno Zenith”",
+    //  null,
+    //  true
+    //]
+  //];
 
-  const CogniTech = [ // Better name for normal phoenixware
+  /*const CogniTech = [ // Better name for normal phoenixware
     [
       "cognitech_processor_mainframe",
       `${circuitsDir}/phoenixware_processor_mainframe`,
@@ -112,9 +112,9 @@ StartupEvents.registry('item', event => {
       null,
       false
     ]
-  ];
+  ];*/
 
-  const FallenPhoenixWare = [ // Better name for flawed phoenixware
+  /*const FallenPhoenixWare = [ // Better name for flawed phoenixware
     [
       "fallen_phoenixware_processor",
       `${circuitsDir}/flawed_phoenixware_processor`,
@@ -164,9 +164,9 @@ StartupEvents.registry('item', event => {
       null,
       false
     ]
-  ];
+  ];`*/
 
-  const entropic_wetware = [ // Corrupted wetware line of circuits
+  /*const entropic_wetware = [ // Corrupted wetware line of circuits
     [
       "entropic_wetware_processor",
       `${circuitsDir}/entropic_wetware_processor`,
@@ -218,7 +218,7 @@ StartupEvents.registry('item', event => {
     ]
   ];
 
-  const panoptic_circuits = [ // Omniscient circuits - Fits Panoptic Engine
+  /*const panoptic_circuits = [ // Omniscient circuits - Fits Panoptic Engine
     [
       "panoptic_processor_mainframe",
       `${circuitsDir}/panoptic_processor_mainframe`,
@@ -268,7 +268,7 @@ StartupEvents.registry('item', event => {
       null,
       true
     ]
-  ];
+  ];*/
 
   const other = [
     [
@@ -282,11 +282,11 @@ StartupEvents.registry('item', event => {
 
   const itemsCombined = []
     .concat(other)
-    .concat(entropic_wetware)
-    .concat(FallenPhoenixWare)
-    .concat(CogniTech)
-    .concat(AscendedPhoenixWare)
-    .concat(panoptic_circuits);
+    //.concat(entropic_wetware)
+    //.concat(FallenPhoenixWare)
+   // .concat(CogniTech)
+    //.concat(AscendedPhoenixWare)
+    //.concat(panoptic_circuits);
 
   itemsCombined.forEach(item => {
     makeItem(event, item[0], item[1], item[2], item[3], item[4]);

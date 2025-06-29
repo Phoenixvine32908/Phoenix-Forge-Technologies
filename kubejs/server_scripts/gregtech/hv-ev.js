@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
 
     // Assembler Matrix Pattern Core
     event.recipes.gtceu.assembly_line("kubejs:epp/assembler_matrix_pattern")
-        .itemInputs("4x expatternprovider:assembler_matrix_frame", "4x ae2:engineering_processor", "expatternprovider:ex_pattern_provider", "6x ae2:blue_lumen_paint_ball", "2x gtceu:85_percent_pure_nevonian_steel_spring")
+        .itemInputs("4x expatternprovider:assembler_matrix_frame", "4x ae2:engineering_processor", "expatternprovider:ex_pattern_provider", "6x ae2:blue_lumen_paint_ball", "2x gtceu:double_85_percent_pure_nevonian_steel_spring")
         .inputFluids('gtceu:polytetrafluoroethylene 288')
         .itemOutputs("expatternprovider:assembler_matrix_pattern")
         .duration(150)
@@ -226,7 +226,6 @@ ServerEvents.recipes(event => {
     .inputFluids('gtceu:soldering_alloy 613')
     .itemOutputs('1x gtceu:advanced_pressurized_fission_reactor')
     .duration(150)
-    .EUt(GTValues.VA[GTValues.EV]/2)
     event.recipes.gtceu.assembler('dimensional_anchor')
     .itemInputs('4x kubejs:frost_reinforced_stained_steel_drilling_kit', '2x gtceu:frost_reinforced_stained_steel_gear', 
         '8x gtceu:dense_frost_reinforced_stained_steel_plate', '3x #gtceu:circuits/ev', '3x gtceu:dense_zircalloy_plate','4x gtceu:icy_steel_matrix_single_wire')
@@ -241,10 +240,10 @@ ServerEvents.recipes(event => {
     .itemOutputs('1x gtceu:aetherial_fabricator12')
     .duration(150)
     .EUt(GTValues.VA[GTValues.EV]/2)
-    event.recipes.gtceu.assembler('pressurized_fission_turbine')
+    event.recipes.gtceu.assembler('heat_exchanger')
     .itemInputs('2x kubejs:fissile_reaction_safe_casing','8x kubejs:fissile_heat_safe_casing', '2x gtceu:dense_zircalloy_plate','1x #gtceu:circuits/ev', '2x gtceu:titanium_large_fluid_pipe' )
     .inputFluids('gtceu:soldering_alloy 613')
-    .itemOutputs('1x gtceu:pressurized_fission_turbine')
+    .itemOutputs('1x gtceu:heat_exchanger')
     .duration(150)
     .EUt(GTValues.VA[GTValues.EV]/2)
     event.recipes.gtceu.compressor('budding_amethyst_assembly')
@@ -319,7 +318,7 @@ ServerEvents.recipes(event => {
     .chancedOutput('gtceu:low_level_radioactive_waste_ingot', 500, 0)
     .duration(5000)
     .EUt(-GTValues.VA[GTValues.ULV])
-    event.recipes.gtceu.pressurized_fission_turbine('fission3')
+    event.recipes.gtceu.heat_exchanging('fission3')
     .inputFluids('gtceu:medium_pressure_fissile_steam 10')
     .outputFluids('gtceu:distilled_water 20')
     .duration(40)
