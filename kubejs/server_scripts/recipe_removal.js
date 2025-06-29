@@ -409,7 +409,7 @@ const recipesToRemove = [
 "gtceu:mixer/flour_to_dough",
 "gtceu:shaped/flour_to_dough",
 "productivebees/steamy_incubation",
-"gtceu:shaped/frame_titanium"
+"gtceu:alloy_blast_smelter/void_touched_tungsten_steel"
 ];
   
     

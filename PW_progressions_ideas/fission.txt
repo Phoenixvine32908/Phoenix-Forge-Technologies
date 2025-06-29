@@ -3,27 +3,6 @@ Okay, let's design some fission multiblocks, fuel names, and associated turbine 
 Fission Multiblocks and Fuels (HV - UHV)
 We'll aim for a progression in complexity, power output, and fuel requirements across the tiers.
 
-HV Tier: Basic Pressurized Fission Reactor
-
-Name: HV Pressurized Fission Reactor
-Structure: A relatively simple cubic structure with a central core and surrounding coolant channels. Might require basic steel or reinforced concrete casings.
-Fuel Type:
-Fuel Name: Enriched Uranium Pellets (HV)
-Composition: Moderately enriched Uranium (e.g., U-235 concentration around 5-10%) in ceramic pellet form.
-Control Mechanism: Basic control rods made of Boron Steel.
-Cooling: Pressurized Water or Heavy Water coolant circulated through internal channels.
-Byproducts: Low-level radioactive waste.
-EV Tier: Advanced Pressurized Fission Reactor
-
-Name: EV Advanced Pressurized Fission Reactor
-Structure: A larger, more complex cubic or cylindrical structure with improved shielding and more intricate internal coolant and moderator व्यवस्था. Might require better steel alloys or early composite materials.
-Fuel Type:
-Fuel Name: High-Density Uranium Fuel Rods (EV)
-Composition: Higher enrichment Uranium (e.g., U-235 concentration around 15-20%) formed into longer, more durable fuel rods. May incorporate a metallic cladding for better heat transfer.
-Control Mechanism: More advanced control rods using Neutron Absorbing Alloys (e.g., Cadmium-Silver). May feature secondary shutdown systems.
-Cooling: High-pressure Water, Heavy Water, or potentially a Molten Salt coolant.
-Byproducts: Medium-level radioactive waste, potentially some transuranic elements.
-IV Tier: High-Performance Breeder Reactor
 
 Name: IV High-Performance Breeder Reactor
 Structure: A more specialized design, possibly toroidal or hexagonal, with distinct zones for the core and breeding blankets. Requires advanced steel alloys and radiation-resistant materials.

@@ -11,15 +11,18 @@ GTCEuStartupEvents.craftingComponents(event => {
         GTValues.IV, Item.of('gtceu:void_touched_tungsten_steel_plate'),
    
     )) // 
-    event.modifyItem(CraftingComponent.MOTOR, Map.of(
-        GTValues.FALLBACK, Item.of('gtceu:steel_rod'),
-        GTValues.LV, Item.of('gtceu:aurum_steel_rod'),
-        GTValues.MV, Item.of('gtceu:aluminfrost_rod'),
-        GTValues.HV, Item.of('gtceu:frost_reinforced_stained_steel_rod'),
-        GTValues.EV, Item.of('gtceu:source_imbued_titanium_rod'),
-        GTValues.IV, Item.of('gtceu:void_touched_tungsten_steel_rod'),
+ 
+      event.modifyItem(CraftingComponent.ROTOR, Map.of(
+        GTValues.FALLBACK, Item.of('gtceu:steel_rotor'),
+        GTValues.LV, Item.of('gtceu:aurum_steel_rotor'),
+        GTValues.MV, Item.of('gtceu:aluminfrost_rotor'),
+        GTValues.HV, Item.of('gtceu:frost_reinforced_stained_steel_rotor'),
+        GTValues.EV, Item.of('gtceu:source_imbued_titanium_rotor'),
+        GTValues.IV, Item.of('gtceu:void_touched_tungsten_steel_rotor'),
    
     )) // 
+   
+
     
     event.modifyUnificationEntry(CraftingComponent.PLATE, GTValues.UEV, new UnificationEntry('plate', 'gtceu:aurum_steel')) // 
 })

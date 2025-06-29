@@ -133,6 +133,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('source_imbued_titanium', Text.of("§5Titanium infused with magical energy, granting new capabilities."));
     addGTCEuMaterialTooltips('zircon', Text.of("§fA durable mineral, often used in high-temperature applications."));
     addGTCEuMaterialTooltips('aluminfrost', Text.of("§9An aluminum alloy with unique cryogenic properties."));
+    addGTCEuMaterialTooltips('superconductive_honey', Text.of("§eA miraculous golden substance imbued with exotic cryogenic properties, capable of conducting energy with almost zero resistance."));
     addGTCEuMaterialTooltips('magmatic_manganese_lead', Text.of("§6A lead alloy forged in extreme heat, with conductive properties."));
     addGTCEuMaterialTooltips('cryogenic_aluminum_strand', Text.of("§9Aluminum refined for extreme cold, excellent for superconductivity."));
     addGTCEuMaterialTooltips('zircalloy', Text.of("§7A zirconium alloy, primarily used in nuclear applications."));

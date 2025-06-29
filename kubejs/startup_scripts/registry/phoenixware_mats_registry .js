@@ -152,7 +152,7 @@ event.create('frost_reinforced_stained_steel_drilling_kit')
     create("naquad_boule", "§6Brilliant Boule");
 
     // PhoenixWare Wafers And Chips (silicon,ram,cpu,and soc)
-    create("naquad_wafer", "§6Brilliant Wafer");
+   // create("naquad_wafer", "§6Brilliant Wafer");
    
 
     // PhoenixWare Multiblock casings/custom blocks
