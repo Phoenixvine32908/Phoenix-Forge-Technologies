@@ -73,7 +73,7 @@
 				"78277DBC07D3C45C"
 			]
 			description: [
-				"The &aUHPIC&r unlocks &3ZPM Energy Hatches&r and &3Dynamos&r, as well as the Active Transformer. "
+				"The &aUHPIC&r unlocks &3ZPM Energy Hatches&r and &3Dynamos&r. "
 				""
 				"You may know the drill, but do you know the screwdriver?"
 			]
@@ -117,87 +117,6 @@
 			title: "Dielectric PCB Coolant"
 			x: 2.25d
 			y: 1.125d
-		}
-		{
-			dependencies: [
-				"52D00CD3E8D1E293"
-				"35549F0404C87BCA"
-				"5ED7707B0ECF2207"
-			]
-			description: [
-				"The &3Active Transformer&r is a multiblock used to transform energy on a much larger scale. For example, you can convert &6HV&r to &7LV&r power directly by using the apropriate energy hatches."
-				""
-				"It also has a second function, detailed in the above quest."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o This is yet another feature from TecTech, which also required these cables to be painted. They do look fantastic if you paint them, but it's optional in CEu."
-			]
-			id: "1AD003487B4EC2EF"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "More than a large transformer"
-			tasks: [{
-				id: "39CDBE6B4B973868"
-				item: "gtceu:active_transformer"
-				type: "item"
-			}]
-			title: "Active Transformer"
-			x: 3.375d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"77B7B1EDD19831E0"
-				"5ED7707B0ECF2207"
-				"52D952ADBEB67454"
-			]
-			description: [
-				"The &3Data Bank&r is a multiblock capable of storing huge amounts of data. You can fill it with &aData Access Hatches&r, and fill those with &aData Storage Items&r."
-				""
-				"After that, you'll need power, and then a way to connect it to your Assembly Line! This is done through &3Optical Fiber Cables&r, which can be used to link &3Optical Data Hatches together&r."
-				"{@pagebreak}"
-				"An &9Optical Transmission Hatch&r is used to send data (like an output), and an &9Optical Reception Hatch&r to recieve the data (like an input). "
-				""
-				"Optical cables have some restrictions however. They can only connect &eone input to one output&r. The Data Bank is your answer to this, since you can place many hatches on them to route your data anywhere."
-				""
-				"You can use this behavior to &echain&r Data Banks as well. Connecting one Data Bank to another, and then one of them to an Assembly Line will provide the data of both banks!"
-				"{@pagebreak}"
-				"&eNote: &rThis multiblock will be required later on in progression, but is very useful to set up early."
-				""
-				"&l&3Lore:&r&o This multiblock also originates from TecTech, but part of its mechanics required optical cables to be painted as well. You don't have to do that here, but it looks really nice if you do!"
-			]
-			id: "42760D3A86EFDCA3"
-			size: 0.75d
-			subtitle: "Time for a server room"
-			tasks: [{
-				id: "01188385BE2DB3B3"
-				item: "gtceu:data_bank"
-				type: "item"
-			}]
-			title: "Mass Data Storage"
-			x: 4.5d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1AD003487B4EC2EF"]
-			description: [
-				"The &3Active Transformer&r has a second use - &6Laser Power&r. Lasers are like superconductors, but behave slightly differently. They share the energy input across all connected active transformers, allowing widespread power distribution. You can use &3Active Transformers&r to convert regular EU to and from Lasers."
-				""
-				"Like optical cables, they can only be connected to &eone input and output&r. But, these ones also only can move in &estraight lines&r. To turn them, an &3Active Transformer&r with a Laser Source Hatch (output) and Target Hatch (input) is needed."
-				"{@pagebreak}"
-				"&l&3Lore:&r&o This is yet again another TecTech feature, but there's a bit more to it this time. TecTech's lasers were tiered by voltage and carried thousands of amps instead. CEu doesn't faff around with any of that tiering. You only need one type of laser here!"
-			]
-			id: "07159FCD9744DD98"
-			shape: "rsquare"
-			size: 0.66d
-			subtitle: "Time for some lasers!"
-			tasks: [{
-				id: "3BA3AA8746044DC1"
-				item: "gtceu:normal_laser_pipe"
-				type: "item"
-			}]
-			title: "Laser Power Transmission"
-			x: 3.375d
-			y: -1.125d
 		}
 		{
 			dependencies: ["78277DBC07D3C45C"]
@@ -1147,6 +1066,39 @@
 			}]
 			x: 8.5d
 			y: 0.5d
+		}
+		{
+			dependencies: [
+				"77B7B1EDD19831E0"
+				"5ED7707B0ECF2207"
+				"52D952ADBEB67454"
+			]
+			description: [
+				"The &3Data Bank&r is a multiblock capable of storing huge amounts of data. You can fill it with &aData Access Hatches&r, and fill those with &aData Storage Items&r."
+				""
+				"After that, you'll need power, and then a way to connect it to your Assembly Line! This is done through &3Optical Fiber Cables&r, which can be used to link &3Optical Data Hatches together&r."
+				"{@pagebreak}"
+				"An &9Optical Transmission Hatch&r is used to send data (like an output), and an &9Optical Reception Hatch&r to recieve the data (like an input). "
+				""
+				"Optical cables have some restrictions however. They can only connect &eone input to one output&r. The Data Bank is your answer to this, since you can place many hatches on them to route your data anywhere."
+				""
+				"You can use this behavior to &echain&r Data Banks as well. Connecting one Data Bank to another, and then one of them to an Assembly Line will provide the data of both banks!"
+				"{@pagebreak}"
+				"&eNote: &rThis multiblock will be required later on in progression, but is very useful to set up early."
+				""
+				"&l&3Lore:&r&o This multiblock also originates from TecTech, but part of its mechanics required optical cables to be painted as well. You don't have to do that here, but it looks really nice if you do!"
+			]
+			id: "42760D3A86EFDCA3"
+			size: 0.75d
+			subtitle: "Time for a server room"
+			tasks: [{
+				id: "01188385BE2DB3B3"
+				item: "gtceu:data_bank"
+				type: "item"
+			}]
+			title: "Mass Data Storage"
+			x: 3.375d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Investigate the scientific and fuse elements"]

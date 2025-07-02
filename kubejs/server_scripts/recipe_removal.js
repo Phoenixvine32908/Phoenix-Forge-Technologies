@@ -409,24 +409,15 @@ const recipesToRemove = [
 "gtceu:mixer/flour_to_dough",
 "gtceu:shaped/flour_to_dough",
 "productivebees/steamy_incubation",
-"gtceu:alloy_blast_smelter/void_touched_tungsten_steel"
+"gtceu:assembler/active_transformer",
+"minecraft:kjs/sophisticatedbackpacks_stack_upgrade_tier_1",
+"gtceu:alloy_blast_smelter/void_touched_tungsten_steel",
+"gtceu:alloy_blast_smelter/void_touched_tungsten_steel_gas"
 ];
   
     
 ServerEvents.recipes((event) => {
 
-
-
-
-event.remove({ id: '/advanced_[a-z_]+_beehive/' })
-     event.remove({ id: '/advanced_[a-z_]+_canvas_hive/' })
-    event.remove({ id: /^productivebees:stonecutter\/.*canvas_hive$/ })
-    event.remove({ id: /^thermal:machines\/press\/press_[a-z_]+_gear$/ })
-     event.remove({ id: /^thermalexpansion:press\/[a-z_]+_gear$/ })
-     event.remove({ id: /^thermal:parts\/[a-z_]+_gear$/ });
-     event.remove({ id: /^productivebees:bee_breeding\// });
-    event.remove({ id: /^productivebees:cage_incubation/ });
-    event.remove({ id: /^productivebees.*incubation/ });
 recipesToRemove.forEach(recipeId => {
     event.remove({ id: recipeId });
   });

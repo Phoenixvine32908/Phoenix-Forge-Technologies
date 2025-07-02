@@ -168,10 +168,37 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('electrical_steel', Text.of("§7Steel enhanced for electrical applications, common in circuits."));
     addGTCEuMaterialTooltips('copper_alloy', Text.of("§6A basic alloy of copper, offering improved strength."));
     addGTCEuMaterialTooltips('voidglass_shard', Text.of("§5A physical manifestation of the Void. It boasts a tiny fraction of its power, and you can hear the Void's power pulse through it."));
+    addGTCEuMaterialTooltips('uranium_233', Text.of("§aA highly efficient fissile isotope, bred from thorium. Ideal for sustainable energy generation."));
+
+    // Uranium-236
+    addGTCEuMaterialTooltips('uranium_236', Text.of("§bA neutron-rich uranium isotope, often a byproduct of U-235 fission."));
+
+    // Irradiated Thorium
+    addGTCEuMaterialTooltips('irradiated_thorium', Text.of("§6Thorium exposed to intense neutron flux, containing newly bred fissile materials."));
+
+    // Spent Uranium-233
+    addGTCEuMaterialTooltips('spent_uranium_233', Text.of("§4Uranium-233 fuel depleted from reactor operation, still highly radioactive."));
+
+    // Spent Uranium-235
+    addGTCEuMaterialTooltips('spent_uranium_235', Text.of("§4Uranium-235 fuel depleted from reactor operation, rich in valuable byproducts."));
+
+    // Depleted Uranium Reactor
+    addGTCEuMaterialTooltips('depleted_uranium_reactor', Text.of("§8Depleted uranium specifically processed from reactor spent fuel, ideal for breeding advanced actinides."));
+    // Fissile Ash
+    addGTCEuMaterialTooltips('fissile_ash', Text.of("§7A dense, highly radioactive ash containing trace heavy elements, byproduct of fission product separation."));
+
+    // Fission Products Fluid
+    addGTCEuMaterialTooltips('fission_products_fluid', Text.of("§2A highly complex and dangerous liquid mixture of various radioactive fission byproducts."));
+
+    // Depleted Thorium
+    addGTCEuMaterialTooltips('depleted_thorium', Text.of("§8Thorium exhausted of its breeding potential, primarily used for radiation shielding or disposal."));
+
+    // Resonant Rhodium Alloy
+    addGTCEuMaterialTooltips('resonant_rhodium_alloy', Text.of("§bAn advanced rhodium-based alloy, infused with radioactive by-products for enhanced conductivity and stability in LuV applications."));
 
     // --- Complex / Endgame GTCEu Materials with descriptions ---
     addGTCEuMaterialTooltips('akashic_zeronium', Text.of("§6A transcendental material, bridging the gap between reality and the Akasha."));
-    addGTCEuMaterialTooltips('phoenix_enriched_naquad', Text.of("§cNaquadah, infused with the regenerative power of the Phoenix Force, for ultimate energy generation."));
+    addGTCEuMaterialTooltips('phoenix_enriched_naquad', Text.of("§cNaquadah, infused with the regenerative power of the Phoenix Force, for your first taste of ultimate power."));
     addGTCEuMaterialTooltips('phoenix_enriched_tritanium', Text.of("§cTritanium, supercharged by phoenix energy, offering unmatched resilience and conductivity."));
     addGTCEuMaterialTooltips('aetherium_steel', Text.of("§9Steel alloyed with ethereal Aetherium, granting lightweight strength and magical resonance."));
     addGTCEuMaterialTooltips('void_touched_tungsten_steel', Text.of("§6A rare and potent alloy: tungsten, meticulously gilded with the essence of the void. Its unique composition grants it unparalleled strength and an unsettling shimmer."));
@@ -325,6 +352,39 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     event.add("kubejs:frost_reinforced_stained_steel_drilling_kit", [
         Text.of("§f§oA heavy-duty drilling kit, reinforced with cryogenic alloys."), // Default to white unless specific color was implied
         Text.of("§9Its components are exceptionally durable and resistant to extreme temperature fluctuations.")
+    ]);
+     event.add("kubejs:thorium_fuel_pellet", [
+        Text.of("§6A compacted pellet of fertile thorium."),
+        Text.of("§6Designed for efficient neutron capture and U-233 breeding in reactor blankets.")
+    ]);
+
+    // Uranium-233 Fuel Pellet
+    event.add("kubejs:uranium_233_fuel_pellet", [
+        Text.of("§aA highly concentrated pellet of bred Uranium-233."),
+        Text.of("§aDelivers exceptional energy output as primary fissile fuel.")
+    ]);
+   event.add("gtceu:heat_exchanger", [
+        Text.of("§bA machine focused on efficiently converting hot coolant and critical steam into power.")
+    ]);
+
+    // Pressurized Fission Reactor Controller
+    event.add("gtceu:pressurized_fission_reactor", [
+        Text.of("§6A robust fission reactor designed for stable, high-pressure operation and precise fuel management.."),
+    ]);
+
+    // Advanced Pressurized Fission Reactor Controller
+    event.add("gtceu:advanced_pressurized_fission_reactor", [
+        Text.of("§9An upgraded pressurized fission reactor, capable of handling higher outputs and more stronger use of uranium oxide."),
+    ]);
+
+    // High Performance Breeder Reactor Controller
+    event.add("gtceu:high_performace_breeder_reactor", [
+        Text.of("§dA breeder reactor optimized for high efficiency and conversion of fertile materials into fissile fuel."),
+    ]);
+    // Uranium-235 Fuel Pellet
+    event.add("gtceu:uranium_235_fuel_pellet", [
+        Text.of("§2A compacted pellet of Uranium-235."),
+        Text.of("§2Serves as the primary driver fuel for fission reactors.")
     ]);
     event.add("kubejs:frost_reinforced_stained_steel_drill_head", [
         Text.of("§f§lThis drill head bears a subtle, frozen pattern, a testament to its resilience."), // Default to white

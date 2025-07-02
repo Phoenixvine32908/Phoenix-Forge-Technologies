@@ -56,6 +56,12 @@
 					item: "minecraft:oak_log"
 					type: "item"
 				}
+				{
+					count: 3
+					id: "68B21B19769EA11E"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
 			]
 			shape: "square"
 			size: 0.75d
@@ -117,12 +123,19 @@
 			]
 			icon: "gtceu:mv_brewery"
 			id: "1A29EFBCEA017F99"
-			rewards: [{
-				id: "2F6FA635755FBFA8"
-				item: "minecraft:redstone"
-				random_bonus: 31
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "2F6FA635755FBFA8"
+					item: "minecraft:redstone"
+					random_bonus: 31
+					type: "item"
+				}
+				{
+					id: "147118C6D47967A0"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.66d
 			subtitle: "*hic*... *hic*"
 			tasks: [
@@ -322,12 +335,20 @@
 			]
 			icon: "gtceu:frost_reinforced_stained_steel_ingot"
 			id: "16A6AE5C770DB83A"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "3973B757526393F6"
-				table_id: 6500114529187527477L
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "3973B757526393F6"
+					table_id: 6500114529187527477L
+					type: "choice"
+				}
+				{
+					count: 3
+					id: "6678BD26B1225923"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.3d
 			subtitle: "HV is in your grasp"
@@ -361,6 +382,11 @@
 			hide_dependency_lines: true
 			icon: "gtceu:mv_transformer_1a"
 			id: "6C20A9A64C1BE0BF"
+			rewards: [{
+				id: "009AF3239F94B9D4"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "LV In Disguise"
 			tasks: [{
@@ -384,6 +410,11 @@
 			]
 			icon: "gtceu:mv_mixer"
 			id: "4A92AFD2532EED26"
+			rewards: [{
+				id: "0B1DD9EACA52D3ED"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Mixing more complex alloys"
@@ -409,6 +440,12 @@
 			]
 			icon: "gtceu:mv_electric_motor"
 			id: "1BE0349B8F3890D3"
+			rewards: [{
+				count: 2
+				id: "503EB837E06D4FA4"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Hated crafting these in the previous tier?"
 			tasks: [
@@ -541,12 +578,19 @@
 			]
 			icon: "gtceu:vanadium_steel_ingot"
 			id: "682C26579EDDCA76"
-			rewards: [{
-				count: 16
-				id: "2000E0E550142D12"
-				item: "gtceu:blue_steel_ingot"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 16
+					id: "2000E0E550142D12"
+					item: "gtceu:blue_steel_ingot"
+					type: "item"
+				}
+				{
+					id: "7EB3EE65FF520A99"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Steel Your Heart"
@@ -598,6 +642,12 @@
 			]
 			icon: "ae2:silicon_press"
 			id: "5401AB5E399E7BEA"
+			rewards: [{
+				count: 3
+				id: "1E4D9C2BB1DE6667"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Who likes meteor hunting, anyway?"
 			tasks: [
@@ -675,6 +725,12 @@
 			]
 			icon: "gtceu:mv_laser_engraver"
 			id: "315169840E06110F"
+			rewards: [{
+				count: 2
+				id: "520C5E027D6E3295"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			tasks: [{
@@ -698,12 +754,20 @@
 			]
 			icon: "gtceu:mv_energy_input_hatch"
 			id: "2AD44111B9B39C90"
-			rewards: [{
-				count: 24
-				id: "42B5E0E29F987E16"
-				item: "gtceu:annealed_copper_single_wire"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 24
+					id: "42B5E0E29F987E16"
+					item: "gtceu:annealed_copper_single_wire"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "79C716240FD8D682"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "square"
 			size: 0.75d
 			subtitle: "LV is so old-school!"
@@ -759,6 +823,11 @@
 			]
 			icon: "gtceu:kanthal_coil_block"
 			id: "1C55AE6AD5BDE304"
+			rewards: [{
+				id: "6DF442F1186E8911"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Is it getting hot in here?"
@@ -842,6 +911,11 @@
 			]
 			icon: "gtceu:advanced_integrated_circuit"
 			id: "26394C1290D70AB6"
+			rewards: [{
+				id: "223425AAE31EE16F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "...but hold on before getting too giddy"
@@ -896,6 +970,12 @@
 			]
 			icon: "gtceu:basic_integrated_circuit"
 			id: "5C17BF90DA2AAEEE"
+			rewards: [{
+				count: 2
+				id: "3C79B0F749C7ED0E"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "You have unlocked a new tier of Circuits!"
@@ -972,12 +1052,20 @@
 			]
 			icon: "gtceu:mv_circuit_assembler"
 			id: "0DE5C3FBC9A6A690"
-			rewards: [{
-				count: 40
-				id: "484745BF48673036"
-				item: "gtceu:soldering_alloy_dust"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 40
+					id: "484745BF48673036"
+					item: "gtceu:soldering_alloy_dust"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "1C4E996E4460E7D4"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Yippee, yahoo"
@@ -1001,11 +1089,19 @@
 			]
 			icon: "gtceu:multi_smelter"
 			id: "6DDDE2268B691F74"
-			rewards: [{
-				id: "006F83AC08E87057"
-				item: "gtceu:advanced_integrated_circuit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "006F83AC08E87057"
+					item: "gtceu:advanced_integrated_circuit"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "5EA852EA722E198C"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Possibly the most powerful furnace you've seen"
@@ -1033,6 +1129,11 @@
 			]
 			icon: "gtceu:microchip_processor"
 			id: "5E76D4C24026157D"
+			rewards: [{
+				id: "2C42F27E68046EDF"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "It Feels Good to be the Best"
@@ -1083,6 +1184,11 @@
 			]
 			icon: "gtceu:micro_processor_computer"
 			id: "4AFD3073C731A1E4"
+			rewards: [{
+				id: "433462E3F28EE4F2"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Standing out amongst the rest"
@@ -1107,6 +1213,12 @@
 			]
 			icon: "gtceu:micro_processor_assembly"
 			id: "5063FDFFBE3E4855"
+			rewards: [{
+				count: 2
+				id: "1F8FD630D3656059"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "On that HV grind"
@@ -1158,12 +1270,20 @@
 			]
 			icon: "gtceu:blue_alloy_ingot"
 			id: "1FCF2C103E25972B"
-			rewards: [{
-				id: "61F22179773C70D6"
-				item: "gtceu:electrotine_dust"
-				random_bonus: 7
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "61F22179773C70D6"
+					item: "gtceu:electrotine_dust"
+					random_bonus: 7
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0E81AA6887863257"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.66d
 			subtitle: "You're blue now... that's my alloy"
 			tasks: [{
@@ -1209,12 +1329,20 @@
 			]
 			icon: "gtceu:polyethylene_plate"
 			id: "10FB27DD3C7BEC2F"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "48DD442B4934D192"
-				table_id: 8104073045527404694L
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "48DD442B4934D192"
+					table_id: 8104073045527404694L
+					type: "choice"
+				}
+				{
+					count: 3
+					id: "08E4E465200B6192"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "Baby's first polymer!"
@@ -1238,6 +1366,12 @@
 			]
 			icon: "ae2:blank_pattern"
 			id: "1C036BCB2C488CFF"
+			rewards: [{
+				id: "44CA45AA45A0325C"
+				item: "kubejs:phoenix_feather"
+				random_bonus: 2
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Autocrafting at last!"
 			tasks: [{
@@ -1284,6 +1418,11 @@
 			]
 			icon: "gtceu:polyvinyl_chloride_plate"
 			id: "40408FFD02134148"
+			rewards: [{
+				id: "1DC947C3048EE4F9"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "You've already made one polymer, what's two?"
@@ -1308,6 +1447,11 @@
 			]
 			icon: "gtceu:plastic_printed_circuit_board"
 			id: "4600221BF0A30C3A"
+			rewards: [{
+				id: "6F919731756E3EE0"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "It's a Casio on a Plastic Board"
@@ -1530,6 +1674,12 @@
 					item: "gtceu:gear_extruder_mold"
 					type: "item"
 				}
+				{
+					count: 3
+					id: "7749923756A55844"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
 			]
 			shape: "square"
 			size: 0.75d
@@ -1578,6 +1728,12 @@
 			]
 			icon: "gtceu:mv_fluid_drilling_rig"
 			id: "05ADBAE5B6F38956"
+			rewards: [{
+				count: 4
+				id: "055D051F095BE0F4"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Fluid Drilling Rigs in CEu!"
@@ -1700,12 +1856,19 @@
 			]
 			icon: "gtceu:oilsands_ore"
 			id: "575B07D390D9D079"
-			rewards: [{
-				id: "286D83CF8F84A4DF"
-				item: "gtceu:oilsands_ore"
-				random_bonus: 3
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "286D83CF8F84A4DF"
+					item: "gtceu:oilsands_ore"
+					random_bonus: 3
+					type: "item"
+				}
+				{
+					id: "50988A8A0552B9E3"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.66d
 			subtitle: "This quest was sponsored by the US Military"
 			tasks: [
@@ -1956,6 +2119,11 @@
 			]
 			icon: "gtceu:tungsten_steel_quadruple_fluid_pipe"
 			id: "66041DE10C882382"
+			rewards: [{
+				id: "791592A0C6900C7B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "\"I thought channels were disabled!\""
 			tasks: [{
@@ -2026,6 +2194,11 @@
 			]
 			icon: "gtceu:ulpic_chip"
 			id: "16A1EF8B80A96633"
+			rewards: [{
+				id: "1C5B9BA990EECB1E"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Pickin' up Chips"
 			tasks: [
@@ -2215,6 +2388,11 @@
 				"&l&3Lore:&r&o This little useful device comes from GregTech 5. It was extremely useful in the early days, because very little information (basically nothing) was given by GUIs or WAILA."
 			]
 			id: "26C43416F9427BB3"
+			rewards: [{
+				id: "16484B9B24D09595"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.5d
 			subtitle: "For the nosiest GregTech players"
 			tasks: [{
@@ -2260,6 +2438,11 @@
 			dependencies: ["7567E885B7166603"]
 			description: ["Now that you have some &bAluminium,&r these are a further upgrade to your chests and backpacks. Unlocks another upgrade slot as a bonus."]
 			id: "0DB46141978BE703"
+			rewards: [{
+				id: "5A1CBEBE63688436"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.6d
 			subtitle: "Stronger"
 			tasks: [{
@@ -2291,6 +2474,12 @@
 				"&oDon't forget to upgrade this with integral componets and multi cycle injectors.&r"
 			]
 			id: "050EE53096074290"
+			rewards: [{
+				count: 3
+				id: "57694F5175E8DE21"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Burning Fuels"
@@ -2310,6 +2499,11 @@
 				"Moreover, because it applies the upgraded stats after other upgrades, these componets also increase the power of other &bupgrades&r."
 			]
 			id: "44D251E5D13F32C5"
+			rewards: [{
+				id: "12059096F67BAC92"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.6d
 			subtitle: "Integrity"
 			tasks: [{
@@ -2328,6 +2522,11 @@
 				"They move 400 more &bFE/t&r. While &cGreg wires&r do autoconvert to &bFE&r (and are faster eventually), these are &dcheaper&r to spam everywhere."
 			]
 			id: "6341508D7D62AC07"
+			rewards: [{
+				id: "2FE81A02618E8F8F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.6d
 			subtitle: "Energetic Power Movement"
 			tasks: [{
@@ -2348,6 +2547,12 @@
 				"While these are strong, &bGreg pipes&r will still pull thier weight. Even steel pipes move more fluids per tick without any upgrades."
 			]
 			id: "1FAF572E0EB00A94"
+			rewards: [{
+				count: 2
+				id: "5CDDEDB273279654"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.6d
 			subtitle: "Fluids Go Brr"
 			tasks: [{

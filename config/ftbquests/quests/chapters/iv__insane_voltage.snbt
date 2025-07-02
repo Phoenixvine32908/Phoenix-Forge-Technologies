@@ -23,6 +23,12 @@
 			description: ["This Superconductor will be required for progression during &dLuV&r... when you delve deeper into &bResearch&r."]
 			icon: "gtceu:samarium_iron_arsenic_oxide_double_wire"
 			id: "52D952ADBEB67454"
+			rewards: [{
+				count: 3
+				id: "7B0F1CE8B14229DE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "So you're telling me an Ivy conducted this Super?"
 			tasks: [{
@@ -54,6 +60,12 @@
 				"&l&3Lore:&r&o Rare Earth Elements (REE) contain a lot more metals than these, but we're struggling as is to give them use."
 			]
 			id: "300348B1238BCB9A"
+			rewards: [{
+				count: 3
+				id: "06453A2C5AB5BB7C"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "It's got \"rare\" in the name... oh no."
 			tasks: [{
@@ -83,6 +95,12 @@
 			]
 			icon: "gtceu:hssg_coil_block"
 			id: "7A1E3C3A2D699C5B"
+			rewards: [{
+				count: 3
+				id: "4A37D66CC212D5C0"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Approaching solar temperatures"
 			tasks: [{
@@ -127,6 +145,12 @@
 				"This alloy has great durability and damage property for tools. It has the best Power multiplier (until Neutronium!) as a &dRotor&r for &3Large Turbines&r, though it's slightly less efficient than &aHSS-S&r."
 			]
 			id: "1783D89CE81C8E2E"
+			rewards: [{
+				count: 3
+				id: "1E4E801CFEBFBD32"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Turbine Upgrade, perhaps?"
@@ -192,6 +216,12 @@
 			]
 			icon: "gtceu:polybenzimidazole_plate"
 			id: "7CFC112B8F460549"
+			rewards: [{
+				count: 3
+				id: "69EE585844A62CCE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "GTCEu's toughest polymer!"
 			tasks: [
@@ -225,6 +255,11 @@
 			]
 			icon: "gtceu:advanced_smd_transistor"
 			id: "195E5BFDE4C5A0DE"
+			rewards: [{
+				id: "31443DCAF18D0384"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [
 				{
@@ -273,6 +308,12 @@
 			]
 			icon: "gtceu:iv_assembler"
 			id: "5CA86A333670A55C"
+			rewards: [{
+				count: 4
+				id: "6159F488B8EF3D0D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [
 				{
@@ -307,6 +348,12 @@
 			]
 			icon: "gtceu:tungstensteel_large_boiler"
 			id: "328CFD483C26EA44"
+			rewards: [{
+				count: 3
+				id: "425924F113E5F667"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Good luck fueling this, lmao"
@@ -339,6 +386,12 @@
 				"&9Note:&r &dPolyvinyl Acetate&r (required for the Glass) can also be used for &aGlue&r!"
 			]
 			id: "12B4423F055BFBF5"
+			rewards: [{
+				count: 2
+				id: "396CC0897CE24B52"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Another Polymer Rises From The Darkness"
 			tasks: [{
@@ -363,6 +416,12 @@
 				"This alloy has a great mining speed, which translates into extremely good &6efficiency&r when used as a &dRotor&r in &3Large Turbines&r."
 			]
 			id: "3A7491323AC5C70C"
+			rewards: [{
+				count: 3
+				id: "5929E09228AD479B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "We made this one up"
 			tasks: [{
@@ -387,6 +446,12 @@
 			]
 			icon: "gtceu:indium_dust"
 			id: "0F192D1F44B9B599"
+			rewards: [{
+				count: 2
+				id: "2A47C326ECEF8BBD"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Superconductor Supreme"
 			tasks: [{
@@ -413,6 +478,11 @@
 				"If you wish to automate your LCR with patterns, circle back to the P2P Tunnel Quest for more information."
 			]
 			id: "0425179329ED1B72"
+			rewards: [{
+				id: "03475B1F2BB0DC49"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [{
 				id: "3550E45267942DE8"
@@ -434,6 +504,13 @@
 			]
 			icon: "gtceu:iv_electric_motor"
 			id: "01AB252C72B565FE"
+			rewards: [{
+				count: 3
+				id: "6C06053BF04C29F7"
+				item: "kubejs:phoenix_feather"
+				random_bonus: 2
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "...and if you disagree, you'll see the light soon enough"
@@ -492,6 +569,12 @@
 				"The next Quest will kick things off!"
 			]
 			id: "05003665368F5A57"
+			rewards: [{
+				count: 4
+				id: "6459279104C33B12"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "No more being Ore-poor!"
 			tasks: [{
@@ -514,6 +597,12 @@
 			]
 			icon: "gtceu:refined_almandine_ore"
 			id: "724FB950CC472BB4"
+			rewards: [{
+				count: 2
+				id: "312305419CD12315"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "I've been waiting for this!"
@@ -546,6 +635,12 @@
 				"&6This quest unlocks two new tutorials on the Assembly Line and Research in the &lTips and Tricks&r&6 tab - check them out to learn more!&r"
 			]
 			id: "77B7B1EDD19831E0"
+			rewards: [{
+				count: 4
+				id: "589A0B442829A939"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.3d
 			subtitle: "AKA the \"Assline\""
@@ -575,6 +670,12 @@
 			]
 			icon: "gtceu:lapotronic_energy_orb"
 			id: "5B07279B08BF8DDE"
+			rewards: [{
+				count: 3
+				id: "7172A6669474E730"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "It's amazing!"
 			tasks: [
@@ -598,6 +699,11 @@
 			dependencies: ["145F71A817C5996E"]
 			description: ["The &aZPM Mainframe&r is used to make the &3LuV Circuit Assembler&r (of course), but also allows you to step into &3Fusion&r."]
 			id: "327C3E02CD751453"
+			rewards: [{
+				id: "0A862D8AD4EE87B6"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Zero Point Module is (almost) mine!"
 			tasks: [{
@@ -627,6 +733,12 @@
 			]
 			icon: "minecraft:nether_star"
 			id: "6B128610C7D2825D"
+			rewards: [{
+				count: 3
+				id: "0F0009D2CDB5559B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Jump Up, Superstar"
 			tasks: [
@@ -670,6 +782,12 @@
 			]
 			icon: "gtceu:iridium_ingot"
 			id: "216E5A3574AC08BF"
+			rewards: [{
+				count: 2
+				id: "504B2D9B69A475EB"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [
 				{
@@ -733,6 +851,12 @@
 				"It's an optional upgrade - one you might not even need!"
 			]
 			id: "07906458E1A15683"
+			rewards: [{
+				count: 3
+				id: "45687BC1A1BFC100"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [{
@@ -758,6 +882,12 @@
 				"You can also use &9Substation Hatches&r to transmit many more amps. These hatches only work in Substations, and do not work in regular multiblocks."
 			]
 			id: "04E9D2F484702965"
+			rewards: [{
+				count: 3
+				id: "41BC449E41A511E4"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Centralised power, at last"
 			tasks: [{
@@ -781,6 +911,20 @@
 				"&aQubit CPUs&r are used in the production of &1Quantum&r Processors."
 			]
 			id: "225F57C95C6D7650"
+			rewards: [
+				{
+					count: 3
+					id: "7832B3860B2876AF"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+				{
+					exclude_from_claim_all: true
+					id: "654DDDB342D355BC"
+					table_id: 1971029833527055160L
+					type: "choice"
+				}
+			]
 			size: 0.75d
 			subtitle: "This actually has no relation to Quantum"
 			tasks: [{
@@ -807,6 +951,12 @@
 				"This also unlocks the &6best recipe&r for &dMV Circuits&r."
 			]
 			id: "2BB16260A76718B8"
+			rewards: [{
+				count: 3
+				id: "708A5C6A12ADAD47"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [{
 				id: "230762F7951EB866"
@@ -829,6 +979,12 @@
 				"&9-&r One &3LCR&r should be making both the &acoated Boards&r and the &aempty Circuit Boards&r to make future &ecrafting requests&r with AE2 extremely easy. Keeping an Input Hatch full of Sulfuric Acid shouldn't be a problem, either."
 			]
 			id: "0988B5FB795FF7DA"
+			rewards: [{
+				count: 4
+				id: "7EF14B933B6852FB"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [{
 				id: "4EB5F93570DAE79B"
@@ -853,6 +1009,11 @@
 				"Doing so will require &9PBI&r... and Alloys that require &aHSS-G Coils&r in your EBF."
 			]
 			id: "49C1D61741AA288E"
+			rewards: [{
+				id: "7A4716BB4C907844"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Quantum Processing"
 			tasks: [{
@@ -876,6 +1037,12 @@
 				"Automating it may be a big hit to your resources, but you can safely batch craft using an overclocked &3Large Chemical Reactor&r."
 			]
 			id: "1B520580219AFAE9"
+			rewards: [{
+				count: 2
+				id: "2066989C4B4DEC7B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Honey, where are my Microverse Projectors?"
@@ -898,6 +1065,11 @@
 				"&8Anyone in favor of this getting reworked?"
 			]
 			id: "0338C9219DC2F819"
+			rewards: [{
+				id: "5AE1DA01EF195F9C"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "The biggest upgrade you've ever seen"
 			tasks: [{
@@ -913,6 +1085,12 @@
 			dependencies: ["698B5F65F2DE4439"]
 			description: ["Good news for any mainframe haters out there - &dLuV&r Circuits that aren't mainframes!"]
 			id: "145F71A817C5996E"
+			rewards: [{
+				count: 2
+				id: "5FCD110C72996527"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Spread the LuV"
 			tasks: [{
@@ -932,6 +1110,11 @@
 				"Your march through &9IV&r continues. Stay strong, soldier."
 			]
 			id: "698B5F65F2DE4439"
+			rewards: [{
+				id: "5C9CC41FE2F92CFB"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "IV, but it's green now"
 			tasks: [{
@@ -957,6 +1140,12 @@
 			]
 			icon: "gtceu:iv_energy_input_hatch"
 			id: "48DEABA155605D23"
+			rewards: [{
+				count: 2
+				id: "32D23876465554CF"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "This is second nature at this point"
@@ -994,6 +1183,12 @@
 			]
 			icon: "gtceu:iv_cutter"
 			id: "7CC40BDAA803D044"
+			rewards: [{
+				count: 4
+				id: "364CB85A4A7D637C"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [
 				{
@@ -1033,6 +1228,11 @@
 				}
 			}
 			id: "2EFC07A4615B8B12"
+			rewards: [{
+				id: "6DDAF068FE1416A7"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.75d
 			subtitle: "No, we didn't trademark this one"
@@ -1103,6 +1303,12 @@
 				}
 			}
 			id: "502836411CA028B9"
+			rewards: [{
+				count: 3
+				id: "7192CC00C3D39050"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "circle"
 			size: 0.5d
 			subtitle: "Life would be boring without silly quests..."
@@ -1129,8 +1335,22 @@
 		}
 		{
 			dependencies: ["207036E606B325DE"]
+			description: [
+				"These fill in the space of the outside of the matrix after you build the frame. You can also use the matrix glass in lieu of the walls if you want."
+				""
+				"You need &l&9150 of these&r so batch accordingly."
+				""
+				"Good luck, you might need it!"
+			]
 			id: "2FCC0401AFD921D9"
+			rewards: [{
+				count: 3
+				id: "42932F100D0C4D6F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
+			subtitle: "The main structure of the matrix"
 			tasks: [{
 				id: "57ED7A5EE3DC2408"
 				item: "expatternprovider:assembler_matrix_wall"
@@ -1141,8 +1361,21 @@
 		}
 		{
 			dependencies: ["207036E606B325DE"]
+			description: [
+				"These provide no benefit beyond just replacing the walls, allowing you to &9see in&r."
+				""
+				"They are not any cheaper, but they are &apretty&r!"
+			]
 			id: "2F67F502BAD01E3E"
+			optional: true
+			rewards: [{
+				count: 2
+				id: "4E11AAD53003041A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
+			subtitle: "Seeing into the matrix."
 			tasks: [{
 				id: "15123B87AEEB0C12"
 				item: "expatternprovider:assembler_matrix_glass"
@@ -1153,9 +1386,25 @@
 		}
 		{
 			dependencies: ["77B7B1EDD19831E0"]
+			description: [
+				"Now that you have everything else to make the matrix, you need &l&968 of these frames&r."
+				""
+				"You place a &3skeleton of a 7 cubed area&r with the frames, then you fill in the faces with either &9assembler matrix glass&r or &9walls&r."
+				""
+				"Inside the assembler matrix is where your &bcores&r are and it needs to be completely full without any air gaps. Once it's built, you connect it to your &aAE2 network&r and you are good to go!"
+				""
+				"(A slight note here: you can make the matrix bigger than 7 cubed, you just will not have to do so in pretty much all cases. However, it is an option to keep in mind for later.)"
+			]
 			id: "207036E606B325DE"
+			rewards: [{
+				count: 2
+				id: "7BEF34721AB7F49A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 0.8d
+			subtitle: "The frame of the matrix."
 			tasks: [{
 				id: "445108634E956173"
 				item: "expatternprovider:assembler_matrix_frame"
@@ -1166,8 +1415,22 @@
 		}
 		{
 			dependencies: ["207036E606B325DE"]
+			description: [
+				"This is where the actual meat of the matrix lies, where you store your &3patterns&r!"
+				""
+				"Each of these hold &l&6twice the amount&r as an extended pattern provider to allow you to &oreally&r go crazy."
+				""
+				"You need at least &9one&r to allow you to actually craft resources, but you can choose the amount you want beyond that. The consensus is usually to start with &l&930&r as the &bcrafting speed/parallel&r will be your main focus. Moreover, you can always upgrade later."
+			]
 			id: "2DF05C03B33C5586"
+			rewards: [{
+				count: 2
+				id: "23CA344F87D598E4"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
+			subtitle: "Pattern the world, and own it."
 			tasks: [{
 				id: "6CCD88BBE9E916DC"
 				item: "expatternprovider:assembler_matrix_pattern"
@@ -1178,8 +1441,22 @@
 		}
 		{
 			dependencies: ["207036E606B325DE"]
+			description: [
+				"These allow the crafts you run in the &3assembler matrix&r to run in tandem, letting them complete even faster!"
+				""
+				"The general advice towards the amount you want in a &67 cubed matrix&r is &l&990 of these&r with the rest being filled up with pattern and &95 speed cores&r."
+				""
+				"You can also change the amount of these versus pattern cores as they are not locked to a certain number."
+			]
 			id: "6437514DF0A2C550"
+			rewards: [{
+				count: 2
+				id: "6C832A9DC072367C"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
+			subtitle: "Parallel for your crafts!"
 			tasks: [{
 				id: "782870C65502D513"
 				item: "expatternprovider:assembler_matrix_crafter"
@@ -1190,8 +1467,22 @@
 		}
 		{
 			dependencies: ["207036E606B325DE"]
+			description: [
+				"These speed cores allow the speeds in the &3assembler matrix&r to increase. The maximum benefit is &95&r, so don't make more as they will just be taking up space."
+				""
+				"As fewer of these are needed, the craft to make them is a lot more expensive."
+				""
+				"However, I highly suggest you make them."
+			]
 			id: "5190B80ADCB35329"
+			rewards: [{
+				count: 2
+				id: "3E503D8CB7F88DAE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
+			subtitle: "Kicking up the speed of your crafts!"
 			tasks: [{
 				id: "6D82C43209521347"
 				item: "expatternprovider:assembler_matrix_speed"
@@ -1201,14 +1492,29 @@
 			y: 7.5d
 		}
 		{
+			description: [
+				"This material came from my original story about the &35 Universal Wanderers&r. &l&9Pure Nevvonian Steel&r is capable of slicing through anything (including stories), perfectly fitted to the wielder, and is unbreakable."
+				""
+				"The more impure alloys are found throughout universes, each version slightly changing the name."
+				""
+				"Here, this slightly &6impure Nevvonian Steel&r is used to make the &3assembler matrix&r. It is made by combining &9Nevvonian Iron&r, &9Coke&r, &9Diamonds&r, &9Magic&r, and &9Liquid Titanium&r. I suggest you batch a decent bit because it might also be used a lot more later."
+			]
 			id: "4C727D2C208400A9"
+			rewards: [{
+				count: 10
+				id: "25AF12A81658D572"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "diamond"
 			size: 0.75d
+			subtitle: "And if you don't think so, you will see eventually."
 			tasks: [{
 				id: "3ABAFE851748FAD2"
 				item: "gtceu:85_percent_pure_nevonian_steel_ingot"
 				type: "item"
 			}]
+			title: "True Beauty Begins With Many Impurities"
 			x: 3.75d
 			y: 7.875d
 		}
@@ -1220,6 +1526,12 @@
 				"Beyond that, you needed to craft the Diamond Ring. This calls for a significant choice: either embark on a challenging journey to &dfind an Elytra&r, or utilize the slightly more &eexpensive Assembler recipe&r for its creation."
 			]
 			id: "3C7D927BA16E2E19"
+			rewards: [{
+				count: 4
+				id: "03D8BC2F89F2837A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "heart"
 			size: 0.8d
 			subtitle: "I Believe I Can Fly!"
@@ -1230,6 +1542,95 @@
 			}]
 			x: 5.6d
 			y: 4.4d
+		}
+		{
+			dependencies: [
+				"77B7B1EDD19831E0"
+				"30A6EDDF25A5E5F8"
+			]
+			description: [
+				"The &3Active Transformer&r is a multiblock used to transform energy on a much larger scale. For example, you can convert &6HV&r to &7LV&r power directly by using the appropriate energy hatches."
+				""
+				"To make it you need to make a &l&6Conductive Honey Coil&r&r block which requires you to challenge &6honey&r."
+				""
+				"In base GT: Modern, you would need to get superconductive coils which are unlocked after the Naquadah, but here, I thought we should bring this wonderful multiblock to you even earlier."
+				"{@pagebreak}"
+				"&l&3Lore:&r&o This is yet another feature from TecTech, which also required these cables to be painted. They do look fantastic if you paint them, but it's optional in CEu."
+			]
+			id: "1AD003487B4EC2EF"
+			shape: "rsquare"
+			size: 0.75d
+			subtitle: "More than a large transformer"
+			tasks: [{
+				id: "39CDBE6B4B973868"
+				item: "gtceu:active_transformer"
+				type: "item"
+			}]
+			title: "Active Transformer"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1AD003487B4EC2EF"]
+			description: [
+				"The &3Active Transformer&r has a second use - &6Laser Power&r. Lasers are like superconductors, but behave slightly differently. They share the energy input across all connected active transformers, allowing widespread power distribution. You can use &3Active Transformers&r to convert regular EU to and from Lasers."
+				""
+				"Like optical cables, they can only be connected to &eone input and output&r. But, these ones also only can move in &estraight lines&r. To turn them, an &3Active Transformer&r with a Laser Source Hatch (output) and Target Hatch (input) is needed."
+				"{@pagebreak}"
+				"&l&3Lore:&r&o This is yet again another TecTech feature, but there's a bit more to it this time. TecTech's lasers were tiered by voltage and carried thousands of amps instead. CEu doesn't faff around with any of that tiering. You only need one type of laser here!"
+			]
+			id: "07159FCD9744DD98"
+			rewards: [{
+				count: 2
+				id: "5C386EE19052513B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			shape: "rsquare"
+			size: 0.66d
+			subtitle: "Time for some lasers!"
+			tasks: [{
+				id: "3BA3AA8746044DC1"
+				item: "gtceu:normal_laser_pipe"
+				type: "item"
+			}]
+			title: "Laser Power Transmission"
+			x: 6.93d
+			y: 1.65d
+		}
+		{
+			dependencies: ["30A6EDDF25A5E5F8"]
+			description: [
+				"This is the &3main food for bees&r, used to breed, collect, and incubate them. The processing line to obtain them is pretty complicated as it requires you to make &6honey&r, &6honeycombs&r, and some other desert-based materials."
+				""
+				"To get &6honeycombs&r you need to solidify honey with a honeycomb base. This base requires &l&9Polymethyl Methacrylate (PMMA)&r, an advanced acrylic used in place of glass in some real-world applications."
+				""
+				"You will want to stockpile both &6honeytreats&r and &6honeycombs&r, as well as making a few bases, as they will be used in producing materials using bees a bit later."
+			]
+			id: "3EA4C57A5FA7C276"
+			rewards: [{
+				count: 3
+				id: "69615F0590EC62FE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			shape: "heart"
+			size: 0.8d
+			subtitle: "A Sweet Treat!"
+			tasks: [
+				{
+					id: "29F23BC6F3E2FAD3"
+					item: "productivebees:honey_treat"
+					type: "item"
+				}
+				{
+					id: "407D5C31B69D8643"
+					item: "kubejs:honey_comb_base"
+					type: "item"
+				}
+			]
+			x: 6.8d
+			y: 0.8d
 		}
 	]
 	subtitle: ["Automate everything and learn how to assemble"]

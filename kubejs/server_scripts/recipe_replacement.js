@@ -73,9 +73,23 @@ tiers.forEach(tier => {
 
 
 
+event.remove({ id: '/advanced_[a-z_]+_beehive/' })
+     event.remove({ id: '/advanced_[a-z_]+_canvas_hive/' })
+    event.remove({ id: /^productivebees:stonecutter\/.*canvas_hive$/ })
+    event.remove({ id: /^thermal:machines\/press\/press_[a-z_]+_gear$/ })
+     event.remove({ id: /^thermalexpansion:press\/[a-z_]+_gear$/ })
+     event.remove({ id: /^thermal:parts\/[a-z_]+_gear$/ });
+     event.remove({ id: /^productivebees:bee_breeding\// });
+    event.remove({ id: /^productivebees:cage_incubation/ });
+    event.remove({ id: /^productivebees.*incubation/ });
 
 
 
   });
 });
 })
+
+
+
+
+

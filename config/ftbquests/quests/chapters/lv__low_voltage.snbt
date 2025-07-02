@@ -147,6 +147,11 @@
 			]
 			id: "6E186F9C57155BFA"
 			optional: true
+			rewards: [{
+				id: "6C7D0A907CB7DF39"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "You must construct more turbines"
 			tasks: [{
@@ -204,12 +209,20 @@
 				"&6You will still need MV Circuits in order to make MV machines!&r"
 			]
 			id: "7567E885B7166603"
-			rewards: [{
-				count: 8
-				id: "1FAFD533935D1B4B"
-				item: "gtceu:unrefined_aluminfrost_dust"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 8
+					id: "1FAFD533935D1B4B"
+					item: "gtceu:unrefined_aluminfrost_dust"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0BEAF8EC72B17EB3"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.5d
 			subtitle: "We're basically in MV now, right?"
@@ -510,12 +523,19 @@
 				"Now is a good time to replace your &aTin Cables&r. Recycle them in the &3Packager&r to recover both the Tin and Rubber used to craft them."
 			]
 			id: "46AD7A6F3B6775F5"
-			rewards: [{
-				id: "6406192721336191"
-				item: "gtceu:magmatic_manganese_lead_single_wire"
-				random_bonus: 3
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "6406192721336191"
+					item: "gtceu:magmatic_manganese_lead_single_wire"
+					random_bonus: 3
+					type: "item"
+				}
+				{
+					id: "103808C5EADA28CC"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "We aren't losing a single Amp more"
@@ -575,6 +595,12 @@
 				"Get &eany&r &aBattery&r to complete this quest."
 			]
 			id: "3E6DC423FE4A99F7"
+			rewards: [{
+				count: 3
+				id: "4A8196B9A8FA5A0B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Batteries for storing energy!"
 			tasks: [{
@@ -656,12 +682,20 @@
 				"It's important to keep in mind that the EBF is a beefy boy. The minimum power cost to run a recipe is &9120 EU/t&r! That's slightly under 4 &7LV&r Generators. This is why it was locked behind the Battery Quest. You may wish to consider building a separate power line, with separate Generators and Battery Buffer to run this."
 			]
 			id: "1E9BE8D3F8A602DC"
-			rewards: [{
-				count: 16
-				id: "0DBE03823EE6616B"
-				item: "gtceu:invar_ingot"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 16
+					id: "0DBE03823EE6616B"
+					item: "gtceu:invar_ingot"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "2B72FD70D08B6142"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "A big milestone!"
@@ -1167,6 +1201,11 @@
 				"&l&3Lore:&r&o Did you notice this machine doubles as both an Extractor and a Fluid Extractor? The two of them were separate machines in previous versions of GregTech."
 			]
 			id: "5B2696206205CB2E"
+			rewards: [{
+				id: "64C80BCE9367199A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "The Steam Extractor extracts..."
 			tasks: [{
@@ -1190,11 +1229,19 @@
 				"&l&3Lore:&r&o The Circuit Assembler has made appearances in and out of GregTech versions. GT5 did not have it, and it was reimplemented in GT5 Unofficial. GTCE decided not to port it, and the tug-of-war continues with its inclusion in GTCEu."
 			]
 			id: "199361B5FEC959EA"
-			rewards: [{
-				id: "0418E257FEDA52B7"
-				item: "gtceu:good_electronic_circuit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "0418E257FEDA52B7"
+					item: "gtceu:good_electronic_circuit"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "26111FBD93CD4E89"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "Hopefully, your first MV Circuit expense"
 			tasks: [{
@@ -1491,12 +1538,20 @@
 				"&6Having this and AluminFrost will grant access to MV Machines.&r"
 			]
 			id: "0DBC148D92A9F69F"
-			rewards: [{
-				count: 4
-				id: "052E7DFC7E0B9EEF"
-				item: "gtceu:basic_electronic_circuit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 4
+					id: "052E7DFC7E0B9EEF"
+					item: "gtceu:basic_electronic_circuit"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "0E744F7556F1C3C5"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "Does that mean we're at MV yet?"
@@ -1640,11 +1695,19 @@
 			hide_dependency_lines: false
 			icon: "gtceu:lv_world_accelerator"
 			id: "113F3D2E48F62CBB"
-			rewards: [{
-				id: "1237B670A2484C9A"
-				item: "minecraft:clock"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "1237B670A2484C9A"
+					item: "minecraft:clock"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "7778FFF99FCA1C68"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "I Have Become Chronos"
@@ -1711,12 +1774,19 @@
 			hide_dependency_lines: false
 			icon: "gtceu:construction_core"
 			id: "11989C3388C969DF"
-			rewards: [{
-				id: "66853B9C5CC8EF26"
-				item: "gtceu:light_concrete"
-				random_bonus: 15
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "66853B9C5CC8EF26"
+					item: "gtceu:light_concrete"
+					random_bonus: 15
+					type: "item"
+				}
+				{
+					id: "2204627B39902344"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 0.75d
 			subtitle: "If you build it, they will come"
@@ -2055,6 +2125,12 @@
 				"While the backpack &cmight not&r be your main storage, it is still nice to have, so I suggest &aupgrading&r it as well. "
 			]
 			id: "42B170E22A69BF64"
+			rewards: [{
+				count: 2
+				id: "7CFEB0C80A330236"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "MOAR Storage"
 			tasks: [
@@ -2371,6 +2447,12 @@
 		}
 		{
 			id: "0CB698C3B830379A"
+			rewards: [{
+				count: 2
+				id: "24B608E0754069B1"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [{
 				id: "007EFEA1E0937099"

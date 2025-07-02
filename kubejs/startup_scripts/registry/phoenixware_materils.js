@@ -392,12 +392,20 @@ event.create('85_percent_pure_nevonian_steel')
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
             );
+            event.create('voidglass_shard')
+        .ore().gem()
+        .color(0x6a00aa).iconSet('diamond')
+        .components('1x calcium'); // Changed
+         event.create('permafrost')
+        .ore().ingot()
+        .color(0xA7D1EB).iconSet('diamond')
         event.create('void_touched_tungsten_steel')
         .ingot()
-        .liquid(3800)
+        .liquid(3100)
         .color(0x4B0082)
         .secondaryColor(0x000000)
         .iconSet('metallic')
+        .components("4x tungsten", "4x voidglass_shard", "2x molybdenum")
         .blastTemp(4200, 'mid', GTValues.VA[GTValues.EV], 1000)
        .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
@@ -407,6 +415,7 @@ event.create('85_percent_pure_nevonian_steel')
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
             GTMaterialFlags.GENERATE_ROTOR);
+            
                  event.create('uranium_233')
         .ingot()
         .fluid()
@@ -414,9 +423,6 @@ event.create('85_percent_pure_nevonian_steel')
         .secondaryColor(0x00CC00)
         .element(GTElements.get("uranium_233"))
         .iconSet('radioactive')
-        .blastTemp(4200, 'mid', GTValues.VA[GTValues.IV], 300)
-       .flags(GTMaterialFlags.GENERATE_ROD,
-            GTMaterialFlags.GENERATE_LONG_ROD,);
                event.create('uranium_236')
         .ingot()
         .fluid()
@@ -424,9 +430,6 @@ event.create('85_percent_pure_nevonian_steel')
         .element(GTElements.get("uranium_236"))
         .secondaryColor(0x0099EE)
         .iconSet('radioactive')
-       .blastTemp(4200, 'mid', GTValues.VA[GTValues.IV], 250)
-       .flags(GTMaterialFlags.GENERATE_ROD,
-            GTMaterialFlags.GENERATE_LONG_ROD,);
         event.create('inert_gas_waste')
         .gas() 
         .color(0xC0C0C0) 
@@ -437,14 +440,12 @@ event.create('85_percent_pure_nevonian_steel')
         .ingot().fluid().dust().color(0x90A090).secondaryColor(0x708070) 
         .element(GTElements.get("thorium")) 
         .iconSet('radioactive') 
-        .flags(GTMaterialFlags.GENERATE_LONG_ROD);
 event.create('spent_uranium_233')
     .dust().ingot()
     .color(0x503040)
     .secondaryColor(0x705060)
     .element(GTElements.get("uranium"))
     .iconSet('radioactive')
-    .flags(GTMaterialFlags.GENERATE_LONG_ROD);
     event.create('supercritical_carbon_dioxide')
         .fluid() 
         .color(0x70A070) 
@@ -459,11 +460,9 @@ event.create('critical_steam')
         .ingot().color(0x603030).secondaryColor(0x402020) 
         .element(GTElements.get("uranium_235")) 
         .iconSet('radioactive')
-        .flags(GTMaterialFlags.GENERATE_LONG_ROD);
-    event.create('depleted_uranium_reactor')
+    event.create('depleted_uranium')
         .ingot().color(0x555030).secondaryColor(0x333010) 
         .iconSet('radioactive') 
-        .flags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD); 
           event.create('hot_sodium_potassium')
         .liquid(3800)
         .color(0xFF4500) 
@@ -598,7 +597,7 @@ event.create('superconductive_honey')
         .fluid()
         .color(0x7da10e)
         .iconSet('bright');
-        event.create('high_radioactive_waste')
+        event.create('high_level_radioactive_waste')
         .ingot()                 
         .color(0x778877)        
         .secondaryColor(0x556655) 
@@ -638,7 +637,16 @@ event.create('superconductive_honey')
     .fluid()
     .color(0xFFE0C0) 
     .iconSet('dull');
-     
+    event.create('cryo_zirconium_binding_solution')
+    .fluid()
+    .color(0x80B0CC)
+    .secondaryColor(0xA0D0E0)
+    .iconSet('dull')
+    event.create('cryo_graphite_binding_solution')
+    .fluid()
+    .color(0x507080) 
+    .secondaryColor(0x7090A0)
+    .iconSet('dull')
 event.create('honey_catalyst')
     .fluid()
     .color(0xFFF9E3) 
@@ -804,17 +812,20 @@ event.create('hydrogen_peroxide')
     GTMaterials.Nobelium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Lawrencium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Strontium.setProperty($PropertyKey.INGOT, new $IngotProperty());
-    GTMaterials.Thorium.addFlags(GTMaterialFlags.GENERATE_LONG_ROD);
-    GTMaterials.Strontium.addFlags(GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_LONG_ROD, GTMaterialFlags.GENERATE_RING, GTMaterialFlags.GENERATE_ROUND, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_BOLT_SCREW);
+     addFluid(GTMaterials.Iodine, $FluidStorageKeys.GAS); 
+    addFluid(GTMaterials.Oganesson, $FluidStorageKeys.GAS);
     
 });
 
-
+let addFluid = (mat, key) => {
+    let prop = new $FluidProperty();
+    prop.getStorage().enqueueRegistration(key, new $FluidBuilder());
+    mat.setProperty(PropertyKey.FLUID, prop);
+}
 
 GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('aluminfrost').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(1.8, 1.7, 700, 3, [GTToolType.SWORD, GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, GTToolType.WIRE_CUTTER, GTToolType.KNIFE, GTToolType.SOFT_MALLET]).build());
-    GTMaterials.get('uranium_235').addFlags(GTMaterialFlags.GENERATE_LONG_ROD);
-    GTMaterials.get('uranium').addFlags(GTMaterialFlags.GENERATE_LONG_ROD);
+
     GTMaterials.get('akashic_zeronium').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(6.5, 5.9, 2147483647, 6,
        [GTToolType.SWORD,GTToolType.DRILL_LV,GTToolType.DRILL_MV,GTToolType.DRILL_HV,GTToolType.DRILL_EV,
         GTToolType.DRILL_IV,GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, 
@@ -859,3 +870,26 @@ GTCEuStartupEvents.materialModification(event => {
   mat.getProperties().removeProperty(PropertyKey.TOOL)
 }
 mat.getProperties().addProperty(PropertyKey.TOOL, new MyCustomPropertyProps())*/
+ItemEvents.modification(event => {
+  event.modify('minecraft:ender_pearl', item => {
+    item.maxStackSize = 64
+    item.fireResistant = true
+    item.rarity = 'UNCOMMON'
+  })
+
+   event.modify('gtceu:honey_ingot', item => {
+    item.foodProperties = food => {
+        food.hunger(2)
+        food.saturation(50)
+    }
+  })
+  event.modify('productivebees:honey_treat', item => {
+    item.foodProperties = food => {
+        food.hunger(4)
+        food.saturation(200)
+        food.fastToEat()
+    }
+  })
+
+ 
+})

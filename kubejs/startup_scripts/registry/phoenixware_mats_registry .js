@@ -34,6 +34,18 @@ event.create('frost_reinforced_stained_steel_drilling_kit')
     event.create('earthbound_miner_module')
     .displayName("§eEarth Bound Miner Module") 
     .texture("kubejs:item/earthbound_miner_module")
+
+        event.create('thorium_fuel_pellet')
+    .displayName("§2Thorium Fuel Pellet") 
+    .texture("kubejs:item/thorium_fuel_pellet")
+
+        event.create('u235_fuel_pellet')
+    .displayName("§aUranium-235 Fuel Pellet") 
+    .texture("kubejs:item/u235_fuel_pellet")
+        event.create('u233_fuel_pellet')
+    .displayName("§aUranium-233 Fuel Pellet") 
+    .texture("kubejs:item/u233_fuel_pellet")
+
      event.create('space_grade_steel_drill_head')
     .displayName("§7Space Grade Steel Drill Head")
     .texture("kubejs:item/space_grade_steel_drill_head")

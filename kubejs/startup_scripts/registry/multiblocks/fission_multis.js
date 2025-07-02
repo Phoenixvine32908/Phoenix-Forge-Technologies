@@ -9,7 +9,6 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setSound(GTSoundEntries.ARC);
         phoenixvine.create('advanced_pressurized_fission_reactor')
         .category('fission')
-        .setEUIO('out')
         .setMaxIOSize(1, 1, 1, 1)
         .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
