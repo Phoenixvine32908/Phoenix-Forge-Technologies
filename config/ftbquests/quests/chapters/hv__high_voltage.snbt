@@ -48,12 +48,20 @@
 			]
 			icon: "gtceu:hv_machine_casing"
 			id: "2D01E80DE837F6A6"
-			rewards: [{
-				count: 6
-				id: "4D352625AE6D5757"
-				item: "gtceu:advanced_integrated_circuit"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 6
+					id: "4D352625AE6D5757"
+					item: "gtceu:advanced_integrated_circuit"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "715FE523FA345826"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "square"
 			size: 0.75d
 			tasks: [{
@@ -94,6 +102,12 @@
 			]
 			icon: "gtceu:hv_autoclave"
 			id: "0021051273D48936"
+			rewards: [{
+				count: 2
+				id: "65D87E6687903F0B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.75d
 			subtitle: "The Road To Power Storage"
@@ -166,6 +180,12 @@
 			]
 			icon: "gtceu:configurable_maintenance_hatch"
 			id: "15645E46CC0E6764"
+			rewards: [{
+				count: 2
+				id: "268BBF0865C3C2A9"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Huge News for Maintenance Haters"
@@ -335,6 +355,11 @@
 			description: ["&8ULV&r Circuits are used in some AE2 recipes, such as the &aAnnihilation Core&r and &aFormation Core&r."]
 			icon: "gtceu:nand_chip"
 			id: "15EC934CE8F4DC86"
+			rewards: [{
+				id: "469F3878D6F617D5"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Good on you for making these!"
 			tasks: [{
@@ -424,6 +449,11 @@
 			]
 			icon: "gtceu:hv_chemical_reactor"
 			id: "390E59F05132FCB8"
+			rewards: [{
+				id: "09F0CB09B1D64FDF"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Chemistry-heads rejoice!"
@@ -580,12 +610,20 @@
 			]
 			icon: "gtceu:source_imbued_titanium_ingot"
 			id: "7FA0ACB7F161F378"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "106D8C718FA5E22C"
-				table_id: 3622252502177806142L
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "106D8C718FA5E22C"
+					table_id: 3622252502177806142L
+					type: "choice"
+				}
+				{
+					count: 4
+					id: "150715AF48188F6D"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "Magical Titanite Slab"
@@ -753,6 +791,12 @@
 			]
 			icon: "gtceu:cleanroom"
 			id: "3568BC9742092FC5"
+			rewards: [{
+				count: 4
+				id: "48AD98BF1DD633A2"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.5d
 			subtitle: "They put me in a room... a clean room"
@@ -830,12 +874,19 @@
 			]
 			icon: "gtceu:polytetrafluoroethylene_plate"
 			id: "7CC79617A4965F25"
-			rewards: [{
-				count: 24
-				id: "314C46623E72CFA4"
-				item: "gtceu:netherrack_topaz_ore"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 24
+					id: "314C46623E72CFA4"
+					item: "gtceu:netherrack_topaz_ore"
+					type: "item"
+				}
+				{
+					id: "569CD0163997A22C"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "A.K.A - Teflon"
 			tasks: [
@@ -922,20 +973,28 @@
 			hide_dependent_lines: true
 			icon: "gtceu:large_chemical_reactor"
 			id: "528CE69DA4358B2E"
-			rewards: [{
-				id: "3167A01BDCACFEFF"
-				item: {
-					Count: 1
-					id: "gtceu:stainless_steel_fluid_cell"
-					tag: {
-						Fluid: {
-							Amount: 64000
-							FluidName: "gtceu:sulfuric_acid"
+			rewards: [
+				{
+					id: "3167A01BDCACFEFF"
+					item: {
+						Count: 1
+						id: "gtceu:stainless_steel_fluid_cell"
+						tag: {
+							Fluid: {
+								Amount: 64000
+								FluidName: "gtceu:sulfuric_acid"
+							}
 						}
 					}
+					type: "item"
 				}
-				type: "item"
-			}]
+				{
+					count: 4
+					id: "07359A83A4EA454A"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.3d
 			subtitle: "The Magic Box to end all Magic Boxes"
@@ -974,11 +1033,19 @@
 			]
 			icon: "gtceu:phosphorus_boule"
 			id: "017019EB38F7A18C"
-			rewards: [{
-				id: "69C519E1CE7B94F0"
-				item: "gtceu:hv_lithium_battery"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "69C519E1CE7B94F0"
+					item: "gtceu:hv_lithium_battery"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "51A3BF1E38EA4DAC"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "That's dope, bro!"
 			tasks: [
@@ -1076,6 +1143,11 @@
 			]
 			icon: "gtceu:smd_transistor"
 			id: "4C3805F75C9EE3DD"
+			rewards: [{
+				id: "1D9ECA3CA523C36A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Alternate components!"
 			tasks: [
@@ -1108,6 +1180,11 @@
 			]
 			icon: "gtceu:smd_diode"
 			id: "7F272A099E65F848"
+			rewards: [{
+				id: "6CA3D66CF56B421C"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [
 				{
@@ -1140,6 +1217,12 @@
 				"&l&3Lore:&r&o In GregTech 5u, the &6HV&r&o Macerator only gave two slots. Urgh... we weren't planning on using that Stone Dust, anyway..."
 			]
 			id: "6B7762F672BAE76F"
+			rewards: [{
+				count: 3
+				id: "21314D20D5B27E39"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Shredding your Ores with byproducts"
 			tasks: [{
@@ -1194,6 +1277,12 @@
 			icon: "javd:portal_block"
 			id: "1011551290D3D7EA"
 			optional: true
+			rewards: [{
+				count: 2
+				id: "7978507849593C4B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Goodbye, cruel Overworld"
@@ -1332,6 +1421,11 @@
 				"Your first step with this fluid is making &5Source-Imbued Titanium&r. (Also used for the &dev superconductor&r but we will see that later)."
 			]
 			id: "76681EFD9B76F401"
+			rewards: [{
+				id: "1FCF86EFF1371AAE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Ooooh, Magic"
 			tasks: [{
@@ -1349,6 +1443,12 @@
 				"When crafting &9Source Gems&r, you have a choice: either cycle some of your &bSource&r back into the imbuer to create these gems &amuch faster&r, or produce them without additional source at a &csignificantly slower rate&r."
 			]
 			id: "79333AE8A6745E5D"
+			rewards: [{
+				count: 2
+				id: "606D9897C2B5A492"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Magical"
 			tasks: [{
@@ -1375,6 +1475,12 @@
 				"\"Through your time reclaiming the lost &cPhoenix Technologies&r you've learned that it's more than just &btechnology&r needed. It's also &5magic&r. You learn about an old source of power called &aArs Nouveau&r. Designed around the power of ironically &bSource&r you develop a machine to harness this power. You create an &6Imbuer&r that manipulates &bSource&r to push into resources to create new and improved items.\""
 			]
 			id: "2D6F0875CC953C16"
+			rewards: [{
+				count: 5
+				id: "7A1B6218A40CDDD1"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Imbuement!"
 			tasks: [
@@ -1489,6 +1595,12 @@
 				"Being a &anear-perfect choice&r, you decide to use it. This allows you to almost &aflawlessly sustain fission without damage&r. A &eproud smile&r touches your lips as you survey all you've accomplished. You're &eready, even excited&r, to have survived this long and come this far in &6reclaiming what was once lost&r.\""
 			]
 			id: "70FC1FF864DAB532"
+			rewards: [{
+				count: 3
+				id: "03BFAFD50665B88C"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.9d
 			subtitle: "Your First Taste of Fission"
 			tasks: [
@@ -1546,6 +1658,12 @@
 				"To efficiently acquire blackstone, it's highly recommended you utilize your &eHV Rock Crusher&r; it's perfect for automating this process and ensuring a steady supply!"
 			]
 			id: "7CB0B82B219B75DC"
+			rewards: [{
+				count: 4
+				id: "32B8F6496ABF48D5"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Your First Fissile Safe Materiel."
 			tasks: [{
@@ -1577,6 +1695,12 @@
 		{
 			description: ["Your &efirst fuel&r for fission has arrived! Obtain this wonderful fuel by &3reacting urananite dust with oxygen&r."]
 			id: "6FD5C824C3B24F29"
+			rewards: [{
+				count: 3
+				id: "7ECB8B6C1CC257AA"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.6d
 			subtitle: "The Start Of Fissile Fuel!"
 			tasks: [{

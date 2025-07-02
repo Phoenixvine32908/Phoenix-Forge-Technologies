@@ -65,6 +65,12 @@
 			]
 			icon: "gtceu:steam_large_turbine"
 			id: "189F84D6C76CDC8B"
+			rewards: [{
+				count: 3
+				id: "7B3C570083956453"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "If you're still running off Steam... boy, do we have a solution for you!"
@@ -101,6 +107,12 @@
 			}
 			id: "188A8C3DD38C2762"
 			min_required_dependencies: 1
+			rewards: [{
+				count: 3
+				id: "05B4D3BFD0D3042D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "My mechanics are... complex"
@@ -149,6 +161,12 @@
 			]
 			icon: "gtceu:gas_large_turbine"
 			id: "0F539EC8D2361791"
+			rewards: [{
+				count: 2
+				id: "438F8B1C51D59223"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Gassed Up"
@@ -180,6 +198,12 @@
 			]
 			icon: "gtceu:mpic_chip"
 			id: "35E7E45987D9B1F6"
+			rewards: [{
+				count: 4
+				id: "6928DA34A6233D58"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "No one machine should have all this power!"
 			tasks: [
@@ -259,6 +283,12 @@
 			]
 			icon: "gtceu:hv_fluid_drilling_rig"
 			id: "10987A49F647279E"
+			rewards: [{
+				count: 4
+				id: "368A67537186A144"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "\"Extreme\" is an apt descriptor"
@@ -287,6 +317,11 @@
 			]
 			icon: "gtceu:platinum_ingot"
 			id: "3398FC108D9DCB46"
+			rewards: [{
+				id: "2535151D70B62D7A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Diamond and Pearl"
 			tasks: [
@@ -324,6 +359,12 @@
 			]
 			icon: "gtceu:ev_large_miner"
 			id: "16E7CAC7BC8BFD8E"
+			rewards: [{
+				count: 4
+				id: "495318AC13A8C630"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [{
@@ -364,6 +405,12 @@
 			]
 			icon: "gtceu:lapotron_crystal"
 			id: "69E384F389B0D07B"
+			rewards: [{
+				count: 2
+				id: "56DDABB3A9943411"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [
@@ -422,6 +469,12 @@
 					item: "gtceu:endstone_tungstate_ore"
 					type: "item"
 				}
+				{
+					count: 2
+					id: "43A8B25851CA740D"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
 			]
 			size: 0.75d
 			subtitle: "All in one!"
@@ -467,6 +520,12 @@
 			]
 			icon: "gtceu:void_touched_tungsten_steel_ingot"
 			id: "30A6EDDF25A5E5F8"
+			rewards: [{
+				count: 7
+				id: "7665BCB53EF935BC"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.3d
 			subtitle: "The main &9IV&r Material!"
@@ -495,6 +554,12 @@
 			]
 			icon: "gtceu:tungsten_ingot"
 			id: "0B25A282F677744B"
+			rewards: [{
+				count: 3
+				id: "544FDF1A83B2FF23"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Wolfram Alpha"
 			tasks: [{
@@ -517,6 +582,12 @@
 			]
 			icon: "ae2:me_p2p_tunnel"
 			id: "39E7997F3080250A"
+			rewards: [{
+				count: 2
+				id: "0364E033002DBA8B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Fear not, channels are gone"
@@ -542,6 +613,12 @@
 			]
 			icon: "gtceu:vibration_safe_casing"
 			id: "3B2D2C47BEBCFFA7"
+			rewards: [{
+				count: 6
+				id: "1C207759D30542BC"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "We made it so far..."
@@ -572,6 +649,12 @@
 			]
 			icon: "gtceu:rtm_alloy_coil_block"
 			id: "069FD86133D7D582"
+			rewards: [{
+				count: 2
+				id: "785A20F2EA8C5454"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "What happened to my Tungstensteel!?"
 			tasks: [{
@@ -649,6 +732,11 @@
 			]
 			icon: "gtceu:titanium_large_boiler"
 			id: "249FA99AADAC3710"
+			rewards: [{
+				id: "22A733B0EF77C2EA"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "We're gonna need more charcoal"
@@ -685,6 +773,12 @@
 			]
 			icon: "gtceu:ev_electric_motor"
 			id: "26575D4FEB3D3F62"
+			rewards: [{
+				count: 3
+				id: "59132B3A9FE13C7B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Wait, no, don't leave!"
@@ -810,6 +904,12 @@
 				"&8Honestly, if making one of these is a huge problem material-wise, take a look at your infrastructure."
 			]
 			id: "7D15EEE81B1A3100"
+			rewards: [{
+				count: 2
+				id: "4B93A8267C724447"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "square"
 			size: 0.75d
 			subtitle: "Chemistry gets even harder"
@@ -835,6 +935,11 @@
 			]
 			icon: "gtceu:nano_cpu_wafer"
 			id: "63A87C9303D54487"
+			rewards: [{
+				id: "542CD4E44A7F7FBE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			tasks: [
 				{
@@ -875,6 +980,12 @@
 				"Each tier until &cZPM&r will show its own challenges when acquiring new and better Circuits."
 			]
 			id: "196FC518F744B983"
+			rewards: [{
+				count: 2
+				id: "4A65D0F414FA84D9"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "The Pinnacle... the Zenith"
 			tasks: [{
@@ -897,6 +1008,12 @@
 				"- Consider using the &3Chemical Bath&r with &dMercury&r for &eGold&r, from a wide variety of ores."
 			]
 			id: "5E6BA54E8A5BEBDE"
+			rewards: [{
+				count: 2
+				id: "2C2CD19859E4DA81"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Quite the gold cost..."
 			tasks: [{
@@ -918,6 +1035,11 @@
 				"Each SoC-based circuit recipe requires a different minimum tier of &aAssembling Machine&r, with the Nano Circuits requiring you to hit &dLuV&r. &aSystem on Chip&r unlocks the best recipe for &dLV Circuits&r."
 			]
 			id: "6781213726919716"
+			rewards: [{
+				id: "49E9B84004E52059"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Where's the Chip on System?"
@@ -941,6 +1063,12 @@
 				"Nice work, we suppose."
 			]
 			id: "0017FFFAD7CD2EFE"
+			rewards: [{
+				count: 2
+				id: "7078B71959D50171"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Harder, Better, Faster, Stronger"
 			tasks: [{
@@ -959,6 +1087,12 @@
 			]
 			description: ["Entering &1IV&r with these Circuits shouldn't be too painful."]
 			id: "5CC9B0E832545569"
+			rewards: [{
+				count: 2
+				id: "06F1B2A6F5B5F99F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Set sail, IV is on the horizon"
 			tasks: [{
@@ -979,6 +1113,12 @@
 				"It is used for the &aData Orb&r (a key component for when you get into &3Research&r), and in &5Nano&r Circuit production."
 			]
 			id: "2D5BECC0AC0E316B"
+			rewards: [{
+				count: 2
+				id: "4FFA331268D7BAEB"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [{
@@ -994,6 +1134,12 @@
 			dependencies: ["5CC9B0E832545569"]
 			description: ["Save two of these for the &3IV Circuit Assembler&r."]
 			id: "58BBD540D7D4FF01"
+			rewards: [{
+				count: 2
+				id: "2E4630D710DF8D6E"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "I LuV GregTech"
 			tasks: [{
@@ -1043,6 +1189,12 @@
 				">?"
 			]
 			id: "7F2FE3AF6F0C1190"
+			rewards: [{
+				count: 2
+				id: "4886ED4ACCCDF1E1"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Save on Redstone contraptions"
@@ -1096,8 +1248,6 @@
 		{
 			dependencies: ["42FB276AB16258D9"]
 			description: [
-				"&aUranium&r has very few uses in &2GTCEu&r right now, as we're &4yet to&r implement our &3Nuclear Reactor&r (it's planned!)."
-				""
 				"Make &dUranium Hexafluoride&r from &aUraninite&r. This will allow you to seperate the isotopes between U-238 and U-235."
 				"{@pagebreak}"
 				"&9Fluorine&r is fully recycled in the reaction, but you will need around maybe 40 buckets to bootstrap."
@@ -1108,6 +1258,12 @@
 			]
 			icon: "gtceu:uranium_dust"
 			id: "06B4AAC7DD796182"
+			rewards: [{
+				count: 3
+				id: "3466307761FCBEB2"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Let's hope this quest doesn't put you on a list"
 			tasks: [
@@ -1157,6 +1313,12 @@
 			]
 			icon: "gtceu:radon_bucket"
 			id: "73E8283634E5E33A"
+			rewards: [{
+				count: 2
+				id: "307AD4E12D4D280D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "200 seconds?! WHAT?!"
@@ -1211,6 +1373,12 @@
 				"In general, closed loop setups are nice to prevent overproduction or overconsumption, but go for whatever's more fun for you."
 			]
 			id: "117FBB18DEE6F08B"
+			rewards: [{
+				id: "0A6007818642F80F"
+				item: "kubejs:phoenix_feather"
+				random_bonus: 4
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "Prime circuit board material"
@@ -1448,12 +1616,20 @@
 				"However, the DT is &6very valuable&r when extracting Cracked Fuels and Pyrolyse products."
 			]
 			id: "48141DBA683F6B5A"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "2893ECAD2905293A"
-				table_id: 4190763620137969664L
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "2893ECAD2905293A"
+					table_id: 4190763620137969664L
+					type: "choice"
+				}
+				{
+					id: "6EDD5E0BFFC10848"
+					item: "kubejs:phoenix_feather"
+					random_bonus: 4
+					type: "item"
+				}
+			]
 			shape: "gear"
 			size: 1.3d
 			subtitle: "Time for a real oil refinery!"
@@ -1480,6 +1656,12 @@
 			]
 			icon: "gtceu:air_bucket"
 			id: "1030A9F4AAC685ED"
+			rewards: [{
+				count: 2
+				id: "0267222A60A7D3A9"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [
@@ -1601,6 +1783,12 @@
 			]
 			icon: "gtceu:seed_oil_bucket"
 			id: "5742702B8021B1F5"
+			rewards: [{
+				count: 2
+				id: "7BBDC7EAE2374142"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [
@@ -1654,6 +1842,12 @@
 				"Higher Coil tiers provide a small energy discount - up to 70% with the best Coils available."
 			]
 			id: "24866E83B280C9AB"
+			rewards: [{
+				count: 3
+				id: "2756A04798B7FC8D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "You Crack Me Up"
@@ -1737,6 +1931,11 @@
 			]
 			icon: "gtceu:iv_arc_furnace"
 			id: "6FEF59B8F571359D"
+			rewards: [{
+				id: "27DEB5D26BB23577"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "I never liked them anyway..."
@@ -1776,6 +1975,11 @@
 				"These cannot be used in a &bDistillation Tower&r, but may be particularly useful in &5Large Chemical Reactors&r."
 			]
 			id: "6BB13E775A579F2E"
+			rewards: [{
+				id: "7243741FE75B4A8D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "One-To-Many, Many-To-One"
@@ -1838,13 +2042,21 @@
 			]
 			icon: "gtceu:platinum_group_sludge_dust"
 			id: "57D4E09A9CAB150C"
-			rewards: [{
-				exclude_from_claim_all: true
-				id: "766886CFFF5CDC23"
-				table_id: 1971029833527055160L
-				title: "Platinum-bearing Ores"
-				type: "choice"
-			}]
+			rewards: [
+				{
+					exclude_from_claim_all: true
+					id: "766886CFFF5CDC23"
+					table_id: 1971029833527055160L
+					title: "Platinum-bearing Ores"
+					type: "choice"
+				}
+				{
+					count: 3
+					id: "75DC18EF3EEF0E9F"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			size: 0.75d
 			subtitle: "Platline in 50 hours"
 			tasks: [{
@@ -1872,6 +2084,12 @@
 			hide_dependency_lines: false
 			icon: "gtceu:ruthenium_ingot"
 			id: "2F9D9AAB27E6534D"
+			rewards: [{
+				count: 2
+				id: "1AD84A5E2C970A1D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Ru-Rho, Rhaggy"
 			tasks: [
@@ -1904,6 +2122,12 @@
 			]
 			icon: "gtceu:iridium_dust"
 			id: "28ED66F775111A17"
+			rewards: [{
+				count: 2
+				id: "3EE9BAE2F24D2829"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.75d
 			subtitle: "Hold your fire just for now"
@@ -1939,6 +2163,12 @@
 			}
 			id: "2423918C4C6A18A5"
 			min_required_dependencies: 1
+			rewards: [{
+				count: 2
+				id: "473BAF95C5DB6A4E"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Quite the microcrafting project... but worth it"
@@ -2010,6 +2240,12 @@
 				"While the initial setup cost might seem daunting, these machines are designed to scale significantly, making them viable far into your progression."
 			]
 			id: "3C7041C2CB161C46"
+			rewards: [{
+				count: 2
+				id: "6BF41747D2511D0D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Advanced Fission!"
@@ -2068,20 +2304,22 @@
 		{
 			dependencies: ["5E6A00C5E2682B89"]
 			description: [
-				"This is where you utilize that &bspecial steam&r we discussed: &aMedium Pressure Fissile Steam&r. As a turbine, its power generation &9scales significantly&r with better &9rotor&r and &9rotor holder&r components. The immense power from this machine will serve you for a &along time to come&r, so prepare accordingly!"
+				"The Heat Exchanger is a machine that takes in hot fluids from fissile proceses like &o&2Medium Pressure Fissile Steam&r&r or &cCrtical&r steam. It can also cool down some advanced coolants such as sodium potassium."
 				""
-				"&7(Side Note: Balancing power generation, especially turbine recipes, is tricky. If you notice any issues or have suggestions, we'd love to hear them in the Discord!)&r"
+				""
+				"&7(Side Note: Balancing power generation, is tricky. If you notice any issues or have suggestions, we'd love to hear them in the Discord!)&r"
 			]
 			id: "7CD49363C939608E"
+			rewards: [{
+				count: 3
+				id: "4019B994B154BE57"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Spinning For Power?"
 			tasks: [
-				{
-					id: "29563D5616E8AE4B"
-					item: "gtceu:pressurized_fission_turbine"
-					type: "item"
-				}
 				{
 					count: 11L
 					id: "0CA90FE97F4B121E"
@@ -2100,7 +2338,13 @@
 					item: { Count: 6, id: "kubejs:fissile_heat_safe_casing" }
 					type: "item"
 				}
+				{
+					id: "4FBAF8435191AB3B"
+					item: "gtceu:heat_exchanger"
+					type: "item"
+				}
 			]
+			title: "Heat Exchanging"
 			x: 2.31d
 			y: 5.61d
 		}
@@ -2116,6 +2360,12 @@
 				"A word of advice: Always use the &aSpace Mining Module&r to significantly boost your yield from these exotic recipes!"
 			]
 			id: "3D22DE5CE497D65D"
+			rewards: [{
+				count: 3
+				id: "27BB9652333F1C4A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Space Resources"
 			tasks: [
@@ -2156,6 +2406,12 @@
 				"Not much else needs to be said. &eEnjoy space!&r"
 			]
 			id: "689182D74CD2B0DA"
+			rewards: [{
+				count: 4
+				id: "44D928C35CCC0961"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Resistant to Atmospheric Heat"
 			tasks: [{
@@ -2177,6 +2433,12 @@
 				"&3Space Grade Steel Drill Kit:&r This fourth kit yields &bMoon ores&r along with some &6custom ones needed to progress later&r."
 			]
 			id: "533A98A019B5DF9F"
+			rewards: [{
+				count: 4
+				id: "7C5DAFC7C207E354"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Your Path To Drilling"
 			tasks: [{
@@ -2195,6 +2457,12 @@
 				"The recipe itself is straightforward: a few &bHV material plates&r combined with some &eEV components&r. However, the true challenge lies ahead, as you must now prepare to build your &crocket&r itself..."
 			]
 			id: "2A7EB67677B93C2A"
+			rewards: [{
+				count: 3
+				id: "56581798E1B7C993"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "This Isn't Rocket Science"
 			tasks: [{
@@ -2216,6 +2484,12 @@
 				"For each new destination, a dedicated &claunch pad&r is essential. Furthermore, you'll need vital &boxygen gear&r, including a &bspace suit&r and &bgas tanks&r. (A word of advice: securing these is highly recommended if you intend to return from your travels!)"
 			]
 			id: "2274AC3BBA5DEEB5"
+			rewards: [{
+				count: 2
+				id: "5F6FBCAF2FCD2DA8"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Off To Space"
 			tasks: [{
@@ -2244,6 +2518,12 @@
 				"Learning of &cPhoenixForge Technologies&r has taught you many things, but one of the innumerable you've yet to learn is how they had so many seemingly &5imaginary materials&r. Thinking of this, you decide to wander around the remnants of &cPhoenixForge Technologies&r and discover they were harnessing the power of &bdimensions&r and the &binfinite void of space&r to pull resources from their deposits without being in the area. (it doesn't drain resources, it &a**generates**&r it!) Whilst you learn, you discover it's not one but &e**two machines**&r that did this: the &3Dimensional Anchor&r and the &3Aetherial Fabricator&r."
 			]
 			id: "06F7673CDEFCDA87"
+			rewards: [{
+				count: 4
+				id: "5ADDA5734E8B437E"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Dimensional Mining Begins!"
 			tasks: [
@@ -2302,6 +2582,12 @@
 			]
 			icon: "kubejs:space_miner_module"
 			id: "27A301C0EE7BFA1E"
+			rewards: [{
+				count: 4
+				id: "1A773FFBC5CC4AC3"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Better Dimensional Mining!"
 			tasks: [

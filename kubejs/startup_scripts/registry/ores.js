@@ -40,10 +40,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xff0080).iconSet('diamond')
         .components('1x calcium'); // Changed
 
-    event.create('voidglass_shard')
-        .ore().gem()
-        .color(0x6a00aa).iconSet('diamond')
-        .components('1x calcium'); // Changed
+    
 
     event.create('voltanite_ore')
         .ore().dust()
@@ -64,9 +61,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ore().dust()
         .color(0xe4d6ff).iconSet('diamond')
         .components('1x calcium'); // Changed
-        event.create('permafrost')
-        .ore().ingot()
-        .color(0xA7D1EB).iconSet('diamond')
+       
 
     // 🍄 Overworld Addition
     event.create('mycelial_netherite_ore')

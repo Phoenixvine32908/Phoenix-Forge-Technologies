@@ -247,28 +247,6 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('minecraft:the_end');
 
-    // Moon Voidic Drill (Better) - Aetherial Fabrication - Nerf Round 3
-    event.recipes.gtceu.aetherial_fabrication12('moon_voidic_drill_better')
-        .notConsumable('kubejs:space_grade_steel_drilling_kit')
-        .notConsumable('kubejs:space_miner_module')
-        .inputFluids([
-            'kubejs:voidic_drilling_fluid 12000'
-        ])
-        .itemOutputs(
-            '15x gtceu:raw_voidglass_shard',
-            '58x gtceu:raw_ilmenite',
-            '47x gtceu:raw_bauxite',
-            '12x gtceu:raw_fluorite',
-            '58x gtceu:raw_magnetite',
-            '58x gtceu:raw_cooperite',
-            '3x gtceu:raw_nevvonian_iron',
-            '12x gtceu:raw_crystallized_fluxstone',
-            '3x gtceu:raw_polarity_flipped_bismuthite',
-            '6x gtceu:raw_ignisium',
-        )
-        .duration(9200) // Increased from 4600
-        .EUt(GTValues.VA[GTValues.EV] / 2)
-        .dimension('ad_astra:moon');
 
     // Moon Voidic Drill (Lesser) - Aetherial Fabrication - Nerf Round 3
     event.recipes.gtceu.aetherial_fabrication12('moon_voidic_drill_lesser')
@@ -287,6 +265,28 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_ignisium'
         )
         .duration(8000) // Increased from 4000
+        .EUt(GTValues.VA[GTValues.EV] / 2)
+        .dimension('ad_astra:moon');
+
+        event.recipes.gtceu.aetherial_fabrication12('moon_voidic_drill_module')
+        .notConsumable('kubejs:space_grade_steel_drilling_kit')
+        .notConsumable('kubejs:space_miner_module')
+        .inputFluids([
+            'kubejs:voidic_drilling_fluid 12000'
+        ])
+        .itemOutputs(
+            '10x gtceu:raw_voidglass_shard',
+            '28x gtceu:raw_ilmenite',
+            '28x gtceu:raw_bauxite',
+            '17x gtceu:raw_fluorite',
+            '28x gtceu:raw_magnetite',
+            '28x gtceu:raw_cooperite',
+            '12x gtceu:raw_nevvonian_iron',
+            '12x gtceu:raw_ignisium',
+            '12x gtceu:raw_crystallized_fluxstone',
+            '3x gtceu:raw_polarity_flipped_bismuthite',
+        )
+        .duration(8000) 
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 
