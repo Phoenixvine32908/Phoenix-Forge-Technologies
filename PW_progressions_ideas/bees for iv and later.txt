@@ -1,0 +1,162 @@
+Bees
+
+Solitary bees/non production
+Ashy mining bee: IV
+Blue banded bee: IV
+Green carpenter: IV
+Yellow carpenter: IV
+Chocolate mining bee: IV
+Collector: IV
+Hoarder: IV
+Farmer: IV
+Creebee: IV
+Cubee: IV
+Digger bee: IV
+Leafcutter bee: IV
+Mason bee: IV
+Neon cuckoo bee: IV
+Nomad bee: IV
+Resin bee: IV
+
+
+Pitchblende bee: IV  
+Lumber: IV
+Quarry: IV
+Rancher: IV
+
+
+
+Copper bee: IV
+Reed bee: IV
+Sweat bee: IV
+Bumble bee: IV
+Ghostly bee: IV
+Lepodolite bee: IV
+Exp bee: IV
+Arcane bee: IV
+Cinnabar bee: IV
+Topaz bee: IV
+Amethyst bee: IV
+Blazing bee: IV
+Prismarine bee: IV
+Sculk bee: IV
+Realgar bee: IV
+Rune bee: IV
+Pyrope bee: IV
+Sponge bee: IV
+Zinc bee: IV
+Tin bee: IV
+Baz bee: IV
+Sussy bee: IV
+Diamond bee: IV
+Awakened bee: IV
+Iron bee: IV
+Fluorite bee: IV
+Warped Shroombee: IV
+Brown Shroombee: IV
+Scheelite bee: IV
+Frosty bee: IV
+Rubee: IV
+Red Shroombee: IV
+Sapphire bee: IV
+Stibnite bee: IV
+Opal bee: IV
+Withered bee: IV
+Cheezy bee: IV
+Lapis bee: IV
+Electrotine bee: IV
+Constantan bee: IV
+Redstone bee: IV
+Sugarbag bee: IV
+Skele bee: IV
+Zombee: IV
+Silky bee: IV
+Copper bee: IV
+Biz bee: IV
+Niter bee: IV
+Slimy bee: IV
+Coal bee: IV
+Illmenite bee: IV
+Silicon bee: IV COMB NEEDS CHANGED TO DUSTS
+Galena bee: IV
+Menril bee: IV
+Crystalite bee: IV
+Sodalite bee: IV
+Water bee: IV
+Gold bee: IV
+Obsidan bee: IV
+Cobaltite bee: IV
+Bauxite bee: IV
+Bitzbee: IV
+Salty bee: IV
+Rocked bee: IV
+Steamy bee: IV
+Supa bee: IV
+Pepto beesmol: IV
+Desh bee: IV
+Crimson Shroombee: IV
+Silver bee: IV
+Bee of infinity: IV
+Amber bee: IV
+Tungstate bee: IV
+Emerald bee: IV
+Tricalcium phosphate bee: IV
+Spatial bee: IV
+Arcanus bee: IV
+Magmatic bee: IV
+Nickel bee: IV
+Fluix bee: IV
+Malachite bee: IV
+Lead bee: IV
+Invar bee: IV
+Sticky Resin bee: IV
+
+Thorium bee: LuV
+Radioactive bee: LUV+
+Graphite bee: LUV+
+Sky steel bee: LUV+
+Sphlearite bee: LUV+
+Neutronium bee: UHV+
+Ancient bee: LUV+
+Ender bee: LUV
+Osmium bee: ZPM+
+Palladium bee: ZPM+
+Apatie bee: LUV
+Acidic bee: LUV+
+Deorum bee: LUV+
+Pyrolusite bee: LUV
+Platinum bee: LUV+
+Tungsten bee: LUV+
+Chromite bee: LUV+
+Calorite bee: LUV+
+Bismuth bee: LUV+
+Iridium bee: LUV+
+Glowing Bee: LUV+
+Sheldonite bee: ZPM+
+Bastnasite bee: LUV+
+Tetrahedrite bee: LUV+
+Titanium bee: LUV+
+Neodymium bee: LUV+
+Ostrum bee: LUV+
+Sulfur bee: LUV
+Oilsands bee: LUV+
+Chaos bee: LUV+
+Cobalt bee: LUV+
+Draconium bee: LUV+
+Wannabee: LUV+
+Stellarite bee: LUV+
+Oily bee: LUV+
+Vanadium magnetite bee: LUV+
+Barite bee: LUV+
+Tantalite bee: LUV+
+Naquadah bee: LUV+
+Draconic bee: LUV+
+Pyrochlore bee: LUV+
+Molybdenum bee: LUV+
+Entropy bee: ZPM+
+Voidglass shard bee: LUV+
+Polarity Flipped bismuthite bee: ZPM+
+Crystallized fluxstone bee: LUV+
+Ignisium bee: LUV+
+
+Dye: UV
