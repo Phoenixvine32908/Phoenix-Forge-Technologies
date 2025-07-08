@@ -8,8 +8,10 @@
 	#Enables/disables the entity ticker
 	enableEntityTicker = true
 	#You can set the power cost multiplayer for the entity ticker here
-	#Range: 0 ~ 1024
+	#Range: 0 ~ 4096
 	EntityTickerCost = 256
 	#Blocks on which entity ticker should not work
 	EntityTickerBlackList = ["gtceu:luv_fusion_reactor", "gtceu:zpm_fusion_reactor", "gtceu:uv_fusion_reactor"]
+	#If it should be possible to route p2p tunnels through a wormhole tunnel
+	nestedP2Pwormhole = false
 

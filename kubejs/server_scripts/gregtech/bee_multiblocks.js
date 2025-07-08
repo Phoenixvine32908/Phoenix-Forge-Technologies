@@ -484,178 +484,165 @@ ServerEvents.recipes(phoenix => {
             console.warn(`[KubeJS] No final ore item defined for honeyed_fluid_processing of material: ${material}`);
         }
     });
-
-      // --- Helper Function: Converts "Some Bee Name" to "some_bee_name" ---
+// --- Helper Function: Converts "Some Bee Name" to "some_bee_name" ---
     function toBeeId(name) {
-        return name.toLowerCase().replace(/\s+/g, '_').replace(/'/g, ''); // Also handles apostrophes
+        return name.toLowerCase().replace(/\s+/g, '_').replace(/'/g, '');
     }
 
     // --- Core Function: Apis Progenitor Transformation Recipe Generator ---
-    // This function creates a recipe for your 'apis_progenitor' multiblock.
-    // It's designed for transforming one bee type using an item and an optional fluid input.
     function makeApisProgenitorTransformationRecipe({
         id,
         outputBeeType,
-        inputBeeType, // Only one input bee now
-        itemInput,    // e.g., "2x gtceu:raw_diamond_block"
-        fluidInput,   // NEW: e.g., "250 minecraft:water" (Optional)
+        inputBeeType,
+        itemInput,
+        fluidInput,
         duration,
         EUt
     }) {
-        // Construct the NBT for the single input bee cage
         const inputBeeCage = Item.of('productivebees:bee_cage', {
             entity: "productivebees:configurable_bee",
             type: `productivebees:${inputBeeType}`
-        }).weakNBT(); // Use weakNBT for flexible matching
+        }).weakNBT();
 
-        // Construct the NBT for the output bee cage
         const outputBeeCage = Item.of('productivebees:bee_cage', {
             entity: "productivebees:configurable_bee",
             type: `productivebees:${outputBeeType}`
-        }); // No weakNBT needed for output, as it's created fresh
+        });
 
         // Start creating the Apis Progenitor recipe
         const recipe = phoenix.recipes.gtceu.apis_progenitor(id)
             .EUt(EUt)
             .duration(duration)
-            .itemInputs(itemInput) // The required item for transformation
-            .notConsumable(inputBeeCage); // The single parent bee cage (not consumed)
+            .itemInputs(itemInput) // Correct
+            .notConsumable(inputBeeCage);
 
-        // Conditionally add fluid input if specified
+        // Conditionally add fluid input using .inputFluids
         if (fluidInput) {
-            recipe.fluidInputs(fluidInput);
+            recipe.inputFluids(fluidInput); // Correct
         }
 
-        recipe.outputItems(outputBeeCage); // The new bee cage is the output
+        recipe.itemOutputs(outputBeeCage); // CORRECTED: Now uses .itemOutputs as per your example!
 
-        // Console log for debugging/confirmation (optional)
         // console.log(`Generated Apis Progenitor recipe: ${outputBeeType} from ${inputBeeType} + ${itemInput}${fluidInput ? ` + ${fluidInput}` : ''}`);
     }
 
-    // --- Recipe Data Definition ---
-    // This array defines all the bee transformation recipes.
-    // Each object represents one recipe:
-    //   - outputBee: The bee that is produced.
-    //   - inputBee: The single parent bee for transformation.
-    //   - item: The additional item input required.
-    //   - fluid: (Optional) The fluid input required (e.g., "250 minecraft:water").
+    // --- Recipe Data Definition (All input bees are 'diamond', all fluids are 'gtceu:epoxy' for testing) ---
+    // Remember to change 'inputBee' and 'fluid' back to your desired values after testing!
     const beeRecipeData = [
-        // --- Core GregTech Metals & Gems (Tiered Progression) ---
-        { outputBee: 'copper', inputBee: 'forest', item: '2x gtceu:raw_copper_block', fluid: '250 gtceu:molten_copper' },
-        { outputBee: 'tin', inputBee: 'meadow', item: '2x gtceu:raw_tin_block', fluid: '250 gtceu:molten_tin' },
-        { outputBee: 'zinc', inputBee: 'modest', item: '2x gtceu:raw_zinc_block', fluid: '250 gtceu:molten_zinc' },
-        { outputBee: 'iron', inputBee: 'forest', item: '2x gtceu:raw_iron_block', fluid: '250 gtceu:molten_iron' },
-        { outputBee: 'gold', inputBee: 'iron', item: '2x gtceu:raw_gold_block', fluid: '250 gtceu:molten_gold' },
-        { outputBee: 'lead', inputBee: 'zinc', item: '2x gtceu:raw_lead_block', fluid: '250 gtceu:molten_lead' },
-        { outputBee: 'silver', inputBee: 'lead', item: '2x gtceu:raw_silver_block', fluid: '250 gtceu:molten_silver' },
-        { outputBee: 'nickel', inputBee: 'iron', item: '2x gtceu:raw_nickel_block', fluid: '250 gtceu:molten_nickel' },
+        // --- Core GregTech Metals & Gems ---
+        { outputBee: 'copper', inputBee: 'diamond', item: '2x gtceu:raw_copper_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'tin', inputBee: 'diamond', item: '2x gtceu:raw_tin_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'zinc', inputBee: 'diamond', item: '2x gtceu:raw_zinc_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'iron', inputBee: 'diamond', item: '2x gtceu:raw_iron_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'gold', inputBee: 'diamond', item: '2x gtceu:raw_gold_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'lead', inputBee: 'diamond', item: '2x gtceu:raw_lead_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'silver', inputBee: 'diamond', item: '2x gtceu:raw_silver_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'nickel', inputBee: 'diamond', item: '2x gtceu:raw_nickel_block', fluid: '250 gtceu:epoxy' },
 
-        { outputBee: 'redstone', inputBee: 'modest', item: '2x minecraft:redstone_block', fluid: '250 gtceu:redstone' },
-        { outputBee: 'lapis', inputBee: 'blue_banded', item: '2x minecraft:lapis_lazuli_block', fluid: '250 gtceu:lapis_lazuli_solution' }, // Hypothetical GTCEu fluid
-        { outputBee: 'diamond', inputBee: 'emerald', item: '2x gtceu:raw_diamond_block', fluid: '250 gtceu:liquid_carbon' }, // Hypothetical GTCEu fluid
-        { outputBee: 'emerald', inputBee: 'diamond', item: '2x gtceu:raw_emerald_block', fluid: '250 gtceu:liquid_emerald' }, // Hypothetical GTCEu fluid
-        { outputBee: 'coal', inputBee: 'forest', item: '2x gtceu:coal_block', fluid: '250 gtceu:creosote' },
+        { outputBee: 'redstone', inputBee: 'diamond', item: '2x minecraft:redstone_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'lapis', inputBee: 'diamond', item: '2x minecraft:lapis_lazuli_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'diamond', inputBee: 'diamond', item: '2x gtceu:raw_diamond_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'emerald', inputBee: 'diamond', item: '2x gtceu:raw_emerald_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'coal', inputBee: 'diamond', item: '2x gtceu:coal_block', fluid: '250 gtceu:epoxy' },
 
         // --- Alloys & Later Metals ---
-        { outputBee: 'constantan', inputBee: 'copper', item: '2x gtceu:constantan_block', fluid: '250 gtceu:molten_constantan' },
-        { outputBee: 'electrotine', inputBee: 'redstone', item: '2x gtceu:electrotine_dust', fluid: '250 gtceu:electrotine_solution' }, // Hypothetical
-        { outputBee: 'invar', inputBee: 'iron', item: '2x gtceu:invar_block', fluid: '250 gtceu:molten_invar' },
+        { outputBee: 'constantan', inputBee: 'diamond', item: '2x gtceu:constantan_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'electrotine', inputBee: 'diamond', item: '2x gtceu:electrotine_dust', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'invar', inputBee: 'diamond', item: '2x gtceu:invar_block', fluid: '250 gtceu:epoxy' },
 
         // --- More Gems & Minerals ---
-        { outputBee: 'sapphire', inputBee: 'lapis', item: '2x gtceu:raw_sapphire_block', fluid: '250 gtceu:liquid_sapphire' }, // Hypothetical
-        { outputBee: 'ruby', inputBee: 'redstone', item: '2x gtceu:raw_ruby_block', fluid: '250 gtceu:liquid_ruby' }, // Hypothetical
-        { outputBee: 'amethyst', inputBee: 'lapis', item: '2x gtceu:raw_amethyst_block', fluid: '250 gtceu:liquid_amethyst' }, // Hypothetical
-        { outputBee: 'topaz', inputBee: 'gold', item: '2x gtceu:raw_topaz_block', fluid: '250 gtceu:liquid_topaz' }, // Hypothetical
-        { outputBee: 'fluorite', inputBee: 'amethyst', item: '2x gtceu:raw_fluorite_block', fluid: '250 gtceu:hydrofluoric_acid' },
-        { outputBee: 'cinnabar', inputBee: 'redstone', item: '2x gtceu:raw_cinnabar_block', fluid: '250 gtceu:molten_cinnabar' }, // Hypothetical
-        { outputBee: 'realgar', inputBee: 'cinnabar', item: '2x gtceu:raw_realgar_block', fluid: '250 gtceu:arsenic_solution' }, // Hypothetical
-        { outputBee: 'stibnite', inputBee: 'silver', item: '2x gtceu:raw_stibnite_block', fluid: '250 gtceu:antimony_solution' }, // Hypothetical
-        { outputBee: 'opal', inputBee: 'water', item: '2x gtceu:raw_opal_block', fluid: '250 minecraft:water' },
-        { outputBee: 'pyrope', inputBee: 'red_shroom', item: '2x gtceu:raw_pyrope_block', fluid: '250 gtceu:molten_pyrope' }, // Hypothetical
-        { outputBee: 'scheelite', inputBee: 'tungstate_bee', item: '2x gtceu:raw_scheelite_block', fluid: '250 gtceu:molten_scheelite' }, // Hypothetical
-        { outputBee: 'cobaltite', inputBee: 'iron', item: '2x gtceu:raw_cobaltite_block', fluid: '250 gtceu:molten_cobalt' },
-        { outputBee: 'bauxite', inputBee: 'clay_bee', item: '2x gtceu:raw_bauxite_block', fluid: '250 gtceu:aluminium_solution' }, // Hypothetical
-        { outputBee: 'tungstate', inputBee: 'iron', item: '2x gtceu:raw_tungstate_block', fluid: '250 gtceu:molten_tungsten' },
-        { outputBee: 'desh', inputBee: 'end_bee', item: '2x gtceu:raw_desh_block', fluid: '250 gtceu:molten_desh' },
-        { outputBee: 'tricalcium_phosphate', inputBee: 'skeleton', item: '2x gtceu:raw_tricalcium_phosphate_block', fluid: '250 gtceu:phosphoric_acid' },
-        { outputBee: 'pitchblende', inputBee: 'uranium_bee', item: '2x gtceu:raw_pitchblende_block', fluid: '250 gtceu:uranium_hexafluoride' }, // As gas in fluid form
-        { outputBee: 'galena', inputBee: 'lead', item: '2x gtceu:raw_galena_block', fluid: '250 gtceu:molten_lead' },
-        { outputBee: 'illmenite', inputBee: 'iron', item: '2x gtceu:raw_illmenite_block', fluid: '250 gtceu:molten_titanium' }, // Hypothetical
-        { outputBee: 'niter', inputBee: 'saltpeter_bee', item: '2x gtceu:niter_dust', fluid: '250 gtceu:potassium_nitrate_solution' }, // Hypothetical
-        { outputBee: 'malachite', inputBee: 'copper', item: '2x gtceu:raw_malachite_block', fluid: '250 gtceu:molten_copper' },
-        { outputBee: 'amber', inputBee: 'resin', item: '1x gtceu:sticky_resin', fluid: '250 gtceu:creosote' },
-
+        { outputBee: 'sapphire', inputBee: 'diamond', item: '2x gtceu:raw_sapphire_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'ruby', inputBee: 'diamond', item: '2x gtceu:raw_ruby_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'amethyst', inputBee: 'diamond', item: '2x gtceu:raw_amethyst_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'topaz', inputBee: 'diamond', item: '2x gtceu:raw_topaz_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'fluorite', inputBee: 'diamond', item: '2x gtceu:raw_fluorite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'cinnabar', inputBee: 'diamond', item: '2x gtceu:raw_cinnabar_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'realgar', inputBee: 'diamond', item: '2x gtceu:raw_realgar_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'stibnite', inputBee: 'diamond', item: '2x gtceu:raw_stibnite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'opal', inputBee: 'diamond', item: '2x gtceu:raw_opal_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'pyrope', inputBee: 'diamond', item: '2x gtceu:raw_pyrope_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'scheelite', inputBee: 'diamond', item: '2x gtceu:raw_scheelite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'cobaltite', inputBee: 'diamond', item: '2x gtceu:raw_cobaltite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'bauxite', inputBee: 'diamond', item: '2x gtceu:raw_bauxite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'tungstate', inputBee: 'diamond', item: '2x gtceu:raw_tungstate_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'desh', inputBee: 'diamond', item: '2x gtceu:raw_desh_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'tricalcium_phosphate', inputBee: 'diamond', item: '2x gtceu:raw_tricalcium_phosphate_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'pitchblende', inputBee: 'diamond', item: '2x gtceu:raw_pitchblende_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'galena', inputBee: 'diamond', item: '2x gtceu:raw_galena_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'illmenite', inputBee: 'diamond', item: '2x gtceu:raw_illmenite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'niter', inputBee: 'diamond', item: '2x gtceu:niter_dust', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'malachite', inputBee: 'diamond', item: '2x gtceu:raw_malachite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'amber', inputBee: 'diamond', item: '1x gtceu:sticky_resin', fluid: '250 gtceu:epoxy' },
 
         // --- Thematic/Environmental Bees ---
-        { outputBee: 'water', inputBee: 'forest', item: '1x minecraft:water_bucket', fluid: '250 minecraft:water' },
-        { outputBee: 'obsidian', inputBee: 'blazing', item: '1x minecraft:obsidian', fluid: '250 minecraft:lava' },
-        { outputBee: 'blazing', inputBee: 'nether_bee', item: '1x minecraft:blaze_rod', fluid: '250 minecraft:lava' },
-        { outputBee: 'prismarine', inputBee: 'water', item: '1x minecraft:prismarine_block', fluid: '250 minecraft:water' },
-        { outputBee: 'sculk', inputBee: 'withered', item: '1x minecraft:sculk_catalyst', fluid: '250 gtceu:dark_matter' }, // Hypothetical fluid
-        { outputBee: 'sponge', inputBee: 'water', item: '1x minecraft:sponge', fluid: '250 minecraft:water' },
-        { outputBee: 'frosty', inputBee: 'wintry', item: '1x minecraft:blue_ice', fluid: '250 gtceu:liquid_nitrogen' }, // Hypothetical GTCEu fluid
-        { outputBee: 'slimy', inputBee: 'marshy', item: '1x minecraft:slime_block', fluid: '250 gtceu:slime' }, // Or other mod's slime fluid
-        { outputBee: 'menril', inputBee: 'modest', item: '1x integrateddynamics:menril_log', fluid: '250 integrateddynamics:menril_resin' }, // Requires Integrated Dynamics
-        { outputBee: 'salty', inputBee: 'water', item: '1x minecraft:salt', fluid: '250 gtceu:brine' }, // Hypothetical GTCEu fluid
-        { outputBee: 'steamy', inputBee: 'water', item: '1x gtceu:steel_turbine_blade', fluid: '250 minecraft:water' },
-        { outputBee: 'reed', inputBee: 'marshy', item: '1x minecraft:sugar_cane', fluid: '250 minecraft:water' },
-        { outputBee: 'sweat', inputBee: 'tropical', item: '1x minecraft:cactus', fluid: '250 minecraft:water' },
-        { outputBee: 'bumble', inputBee: 'meadow', item: '1x minecraft:dandelion' }, // No fluid
+        { outputBee: 'water', inputBee: 'diamond', item: '1x minecraft:water_bucket', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'obsidian', inputBee: 'diamond', item: '1x minecraft:obsidian', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'blazing', inputBee: 'diamond', item: '1x minecraft:blaze_rod', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'prismarine', inputBee: 'diamond', item: '1x minecraft:prismarine_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'sculk', inputBee: 'diamond', item: '1x minecraft:sculk_catalyst', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'sponge', inputBee: 'diamond', item: '1x minecraft:sponge', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'frosty', inputBee: 'diamond', item: '1x minecraft:blue_ice', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'slimy', inputBee: 'diamond', item: '1x minecraft:slime_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'menril', inputBee: 'diamond', item: '1x integrateddynamics:menril_log', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'salty', inputBee: 'diamond', item: '1x minecraft:salt', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'steamy', inputBee: 'diamond', item: '1x gtceu:steel_turbine_blade', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'reed', inputBee: 'diamond', item: '1x minecraft:sugar_cane', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'sweat', inputBee: 'diamond', item: '1x minecraft:cactus', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'bumble', inputBee: 'diamond', item: '1x minecraft:dandelion', fluid: '250 gtceu:epoxy' },
 
-        // --- Shroombees (No fluids for these) ---
-        { outputBee: 'warped_shroom', inputBee: 'forest', item: '1x minecraft:warped_fungus' },
-        { outputBee: 'brown_shroom', inputBee: 'forest', item: '1x minecraft:brown_mushroom_block' },
-        { outputBee: 'red_shroom', inputBee: 'forest', item: '1x minecraft:red_mushroom_block' },
-        { outputBee: 'crimson_shroom', inputBee: 'forest', item: '1x minecraft:crimson_fungus' },
+        // --- Shroombees ---
+        { outputBee: 'warped_shroom', inputBee: 'diamond', item: '1x minecraft:warped_fungus', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'brown_shroom', inputBee: 'diamond', item: '1x minecraft:brown_mushroom_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'red_shroom', inputBee: 'diamond', item: '1x minecraft:red_mushroom_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'crimson_shroom', inputBee: 'diamond', item: '1x minecraft:crimson_fungus', fluid: '250 gtceu:epoxy' },
 
         // --- Mob/Utility Bees ---
-        { outputBee: 'exp', inputBee: 'arcane', item: '1x minecraft:experience_bottle', fluid: '250 forge:experience' },
-        { outputBee: 'arcane', inputBee: 'modest', item: '1x minecraft:ender_pearl', fluid: '250 thermal:mana' }, // Hypothetical Thermal/Botania mana fluid
-        { outputBee: 'rune', inputBee: 'arcane', item: '1x minecraft:enchanted_book', fluid: '250 thermal:mana' },
-        { outputBee: 'awakened', inputBee: 'obsidian', item: '1x minecraft:crying_obsidian', fluid: '250 gtceu:liquid_ender' }, // Hypothetical
-        { outputBee: 'withered', inputBee: 'skeleton', item: '1x minecraft:wither_skeleton_skull', fluid: '250 gtceu:liquid_wither_essence' }, // Hypothetical
-        { outputBee: 'sugarbag', inputBee: 'honey', item: '1x minecraft:honey_bottle', fluid: '250 forge:honey' },
-        { outputBee: 'skeleton', inputBee: 'forest', item: '1x minecraft:bone_block' }, // No fluid
-        { outputBee: 'zombie', inputBee: 'meadow', item: '1x minecraft:rotten_flesh' }, // No fluid
-        { outputBee: 'silky', inputBee: 'leafcutter', item: '1x minecraft:string' }, // No fluid
-        { outputBee: 'rancher', inputBee: 'farmer', item: '1x minecraft:hay_block', fluid: '250 thermal:nutrient_distillation' }, // Requires Thermal Series
-        { outputBee: 'lumber', inputBee: 'forest', item: '1x minecraft:oak_log', fluid: '250 gtceu:creosote' },
-        { outputBee: 'quarry', inputBee: 'digger', item: '1x minecraft:diamond_pickaxe', fluid: '250 gtceu:diesel' }, // For machine fuel
-        { outputBee: 'ghostly', inputBee: 'zombie', item: '1x minecraft:phantom_membrane' }, // No fluid
-        { outputBee: 'lepodolite', inputBee: 'tin', item: '2x gtceu:raw_lepodolite_block', fluid: '250 gtceu:molten_lithium' }, // Hypothetical
-        { outputBee: 'magmatic', inputBee: 'blazing', item: '1x minecraft:magma_block', fluid: '250 minecraft:lava' },
-        { outputBee: 'spatial', inputBee: 'fluix', item: '1x ae2:spatial_cell_2m', fluid: '250 gtceu:spatial_fluid' }, // Hypothetical
-        { outputBee: 'arcanus', inputBee: 'arcane', item: '1x arcanus:magic_essence', fluid: '250 thermal:mana' },
+        { outputBee: 'exp', inputBee: 'diamond', item: '1x minecraft:experience_bottle', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'arcane', inputBee: 'diamond', item: '1x minecraft:ender_pearl', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'rune', inputBee: 'diamond', item: '1x minecraft:enchanted_book', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'awakened', inputBee: 'diamond', item: '1x minecraft:crying_obsidian', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'withered', inputBee: 'diamond', item: '1x minecraft:wither_skeleton_skull', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'sugarbag', inputBee: 'diamond', item: '1x minecraft:honey_bottle', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'skeleton', inputBee: 'diamond', item: '1x minecraft:bone_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'zombie', inputBee: 'diamond', item: '1x minecraft:rotten_flesh', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'silky', inputBee: 'diamond', item: '1x minecraft:string', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'rancher', inputBee: 'diamond', item: '1x minecraft:hay_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'lumber', inputBee: 'diamond', item: '1x minecraft:oak_log', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'quarry', inputBee: 'diamond', item: '1x minecraft:diamond_pickaxe', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'ghostly', inputBee: 'diamond', item: '1x minecraft:phantom_membrane', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'lepodolite', inputBee: 'diamond', item: '2x gtceu:raw_lepodolite_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'magmatic', inputBee: 'diamond', item: '1x minecraft:magma_block', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'spatial', inputBee: 'diamond', item: '1x ae2:spatial_cell_2m', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'arcanus', inputBee: 'diamond', item: '1x arcanus:magic_essence', fluid: '250 gtceu:epoxy' },
 
-
-        // --- Unique/Playful Bees (Mostly no fluids) ---
-        { outputBee: 'baz', inputBee: 'sussy', item: '1x minecraft:totem_of_undying' },
-        { outputBee: 'sussy', inputBee: 'collector', item: '1x minecraft:dark_oak_log' },
-        { outputBee: 'cheesy', inputBee: 'honey', item: '1x minecraft:yellow_dye' },
-        { outputBee: 'biz', inputBee: 'honey', item: '1x minecraft:golden_carrot' },
-        { outputBee: 'bitz', inputBee: 'honey', item: '1x minecraft:cookie' },
-        { outputBee: 'rocked', inputBee: 'stone_bee', item: '1x minecraft:cobblestone' },
-        { outputBee: 'supa', inputBee: 'honey', item: '1x minecraft:sugar' },
-        { outputBee: 'pepto_beesmol', inputBee: 'honey', item: '1x minecraft:pink_dye' },
+        // --- Unique/Playful Bees ---
+        { outputBee: 'baz', inputBee: 'diamond', item: '1x minecraft:totem_of_undying', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'sussy', inputBee: 'diamond', item: '1x minecraft:dark_oak_log', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'cheesy', inputBee: 'diamond', item: '1x minecraft:yellow_dye', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'biz', inputBee: 'diamond', item: '1x minecraft:golden_carrot', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'bitz', inputBee: 'diamond', item: '1x minecraft:cookie', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'rocked', inputBee: 'diamond', item: '1x minecraft:cobblestone', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'supa', inputBee: 'diamond', item: '1x minecraft:sugar', fluid: '250 gtceu:epoxy' },
+        { outputBee: 'pepto_beesmol', inputBee: 'diamond', item: '1x minecraft:pink_dye', fluid: '250 gtceu:epoxy' },
 
         // --- Special Material Bee (Silicon as Dust!) ---
-        { outputBee: 'silicon', inputBee: 'quartz_bee', item: '2x gtceu:silicon_dust', fluid: '250 gtceu:molten_silicon' }, // If molten_silicon exists
+        { outputBee: 'silicon', inputBee: 'diamond', item: '2x gtceu:silicon_dust', fluid: '250 gtceu:epoxy' },
 
-        // --- Applied Energistics Integration (assuming AE2 is present) ---
-        { outputBee: 'fluix', inputBee: 'quartz_bee', item: '1x ae2:fluix_crystal', fluid: '250 ae2:fluix_liquid' }, // Hypothetical AE2 fluid
+        // --- Applied Energistics Integration ---
+        { outputBee: 'fluix', inputBee: 'diamond', item: '1x ae2:fluix_crystal', fluid: '250 gtceu:epoxy' },
     ];
 
     // --- Generate Recipes from Data ---
     const BASE_DURATION = 100;
-    const BASE_EUT = GTValues.VA[GTValues.IV] / 2; // All are IV tier as specified
+    const BASE_EUT = GTValues.VA[GTValues.IV] / 2;
 
     beeRecipeData.forEach(data => {
         makeApisProgenitorTransformationRecipe({
-            id: `kubejs:gtceu/apis_progenitor/${data.outputBee}_transformation`, // Changed ID to reflect transformation
+            id: `kubejs:gtceu/apis_progenitor/${data.outputBee}_transformation`,
             outputBeeType: data.outputBee,
             inputBeeType: data.inputBee,
             itemInput: data.item,
-            fluidInput: data.fluid, // Pass the fluid input, will be undefined if not present
+            fluidInput: data.fluid,
             duration: BASE_DURATION,
             EUt: BASE_EUT
         });
