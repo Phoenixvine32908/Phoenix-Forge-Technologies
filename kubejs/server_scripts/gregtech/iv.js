@@ -382,7 +382,7 @@ greg.large_chemical_reactor('protein_solution_from_mince_meat')
             'gtceu:krypton 50',
             'gtceu:inert_gas_waste 250'
         ])
-        .duration(300)
+        .duration(150)
        .EUt(GTValues.VA[GTValues.IV]);
        
            greg.distillation_tower('inert_gas_waste_recycling')
@@ -393,7 +393,7 @@ greg.large_chemical_reactor('protein_solution_from_mince_meat')
             'gtceu:chlorine 500',    
             'gtceu:argon 50',        
         )
-        .duration(400) 
+        .duration(100) 
         .EUt(GTValues.VA[GTValues.EV]);
         greg.centrifuge('fissile_ash_processing')
         .itemInputs('gtceu:fissile_ash_dust')
@@ -418,7 +418,7 @@ greg.large_chemical_reactor('protein_solution_from_mince_meat')
         .outputFluids(
             'gtceu:radioactive_sludge 250', 
         )
-        .blastFurnaceTemp(3000)
+        .blastFurnaceTemp(1200)
         .duration(300)
        .EUt(GTValues.VA[GTValues.EV]);
 
