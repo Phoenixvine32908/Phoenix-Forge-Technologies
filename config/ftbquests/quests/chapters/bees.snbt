@@ -1,0 +1,344 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bees"
+	group: "74E84404EE17A851"
+	icon: "productivebees:spawn_egg_creeper_bee"
+	id: "1C9A7841D168C1AF"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["3C77208B91D20E31"]
+			id: "38A17D0B43926CFD"
+			tasks: [{
+				id: "250A7BF5F18D09C8"
+				item: "productivebees:spawn_egg_reed_bee"
+				type: "item"
+			}]
+			x: 1.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6B61B1831F56ABC0"]
+			id: "18F41B5C4BD2060B"
+			tasks: [{
+				id: "4BBF9AE9B36D728B"
+				item: {
+					Count: 1
+					id: "productivebees:spawn_egg_configurable_bee"
+					tag: {
+						EntityTag: {
+							type: "productivebees:amber"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: -5.5d
+		}
+		{
+			dependencies: ["11A941F4DDDF3B01"]
+			id: "77F46D844A1449B7"
+			tasks: [{
+				id: "6D9107267F7D6AB9"
+				item: "productivebees:spawn_egg_sweat_bee"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 2.5d
+		}
+		{
+			id: "4DED4CF3959A603E"
+			shape: "hexagon"
+			tasks: [{
+				id: "6A9E497CDDFB2E7F"
+				item: "productivebees:spawn_egg_yellow_black_carpenter_bee"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6861703F9E2D8CC6"]
+			id: "3CCF7DC3CCF8CD49"
+			tasks: [{
+				id: "09D129EB732451C5"
+				item: "productivebees:spawn_egg_quarry_bee"
+				type: "item"
+			}]
+			x: 1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["600D323C9A518454"]
+			id: "06DF13F808E9D5A6"
+			tasks: [{
+				id: "30D31EC8F2EDAA38"
+				item: {
+					Count: 1
+					id: "productivebees:spawn_egg_configurable_bee"
+					tag: {
+						EntityTag: {
+							type: "productivebees:crystalline"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 0.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0B48F84041109121"]
+			id: "712305EB0864AA46"
+			tasks: [{
+				id: "6CFE456C3E67185E"
+				item: "productivebees:spawn_egg_rancher_bee"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3C77208B91D20E31"]
+			id: "5F49701B58752350"
+			tasks: [{
+				id: "3B0BB6974B2BC09A"
+				item: "productivebees:spawn_egg_mason_bee"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.5d
+		}
+		{
+			id: "264519D0CB3C4462"
+			shape: "hexagon"
+			tasks: [{
+				id: "6D1C49D78E4FACB0"
+				item: "productivebees:spawn_egg_nomad_bee"
+				type: "item"
+			}]
+			x: 7.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["264519D0CB3C4462"]
+			id: "4DF619D2E4097AA2"
+			tasks: [{
+				id: "24291C3F9E2F6196"
+				item: {
+					Count: 1
+					id: "productivebees:spawn_egg_configurable_bee"
+					tag: {
+						EntityTag: {
+							type: "productivebees:blazing"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["166F5F4200F2A175"]
+			id: "6D67D38BF87C31C0"
+			tasks: [{
+				id: "140CA1682790A5FE"
+				item: "productivebees:spawn_egg_neon_cuckoo_bee"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["661A6A61C89733EE"]
+			id: "381080E73AA21EB3"
+			tasks: [{
+				id: "57860315F6AD6A0E"
+				item: "productivebees:spawn_egg_chocolate_mining_bee"
+				type: "item"
+			}]
+			x: 5.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["661A6A61C89733EE"]
+			id: "52218B702FCBFEDA"
+			tasks: [{
+				id: "2E65158F14E0ECAB"
+				item: "productivebees:spawn_egg_leafcutter_bee"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["1A093BC524902EC6"]
+			id: "6B61B1831F56ABC0"
+			tasks: [{
+				id: "6C5FBFE957FE8F46"
+				item: "productivebees:spawn_egg_resin_bee"
+				type: "item"
+			}]
+			x: 0.5d
+			y: -5.0d
+		}
+		{
+			id: "68561766B704BC91"
+			tasks: [{
+				id: "1416AE0220A67ED8"
+				item: "productivebees:spawn_egg_blue_banded_bee"
+				type: "item"
+			}]
+			x: 17.5d
+			y: 2.5d
+		}
+		{
+			dependencies: ["6B61B1831F56ABC0"]
+			id: "3F3E13DFCA39D45F"
+			tasks: [{
+				id: "235802A924778592"
+				item: {
+					Count: 1
+					id: "productivebees:spawn_egg_configurable_bee"
+					tag: {
+						EntityTag: {
+							type: "productivebees:sticky_resin"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: -4.5d
+		}
+		{
+			id: "1A093BC524902EC6"
+			shape: "hexagon"
+			tasks: [{
+				id: "37C89EC31252FEE4"
+				item: "productivebees:spruce_wood_nest"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -5.0d
+		}
+		{
+			id: "3C77208B91D20E31"
+			shape: "hexagon"
+			tasks: [{
+				id: "1B3DC5C93B92C080"
+				item: "productivebees:sugar_cane_nest"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["4DED4CF3959A603E"]
+			id: "0B48F84041109121"
+			tasks: [{
+				id: "4315D1124552E217"
+				item: "productivebees:spawn_egg_lumber_bee"
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.5d
+		}
+		{
+			dependencies: ["166F5F4200F2A175"]
+			id: "6861703F9E2D8CC6"
+			tasks: [{
+				id: "76FFDC2351F71CD7"
+				item: "productivebees:spawn_egg_digger_bee"
+				type: "item"
+			}]
+			x: 0.5d
+			y: 1.0d
+		}
+		{
+			id: "166F5F4200F2A175"
+			tasks: [{
+				id: "4EE76AF2DB26A1FF"
+				item: "productivebees:gravel_nest"
+				type: "item"
+			}]
+			x: -0.5d
+			y: 0.0d
+		}
+		{
+			id: "600D323C9A518454"
+			tasks: [{
+				id: "01A6D0ECB9499149"
+				item: "productivebees:nether_quartz_nest"
+				type: "item"
+			}]
+			x: -0.5d
+			y: -3.0d
+		}
+		{
+			id: "11A941F4DDDF3B01"
+			shape: "hexagon"
+			tasks: [{
+				id: "7DCFA470D8633AE6"
+				item: "productivebees:snow_nest"
+				type: "item"
+			}]
+			x: 3.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["6D67D38BF87C31C0"]
+			id: "500DBE1BDF82BBA7"
+			tasks: [{
+				id: "3B376D153ACED294"
+				item: {
+					Count: 1
+					id: "productivebees:spawn_egg_configurable_bee"
+					tag: {
+						EntityTag: {
+							type: "productivebees:menril"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			id: "661A6A61C89733EE"
+			shape: "hexagon"
+			tasks: [{
+				id: "117408D84E4B6371"
+				item: "productivebees:coarse_dirt_nest"
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["264519D0CB3C4462"]
+			id: "68367FA6009F12FB"
+			tasks: [{
+				id: "22B90A4C2FC3E3B4"
+				item: {
+					Count: 1
+					id: "productivebees:spawn_egg_configurable_bee"
+					tag: {
+						EntityTag: {
+							type: "productivebees:silicon"
+						}
+					}
+				}
+				type: "item"
+			}]
+			x: 7.0d
+			y: 2.5d
+		}
+	]
+	title: "Conquering Bees"
+}

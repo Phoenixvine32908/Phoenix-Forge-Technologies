@@ -1,44 +1,44 @@
 ServerEvents.recipes(event => {
  
-
+const greg = event.recipes.gtceu
   
-    event.recipes.gtceu.large_chemical_reactor('oleum')
+    greg.large_chemical_reactor('oleum')
     .inputFluids('gtceu:sulfur_trioxide 244', 'gtceu:sulfuric_acid 1000')
     .outputFluids('gtceu:oleum 1000')
     .duration(134)
     .EUt(GTValues.VA[GTValues.IV]/2)
-event.recipes.gtceu.large_chemical_reactor('concentrated_sulfuric_acid')
+greg.large_chemical_reactor('concentrated_sulfuric_acid')
     .inputFluids('gtceu:oleum 300', 'minecraft:water 700')
     .outputFluids('gtceu:concentrated_sulfuric_acid 800')
     .duration(80)
     .EUt(GTValues.VA[GTValues.EV]/2)
-event.recipes.gtceu.electrolyzer('concentrated_sulfuric_acid_to_hydrogen_peroxide')
+greg.electrolyzer('concentrated_sulfuric_acid_to_hydrogen_peroxide')
     .inputFluids('gtceu:concentrated_sulfuric_acid 1000')
     .outputFluids('gtceu:hydrogen_peroxide 100', 'minecraft:water 300', 'gtceu:sulfuric_acid 500')
     .duration(550)
     .EUt(GTValues.VA[GTValues.IV]/2)
-event.recipes.gtceu.large_chemical_reactor('acetone_cyanohydrin')
+greg.large_chemical_reactor('acetone_cyanohydrin')
     .inputFluids('gtceu:acetone 1000', 'gtceu:hydrogen_cyanide 1000')
     .outputFluids('gtceu:acetone_cyanohydrin 1000')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]/2)
-event.recipes.gtceu.large_chemical_reactor('methyl_methacrylate')
+greg.large_chemical_reactor('methyl_methacrylate')
     .inputFluids('gtceu:acetone_cyanohydrin 1000', 'gtceu:sulfuric_acid 1000', 'gtceu:methanol 750')
     .outputFluids('gtceu:methyl_methacrylate 1000', 'gtceu:ammonium_bisulfate_solution 1000')
     .duration(300)
     .EUt(GTValues.VA[GTValues.IV]/2)
-event.recipes.gtceu.distillation_tower('ammonium_bisulfate_solution_to_dust')
+greg.distillation_tower('ammonium_bisulfate_solution_to_dust')
     .inputFluids('gtceu:ammonium_bisulfate_solution 1000')
     .outputFluids('gtceu:sulfuric_acid 500', 'minecraft:water 600', 'gtceu:ammonia 120')
     .itemOutputs('12x gtceu:ammonium_bisulfate_dust')
     .duration(240)
     .EUt(GTValues.VA[GTValues.EV]/2)
-    event.recipes.gtceu.electrolyzer('ammonium_bisulfate_dust_to_ammonium_persulfate')
+    greg.electrolyzer('ammonium_bisulfate_dust_to_ammonium_persulfate')
     .itemInputs('7x gtceu:ammonium_bisulfate_dust')
     .outputFluids('gtceu:hydrogen 1000', 'gtceu:ammonium_persulfate 250')
     .duration(130)
     .EUt(GTValues.VA[GTValues.IV]/2)
-    event.recipes.gtceu.large_chemical_reactor('advanced_pmma_polymerization') 
+    greg.large_chemical_reactor('advanced_pmma_polymerization') 
     .inputFluids([
         'gtceu:methyl_methacrylate 144',    
         'gtceu:ammonium_persulfate 750',     
@@ -47,7 +47,7 @@ event.recipes.gtceu.distillation_tower('ammonium_bisulfate_solution_to_dust')
     .outputFluids('gtceu:polymethyl_methacrylate 216')
     .duration(800) 
      .EUt(GTValues.VA[GTValues.IV]/2)
-     event.recipes.gtceu.large_chemical_reactor('ammonium_bisulfate_solution') 
+     greg.large_chemical_reactor('ammonium_bisulfate_solution') 
     .inputFluids([
         'gtceu:sulfuric_acid 200',    
         'gtceu:ammonia 750',              
@@ -55,7 +55,7 @@ event.recipes.gtceu.distillation_tower('ammonium_bisulfate_solution_to_dust')
     .outputFluids("gtceu:ammonium_bisulfate_solution 250")
     .duration(60) 
      .EUt(GTValues.VA[GTValues.IV]/2)
-       event.recipes.gtceu.mixer('honey_comb_base_mixture') 
+       greg.mixer('honey_comb_base_mixture') 
     .inputFluids([
         'productivebees:honey 500',    
         'gtceu:polymethyl_methacrylate 244',              
@@ -64,7 +64,7 @@ event.recipes.gtceu.distillation_tower('ammonium_bisulfate_solution_to_dust')
     .outputFluids("gtceu:honey_comb_base_mixture 250")
     .duration(60) 
      .EUt(GTValues.VA[GTValues.IV]/2)
-      event.recipes.gtceu.fluid_solidifier('honey_comb_base') 
+      greg.fluid_solidifier('honey_comb_base') 
     .inputFluids([
         'gtceu:honey_comb_base_mixture 1008',                  
     ])
@@ -72,32 +72,32 @@ event.recipes.gtceu.distillation_tower('ammonium_bisulfate_solution_to_dust')
     .itemOutputs("kubejs:honey_comb_base")
     .duration(2000) 
      .EUt(GTValues.VA[GTValues.HV]/2)
- event.recipes.gtceu.compressor('honey_comb_bases_solid') 
+ greg.compressor('honey_comb_bases_solid') 
     .itemInputs("12x gtceu:dense_void_touched_tungsten_steel_plate")
     .itemOutputs("kubejs:honey_comb_base_mold")
     .duration(2000) 
      .EUt(GTValues.VA[GTValues.IV]/2)
-    event.recipes.gtceu.large_chemical_reactor('sugar_to_sucrose_enhanced')
-        .itemInputs("12x minecraft:sugar", "1x minecraft:glowstone_dust") 
+    greg.large_chemical_reactor('sugar_to_sucrose_enhanced')
+        .itemInputs("8x minecraft:sugar", "1x minecraft:glowstone_dust") 
         .circuit(1)
         .inputFluids("minecraft:water 500") 
         .outputFluids("gtceu:sucrose 1200")
         .chancedOutput("1x minecraft:glowstone_dust", 8500, 1) 
         .duration(300) 
         .EUt(GTValues.VA[GTValues.EV]/2)
-           event.recipes.gtceu.compressor('dense_steel_plate')
+           greg.compressor('dense_steel_plate')
         .itemInputs("9x gtceu:steel_plate") 
         .itemOutputs("gtceu:dense_steel_plate")
         .duration(120) 
         .EUt(GTValues.VA[GTValues.LV]/2)
-    event.recipes.gtceu.large_chemical_reactor('sucrose_inversion')
+    greg.large_chemical_reactor('sucrose_inversion')
         .inputFluids("gtceu:sucrose")
         .circuit(4)
         .inputFluids('gtceu:distilled_water 500', 'gtceu:sulfuric_acid 10') 
         .outputFluids('gtceu:invert_sugar_solution 1000')
         .duration(600)
         .EUt(GTValues.VA[GTValues.EV]/2)
-event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
+greg.large_chemical_reactor('protein_solution_from_mince_meat')
     .itemInputs('10x gtceu:meat_dust') 
     .circuit(12)
     .inputFluids('gtceu:acetic_acid 100')
@@ -105,14 +105,14 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
     .duration(250)
     .EUt(GTValues.VA[GTValues.IV]/2)
     
-    event.recipes.gtceu.large_chemical_reactor('amino_acids_from_protein_solution')
+    greg.large_chemical_reactor('amino_acids_from_protein_solution')
     .inputFluids('gtceu:protein_solution 1000', 'gtceu:hydrofluoric_acid 250')
     .circuit(2)
     .itemInputs('gtceu:activated_carbon_dust') 
     .outputFluids('gtceu:amino_acids 900') 
     .duration(350) 
     .EUt(GTValues.VA[GTValues.IV]/2) 
-    event.recipes.gtceu.alloy_blast_smelter('loquid_void_touched_tungsten_steel')
+    greg.alloy_blast_smelter('loquid_void_touched_tungsten_steel')
         .itemInputs('4x gtceu:tungsten_dust', '4x gtceu:voidglass_shard_dust', '2x gtceu:molybdenum_dust')
         .circuit(5)
         .inputFluids('gtceu:liquid_ender_air 100')
@@ -121,7 +121,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .blastFurnaceTemp(3600)
         .EUt(GTValues.VA[GTValues.EV]);
 
-    event.recipes.gtceu.alloy_blast_smelter('loquid_void_touched_tungsten_steel_boosted')
+    greg.alloy_blast_smelter('loquid_void_touched_tungsten_steel_boosted')
         .itemInputs('4x gtceu:tungsten_dust', '4x gtceu:voidglass_shard_dust', '2x gtceu:molybdenum_dust')
         .circuit(15)
         .inputFluids('gtceu:liquid_ender_air 100', 'gtceu:helium 50')
@@ -130,146 +130,146 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .duration(4200)
         .EUt(GTValues.VA[GTValues.EV]);
 
-    event.recipes.gtceu.large_chemical_reactor('pollen_concentrate_fluid_from_flowers')
+    greg.large_chemical_reactor('pollen_concentrate_fluid_from_flowers')
     .inputFluids('gtceu:ethanol 1000')
     .circuit(4)
     .itemInputs('4x #minecraft:flowers') 
     .outputFluids('gtceu:pollen_concentrate_fluid 500') 
     .duration(250) 
     .EUt(GTValues.VA[GTValues.IV])
-    event.recipes.gtceu.large_chemical_reactor('pollen_concentrate_fluid_from_plant_balls')
+    greg.large_chemical_reactor('pollen_concentrate_fluid_from_plant_balls')
     .inputFluids('gtceu:ethanol 1000')
     .circuit(4)
     .itemInputs('1x gtceu:plant_ball') 
     .outputFluids('gtceu:pollen_concentrate_fluid 500') 
     .duration(225) 
     .EUt(GTValues.VA[GTValues.IV]/2)
-     event.recipes.gtceu.large_chemical_reactor('honey_catalyst')
+     greg.large_chemical_reactor('honey_catalyst')
     .inputFluids('gtceu:amino_acids 1500', 'minecraft:water 32000', "gtceu:sodium_potassium 1200")
     .circuit(24)
     .itemInputs('6x gtceu:magnesium_dust', '12x gtceu:calcium_dust') 
     .outputFluids('gtceu:honey_catalyst 500') 
     .duration(150) 
     .EUt(GTValues.VA[GTValues.IV])
-    event.recipes.gtceu.large_chemical_reactor('honey')
+    greg.large_chemical_reactor('honey')
     .inputFluids('gtceu:honey_catalyst 1500', 'gtceu:invert_sugar_solution 3000', "gtceu:pollen_concentrate_fluid 2500")
     .circuit(24)
     .outputFluids('productivebees:honey 500') 
     .duration(1000) 
     .EUt(GTValues.VA[GTValues.IV])
-    event.recipes.gtceu.assembler('honeycomb_assembly')
+    greg.assembler('honeycomb_assembly')
         .inputFluids('productivebees:honey 144', 'gtceu:invert_sugar_solution 144')
         .notConsumable('kubejs:honey_comb_base')
         .itemOutputs('minecraft:honeycomb')
         .duration(400)
         .EUt(GTValues.VA[GTValues.IV]/2)
 
-           event.recipes.gtceu.distillation_tower('invert_sugar_solution_separation')
+           greg.distillation_tower('invert_sugar_solution_separation')
         .inputFluids('gtceu:invert_sugar_solution 1000')
         .outputFluids('gtceu:glucose 500', 'gtceu:fructose 500')
         .duration(120)
         .EUt(GTValues.VA[GTValues.IV]/2)
 
-        event.recipes.gtceu.chemical_reactor('sugar_water')
+        greg.chemical_reactor('sugar_water')
         .inputFluids('gtceu:glucose 250', 'gtceu:fructose 250', 'gtceu:distilled_water 1000')
-        .outputFluids('gtceu:sugar_water 1500')
+        .outputFluids('gtceu:sugar_water 2000')
         .duration(200)
         .EUt(GTValues.VA[GTValues.HV]/2)
-        event.recipes.gtceu.chemical_reactor('sugar_and_molasses_production')
+        greg.chemical_reactor('sugar_and_molasses_production')
     .inputFluids('gtceu:sugar_water 1000') 
     .itemOutputs('4x minecraft:sugar')    
     .outputFluids('gtceu:molasses 200')  
     .duration(180) 
     .EUt(GTValues.VA[GTValues.HV]); 
 
-    event.recipes.gtceu.centrifuge('cream_from_milk')
+    greg.centrifuge('cream_from_milk')
     .inputFluids('minecraft:milk 1000') 
     .outputFluids('gtceu:cream 250', 'gtceu:skim_milk 750')
     .duration(600) 
     .EUt(GTValues.VA[GTValues.LV]); 
 
-    event.recipes.gtceu.mixer('dough')
+    greg.mixer('dough')
     .inputFluids('gtceu:skim_milk 250', 'minecraft:water 500') 
     .itemInputs('12x gtceu:wheat_dust', 'gtceu:salt_dust')
     .itemOutputs("10x gtceu:dough")
     .duration(300) 
     .EUt(GTValues.VA[GTValues.LV]); 
 
-    event.recipes.gtceu.confectionery_fabricator('honeytreat')
+    greg.confectionery_fabricator('honeytreat')
    .itemInputs('5x gtceu:dough', '2x minecraft:honeycomb')
    .inputFluids('productivebees:honey 5000', 'gtceu:molasses 1000', 'gtceu:cream 500', "gtceu:pollen_concentrate_fluid 2500", "gtceu:peanut_butter 2250")
     .itemOutputs('32x productivebees:honey_treat')
     .duration(150)
     .EUt(GTValues.VA[GTValues.IV]);
 
-    event.recipes.gtceu.macerator('peanut_dust')
+    greg.macerator('peanut_dust')
     .itemInputs('pamhc2crops:roastedpeanutitem') 
     .itemOutputs('gtceu:peanut_dust')
     .duration(40)
     .EUt(GTValues.VA[GTValues.LV]); 
 
-    event.recipes.gtceu.mixer('nut_butter_from_dust')
+    greg.mixer('nut_butter_from_dust')
     .itemInputs('8x gtceu:peanut_dust', '2x minecraft:sugar')  
     .inputFluids('minecraft:water 500', 'gtceu:seed_oil 250')     
     .outputFluids('gtceu:peanut_butter 500')
     .duration(200) 
     .EUt(GTValues.VA[GTValues.EV]); 
-   event.recipes.gtceu.large_chemical_reactor('superconductive_honey_creation')
+   greg.large_chemical_reactor('superconductive_honey_creation')
         .itemInputs('8x gtceu:honey_dust', '4x gtceu:niobium_titanium_dust', '2x gtceu:iridium_dust')
         .inputFluids('gtceu:helium 500', 'kubejs:cryo_ember_fluid 100') 
         .itemOutputs('12x gtceu:superconductive_honey_dust')  
         .duration(300) 
         .EUt(GTValues.VA[GTValues.EV]); 
-  event.recipes.gtceu.implosion_compressor('superconductive_honey_ingot_normal')
+  greg.implosion_compressor('superconductive_honey_ingot_normal')
         .itemInputs('1x gtceu:superconductive_honey_dust', '16x minecraft:tnt')
         .itemOutputs('1x gtceu:superconductive_honey_ingot')  
         .duration(450) 
         .EUt(GTValues.VA[GTValues.EV]); 
-          event.recipes.gtceu.implosion_compressor('superconductive_honey_ingot_itnt')
+          greg.implosion_compressor('superconductive_honey_ingot_itnt')
         .itemInputs('1x gtceu:superconductive_honey_dust', '4x gtceu:industrial_tnt')
         .itemOutputs('1x gtceu:superconductive_honey_ingot')  
         .duration(350) 
         .EUt(GTValues.VA[GTValues.EV]); 
 
-    event.recipes.gtceu.assembler('superconductive_honey_coil_block')
+    greg.assembler('superconductive_honey_coil_block')
         .itemInputs('8x gtceu:superconductive_honey_double_wire', '8x gtceu:hsss_foil') 
         .inputFluids('gtceu:void_touched_tungsten_steel 144') 
         .itemOutputs('kubejs:conductive_honey_coil')
         .duration(750) 
         .EUt(GTValues.VA[GTValues.IV]);
-    event.recipes.gtceu.fluid_solidifier('soldified_honey')
+    greg.fluid_solidifier('soldified_honey')
         .inputFluids('productivebees:honey 144')
         .notConsumable('gtceu:ingot_casting_mold')
         .itemOutputs('gtceu:honey_ingot')
         .duration(200)
         .EUt(GTValues.VA[GTValues.HV]);
 
-        event.recipes.gtceu.mixer('cryo_zirconium_binding_solution') 
+        greg.mixer('cryo_zirconium_binding_solution') 
         .inputFluids('kubejs:frost 288', 'minecraft:water 2000')
         .itemInputs('2x gtceu:small_crystallized_fluxstone_dust', '1x gtceu:zirconium_dust')
         .outputFluids('gtceu:cryo_zirconium_binding_solution 2000')
         .duration(150)
         .EUt(GTValues.VA[GTValues.EV]);
-        event.recipes.gtceu.mixer('cryo_graphite_binding_solution') 
+        greg.mixer('cryo_graphite_binding_solution') 
         .inputFluids('kubejs:frost 288', 'minecraft:water 2000')
         .itemInputs('2x gtceu:small_crystallized_fluxstone_dust', '1x gtceu:graphite_dust')
         .outputFluids('gtceu:cryo_graphite_binding_solution 3000')
         .duration(175)
         .EUt(GTValues.VA[GTValues.EV]);
-   event.recipes.gtceu.large_chemical_reactor('thorium_fuel_pellet_crafting')
+   greg.large_chemical_reactor('thorium_fuel_pellet_crafting')
         .itemInputs('9x gtceu:thorium_nugget') 
         .inputFluids('gtceu:cryo_graphite_binding_solution 1000') 
         .itemOutputs('9x kubejs:thorium_fuel_pellet ')
         .duration(100) 
         .EUt(GTValues.VA[GTValues.MV]); 
 
-    event.recipes.gtceu.large_chemical_reactor('uranium_235_fuel_pellet_crafting')
+    greg.large_chemical_reactor('uranium_235_fuel_pellet_crafting')
         .itemInputs('9x gtceu:uranium_235_nugget') 
         .inputFluids('gtceu:cryo_zirconium_binding_solution 1000') 
         .itemOutputs('9x kubejs:uranium_235_fuel_pellet')
         .duration(100)
         .EUt(GTValues.VA[GTValues.MV])
-            event.recipes.gtceu.large_chemical_reactor('uranium_233_fuel_pellet_crafting')
+            greg.large_chemical_reactor('uranium_233_fuel_pellet_crafting')
         .itemInputs('9x gtceu:uranium_233_nugget') 
         .inputFluids('gtceu:cryo_zirconium_binding_solution 1000') 
         .itemOutputs('9x kubejs:u233_fuel_pellet')
@@ -278,7 +278,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         
 
 
-     event.recipes.gtceu.large_chemical_reactor('spent_uranium_reprocessing')
+     greg.large_chemical_reactor('spent_uranium_reprocessing')
         .itemInputs(['1x gtceu:depleted_uranium_dust'])
         .inputFluids([
             'gtceu:nitric_acid 1500', 
@@ -294,7 +294,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .duration(120) 
         .EUt(GTValues.VA[GTValues.IV]); 
 
-        event.recipes.gtceu.high_performace_breeder_reactor('breeder_reactor/thorium_uranium_233_cycle_u235_driver')
+        greg.high_performace_breeder_reactor('breeder_reactor/thorium_uranium_233_cycle_u235_driver')
         .itemInputs(['4x kubejs:thorium_fuel_pellet', '1x kubejs:u235_fuel_pellet']) 
         .inputFluids(['gtceu:sodium_potassium 500', 'minecraft:water 250',])
         .itemOutputs([
@@ -306,7 +306,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .EUt(-GTValues.VA[GTValues.IV]);
 
  
-    event.recipes.gtceu.high_performace_breeder_reactor('breeder_reactor/thorium_uranium_233_cycle_u233_driver')
+    greg.high_performace_breeder_reactor('breeder_reactor/thorium_uranium_233_cycle_u233_driver')
         .itemInputs(['4x kubejs:thorium_fuel_pellet', '1x kubejs:u233_fuel_pellet']) 
         .inputFluids(['gtceu:sodium_potassium 500', 'minecraft:water 250',])
         .itemOutputs([
@@ -319,7 +319,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
 
 
           
-    event.recipes.gtceu.large_chemical_reactor('reprocessing/thorium_rods_to_uranium_233')
+    greg.large_chemical_reactor('reprocessing/thorium_rods_to_uranium_233')
         .itemInputs(['16x gtceu:irradiated_thorium_nugget'])
         .inputFluids(['gtceu:nitric_acid 500'])
         .itemOutputs([
@@ -331,7 +331,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .EUt(GTValues.VA[GTValues.EV]);
 
     // Reprocessing Spent Uranium-235 Rods (Yields Reactor Depleted Uranium for U-242 line)
-    event.recipes.gtceu.large_chemical_reactor('reprocessing/spent_uranium_235_rods')
+    greg.large_chemical_reactor('reprocessing/spent_uranium_235_rods')
         .itemInputs(['16x gtceu:spent_uranium_235_nugget'])
         .inputFluids(['gtceu:nitric_acid 200'])
         .itemOutputs([
@@ -343,7 +343,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .EUt(GTValues.VA[GTValues.HV]);
 
     // Reprocessing Spent Uranium-233 Rods (Yields recycled U-233 from the driver)
-    event.recipes.gtceu.large_chemical_reactor('reprocessing/spent_uranium_233_rods')
+    greg.large_chemical_reactor('reprocessing/spent_uranium_233_rods')
         .itemInputs(['16x gtceu:spent_uranium_233_nugget'])
         .inputFluids(['gtceu:nitric_acid 200'])
         .itemOutputs([
@@ -354,14 +354,14 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .duration(400)
         .EUt(GTValues.VA[GTValues.EV]);
 
-    event.recipes.gtceu.distillation_tower('fission_products_fluid_processing')
+    greg.distillation_tower('fission_products_fluid_processing')
         .inputFluids(['gtceu:fission_products_fluid 1000'])
         .itemOutputs(['1x gtceu:fissile_ash_dust'])
         .outputFluids(['gtceu:radioactive_gas_mixture 500'])
         .duration(400)
         .EUt(GTValues.VA[GTValues.EV]);
 
-    event.recipes.gtceu.chemical_reactor('reprocessing/thorium_rods_to_uranium_233')
+    greg.chemical_reactor('reprocessing/thorium_rods_to_uranium_233')
         .itemInputs(['16x gtceu:irradiated_thorium_nugget'])
         .inputFluids(['gtceu:nitric_acid 500'])
         .itemOutputs([
@@ -374,7 +374,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
 
     
 
-    event.recipes.gtceu.centrifuge('radioactive_gas_mixture_separatio')
+    greg.centrifuge('radioactive_gas_mixture_separatio')
         .inputFluids(['gtceu:radioactive_gas_mixture 500','gtceu:nitrogen 100'])
         .outputFluids([
             'gtceu:xenon 100',
@@ -385,7 +385,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .duration(300)
        .EUt(GTValues.VA[GTValues.IV]);
        
-           event.recipes.gtceu.distillation_tower('inert_gas_waste_recycling')
+           greg.distillation_tower('inert_gas_waste_recycling')
         .inputFluids(['gtceu:inert_gas_waste 1000'])
         .outputFluids(
             'gtceu:nitrogen 300',   
@@ -395,7 +395,7 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         )
         .duration(400) 
         .EUt(GTValues.VA[GTValues.EV]);
-        event.recipes.gtceu.centrifuge('fissile_ash_processing')
+        greg.centrifuge('fissile_ash_processing')
         .itemInputs('gtceu:fissile_ash_dust')
         .inputFluids('gtceu:aqua_regia 100')
         .itemOutputs('1x gtceu:technetium_dust', '4x gtceu:rare_earth')
@@ -403,14 +403,14 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .duration(300)
        .EUt(GTValues.VA[GTValues.IV]);
 
-        event.recipes.gtceu.assembler('active_transformer')
+        greg.assembler('active_transformer')
         .itemInputs('gtceu:iv_transformer_16a', '8x #gtceu:circuits/iv', '8x gtceu:superconductive_honey_double_wire', '10x gtceu:hpic_chip')
         .inputFluids('gtceu:pcb_coolant 1000')
         .itemOutputs('gtceu:active_transformer')
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
 
-         event.recipes.gtceu.electric_blast_furnace('depleted_thorium_recycling')
+         greg.electric_blast_furnace('depleted_thorium_recycling')
         .itemInputs('4x gtceu:depleted_thorium_nugget') 
         .circuit(2)
         .inputFluids('gtceu:fluorine 250') 
@@ -421,4 +421,87 @@ event.recipes.gtceu.large_chemical_reactor('protein_solution_from_mince_meat')
         .blastFurnaceTemp(3000)
         .duration(300)
        .EUt(GTValues.VA[GTValues.EV]);
+
+        
+    greg.assembler('comb_decanter_recipe_assembler')
+    .itemInputs(
+        '4x minecraft:honey_block',
+        'kubejs:conductive_honey_coil',
+        '2x gtceu:samarium_iron_arsenic_oxide_double_wire',
+        '2x gtceu:iv_field_generator', 
+        '2x #gtceu:circuits/iv', 
+    )
+ 
+    .inputFluids('gtceu:soldering_alloy 5044')
+    .itemOutputs('gtceu:comb_decanter') 
+    .EUt(GTValues.VA[GTValues.IV])
+    .duration(400)
+
+greg.assembler('apis_progenitor_recipe_assembler')
+    .itemInputs(
+        '4x productivebees:honey_treat',
+        '4x #minecraft:flowers',
+        '#gtceu:circuits/iv',
+        'gtceu:iv_machine_hull', 
+        '32x gtceu:fine_platinum_wire', 
+    )
+    .itemOutputs('gtceu:apis_progenitor') 
+    .inputFluids("productivebees:honey 1000")
+    .EUt(GTValues.VA[GTValues.IV])
+    .duration(600)
+
+
+greg.assembler('swarm_nurturer_recipe_assembler')
+    .itemInputs(
+        'gtceu:iv_machine_hull',
+        '#gtceu:circuits/iv',
+        '2x gtceu:stainless_steel_frame',
+        '12x gtceu:source_imbued_titanium_screw',
+        'gtceu:rtm_alloy_coil_block'
+    )
+    .inputFluids('gtceu:vanadium_gallium 500') 
+    .itemOutputs('gtceu:swarm_nuturer') 
+    .EUt(GTValues.VA[GTValues.IV])
+    .duration(800)
+
+
+greg.assembler('simulated_colony_recipe_assembler')
+    .itemInputs(
+        '2x gtceu:source_imbued_titanium_gear',
+        '32x #minecraft:flowers',
+         '12x #forge:dyes',
+        '3x #gtceu:circuits/iv',
+        'gtceu:iv_machine_hull',
+        '16x productivebees:honey_treat', 
+    )
+    .inputFluids('gtceu:sugar_water 1000')
+    .itemOutputs('gtceu:simulated_colony') 
+    .EUt(GTValues.VA[GTValues.IV])
+    .duration(900)
+
+
+greg.mixer("resonant_rhodium_alloy")
+ .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x gtceu:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
+ .inputFluids("thermal:ender 144")
+ .itemOutputs("13x gtceu:resonant_rhodium_alloy_dust")
+ .EUt(GTValues.VA[GTValues.IV])
+ .duration(360)
+ .circuit(4)
+  greg.alloy_blast_smelter('molten_resonant_rhodium_alloy_gas')
+        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x gtceu:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
+        .circuit(15)
+         .inputFluids("thermal:ender 1144", "gtceu:argon 100")
+        .outputFluids('gtceu:molten_resonant_rhodium_alloy 2016')
+        .duration(5400)
+        .blastFurnaceTemp(3600)
+        .EUt(GTValues.VA[GTValues.EV]);
+  greg.alloy_blast_smelter('molten_resonant_rhodium_alloy')
+        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x gtceu:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
+        .circuit(5)
+         .inputFluids("thermal:ender 1144")
+        .outputFluids('gtceu:molten_resonant_rhodium_alloy 2016')
+        .duration(3800)
+        .blastFurnaceTemp(3600)
+        .EUt(GTValues.VA[GTValues.EV]);
+        
 })

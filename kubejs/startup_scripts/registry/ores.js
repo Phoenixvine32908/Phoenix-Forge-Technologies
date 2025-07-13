@@ -57,10 +57,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .color(0xc710ff).iconSet('diamond')
         .components('1x calcium'); // Changed
 
-    event.create('polarity_flipped_bismuthite')
-        .ore().dust()
-        .color(0xe4d6ff).iconSet('diamond')
-        .components('1x calcium'); // Changed
+    
        
 
     // 🍄 Overworld Addition

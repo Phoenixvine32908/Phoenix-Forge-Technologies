@@ -602,6 +602,8 @@
 			description: [
 				"The &6Large Steam Compressor&r uses steam pressure to quickly compress weaker materials, especially &aRubber&r. It's a bit pricey on fiery bronze, but I &a&lHIGHLY&r recommend it&r. Maybe you'll find other uses!"
 				""
+				"(A word to the wise, you can make dense steel plates in a singleblock compressor)"
+				""
 				"{@pagebreak}"
 				""
 				"\"While pondering primitive compression on a found notepad, an epiphany strikes! You could use steam from your boilers to compress items, similar to &1&lHydraulics&r!\""

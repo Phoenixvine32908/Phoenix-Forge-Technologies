@@ -5,6 +5,7 @@ const tiers = [
   "stainless_steel",
   "titanium",
   "tungsten_steel",
+  "rhodium_plated_palladium"
 ];
 const parts = [
   "gear",
@@ -32,6 +33,7 @@ const tierReplacements = {
   titanium: "source_imbued_titanium",
   steel: "aurum_steel",
   tungsten_steel: "void_touched_tungsten_steel",
+  rhodium_plated_palladium: "resonant_rhodium_alloy",
   stainless_steel: "frost_reinforced_stained_steel",
   // Add more replacements as needed
 };

@@ -399,6 +399,9 @@ event.create('85_percent_pure_nevonian_steel')
          event.create('permafrost')
         .ore().ingot()
         .color(0xA7D1EB).iconSet('diamond')
+        event.create('polarity_flipped_bismuthite')
+        .ore().dust()
+        .color(0xe4d6ff).iconSet('diamond')
         event.create('void_touched_tungsten_steel')
         .ingot()
         .liquid(3100)
@@ -407,6 +410,22 @@ event.create('85_percent_pure_nevonian_steel')
         .iconSet('metallic')
         .components("4x tungsten", "4x voidglass_shard", "2x molybdenum")
         .blastTemp(4200, 'mid', GTValues.VA[GTValues.EV], 1000)
+       .flags(GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_RING,
+            GTMaterialFlags.PHOSPHORESCENT,
+            GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_BOLT_SCREW,
+            GTMaterialFlags.GENERATE_FRAME,
+            GTMaterialFlags.GENERATE_DENSE,
+            GTMaterialFlags.GENERATE_ROTOR);
+             event.create('resonant_rhodium_alloy')
+        .ingot()
+        .liquid(4100)
+        .color(0xe245f8)
+        .secondaryColor(0xA345B0)
+        .iconSet('metallic')
+        .components("3x rhodium", "4x palladium", "polarity_flipped_bismuthite", "4x cerium")
+        .blastTemp(4200, 'high', GTValues.VA[GTValues.IV], 3400)
        .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
             GTMaterialFlags.PHOSPHORESCENT,
@@ -436,6 +455,7 @@ event.create('85_percent_pure_nevonian_steel')
         .secondaryColor(0xD0D0D0)
         .iconSet('dull') 
 
+        .components('1x calcium'); // Changed
             event.create('irradiated_thorium')
         .ingot().fluid().dust().color(0x90A090).secondaryColor(0x708070) 
         .element(GTElements.get("thorium")) 

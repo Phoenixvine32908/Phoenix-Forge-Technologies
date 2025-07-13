@@ -119,6 +119,8 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
         Text.of("§8Requires Construction Foam to operate.")
     ]);
     event.add("ae2:controller", Text.of("§7Channels are §cdisabled§7."));
+  
+    
     event.add("expatternprovider:fishbig", Text.of("§7Congratulations! You won Minecraft."));
     event.add("kubejs:honey_comb_base_mold", Text.of("§6Finally, your first honeycomb is in your grasp."));
         event.add("kubejs:honey_comb_base", Text.of("§6Your foray into the world of bees starts now!"));
@@ -427,4 +429,5 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
         Text.of("§7Creates Excessive Amounts Of Power Through Draconic Fusion."),
         Text.of("§bAdd large Chaos Shards For 3x The EU Output For Half The Duration.")
     ]);
+
 });
