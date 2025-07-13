@@ -425,7 +425,7 @@ event.create('85_percent_pure_nevonian_steel')
         .secondaryColor(0xA345B0)
         .iconSet('metallic')
         .components("3x rhodium", "4x palladium", "polarity_flipped_bismuthite", "4x cerium")
-        .blastTemp(4200, 'high', GTValues.VA[GTValues.IV], 3400)
+        .blastTemp(4200, 'high', GTValues.VA[GTValues.IV], 2400)
        .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
             GTMaterialFlags.PHOSPHORESCENT,

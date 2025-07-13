@@ -196,7 +196,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('depleted_thorium', Text.of("§8Thorium exhausted of its breeding potential, primarily used for radiation shielding or disposal."));
 
     // Resonant Rhodium Alloy
-    addGTCEuMaterialTooltips('resonant_rhodium_alloy', Text.of("§bAn advanced rhodium-based alloy, infused with radioactive by-products for enhanced conductivity and stability in LuV applications."));
+    addGTCEuMaterialTooltips('resonant_rhodium_alloy', Text.of("§bAn advanced rhodium-based alloy, infused with the power of polarity flipped for enhanced conductivity and stability in LuV applications."));
 
     // --- Complex / Endgame GTCEu Materials with descriptions ---
     addGTCEuMaterialTooltips('akashic_zeronium', Text.of("§6A transcendental material, bridging the gap between reality and the Akasha."));
