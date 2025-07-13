@@ -407,7 +407,9 @@ const recipesToRemove = [
 "gtceu:assembler/active_transformer",
 "minecraft:kjs/sophisticatedbackpacks_stack_upgrade_tier_1",
 "gtceu:alloy_blast_smelter/void_touched_tungsten_steel",
-"gtceu:alloy_blast_smelter/void_touched_tungsten_steel_gas"
+"gtceu:alloy_blast_smelter/void_touched_tungsten_steel_gas",
+"gtceu:alloy_blast_smelter/resonant_rhodium_alloy",
+"gtceu:alloy_blast_smelter/resonant_rhodium_alloy_gas"
 ];
   
     

@@ -1601,7 +1601,7 @@
 		{
 			dependencies: ["30A6EDDF25A5E5F8"]
 			description: [
-				"This is the &3main food for bees&r, used to breed, collect, and incubate them. The processing line to obtain them is pretty complicated as it requires you to make &6honey&r, &6honeycombs&r, and some other desert-based materials."
+				"This is the &3main food for bees&r, used to breed, collect, and incubate them. The processing line to obtain them is pretty complicated as it requires you to make &6honey&r, &6honeycombs&r, and some other dessert-based materials."
 				""
 				"To get &6honeycombs&r you need to solidify honey with a honeycomb base. This base requires &l&9Polymethyl Methacrylate (PMMA)&r, an advanced acrylic used in place of glass in some real-world applications."
 				""
@@ -1631,6 +1631,270 @@
 			]
 			x: 6.8d
 			y: 0.8d
+		}
+		{
+			dependencies: ["2C371143199CC5F3"]
+			description: [
+				"With your first combs produced from the Simulated Colony, it is time to delve into &6advanced processing&r."
+				""
+				"First, process the combs into &2Raw Wax Chunks&r."
+				""
+				"Next, take the wax chunks to a Brewery (a &9Large Brewing Vat&r is highly recommended!) to transform them into &bHoneyed Wax&r."
+				""
+				"Finally, centrifuge the Honeyed Wax to extract valuable &aOres&r and &dImpure Honey&r. Do not forget to put that Impure Honey back into a centrifuge for purification!"
+			]
+			id: "0835E56F6272785F"
+			rewards: [{
+				count: 6
+				id: "1D58A9DBEB7CB754"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.77d
+			subtitle: "Materiel from combs?"
+			tasks: [
+				{
+					id: "287E6E7AD252E31D"
+					item: "gtceu:comb_decanter"
+					type: "item"
+				}
+				{
+					count: 48L
+					id: "36EEC7B99C2CDD74"
+					item: "gtceu:tungsten_steel_frame"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "315C5CAC1AE3988F"
+					item: "gtceu:rtm_alloy_coil_block"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "6069BD9A66C09A97"
+					item: "gtceu:heat_vent"
+					type: "item"
+				}
+				{
+					count: 98L
+					id: "3C164FDC9E4569FC"
+					item: "gtceu:high_temperature_smelting_casing"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "02B429A773309C3D"
+					item: { Count: 8, id: "minecraft:honey_block" }
+					type: "item"
+				}
+			]
+			x: 8.47d
+			y: 0.77d
+		}
+		{
+			dependencies: [
+				"5B0AC445672E14B6"
+				"3EA4C57A5FA7C276"
+			]
+			dependency_requirement: "all_started"
+			description: [
+				"Time to start producing some special honeycombs!"
+				""
+				"This is the first step in &6advanced comb processing&r, using the Simulated Colony multi-block."
+				""
+				"The machine requires three key inputs: a &bBee&r (created in the Apis Progenitor), a &aPollination Block&r, and a steady supply of &dSugar Water&r (to feed the bees)."
+				""
+				"The comb production stage is a significant bottleneck for your processing line, so you will want to deploy numerous bees and &6Simulated Colonies&r to scale up your operation!"
+			]
+			id: "2C371143199CC5F3"
+			rewards: [{
+				count: 4
+				id: "15AF58DF85DBED24"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			shape: "gear"
+			size: 0.77d
+			subtitle: "Producing Combs"
+			tasks: [
+				{
+					id: "25BF7D0D64F19D28"
+					item: "gtceu:simulated_colony"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "6E9BDDEF1E3760E8"
+					item: "gtceu:treated_wood_frame"
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "5A86D84DEBCC3B19"
+					item: "gtceu:steel_frame"
+					type: "item"
+				}
+				{
+					count: 42L
+					id: "104BFAFD3314BC16"
+					item: "gtceu:treated_wood_planks"
+					type: "item"
+				}
+				{
+					count: 36L
+					id: "73593E29D18DC160"
+					item: "gtceu:tempered_glass"
+					type: "item"
+				}
+				{
+					count: 10L
+					id: "647D6456A3492DB8"
+					item: "gtceu:solid_machine_casing"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "31796AE16F7F14F1"
+					item: "minecraft:dirt"
+					type: "item"
+				}
+				{
+					count: 5L
+					id: "61382F549B0F5A48"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+			]
+			x: 7.7d
+			y: 0.77d
+		}
+		{
+			dependencies: ["3EA4C57A5FA7C276"]
+			description: [
+				"Forget traditional breeding; you &6transform&r bees using matching materials and ores!"
+				""
+				"This is the most complex phase of the Bee Line, requiring you to find &aSpecial Nests&r in specific biomes. Lure the bees with &bHoney Treats&r (or specialized catalysts for rare nests) to initiate the moving-in process."
+				""
+				"Once caged, transform them to begin the &dBee Line&r proper! Remember to check &6EMI&r for catalyst items and required biomes."
+			]
+			hide_dependency_lines: false
+			id: "12226C8C236371CE"
+			rewards: [{
+				count: 6
+				id: "1CA39756909E2630"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			shape: "pentagon"
+			size: 0.77d
+			subtitle: "Time to breed."
+			tasks: [
+				{
+					id: "32BAD0FE02B842B4"
+					item: "gtceu:apis_progenitor"
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "2E53E0376B41593F"
+					item: { Count: 12, id: "gtceu:tungsten_steel_frame" }
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "6FA8FDEA6A3E93FC"
+					item: { Count: 12, id: "gtceu:treated_wood_frame" }
+					type: "item"
+				}
+				{
+					count: 36L
+					id: "7AD1BBB0C39AF78D"
+					item: { Count: 36, id: "gtceu:tempered_glass" }
+					type: "item"
+				}
+				{
+					count: 20L
+					id: "79AAB6C3699F2D62"
+					item: { Count: 20, id: "gtceu:robust_machine_casing" }
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "43146755EA45FA2E"
+					item: { Count: 4, id: "minecraft:dirt" }
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "1DF805A0B66FDE66"
+					item: { Count: 9, id: "minecraft:poppy" }
+					type: "item"
+				}
+			]
+			x: 6.93d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"12226C8C236371CE"
+				"1AC7C1C845550C9C"
+			]
+			description: [
+				"It is time to upgrade your mob processing! &6Ambering&r is the direct replacement for slow Hostile Neural Networks."
+				""
+				"Utilizing the &aSwarm Nurturer&r, you can solidify mob drops using an &bAmber Bee&r."
+				""
+				"While these ambered mobs cannot be used until &9LUV&r tier in the Melliferous Matrix, it is wise to start producing them now!"
+			]
+			id: "33BF15657ABA1ADA"
+			rewards: [{
+				count: 4
+				id: "03BE42CB99141743"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.66d
+			subtitle: "Nurture the Swarm"
+			tasks: [
+				{
+					id: "3946534B396AA30D"
+					item: "gtceu:swarm_nuturer"
+					type: "item"
+				}
+				{
+					count: 12L
+					id: "316ABF90DFAF9FA6"
+					item: "gtceu:steel_frame"
+					type: "item"
+				}
+				{
+					count: 29L
+					id: "4272068B4D097E7C"
+					item: "gtceu:stainless_steel_frame"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "0C2863CB67BB18A6"
+					item: { Count: 6, id: "gtceu:stainless_steel_gearbox" }
+					type: "item"
+				}
+				{
+					count: 18L
+					id: "0E1F54AE8A3A6E8D"
+					item: "gtceu:molybdenum_disilicide_coil_block"
+					type: "item"
+				}
+				{
+					count: 21L
+					id: "3123E476A3A5A91E"
+					item: "gtceu:clean_machine_casing"
+					type: "item"
+				}
+			]
+			x: 7.59d
+			y: -0.66d
 		}
 	]
 	subtitle: ["Automate everything and learn how to assemble"]

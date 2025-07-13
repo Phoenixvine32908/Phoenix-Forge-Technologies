@@ -1,0 +1,21 @@
+{
+    "primaryColor": "#fa9f98",
+    "secondaryColor": "#8a8a8a",
+    "tertiaryColor": "#fa7d73",
+    "renderer": "default_shell",
+    "size": 1.0,
+    "selfbreed": false,
+    "selfheal": true,
+    "fireproof": true,
+    "flowerItem": "gtceu:salt_block",
+    "name": "Voidglass Shard Bee",
+    "invulnerability": [
+        "mekanism.radiation"
+    ],
+    "conditions": [
+        {
+            "type": "forge:mod_loaded",
+            "modid": "productivebees"
+        }
+    ]
+}

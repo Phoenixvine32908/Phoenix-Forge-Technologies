@@ -16,3 +16,11 @@ profile Saved activate HOT7
 	HOT6
 		"minecraft:diamond_sword"
 
+profile Saved activate HOT5
+	HOT1
+		"productivebees:bee_cage"
+	HOT3
+		"gtceu:swarm_nuturer"
+	HOT5
+		"gtceu:samarium_iron_arsenic_oxide_double_wire"
+

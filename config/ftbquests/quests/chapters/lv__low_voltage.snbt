@@ -2282,9 +2282,6 @@
 				"Grr, all this useless &dWater&r you're getting keeps clogging the machine! Maybe you should deal with it by using a &3Voiding Cover&r."
 				""
 				"You should use the Sodium and/or Lithium to make some &6MV Batteries&r."
-				""
-				"If you want to learn how this process line works more in-depth "
-				"{ \"text\": \"check out the quest page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"4DE0E8E8A1220B1F\" } }"
 			]
 			id: "14910B1C3985A960"
 			shape: "circle"

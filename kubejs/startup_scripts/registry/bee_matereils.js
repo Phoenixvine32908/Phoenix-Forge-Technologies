@@ -6,12 +6,19 @@ const MINERAL_BEE_MATERIALS = [
     "sodalite", "gold", "obsidian", "cobaltite", "bauxite", "silver", "tungstate", "emerald",
     "tricalcium_phosphate", "nickel", "fluix", "malachite", "lead", "invar", "desh", "arcane", "rune", "menril", "warped",
     "magmatic", "rocked", "steamy", "supa", "slimy", "brown_shroom", "sculk", "crystalline", "scheelite", "spacial",
-     "frosty", "withered","arcane_crystal", "sticky_resin", "zombie", "blazing", "red_shroom", "infinity", "skeletal", "crimson", "silky"
+     "frosty", "withered","arcane_crystal", "sticky_resin", "zombie", "blazing", "red_shroom", "infinity", "skeletal", "crimson", "silky",
+     "steel", "apatite", "cobalt", "salty", "sponge", "ghostly"
 
 ];
 
 const MATERIAL_COLORS = {
     pitchblende:      { base: 0x6B5B95, secondary: 0x3B3146 },
+    steel:      { base: 0x3b3b3b, secondary: 0x727272 },
+    apatite:      { base: 0x68fcfc, secondary: 0x3e9797 },
+    cobalt:      { base: 0x0f3d79, secondary: 0x0f3d79 },
+    salty:      { base: 0x945e5a, secondary: 0x68fcfc },
+    sponge:      { base: 0xbcbc96, secondary: 0xe81123 },
+    ghostly:      { base: 0xb5c3c8, secondary: 0xbdc8cd },
     copper:           { base: 0xB87333, secondary: 0xA0522D },
     rune:             { base: 0x72154e, secondary: 0x3a0838 },
     menril:             { base: 0x596f86, secondary: 0x354251},

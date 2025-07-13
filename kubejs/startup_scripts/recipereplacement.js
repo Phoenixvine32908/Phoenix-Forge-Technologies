@@ -9,6 +9,7 @@ GTCEuStartupEvents.craftingComponents(event => {
         GTValues.HV, Item.of('gtceu:frost_reinforced_stained_steel_plate'),
         GTValues.EV, Item.of('gtceu:source_imbued_titanium_plate'),
         GTValues.IV, Item.of('gtceu:void_touched_tungsten_steel_plate'),
+        GTValues.LuV, Item.of('gtceu:resonant_rhodium_alloy_plate'),
    
     )) // 
  
@@ -19,6 +20,7 @@ GTCEuStartupEvents.craftingComponents(event => {
         GTValues.HV, Item.of('gtceu:frost_reinforced_stained_steel_rotor'),
         GTValues.EV, Item.of('gtceu:source_imbued_titanium_rotor'),
         GTValues.IV, Item.of('gtceu:void_touched_tungsten_steel_rotor'),
+        GTValues.LuV, Item.of('gtceu:resonant_rhodium_alloy_rotor'),
    
     )) // 
    

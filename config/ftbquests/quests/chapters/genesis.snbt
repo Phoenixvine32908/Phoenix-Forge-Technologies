@@ -734,14 +734,15 @@
 				""
 				"Its GUI is interactive. &bRight-clicking&r will scan for ores, displaying them on a &3dynamic map&r."
 			]
+			icon: "gtceu:prospector.lv"
 			id: "2E36E5755B2F551C"
 			shape: "rsquare"
 			size: 1.0d
 			subtitle: "(Ok, maybe not)"
 			tasks: [{
-				id: "1AC97E61EF4958C8"
-				item: "gtceu:prospector.lv"
-				type: "item"
+				id: "573DD40C19C5071A"
+				title: "Prospecting"
+				type: "checkmark"
 			}]
 			title: "This is Hacking"
 			x: 5.0d
@@ -767,9 +768,9 @@
 		}
 		{
 			description: [
-				"We've tweaked the tier materials slightly – don't worry, it's just the casings/hulls!"
+				"We've tweaked the tier materials as to make things more interesting. "
 				""
-				"The &6Steam Age&r now uses &cFiery Bronze&r, &2Low Voltage (LV)&r uses &eAurum Steel&r, and &bMedium Voltage (MV)&r uses &3Aluminfrost&r."
+				"The &6Steam Age&r now uses &cFiery Bronze&r, &2Low Voltage (LV)&r uses &eAurum Steel&r, &bMedium Voltage (MV)&r uses &3Aluminfrost&r, &7High Voltage (HV)&r uses &bFrost Reinforced Stained Steel&r, &dExtreme Voltage (EV)&r uses &5Source Imbued Titanium&r, &9Insane Voltage (IV)&r uses &5Void Touched Tungsten Steel&r, and &dLudicrous Voltage (LuV)&r uses &dResonant Rhodium Alloy&r."
 				""
 				"Check the quest page for each progression tier to find the crafting recipes! "
 			]
