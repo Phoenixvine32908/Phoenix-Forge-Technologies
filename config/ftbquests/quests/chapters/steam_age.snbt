@@ -712,6 +712,8 @@
 			description: [
 				"Your first task is to read this, then go mine all those tasty resources to start. &aAre you ready to begin?&r"
 				""
+				"(&oAlso, at the risk of being pedantic, please do not play on peaceful. &eI do not know how to fix it putting you there by default but you need mobs&r&r)"
+				""
 				"Now, you don't want to continue &cwhacking trees by hand&r do you? Your journey should start with the free &2greg mining hammers, axe, and shovel&r, and &2hv prospector&r you obtain from the starting quest page. &9However&r, if these decide to break you can make more in your crafting table."
 				""
 				"Just be sure to make the &8mining&r hammer and not the &1normal&r hammer okay?"

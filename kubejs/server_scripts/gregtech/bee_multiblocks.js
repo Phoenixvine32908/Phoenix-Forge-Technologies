@@ -12,7 +12,7 @@ ServerEvents.recipes(phoenix => {
         .notConsumable("minecraft:salmon")
         .inputFluids("gtceu:sugar_water 100")
         .itemOutputs("16x minecraft:salmon")
-        .duration(400)
+        .duration(600)
         .EUt(GTValues.VA[GTValues.IV]/2)
          phoenix.recipes.gtceu.simulated_colony('rancher')
        .notConsumable((Item.of('productivebees:bee_cage', {
@@ -123,7 +123,7 @@ ServerEvents.recipes(phoenix => {
     "arcane": "Arcane Bee",
     "cheese": "CheesyB",
     "rocked": "Rocked Bee",
-    "supa": "Supa Bee",
+    "super_factory": "Super Factory Bee",
     "silicon": "Silicon Bee",
     "fluix": "Fluix Bee"
     // Ensure all bees used in your recipes are defined here
@@ -340,7 +340,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         cobalt: Item.of('gtceu:cobalt_block'),
         bauxite: Item.of('gtceu:raw_bauxite_block'),
         rocked: Item.of('gtceu:raw_rock_salt_block'),
-        supa: Item.of('sfm:cable'),
+        super_factory: Item.of('sfm:cable'),
         desh: Item.of('ad_astra:desh_block'),
         crimson_shroom: Item.of('minecraft:crimson_nylium'),
         silver: Item.of('gtceu:raw_silver_block'),
@@ -647,9 +647,6 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             // crystalline bee + constantan block
         },
 
-
-       
-       
         {
             id: 'kubejs:gtceu/apis_progenitor/ilmenite_from_water',
             outputBeeType: 'ilmenite',
@@ -775,7 +772,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         },
         {
             id: 'kubejs:gtceu/apis_progenitor/supa_from_water',
-            outputBeeType: 'supa',
+            outputBeeType: 'super_factory',
             inputBeeType: 'diamond',
             itemInput: '32x sfm:cable',
             fluidInput: null,
@@ -1094,7 +1091,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         sodalite: Item.of('gtceu:raw_sodalite', 4), // Already 4, keep
         obsidian: Item.of('minecraft:obsidian', 4), // Changed from 8 to 4
         rocked: Item.of('gtceu:raw_rock_salt', 4), // Already 4, keep
-        supa: Item.of('sfm:cable', 4), // Changed from 1 to 4
+        super_factory: Item.of('sfm:cable', 4), // Changed from 1 to 4
         desh: Item.of('ad_astra:raw_desh', 4), // Already 4, keep
         crimson: Item.of('minecraft:crimson_fungus', 4),
         infinity: Item.of('enderio:grains_of_infinity', 4),

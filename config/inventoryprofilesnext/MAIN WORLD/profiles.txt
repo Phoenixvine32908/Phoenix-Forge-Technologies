@@ -24,3 +24,59 @@ profile Saved activate HOT5
 	HOT5
 		"gtceu:samarium_iron_arsenic_oxide_double_wire"
 
+profile Saved activate HOT9
+	HOT1
+		"productivebees:bee_cage"
+	HOT2
+		"kubejs:phoenix_feather"
+	HOT3
+		"gtceu:swarm_nuturer"
+	HOT4
+		"productivebees:sugar_cane_nest"
+	HOT5
+		"minecraft:water_bucket"
+	HOT6
+		"minecraft:sugar_cane"
+	HOT7
+		"productivebees:honey_treat"
+	HOT8
+		"ae2:purple_smart_dense_cable"
+
+profile Saved activate HOT9
+	HOT1
+		"productivebees:bee_cage"
+	HOT2
+		"kubejs:phoenix_feather"
+	HOT3
+		"gtceu:swarm_nuturer"
+	HOT4
+		"productivebees:sugar_cane_nest"
+	HOT5
+		"minecraft:water_bucket"
+	HOT6
+		"minecraft:sugar_cane"
+	HOT7
+		"productivebees:honey_treat"
+	HOT8
+		"ae2:purple_smart_dense_cable"
+
+profile Saved activate HOT9
+	HOT1
+		"productivebees:bee_cage"
+	HOT2
+		"kubejs:phoenix_feather"
+	HOT3
+		"gtceu:swarm_nuturer"
+	HOT4
+		"productivebees:sugar_cane_nest"
+	HOT5
+		"minecraft:water_bucket"
+	HOT6
+		"minecraft:sugar_cane"
+	HOT7
+		"productivebees:honey_treat"
+	HOT8
+		"ae2:purple_smart_dense_cable"
+	HOT9
+		"gtceu:terminal"
+

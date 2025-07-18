@@ -195,6 +195,10 @@ ServerEvents.recipes((event) => {
     P: "gtceu:frost_reinforced_stained_steel_plate",
     W: "#forge:tools/wrenches",
   });
+   event.shaped("gtceu:luv_machine_casing", ["PPP", "PWP", "PPP"], {
+    P: "gtceu:resonant_rhodium_alloy_plate",
+    W: "#forge:tools/wrenches",
+  });
   event.shaped("gtceu:iv_machine_casing", ["PPP", "PWP", "PPP"], {
     P: "gtceu:void_touched_tungsten_steel_plate",
     W: "#forge:tools/wrenches",
@@ -213,6 +217,7 @@ ServerEvents.recipes((event) => {
     Z: "gtceu:lv_machine_casing",
     S: "gtceu:wrought_iron_plate"
   });
+
   event.shaped("ad_astra:nasa_workbench", ["APW", "SZS", "WPA"], {
     P: "gtceu:dense_frost_reinforced_stained_steel_plate",
     W: "#gtceu:circuits/ev",

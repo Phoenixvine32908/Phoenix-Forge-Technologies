@@ -5,7 +5,7 @@ const MINERAL_BEE_MATERIALS = [
     "lapis", "electrotine", "constantan", "redstone", "niter", "coal", "ilmenite", "silicon", "galena", "experience",
     "sodalite", "gold", "obsidian", "cobaltite", "bauxite", "silver", "tungstate", "emerald",
     "tricalcium_phosphate", "nickel", "fluix", "malachite", "lead", "invar", "desh", "arcane", "rune", "menril", "warped",
-    "magmatic", "rocked", "steamy", "supa", "slimy", "brown_shroom", "sculk", "crystalline", "scheelite", "spacial",
+    "magmatic", "rocked", "steamy", "super_factory", "slimy", "brown_shroom", "sculk", "crystalline", "scheelite", "spacial",
      "frosty", "withered","arcane_crystal", "sticky_resin", "zombie", "blazing", "red_shroom", "infinity", "skeletal", "crimson", "silky",
      "steel", "apatite", "cobalt", "salty", "sponge", "ghostly"
 
@@ -27,12 +27,11 @@ const MATERIAL_COLORS = {
     magmatic:             { base: 0xcd691b, secondary: 0x7b3f10 },
     rocked:             { base: 0x646060, secondary: 0xc1b9b8 },
     steamy:             { base: 0xe2e2e2, secondary: 0x888888 },
-    super_factory:             { base: 0xc79ba2, secondary: 0xd4a5ad },
     slimy:             { base: 0x2ce551, secondary: 0x1c9234 },
     brown_shroom:             { base: 0x71492e, secondary: 0x2ce551 },
     sculk:             { base: 0x131313, secondary: 0x0c0c0c },
     crystalline:             { base: 0x7a7672, secondary: 0x8c8883 },
-    supa:             { base: 0xb7abad, secondary: 0xe3cdd1 },
+    super_factory:             { base: 0xb7abad, secondary: 0xe3cdd1 },
     scheelite:             { base: 0x24355c, secondary: 0x213256 },
     spacial:             { base: 0xdce2f3 , secondary: 0x6e95bf  },
      silky:             { base: 0xdce2f3 , secondary: 0x6e95bf  },
