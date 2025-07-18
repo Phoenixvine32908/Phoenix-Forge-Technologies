@@ -409,7 +409,9 @@ const recipesToRemove = [
 "gtceu:alloy_blast_smelter/void_touched_tungsten_steel",
 "gtceu:alloy_blast_smelter/void_touched_tungsten_steel_gas",
 "gtceu:alloy_blast_smelter/resonant_rhodium_alloy",
-"gtceu:alloy_blast_smelter/resonant_rhodium_alloy_gas"
+"gtceu:alloy_blast_smelter/resonant_rhodium_alloy_gas",
+"gtceu:shaped/casing_luv",
+"gtceu:assembler/casing_luv",
 ];
   
     

@@ -157,6 +157,13 @@
 			y: -0.5d
 		}
 		{
+			description: [
+				"This is the &3main food for bees&r, used to breed, collect, and incubate them. The processing line to obtain them is pretty complicated as it requires you to make &6honey&r, &6honeycombs&r, and some other dessert-based materials."
+				""
+				"To get &6honeycombs&r you need to solidify honey with a honeycomb base. This base requires &l&9Polymethyl Methacrylate (PMMA)&r, an advanced acrylic used in place of glass in some real-world applications."
+				""
+				"You will want to stockpile both &6honeytreats&r and &6honeycombs&r, as well as making a few bases, as they will be used in producing materials using bees a bit later."
+			]
 			id: "1AC7C1C845550C9C"
 			subtitle: "Yummy"
 			tasks: [{
@@ -235,7 +242,7 @@
 				""
 				"This material is critically required for the creation of various &dLuV Components&r in the GregTech assembly line, making its production mandatory for your progression."
 				""
-				"Compared to &aStyrene Butadiene Rubber&r, &aSilicone Rubber&r is generally &6easier to produce&r. While it offers &6lesser performance for cables&r, its necessity for specific components means it cannot be bypassed, unlike &aStyrene Butadiene Rubber&r which can technically be substituted in some applications."
+				"Compared to &aStyrene Butadiene Rubber&r, &aSilicone Rubber&r is generally &6easier to produce&r. While it offers &6lesser performance for cable recipes&r, its necessity for specific components means it cannot be bypassed, unlike &aStyrene Butadiene Rubber&r which can technically be substituted in some applications."
 				""
 				"&r&o&6For a complete overview of the Silicone Rubber production system, consult EMI/JEI for detailed recipes and processes.&r"
 			]

@@ -182,9 +182,9 @@
 			]
 			id: "4E9FAACE0EBAF7D3"
 			tasks: [{
-				id: "741A18A1954923F1"
-				item: "crazyae2addons:spawner_controller_wall"
-				type: "item"
+				id: "33E154D38BB75A47"
+				title: "Crazy "
+				type: "checkmark"
 			}]
 			x: 2.5d
 			y: 3.0d

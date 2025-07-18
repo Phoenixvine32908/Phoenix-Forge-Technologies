@@ -148,9 +148,9 @@
 			description: [
 				"The Steam Age progression has been simplified with easier recipes, and steam power has been significantly buffed!"
 				""
-				"All steam multiblocks that generate steam now provide an additional &a2000 millibuckets&r per process."
+				"All steam machines that generate steam now provide an additional &aboost to the millibuckets&r per process."
 				""
-				"Introducing two new steam-powered machines: the &6Steam Foundry&r and the &6Steam Separator&r! These are perfect for powerful automation leveraging this enhanced steam output."
+				"Introducing three new steam-powered machines: the &6Steam Foundry&r, the &6Steam Compressor&r, and the &6Steam Separator&r! These are perfect for powerful automation leveraging this enhanced steam output."
 				""
 				"{@pagebreak}"
 				""
@@ -989,7 +989,7 @@
 			description: [
 				"Remembering all the required circuits can be a bit of a &cchallenge&r."
 				""
-				"If you're ever confused, check the &acircircircuit progression&r quest page to see what &6lies ahead&r."
+				"If you're ever confused, check the &acircuit progression&r quest page to see what &6lies ahead&r."
 				""
 				""
 				"{ \"text\": \"Circuit Quest Page\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"0DBC148D92A9F69F\" } }"
