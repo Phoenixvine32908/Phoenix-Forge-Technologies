@@ -363,13 +363,14 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         .ingot()
         .color(0xadd8e6)
         .secondaryColor(0xc0c0c0)
-        .fluidPipeProperties(4000, 80, false, false, false, false)
+        .fluidPipeProperties(1200, 110, true, true, false, false)
         .iconSet('aluminfrost')
         .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
             GTMaterialFlags.GENERATE_ROUND,
             GTMaterialFlags.GENERATE_GEAR,
             GTMaterialFlags.PHOSPHORESCENT,
+            GTMaterialFlags.GENERATE_LONG_ROD,
             GTMaterialFlags.GENERATE_ROD,
             GTMaterialFlags.GENERATE_BOLT_SCREW,
             GTMaterialFlags.GENERATE_FRAME,
@@ -395,16 +396,20 @@ event.create('85_percent_pure_nevonian_steel')
             event.create('voidglass_shard')
         .ore().gem()
         .color(0x6a00aa).iconSet('diamond')
-        .components('1x calcium'); // Changed
-         event.create('permafrost')
-        .ore().ingot()
-        .color(0xA7D1EB).iconSet('diamond')
+            .components('1x calcium') // Changed
+            .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
+        event.create('permafrost')
+            .ore().ingot()
+            .color(0xA7D1EB).iconSet('diamond')
+            .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
         event.create('polarity_flipped_bismuthite')
-        .ore().dust()
-        .color(0xe4d6ff).iconSet('diamond')
+            .ore().dust()
+            .color(0xe4d6ff).iconSet('diamond')
+            .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
         event.create('void_touched_tungsten_steel')
         .ingot()
         .liquid(3100)
+         .fluidPipeProperties(3800, 250, true, true, true, true)
         .color(0x4B0082)
         .secondaryColor(0x000000)
         .iconSet('metallic')
@@ -424,6 +429,7 @@ event.create('85_percent_pure_nevonian_steel')
         .color(0xe245f8)
         .secondaryColor(0xA345B0)
         .iconSet('metallic')
+         .fluidPipeProperties(2000, 600, true, true, false, false)
         .components("3x rhodium", "4x palladium", "polarity_flipped_bismuthite", "4x cerium")
         .blastTemp(4200, 'high', GTValues.VA[GTValues.IV], 2400)
        .flags(GTMaterialFlags.GENERATE_PLATE,
@@ -480,6 +486,11 @@ event.create('critical_steam')
         .ingot().color(0x603030).secondaryColor(0x402020) 
         .element(GTElements.get("uranium_235")) 
         .iconSet('radioactive')
+        event.create('aurum_wood')
+            .dust()
+            .color(0x291306)
+            .secondaryColor(0xfccd31)
+            .iconSet('fiery_bronze');
     event.create('depleted_uranium')
         .ingot().color(0x555030).secondaryColor(0x333010) 
         .iconSet('radioactive') 
@@ -488,6 +499,7 @@ event.create('critical_steam')
         .color(0xFF4500) 
         .secondaryColor(0xFFD700) 
         .iconSet('dull'); 
+        
         event.create('fissile_ash')
                 .dust()
                 .color(0x404040)
@@ -520,7 +532,7 @@ event.create('critical_steam')
         .ingot()
         .color(0xADD8E6)
         .secondaryColor(0xE0FFFF)
-        .fluidPipeProperties(10000, 120, false, true, true, false)
+        .fluidPipeProperties(2500, 90, true, true, true, false)
         .iconSet('shiny')
         .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
@@ -592,6 +604,7 @@ event.create('superconductive_honey')
     event.create('source_imbued_titanium')
         .ingot()
         .color(0xc600ff)
+        .fluidPipeProperties(2800, 200, true, true, false, false)
         .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
             GTMaterialFlags.GENERATE_GEAR,
@@ -804,10 +817,13 @@ event.create('hydrogen_peroxide')
         .color(0xF4F8FF)
         .secondaryColor(0xF4F8FF)
         .iconSet('radio');
-            
+     
+                
+             
 
-                
-                
+    // For custom materials, use GTMaterials.get('material_id') instead of get('material_id')
+
+
 
 
     // --- Modifications to existing GTCEu materials ---
@@ -818,6 +834,7 @@ event.create('hydrogen_peroxide')
     GTMaterials.Hafnium.setProperty($PropertyKey.ORE, new $OreProperty());
 
     GTMaterials.Zirconium.setProperty($PropertyKey.ORE, new $OreProperty());
+    GTMaterials.Technetium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Radium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Actinium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Polonium.setProperty($PropertyKey.INGOT, new $IngotProperty());
@@ -914,3 +931,5 @@ ItemEvents.modification(event => {
 
  
 })
+
+       

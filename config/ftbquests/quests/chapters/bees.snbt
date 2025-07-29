@@ -10,6 +10,13 @@
 	quests: [
 		{
 			dependencies: ["3C77208B91D20E31"]
+			description: [
+				"A buzzing friend that thrives in watery environments, a true master of the wetlands!"
+				""
+				"This &aReed Bee&r hums with a &2gentle energy&r, perfectly at home amongst the tall grasses."
+				""
+				"To obtain this &badaptable&r friend, you'll find it from a &6Reed Nest&r by using &ehoney treats&r."
+			]
 			icon: "productivebees:spawn_egg_reed_bee"
 			id: "38A17D0B43926CFD"
 			subtitle: "I think this one would be good at snorkeling."
@@ -23,6 +30,13 @@
 		}
 		{
 			dependencies: ["6B61B1831F56ABC0"]
+			description: [
+				"A fascinating evolution, capturing the ancient essence of preserved life!"
+				""
+				"This &eAmber Bee&r hums with a &6fossilized glow&r, a true relic of the past."
+				""
+				"To obtain this &6precious&r friend, you'll need a &6Resin Bee&r and &f168 styrene butadiene pulp&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -63,6 +77,11 @@
 			y: 2.5d
 		}
 		{
+			description: [
+				"A buzzing artisan of the woodlands! This &eYellow Carpenter Bee&r is a natural at shaping its environment."
+				""
+				"To find this &6crafty&r friend, simply look for them spawning naturally in &2forests&r."
+			]
 			icon: "productivebees:spawn_egg_yellow_black_carpenter_bee"
 			id: "4DED4CF3959A603E"
 			shape: "hexagon"
@@ -77,6 +96,13 @@
 		}
 		{
 			dependencies: ["6861703F9E2D8CC6"]
+			description: [
+				"A true titan of excavation, capable of moving mountains!"
+				""
+				"This &8Quarry Bee&r hums with an &7unstoppable energy&r, a master of large-scale resource extraction."
+				""
+				"To obtain this &f monumental&r friend, you'll need a &8Digger Bee&r and &7128 of any stone type&r. Prepare to reshape your world!"
+			]
 			icon: "productivebees:spawn_egg_quarry_bee"
 			id: "3CCF7DC3CCF8CD49"
 			subtitle: "Fracking or Boring? Take your pick."
@@ -90,6 +116,13 @@
 		}
 		{
 			dependencies: ["600D323C9A518454"]
+			description: [
+				"A &l&fbeacon&r&r of &bpure energy&r, &fsparkling&r with the &cessence&r of the &4Nether's heart&r!"
+				""
+				"This &fCrystalline Bee&r is a &l&bmarvel&r&r of &fclarity&r and &cpower&r, reflecting the &4raw magic&r of its origin."
+				""
+				"To obtain this &l&bradiant&r&r friend, you'll need to use &fnether quartz&r on a &fQuartz Nest&r. Let its &l&fbrilliance&r&r illuminate your apiary!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -124,6 +157,13 @@
 		}
 		{
 			dependencies: ["3C77208B91D20E31"]
+			description: [
+				"A diligent builder, crafting its home with precision and care!"
+				""
+				"This &8Mason Bee&r hums with a &7purposeful energy&r, a true architect of the apiary."
+				""
+				"To obtain this &f industrious&r friend, you'll find it from a &6reed nest&r by using &ehoney treats&r. Its dedication to construction is truly inspiring!"
+			]
 			icon: "productivebees:spawn_egg_mason_bee"
 			id: "5F49701B58752350"
 			subtitle: "Mason? I need some work done on my deck please!"
@@ -137,6 +177,11 @@
 		}
 		{
 			dependencies: ["166F5F4200F2A175"]
+			description: [
+				"This &eNomad&r bee is quite the wanderer, known for its peculiar habit of taking over existing homes!"
+				""
+				"To obtain this &7resourceful&r friend, you'll find it stealing the nests of &8ashy mining bees&r, which typically spawn in &7gravel nests&r. Can be spawned using &6honey treats&r."
+			]
 			icon: "productivebees:spawn_egg_nomad_bee"
 			id: "264519D0CB3C4462"
 			shape: "hexagon"
@@ -151,6 +196,11 @@
 		}
 		{
 			dependencies: ["264519D0CB3C4462"]
+			description: [
+				"Feel the heat! This &cblazing&r bee brings the warmth of the nether to your apiary!"
+				""
+				"To obtain this &4fiery&r friend, you'll need a &eNomad&r bee and &616 blaze rods&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -172,6 +222,7 @@
 		}
 		{
 			dependencies: ["68561766B704BC91"]
+			description: ["This &5bright&r and &dflashy&r bee is known for its peculiar habits and vibrant colors! It's notorious for stealing the nests of &9blue banded bees&r, which you can find spawning in &6acacia nests&r."]
 			icon: "productivebees:spawn_egg_neon_cuckoo_bee"
 			id: "6D67D38BF87C31C0"
 			subtitle: "Cuckoo, Cuckoo. What time is it?"
@@ -185,7 +236,11 @@
 		}
 		{
 			dependencies: ["661A6A61C89733EE"]
-			description: [""]
+			description: [
+				"Who doesn't love a bit of &6chocolate&r? This bee is a sweet treat from the depths!"
+				""
+				"To obtain this &8deliciously earthy&r friend, you'll find it commonly from &8dirt nests&r. Get ready for some tasty gains!"
+			]
 			icon: "productivebees:spawn_egg_chocolate_mining_bee"
 			id: "381080E73AA21EB3"
 			subtitle: "I don't think this one is actually chocolate...."
@@ -199,6 +254,11 @@
 		}
 		{
 			dependencies: ["661A6A61C89733EE"]
+			description: [
+				"This &2industrious&r bee is a master of &agreenery&r, always busy trimming and shaping the world around it!"
+				""
+				"To obtain this &bdiligent&r friend, you'll need to find it commonly in &8dirt nests&r using &6honey treats&r to spawn them."
+			]
 			icon: "productivebees:spawn_egg_leafcutter_bee"
 			id: "52218B702FCBFEDA"
 			subtitle: "Is this one seasonal?"
@@ -212,6 +272,13 @@
 		}
 		{
 			dependencies: ["1A093BC524902EC6"]
+			description: [
+				"A sticky, sweet friend from the forest, brimming with natural goodness!"
+				""
+				"This &6Resin Bee&r hums with the essence of the trees, perfect for gathering valuable sap."
+				""
+				"To obtain this &2resourceful&r friend, you'll find it from a &3Spruce Nest&r by using &6honey treats&r."
+			]
 			icon: "productivebees:spawn_egg_resin_bee"
 			id: "6B61B1831F56ABC0"
 			subtitle: "Lock in."
@@ -238,6 +305,11 @@
 		}
 		{
 			dependencies: ["6B61B1831F56ABC0"]
+			description: [
+				"Even stickier, even sweeter! This &6Sticky Resin Bee&r is overflowing with golden goodness."
+				""
+				"To obtain this &e bountiful&r friend, you'll need a &6Resin Bee&r and &e4 buckets of honey&r. Prepare for a truly sweet harvest!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -258,6 +330,11 @@
 			y: -4.0d
 		}
 		{
+			description: [
+				"A cozy home, straight from the heart of the forest!"
+				""
+				"To craft this &2natural&r nest, you'll need a &3spruce log&r and a &6wooden sword&r. It's a simple yet sturdy dwelling for your busy bees!"
+			]
 			icon: "productivebees:spruce_wood_nest"
 			id: "1A093BC524902EC6"
 			shape: "hexagon"
@@ -271,6 +348,11 @@
 			y: -4.5d
 		}
 		{
+			description: [
+				"A flexible and natural home, perfect for your buzzing friends!"
+				""
+				"To craft this &a simple&r nest, you'll need a &6wooden sword&r and &2sugarcane&r. It's a sweet spot to start your apiary!"
+			]
 			icon: "productivebees:sugar_cane_nest"
 			id: "3C77208B91D20E31"
 			shape: "hexagon"
@@ -285,6 +367,11 @@
 		}
 		{
 			dependencies: ["4DED4CF3959A603E"]
+			description: [
+				"Chop, chop! This &aLumber Bee&r is a truly industrious variant, perfect for all your wooden needs!"
+				""
+				"To obtain this &3resourceful&r friend, you'll need a &eYellow Carpenter Bee&r and &3128 of any Minecraft logs&r."
+			]
 			icon: "productivebees:spawn_egg_lumber_bee"
 			id: "0B48F84041109121"
 			subtitle: "Timberrrr!!!"
@@ -298,6 +385,13 @@
 		}
 		{
 			dependencies: ["166F5F4200F2A175"]
+			description: [
+				"A tireless worker, always ready to unearth hidden treasures!"
+				""
+				"This &8Digger Bee&r hums with a &7persistent energy&r, a true master of excavation."
+				""
+				"To obtain this &f industrious&r friend, you'll find it from a &7Gravel Nest&r by using &ehoney treats&r. Get ready to dig deep!"
+			]
 			icon: "productivebees:spawn_egg_digger_bee"
 			id: "6861703F9E2D8CC6"
 			subtitle: "Just keep digging, just keep digging. What do we do?"
@@ -310,6 +404,11 @@
 			y: 2.5d
 		}
 		{
+			description: [
+				"A humble home, yet surprisingly sturdy for your buzzing friends!"
+				""
+				"To craft this &7simple&r nest, you'll need a &8piece of gravel&r and a &6wooden sword&r. It's a foundational dwelling for many bee species!"
+			]
 			icon: "productivebees:gravel_nest"
 			id: "166F5F4200F2A175"
 			shape: "hexagon"
@@ -323,6 +422,13 @@
 			y: 3.5d
 		}
 		{
+			description: [
+				"A shimmering home born from the fiery depths of the Nether!"
+				""
+				"To craft this &fresilient&r nest, you'll need an &7iron sword&r and a &fQuartz in Netherrack&r block."
+				""
+				"(&fQuartz in Netherrack&r is a custom block made by combining &8one piece of netherrack&r with &f8 nether quartz&r.)"
+			]
 			icon: "productivebees:nether_quartz_nest"
 			id: "600D323C9A518454"
 			shape: "hexagon"
@@ -336,6 +442,11 @@
 			y: 0.0d
 		}
 		{
+			description: [
+				"A chilly abode, perfect for the most resilient of bees!"
+				""
+				"To craft this &b frosty&r nest, you'll need a &f snow block&r and a &6wooden sword&r. It's a cool place for a bee to call home!"
+			]
 			icon: "productivebees:snow_nest"
 			id: "11A941F4DDDF3B01"
 			shape: "hexagon"
@@ -350,6 +461,11 @@
 		}
 		{
 			dependencies: ["6D67D38BF87C31C0"]
+			description: [
+				"This &bwoody&r bee seems to be a bit &aextra&r when it comes to gathering resources!"
+				""
+				"To obtain this &9tree-hugging&r friend, you'll need &34 menril logs&r and a &9Blue Banded&r&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -370,6 +486,11 @@
 			y: 1.5d
 		}
 		{
+			description: [
+				"Who knew a humble piece of &8dirt&r could become a home?"
+				""
+				"To craft this &9basic&r but essential nest, you'll just need a &8piece of dirt&r and a &6wooden sword&r. Simple, right?"
+			]
 			icon: "productivebees:coarse_dirt_nest"
 			id: "661A6A61C89733EE"
 			shape: "hexagon"
@@ -384,6 +505,11 @@
 		}
 		{
 			dependencies: ["264519D0CB3C4462"]
+			description: [
+				"This &8sturdy&r bee is a cornerstone of modern technology, ready to power your circuits!"
+				""
+				"To obtain this &7electronic&r friend, you'll need a &eNomad&r bee and &f16 blocks of silicon&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -432,6 +558,13 @@
 		}
 		{
 			dependencies: ["1260403C99231F0E"]
+			description: [
+				"A creature of legend, infused with the raw power of dragons!"
+				""
+				"This &4Draconic Bee&r hums with an &cancient, fiery energy&r, a true descendant of mythical beasts."
+				""
+				"To obtain this &d formidable&r friend, you'll need &4dragon's breath&r on an &0Obsidian Nest&r. Prepare to harness draconic might!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -482,6 +615,13 @@
 		}
 		{
 			dependencies: ["06DF13F808E9D5A6"]
+			description: [
+				"Harnessing the very fabric of space and time!"
+				""
+				"This &bSpacial Bee&r, deeply connected to &fAE2 Certus Quartz&r, hums with a &9crystalline energy&r, capable of wondrous feats."
+				""
+				"To obtain this &ddimensional&r friend, you'll need &f4 blocks of raw certus quartz&r. Prepare to expand your horizons!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -503,6 +643,11 @@
 			y: -0.5d
 		}
 		{
+			description: [
+				"From the warm hues of the savannah, a new home emerges!"
+				""
+				"To craft this &6sun-kissed&r nest, you'll need &ean acacia log&r and a &6wooden sword&r. It's a sweet spot for a busy bee!"
+			]
 			icon: "productivebees:acacia_wood_nest"
 			id: "0E006737A8A20A36"
 			subtitle: "Who wants to live in a hot place?"
@@ -605,6 +750,15 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"They &c&okeep&r&r saying they will pay me in &aexperience&r."
+				""
+				"&6However&r, I want the &2money&r. "
+				""
+				"&5Justice for unpaid interns!&r"
+				""
+				"To obtain this bee you need 64 &axp shards&r from &bCrazy Ae2 addons&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -627,6 +781,13 @@
 		}
 		{
 			dependencies: ["06DF13F808E9D5A6"]
+			description: [
+				"A foundational metal, essential for conductivity and crafting!"
+				""
+				"This &6Copper Bee&r hums with a warm, &c earthy glow&r, a diligent worker in the mines."
+				""
+				"To obtain this &6versatile&r friend, you'll need &64 blocks of copper&r. Its conductive nature is truly electrifying!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -649,6 +810,13 @@
 		}
 		{
 			dependencies: ["06DF13F808E9D5A6"]
+			description: [
+				"A fundamental metal, the backbone of countless creations!"
+				""
+				"This &7Iron Bee&r hums with a solid, &8unyielding strength&r, a true pillar of industry."
+				""
+				"To obtain this &fsturdy&r friend, you'll need &74 blocks of iron&r. Its resilience is truly remarkable!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -671,6 +839,13 @@
 		}
 		{
 			dependencies: ["06DF13F808E9D5A6"]
+			description: [
+				"A stable alloy, known for its consistent resistance and unwavering nature!"
+				""
+				"This &6Constantan Bee&r hums with a &e steady energy&r, a reliable presence in any electrical circuit."
+				""
+				"To obtain this &f dependable&r friend, you'll need &64 blocks of constantan&r. Its steadfastness is truly admirable!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -693,6 +868,13 @@
 		}
 		{
 			dependencies: ["06DF13F808E9D5A6"]
+			description: [
+				"A shimmering beacon of wealth and luxury!"
+				""
+				"This &6Gold Bee&r hums with a &e radiant energy&r, a true symbol of prosperity."
+				""
+				"To obtain this &f precious&r friend, you'll need &64 blocks of gold&r. Its value is truly undeniable!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -714,6 +896,13 @@
 			y: -0.5d
 		}
 		{
+			description: [
+				"A fortress of dark power, forged in the heart of the earth!"
+				""
+				"This &8Obsidian Bee&r hums with an &0unyielding resilience&r, a true guardian of the deepest secrets."
+				""
+				"To obtain this &5indestructible&r friend, you'll need a &b diamond sword&r and a &0piece of obsidian&r. Its strength is legendary!"
+			]
 			icon: "productivebees:obsidian_nest"
 			id: "1260403C99231F0E"
 			shape: "hexagon"
@@ -779,6 +968,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&oDude&r, you are making me &6hungry&r. "
+				""
+				"&aMaybe&r you could make some &bcinnabons&r to fix that?"
+				""
+				"To obtain this bee you need 4 blocks of raw &4cinnabar&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -801,6 +997,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&aEwww&r, no one wants&2 toe paz&r!"
+				""
+				"&cWait&r, that's &d&onot&r&r what you said? &4My bad&r, sorry about &athat&r."
+				""
+				"To obtain this bee you need 4 raw blocks of &2topaz&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -823,6 +1026,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"I love &5&lAmethyst&r&r, and seeing how you need a &6ton of it&r, I would suggest this &6bee&r."
+				""
+				"Otherwise I'll make you &5purple&r. (&2&mKidding, kidding&r&r)"
+				""
+				"To obtain this you need 4 raw &5amethyst&r blocks."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -845,6 +1055,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&5Runes&r &6&oreally&r&r make drawing seem &6&lPowerful&r&r."
+				""
+				"Maybe &9this is why&r they say the &1pen&r is mightier than the &csword&r?"
+				""
+				"To obtain this one you need 4 &5rune&r blocks"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -867,6 +1084,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&aGive&r them an &6inch&r, and they will &4take&r a &emile&r."
+				""
+				"But perhaps &2this time&r a &bpie&r in the face &3&omight&r &3help&r."
+				""
+				"To obtain this you need 4 raw &4pyrope&r blocks."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -889,6 +1113,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"What if&2 I&r wanted to &astay here&r hmm?"
+				""
+				"I don't need to &6floss&r, &4stay away dentists&r!"
+				""
+				"To obtain this one you need 4 raw &2fluorite&r blocks."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -911,6 +1142,13 @@
 		}
 		{
 			can_repeat: true
+			description: [
+				"A humble yet charming resident of the forest floor!"
+				""
+				"This &8Brown Shroom Bee&r hums with a &6 earthy energy&r, blending seamlessly with the undergrowth."
+				""
+				"To obtain this &f unassuming&r friend, you'll find it &2naturally flying around&r in forested areas. Keep an eye out for its subtle presence!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -951,6 +1189,13 @@
 		{
 			can_repeat: true
 			dependencies: ["08FCF8E3A8843D4B"]
+			description: [
+				"A strange and mystical presence from the twisted realms!"
+				""
+				"This &9Warped Shroom Bee&r hums with an &botherworldly energy&r, a true inhabitant of the bizarre."
+				""
+				"To obtain this &f enigmatic&r friend, you'll find it &2naturally flying around&r in the &9Warped Forest biomes&r of the Nether. Its peculiar charm is captivating!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -989,6 +1234,13 @@
 		{
 			can_repeat: true
 			dependencies: ["08FCF8E3A8843D4B"]
+			description: [
+				"A vibrant splash of color from the forest floor!"
+				""
+				"This &cRed Shroom Bee&r hums with a &4bold energy&r, standing out amongst the greenery."
+				""
+				"To obtain this &f striking&r friend, you'll find it &2naturally flying around&r in forested areas, often near its brown counterpart. Keep an eye out for its distinctive cap!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1027,6 +1279,13 @@
 		{
 			can_repeat: true
 			dependencies: ["08FCF8E3A8843D4B"]
+			description: [
+				"From the fiery depths of the Nether, a new fungal friend emerges!"
+				""
+				"This &4Crimson Shroom Bee&r hums with a &c blistering energy&r, thriving in the scorching landscapes."
+				""
+				"To obtain this &f resilient&r friend, you'll find it &2naturally flying around&r in the &cCrimson Forest biomes&r of the Nether. Its fiery spirit is undeniable!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1063,6 +1322,13 @@
 			y: 1.5d
 		}
 		{
+			description: [
+				"A refreshing splash of life, found in the gentle currents!"
+				""
+				"This &bWater Bee&r hums with the essence of flowing streams and tranquil pools."
+				""
+				"To obtain this &9aquatic&r friend, you can only fish it up in &3river biomes&r. Cast your line and see what you reel in!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1085,6 +1351,15 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&9Schee&r is &o&6quite&r&r the &9delicay&r I've heard."
+				""
+				"&6This one&r is for those on a &bdiet&r."
+				""
+				"&dAlthough,&r with it's &3use case&r maybe &cdon't&r eat it...."
+				""
+				"To obtain it you need 4 raw &1scheelite&r blocks."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1107,6 +1382,17 @@
 		}
 		{
 			dependencies: ["11E486478360BC87"]
+			description: [
+				"A chilling presence, bringing the crisp essence of winter to your apiary!"
+				""
+				"This &bFrosty Bee&r hums with a &f frigid energy&r, leaving a trail of icy wonder."
+				""
+				"To obtain this &9cool&r friend, you have two paths:"
+				""
+				"Find it from a &eSweat Bee&r by using &bice blocks&r in the world."
+				""
+				"Or, combine a &bWater Bee&r with &9blue ice&r in the &6Apis Progenitor&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1129,6 +1415,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&4Red&r is &l&cmuch better&r&r than &9blue&r (&7The other one is quite rude&r)."
+				""
+				"This &cRuby Bee&r shines with a &4fierce brilliance&r, a &l&ctrue gem&r&r of the apiary! It's known for its &l&cspirited rivalry&r&r against its &9sapphire&r counterpart."
+				""
+				"To obtain this &4precious&r friend, you'll need &c4 ruby blocks&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1151,6 +1444,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"&9Blue&r is &l&9far superior&r&r to &4red&r (&7They're just jealous&r)."
+				""
+				"This &9Sapphire Bee&r gleams with a &bcool radiance&r, a &l&9true jewel&r&r of the apiary! It's known for its &l&9calm yet competitive spirit&r&r against its &cruby&r counterpart."
+				""
+				"To obtain this &bvaluable&r friend, you'll need &94 sapphire blocks&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1173,6 +1473,11 @@
 		}
 		{
 			dependencies: ["7FB5B4CC869D8094"]
+			description: [
+				"This &8metallic&r bee has a surprisingly &7silvery sheen&r, hinting at the treasures it holds within!"
+				""
+				"To obtain this &f lustrous&r friend, you'll need &84 stibnite blocks&r. It's a heavy find!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1194,6 +1499,11 @@
 			y: -2.5d
 		}
 		{
+			description: [
+				"I've heard you like &7skeletons&r, not one to judge but that's a bit &o&bspooky&r&r."
+				""
+				"To obtain this &7barebones&r little friend you need 256 &7bones&r and a &3crystalline&r bee in the &6Apis Progenitor&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1216,7 +1526,13 @@
 		}
 		{
 			dependencies: ["710C43E94EBB43B1"]
-			description: [""]
+			description: [
+				"From the very essence of decay, a chilling new life emerges!"
+				""
+				"This &0Withered Bee&r hums with a &8dark energy&r, a spectral presence that brings a touch of the void."
+				""
+				"To obtain this &4eerie&r friend, you'll need a &7Skeletal Bee&r and a &0wither rose&r. Embrace the darkness!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1237,6 +1553,7 @@
 			y: 2.5d
 		}
 		{
+			description: ["You need to turn the &7skeletal bee&r into a &cZomBee&r with &4256 rotten flesh&r to obtain this one."]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1258,7 +1575,11 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
-			description: [""]
+			description: [
+				"Say &echeese&r! This delightfully &6creamy&r bee is sure to bring a smile to your apiary."
+				""
+				"To obtain this &eflavorful&r friend, you'll need &e4 blocks of cheese&r. It's a truly gouda find!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1281,6 +1602,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"A shimmering spectacle of colors, capturing the very essence of light!"
+				""
+				"This &f iridescent&r bee glows with a &dplayful brilliance&r, reflecting every hue imaginable."
+				""
+				"To obtain this &bprismatic&r friend, you'll need &f4 blocks of opal&r and a &7Stone&r bee. It's a truly dazzling discovery!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1302,6 +1630,13 @@
 			y: -2.5d
 		}
 		{
+			description: [
+				"A spark of pure energy, ready to power your world!"
+				""
+				"This &bElectrotine Bee&r hums with a &9vibrant electrical charge&r, a true conduit of raw power."
+				""
+				"To obtain this &1dynamic&r friend, you'll need &94 blocks of raw electrotine&r. Feel the current!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1327,6 +1662,13 @@
 				"074CEFEB53853464"
 				"06DF13F808E9D5A6"
 			]
+			description: [
+				"A dark and heavy mineral, holding the promise of powerful alloys!"
+				""
+				"This &8Ilmenite Bee&r hums with a robust energy, a true workhorse of the earth's crust."
+				""
+				"To obtain this &7dense&r friend, you'll need &84 blocks of raw ilmenite&r. Its strength is undeniable!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1349,7 +1691,11 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
-			description: [""]
+			description: [
+				"This &bdeep blue&r bee shimmers with the essence of the earth's hidden gems!"
+				""
+				"To obtain this &9mystical&r friend, you'll need &b4 blocks of sodalite&r and a &7Stone&r bee. It's a truly precious find!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1372,6 +1718,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"A deep, vibrant hue that promises strength and resilience!"
+				""
+				"This &9Cobalt Bee&r hums with a powerful energy, a true marvel of the mineral world."
+				""
+				"To obtain this &b sturdy&r friend, you'll need &94 blocks of cobalt&r. Its magnetic charm is undeniable!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1396,6 +1749,13 @@
 			dependencies: [
 				"397EDAEFD995A733"
 				"478BA07594C3F733"
+			]
+			description: [
+				"A chilling presence, yet a valuable ally from the spectral realms!"
+				""
+				"This &7ethereal&r bee shimmers with an otherworldly glow."
+				""
+				"To obtain this &fphantom&r friend, you'll need a &9Cobalt Bee&r and &84 ghast tears&r."
 			]
 			icon: {
 				Count: 1
@@ -1422,6 +1782,11 @@
 				"397EDAEFD995A733"
 				"478BA07594C3F733"
 			]
+			description: [
+				"A refined form of the sturdy cobalt, this bee represents a step up in metallic mastery!"
+				""
+				"To obtain this &8enhanced&r friend, you'll need a &9Cobalt Bee&r and &b4 blocks of raw cobalite&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1444,6 +1809,17 @@
 		}
 		{
 			dependencies: ["11E486478360BC87"]
+			description: [
+				"A porous pal from the deep, ready to soak up anything!"
+				""
+				"This &6Sponge Bee&r hums with an &eabsorbent energy&r, a true marvel of the ocean depths."
+				""
+				"To obtain this &b resourceful&r friend, you have two paths:"
+				""
+				"You can &9fish it up&r exclusively in &b cold ocean biomes&r."
+				""
+				"Or, combine a &bWater Bee&r with &64 sponge blocks&r in the &6Apis Progenitor&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1497,6 +1873,13 @@
 				"397EDAEFD995A733"
 				"2110351B7B1BA6FD"
 			]
+			description: [
+				"A foundational resource, essential for building the future!"
+				""
+				"This &cBauxite Bee&r is a diligent worker, extracting the very essence of aluminum from the earth."
+				""
+				"To obtain this &6ore-rich&r friend, you'll need &c4 blocks of bauxite&r and a &7Nickel&r bee. It's the start of something big!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1520,6 +1903,13 @@
 		}
 		{
 			dependencies: ["11E486478360BC87"]
+			description: [
+				"A taste of the ocean, bringing the essence of the sea to your apiary!"
+				""
+				"This &7Salty Bee&r hums with a &bbriny energy&r, a true connoisseur of coastal flavors."
+				""
+				"To obtain this &f flavorful&r friend, you'll need a &bWater Bee&r and &74 raw salt blocks&r in the &6Apis Progenitor&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1541,6 +1931,13 @@
 		}
 		{
 			dependencies: ["11E486478360BC87"]
+			description: [
+				"A sturdy friend, forged from the very heart of the earth's mineral veins!"
+				""
+				"This &8Rocked Bee&r hums with a &7solid energy&r, a true testament to its unyielding nature."
+				""
+				"To obtain this &f resilient&r friend, you'll need a &7Salty Bee&r and &84 raw rock salt blocks&r in the &6Apis Progenitor&r. Its strength is rock-solid!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1563,6 +1960,13 @@
 		}
 		{
 			dependencies: ["11E486478360BC87"]
+			description: [
+				"A puff of warmth and power, ready to drive your engines!"
+				""
+				"This &8Steamy Bee&r hums with a &7hot energy&r, a true workhorse of the industrial age."
+				""
+				"To obtain this &0coal-powered&r friend, you'll need &84 blocks of coal&r. Feel the heat and get ready to generate some serious progress!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1618,6 +2022,13 @@
 				"074CEFEB53853464"
 				"06DF13F808E9D5A6"
 			]
+			description: [
+				"A backbone of industry, forged in fire and strength!"
+				""
+				"This &8Steel Bee&r hums with an &7unyielding resolve&r, a true symbol of durability and resilience."
+				""
+				"To obtain this &fsturdy&r friend, you'll need &764 blocks of steel&r. Its unwavering presence will fortify your apiary!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1644,6 +2055,13 @@
 				"074CEFEB53853464"
 				"659E82469C9951BA"
 			]
+			description: [
+				"From the lunar surface, a new marvel emerges!"
+				""
+				"This &6Desh Bee&r hums with an &eotherworldly glow&r, bringing the essence of the moon to your apiary. Its distinctive &c orange&r hue marks it as truly unique."
+				""
+				"To obtain this &f extraterrestrial&r friend, you'll need a &8Steel Bee&r and &64 blocks of desh&r. Prepare for a journey beyond the stars!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1666,6 +2084,13 @@
 		}
 		{
 			dependencies: ["06DF13F808E9D5A6"]
+			description: [
+				"A gleaming symbol of purity and elegance!"
+				""
+				"This &7Silver Bee&r hums with a &f cool radiance&r, a true embodiment of refinement."
+				""
+				"To obtain this &blustrous&r friend, you'll need &f4 blocks of silver&r. Its brilliance is truly captivating!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1688,6 +2113,11 @@
 		}
 		{
 			dependencies: ["4DF619D2E4097AA2"]
+			description: [
+				"Beyond the limits, into the boundless (Kind of)! This &5infinite&r bee might hold the very essence of creation within its form."
+				""
+				"To obtain this &dpseudo-cosmic&r friend, you'll need a &cblazing bee&r and &832 blocks of obsidian&r. Prepare for the ultimate journey!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1710,6 +2140,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"A vibrant mineral, essential for growth and fertility!"
+				""
+				"This &aApatite Bee&r hums with the promise of rich harvests and bountiful lands."
+				""
+				"To obtain this &2nutrient-rich&r friend, you'll need &a4 blocks of apatite&r. It's a truly fruitful discovery!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1735,6 +2172,11 @@
 				"2C3B7D7754C3F0D0"
 				"397EDAEFD995A733"
 			]
+			description: [
+				"This &fTricalcium Phosphate Bee&r is a vital component for strong foundations and healthy growth!"
+				""
+				"To obtain this &bessential&r friend, you'll need an &aApatite Bee&r and &f4blocks of raw tricalcium phosphate&r. It's a building block for success!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1757,6 +2199,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"A shimmer of pure magic, captured in a buzzing form!"
+				""
+				"This &5Arcane Crystal Bee&r hums with ancient energies, a true conduit of mystical power."
+				""
+				"To obtain this &b enchanted&r friend, you'll need &54 blocks of arcane crystal&r. Prepare to unlock hidden secrets!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1782,6 +2231,13 @@
 				"06DF13F808E9D5A6"
 				"3AF80D67FC6F1480"
 			]
+			description: [
+				"A conduit of pure energy, flowing with the essence of technology!"
+				""
+				"This &5Fluix Bee&r hums with a &dvibrant glow&r, a vital component for advanced systems."
+				""
+				"To obtain this &b energetic&r friend, you'll need &54 blocks of fluix&r. Its power is truly transformative!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1804,6 +2260,13 @@
 		}
 		{
 			dependencies: ["397EDAEFD995A733"]
+			description: [
+				"A vibrant hue of the earth, radiating natural beauty!"
+				""
+				"This &2Malachite Bee&r hums with the essence of lush landscapes and hidden mineral veins. Its &aemerald green&r color is truly captivating."
+				""
+				"To obtain this &2verdant&r friend, you'll need &a4 blocks of raw malachite&r. Discover the richness it brings!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1828,6 +2291,13 @@
 			dependencies: [
 				"2110351B7B1BA6FD"
 				"06DF13F808E9D5A6"
+			]
+			description: [
+				"Didn't know I needed to learn to &6program&r for &ebees&r."
+				""
+				"Question thou, what's a &9variable&r?"
+				""
+				"To obtain this &6rapidly &echanging&r&r little fella you need 4 blocks of&7 invar&r."
 			]
 			icon: {
 				Count: 1
@@ -1854,6 +2324,13 @@
 				"6861703F9E2D8CC6"
 				"397EDAEFD995A733"
 			]
+			description: [
+				"From the deepest, darkest corners, a new vibration emerges!"
+				""
+				"This &8Sculk Bee&r hums with an eerie, &bpulsating energy&r, a guardian of the silent depths."
+				""
+				"To obtain this &1 mysterious&r friend, you'll need &b64 sculk &bblocks&r and a digger bee. Listen closely, for its presence is felt more than seen!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1875,6 +2352,15 @@
 			y: -1.5d
 		}
 		{
+			description: [
+				"&o&4KaBoom?&r"
+				""
+				"&aYes Rico&r, &l&4Boom&r&r!"
+				""
+				"This one is quite...&o &9explosive&r&r. You better make sure you can handle it."
+				""
+				"To obtain it you feed a &6normal bee&r a peice of &ctnt&r."
+			]
 			icon: "productivebees:spawn_egg_creeper_bee"
 			id: "7B0E5576D3CE9A85"
 			shape: "hexagon"
@@ -1889,6 +2375,11 @@
 		}
 		{
 			dependencies: ["7B0E5576D3CE9A85"]
+			description: [
+				"Some say the Niter Bee is a bit of a &bfirecracker&r, always ready to &4explode&r with energy!"
+				""
+				"To obtain this &8sparky&r little friend, you'll need &f4 blocks of coal&r and a &eCreeper&r bee."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1910,6 +2401,13 @@
 		}
 		{
 			dependencies: ["38A17D0B43926CFD"]
+			description: [
+				"A delicate touch, weaving wonders from the finest threads!"
+				""
+				"This &fSilky Bee&r hums with a &7soft, gentle energy&r, a true master of fibrous creations."
+				""
+				"To obtain this &bintricate&r friend, you'll need a &aReed Bee&r and &f64 pieces of string&r. Its creations are truly exquisite!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1931,6 +2429,11 @@
 		}
 		{
 			dependencies: ["381080E73AA21EB3"]
+			description: [
+				"Powering up! This &4energetic&r bee is the key to all your automated dreams."
+				""
+				"To obtain this &creddy&r friend, you'll need a &eGlowstone&r bee and a &6Chocolate Mining Bee&r. Get ready to activate some serious fun!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1955,7 +2458,13 @@
 				"77F46D844A1449B7"
 				"06DF13F808E9D5A6"
 			]
-			description: [""]
+			description: [
+				"A fortress of dark power, forged in the heart of the earth!"
+				""
+				"This &8Obsidian Bee&r hums with an &0unyielding resilience&r, a true guardian of the deepest secrets."
+				""
+				"To obtain this &5indestructible&r friend, you'll need &04 blocks of obsidian&r. Its strength is legendary!"
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -1978,6 +2487,13 @@
 		}
 		{
 			dependencies: ["52218B702FCBFEDA"]
+			description: [
+				"Hot stuff coming through!"
+				""
+				"This &4fiery&r bee is a true master of the &8underground&r, transforming raw power into essential resources!"
+				""
+				"To obtain this &6molten&r friend, you'll need &aLeafcutter bee&r&r and &c4 lava buckets&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"
@@ -2000,6 +2516,11 @@
 		}
 		{
 			dependencies: ["68561766B704BC91"]
+			description: [
+				"This &8heavy&r hitter is known for its sturdy nature and ability to unearth valuable resources!"
+				""
+				"To obtain this &7metallic&r friend, you'll need a &9blue banded bee&r and &f4 blocks of iron&r."
+			]
 			icon: {
 				Count: 1
 				id: "productivebees:spawn_egg_configurable_bee"

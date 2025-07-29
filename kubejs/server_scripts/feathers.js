@@ -227,13 +227,7 @@ ServerEvents.recipes(event => {
             A: 'kubejs:phoenix_feather'
         }).noMirror().noShrink()
   
-        event.shaped(Item.of('gtceu:tantalite_ore', 32), [
-            ' A ',
-            'AAA',
-            '   '
-        ], {
-            A: 'kubejs:phoenix_feather'
-        }).noMirror().noShrink()
+      
   
         event.shaped(Item.of('gtceu:sphalerite_ore', 32), [
             'AA ',

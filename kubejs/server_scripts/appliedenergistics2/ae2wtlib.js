@@ -3,8 +3,8 @@ ServerEvents.recipes((event) => {
   event.remove({ id: "ae2wtlib:quantum_bridge_card" });
   event.shaped(`ae2wtlib:quantum_bridge_card`, ["AS", "Ed"], {
     A: "ae2:advanced_card",
-    S: "gtceu:luv_sensor",
-    E: "gtceu:luv_emitter",
+    S: "gtceu:ev_sensor",
+    E: "gtceu:ev_emitter",
     d: "#forge:tools/screwdrivers"
   })
   // Magnet Card

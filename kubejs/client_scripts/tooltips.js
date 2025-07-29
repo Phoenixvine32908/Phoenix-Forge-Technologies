@@ -196,7 +196,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('depleted_thorium', Text.of("§8Thorium exhausted of its breeding potential, primarily used for radiation shielding or disposal."));
 
     // Resonant Rhodium Alloy
-    addGTCEuMaterialTooltips('resonant_rhodium_alloy', Text.of("§bAn advanced rhodium-based alloy, infused with the power of polarity flipped for enhanced conductivity and stability in LuV applications."));
+    addGTCEuMaterialTooltips('resonant_rhodium_alloy', Text.of("§bAn advanced rhodium-based alloy, infused with the power of inverting polarity for enhanced conductivity and stability in LuV applications."));
 
     // --- Complex / Endgame GTCEu Materials with descriptions ---
     addGTCEuMaterialTooltips('akashic_zeronium', Text.of("§6A transcendental material, bridging the gap between reality and the Akasha."));
@@ -333,6 +333,59 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
         Text.of('  §cSource Gems §7(from §5Amethyst Shards and Source Of Magic§7)'),
         Text.of('  §bSource Imbued Titanium §7(from §fTitanium§7 and Source Of Magic)')
     ]);
+    // Tooltip for IV Confectionary Fabricator
+event.add('gtceu:iv_confectionery_fabricator', [
+    Text.of('§7A sophisticated machine for creating delightful treats.'),
+    Text.of('§fUsed for:'),
+    Text.of('§6Honey Treats §7(from §eCream, §6Honey, §fPeanut Butter§7, etc)'),
+]);
+
+// Tooltip for LuV Confectionary Fabricator
+event.add('gtceu:luv_confectionery_fabricator', [
+    Text.of('§7An advanced confectionary marvel, processing ingredients with immense power.'),
+    Text.of('§fUsed for:'),
+    Text.of('§6Honey Treats §7(from §eCream, §6Honey, §fPeanut Butter§7, etc)'),
+    Text.of('from §eCream, §6Honey, §fPeanut Butter§7, etc)')
+]);
+event.add('gtceu:comb_decanter', [
+    Text.of('§7A specialized machine for extracting valuable resources from combs.'),
+    Text.of('§fUsed for:'),
+    Text.of(' §aProcessing Combs §7(taking a §6Comb§7 and producing:'),
+    Text.of('   §eImpure Honey§7,'),
+    Text.of('   §dMineralized Wax §7(dependent on the comb§7),'),
+    Text.of('   §cPollen Concentrate§7,'),
+    Text.of('   §7Returns the §6Honeycomb Base.')
+]);
+event.add('gtceu:apis_progenitor', [
+    Text.of('§7A mystical device for evolving your bees.'),
+    Text.of('§fUsed for:'),
+    Text.of('§aTransforming Bees §7(takes a §eBee§7 and §f4 of the needed block§7 to create a new bee)'),
+]);
+event.add('gtceu:swarm_nuturer', [
+    Text.of('§7A specialized chamber for cultivating unique ambered creatures.'),
+    Text.of('§fUsed for:'),
+    Text.of('§aProducing Ambered Mobs §7(takes a §6Non-Consumed Amber Bee§7 and §cConsumed Mob Drops§7 to create an ambered mob)')
+]);
+
+
+// Tooltip for zpm Confectionery Fabricator
+event.add('gtceu:zpm_confectionery_fabricator', [
+    Text.of('§7The pinnacle of sweet creation, synthesizing treats at incredible speeds.'),
+    Text.of('§fUsed for:'),
+    Text.of(' §6Honey Treats §7(from §eCream, §6Honey, §fPeanut Butter§7, etc)'),
+]);
+event.add('gtceu:simulated_colony', [
+    Text.of('§7A sophisticated environment for advanced apiculture.'),
+    Text.of('§fUsed for:'),
+    Text.of(' §aProducing Special Combs from:'),
+    Text.of('   §eA Non-Consumed Bee§7,'),
+    Text.of('   §fA Block of the Material§7,'),
+    Text.of('   §bSugar Water§7, and'),
+    Text.of('   §6A Honeycomb Base§7')
+]);
+
+
+
  event.add('gtceu:emberwake_alloy_hearth', [
         Text.of('§7A formidable Alloy Blast Smelter of immense power.'),
         Text.of('§fCapable of §eParallel Processing §ffor accelerated production.'),

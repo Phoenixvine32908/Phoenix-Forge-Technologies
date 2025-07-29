@@ -18,7 +18,7 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('alchemical_imbuer', 'multiblock')
     .rotationState(RotationState.NON_Y_AXIS)
-    .recipeTypes('source_extraction', 'source_imbument')
+    .recipeTypes(['source_imbument','source_extraction'])
     .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
     .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
     .pattern(definition => FactoryBlockPattern.start()

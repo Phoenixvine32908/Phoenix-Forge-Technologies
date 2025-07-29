@@ -34,7 +34,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('heat_exchanging')
         .generator(true)
-        .noRecipeModifier()
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(() => Block.getBlock("kubejs:fissile_heat_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBBBBBB", "BCCCCCB", "BCCCCCB", "BCCCCCB", "BBBBBBB")
@@ -141,21 +141,27 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
 .aisle("BBCCMCCBB", "BBDEEEDBB", "BBDEEEDBB", "BBDEEEDBB", "BBDFFFDBB", "BBDFFFDBB", "BBCFFFCBB", "BBCFFFCBB", "BBBBBBBBB")
    .where("A", Predicates.blocks("minecraft:air"))
    .where('B', Predicates.any())
-   .where("C", Predicates.blocks("kubejs:fissile_reaction_safe_casing"))
+   .where("C", 
+      Predicates.blocks("kubejs:fissile_reaction_safe_casing").setMinGlobalLimited(10)
+         .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+           .or(Predicates.abilities(PartAbility.SUBSTATION_OUTPUT_ENERGY).setMaxGlobalLimited(2))
+         .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+   )
    .where("D", Predicates.blocks("kubejs:fissile_heat_safe_casing"))
    .where("E", Predicates.blocks("minecraft:tinted_glass"))
    .where("F", Predicates.blocks("gtceu:high_temperature_smelting_casing"))
    .where("G", Predicates.blocks("gtceu:heat_vent"))
    .where("H", Predicates.blocks("gtceu:ptfe_pipe_casing"))
    .where("I", Predicates.blocks("kubejs:base_fission_casing"))
-   .where("J", Predicates.blocks("gtceu:rtm_alloy_coil_block"))
+   .where("J", Predicates.blocks("gtceu:hssg_coil_block"))
    .where("K", Predicates.blocks("kubejs:fission_cooling_casing"))
    .where("L", Predicates.blocks("gtceu:tungstensteel_pipe_casing"))
    .where('M', Predicates.controller(Predicates.blocks(definition.get())))
-            .build())
-        .workableCasingRenderer(
-          "kubejs:block/fissile_reaction_safe_casing",
-            "gtceu:block/multiblock/fusion_reactor",
-            false
-        )
+   .build()
+)
+.workableCasingRenderer(
+  "kubejs:block/fissile_reaction_safe_casing",
+    "gtceu:block/multiblock/fusion_reactor",
+    false
+);
 });

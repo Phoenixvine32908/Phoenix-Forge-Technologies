@@ -112,51 +112,53 @@ Invar bee: IV
 Sticky Resin bee: IV
 
 Thorium bee: LuV
-Radioactive bee: LUV+
-Graphite bee: LUV+
-Sky steel bee: LUV+
-Sphlearite bee: LUV+
-Neutronium bee: UHV+
-Ancient bee: LUV+
+Graphite bee: LUV
+Sphlearite bee: LUV
+Ancient bee: LUV
 Ender bee: LUV
+Apatie bee: LUV
+Acidic bee: LUV
+Chromite bee: LUV
+Pyrolusite bee: LUV
+Platinum bee: LUV
+Bismuth bee: LUV
+Glowing Bee: LUV
+Bastnasite bee: LUV
+Tetrahedrite bee: LUV
+Titanium bee: LUV
+Sulfur bee: LUV
+Oilsands bee: LUV
+Cobalt bee: LUV
+Wannabee: LUV
+Tantalite bee: LUV
+Barite bee: LUV
+Vanadium magnetite bee: LUV
+Draconic bee: LUV
+Pyrochlore bee: LUV
+Molybdenum bee: LUV
+Voidglass shard bee: LUV
+Crystallized fluxstone bee: LUV
+Ignisium bee: LUV
+
+
+Radioactive bee: LUV+
+Sky steel bee: LUV+
+Neutronium bee: UHV+
 Osmium bee: ZPM+
 Palladium bee: ZPM+
-Apatie bee: LUV
-Acidic bee: LUV+
 Deorum bee: LUV+
-Pyrolusite bee: LUV
-Platinum bee: LUV+
 Tungsten bee: LUV+
-Chromite bee: LUV+
 Calorite bee: LUV+
-Bismuth bee: LUV+
 Iridium bee: LUV+
-Glowing Bee: LUV+
-Sheldonite bee: ZPM+
-Bastnasite bee: LUV+
-Tetrahedrite bee: LUV+
-Titanium bee: LUV+
+Sheldonite bee: ZPM
 Neodymium bee: LUV+
 Ostrum bee: LUV+
-Sulfur bee: LUV
-Oilsands bee: LUV+
 Chaos bee: LUV+
-Cobalt bee: LUV+
 Draconium bee: LUV+
-Wannabee: LUV+
 Stellarite bee: LUV+
 Oily bee: LUV+
-Vanadium magnetite bee: LUV+
-Barite bee: LUV+
-Tantalite bee: LUV+
 Naquadah bee: LUV+
-Draconic bee: LUV+
-Pyrochlore bee: LUV+
-Molybdenum bee: LUV+
 Entropy bee: ZPM+
-Voidglass shard bee: LUV+
 Polarity Flipped bismuthite bee: ZPM+
-Crystallized fluxstone bee: LUV+
-Ignisium bee: LUV+
 
 Dye: UV

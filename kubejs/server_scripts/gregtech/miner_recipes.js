@@ -264,7 +264,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_nevvonian_iron',
             '12x gtceu:raw_ignisium'
         )
-        .duration(6750) // Increased from 4000
+        .duration(5500) // Increased from 4000
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 
@@ -286,7 +286,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             '12x gtceu:raw_crystallized_fluxstone',
             '3x gtceu:raw_polarity_flipped_bismuthite',
         )
-        .duration(6250) 
+        .duration(4750) 
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension('ad_astra:moon');
 

@@ -35,6 +35,19 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
 });
 
 GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
+
+    GTMachineUtils.registerDrum(GTMaterials.get('aluminfrost'), 160000, "Aluminfrost Drum");
+    GTMachineUtils.registerCrate(GTMaterials.get('aluminfrost'), 100, "Aluminfrost Crate");
+    GTMachineUtils.registerDrum(GTMaterials.get('frost_reinforced_stained_steel'), 350000, "Frost Reinforced Drum");
+    GTMachineUtils.registerCrate(GTMaterials.get('frost_reinforced_stained_steel'), 116, "Frost Reinforced Crate");
+    GTMachineUtils.registerDrum(GTMaterials.get('source_imbued_titanium'), 750000, "Source Imbued Titanium Drum");
+    GTMachineUtils.registerCrate(GTMaterials.get('source_imbued_titanium'), 140, "Source Imbued Titanium Crate");
+    GTMachineUtils.registerDrum( GTMaterials.get('void_touched_tungsten_steel'), 1300000, "Void Touched Tungsten Steel Drum");
+    GTMachineUtils.registerCrate( GTMaterials.get('void_touched_tungsten_steel'), 160, "Void Touched Tungsten Steel Crate");
+    GTMachineUtils.registerDrum(GTMaterials.get('resonant_rhodium_alloy'), 2300000, "Resonant Rhodium Alloy Drum");
+    GTMachineUtils.registerCrate(GTMaterials.get('resonant_rhodium_alloy'), 200, "Resonant Rhodium Alloy Crate");
+
+
     phoenixvine.create("earth_sieve", "simple")
     .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
     .definition((tier, builder) =>
@@ -54,7 +67,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
                 
             )
         phoenixvine.create("confectionery_fabricator", "simple")
-        .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM, GTValues.UV, GTValues.UHV,GTValues.UEV,GTValues.UIV,GTValues.UXV,GTValues.OpV)
+        .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM)
         .definition((tier, builder) =>
             builder 
                 .rotationState(RotationState.NON_Y_AXIS)
@@ -99,4 +112,5 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
             "gtceu:block/multiblock/fusion_reactor",
             false
         )
+        
 });
