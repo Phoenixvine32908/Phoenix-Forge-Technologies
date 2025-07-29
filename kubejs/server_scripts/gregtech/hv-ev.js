@@ -177,12 +177,17 @@ ServerEvents.recipes(event => {
     .itemOutputs('2x kubejs:fissile_reaction_safe_casing')
     .inputFluids('gtceu:stainless_steel 250')
     .duration(100)
-    .EUt(GTValues.VA[GTValues.LV]/2)
+    .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.assembler('graphene_based_fission_rods')
     .itemInputs('16x gtceu:graphene_foil', 'gtceu:solid_machine_casing', 'gtceu:zircalloy_frame')
     .circuit(1)
     .itemOutputs('2x kubejs:base_fission_casing')
     .inputFluids('gtceu:steel 250')
+    .duration(100)
+    .EUt(GTValues.VA[GTValues.HV]/2)
+   event.recipes.gtceu.macerator('aurum_wood_dust')
+    .itemInputs('1x forbidden_arcanus:aurum_log')
+    .itemOutputs('4x gtceu:aurum_wood_dust')
     .duration(100)
     .EUt(GTValues.VA[GTValues.LV]/2)
     event.recipes.gtceu.assembler('fissile_safe_gearbox')
@@ -311,21 +316,7 @@ ServerEvents.recipes(event => {
     .outputFluids('gtceu:medium_pressure_fissile_steam 100')
     .chancedOutput('gtceu:low_level_radioactive_waste_ingot', 500, 0)
     .duration(3500)
-    event.recipes.gtceu.heat_exchanging('fission3')
-    .inputFluids('gtceu:medium_pressure_fissile_steam 75')
-    .outputFluids('gtceu:distilled_water 150')
-    .duration(40)
-    .EUt(-GTValues.VA[GTValues.EV])
-       event.recipes.gtceu.heat_exchanging('fission4')
-    .inputFluids('gtceu:critical_steam 500')
-    .outputFluids('gtceu:distilled_water 1000')
-    .duration(250)
-    .EUt(-GTValues.VA[GTValues.IV])
-      event.recipes.gtceu.heat_exchanging('hot_nak_cooling')
-    .inputFluids('gtceu:hot_sodium_potassium 500')
-    .outputFluids('gtceu:sodium_potassium 500')
-    .duration(600)
-    .EUt(-GTValues.VA[GTValues.IV])
+  
 
     event.recipes.gtceu.centrifuge('fissio')
     .itemInputs('5x gtceu:low_level_radioactive_waste_dust')
@@ -382,8 +373,8 @@ event.recipes.gtceu.source_extraction('source_from_coal')
     .EUt(GTValues.VA[GTValues.HV] / 2.5)
 
 event.recipes.gtceu.source_extraction('source_from_coke')
-    .itemInputs('1x gtceu:coke')
-    .outputFluids('gtceu:source_of_magic 600')
+    .itemInputs('1x gtceu:coke_gem')
+    .outputFluids('gtceu:source_of_magic 400')
     .duration(250)
     .EUt(GTValues.VA[GTValues.HV] / 2.5)
 
@@ -595,5 +586,66 @@ event.recipes.gtceu.assembler('earthbound_miner_module')
     .inputFluids('kubejs:cryo_ember_fluid 12000')
     .itemOutputs('kubejs:earthbound_miner_module')
     .duration(600)
+    .EUt(GTValues.VA[GTValues.EV]);
+
+
+    event.recipes.gtceu.assembler('aluminfrost_drum')
+    .itemInputs('2x gtceu:long_aluminfrost_rod', '4x gtceu:aluminfrost_plate')
+    .itemOutputs('kubejs:aluminfrost_drum')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.LV]);
+
+    event.recipes.gtceu.assembler('aluminfrost_crate')
+    .itemInputs('4x gtceu:long_aluminfrost_rod', '4x gtceu:aluminfrost_plate')
+    .itemOutputs('kubejs:aluminfrost_crate')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.LV]);
+
+    event.recipes.gtceu.assembler('void_touched_tungsten_steel_drum')
+    .itemInputs('2x gtceu:long_void_touched_tungsten_steel_rod', '4x gtceu:void_touched_tungsten_steel_plate')
+    .itemOutputs('kubejs:void_touched_tungsten_steel_drum')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.EV]);
+
+    event.recipes.gtceu.assembler('void_touched_tungsten_steel_crate')
+    .itemInputs('4x gtceu:long_void_touched_tungsten_steel_rod', '4x gtceu:void_touched_tungsten_steel_plate')
+    .itemOutputs('kubejs:void_touched_tungsten_steel_crate')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.EV]);
+
+    event.recipes.gtceu.assembler('frost_reinforced_stained_steel_drum')
+    .itemInputs('2x gtceu:long_frost_reinforced_stained_steel_rod', '4x gtceu:frost_reinforced_stained_steel_plate')
+    .itemOutputs('kubejs:frost_reinforced_stained_steel_drum')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.HV]);
+
+    event.recipes.gtceu.assembler('frost_reinforced_stained_steel_crate')
+    .itemInputs('4x gtceu:long_frost_reinforced_stained_steel_rod', '4x gtceu:frost_reinforced_stained_steel_plate')
+    .itemOutputs('kubejs:frost_reinforced_stained_steel_crate')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.HV]);
+
+    event.recipes.gtceu.assembler('source_imbued_titanium_drum')
+    .itemInputs('2x gtceu:long_source_imbued_titanium_rod', '4x gtceu:source_imbued_titanium_plate')
+    .itemOutputs('kubejs:source_imbued_titanium_drum')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.EV]);
+
+    event.recipes.gtceu.assembler('source_imbued_titanium_crate')
+    .itemInputs('4x gtceu:long_source_imbued_titanium_rod', '4x gtceu:source_imbued_titanium_plate')
+    .itemOutputs('kubejs:source_imbued_titanium_crate')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.EV]);
+
+    event.recipes.gtceu.assembler('resonant_rhodium_alloy_drum')
+    .itemInputs('2x gtceu:long_resonant_rhodium_alloy_rod', '4x gtceu:resonant_rhodium_alloy_plate')
+    .itemOutputs('kubejs:resonant_rhodium_alloy_drum')
+    .duration(200)
+    .EUt(GTValues.VA[GTValues.EV]);
+
+    event.recipes.gtceu.assembler('resonant_rhodium_alloy_crate')
+    .itemInputs('4x gtceu:long_resonant_rhodium_alloy_rod', '4x gtceu:resonant_rhodium_alloy_plate')
+    .itemOutputs('kubejs:resonant_rhodium_alloy_crate')
+    .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
 })

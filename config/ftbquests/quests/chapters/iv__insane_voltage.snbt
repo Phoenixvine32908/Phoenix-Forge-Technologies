@@ -20,7 +20,7 @@
 				"300348B1238BCB9A"
 				"7A1E3C3A2D699C5B"
 			]
-			description: ["This Superconductor will be required for progression during &dLuV&r... when you delve deeper into &bResearch&r."]
+			description: ["These Superconductors will be required for progression during &dLuV&r... when you delve deeper into &bResearch&r or &6Lasers."]
 			icon: "gtceu:samarium_iron_arsenic_oxide_double_wire"
 			id: "52D952ADBEB67454"
 			rewards: [{
@@ -31,12 +31,19 @@
 			}]
 			size: 0.75d
 			subtitle: "So you're telling me an Ivy conducted this Super?"
-			tasks: [{
-				icon: "gtceu:samarium_iron_arsenic_oxide_single_wire"
-				id: "3789CEDA4AEEBD91"
-				item: "gtceu:samarium_iron_arsenic_oxide_single_wire"
-				type: "item"
-			}]
+			tasks: [
+				{
+					icon: "gtceu:samarium_iron_arsenic_oxide_single_wire"
+					id: "3789CEDA4AEEBD91"
+					item: "gtceu:samarium_iron_arsenic_oxide_single_wire"
+					type: "item"
+				}
+				{
+					id: "67CCCC99F83071DA"
+					item: "gtceu:superconductive_honey_single_wire"
+					type: "item"
+				}
+			]
 			title: "IV Superconductors"
 			x: -0.75d
 			y: 1.5d
@@ -95,6 +102,7 @@
 			]
 			icon: "gtceu:hssg_coil_block"
 			id: "7A1E3C3A2D699C5B"
+			ignore_reward_blocking: true
 			rewards: [{
 				count: 3
 				id: "4A37D66CC212D5C0"
@@ -840,7 +848,7 @@
 				item: "gtceu:resonant_rhodium_alloy_dust"
 				type: "item"
 			}]
-			title: "Rhodium-Plated Palladium"
+			title: "Resonant-Rhodium Alloy"
 			x: 3.75d
 			y: 1.5d
 		}
@@ -1775,6 +1783,9 @@
 			description: [
 				"Forget traditional breeding; you &6transform&r bees using matching materials and ores!"
 				""
+				""
+				"{ \"text\": \"You ready to take them on? If so, click here!\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7E3321A610CAAA83\" } }"
+				""
 				"This is the most complex phase of the Bee Line, requiring you to find &aSpecial Nests&r in specific biomes. Lure the bees with &bHoney Treats&r (or specialized catalysts for rare nests) to initiate the moving-in process."
 				""
 				"Once caged, transform them to begin the &dBee Line&r proper! Remember to check &6EMI&r for catalyst items and required biomes."
@@ -1896,6 +1907,146 @@
 			]
 			x: 7.59d
 			y: -0.66d
+		}
+		{
+			dependencies: ["7A1E3C3A2D699C5B"]
+			description: [
+				"Prepare for a true engineering feat! Your &b&lHigh-Performance Breeder Reactor&r is indeed the cornerstone of &1&lIV&r&r and &d&lLUV&r power, but a single unit won't suffice."
+				""
+				"You must construct and operate &6&lseparate High-Performance Breeder Reactors&r for each of your vital breeding chains: one dedicated to the &c&lU-235 line,&r and another for the &9&lU-233 line.&r"
+				""
+				"Can you build the parallel infrastructure to sustain both critical power paths? Your ultimate energy future depends on it!"
+			]
+			id: "7025B4400DBD6617"
+			rewards: [{
+				count: 10
+				id: "445303711BD3791B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.75d
+			subtitle: "You are telling me I can breed power?!"
+			tasks: [
+				{
+					id: "2D12940726DD8B8F"
+					item: "gtceu:high_performace_breeder_reactor"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "4F44A4037156A42D"
+					item: { Count: 16, id: "kubejs:fission_cooling_casing" }
+					type: "item"
+				}
+				{
+					count: 120L
+					id: "4B66FFD4FB0AA08B"
+					item: { Count: 120, id: "kubejs:fissile_reaction_safe_casing" }
+					type: "item"
+				}
+				{
+					count: 42L
+					id: "7B88AC058DEA3227"
+					item: { Count: 42, id: "kubejs:fissile_heat_safe_casing" }
+					type: "item"
+				}
+				{
+					count: 56L
+					id: "08A0838EB6725BCE"
+					item: { Count: 56, id: "kubejs:base_fission_casing" }
+					type: "item"
+				}
+				{
+					count: 22L
+					id: "5BDA3170B3F9B8C3"
+					item: { Count: 22, id: "gtceu:hssg_coil_block" }
+					type: "item"
+				}
+				{
+					count: 49L
+					id: "63E6C3B08AAD2847"
+					item: "gtceu:ptfe_pipe_casing"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "7C79E0A9DB243817"
+					item: { Count: 16, id: "gtceu:tungstensteel_pipe_casing" }
+					type: "item"
+				}
+				{
+					count: 28L
+					id: "3579379C95024D7F"
+					item: { Count: 28, id: "gtceu:heat_vent" }
+					type: "item"
+				}
+				{
+					count: 48L
+					id: "0892CE3ABEC8306E"
+					item: { Count: 48, id: "gtceu:high_temperature_smelting_casing" }
+					type: "item"
+				}
+				{
+					count: 36L
+					id: "0BF2CDD82E26AE93"
+					item: { Count: 36, id: "minecraft:tinted_glass" }
+					type: "item"
+				}
+			]
+			x: 0.4d
+			y: 0.4d
+		}
+		{
+			dependencies: ["7025B4400DBD6617"]
+			description: [
+				"Your factory faces a &e&lnew challenge!&r The first &c&lDriver Fuel for Fissile Breeding&r is here, promising immense power (around &a&l2 ZPM amps per tick&r). But there's a catch: its &6&lrecipe time is extremely low.&r"
+				""
+				"To craft this fuel, you'll need a &b&lrapid supply&r of &3&lUranium-235&r (from UF6 processing) and a continuous flow of &d&lCryo Zirconium Binding Solution.&r"
+				""
+				"Can your production lines handle the &e&lblistering speed required,&r or will your breeding efforts &4&lstall?&r"
+			]
+			id: "65F07A79BFA0ED68"
+			rewards: [{
+				count: 8
+				id: "21BAF4A683AAB71A"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.75d
+			subtitle: "Quite the enriching activity."
+			tasks: [{
+				id: "05B6A993EBA32DE8"
+				item: "kubejs:u235_fuel_pellet"
+				type: "item"
+			}]
+			x: 0.375d
+			y: -0.375d
+		}
+		{
+			dependencies: ["7025B4400DBD6617"]
+			description: [
+				"A new era of breeding awaits! Your Advanced Pressurized Fission Reactor is producing something vital: &e&lLow Level Radioactive Waste Dust.&r This seemingly innocuous byproduct is actually the key to unlocking &a&lThorium!&r"
+				""
+				"Refine this waste to forge the &b&lThorium Fuel Pellets&r, the essential &9&lblanket fuel&r for both your &c&lU-235&r and &d&lU-233&r breeding lines."
+				""
+				"Can you harness the waste and unleash the power of thorium?"
+			]
+			id: "1AB48379B96A9E81"
+			rewards: [{
+				count: 9
+				id: "353B6D5DF8E70D19"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.7d
+			subtitle: "Finnaly, a use for thorium!"
+			tasks: [{
+				id: "06B937A6E48C2B17"
+				item: "kubejs:thorium_fuel_pellet"
+				type: "item"
+			}]
+			x: 1.4d
+			y: 0.35d
 		}
 	]
 	subtitle: ["Automate everything and learn how to assemble"]

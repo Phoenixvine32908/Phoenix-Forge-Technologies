@@ -33,8 +33,6 @@
 				"The early game is intended to be mostly &aeasy&r. To that end, rubber can be made like any other plate using hammers, and steam production has been &2significantly buffed&r."
 				""
 				"{@pagebreak}"
-				""
-				"(Yes, the pack icon is AI generated. I'm not very skilled with complicated textures or icons, so if anyone has any suggestions, I'd be &9very happy&r to hear them!)"
 			]
 			icon: "kubejs:pft_icon"
 			id: "10ED20D1ED4CABD8"
@@ -323,12 +321,25 @@
 				}
 			}
 			id: "0C301014EC4D17B8"
-			rewards: [{
-				count: 8
-				id: "1A39F42877915C72"
-				item: "minecraft:leather"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 8
+					id: "1A39F42877915C72"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					id: "23A86E50C9760F6F"
+					item: {
+						Count: 1
+						id: "hangglider:hang_glider"
+						tag: {
+							Damage: 0
+						}
+					}
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 0.5d
 			subtitle: "No, it's Steve with a glider!"
@@ -620,9 +631,7 @@
 			description: [
 				"Let's dive into the fascinating world of GregTech power, starting with &6EU (Energy Units)&r."
 				""
-				"Now, the EU system operates quite differently from other power systems you might be familiar with. A crucial distinction is the &bvoltage tier system&r. &4BE WARNED&r: connecting higher voltage tier machines or energy hatches to lower tier infrastructure will result in &4CATASTROPHIC FAILURE – THINK EXPLOSIONS!&r"
-				""
-				"Therefore, heed this advice: &cNEVER&r connect a &2Low Voltage (LV)&r machine to a &3Medium Voltage (MV)&r cable. Trust me on this; we want to safeguard our reliable machinery from voltage mishaps."
+				"Now, the EU system operates quite differently from other power systems you might be familiar with. A crucial distinction is the &bvoltage tier system&r. &4BE WARNED&r: connecting higher voltage tier generators or dynamo hatches to lower tier infrastructure will result in &4CATASTROPHIC FAILURE – THINK EXPLOSIONS!&r"
 				""
 				"Conversely, &cNEVER&r connect an &2LV cable&r to an &3MV generator or machine&r. Doing so will overload and destroy the cable, leading to a frustrating waste of valuable resources."
 				""
@@ -695,7 +704,6 @@
 			y: -2.5d
 		}
 		{
-			dependencies: ["1BC893748CB03BEF"]
 			description: [
 				"&bShift Right-Clicking&r a multiblock controller without anything in hand shows a &a3D preview&r of its structure. Doing the same while holding a &eTerminal&r will &2automatically build&r the multiblock."
 				""
@@ -728,7 +736,6 @@
 			y: -3.0d
 		}
 		{
-			dependencies: ["1BC893748CB03BEF"]
 			description: [
 				"The &aProspector&r is an amazing tool that will help you find veins in no time!"
 				""

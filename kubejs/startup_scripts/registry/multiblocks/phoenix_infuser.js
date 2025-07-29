@@ -15,10 +15,10 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
         .setSound(GTSoundEntries.FURNACE);
 });
 
-/**GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
+GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('phoenix_infuser', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.OpV))
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('phoenix_infuser', 'phoenix_heart_hearth')
+        .recipeTypes(['phoenix_infuser', 'phoenix_heart_hearth'])
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .appearanceBlock(() => Block.getBlock("kubejs:phoenix_enriched_tritanium_casing"))
         .pattern(definition => FactoryBlockPattern.start()
@@ -81,4 +81,8 @@ GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
            .where('S', Predicates.controller(Predicates.blocks(definition.get())))
                     .build())
                     .workableCasingRenderer('kubejs:block/phoenix_enriched_tritanium_casing', 'gtceu:block/multiblock/fusion_reactor', false)
-        });           */                                                                                                                                 
+
+
+
+                    
+        });                                                                                                                                        

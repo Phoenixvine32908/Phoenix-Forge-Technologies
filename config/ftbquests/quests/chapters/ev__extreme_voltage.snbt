@@ -512,7 +512,7 @@
 		{
 			dependencies: ["478B0D55369C0F7F"]
 			description: [
-				"This advanced alloy, &bVoid Touched Tungsten Steel&r, commands respect with its complex composition. You'll produce its dust by mixing &5liquid ender air&r, &32 Vanadium Steel Dust&r, &34 Tungsten Dust&r, and &34 Voidglass Shard Dust&r. Once mixed, this dust will need to be smelted into its final form."
+				"This advanced alloy, &bVoidium Touched Tungsten Steel&r, commands respect with its complex composition. You'll produce its dust by mixing &5liquid ender air&r, &32 Vanadium Steel Dust&r, &34 Tungsten Dust&r, and &34 Voidglass Shard Dust&r. Once mixed, this dust will need to be smelted into its final form."
 				""
 				"Right now, it's a crucial ingredient for &3Energy&r or &3Dynamo Hatches&r, bringing you one step closer to moving beyond those pesky single-block Generators!"
 				""
@@ -541,7 +541,7 @@
 					type: "item"
 				}
 			]
-			title: "Void Touched Tungsten Steel"
+			title: "Voidium Touched Tungstensteel"
 			x: 6.75d
 			y: 2.25d
 		}
@@ -2605,6 +2605,20 @@
 			title: "Mining Modules"
 			x: 4.5d
 			y: -1.125d
+		}
+		{
+			dependencies: ["39E7997F3080250A"]
+			description: ["These &c&l&oamazing&r little devices stand out from other peer-to-peer (P2P) systems due to one &e&l&nspecial&r little &5&l&npart&r. Unlike most P2P setups where you have to actively &b&lpush&r data, these innovative devices &d&lautomatically pull&r it in! This unique \"&9&lauto-pull&r\" functionality makes them incredibly efficient and user-friendly."]
+			id: "571E8181C0A35BA4"
+			size: 0.5d
+			subtitle: "Extracting Time"
+			tasks: [{
+				id: "6BBD4517AA266692"
+				item: "crazyae2addons:extracting_item_p2p_tunnel"
+				type: "item"
+			}]
+			x: 8.75d
+			y: 3.5d
 		}
 	]
 	subtitle: ["Improve your infrastructure and parallelise your setups"]

@@ -27,8 +27,8 @@ ServerEvents.recipes(phoenix => {
 
         phoenix.recipes.gtceu.centrifuge('impure_honey_purification')
         .notConsumable("gtceu:fluid_filter")
-        .inputFluids("gtceu:impure_honey 100")
-        .outputFluids("productivebees:honey 75")
+        .inputFluids("gtceu:impure_honey 1000")
+        .outputFluids("productivebees:honey 750")
         .itemOutputs("1x gtceu:wax_dust")
         .duration(40)
         .EUt(GTValues.VA[GTValues.IV]/2)
@@ -278,7 +278,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             .EUt(EUt)
             .duration(duration)
             .notConsumable(inputItem.withCount(1).weakNBT())
-            .notConsumable(pollinationBlock)
+            .itemInputs(pollinationBlock)
             .inputFluids("gtceu:sugar_water 100")
             .itemInputs("kubejs:honey_comb_base")
             .itemOutputs(output);
@@ -324,7 +324,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         electrotine: Item.of('gtceu:raw_electrotine_block'),
         constantan: Item.of('thermal:constantan_block'),
         redstone: Item.of('minecraft:redstone_block'),
-        skeleton: Item.of('minecraft:bone_block'),
+        skeletal: Item.of('minecraft:bone_block'),
         zombie: Item.of('minecraft:rotten_flesh'),
         silky: Item.of('minecraft:string'),
         niter: Item.of('thermal:niter_block'),
@@ -353,7 +353,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         nickel: Item.of('gtceu:nickel_block'),
         fluix: Item.of('ae2:fluix_block'),
         invar: Item.of('gtceu:invar_block'),
-        amber: Item.of('gtceu:sticky_resin')
+        sticky_resin: Item.of('gtceu:sticky_resin'),
     };
 
     const BEE_MATERIAL_TYPES = Object.keys(inputBeeCageDisplayNames); // Dynamically use keys from the map
@@ -417,7 +417,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             id: 'kubejs:gtceu/apis_progenitor/exp_from_water',
             outputBeeType: 'experience',
             inputBeeType: 'emerald',
-            itemInput: '48x crazyae2addons:xp_shard',
+            itemInput: '64x crazyae2addons:xp_shard',
             fluidInput: null,
             duration: 360,
             EUt: GTValues.VA[GTValues.IV] / 2
@@ -615,6 +615,26 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             EUt: GTValues.VA[GTValues.IV] / 2
             // skeletal bee + wither rose 
         },
+         {
+            id: 'kubejs:gtceu/apis_progenitor/zombee',
+            outputBeeType: 'zombie',
+            inputBeeType: 'skeletal',
+            itemInput: '256x minecraft:rotten_flesh',
+            fluidInput: null,
+            duration: 360,
+            EUt: GTValues.VA[GTValues.IV] / 2
+            // skeletal bee + rotten flesh
+        },
+         {
+            id: 'kubejs:gtceu/apis_progenitor/skeletal_from_water',
+            outputBeeType: 'skeletal',
+            inputBeeType: 'crystalline',
+            itemInput: '256x minecraft:bone',
+            fluidInput: null,
+            duration: 360,
+            EUt: GTValues.VA[GTValues.IV] / 2
+            // skeletal bee + wither rose 
+        },
         {
             id: 'kubejs:gtceu/apis_progenitor/cheesy_from_water',
             outputBeeType: 'cheese',
@@ -713,7 +733,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             id: 'kubejs:gtceu/apis_progenitor/ghostly',
             outputBeeType: 'ghostly',
             inputBeeType: 'cobalt',
-            itemInput: '4x minecraft:ghast_tear',
+            itemInput: '32x minecraft:ghast_tear',
             fluidInput: null,
             duration: 360,
             EUt: GTValues.VA[GTValues.IV] / 2
@@ -794,7 +814,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             id: 'kubejs:gtceu/apis_progenitor/steel_from_water',
             outputBeeType: 'steel',
             inputBeeType: 'iron',
-            itemInput: '4x gtceu:wrought_iron_block',
+            itemInput: '64x gtceu:steel_block',
             fluidInput: null,
             duration: 360,
             EUt: GTValues.VA[GTValues.IV] / 2
@@ -973,7 +993,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
             id: `kubejs:gtceu/decanting/${bee}`,
             bee: bee, // The 'bee' argument is used to construct the NBT for the input comb
             EUt: 4000, // IV tier
-            duration: 400,
+            duration: 3600,
             rawWaxDustId: rawWaxDustItem // Pass the specific raw wax dust ID
         });
     });
@@ -993,7 +1013,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
     }) {
         const inputItem = `gtceu:raw_${materialName}_wax_dust`;
         const outputFluid = `gtceu:honeyed_${materialName}`;
-        const outputFluidAmount = 500; // Example: 500mB of honeyed fluid per processed dust
+        const outputFluidAmount = 1000; // Example: 500mB of honeyed fluid per processed dust
 
         // Using 'centrifuge' machine for this separation/processing
         // Consider if 'mixer' or another machine type might be more appropriate based on your pack's logic.
@@ -1024,7 +1044,7 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         // Vanilla Ores / GTCEu Raw Ores (prefer GTCEu raw if exists, then vanilla raw, then vanilla block if no raw)
        pitchblende: Item.of('gtceu:raw_pitchblende', 4),
        cobalt: Item.of('gtceu:cobalt_dust', 4),
-       steel: Item.of('gtceu:steel_ingot', 1),
+       steel: Item.of('gtceu:steel_ingot', 3),
        ghostly: Item.of('minecraft:ghast_tear', 1),
        salty: Item.of('gtceu:raw_salt', 4),
        apatite: Item.of('gtceu:raw_apatite', 4),
@@ -1067,9 +1087,9 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         malachite: Item.of('gtceu:raw_malachite', 4),
 
         // Other materials (non-ore type outputs)
-        experience: Item.of('crazyae2addons:_shard', 32),
+        experience: Item.of('crazyae2addons:xp_shard', 32),
         arcane: Item.of('ars_nouveau:source_gem', 4),
-        blazing: Item.of('minecraft:blaze_powder', 4), // Already 4, keep
+        blazing: Item.of('minecraft:blaze_powder', 1), // Already 4, keep
         prismarine: Item.of('minecraft:prismarine_shard', 4), // Already 4, keep
         sculk: Item.of('minecraft:sculk', 4),
         rune: Item.of('forbidden_arcanus:rune', 4),
@@ -1087,21 +1107,21 @@ function makeApisProgenitorTransformationRecipe(recipes) {
         niter: Item.of('thermal:niter_dust', 4), // Changed from 32 to 4
         slimy: Item.of('minecraft:slime_ball', 4), // Changed from 16 to 4
         menril: Item.of('integrateddynamics:menril_log', 4), // Changed from 32 to 4
-        crystalline: Item.of('minecraft:quartz', 4), // Already 4, keep
+        crystalline: Item.of('gtceu:raw_nether_quartz', 4), // Already 4, keep
         sodalite: Item.of('gtceu:raw_sodalite', 4), // Already 4, keep
         obsidian: Item.of('minecraft:obsidian', 4), // Changed from 8 to 4
         rocked: Item.of('gtceu:raw_rock_salt', 4), // Already 4, keep
         super_factory: Item.of('sfm:cable', 4), // Changed from 1 to 4
-        desh: Item.of('ad_astra:raw_desh', 4), // Already 4, keep
+        desh: Item.of('ad_astra:raw_desh', 9), // Already 4, keep
         crimson: Item.of('minecraft:crimson_fungus', 4),
         infinity: Item.of('enderio:grains_of_infinity', 4),
         spacial: Item.of('ae2:certus_quartz_crystal', 4),
-        arcane_crystal: Item.of('forbidden_arcanus:arcane_crystal', 4),
-        magmatic: Item.of('minecraft:magma_block', 4),
+        arcane_crystal: Item.of('forbidden_arcanus:arcane_crystal', 1),
+        magmatic: Item.of('minecraft:magma_block', 1),
         nickel: Item.of('gtceu:raw_nickel', 4),
         fluix: Item.of('ae2:fluix_crystal', 4),
-        invar: Item.of('gtceu:invar_ingot', 4),
-        sticky_resin: Item.of('gtceu:sticky_resin', 16)
+        invar: Item.of('gtceu:invar_ingot', 1),
+        sticky_resin: Item.of('gtceu:sticky_resin', 4)
         // Add more specific mappings as needed for other BEE_MATERIAL_TYPES
     };
 

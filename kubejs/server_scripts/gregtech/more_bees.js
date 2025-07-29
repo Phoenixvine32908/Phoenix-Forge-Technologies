@@ -156,7 +156,7 @@ ServerEvents.recipes(phoenix => {
     phoenix.recipes.gtceu.apis_progenitor('kubejs:gtceu/apis_progenitor/coal_from_leaf_cutter')
         .EUt(GTValues.VA[GTValues.IV] / 2)
         .duration(360)
-        .itemInputs('1x minecraft:lava_bucket')
+        .itemInputs('4x minecraft:lava_bucket')
         // Input: Leaf Cutter Bee (non-configurable)
                 .itemInputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:leafcutter_bee",name: "Leafcutter Bee"})))
         // Output: Configurable Coal Bee
@@ -166,7 +166,7 @@ ServerEvents.recipes(phoenix => {
     phoenix.recipes.gtceu.apis_progenitor('kubejs:gtceu/apis_progenitor/silicon_from_nomad')
         .EUt(GTValues.VA[GTValues.IV] / 2)
         .duration(360)
-        .itemInputs('1x gtceu:silicon_block')
+        .itemInputs('16x gtceu:silicon_block')
         // Input: Nomad Bee (non-configurable)
                 .itemInputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:nomad_bee",name: "Nomad Bee"})))
         // Output: Configurable Silicon Bee

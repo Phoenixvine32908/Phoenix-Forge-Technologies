@@ -9,6 +9,7 @@ ServerEvents.recipes((event) => {
     ["minecraft:dark_oak_sapling", "minecraft:dark_oak_log"],
     ["minecraft:mangrove_propagule", "minecraft:mangrove_log"],
     ["minecraft:cherry_sapling", "minecraft:cherry_log"],
+    ["forbidden_arcanus:aurum_sapling", "forbidden_arcanus:aurum_log"],
   ];
   const plants = [
     ["minecraft:pumpkin_seeds", "minecraft:pumpkin", 6],

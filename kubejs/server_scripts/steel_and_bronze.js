@@ -26,11 +26,11 @@ ServerEvents.recipes((event) => {
     "1x minecraft:obsidian",
   ]);
   event.shapeless("gtceu:dormant_ember_dust", [
-    "#forge:tools/mortar",
+    "#forge:tools/mortars",
     "gtceu:dormant_ember_ingot"
   ]);
   event.shapeless("gtceu:permafrost_dust", [
-    "#forge:tools/mortar",
+    "#forge:tools/mortars",
     "gtceu:permafrost_ingot"
   ]);
   event.shapeless("4x gtceu:fiery_bronze_dust", [
@@ -57,7 +57,7 @@ ServerEvents.recipes((event) => {
     "2x gtceu:steel_dust",
     "1x gtceu:gold_dust",
     "2x gtceu:dormant_ember_dust",
-    "1x gtceu:magma_dust",
+    "1x gtceu:aurum_wood_dust",
   ]);
   event.shaped("gtceu:wood_plate", [" L ", " S ", " S "], {
     S: "#minecraft:planks",
@@ -217,6 +217,16 @@ ServerEvents.recipes((event) => {
     Z: "gtceu:lv_machine_casing",
     S: "gtceu:wrought_iron_plate"
   });
+    event.shaped("gtceu:bronze_brick_casing", ["FFF", "FHF", "BBB"], {
+    F: "gtceu:fiery_bronze_plate",
+    H: "#forge:tools/hammers",
+    B: "minecraft:bricks",
+  });
+    event.shaped("gtceu:steam_input_hatch", ["FWF", "FZF", "FWF"], {
+    F: "gtceu:fiery_bronze_plate",
+    W: "gtceu:fiery_bronze_normal_fluid_pipe",
+    Z: "gtceu:bronze_drum",
+  });
 
   event.shaped("ad_astra:nasa_workbench", ["APW", "SZS", "WPA"], {
     P: "gtceu:dense_frost_reinforced_stained_steel_plate",
@@ -289,6 +299,10 @@ ServerEvents.recipes((event) => {
     "1x gtceu:coke_dust",
     "minecraft:iron_ingot",
   ]);
+    event.shapeless("gtceu:magnetic_steel_rod", [
+    "1x gtceu:steel_rod",
+    "5x minecraft:redstone",
+  ]);
   event.shapeless("gtceu:steel_dust", [
     "1x gtceu:coke",
     "gtceu:iron_dust",
@@ -299,6 +313,10 @@ ServerEvents.recipes((event) => {
   ]);
   event.shapeless("gtceu:magma_dust", [
     "1x minecraft:magma_block",
+    "#forge:tools/hammers",
+  ]);
+   event.shapeless("4x gtceu:aurum_wood_dust", [
+    "1x forbidden_arcanus:aurum_log",
     "#forge:tools/hammers",
   ]);
   event.shapeless("gtceu:steel_dust", [
@@ -366,7 +384,7 @@ ServerEvents.recipes(event => {
   });
   const mixerRecipes = [
     ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x gtceu:dormant_ember_dust"], ["4x gtceu:fiery_bronze_dust"], 300, 7, 4],
-    ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:magma_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7, 2],
+    ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:aurum_wood_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7, 2],
     ["unrefined_aluminfrost_dust_from_mixe", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 300, 32, 3],
     // You can add more mixer recipes here following the same format
     // ["recipe_id", ["input1", "input2", ...], ["output1", "output2", ...], duration, power],
@@ -377,3 +395,15 @@ ServerEvents.recipes(event => {
     
   });
 });
+ServerEvents.tags("item", event => {
+    const quarkTechArmor = [
+        "gtceu:quarktech_helmet",
+        "gtceu:quarktech_chestplate",
+        "gtceu:advanced_quarktech_chestplate",
+        "gtceu:quarktech_leggings",
+        "gtceu:quarktech_boots"
+    ]
+    event.add("ad_astra:space_resistant_armor", quarkTechArmor)
+    event.add("ad_astra:freeze_resistant_armor", quarkTechArmor)
+    event.add("ad_astra:heat_resistant_armor", quarkTechArmor)
+})

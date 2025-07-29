@@ -412,6 +412,9 @@ const recipesToRemove = [
 "gtceu:alloy_blast_smelter/resonant_rhodium_alloy_gas",
 "gtceu:shaped/casing_luv",
 "gtceu:assembler/casing_luv",
+"gtceu:shaped/electric_motor_lv_iron",
+"gtceu:assembler/electric_motor_lv_iron",
+"gtceu:shaped/bronze_bricks_hull",
 ];
   
     

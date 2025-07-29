@@ -1100,6 +1100,26 @@
 			x: 3.375d
 			y: 0.0d
 		}
+		{
+			dependencies: ["7025B4400DBD6617"]
+			description: [
+				"Ascend to the pinnacle of power! Your &d&lLUV U-233 Fuel&r is the key to unparalleled energy, boasting &a&lsignificantly higher efficiency&r than its U-235 counterpart. What's more, it produces a &f&l&otasty 2 &2UV&r amps&r! "
+				""
+				"However, do not abandon your roots! The &c&lU-235 line&r remains indispensable: it must continue to provide the initial &9&lU-233&r to kickstart this powerful new chain, and perhaps even more critically, supply the &b&lUranium-236&r derived from its &e&ldepleted uranium waste.&r"
+				""
+				"Master this intricate symbiotic relationship and secure your ultimate LUV power!"
+			]
+			id: "0846D43188314E53"
+			size: 0.66d
+			subtitle: "Now we cooking!"
+			tasks: [{
+				id: "31D28DB63C79E42A"
+				item: "kubejs:u233_fuel_pellet"
+				type: "item"
+			}]
+			x: 5.94d
+			y: 0.33d
+		}
 	]
 	subtitle: ["Investigate the scientific and fuse elements"]
 	title: "&dLuV&r - Ludicrous Voltage"
