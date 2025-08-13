@@ -35,8 +35,13 @@ event.smelting('1x minecraft:oak_log', 'minecraft:charcoal')
     event.smelting('1x minecraft:charcoal', 'minecraft:dark_oak_wood');
     event.smelting('1x minecraft:charcoal', 'minecraft:mangrove_wood');
     event.smelting('1x minecraft:charcoal', 'minecraft:crimson_hyphae');
+    event.smelting('1x minecraft:charcoal', 'forbidden_arcanus:aurum_log');
     event.smelting('1x minecraft:charcoal', 'minecraft:warped_hyphae');
+    event.smelting('1x minecraft:charcoal', 'ars_nouveau:blue_archwood_log');
+    event.smelting('1x minecraft:charcoal', 'ars_nouveau:red_archwood_log');
+    event.smelting('1x minecraft:charcoal', 'ars_nouveau:purple_archwood_log');
+    event.smelting('1x minecraft:charcoal', 'ars_nouveau:green_archwood_log');
     event.smelting('1x gtceu:steel_ingot', 'gtceu:steel_dust');
-  
+
     console.log('Hello! The recipe event has fired, and charcoal recipes for all vanilla logs and wood types have been added!');
   })

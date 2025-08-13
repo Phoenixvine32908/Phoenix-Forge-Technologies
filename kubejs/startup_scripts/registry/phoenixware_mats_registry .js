@@ -42,9 +42,17 @@ event.create('frost_reinforced_stained_steel_drilling_kit')
         event.create('u235_fuel_pellet')
     .displayName("§aUranium-235 Fuel Pellet") 
     .texture("kubejs:item/u235_fuel_pellet")
+      event.create('u236_fuel_pellet')
+    .displayName("§aUranium-236 Fuel Pellet") 
+    .texture("kubejs:item/u236_fuel_pellet")
+
+      event.create('plutonium_241_fuel_pellet')
+    .displayName("§cPlutonium-241 Fuel Pellet") 
+    .texture("kubejs:item/plutonium_241_fuel_pellet")
         event.create('u233_fuel_pellet')
     .displayName("§aUranium-233 Fuel Pellet") 
     .texture("kubejs:item/u233_fuel_pellet")
+
 
      event.create('space_grade_steel_drill_head')
     .displayName("§7Space Grade Steel Drill Head")

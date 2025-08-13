@@ -235,6 +235,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('multiversal_hyperalloy', Text.of("§fAn alloy capable of existing across multiple universes, essential for multiversal transport."));
     addGTCEuMaterialTooltips('glitched_corruption_substrate', Text.of("§dA substrate corrupted by glitches in reality, leading to unpredictable but immense properties."));
     addGTCEuMaterialTooltips('event_horizon_matter', Text.of("§0Matter condensed at an event horizon, possessing extreme density and gravitational pull."));
+        addGTCEuMaterialTooltips('advanced_quin_naquadian_alloy', Text.of("§4An incredibly dense and volatile alloy, forged from exotic fission products and Naquadah, hinting at power beyond current understanding."));
 
     // --- KubeJS Registered Fluids (buckets will use kubejs:fluid_name_bucket) ---
     addKubeJSUIDFluidTooltip('grass_water', Text.of("§aA strange elemental liquid, full of natural essence."));
@@ -433,9 +434,13 @@ event.add('gtceu:simulated_colony', [
     ]);
 
     // High Performance Breeder Reactor Controller
-    event.add("gtceu:high_performace_breeder_reactor", [
-        Text.of("§dA breeder reactor optimized for high efficiency and conversion of fertile materials into fissile fuel."),
+  
+    event.add("gtceu:large_steam_sieve", [
+        Text.of("§bProcesses rocks using powerful steam-driven sieves."),
+        Text.of("§7Extracts useful ore traces and valuable materials from raw stone."),
+        Text.of("§8Automates resource recovery from bulk geological inputs.")
     ]);
+
     // Uranium-235 Fuel Pellet
     event.add("gtceu:uranium_235_fuel_pellet", [
         Text.of("§2A compacted pellet of Uranium-235."),

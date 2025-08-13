@@ -273,13 +273,6 @@ ServerEvents.recipes((event) => {
     A: "gtceu:lv_electric_piston",
     S: "gtceu:lv_machine_hull"
   });
-  event.shaped("gtceu:pyrolyse_oven", ["APW", "PSP", "AZW"], {
-    P: "#gtceu:circuits/lv",
-    W: "gtceu:tin_quadruple_wire",
-    Z: "gtceu:lv_electric_pump",
-    A: "gtceu:lv_electric_piston",
-    S: "gtceu:lv_machine_hull"
-  });
   event.shaped("minecraft:glass_bottle", ["   ", " P ", "P P"], {
     P: "minecraft:glass",
   });
@@ -385,7 +378,7 @@ ServerEvents.recipes(event => {
   const mixerRecipes = [
     ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x gtceu:dormant_ember_dust"], ["4x gtceu:fiery_bronze_dust"], 300, 7, 4],
     ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:aurum_wood_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7, 2],
-    ["unrefined_aluminfrost_dust_from_mixe", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 300, 32, 3],
+    ["unrefined_aluminfrost_dust_from_mixe", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 180, 32, 3],
     // You can add more mixer recipes here following the same format
     // ["recipe_id", ["input1", "input2", ...], ["output1", "output2", ...], duration, power],
   ];
@@ -396,6 +389,7 @@ ServerEvents.recipes(event => {
   });
 });
 ServerEvents.tags("item", event => {
+    event.add("forge:dusts/wood", "gtceu:aurum_wood_dust")
     const quarkTechArmor = [
         "gtceu:quarktech_helmet",
         "gtceu:quarktech_chestplate",

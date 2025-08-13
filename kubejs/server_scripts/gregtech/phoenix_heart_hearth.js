@@ -8,6 +8,18 @@ ServerEvents.recipes(event => {
         .EUt(8192)
 
     
-
+ //if (recipe.outputs.item) {
+      //      recipe.outputs.item.forEach( (itemOutput) => {
+        //        if (itemOutput.content.type == 'gtceu:sized') {
+         //           let oldItem = itemOutput.content.ingredient.item
+         //           if (oldItem.includes("hot_")) {
+           //             let newItem = oldItem.replace("hot_", "")
+             //           itemOutput.content.ingredient.item = newItem
+             //       }
+            //    } else {
+            //        console.log("unhandled output item type " + itemOutput.content.type)
+           //     }
+          //  })
+     //   }
 
 })

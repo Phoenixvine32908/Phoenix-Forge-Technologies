@@ -6,20 +6,12 @@
 	icon: "minecraft:iron_ore"
 	id: "6A809CAE287B97BA"
 	order_index: 2
-	quest_links: [
-		{
-			id: "4698A93708E9CFE0"
-			linked_quest: "2E36E5755B2F551C"
-			x: 13.0d
-			y: 2.0d
-		}
-		{
-			id: "2341B448D95269BD"
-			linked_quest: "5C94CF50090D7DA0"
-			x: 13.0d
-			y: 1.0d
-		}
-	]
+	quest_links: [{
+		id: "2341B448D95269BD"
+		linked_quest: "5C94CF50090D7DA0"
+		x: 13.0d
+		y: 1.0d
+	}]
 	quests: [
 		{
 			description: [

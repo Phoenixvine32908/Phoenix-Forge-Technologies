@@ -70,13 +70,13 @@ ServerEvents.recipes(event => {
         .duration(150)
         .EUt(1920)
     event.recipes.gtceu.centrifuge('zircon_dust_from_blackstone_dust')
-    .itemInputs('4x gtceu:blackstone_dust')
-    .itemOutputs('6x gtceu:magma_dust', '2x gtceu:dormant_ember_dust', 'gtceu:zircon_dust', 'gtceu:silicon_dust')
+    .itemInputs('5x gtceu:blackstone_dust')
+    .itemOutputs('2x gtceu:magma_dust', '2x gtceu:dormant_ember_dust', '4x gtceu:zircon_dust', 'gtceu:silicon_dust')
     .duration(400)
     .EUt(GTValues.VA[GTValues.LV]/2)
     event.recipes.gtceu.centrifuge('zircon_dust_processing')
     .itemInputs('12x gtceu:zircon_dust')
-    .itemOutputs('6x gtceu:impure_zirconium_dust','2x gtceu:impure_hafnium_dust')
+    .itemOutputs('8x gtceu:impure_zirconium_dust','4x gtceu:impure_hafnium_dust')
     .duration(400)
     .EUt(GTValues.VA[GTValues.HV]/2)
     
@@ -85,13 +85,7 @@ ServerEvents.recipes(event => {
     .outputFluids('gtceu:hydrochloric_acid 200')
     .itemOutputs('1x gtceu:hafnium_dust')
     .duration(100)
-    .EUt(GTValues.VA[GTValues.HV]/2)
-    event.recipes.gtceu.chemical_bath('cooling_zircalloy')
-    .itemInputs('gtceu:hot_zircalloy_ingot')
-    .itemOutputs('1x gtceu:zircalloy_ingot')
-    .inputFluids('minecraft:water 1000')
-    .duration(200)
-    .EUt(GTValues.VA[GTValues.HV]/2)
+    .EUt(GTValues.VA[GTValues.HV]/2);
     event.recipes.gtceu.chemical_bath('cooling_magmatic_manganese_lead_distilled')
         .itemInputs('gtceu:hot_magmatic_manganese_lead_ingot')
         .inputFluids('gtceu:distilled_water 1000')
@@ -198,7 +192,7 @@ ServerEvents.recipes(event => {
     .duration(100)
     .EUt(GTValues.VA[GTValues.LV]/2)
     event.recipes.gtceu.chemical_reactor('uranium_oxide')
-    .itemInputs('4x gtceu:uraninite_dust')
+    .itemInputs('2x gtceu:uraninite_dust')
     .inputFluids('gtceu:oxygen 500')
     .outputFluids('gtceu:uranium_oxide 1000')
     .duration(100)
@@ -209,16 +203,10 @@ ServerEvents.recipes(event => {
     .duration(200)
     .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.canner('zirconium_fuel_rod')
-    .itemInputs('4x kubejs:zirconium_rod')
+    .itemInputs('1x kubejs:zirconium_rod')
     .inputFluids('gtceu:uranium_oxide 250')
     .itemOutputs('kubejs:basic_fuel_rod')
     .duration(120)
-    .EUt(GTValues.VA[GTValues.HV]/2)
-    event.recipes.gtceu.chemical_bath('cooling_zircalloy_distilled')
-    .itemInputs('gtceu:hot_zircalloy_ingot')
-    .inputFluids('gtceu:distilled_water 1000')
-    .itemOutputs('1x gtceu:zircalloy_ingot')
-    .duration(150)
     .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.assembler('alchemical_imbuer')
     .itemInputs('4x ars_nouveau:source_gem_block', '2x gtceu:stainless_steel_large_fluid_pipe', '16x ars_nouveau:sourcestone', '4x gtceu:clean_machine_casing', '2x #gtceu:circuits/hv')
@@ -279,7 +267,7 @@ ServerEvents.recipes(event => {
     .duration(150)
     .EUt(GTValues.VA[GTValues.HV]/2)
     event.recipes.gtceu.mixer('zircalloy_dust')
-    .itemInputs('3x gtceu:zirconium_dust', '2x gtceu:niobium_dust', 'gtceu:hafnium_dust')
+    .itemInputs('3x gtceu:zirconium_dust', '1x gtceu:tiny_niobium_dust', '2x gtceu:hafnium_dust')
     .itemOutputs('5x gtceu:zircalloy_dust')
     .duration(100)
     .circuit(15)
@@ -308,7 +296,7 @@ ServerEvents.recipes(event => {
     .itemInputs('3x kubejs:basic_fuel_rod')
     .itemOutputs('10x gtceu:low_level_radioactive_waste_dust')
     .duration(1000)
-    .EUt(-GTValues.VA[GTValues.HV]*4)
+    .EUt(-GTValues.VA[GTValues.EV])
     event.recipes.gtceu.advanced_pressurized_fission_reactor('fission2')
     .itemInputs('3x kubejs:basic_fuel_rod')
     .perTick(true)
@@ -507,7 +495,7 @@ event.recipes.gtceu.assembler('aurum_steel_drilling_kit')
     event.recipes.gtceu.mixer('cryo_aluminum_superconductor_alloy')
         .itemInputs(
             '4x gtceu:aluminium_dust', // Aluminum component (LV)
-            '1x gtceu:niobium_dust',
+            '1x gtceu:silicon_dust',
             '6x gtceu:permafrost_dust', // Niobium component (HV) - OK for MV output
         )
         .inputFluids('gtceu:nitrogen 250') // "Cryogenic" implies liquid nitrogen
@@ -522,7 +510,7 @@ event.recipes.gtceu.assembler('aurum_steel_drilling_kit')
             '4x gtceu:steel_dust',    // Steel component (HV)
             '2x gtceu:stainless_steel_dust',
             '4x gtceu:unrefined_aluminfrost_dust',
-            '12x gtceu:permafrost_dust',  // Titanium component (EV) - Appropriate for HV output
+            '12x gtceu:permafrost_dust', 
         )
         .inputFluids('gtceu:nitrogen 50') 
         .itemOutputs('18x gtceu:icy_steel_matrix_dust') // Output the custom material dust
@@ -537,7 +525,7 @@ event.recipes.gtceu.assembler('aurum_steel_drilling_kit')
 
         )
         .inputFluids('gtceu:source_of_magic 1200')
-        .itemOutputs('14x gtceu:source_titanium_filament_dust') // Output the custom material dust
+        .itemOutputs('6x gtceu:source_titanium_filament_dust') // Output the custom material dust
         .duration(200) // EV tier duration
         .EUt(GTValues.VA[GTValues.EV]); // EV voltage
         event.recipes.gtceu.assembler('diamond_ring')
@@ -591,61 +579,65 @@ event.recipes.gtceu.assembler('earthbound_miner_module')
 
     event.recipes.gtceu.assembler('aluminfrost_drum')
     .itemInputs('2x gtceu:long_aluminfrost_rod', '4x gtceu:aluminfrost_plate')
-    .itemOutputs('kubejs:aluminfrost_drum')
+    .itemOutputs('gtceu:aluminfrost_drum')
     .duration(200)
     .EUt(GTValues.VA[GTValues.LV]);
 
     event.recipes.gtceu.assembler('aluminfrost_crate')
     .itemInputs('4x gtceu:long_aluminfrost_rod', '4x gtceu:aluminfrost_plate')
-    .itemOutputs('kubejs:aluminfrost_crate')
+    .itemOutputs(' gtceu:aluminfrost_crate')
     .duration(200)
     .EUt(GTValues.VA[GTValues.LV]);
 
     event.recipes.gtceu.assembler('void_touched_tungsten_steel_drum')
     .itemInputs('2x gtceu:long_void_touched_tungsten_steel_rod', '4x gtceu:void_touched_tungsten_steel_plate')
-    .itemOutputs('kubejs:void_touched_tungsten_steel_drum')
+    .itemOutputs(' gtceu:void_touched_tungsten_steel_drum')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler('void_touched_tungsten_steel_crate')
     .itemInputs('4x gtceu:long_void_touched_tungsten_steel_rod', '4x gtceu:void_touched_tungsten_steel_plate')
-    .itemOutputs('kubejs:void_touched_tungsten_steel_crate')
+    .itemOutputs(' gtceu:void_touched_tungsten_steel_crate')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler('frost_reinforced_stained_steel_drum')
     .itemInputs('2x gtceu:long_frost_reinforced_stained_steel_rod', '4x gtceu:frost_reinforced_stained_steel_plate')
-    .itemOutputs('kubejs:frost_reinforced_stained_steel_drum')
+    .itemOutputs(' gtceu:frost_reinforced_stained_steel_drum')
     .duration(200)
     .EUt(GTValues.VA[GTValues.HV]);
 
     event.recipes.gtceu.assembler('frost_reinforced_stained_steel_crate')
     .itemInputs('4x gtceu:long_frost_reinforced_stained_steel_rod', '4x gtceu:frost_reinforced_stained_steel_plate')
-    .itemOutputs('kubejs:frost_reinforced_stained_steel_crate')
+    .itemOutputs(' gtceu:frost_reinforced_stained_steel_crate')
     .duration(200)
     .EUt(GTValues.VA[GTValues.HV]);
 
     event.recipes.gtceu.assembler('source_imbued_titanium_drum')
     .itemInputs('2x gtceu:long_source_imbued_titanium_rod', '4x gtceu:source_imbued_titanium_plate')
-    .itemOutputs('kubejs:source_imbued_titanium_drum')
+    .itemOutputs(' gtceu:source_imbued_titanium_drum')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler('source_imbued_titanium_crate')
     .itemInputs('4x gtceu:long_source_imbued_titanium_rod', '4x gtceu:source_imbued_titanium_plate')
-    .itemOutputs('kubejs:source_imbued_titanium_crate')
+    .itemOutputs(' gtceu:source_imbued_titanium_crate')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler('resonant_rhodium_alloy_drum')
     .itemInputs('2x gtceu:long_resonant_rhodium_alloy_rod', '4x gtceu:resonant_rhodium_alloy_plate')
-    .itemOutputs('kubejs:resonant_rhodium_alloy_drum')
+    .itemOutputs(' gtceu:resonant_rhodium_alloy_drum')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler('resonant_rhodium_alloy_crate')
     .itemInputs('4x gtceu:long_resonant_rhodium_alloy_rod', '4x gtceu:resonant_rhodium_alloy_plate')
-    .itemOutputs('kubejs:resonant_rhodium_alloy_crate')
+    .itemOutputs(' gtceu:resonant_rhodium_alloy_crate')
     .duration(200)
     .EUt(GTValues.VA[GTValues.EV]);
+
+
+
+    
 })

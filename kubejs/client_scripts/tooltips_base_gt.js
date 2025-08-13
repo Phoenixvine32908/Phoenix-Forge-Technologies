@@ -86,6 +86,16 @@ const STRESS_PROOF_CASING_TOOLTIP = {
     maintenance: "§7Any Stress Proof Casing",
     pch: "§7Any Stress Proof Casing"
 };
+const TUNGSTEN_STEEL_TURBINE_CASING_TOOLTIP = {
+    controller: "§7Front",
+    iteminput: "§7Any Tungsten Steel Turbine Casing",
+    fluidinput: "§7Any Tungsten Steel Turbine Casing",
+    itemoutput: "§7Any Tungsten Steel Turbine Casing",
+    fluidoutput: "§7Any Tungsten Steel Turbine Casing",
+    energy: "§7Any Tungsten Steel Turbine Casing",
+    maintenance: "§7Any Tungsten Steel Turbine Casing",
+    pch: "§7Any Tungsten Steel Turbine Casing"
+};
 const NONCONDUCTING_CASING_TOOLTIP = {
     controller: "§7Front",
     iteminput: "§7Any Nonconducting Casing",
@@ -160,6 +170,16 @@ const LASER_SAFE_ENGRAVING_CASING_TOOLTIP = {
     maintenance: "§7Any Laser-Safe Engraving Casing",
     muffler: "§7Top Center",
     pch: "§7Any Laser-Safe Engraving Casing"
+};
+const FISSILE_REACTION_SAFE_CASING_TOOLTIP = {
+    controller: "§7Front",
+    iteminput: "§7Any Fissile Reaction-Safe Casing",
+    fluidinput: "§7Any Fissile Reaction-Safe Casing",
+    itemoutput: "§7Any Fissile Reaction-Safe Casing",
+    fluidoutput: "§7Any Fissile Reaction-Safe Casing",
+    energyoutput: "§7Any Fissile Reaction-Safe Casing",
+    maintenance: "§7Any Fissile Reaction-Safe Casing",
+
 };
 const SECURE_MACERATION_CASING_TOOLTIP = {
     controller: "§7Front",
@@ -312,6 +332,8 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
     'PCH_SUBTICK_MULTIBLOCKS': {
         multiblockIds: [
             "gtceu:large_arc_smelter",
+            "gtceu:advanced_cracking_unit",
+            "gtceu:superheated_pyrolyzing_oven",
             "gtceu:large_assembler",
             "gtceu:large_autoclave",
             "gtceu:large_brewer",
@@ -353,6 +375,29 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
             'multiblock.perfocaccess2'
         ]
     },
+
+   'POWER_OUTPUT_GROUP': {
+        multiblockIds: [
+            "gtceu:large_gas_turbine",
+        ],
+        tooltipKeys: [
+            'multiblock.energyoutputaccess1',
+            'multiblock.energyoutputaccess2',
+        ]   
+    },
+    'SUB_STATION_POWER_OUTPUT_GROUP': {
+        multiblockIds: [
+            "gtceu:high_performace_breeder_reactor",
+        ],
+        tooltipKeys: [
+            'multiblock.energyoutputaccess1',
+            'multiblock.energyoutputaccess2',
+            'multiblock.subenergyoutputaccess1',
+            'multiblock.subenergyoutputaccess2',
+        ]
+    },
+
+
     'SUBTICK_ONLY': {
         multiblockIds: [
             "gtceu:vacuum_freezer",
@@ -398,6 +443,14 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
     "gtceu:large_cutter": [
         "gtultimate.custom.tooltip_large_cutter"
     ],
+    "gtceu:superheated_pyrolyzing_oven": [
+        "gtultimate.custom.tooltip_superheated_pyrolyzing_oven",
+         "gtultimate.custom.tooltip_pyrolyse_oven_2"
+    ],
+    "gtceu:advanced_cracking_unit": [
+        "gtultimate.custom.tooltip_advanced_cracking_unit",
+         "gtultimate.custom.tooltip_cracker_2"
+    ],
     "gtceu:large_electrolyzer": [
         "gtultimate.custom.tooltip_large_electrolyzer"
     ],
@@ -406,6 +459,9 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
     ],
     "gtceu:large_engraving_laser": [
         "gtultimate.custom.tooltip_large_engraving_laser"
+    ],
+    "gtceu:high_performace_breeder_reactor": [
+        "gtultimate.custom.tooltip_high_performace_breeder_reactor"
     ],
     "gtceu:large_maceration_tower": [
         "gtultimate.custom.tooltip_large_maceration_tower"
@@ -508,6 +564,7 @@ const MACHINE_TYPE_NAMES = {
     "gtceu:large_electrolyzer": "§eElectrolyzer",
     "gtceu:large_electromagnet": "§eElectromagnetic Separator | Polarizer",
     "gtceu:large_engraving_laser": "§eLaser Engraver",
+    "gtceu:high_performace_breeder_reactor": "§eHigh Performance Breeder Reactor",
     "gtceu:large_maceration_tower": "§eMacerator",
     "gtceu:large_material_press": "§eBending | Compressor | Forge Hammer | Forming Press",
     "gtceu:large_mixer": "§eMixer",
@@ -520,6 +577,8 @@ const MACHINE_TYPE_NAMES = {
     "gtceu:implosion_compressor": "§eImplosion Compressor",
     "gtceu:cracker": "§eCracker",
     "gtceu:pyrolyse_oven": "§ePyrolyse Oven",
+    "gtceu:superheated_pyrolyzing_oven": "§eSuperheated Pyrolyzing Oven",
+    "gtceu:advanced_cracking_unit": "§eAdvanced Cracking Unit",
     "gtceu:mega_vacuum_freezer": "§eVacuum Freezer",
     "gtceu:mega_blast_furnace": "§eElectric Blast Furnace",
     "gtceu:multi_smelter": "§eSmelting | Alloy Smelter",
@@ -647,6 +706,11 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             LASER_SAFE_ENGRAVING_CASING_TOOLTIP
     },
+      "gtceu:high_performace_breeder_reactor": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
+        values:
+            FISSILE_REACTION_SAFE_CASING_TOOLTIP
+    },
     // SECURE_MACERATION_CASING_TOOLTIP
     "gtceu:large_maceration_tower": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
@@ -699,6 +763,16 @@ const SHIFT_PLACEHOLDER_VALUES = {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler"],
         values:
             CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
+    },
+     "gtceu:advanced_cracking_unit": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler"],
+        values:
+            TUNGSTEN_STEEL_TURBINE_CASING_TOOLTIP
+    },
+       "gtceu:superheated_pyrolyzing_oven": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler"],
+        values:
+            SOLID_MACHINE_CASING_TOOLTIP
     },
     // CLEAN_STAINLESS_STEEL_CASING_DT_TOOLTIP
     "gtceu:distillation_tower": {

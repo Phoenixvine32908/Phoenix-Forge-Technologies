@@ -1775,66 +1775,35 @@
 			id: "0774EC59CD3DD7A5"
 			size: 0.66d
 			subtitle: "Ever mined into an Oil deposit?"
-			tasks: [
-				{
-					id: "21FF6E45F9AC5E76"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:lv_pump"
-								}
-								{
-									Count: 1b
-									id: "gtceu:mv_pump"
-								}
-								{
-									Count: 1b
-									id: "gtceu:hv_pump"
-								}
-								{
-									Count: 1b
-									id: "gtceu:ev_pump"
-								}
-							]
-						}
+			tasks: [{
+				id: "1095B3DE28330980"
+				item: {
+					Count: 1
+					id: "itemfilters:or"
+					tag: {
+						items: [
+							{
+								Count: 1b
+								id: "gtceu:oil_bucket"
+							}
+							{
+								Count: 1b
+								id: "gtceu:oil_heavy_bucket"
+							}
+							{
+								Count: 1b
+								id: "gtceu:oil_medium_bucket"
+							}
+							{
+								Count: 1b
+								id: "gtceu:oil_light_bucket"
+							}
+						]
 					}
-					title: "Any Pump will do"
-					type: "item"
 				}
-				{
-					id: "1095B3DE28330980"
-					item: {
-						Count: 1
-						id: "itemfilters:or"
-						tag: {
-							items: [
-								{
-									Count: 1b
-									id: "gtceu:oil_bucket"
-								}
-								{
-									Count: 1b
-									id: "gtceu:oil_heavy_bucket"
-								}
-								{
-									Count: 1b
-									id: "gtceu:oil_medium_bucket"
-								}
-								{
-									Count: 1b
-									id: "gtceu:oil_light_bucket"
-								}
-							]
-						}
-					}
-					title: "Any Oil bucket"
-					type: "item"
-				}
-			]
+				title: "Any Oil bucket"
+				type: "item"
+			}]
 			title: "US Simulator"
 			x: -1.125d
 			y: -0.75d

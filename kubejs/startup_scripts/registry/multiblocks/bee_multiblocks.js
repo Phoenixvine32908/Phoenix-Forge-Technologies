@@ -54,7 +54,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("E", Predicates.blocks("minecraft:honey_block"))
    .where("F", Predicates.blocks("gtceu:rtm_alloy_coil_block"))
    .where("G", Predicates.blocks("gtceu:heat_vent"))
-   .where("H", Predicates.blocks("gtceu:lv_muffler_hatch"))
+   .where("H", Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
    .where('J', Predicates.controller(Predicates.blocks(definition.get())))
 
             .build())

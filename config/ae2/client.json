@@ -22,7 +22,7 @@
     "terminalMargin": 25
   },
   "terminals": {
-    "terminalStyle": "small",
+    "terminalStyle": "full",
     "pinAutoCraftedItems_comment": "Pin items that the player auto-crafts to the top of the terminal",
     "pinAutoCraftedItems": true
   },
@@ -30,7 +30,7 @@
     "searchModNameInTooltips_comment": "Should the mod name be included when searching in tooltips.",
     "searchModNameInTooltips": false,
     "useExternalSearch_comment": "Replaces AEs own search with the search of REI or JEI",
-    "useExternalSearch": false,
+    "useExternalSearch": true,
     "clearExternalSearchOnOpen_comment": "When using useExternalSearch, clears the search when the terminal opens",
     "clearExternalSearchOnOpen": true,
     "syncWithExternalSearch_comment": "When REI/JEI is installed, automatically set the AE or REI/JEI search text when either is changed while the terminal is open",

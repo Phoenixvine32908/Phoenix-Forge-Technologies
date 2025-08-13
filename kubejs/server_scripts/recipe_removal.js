@@ -415,6 +415,13 @@ const recipesToRemove = [
 "gtceu:shaped/electric_motor_lv_iron",
 "gtceu:assembler/electric_motor_lv_iron",
 "gtceu:shaped/bronze_bricks_hull",
+"utilitarian:utility/logs_to_hopper",
+"gtceu:smelting/smelt_dust_frost_reinforced_stained_steel_to_ingot",
+"gtceu:alloy_blast_smelter/advanced_quin_naquadian_alloy",
+"gtceu:alloy_blast_smelter/advanced_quin_naquadian_alloy_gas",
+"minecraft:kjs/gtceu_pyrolyse_oven_2",
+"gtceu:research_station/1_x_gtceu_iv_confectionery_fabricator",
+"gtceu:research_station/1_x_gtceu_pyrolyse_oven"
 ];
   
     

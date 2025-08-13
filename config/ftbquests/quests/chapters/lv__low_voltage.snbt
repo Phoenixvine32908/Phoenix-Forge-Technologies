@@ -321,11 +321,19 @@
 			]
 			icon: "gtceu:storage_cover"
 			id: "1C767009F505A813"
-			rewards: [{
-				id: "7A6A74FF4B058BA3"
-				item: "gtceu:storage_cover"
-				type: "item"
-			}]
+			rewards: [
+				{
+					id: "7A6A74FF4B058BA3"
+					item: "gtceu:storage_cover"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "34AA8FB864B18FBA"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Extra utility without taking up blockspace!"
@@ -748,12 +756,20 @@
 			]
 			icon: "gtceu:basic_electronic_circuit"
 			id: "648BCF486E16CCB2"
-			rewards: [{
-				count: 3
-				id: "2DE6FFEF31961753"
-				item: "kubejs:phoenix_feather"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 3
+					id: "2DE6FFEF31961753"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "00C887D8E6DDFF9F"
+					item: "sophisticatedstorage:barrel"
+					type: "item"
+				}
+			]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "Too many options, too little time!"
@@ -1695,6 +1711,7 @@
 			hide_dependency_lines: false
 			icon: "gtceu:lv_world_accelerator"
 			id: "113F3D2E48F62CBB"
+			optional: true
 			rewards: [
 				{
 					id: "1237B670A2484C9A"
@@ -1774,6 +1791,7 @@
 			hide_dependency_lines: false
 			icon: "gtceu:construction_core"
 			id: "11989C3388C969DF"
+			optional: true
 			rewards: [
 				{
 					id: "66853B9C5CC8EF26"

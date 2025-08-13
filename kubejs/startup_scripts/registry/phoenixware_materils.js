@@ -3,7 +3,7 @@ const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.m
 const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
 const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
 const $FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
-Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.Material'); // This line is generally not needed
+Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.Material'); 
 
 // Additional imports for material properties/tool properties
 const $PropertyKey = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.PropertyKey');
@@ -94,6 +94,7 @@ function makeLimitedMaterialEBF(event, id, color, color2, icon, blastTempData) {
 GTCEuStartupEvents.registry('gtceu:element', event => {
     const elements = [
         ["phoenix_enriched_tritanium", 1, 32, "PET"],
+        ["ember", 1, 2, "🔥"],
         ["phoenix_enriched_naquad", 25, 32, "PENaq"],
         ["akashic_zeronium", 24, 12, "ASHK"],
         ["aetherium_steel", 26, 30, "AES"],
@@ -262,6 +263,16 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         'cryo_steel_supercon',
         [GTValues.V[GTValues.HV], 8, 0, true],
     );
+  makeLimitedMaterialWithCable(
+        event,
+        'extremely_modified_space_grade_steel',
+        0xad6161,
+        0x593856,
+        'aluminfrost',
+        [GTValues.V[GTValues.LuV], 64, 0, true],
+    );
+           
+
 
     makeLimitedMaterialWithCable(
         event,
@@ -345,6 +356,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('aurum_steel')
         .ingot()
+        .fluid()
         .color(0xd0a860)
         .secondaryColor(0xc0c0c0)
         .iconSet('aurum_steel')
@@ -361,6 +373,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('aluminfrost')
         .ingot()
+        .fluid()
         .color(0xadd8e6)
         .secondaryColor(0xc0c0c0)
         .fluidPipeProperties(1200, 110, true, true, false, false)
@@ -419,8 +432,11 @@ event.create('85_percent_pure_nevonian_steel')
             GTMaterialFlags.GENERATE_RING,
             GTMaterialFlags.PHOSPHORESCENT,
             GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_LONG_ROD,
             GTMaterialFlags.GENERATE_BOLT_SCREW,
             GTMaterialFlags.GENERATE_FRAME,
+            GTMaterialFlags.GENERATE_GEAR,
+            GTMaterialFlags.GENERATE_SMALL_GEAR,
             GTMaterialFlags.GENERATE_DENSE,
             GTMaterialFlags.GENERATE_ROTOR);
              event.create('resonant_rhodium_alloy')
@@ -436,10 +452,15 @@ event.create('85_percent_pure_nevonian_steel')
             GTMaterialFlags.GENERATE_RING,
             GTMaterialFlags.PHOSPHORESCENT,
             GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_LONG_ROD,
+             GTMaterialFlags.GENERATE_GEAR,
+              GTMaterialFlags.GENERATE_SMALL_GEAR,
             GTMaterialFlags.GENERATE_BOLT_SCREW,
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
             GTMaterialFlags.GENERATE_ROTOR);
+            
+            
             
                  event.create('uranium_233')
         .ingot()
@@ -453,6 +474,7 @@ event.create('85_percent_pure_nevonian_steel')
         .fluid()
         .color(0x33CCFF)
         .element(GTElements.get("uranium_236"))
+        .flags(GTMaterialFlags.GENERATE_FRAME)
         .secondaryColor(0x0099EE)
         .iconSet('radioactive')
         event.create('inert_gas_waste')
@@ -498,8 +520,78 @@ event.create('critical_steam')
         .liquid(3800)
         .color(0xFF4500) 
         .secondaryColor(0xFFD700) 
-        .iconSet('dull'); 
+        .iconSet('dull');  
+       event.create('exotic_fission_concentrate')
+        .dust() // Represents a refined, concentrated dust
+        .color(0x800080) // Purple (exotic, powerful)
+        .secondaryColor(0x00FF00) // Green (radioactive glow)
+        .iconSet('radio'); // Indicates radioactivity
+
+    // --- New Intermediate Material: Exotic Fissile Materials Clump ---
+    event.create('exotic_fissile_materials_clump')
+        .dust() // Represents a clump of materials
+        .color(0xFF4500) // Orange Red (intense, high energy)
+        .secondaryColor(0x8B0000) // Dark Red
+        .iconSet('radio'); // Still radioactive
         
+ // --- Solutions from Plutonium Fission Ash Dissolution ---
+    event.create('rhodium_palladium_solution')
+        .fluid()
+        .color(0x5F9EA0) // Cadet Blue
+        .secondaryColor(0x4682B4) // Steel Blue
+        .iconSet('dull');
+
+    event.create('technetium_strontium_solution')
+        .fluid()
+        .color(0x7CFC00) // Lawn Green
+        .secondaryColor(0x32CD32) // Lime Green
+        .iconSet('dull');
+
+    // --- Gaseous Byproducts from Plutonium Fission Ash Dissolution ---
+    event.create('gaseous_fission_byproducts')
+        .gas()
+        .color(0x8B0000) // Dark Red (ominous gas)
+        .secondaryColor(0xFF4500) // Orange Red
+        .iconSet('dull'); // Represents a gas
+
+    // --- Waste Products ---
+    event.create('acidic_waste')
+        .fluid()
+        .color(0x8B4513) // Saddle Brown
+        .secondaryColor(0xA0522D) // Sienn
+        .iconSet('dull');
+
+    event.create('trace_fission_gases')
+        .gas()
+        .color(0x6A5ACD) // Slate Blue
+        .secondaryColor(0x483D8B) // Dark Slate Blue
+        .iconSet('dull');
+
+    event.create('purified_radioactive_waste_fluid')
+        .fluid()
+        .color(0x483D8B) // Dark Slate Blue
+        .secondaryColor(0x6A5ACD) // Slate Blue
+        .iconSet('dull');
+
+    event.create('neutralized_waste_fluid')
+        .fluid()
+        .color(0x8FBC8F) // Dark Sea Green
+        .secondaryColor(0x6B8E23) // Olive Drab
+        .iconSet('dull');
+
+    event.create('radioactive_waste_fluid') // From depleted plutonium recycling
+        .fluid()
+        .color(0x556B2F) // Dark Olive Green
+        .secondaryColor(0x8B8878) // Dark Khaki
+        .iconSet('dull');
+
+    // --- Recovered Dust ---
+    event.create('trace_actinide_dust')
+        .dust()
+        .color(0x8B008B) // Dark Magenta
+        .secondaryColor(0x9932CC) // Dark Orchid
+        .iconSet('dust');
+
         event.create('fissile_ash')
                 .dust()
                 .color(0x404040)
@@ -530,6 +622,7 @@ event.create('critical_steam')
 
     event.create('frost_reinforced_stained_steel')
         .ingot()
+        .fluid()
         .color(0xADD8E6)
         .secondaryColor(0xE0FFFF)
         .fluidPipeProperties(2500, 90, true, true, true, false)
@@ -539,6 +632,7 @@ event.create('critical_steam')
             GTMaterialFlags.GENERATE_ROUND,
             GTMaterialFlags.GENERATE_GEAR,
             GTMaterialFlags.PHOSPHORESCENT,
+            GTMaterialFlags.GENERATE_LONG_ROD,
             GTMaterialFlags.GENERATE_ROD,
             GTMaterialFlags.GENERATE_BOLT_SCREW,
             GTMaterialFlags.GENERATE_FRAME,
@@ -582,6 +676,7 @@ event.create('superconductive_honey')
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
             GTMaterialFlags.GENERATE_ROTOR);
+     
 
     event.create('signalum')
         .ingot()
@@ -593,7 +688,7 @@ event.create('superconductive_honey')
         .ingot()
         .color(0x262a23)
         .secondaryColor(0x365320)
-        .iconSet('radio');
+        .iconSet('radioactive');
 
     event.create('enderium')
         .ingot()
@@ -603,6 +698,7 @@ event.create('superconductive_honey')
 
     event.create('source_imbued_titanium')
         .ingot()
+        .fluid()
         .color(0xc600ff)
         .fluidPipeProperties(2800, 200, true, true, false, false)
         .flags(GTMaterialFlags.GENERATE_PLATE,
@@ -610,6 +706,7 @@ event.create('superconductive_honey')
             GTMaterialFlags.GENERATE_GEAR,
             GTMaterialFlags.PHOSPHORESCENT,
             GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_LONG_ROD,
             GTMaterialFlags.GENERATE_BOLT_SCREW,
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,)
@@ -635,6 +732,31 @@ event.create('superconductive_honey')
         .color(0x778877)        
         .secondaryColor(0x556655) 
         .iconSet('radioactive');     
+        
+    // Irradiated Uranium-236 (Spent Blanket)
+    event.create('irradiated_uranium_236')
+        .ingot()
+        .color(0x8B4513) 
+        .secondaryColor(0x5E2605) 
+        .iconSet('radioactive'); 
+        
+      
+ 
+    event.create('americium_241')
+        .ingot() // Purified form
+        .color(0xCDC9C9) // Gainsboro (silvery-grey)
+        .secondaryColor(0x8B8B7A) // Dark Khaki (subtle hint of decay)
+        .iconSet('raduioactive');
+    // Notes: NEW MATERIAL. Distinct from GTM's Am-245. Primary decay product of Plutonium-241.
+
+    // Americium Hexafluoride (ZPM MSR Fuel)
+    event.create('americium_hexafluoride')
+        .gas() // Represent as a gas for MSR fuel
+        .color(0xFFFFFF) // White/Colorless for gas
+        .secondaryColor(0xADD8E6) // Light Blue (subtle gas hue)
+        .iconSet('dull');
+ 
+
 
     event.create('uranium_oxide')
         .fluid()
@@ -760,7 +882,6 @@ event.create('hydrogen_peroxide')
         .ingot()
         .color(0x002327)
         .secondaryColor(0x000000)
-        .blastTemp(2700, 'low', GTValues.VA[GTValues.HV], 600)
         .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR, GTMaterialFlags.GENERATE_SMALL_GEAR, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_DENSE, GTMaterialFlags.GENERATE_FOIL, GTMaterialFlags.GENERATE_SPRING, GTMaterialFlags.GENERATE_FRAME)
         .iconSet('dull');
 
@@ -769,7 +890,45 @@ event.create('hydrogen_peroxide')
         .color(0xA020F0)
         .secondaryColor(0x8B008B)
         .iconSet('dull');
+       event.create('advanced_quin_naquadian_alloy')
+        .ingot()
+         .liquid(7400)
+        .color(0x000000)
+        .secondaryColor(0x8B0000)
+        .iconSet('radioactive')
+        .fluidPipeProperties(8000, 800, true, true, true, true)
+        .components("5x naquadah", "1x trinium", "3x technetium", "4x strontium", "1x iodine")
+        .blastTemp(7200, 'high', GTValues.VA[GTValues.ZPM], 1950)
+        .flags(GTMaterialFlags.GENERATE_PLATE,
+            GTMaterialFlags.GENERATE_RING,
+            GTMaterialFlags.PHOSPHORESCENT,
+            GTMaterialFlags.GENERATE_ROD,
+            GTMaterialFlags.GENERATE_BOLT_SCREW,
+            GTMaterialFlags.GENERATE_FRAME,
+            GTMaterialFlags.GENERATE_DENSE,
+            GTMaterialFlags.GENERATE_ROTOR);
 
+
+
+
+event.create('plutonium_fission_ash')
+    .dust()
+    .color(0x4B0082)
+    .secondaryColor(0x8A2BE2)
+    .iconSet('radioactive');
+
+event.create('depleted_plutonium_241')
+    .ingot()
+    .color(0x2F4F4F)
+    .secondaryColor(0x696969)
+    .iconSet('radioactive');
+
+event.create('spent_uranium_236')
+    .ingot()
+    .color(0x8B8878)
+    .secondaryColor(0x556B2F)
+    .iconSet('radioactive');
+    
     event.create('electrical_steel')
         .ingot()
         .color(0xB0E0E6)
@@ -863,7 +1022,7 @@ let addFluid = (mat, key) => {
 GTCEuStartupEvents.materialModification(event => {
     GTMaterials.get('aluminfrost').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(1.8, 1.7, 700, 3, [GTToolType.SWORD, GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, GTToolType.WIRE_CUTTER, GTToolType.KNIFE, GTToolType.SOFT_MALLET]).build());
 
-    GTMaterials.get('akashic_zeronium').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(6.5, 5.9, 2147483647, 6,
+    GTMaterials.get('akashic_zeronium').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(180, 5.9, 2147483647, 6,
        [GTToolType.SWORD,GTToolType.DRILL_LV,GTToolType.DRILL_MV,GTToolType.DRILL_HV,GTToolType.DRILL_EV,
         GTToolType.DRILL_IV,GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, 
         GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, 

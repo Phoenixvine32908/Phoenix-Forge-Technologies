@@ -151,6 +151,7 @@
 			]
 			icon: "gtceu:steel_large_boiler"
 			id: "1BB40CCF17D00719"
+			optional: true
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Steam isn't the only answer, but we won't stop you"
