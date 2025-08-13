@@ -91,7 +91,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         phoenixvine.create('advanced_pressurized_fission_reactor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('advanced_pressurized_fission_reactor')
-        .noRecipeModifier()
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
         .appearanceBlock(() => Block.getBlock("kubejs:fissile_reaction_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCCCCCB", "CDDDDDC", "CDDDDDC", "CDDDDDC", "CDDDDDC", "CDDDDDC", "BCCCCCB")

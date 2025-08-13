@@ -14,4 +14,7 @@
 	EntityTickerBlackList = ["gtceu:luv_fusion_reactor", "gtceu:zpm_fusion_reactor", "gtceu:uv_fusion_reactor", "hostilenetworks:simchamber"]
 	#If it should be possible to route p2p tunnels through a wormhole tunnel
 	nestedP2Pwormhole = true
+	#Amount of rows for patterns stored by the Pattern management unit
+	#Range: 8 ~ 1024
+	PUnitCapacity = 216
 

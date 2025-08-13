@@ -15,4 +15,6 @@ ServerEvents.tags("item", (event) => {
     'minecraft:twisting_vines',
     'minecraft:weeping_vines'
   ]);
+  event.add('gtceu:purified_platline_ores', ["gtceu:purified_chalcopyrite_ore", "gtceu:purified_cooperite_ore", "gtceu:purified_pentlandite_ore", "gtceu:purified_bornite_ore", "gtceu:purified_chalcocite_ore", "gtceu:purified_tetrahedrite_ore"]);
+  event.add("purified_indium_ores", ["gtceu:purified_sphalerite_ore", "gtceu:purified_galena_ore"]);
 });

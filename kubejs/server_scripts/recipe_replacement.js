@@ -35,6 +35,7 @@ const tierReplacements = {
   tungsten_steel: "void_touched_tungsten_steel",
   rhodium_plated_palladium: "resonant_rhodium_alloy",
   stainless_steel: "frost_reinforced_stained_steel",
+  naquadah_alloy: "advanced_quin_naquadian_alloy",
   // Add more replacements as needed
 };
 
@@ -84,7 +85,6 @@ event.remove({ id: '/advanced_[a-z_]+_beehive/' })
      event.remove({ id: /^productivebees:bee_breeding\// });
     event.remove({ id: /^productivebees:cage_incubation/ });
     event.remove({ id: /^productivebees.*incubation/ });
-
 
 
   });

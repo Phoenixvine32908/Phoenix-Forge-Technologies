@@ -1,7 +1,84 @@
 ServerEvents.recipes(event => {
 
     const greg = event.recipes.gtceu
+    greg.electrolyzer('flourite_dust_to_flourine')
+    .itemInputs('12x gtceu:flourite_dust')
+    .itemOutputs('4x gtceu:tantalite_dust')
+    .outputFluids('gtceu:flourine 1000')
+    .duration(100)
+    .EUt(GTValues.VA[GTValues.LV]);
+    // LUV Confectionery Fabricator Research (existing)
+    greg.scanner("luv_confectionery_fabricator")
+    .itemInputs("gtceu:iv_confectionery_fabricator", "gtceu:data_stick")
+    .itemOutputs(Item.of('gtceu:data_stick', '{assembly_line_research:{research_id:"1x_gtceu_iv_confectionery_fabricator",research_type:"gtceu:assembly_line"}}'))
+    .duration(2000)
+    .EUt(GTValues.VA[GTValues.IV])
 
+    // Superheated Pyro Oven Research (scanner)
+    greg.scanner("superheated_pyro_oven_research")
+    .itemInputs("gtceu:pyrolyse_oven", "gtceu:data_stick")
+    .itemOutputs(Item.of('gtceu:data_stick', '{assembly_line_research:{research_id:"1x_gtceu_pyrolyse_oven",research_type:"gtceu:assembly_line"}}'))
+    .duration(2000)
+    .EUt(GTValues.VA[GTValues.IV])
+
+    // Superheated Pyro Oven Assembly Line Recipe
+    greg.assembly_line("superheated_pyro_oven")
+    .itemInputs(
+        "4x gtceu:extremely_modified_space_grade_steel_hex_wire",
+        "2x gtceu:luv_electric_pump",
+        "2x gtceu:luv_electric_piston",
+        "2x gtceu:luv_field_generator",
+        "6x #gtceu:circuits/luv",
+        "gtceu:luv_machine_hull",
+        "16x gtceu:resonant_rhodium_alloy_rotor"
+    )
+    .inputFluids(
+        "gtceu:soldering_alloy 4000",
+        "gtceu:void_touched_tungsten_steel 2880",
+        "gtceu:rtm_alloy 2880"
+    )
+    .itemOutputs("gtceu:superheated_pyrolyzing_oven")
+   .stationResearch(b => b.researchStack(Item.of('gtceu:pyrolyse_oven')).EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
+    .EUt(GTValues.VA[GTValues.LuV])
+    .duration(800)
+
+    // Advanced Cracker Research (scanner)
+    greg.scanner("advanced_cracker_research")
+    .itemInputs("gtceu:cracker", "gtceu:data_stick")
+    .itemOutputs(Item.of('gtceu:data_stick', '{assembly_line_research:{research_id:"1x_gtceu_cracker",research_type:"gtceu:assembly_line"}}'))
+    .duration(2000)
+    .EUt(GTValues.VA[GTValues.IV])
+
+    // Advanced Cracker Assembly Line Recipe
+    greg.assembly_line("advanced_cracker")
+    .itemInputs(
+        "16x gtceu:hssg_coil_block",
+        "4x #gtceu:circuits/luv",
+        "gtceu:luv_machine_hull",
+        "4x gtceu:luv_electric_pump",
+        "8x gtceu:luv_emitter",
+        "16x gtceu:resonant_rhodium_alloy_gear"
+    )
+    .inputFluids(
+        "gtceu:soldering_alloy 4000",
+        "gtceu:vanadium_gallium 1000",
+        "gtceu:hssg 2880"
+    )
+    .itemOutputs("gtceu:advanced_cracking_unit")
+    .stationResearch(b => b.researchStack(Item.of('gtceu:cracker')).EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
+    .EUt(GTValues.VA[GTValues.LuV])
+    .duration(900)
+   greg.mixer("permafrost")
+   .itemInputs(["minecraft:packed_ice", "minecraft:blue_ice", "minecraft:ice"])
+   .itemOutputs(["14x gtceu:permafrost_dust"])
+   .duration(100)
+   .EUt(GTValues.VA[GTValues.LV]);
+   greg.mixer("dormant_ember")
+   .itemInputs(["minecraft:coal", "minecraft:coal_block", "gtceu:small_dormant_ember_dust"])
+   .inputFluids(["gtceu:distilled_water 1000"])
+   .itemOutputs(["16x gtceu:dormant_ember_dust"])
+   .duration(350)
+   .EUt(GTValues.VA[GTValues.EV]);
     // --- Chemical Processes (Sulfuric Acid & Derivatives) ---
     // Production of Oleum in Large Chemical Reactor
     greg.large_chemical_reactor('oleum')
@@ -380,6 +457,60 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(GTValues.VA[GTValues.MV])
 
+    // === START OF PLUTONIUM-241 LINE RECIPES ===
+    
+    // Plutonium-241 Fuel Pellet Crafting in Large Chemical Reactor
+    greg.large_chemical_reactor('plutonium_241_fuel_pellet_crafting')
+        .itemInputs('9x gtceu:plutonium_241_nugget')
+        .inputFluids('gtceu:cryo_zirconium_binding_solution 1000')
+        .itemOutputs('9x kubejs:plutonium_241_fuel_pellet')
+        .duration(100)
+        .EUt(GTValues.VA[GTValues.IV])
+
+    // Uranium-236 Fuel Pellet Crafting in Large Chemical Reactor
+    greg.large_chemical_reactor('uranium_236_fuel_pellet_crafting')
+        .itemInputs('9x gtceu:uranium_236_nugget')
+        .inputFluids('gtceu:cryo_graphite_binding_solution 1000')
+        .itemOutputs('9x kubejs:u236_fuel_pellet')
+        .duration(100)
+        .EUt(GTValues.VA[GTValues.IV])
+
+    // Breeder Reactor: Plutonium/Uranium-236 Cycle
+    greg.high_performace_breeder_reactor('breeder_reactor/plutonium_uranium_236_cycle')
+        .itemInputs('4x kubejs:u236_fuel_pellet', '1x kubejs:plutonium_241_fuel_pellet')
+        .inputFluids('gtceu:sodium_potassium 64000', 'minecraft:water 60000')
+        .itemOutputs('4x gtceu:irradiated_uranium_236_nugget', '1x gtceu:depleted_plutonium_241_nugget')
+        .outputFluids('gtceu:hot_sodium_potassium 64000', 'gtceu:critical_steam 120000')
+        .duration(360)
+        .EUt(-GTValues.VA[GTValues.UHV] * 2)
+
+    // Reprocessing Spent Plutonium-241/Uranium-236 Fuel in Large Chemical Reactor
+    // Reprocessing Irradiated Uranium-236 Nuggets (first stage)
+    greg.large_chemical_reactor('reprocessing/irradiated_uranium_236_nuggets')
+        .itemInputs('16x gtceu:irradiated_uranium_236_nugget')
+        .inputFluids('gtceu:nitric_acid 1000')
+        .itemOutputs('10x gtceu:spent_uranium_236_dust', '8x gtceu:plutonium_fission_ash_dust')
+        .duration(300)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    // Reprocessing Depleted Plutonium-241 Nuggets (second stage)
+    greg.large_chemical_reactor('reprocessing/depleted_plutonium_241_nuggets')
+        .itemInputs('4x gtceu:depleted_plutonium_241_nugget')
+        .inputFluids('gtceu:nitric_acid 500')
+        .itemOutputs('2x gtceu:plutonium_241_dust', '1x gtceu:americium_241_dust', '4x gtceu:depleted_plutonium_dust')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    // Americium Hexafluoride Production in Large Chemical Reactor
+    greg.large_chemical_reactor('americium_hexafluoride_production')
+        .itemInputs('8x gtceu:americium_241_dust')
+        .inputFluids('gtceu:fluorine 600')
+        .outputFluids('gtceu:americium_hexafluoride 1000')
+        .duration(300)
+        .EUt(GTValues.VA[GTValues.IV])
+
+    // === END OF PLUTONIUM-241 LINE RECIPES ===
+
     // Spent Uranium Reprocessing in Large Chemical Reactor
     greg.large_chemical_reactor('spent_uranium_reprocessing')
         .itemInputs('4x gtceu:depleted_uranium_dust')
@@ -437,7 +568,7 @@ ServerEvents.recipes(event => {
     // Fission Products Fluid Processing in Distillation Tower
     greg.distillation_tower('fission_products_fluid_processing')
         .inputFluids('gtceu:fission_products_fluid 1000')
-        .itemOutputs('1x gtceu:fissile_ash_dust')
+        .itemOutputs('2x gtceu:fissile_ash_dust')
         .outputFluids('gtceu:radioactive_gas_mixture 500')
         .duration(400)
         .EUt(GTValues.VA[GTValues.EV]);
@@ -456,7 +587,75 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(GTValues.VA[GTValues.EV]);
 
-    // Fissile Ash Processing in Centrifuge
+    // === START OF PLUTONIUM FISSION ASH PROCESSING RECIPES ===
+
+    // Plutonium Fission Ash Dissolution in Large Chemical Reactor
+    greg.large_chemical_reactor('plutonium_fission_ash_dissolution')
+        .itemInputs('4x gtceu:plutonium_fission_ash_dust')
+        .inputFluids('gtceu:aqua_regia 500', 'gtceu:hydrofluoric_acid 200')
+        .outputFluids('gtceu:rhodium_palladium_solution 250', 'gtceu:technetium_strontium_solution 250', 'gtceu:radioactive_sludge 100', 'gtceu:gaseous_fission_byproducts 100')
+        .duration(600)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // Rhodium and Palladium Extraction from Solution in Chemical Reactor
+    greg.chemical_reactor('rhodium_palladium_extraction')
+        .inputFluids('gtceu:rhodium_palladium_solution 250', 'gtceu:chlorine 100')
+        .itemOutputs('1x gtceu:rhodium_dust', '1x gtceu:palladium_dust')
+        .outputFluids('gtceu:acidic_waste 50') // New waste fluid
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    // Technetium and Strontium Separation in Centrifuge
+    greg.centrifuge('technetium_strontium_separation')
+        .inputFluids('gtceu:technetium_strontium_solution 250')
+        .itemOutputs('1x gtceu:technetium_dust', '1x gtceu:strontium_dust')
+        .outputFluids('gtceu:radioactive_sludge 25')
+        .duration(150)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    // Gaseous Fission Byproducts Separation in Distillation Tower
+    greg.distillation_tower('gaseous_fission_byproducts_separation')
+        .inputFluids('gtceu:gaseous_fission_byproducts 1000')
+        .outputFluids('gtceu:krypton 100', 'gtceu:xenon 150', 'gtceu:iodine 50', 'gtceu:trace_fission_gases 700') // New waste fluid
+        .duration(250)
+        .EUt(GTValues.VA[GTValues.IV]);
+
+    // Processing Radioactive Sludge (from Plutonium Fission Ash and other processes)
+    greg.centrifuge('radioactive_sludge_processing')
+        .inputFluids('gtceu:radioactive_sludge 1000', 'minecraft:water 500')
+        .itemOutputs('1x gtceu:rare_earth_dust', '1x gtceu:trace_actinide_dust') // Recover trace rare earths and actinides
+        .outputFluids('gtceu:purified_radioactive_waste_fluid 250') // Reduced hazard waste fluid
+        .duration(400)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // Processing Acidic Waste (from Rhodium/Palladium extraction)
+    greg.chemical_reactor('acidic_waste_processing')
+        .inputFluids('gtceu:acidic_waste 1000', 'gtceu:calcium_hydroxide_solution 500') // Neutralize with calcium hydroxide
+        .itemOutputs('1x gtceu:calcium_sulfate_dust') // Gypsum byproduct
+        .outputFluids('minecraft:water 1000', 'gtceu:neutralized_waste_fluid 250') // Neutralized fluid waste
+        .duration(250)
+        .EUt(GTValues.VA[GTValues.EV]);
+
+    // Processing Trace Fission Gases (from Gaseous Fission Byproducts separation)
+    greg.distillation_tower('trace_fission_gases_processing')
+        .inputFluids('gtceu:trace_fission_gases 1000')
+        .outputFluids('gtceu:argon 50', 'gtceu:neon 25', 'gtceu:helium 25', 'gtceu:inert_gas_waste 900') // Recover trace noble gases, remaining inert waste
+        .duration(300)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // Recycling Depleted Plutonium (back to a usable form)
+    greg.large_chemical_reactor('depleted_plutonium_recycling')
+        .itemInputs('8x gtceu:depleted_plutonium')
+        .inputFluids('gtceu:nitric_acid 500', 'gtceu:fluorine 100')
+        .itemOutputs('2x gtceu:plutonium_dust') // Recover generic plutonium dust for re-enrichment
+        .outputFluids('gtceu:radioactive_waste_fluid 100') // Some residual waste
+        .duration(500)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // === END OF PLUTONIUM FISSION ASH PROCESSING RECIPES ===
+
+
+    // Fissile Ash Processing in Centrifuge (Original - now for U/Th ash)
     greg.centrifuge('fissile_ash_processing')
         .itemInputs('2x gtceu:fissile_ash_dust')
         .inputFluids('gtceu:aqua_regia 100')
@@ -541,18 +740,45 @@ ServerEvents.recipes(event => {
 
     // LUV Confectionery Fabricator in Assembly Line
     greg.assembly_line('luv_confectionery_fabricator')
-        .itemInputs('4x gtceu:resonant_rhodium_alloy_rotor', '4x minecraft:honeycomb', '2x #gtceu:circuits/luv', 'gtceu:luv_machine_hull', '1x gtceu:luv_sensor')
+        .itemInputs('4x gtceu:resonant_rhodium_alloy_rotor', '4x productivebees:honey_treat', '2x #gtceu:circuits/luv', 'gtceu:luv_machine_hull', '1x gtceu:luv_sensor')
         .itemOutputs('gtceu:luv_confectionery_fabricator')
         .inputFluids("productivebees:honey 1700", "gtceu:soldering_alloy 4000")
+        .stationResearch(b => b.researchStack(Item.of('gtceu:iv_confectionery_fabricator')).EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(600)
 
     // ZPM Confectionery Fabricator in Assembly Line
     greg.assembly_line('zpm_confectionery_fabricator')
-        .itemInputs('4x gtceu:naquadah_alloy_rotor', '16x minecraft:honeycomb', '2x #gtceu:circuits/zpm', 'gtceu:zpm_machine_hull', '1x gtceu:zpm_sensor')
+        .itemInputs('4x gtceu:advanced_quin_naquadian_alloy_rotor', '16x productivebees:honey_treat', '2x #gtceu:circuits/zpm', 'gtceu:zpm_machine_hull', '1x gtceu:zpm_sensor')
         .itemOutputs('gtceu:zpm_confectionery_fabricator')
         .inputFluids("productivebees:honey 1700", "gtceu:soldering_alloy 2500")
-        .stationResearch(b => b.researchStack(Item.of('gtceu:luv_confectionery_fabricator')).EUt(131000).CWUt(16, 32000))
+        .stationResearch(b => b.researchStack(Item.of('gtceu:luv_confectionery_fabricator')).EUt(131000).CWUt(1, 1))
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(600)
+
+
+
+
+   greg.large_chemical_reactor('exotic_fission_concentrate_production')
+        .itemInputs('2x gtceu:technetium_dust', '2x gtceu:strontium_dust', '4x gtceu:rare_earth_dust')
+        .inputFluids('gtceu:iodine 500', 'gtceu:fluoroantimonic_acid 250') // New fluid inputs
+        .itemOutputs('12x gtceu:exotic_fission_concentrate_dust')
+        .duration(300) // Increased duration for complexity
+        .EUt(GTValues.VA[GTValues.IV]); // Increased EUt to IV
+
+    // Recipe for Advanced Quin-Naquadian Alloy (using Exotic Fission Concentrate)
+    greg.large_chemical_reactor('advanced_quin_naquadian_alloy_synthesis')
+        .itemInputs('2x gtceu:naquadah_alloy_dust', '1x gtceu:exotic_fissile_materials_clump_dust', '1x gtceu:nevvonian_iron_dust')
+        .inputFluids('gtceu:critical_steam 500')
+        .itemOutputs('5x gtceu:advanced_quin_naquadian_alloy_dust')
+        .duration(200)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // Recipe for Exotic Fissile Materials Clump (binding concentrate with cryo-binding solutions)
+    greg.large_chemical_reactor('exotic_fissile_materials_clump_production')
+        .itemInputs('1x gtceu:exotic_fission_concentrate_dust')
+        .inputFluids('gtceu:cryo_zirconium_binding_solution 1000', 'gtceu:cryo_graphite_binding_solution 1000')
+        .itemOutputs('4x gtceu:exotic_fissile_materials_clump_dust')
+        .duration(400) // Significant duration for binding
+        .EUt(GTValues.VA[GTValues.IV]); // High tier process
 })

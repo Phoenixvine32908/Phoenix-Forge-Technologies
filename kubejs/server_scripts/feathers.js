@@ -226,6 +226,13 @@ ServerEvents.recipes(event => {
         ], {
             A: 'kubejs:phoenix_feather'
         }).noMirror().noShrink()
+         event.shaped(Item.of('gtceu:gold_ore', 32), [
+            'A A',
+            '   ',
+            '   '
+        ], {
+            A: 'kubejs:phoenix_feather'
+        }).noMirror().noShrink()
   
       
   
