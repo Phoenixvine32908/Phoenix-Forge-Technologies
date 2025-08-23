@@ -1,5 +1,5 @@
 # Phoenix Forge Technologies
-This pack is very much in its alpha stage. If you're interested in contributing, please feel free to check out the GitHub repository!
+This pack is very much in its alpha stage. If you're interested in contributing, please feel free to make a PR
 
 https://github.com/Phoenixvine32908/Phoenix-Forge-Technologies
 
