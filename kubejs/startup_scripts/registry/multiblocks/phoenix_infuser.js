@@ -19,7 +19,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('phoenix_infuser', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.OpV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes(['phoenix_infuser', 'phoenix_heart_hearth'])
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK,GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock("kubejs:phoenix_enriched_tritanium_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB", "BBBAAAAAAAAAAAAAAAAAAAAAAAAAAABBB", "ABBBAAAAAAAAAAAAAAAAAAAAAAAAABBBA", "AABBBAAAAAAAAAAACAAAAAAAAAAABBBAA", "AAABBBAAAAAAAAACCCAAAAAAAAABBBAAA", "AAAABBBAAAAAAACCDCCAAAAAAABBBAAAA", "AAAAABBBAAAAACCEDECCAAAAABBBAAAAA", "AAAAAABBBAAACCFEDEFCCAAABBBAAAAAA", "AAAAAAABBBACCFGEHEGFCCABBBAAAAAAA", "AAAAAAAABBBCFIIEHEIIFCBBBAAAAAAAA", "AAAAAAAAABBBFIIEHEIIFBBBAAAAAAAAA", "AAAAAAAACCBBBFGEHEGFBBBCCAAAAAAAA", "AAAAAAACCFFBBBFEGEFBBBFFCCAAAAAAA", "AAAAAACCFIIFBBBEGEBBBFIIFCCAAAAAA", "AAAAACCFGIIGFBBBGBBBFGIIGFCCAAAAA", "AAAACCEEEEEEEEBBBBBEEEEEEEECCAAAA", "AAACCDDDHHHHGGGBBBGGGHHHHDDDCCAAA", "AAAACCEEEEEEEEBBBBBEEEEEEEECCAAAA", "AAAAACCFGIIGFBBBGBBBFGIIGFCCAAAAA", "AAAAAACCFIIFBBBEGEBBBFIIFCCAAAAAA", "AAAAAAACCFFBBBFEGEFBBBFFCCAAAAAAA", "AAAAAAAACCBBBFGEHEGFBBBCCAAAAAAAA", "AAAAAAAAABBBFIIEHEIIFBBBAAAAAAAAA", "AAAAAAAABBBCFIIEHEIIFCBBBAAAAAAAA", "AAAAAAABBBACCFGEHEGFCCABBBAAAAAAA", "AAAAAABBBAAACCFEDEFCCAAABBBAAAAAA", "AAAAABBBAAAAACCEDECCAAAAABBBAAAAA", "AAAABBBAAAAAAACCDCCAAAAAAABBBAAAA", "AAABBBAAAAAAAAACCCAAAAAAAAABBBAAA", "AABBBAAAAAAAAAAACAAAAAAAAAAABBBAA", "ABBBAAAAAAAAAAAAAAAAAAAAAAAAABBBA", "BBBAAAAAAAAAAAAAAAAAAAAAAAAAAABBB", "BBAAAAAAAAAAAAAAAAAAAAAAAAAAAAABB")
@@ -80,7 +80,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
            .where("R", Predicates.blocks("kubejs:phoenix_heart_casing"))
            .where('S', Predicates.controller(Predicates.blocks(definition.get())))
                     .build())
-                    .workableCasingRenderer('kubejs:block/phoenix_enriched_tritanium_casing', 'gtceu:block/multiblock/fusion_reactor', false)
+                    .workableCasingModel('kubejs:block/phoenix_enriched_tritanium_casing', 'gtceu:block/multiblock/fusion_reactor')
 
 
 

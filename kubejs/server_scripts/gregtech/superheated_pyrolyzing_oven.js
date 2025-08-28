@@ -1,4 +1,4 @@
-
+/*
 ServerEvents.recipes(allthemods => { 
 
     allthemods.forEachRecipe({ type: 'gtceu:pyrolyse_oven' }, rawRecipe => {
@@ -83,3 +83,4 @@ allthemods.custom(unmodifiedRecipe)
     });
 
 });
+*/

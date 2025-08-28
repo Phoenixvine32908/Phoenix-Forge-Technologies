@@ -128,7 +128,7 @@ ServerEvents.recipes(event => {
         event.recipes.gtceu.electric_blast_furnace('frost_reinforced_stained_steelv2')
         .circuit(2)
         .itemInputs('1x gtceu:frost_reinforced_stained_steel_dust')
-        .inputFluids('kubejs:cryo_ember_fluid 22')
+        .inputFluids('kubejs:cryo_ember_fluid 150')
         .itemOutputs('1x gtceu:frost_reinforced_stained_steel_ingot')
         .blastFurnaceTemp(1700)
         .duration(740)

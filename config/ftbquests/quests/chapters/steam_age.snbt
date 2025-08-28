@@ -733,6 +733,7 @@
 				Count: 1
 				id: "gtceu:diamond_mining_hammer"
 				tag: {
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: {
 						AoEColumn: 1
@@ -744,7 +745,6 @@
 						TorchPlacing: 1b
 					}
 					GT.Tool: {
-						Damage: 0
 						HarvestLevel: 3
 						MaxDamage: 2303
 						ToolSpeed: 6.4f
@@ -1371,10 +1371,10 @@
 				Count: 1
 				id: "gtceu:diamond_hammer"
 				tag: {
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: { }
 					GT.Tool: {
-						Damage: 0
 						HarvestLevel: 3
 						MaxDamage: 767
 						ToolSpeed: 10.0f

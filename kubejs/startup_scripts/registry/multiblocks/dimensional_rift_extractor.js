@@ -19,7 +19,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('dimensional_anchor12', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('dimensional_anchoring12')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCDCB", "BBEBB", "BBEBB", "BBEBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB")
@@ -38,12 +38,12 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("H", Predicates.blocks("gtceu:high_temperature_smelting_casing"))
    .where('I', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-            .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_stable_titanium", "gtceu:block/multiblock/large_miner", false)
+            .workableCasingModel("gtceu:block/casings/solid/machine_casing_stable_titanium", "gtceu:block/multiblock/large_miner")
             
             phoenixvine.create('aetherial_fabricator12', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('aetherial_fabrication12')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("BCCCB", "BDDDB", "BCCCB", "BBCBB", "BBCBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB", "BBBBB")
@@ -62,6 +62,6 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
             .build()
         )
         // CRITICAL FIX FOR THIS MACHINE: Use the custom machine's own block model for rendering
-        .workableCasingRenderer('gtceu:block/casings/solid/machine_casing_clean_stainless_steel', 'gtceu:block/multiblock/large_miner', false);
-      
+        .workableCasingModel('gtceu:block/casings/solid/machine_casing_clean_stainless_steel', 'gtceu:block/multiblock/large_miner');
+
 });

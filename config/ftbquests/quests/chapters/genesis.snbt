@@ -7,12 +7,12 @@
 		Count: 1
 		id: "gtceu:iron_wrench"
 		tag: {
+			Damage: 0
 			DisallowContainerItem: 0b
 			GT.Behaviours: {
 				Mode: 2b
 			}
 			GT.Tool: {
-				Damage: 0
 				HarvestLevel: 2
 				MaxDamage: 255
 				ToolSpeed: 6.0f
@@ -43,13 +43,13 @@
 						Count: 1
 						id: "gtceu:diamond_axe"
 						tag: {
+							Damage: 0
 							DisallowContainerItem: 0b
 							GT.Behaviours: {
 								DisableShields: 1b
 								TreeFelling: 1b
 							}
 							GT.Tool: {
-								Damage: 0
 								HarvestLevel: 3
 								MaxDamage: 767
 								ToolSpeed: 8.0f
@@ -65,10 +65,10 @@
 						Count: 1
 						id: "gtceu:diamond_shovel"
 						tag: {
+							Damage: 0
 							DisallowContainerItem: 0b
 							GT.Behaviours: { }
 							GT.Tool: {
-								Damage: 0
 								HarvestLevel: 3
 								MaxDamage: 767
 								ToolSpeed: 10.0f
@@ -90,6 +90,7 @@
 						Count: 1
 						id: "gtceu:diamond_mining_hammer"
 						tag: {
+							Damage: 0
 							DisallowContainerItem: 0b
 							GT.Behaviours: {
 								AoEColumn: 1
@@ -101,7 +102,6 @@
 								TorchPlacing: 1b
 							}
 							GT.Tool: {
-								Damage: 0
 								HarvestLevel: 3
 								MaxDamage: 2303
 								ToolSpeed: 6.4f
@@ -777,7 +777,7 @@
 			description: [
 				"We've tweaked the tier materials as to make things more interesting. "
 				""
-				"The &6Steam Age&r now uses &cFiery Bronze&r, &2Low Voltage (LV)&r uses &eAurum Steel&r, &bMedium Voltage (MV)&r uses &3Aluminfrost&r, &7High Voltage (HV)&r uses &bFrost Reinforced Stained Steel&r, &dExtreme Voltage (EV)&r uses &5Source Imbued Titanium&r, &9Insane Voltage (IV)&r uses &5Void Touched Tungsten Steel&r, and &dLudicrous Voltage (LuV)&r uses &dResonant Rhodium Alloy&r."
+				"The &6Steam Age&r now uses &cFiery Bronze&r, &2Low Voltage (LV)&r uses &eAurum Steel&r, &bMedium Voltage (MV)&r uses &3Aluminfrost&r, &7High Voltage (HV)&r uses &bFrost Reinforced Stained Steel&r, &dExtreme Voltage (EV)&r uses &5Source Imbued Titanium&r, &9Insane Voltage (IV)&r uses &5Void Touched Tungsten Steel&r, &dLudicrous Voltage (LuV)&r uses &dResonant Rhodium Alloy&r, and &l&8Zero Point Module (ZPM)&r&r uses &8Advanced Quin-Naquadian Alloy.&r"
 				""
 				"Check the quest page for each progression tier to find the crafting recipes! "
 			]
@@ -850,7 +850,7 @@
 				title: "Updates"
 				type: "checkmark"
 			}]
-			x: -1.0d
+			x: 0.0d
 			y: -7.5d
 		}
 		{
@@ -1016,24 +1016,6 @@
 			title: "Circuit Progression"
 			x: 7.0d
 			y: -3.0d
-		}
-		{
-			description: [
-				"&cImportant Difficulty Information:&r This pack is &4not meant to be played on peaceful&r."
-				""
-				"For the intended gameplay experience, which includes running HNN and progressing with magic mobs, please set the difficulty to &aEasy&r, &eNormal&r, or &cHard&r. &bYou will need mobs to progress!&r"
-			]
-			icon: "minecraft:zombie_head"
-			id: "780F697E8A4E414A"
-			subtitle: "Don't Play On Peaceful!"
-			tasks: [{
-				id: "59BC981B60B84AF7"
-				title: "No Peaceful"
-				type: "checkmark"
-			}]
-			title: "Difficulty"
-			x: 1.0d
-			y: -7.5d
 		}
 	]
 	title: "Genesis"

@@ -6,11 +6,12 @@ const MINERAL_BEE_MATERIALS = [
     "sodalite", "gold", "obsidian", "cobaltite", "bauxite", "silver", "tungstate", "emerald",
     "tricalcium_phosphate", "nickel", "fluix", "malachite", "lead", "invar", "desh", "arcane", "rune", "menril", "warped",
     "magmatic", "rocked", "steamy", "super_factory", "slimy", "brown_shroom", "sculk", "crystalline", "scheelite", "spacial",
-     "frosty", "withered","arcane_crystal", "sticky_resin", "zombie", "blazing", "red_shroom", "infinity", "skeletal", "crimson", "silky",
-     "steel", "apatite", "cobalt", "salty", "sponge", "ghostly"
-
+    "frosty", "withered", "arcane_crystal", "sticky_resin", "zombie", "blazing", "red_shroom", "infinity", "skeletal", "crimson", "silky",
+    "steel", "apatite", "cobalt", "salty", "sponge", "ghostly",
+    "thorium", "graphite", "sphalerite", "netherite", "ender", "acidic", "chromite", "pyrolusite", "platinum", "bismuth",
+    "glowing", "bastnasite", "tetrahedrite", "sulfur", "oilsands", "tantalite", "barite", "vanadium_magnetite", "draconic",
+    "pyrochlore", "voidglass_shard", "crystalized_fluxstonee", "ignisium", "sky_steel"
 ];
-
 const MATERIAL_COLORS = {
     pitchblende:      { base: 0x6B5B95, secondary: 0x3B3146 },
     steel:      { base: 0x3b3b3b, secondary: 0x727272 },
@@ -34,7 +35,7 @@ const MATERIAL_COLORS = {
     super_factory:             { base: 0xb7abad, secondary: 0xe3cdd1 },
     scheelite:             { base: 0x24355c, secondary: 0x213256 },
     spacial:             { base: 0xdce2f3 , secondary: 0x6e95bf  },
-     silky:             { base: 0xdce2f3 , secondary: 0x6e95bf  },
+    silky:             { base: 0xdce2f3 , secondary: 0x6e95bf  },
     frosty:             { base: 0x979797 , secondary: 0x8e908b },
     withered:             { base: 0x131313 , secondary: 0x141414  },
     arcane_crystal:             { base: 0x292f89 , secondary: 0x444fe4  },
@@ -87,7 +88,33 @@ const MATERIAL_COLORS = {
     lead:             { base: 0x575757, secondary: 0x363636 },
     invar:            { base: 0xB2B2B2, secondary: 0x8B8B8B },
     desh:             { base: 0xC1440E, secondary: 0x8B4000 },
-    experience:       { base: 0x39FF14, secondary: 0x00C800 } // Added for experience bee (liquid exp green)
+    experience:       { base: 0x39FF14, secondary: 0x00C800 }, // Added for experience bee (liquid exp green)
+
+    // LuV Bee Materials
+    thorium:          { base: 0x14230e, secondary: 0x111e0c },
+    graphite:         { base: 0x10130b, secondary: 0x262821 },
+    sphalerite:       { base: 0x544a2c, secondary: 0x2c2817 },
+    netherite:        { base: 0x4c484c, secondary: 0x474447 },
+    ender:            { base: 0x0b0b0b, secondary: 0x0b0b0b },
+    acidic:           { base: 0xd9bc8e, secondary: 0x79694f },
+    chromite:         { base: 0x544155, secondary: 0x2c222c },
+    pyrolusite:       { base: 0x1f1e1d, secondary: 0x363230 },
+    platinum:         { base: 0x428b8e, secondary: 0x67d9dd },
+    bismuth:          { base: 0xe9e084, secondary: 0x7a7545 },
+    glowing:          { base: 0x816f40, secondary: 0xe7c874 },
+    bastnasite:       { base: 0x733a21, secondary: 0x452314 },
+    tetrahedrite:     { base: 0x171d16, secondary: 0x242d22 },
+    sulfur:           { base: 0xd3ec8a, secondary: 0xe1fc93 },
+    oilsands:         { base: 0x181814, secondary: 0x3c3729 },
+    tantalite:        { base: 0x180b04, secondary: 0x302828 },
+    barite:           { base: 0x34270f, secondary: 0x433823 },
+    vanadium_magnetite: { base: 0x373741, secondary: 0x130f17 },
+    draconic:         { base: 0x1c1c1c, secondary: 0x0e0e0e },
+    pyrochlore:       { base: 0x160d07, secondary: 0x2a1a0d },
+    voidglass_shard:  { base: 0x6900a8, secondary: 0x62009d },
+    crystalized_fluxstonee: { base: 0x7e7197, secondary: 0xc4b1ec },
+    ignisium:         { base: 0x972900, secondary: 0x6c2207 },
+    sky_steel:        { base: 0x414445, secondary: 0x1e2a24 }
 };
 
 GTCEuStartupEvents.registry('gtceu:material', event => {

@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('high_pressure_arc_furnace', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('high_pressure_arc_furnace')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH,GTRecipeModifiers.BATCH_MODE, GTRecipeModifiers.OC_PERFECT_SUBTICK])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBBBBBB", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "BBBBBBB", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC")
@@ -39,9 +39,8 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where('K', Predicates.controller(Predicates.blocks(definition.get())))
 
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
             "gtceu:block/casings/gcym/high_temperature_smelting_casing",
-            "gtceu:block/multiblock/fusion_reactor",
-            false
+            "gtceu:block/multiblock/fusion_reactor"
         )
 });

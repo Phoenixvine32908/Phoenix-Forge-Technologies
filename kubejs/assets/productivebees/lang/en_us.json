@@ -1,11 +1,11 @@
 {
     "entity.productivebees.neutronium_bee": "Not a Neutronium Bee",
 	"entity.productivebees.supa_bee": "Super Factory Bee",
-	"entity.productivebees.acidid_bee": "Acidic Bee",
+	"entity.productivebees.acidic_bee": "Acidic Bee",
 	"entity.productivebees.steamy_bee": "Steamy Bee",
 	"entity.productivebees.rocked_bee": "Rocked Bee",
 	"entity.productivebees.crystalized_fluxstone_bee": "Crystalized Fluxstone Bee",
-	"entity.productivebees.voidshard_glass_bee": "Void Shard Glass Bee",
+	"entity.productivebees.voidglass_shard_bee": "Void Shard Glass Bee",
 	"entity.productivebees.polarity_flipped_bismuthite_bee": "Polarity Flipped Bismuthite Bee",
 	"entity.productivebees.entropy_bee": "Entropy Bee",
 	"entity.productivebees.ignisium_bee": "Ignisium Bee",
@@ -13,4 +13,5 @@
 	"entity.productivebees.pitchblende_bee": "Pitchblende Bee",
 	"entity.productivebees.thorium_bee": "Thorium Bee",
 	"entity.productivebees.salty_bee": "Salty Bee"
+
 }

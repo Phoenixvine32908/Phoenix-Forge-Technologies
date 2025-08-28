@@ -23,7 +23,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
    .where("G", Predicates.blocks("gtceu:bronze_machine_casing"))
    .where('H', Predicates.controller(Predicates.blocks(definition.get())))
         .build())
-    .workableCasingRenderer("gtceu:block/casings/steam/bronze/bottom", "gtceu:block/machines/compressor", false)
+    .workableCasingModel("gtceu:block/casings/steam/bronze/bottom", "gtceu:block/machines/compressor")
     event.create('large_steam_sieve', 'multiblock')
         .machine((holder) => new $SteamMulti(holder, 4))
         .rotationState(RotationState.NON_Y_AXIS)
@@ -44,7 +44,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
    .where('E', Predicates.controller(Predicates.blocks(definition.get())))
    .where("D", Predicates.blocks("gtceu:steel_frame"))
         .build())
-    .workableCasingRenderer("gtceu:block/casings/steam/bronze/bottom", "gtceu:block/machines/sifter", false)
+    .workableCasingModel("gtceu:block/casings/steam/bronze/bottom", "gtceu:block/machines/sifter")
 }); 
 
 /*.or(Predicates.autoAbilities(definition.getRecipeTypes()))

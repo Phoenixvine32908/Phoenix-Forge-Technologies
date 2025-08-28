@@ -176,7 +176,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             builder
                 .rotationState(RotationState.ALL)
                 .abilities(PartAbility.PARALLEL_HATCH)
-                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_mk9"))
+                .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk9"))
         )
     event.create("uev_parallel_hatch", "custom")
         .machine((holder, tier) => {
@@ -187,7 +187,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             builder
                 .rotationState(RotationState.ALL)
                 .abilities(PartAbility.PARALLEL_HATCH)
-                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_mk12"))
+                .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk12"))
         )
     event.create("uiv_parallel_hatch", "custom")
     .machine((holder, tier) => {
@@ -198,7 +198,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         builder
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.PARALLEL_HATCH)
-            .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_mk13"))
+            .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk13"))
     )
     event.create("uxv_parallel_hatch", "custom")
         .machine((holder, tier) => {
@@ -209,7 +209,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
             builder
                 .rotationState(RotationState.ALL)
                 .abilities(PartAbility.PARALLEL_HATCH)
-                .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_mk14"))
+                .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk14"))
         )
     event.create("opv_parallel_hatch", "custom")
     .machine((holder, tier) => {
@@ -220,7 +220,7 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         builder
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.PARALLEL_HATCH)
-            .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_mk15"))
+            .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk15"))
     )
     event.create("max_parallel_hatch", "custom")
     .machine((holder, tier) => {
@@ -231,6 +231,6 @@ GTCEuStartupEvents.registry('gtceu:machine', event => {
         builder
             .rotationState(RotationState.ALL)
             .abilities(PartAbility.PARALLEL_HATCH)
-            .workableTieredHullRenderer(GTCEu.id("block/machines/parallel_hatch_mk16"))
+            .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk16"))
     )
 })

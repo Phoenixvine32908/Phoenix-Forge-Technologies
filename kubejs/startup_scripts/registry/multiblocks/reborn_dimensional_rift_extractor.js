@@ -12,7 +12,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('reborn_dimensional_rift_extractor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('chemical_reactor')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBBBBBB", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC", "CCCCCCC")
@@ -35,9 +35,8 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("G", Predicates.blocks("gtceu:heat_vent"))
    .where('H', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
           "kubejs:block/reliable_naquadah_alloy_machine_casing",
             "gtceu:block/multiblock/fusion_reactor",
-            false
         )
 });

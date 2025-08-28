@@ -1,21 +1,12 @@
 const CoilWorkableElectricMultiblockMachine = Java.loadClass("com.gregtechceu.gtceu.api.machine.multiblock.CoilWorkableElectricMultiblockMachine")
 Java.loadClass("com.gregtechceu.gtceu.api.GTValues")
-GTCEuStartupEvents.registry('gtceu:recipe_type', phoenix => {
-  phoenix.create('superheated_pyrolyzing_oven')
-    .category('cracking_overload')
-    .setEUIO('in')
-    .setMaxIOSize(2, 1, 1, 1) // Adjusted values
-    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-    .setSound(GTSoundEntries.CHEMICAL);
-});
 GTCEuStartupEvents.registry('gtceu:machine', event => {
 const GCYMRecipeTypes = Java.loadClass("com.gregtechceu.gtceu.common.data.GCYMRecipeTypes") // Have to load it here because ALLOY_BLAST_RECIPES is not defined outside of the event
 event.create("emberwake_alloy_hearth", "multiblock")
         .machine((holder) => new CoilWorkableElectricMultiblockMachine(holder))
         .rotationState(RotationState.ALL)
         .recipeTypes(GCYMRecipeTypes.ALLOY_BLAST_RECIPES)
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK,GTRecipeModifiers.BATCH_MODE, (machine, recipe) => GTRecipeModifiers.ebfOverclock(machine, recipe)])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("BCCCB", "BCDCB", "BCDCB", "BEEEB", "BFFFB", "BCCCB", "BBBBB", "BBBBB", "BBBBB")
@@ -37,14 +28,14 @@ event.create("emberwake_alloy_hearth", "multiblock")
             .where("I", Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
             .where('J', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer("gtceu:block/casings/gcym/high_temperature_smelting_casing", 'gtceu:block/multiblock/gcym/blast_alloy_smelter', false);
+        .workableCasingModel("gtceu:block/casings/gcym/high_temperature_smelting_casing", 'gtceu:block/multiblock/gcym/blast_alloy_smelter');
 
     // --- ADVANCED CRACKING UNIT ---
     event.create("advanced_cracking_unit", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .machine((holder) => new CoilWorkableElectricMultiblockMachine(holder))
         .recipeTypes("cracker")
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, (machine, recipe) => GTRecipeModifiers.crackerOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE, (machine, recipe) => GTRecipeModifiers.crackerOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_TURBINE)
         .pattern(definition => FactoryBlockPattern.start()
             .aisle("BBCCCCCBB", "DBDDDDDBD", "DBDDDDDBD", "DBDDDDDBD", "DBDDDDDBD", "DDDDDDDDD", "DDDDDDDDD", "DDDDDDDDD")
@@ -71,17 +62,16 @@ event.create("emberwake_alloy_hearth", "multiblock")
    .where("L", Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
    .where("M", Predicates.blocks("gtceu:clean_machine_casing"))
    .where('N', Predicates.controller(Predicates.blocks(definition.get())))
-            .where('I', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer("gtceu:block/casings/mechanic/machine_casing_turbine_tungstensteel",
-            "gtceu:block/multiblock/cracking_unit", false);
+        .workableCasingModel("gtceu:block/casings/mechanic/machine_casing_turbine_tungstensteel",
+            "gtceu:block/multiblock/cracking_unit");
 
     // --- SUPERHEATED PYROLYZING OVEN ---
     event.create("superheated_pyrolyzing_oven", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .machine((holder) => new CoilWorkableElectricMultiblockMachine(holder))
         .recipeTypes('pyrolyse_oven')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, (machine, recipe) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe)])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.BATCH_MODE, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, (machine, recipe) => GTRecipeModifiers.pyrolyseOvenOverclock(machine, recipe)])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition => FactoryBlockPattern.start()
 .aisle("BCBBBBBCB", "BDBBBBBDB", "BDBBBBBDB", "BDBBBBBDB", "BDBBBBBDB", "BDBBBBBDB", "BDBBBBBDB", "BCBBBBBCB")
@@ -109,8 +99,8 @@ event.create("emberwake_alloy_hearth", "multiblock")
    .where("K", Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
    .where('L', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer("gtceu:block/casings/solid/machine_casing_solid_steel",
-            "gtceu:block/multiblock/pyrolyse_oven", false);
+        .workableCasingModel("gtceu:block/casings/solid/machine_casing_solid_steel",
+            "gtceu:block/multiblock/pyrolyse_oven");
 
         
 })

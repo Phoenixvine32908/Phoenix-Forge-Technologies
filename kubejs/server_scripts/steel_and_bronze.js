@@ -292,10 +292,6 @@ ServerEvents.recipes((event) => {
     "1x gtceu:coke_dust",
     "minecraft:iron_ingot",
   ]);
-    event.shapeless("gtceu:magnetic_steel_rod", [
-    "1x gtceu:steel_rod",
-    "5x minecraft:redstone",
-  ]);
   event.shapeless("gtceu:steel_dust", [
     "1x gtceu:coke",
     "gtceu:iron_dust",

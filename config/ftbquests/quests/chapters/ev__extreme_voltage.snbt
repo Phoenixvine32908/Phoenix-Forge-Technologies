@@ -1491,6 +1491,12 @@
 			]
 			icon: "gtceu:silicone_rubber_plate"
 			id: "1A4AD56965407DC5"
+			rewards: [{
+				count: 3
+				id: "23EBB6C0A1724162"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "An alternate rubber"
 			tasks: [
@@ -1538,6 +1544,12 @@
 				"Both these rubbers will be required once you make it to &dLuV&r."
 			]
 			id: "77070668969E31BF"
+			rewards: [{
+				count: 3
+				id: "699274B59D32EC78"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Steel Ball Run"
 			tasks: [{
@@ -2156,7 +2168,7 @@
 			]
 			icon: {
 				Count: 1
-				id: "gtceu:avanced_nanomuscle_chestplate"
+				id: "gtceu:advanced_nanomuscle_chestplate"
 				tag: {
 					Damage: 0
 				}
@@ -2176,7 +2188,7 @@
 				id: "3D2600C788928F76"
 				item: {
 					Count: 1
-					id: "gtceu:avanced_nanomuscle_chestplate"
+					id: "gtceu:advanced_nanomuscle_chestplate"
 					tag: {
 						Damage: 0
 					}

@@ -128,6 +128,12 @@
 				"This will also unlock the &6best recipe&r for &6HV&r Circuits in the &3LuV Circuit Assembler&r. You're probably going to want to mass produce these for the many &dLapotronic Energy Orbs&r that'll be required moving forwards."
 			]
 			id: "3F31E99D0284A60A"
+			rewards: [{
+				count: 3
+				id: "69B82361EEC18F69"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Doper than ever before"
@@ -151,6 +157,12 @@
 			]
 			hide_dependency_lines: true
 			id: "78277DBC07D3C45C"
+			rewards: [{
+				count: 3
+				id: "0E23447F76FD8B9D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Don't you mean Stargatium?"
@@ -199,15 +211,24 @@
 				"&aLuV Superconductors&r are necessary if you're eyeing a &9Fusion Reactor&r. "
 				""
 				"Don't ignore our warning here - you're gonna need &ea lot&r&r of them. Luckily, any &5Indium&r shortages will be solved by your Naquadah line."
+				""
+				"&6&lFret not&r&r all you who seek strong superconductors, &5Extremely Modified Space Grade Steel&r has your back, with &364 amps&r with 1x wires, you can use those &bactive transformers&r you unlocked earlier and really go ham with your &5central power&r! This stuff is also used to make certain &bspecial custom multiblocks&r this tier."
 			]
 			id: "5ED7707B0ECF2207"
 			size: 0.75d
 			subtitle: "Be glad these don't use pumps"
-			tasks: [{
-				id: "10FB849CE994B1A5"
-				item: "gtceu:indium_tin_barium_titanium_cuprate_single_wire"
-				type: "item"
-			}]
+			tasks: [
+				{
+					id: "10FB849CE994B1A5"
+					item: "gtceu:indium_tin_barium_titanium_cuprate_single_wire"
+					type: "item"
+				}
+				{
+					id: "3DC557BF47560025"
+					item: "gtceu:extremely_modified_space_grade_steel_single_wire"
+					type: "item"
+				}
+			]
 			title: "LuV Superconductors"
 			x: 4.5d
 			y: 1.125d
@@ -227,6 +248,11 @@
 			]
 			icon: "gtceu:argon_plasma_bucket"
 			id: "173C1FA72301B5E7"
+			rewards: [{
+				id: "7A9899314EBDBBAA"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "The stars are calling..."
@@ -248,6 +274,12 @@
 				"If you're the type to question how realistic Plasma Turbines are... look up Magnetohydrodynamic Generators if you want something that bends fact into fiction."
 			]
 			id: "4E9DED9569AA17F5"
+			rewards: [{
+				count: 3
+				id: "51B50CCA2C5CC078"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Plasma? Turbine?! How?"
 			tasks: [{
@@ -267,6 +299,12 @@
 				"Prepare to make lots... after you make &9Fusion&r and &9Crystal Circuits&r. Tackle those before you try making this."
 			]
 			id: "24F0454B9A090C44"
+			rewards: [{
+				count: 3
+				id: "6358CF0AFD41D83B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Stargate's Strongest"
 			tasks: [{
@@ -312,6 +350,12 @@
 			]
 			icon: "gtceu:naquadah_dust"
 			id: "378F0AFCF95354B2"
+			rewards: [{
+				count: 3
+				id: "1AC0AB8E1264BF3D"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Do not touch the acid"
 			tasks: [{
@@ -338,6 +382,12 @@
 			]
 			icon: "gtceu:trinium_ingot"
 			id: "0DC999F79A685194"
+			rewards: [{
+				count: 3
+				id: "79F46AA35B75EF40"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.2d
 			subtitle: "Another Stargate material!"
@@ -368,6 +418,11 @@
 				"&l&3Lore:&r&o In GT Impact, making Pu-241 was a challenge. Your first Pu-241 had to be produced as a byproduct of its very expensive Naquadah fuel process, and it could only be made independently with something post-fusion!"
 			]
 			id: "2BBD3BC7D1B955C2"
+			rewards: [{
+				id: "26419DDF65ABB72B"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Spicy Plutonium Isotope"
@@ -412,6 +467,12 @@
 				"&oThe &3Fusion Reactor I&f can only run recipes up to a required EU of 160 MEU to start. It will also overclock up to &dLuV&f at best, even if you upgrade to ZPM Hatches, so don't stress over attempting this."
 			]
 			id: "546CC03435E763CF"
+			rewards: [{
+				count: 5
+				id: "34E0294D27792EBB"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.3d
 			subtitle: "Stellar power"
@@ -434,6 +495,12 @@
 				"&l&3Lore:&r&o In Gregicality Legacy, Europium was replaced with Rutherfordium as the first fusion material, because Europium is actually found in Rare Earth and isn't fused in real life."
 			]
 			id: "7A74F692F14F0FF8"
+			rewards: [{
+				count: 5
+				id: "1701FEDB3CFA4779"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "gear"
 			size: 1.1d
 			subtitle: "Fusing Europium... whaaat?!"
@@ -463,6 +530,12 @@
 			]
 			icon: "gtceu:crystal_cpu"
 			id: "764091A111FB4DA6"
+			rewards: [{
+				count: 3
+				id: "2842C1B553319692"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "These don't even make any sense!"
 			tasks: [
@@ -542,6 +615,12 @@
 			]
 			icon: "expatternprovider:ex_interface"
 			id: "79192BA29BE69170"
+			rewards: [{
+				count: 3
+				id: "5AAEA6D6A5B186BE"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [{
@@ -564,6 +643,12 @@
 				"One single &3Advanced Fluid Drilling Rig II&r should be enough to last you until the end of the game, for whatever fluid you drill."
 			]
 			id: "4AEAC79007790BD8"
+			rewards: [{
+				count: 3
+				id: "25CB2908E62733E5"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "This thing is completely ludicrous!"
@@ -586,6 +671,12 @@
 				"&l&3Lore:&r&o There may be a rebalance for these in the future. See the Multiblock Miner quest for details."
 			]
 			id: "1BE779AF4487E3EB"
+			rewards: [{
+				count: 3
+				id: "3EA064F7EC0A789F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			tasks: [{
@@ -610,6 +701,12 @@
 			]
 			icon: "gtceu:lapotronic_energy_orb_cluster"
 			id: "0D7C978F9CDF771B"
+			rewards: [{
+				count: 3
+				id: "46699FB601539054"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Even more power!"
 			tasks: [
@@ -633,6 +730,12 @@
 			dependencies: ["42CD789B8C40E424"]
 			description: ["Cheaper &dLuV&r circuits! These'll take some of the edge out of those brutal Robot Arm recipes."]
 			id: "47087361D6DE7DCF"
+			rewards: [{
+				count: 2
+				id: "4E1DC517A78FEAD9"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "Yup... another circuit upgrade"
 			tasks: [{
@@ -652,6 +755,12 @@
 				"Don't lie - &bCrystal Supercomputers&r sound really cool, right?"
 			]
 			id: "7AE681E2AB31EA0D"
+			rewards: [{
+				count: 3
+				id: "2CF5532504413AF3"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "...wait, why'd things end here?"
 			tasks: [{
@@ -670,6 +779,12 @@
 			]
 			description: ["The &aLuV Electric Prospector&r is a major upgrade from the &eHV&r one. With its huge range, it'll make finding Fluid and Ore veins very easy."]
 			id: "7033A24F37F9B9B9"
+			rewards: [{
+				count: 3
+				id: "66ED47470AD525A7"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "If you're yet to strike gold, you will now"
@@ -694,6 +809,12 @@
 				"&l&3Lore:&r&o The concept of a Crystal Circuit has existed since the very early versions of GregTech. We're still not entirely sure if they exist in real life."
 			]
 			id: "42CD789B8C40E424"
+			rewards: [{
+				count: 3
+				id: "36C2256229DF1E01"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "I know where this is going!"
 			tasks: [{
@@ -715,6 +836,12 @@
 				"&l&3Lore:&r&o In Gregicality Legacy, these circuit boards were much more complicated. They required Kapton, a dual polymer material. It was a challenge to say the least. In the future, the GTCEu team might make these boards somewhat more involved to produce."
 			]
 			id: "6C241455C5434C2E"
+			rewards: [{
+				count: 3
+				id: "4BEA4501BDE7334E"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.75d
 			subtitle: "M-L F-R PCB"
 			tasks: [{
@@ -745,6 +872,12 @@
 			]
 			icon: "gtceu:luv_electric_motor"
 			id: "11D3B21A177B0E14"
+			rewards: [{
+				count: 3
+				id: "3D981FFE09BF2A31"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Fun levels - critical"
@@ -793,6 +926,11 @@
 			dependencies: ["0425179329ED1B72"]
 			description: ["A requirement for &dLuV&r+ cables."]
 			id: "12FEE0A47E4658D5"
+			rewards: [{
+				id: "7AB7210C48CA93FC"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Cables need better coating now"
@@ -842,6 +980,12 @@
 			]
 			icon: "minecraft:mud"
 			id: "63F9531F391040B2"
+			rewards: [{
+				count: 3
+				id: "280CFC386CC3E76F"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "They call me 007 - 0 Naquadah, 0 EU/t, 7 TPS"
@@ -857,6 +1001,12 @@
 				"Even so, we hope you weren't running all the polarization off a single &6HV&r Polarizer. Were you?"
 			]
 			id: "35D4F93EFB6EACB6"
+			rewards: [{
+				count: 3
+				id: "3051A726B1A354C7"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Feeling attracted yet?"
@@ -874,6 +1024,12 @@
 			description: ["The &aQuantum Bridge Card&r is an upgrade to the &9Quantum Link Tunnel&r, which gives &9Wireless Terminals&r access to your AE system with unlimited range, and from any dimension."]
 			icon: "ae2wtlib:quantum_bridge_card"
 			id: "602DA4B4820E9088"
+			rewards: [{
+				count: 3
+				id: "5B7B71EF76DBDFA6"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "Bridge over Troubled Water"
@@ -903,6 +1059,12 @@
 				}
 			}
 			id: "0A884622985A7417"
+			rewards: [{
+				count: 5
+				id: "65AD2CD540CBF5E9"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "I'll be seeing you in the skies!"
@@ -930,6 +1092,11 @@
 			]
 			icon: "gtceu:luv_dual_input_hatch"
 			id: "0960C894446A786C"
+			rewards: [{
+				id: "56368132BE994985"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			shape: "circle"
 			size: 0.66d
 			subtitle: "Compact and Useful"
@@ -1007,12 +1174,19 @@
 			]
 			icon: "expatternprovider:pattern_modifier"
 			id: "5CE0B928479D8535"
-			rewards: [{
-				count: 64
-				id: "597FE2E43C76B1E0"
-				item: "ae2:blank_pattern"
-				type: "item"
-			}]
+			rewards: [
+				{
+					count: 64
+					id: "597FE2E43C76B1E0"
+					item: "ae2:blank_pattern"
+					type: "item"
+				}
+				{
+					id: "431B9FC88FE7C5B3"
+					item: "kubejs:phoenix_feather"
+					type: "item"
+				}
+			]
 			shape: "rsquare"
 			size: 0.66d
 			subtitle: "The &aPattern Modifier&r does A LOT!"
@@ -1026,11 +1200,24 @@
 			y: 5.94d
 		}
 		{
+			dependencies: ["5ED7707B0ECF2207"]
 			description: [
-				"A machine that makes bees very fast, I hope you started bees back in iv. What, you mean you really did not do bees? Rude."
+				"A machine that makes &6bees produce resources very fast&r. However, this power requires some preperation. Because of this, I hope you started bees back in &eIV&r. "
 				""
+				"This wonderful machine can also use the &9WannaBee&r, a very powerful bee that uses &eambered mobs&r to generate &d mob drops&r. "
 				""
-				"\"You stumble upon a note pad. It seems to be research from a lost scientist, his name is familiar yet foregin to you at the same time? A man crazy in love with bees named &4&lDevil&r&r? Whoever he was he has indescribably dissappeared almost as if he became one with the bees. His research pad whilst ancient has some pages left in it. It describes a machine capable of harnessing the power of bees to produce resources to help reclaim PhoenixWare's once lost greatness.\""
+				"This is the direct replacement to &cHostile Neural Networks&r since I have blacklisted the &8simulation chamber&r from GT's &7world accelerator&r."
+				""
+				"What, you mean you really did not do bees? &aRude.&r"
+				""
+				"{@pagebreak}"
+				"\"You stumble upon a &8note pad&r. It seems to be research from a &c&llost scientist&r, his name is familiar yet foreign to you at the same time? "
+				""
+				"A man crazy in love with bees named &#FF0000&lDevil&r? "
+				""
+				"Whoever he was he has indescribably disappeared almost as if he became one with the &6bees&r. His research pad whilst ancient has some pages left in it. "
+				""
+				"It describes a machine capable of harnessing the power of &6bees&r to produce resources to help reclaim &2PhoenixWare's&r once lost greatness.\""
 			]
 			id: "25E859663CF87F45"
 			rewards: [{
@@ -1058,14 +1245,16 @@
 				}
 				type: "item"
 			}]
+			shape: "heart"
+			size: 0.9d
 			subtitle: "Become a BEE expert!"
 			tasks: [{
 				id: "743B35E287A3AF89"
 				item: "gtceu:melferious_matrix"
 				type: "item"
 			}]
-			x: 8.5d
-			y: 0.5d
+			x: 4.5d
+			y: -0.375d
 		}
 		{
 			dependencies: [
@@ -1110,6 +1299,12 @@
 				"Master this intricate symbiotic relationship and secure your ultimate LUV power!"
 			]
 			id: "0846D43188314E53"
+			rewards: [{
+				count: 3
+				id: "3B4A1211F10BBADB"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
 			size: 0.66d
 			subtitle: "Now we cooking!"
 			tasks: [{
@@ -1118,6 +1313,83 @@
 				type: "item"
 			}]
 			x: 5.94d
+			y: 0.33d
+		}
+		{
+			dependencies: ["5ED7707B0ECF2207"]
+			description: ["The &3Pyrolyse Oven&r is an stronger variant to the &3Cracker&r. It can produce &9Coal Coke&r, &9Charcoal&r with a &9Creosote&r byproduct, and just as before, &6Organic Byproducts&r faster. With it's ability to use a &o&l&6Parallel Control Hatch&r&r&r, this wonderful upgrade to your wood processing will have you rip and raring. I hope you are ready to &c&lBring The Heat!&r"]
+			id: "6254EF241B1F3CCF"
+			size: 0.75d
+			subtitle: "Ouch, hot wood, careful!"
+			tasks: [{
+				id: "05E8847D9690265B"
+				item: "gtceu:superheated_pyrolyzing_oven"
+				type: "item"
+			}]
+			x: 4.875d
+			y: 0.375d
+		}
+		{
+			dependencies: ["5ED7707B0ECF2207"]
+			description: [
+				"Have you ever wondered why the &8cracker&r is so &4painfully slow&r?"
+				""
+				"Some people have even stooped so low as to use the &9Large Chemical Reactor&r to crack their &ehydrocarbons&r even with the &c&lhalf loss&r because of its &aPerfect Overclock&r."
+				""
+				"However, now you are ready to become the &6king of petrochem&r and crack all your products at &badvanced speeds&r, ones you have only once dreamed of."
+			]
+			id: "11A1A002DF53B4AD"
+			size: 0.75d
+			subtitle: "Don't \"Crack\" Under the Pressure"
+			tasks: [{
+				id: "69C9D4FE1E6C41DE"
+				item: "gtceu:advanced_cracking_unit"
+				type: "item"
+			}]
+			x: 4.125d
+			y: 0.375d
+		}
+		{
+			dependencies: ["2BBD3BC7D1B955C2"]
+			description: [
+				"The &b&lUranium-236 Fuel Blanket&r represents a new era of nuclear alchemy. While its power output is respectable, its true value lies in its transformative power. When used alongside a &d&lPlutonium-241 Driver&r, it acts as a &9&lreactor blanket&r, converting &f&ldepleted fuel waste&r into incredibly valuable &a&lbyproducts&r, unlocking a new level of resource generation."
+				""
+				"Harness the potential of this symbiotic relationship and &e&lmaster the waste!&r"
+			]
+			id: "1EFD372D074896CC"
+			rewards: [{
+				count: 3
+				id: "2E76DAFBE21675FF"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.66d
+			subtitle: "That's a lotta calories!"
+			tasks: [{
+				id: "101B54F31E3F0731"
+				item: "kubejs:u236_fuel_pellet"
+				type: "item"
+			}]
+			x: 7.59d
+			y: 0.99d
+		}
+		{
+			dependencies: ["2BBD3BC7D1B955C2"]
+			description: ["Behold the &d&lPlutonium-241 Fuel Driver&r, the &l&4beating heart&r of the ultimate reactor! This pellet represents a &b&lquantum leap&r in energy generation, providing an immense surge of power far beyond any previous fuel line. It is the &l&cengine&r that supercharges the &9&lUranium-236 blanket&r, allowing for a torrent of power and valuable byproducts to be created."]
+			id: "3509C91BE95143C2"
+			rewards: [{
+				id: "6DC73C7B4C75AF60"
+				item: "kubejs:phoenix_feather"
+				type: "item"
+			}]
+			size: 0.66d
+			subtitle: "It's not a red hot candy, trust me"
+			tasks: [{
+				id: "465531FC13F80F24"
+				item: "kubejs:plutonium_241_fuel_pellet"
+				type: "item"
+			}]
+			x: 7.59d
 			y: 0.33d
 		}
 	]

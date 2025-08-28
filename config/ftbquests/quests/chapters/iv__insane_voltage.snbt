@@ -1302,10 +1302,10 @@
 				Count: 1
 				id: "gtceu:polybenzimidazole_mallet"
 				tag: {
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: { }
 					GT.Tool: {
-						Damage: 0
 						MaxDamage: 1023
 					}
 					HideFlags: 2
@@ -1327,10 +1327,10 @@
 					Count: 1
 					id: "gtceu:polybenzimidazole_mallet"
 					tag: {
+						Damage: 0
 						DisallowContainerItem: 0b
 						GT.Behaviours: { }
 						GT.Tool: {
-							Damage: 0
 							MaxDamage: 1023
 						}
 						HideFlags: 2
@@ -1783,8 +1783,10 @@
 			description: [
 				"Forget traditional breeding; you &6transform&r bees using matching materials and ores!"
 				""
+				"&c(A word of advice, the name on the bee cages have to be &9&l&o&nEXACTLY&r &cwhat they say for the recipes/the name of the bee in emi, so if you want to make a bee check the bee name in emi and anvil rename to match)&r&r"
 				""
 				"{ \"text\": \"You ready to take them on? If so, click here!\", \"underlined\": \"true\", \"clickEvent\": { \"action\": \"change_page\", \"value\": \"7E3321A610CAAA83\" } }"
+				""
 				""
 				"This is the most complex phase of the Bee Line, requiring you to find &aSpecial Nests&r in specific biomes. Lure the bees with &bHoney Treats&r (or specialized catalysts for rare nests) to initiate the moving-in process."
 				""
