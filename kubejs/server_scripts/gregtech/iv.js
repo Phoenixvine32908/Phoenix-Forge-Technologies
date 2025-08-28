@@ -15,32 +15,32 @@ ServerEvents.recipes(event => {
     .EUt(GTValues.VA[GTValues.IV])
 
     // Superheated Pyro Oven Research (scanner)
-    greg.scanner("superheated_pyro_oven_research")
-    .itemInputs("gtceu:pyrolyse_oven", "gtceu:data_stick")
-    .itemOutputs(Item.of('gtceu:data_stick', '{assembly_line_research:{research_id:"1x_gtceu_pyrolyse_oven",research_type:"gtceu:assembly_line"}}'))
+    greg.scanner("melferious_matrix_research")
+    .itemInputs("gtceu:simulated_colony", "gtceu:data_stick")
+    .itemOutputs(Item.of('gtceu:data_stick', '{assembly_line_research:{research_id:"1x_gtceu_simulated_colony",research_type:"gtceu:assembly_line"}}'))
     .duration(2000)
     .EUt(GTValues.VA[GTValues.IV])
 
-    // Superheated Pyro Oven Assembly Line Recipe
-    greg.assembly_line("superheated_pyro_oven")
+    // Melferious Matrix Assembly Line Recipe
+    greg.assembly_line("melferious_matrix")
     .itemInputs(
-        "4x gtceu:extremely_modified_space_grade_steel_hex_wire",
-        "2x gtceu:luv_electric_pump",
-        "2x gtceu:luv_electric_piston",
-        "2x gtceu:luv_field_generator",
-        "6x #gtceu:circuits/luv",
-        "gtceu:luv_machine_hull",
-        "16x gtceu:resonant_rhodium_alloy_rotor"
+        "8x gtceu:sturdy_machine_casing",
+        "16x gtceu:resonant_rhodium_alloy_plate",
+        "2x productivebees:upgrade_comb_block",
+        "64x productivebees:honey_treat",
+        "4x kubejs:conductive_honey_coil", 
+        "1x gtceu:extremely_modified_space_grade_steel_quadruple_wire", // LuV supercon
+        "4x gtceu:void_touched_tungsten_steel_rotor",
+        "2x gtceu:simulated_colony"
     )
     .inputFluids(
-        "gtceu:soldering_alloy 4000",
-        "gtceu:void_touched_tungsten_steel 2880",
-        "gtceu:rtm_alloy 2880"
+        "productivebees:honey 24000",
+        "gtceu:soldering_alloy 4000"
     )
-    .itemOutputs("gtceu:superheated_pyrolyzing_oven")
-   .stationResearch(b => b.researchStack(Item.of('gtceu:pyrolyse_oven')).EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
+    .itemOutputs("gtceu:melferious_matrix")
+    .stationResearch(b => b.researchStack('gtceu:simulated_colony').EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
     .EUt(GTValues.VA[GTValues.LuV])
-    .duration(800)
+    .duration(1000)
 
     // Advanced Cracker Research (scanner)
     greg.scanner("advanced_cracker_research")
@@ -65,7 +65,7 @@ ServerEvents.recipes(event => {
         "gtceu:hssg 2880"
     )
     .itemOutputs("gtceu:advanced_cracking_unit")
-    .stationResearch(b => b.researchStack(Item.of('gtceu:cracker')).EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
+    .stationResearch(b => b.researchStack('gtceu:cracker').EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
     .EUt(GTValues.VA[GTValues.LuV])
     .duration(900)
    greg.mixer("permafrost")
@@ -178,11 +178,43 @@ ServerEvents.recipes(event => {
         .blastFurnaceTemp(3600)
         .EUt(GTValues.VA[GTValues.EV]);
 
+    greg.mixer('extremely_modified_space_grade_steel')
+        .itemInputs(
+            '4x gtceu:source_imbued_titanium_dust',
+            '2x gtceu:ruthenium_dust',
+            '4x gtceu:space_grade_steel_dust',
+            '32x minecraft:tnt'
+        )
+        .inputFluids('gtceu:radon 250')
+        .itemOutputs('8x gtceu:extremely_modified_space_grade_steel_dust')
+        .duration(400)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // ABS recipe for Extremely Modified Space Grade Steel
+    greg.alloy_blast_smelter('molten_extremely_modified_space_grade_steel')
+        .itemInputs('4x gtceu:source_imbued_titanium_dust', '2x gtceu:ruthenium_dust', '4x gtceu:space_grade_steel_dust', "32x minecraft:tnt")
+        .circuit(5)
+        .inputFluids('gtceu:radon 250')
+        .outputFluids('gtceu:molten_extremely_modified_space_grade_steel 1152')
+        .duration(4800)
+        .blastFurnaceTemp(3400)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
+    // Boosted ABS recipe for Extremely Modified Space Grade Steel
+    greg.alloy_blast_smelter('molten_extremely_modified_space_grade_steel_boosted')
+        .itemInputs('4x gtceu:source_imbued_titanium_dust', '2x gtceu:ruthenium_dust', '4x gtceu:space_grade_steel_dust', "32x minecraft:tnt")
+        .circuit(15)
+        .inputFluids('gtceu:radon 250', 'gtceu:helium 1000')
+        .outputFluids('gtceu:molten_extremely_modified_space_grade_steel 1440')
+        .duration(3600)
+        .blastFurnaceTemp(3600)
+        .EUt(GTValues.VA[GTValues.LuV]);
+
     // Liquid Void Touched Tungsten Steel (Boosted) in Alloy Blast Smelter
     greg.alloy_blast_smelter('loquid_void_touched_tungsten_steel_boosted')
         .itemInputs('4x gtceu:tungsten_dust', '4x gtceu:voidglass_shard_dust', '2x gtceu:molybdenum_dust')
         .circuit(15)
-        .inputFluids('gtceu:liquid_ender_air 100', 'gtceu:helium 50')
+        .inputFluids('gtceu:liquid_ender_air 100', 'gtceu:helium 100')
         .outputFluids('gtceu:molten_void_touched_tungsten_steel 1152')
         .blastFurnaceTemp(3600)
         .duration(4200)
@@ -398,10 +430,10 @@ ServerEvents.recipes(event => {
     // --- Nuclear & Radioactive Processing ---
     // Heat Exchanging Fission Steam to Distilled Water (Medium Pressure)
     event.recipes.gtceu.heat_exchanging('fission3')
-        .inputFluids('gtceu:medium_pressure_fissile_steam 25')
-        .outputFluids('gtceu:distilled_water 500')
+        .inputFluids('gtceu:medium_pressure_fissile_steam 2000')
+        .outputFluids('gtceu:distilled_water 4500')
         .duration(40)
-        .EUt(-GTValues.VA[GTValues.EV]*4)
+        .EUt(-GTValues.VA[GTValues.LuV])
 
     // Heat Exchanging Fission Steam to Distilled Water (Critical Steam)
     event.recipes.gtceu.heat_exchanging('fission4')
@@ -743,7 +775,7 @@ ServerEvents.recipes(event => {
         .itemInputs('4x gtceu:resonant_rhodium_alloy_rotor', '4x productivebees:honey_treat', '2x #gtceu:circuits/luv', 'gtceu:luv_machine_hull', '1x gtceu:luv_sensor')
         .itemOutputs('gtceu:luv_confectionery_fabricator')
         .inputFluids("productivebees:honey 1700", "gtceu:soldering_alloy 4000")
-        .stationResearch(b => b.researchStack(Item.of('gtceu:iv_confectionery_fabricator')).EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
+        .stationResearch(b => b.researchStack('gtceu:iv_confectionery_fabricator').EUt(131000).CWUt(1, 1).dataStack("gtceu:data_stick"))
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(600)
 
@@ -752,12 +784,12 @@ ServerEvents.recipes(event => {
         .itemInputs('4x gtceu:advanced_quin_naquadian_alloy_rotor', '16x productivebees:honey_treat', '2x #gtceu:circuits/zpm', 'gtceu:zpm_machine_hull', '1x gtceu:zpm_sensor')
         .itemOutputs('gtceu:zpm_confectionery_fabricator')
         .inputFluids("productivebees:honey 1700", "gtceu:soldering_alloy 2500")
-        .stationResearch(b => b.researchStack(Item.of('gtceu:luv_confectionery_fabricator')).EUt(131000).CWUt(1, 1))
+        .stationResearch(b => b.researchStack('gtceu:luv_confectionery_fabricator').EUt(131000).CWUt(1, 1))
         .EUt(GTValues.VA[GTValues.ZPM])
         .duration(600)
 
 
-
+       
 
    greg.large_chemical_reactor('exotic_fission_concentrate_production')
         .itemInputs('2x gtceu:technetium_dust', '2x gtceu:strontium_dust', '4x gtceu:rare_earth_dust')
@@ -781,4 +813,172 @@ ServerEvents.recipes(event => {
         .itemOutputs('4x gtceu:exotic_fissile_materials_clump_dust')
         .duration(400) // Significant duration for binding
         .EUt(GTValues.VA[GTValues.IV]); // High tier process
+         // ===========================================
+  // === Recipes to create the Midway Canisters ===
+  // ===========================================
+// Hostile Midway Canister
+event.recipes.gtceu.mixer('midway_hostile_mob_essence_canister') 
+    .itemInputs(
+        'kubejs:empty_hostile_mob_essence_canister',
+        '32x minecraft:rotten_flesh',
+        '32x minecraft:bone',
+        '32x minecraft:arrow',
+        '32x minecraft:gunpowder',
+        '32x minecraft:string'
+    )
+    .inputFluids(
+        'gtceu:hydrofluoric_acid 250',
+        'gtceu:polytetrafluoroethylene 144'
+    )
+    .itemOutputs('kubejs:midway_hostile_mob_essence_canister')
+    .duration(100)
+    .EUt(GTValues.LV)
+
+// Hostile Full Canister
+event.recipes.gtceu.mixer('full_hostile_mob_essence_canister')
+    .itemInputs(
+        'kubejs:midway_hostile_mob_essence_canister',
+        '32x minecraft:spider_eye',
+        '32x minecraft:slime_ball',
+        '32x minecraft:ghast_tear',
+        '32x minecraft:blaze_rod',
+        '32x minecraft:wither_skeleton_skull'
+    )
+    .inputFluids(
+        'gtceu:hydrofluoric_acid 250',
+        'gtceu:polytetrafluoroethylene 144'
+    )
+    .itemOutputs('kubejs:full_hostile_mob_essence_canister')
+    .duration(200)
+    .EUt(GTValues.LV)
+
+// Passive Midway Canister
+event.recipes.gtceu.mixer('midway_passive_mob_essence_canister')
+    .itemInputs(
+        'kubejs:empty_passive_mob_essence_canister',
+        '32x minecraft:feather',
+        '32x minecraft:leather',
+        '32x minecraft:honey_bottle',
+        '32x minecraft:milk_bucket'
+    )
+    .inputFluids(
+        'productivebees:honey 250',
+        'gtceu:cream 144'
+    )
+    .itemOutputs('kubejs:midway_passive_mob_essence_canister')
+    .duration(100)
+    .EUt(GTValues.LV)
+
+// Passive Full Canister
+event.recipes.gtceu.mixer('full_passive_mob_essence_canister')
+    .itemInputs(
+        'kubejs:midway_passive_mob_essence_canister',
+        '32x minecraft:bone_meal',
+        '32x minecraft:white_wool',
+        '32x minecraft:egg',
+        '32x minecraft:rabbit_hide'
+    )
+    .inputFluids(
+        'productivebees:honey 250',
+        'gtceu:cream 144'
+    )
+    .itemOutputs('kubejs:full_passive_mob_essence_canister')
+    .duration(200)
+    .EUt(GTValues.LV)
+
+// Neutral Midway Canister
+event.recipes.gtceu.mixer('midway_neutral_mob_essence_canister')
+    .itemInputs(
+        'kubejs:empty_neutral_mob_essence_canister',
+        '32x minecraft:slime_ball',
+        '32x minecraft:ender_pearl',
+        '32x minecraft:spider_eye',
+        '32x minecraft:ink_sac'
+    )
+    .inputFluids(
+        'thermal:ender 144',
+        'gtceu:liquid_ender_air 100'
+    )
+    .itemOutputs('kubejs:midway_neutral_mob_essence_canister')
+    .duration(100)
+    .EUt(GTValues.LV)
+
+// Neutral Full Canister
+event.recipes.gtceu.mixer('full_neutral_mob_essence_canister')
+    .itemInputs(
+        'kubejs:midway_neutral_mob_essence_canister',
+        '32x minecraft:iron_ingot',
+        '32x minecraft:sugar',
+        '32x minecraft:glowstone_dust',
+        '32x minecraft:emerald'
+    )
+    .inputFluids(
+        'thermal:ender 144',
+        'gtceu:liquid_ender_air 100'
+    )
+    .itemOutputs('kubejs:full_neutral_mob_essence_canister')
+    .duration(200)
+    .EUt(GTValues.LV)
+
+  // ===========================================
+  // === Recipe to create the Final Capsule ===
+  // ===========================================
+
+  // This recipe uses the GTCEu ASSEMBLER machine, which is great for combining items.
+// Recipes to make the empty canisters
+// Hostile Mob Essence Canister (Empty)
+event.recipes.gtceu.assembler('empty_hostile_mob_essence_canister')
+    .itemInputs(
+        '2x gtceu:dense_source_imbued_titanium_plate',
+        '16x gtceu:source_titanium_filament_double_wire',
+        '16x gtceu:superconductive_honey_double_wire',
+        '16x gtceu:extremely_modified_space_grade_steel_double_wire',
+        'gtceu:quantum_star',
+        'gtceu:active_transformer'
+    )
+    .inputFluids('gtceu:void_touched_tungsten_steel 288', 'productivebees:honey 500')
+    .itemOutputs('kubejs:empty_hostile_mob_essence_canister')
+    .duration(300)
+    .EUt(GTValues.VA[GTValues.IV])
+
+// Passive Mob Essence Canister (Empty)
+event.recipes.gtceu.assembler('empty_passive_mob_essence_canister')
+    .itemInputs(
+        '2x gtceu:dense_source_imbued_titanium_plate',
+        '16x gtceu:source_titanium_filament_double_wire',
+        '16x gtceu:superconductive_honey_double_wire',
+        '16x gtceu:extremely_modified_space_grade_steel_double_wire',
+        'minecraft:golden_apple',
+        'minecraft:bee_nest'
+    )
+    .inputFluids('productivebees:honey 1000', 'gtceu:cream 288')
+    .itemOutputs('kubejs:empty_passive_mob_essence_canister')
+    .duration(300)
+    .EUt(GTValues.VA[GTValues.IV])
+
+// Neutral Mob Essence Canister (Empty)
+event.recipes.gtceu.assembler('empty_neutral_mob_essence_canister')
+    .itemInputs(
+        '2x gtceu:dense_source_imbued_titanium_plate',
+        '16x gtceu:source_titanium_filament_double_wire',
+        '16x gtceu:superconductive_honey_double_wire',
+        '16x gtceu:extremely_modified_space_grade_steel_double_wire',
+        'minecraft:ender_pearl',
+        'gtceu:swarm_nuturer'
+    )
+    .inputFluids('thermal:ender 288', 'gtceu:liquid_ender_air 200')
+    .itemOutputs('kubejs:empty_neutral_mob_essence_canister')
+    .duration(300)
+    .EUt(GTValues.VA[GTValues.IV])
+
+// Final Capsule Recipe (already present)
+event.recipes.gtceu.assembler('fully_charged_mob_essence_capsule_recipe')
+    .itemInputs(
+        'kubejs:full_passive_mob_essence_canister',
+        'kubejs:full_neutral_mob_essence_canister',
+        'kubejs:full_hostile_mob_essence_canister'
+    )
+    .itemOutputs('kubejs:fully_charged_mob_essence_capsule')
+    .duration(400) // This is a complex recipe, so it should take longer
+    .EUt(GTValues.IV) // And require a higher voltage tier
 })

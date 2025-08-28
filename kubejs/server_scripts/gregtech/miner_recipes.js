@@ -7,7 +7,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .inputFluids([
             'gtceu:drilling_fluid 500',
             'minecraft:lava 150',
-            'kubejs:cryo_ember_fluid 100'
+            'kubejs:cryo_ember_fluid 10000'
         ])
         .itemInputs([
             '10x gtceu:dormant_ember_dust',
@@ -34,7 +34,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .inputFluids([
             'gtceu:drilling_fluid 500',
             'kubejs:frost 250',
-            'kubejs:cryo_ember_fluid 250',
+            'kubejs:cryo_ember_fluid 25000',
             'gtceu:source_of_magic 100'
         ])
         .itemInputs([

@@ -28,23 +28,6 @@
 			y: -0.5d
 		}
 		{
-			dependency_requirement: "one_completed"
-			description: [
-				"Some GregTech machines require a specific circuit value to perform certain recipes. The Crazy Pattern Modifier allows you to assign a circuit number directly to a processing pattern - ensuring the machine runs with the correct configuration every time."
-				""
-				"Hints:"
-				"- Enable \"ignore NBT\" mode to allow more flexible crafting (e.g., any enchanted book, not just Sharpness V)."
-			]
-			id: "12D3177401E08197"
-			tasks: [{
-				id: "6356AE1A3CD69BE1"
-				item: "crazyae2addons:crazy_pattern_modifier"
-				type: "item"
-			}]
-			x: -1.0d
-			y: -2.5d
-		}
-		{
 			description: [
 				"Managing large-scale crafting tasks just got easier! The Crazy Pattern Multiplier acts like a backpack for your patterns (holding up to 36 of them) and allows you to multiply all quantities using simple math expressions. Scale your recipes effortlessly and craft smarter, not harder."
 				""
@@ -291,33 +274,6 @@
 		}
 		{
 			description: [
-				"The Isolated Data Processor is a high-speed logic block that works similarly to the standard Data Processor but executes its logic continuously every tick on its own without waiting for external triggers."
-				"How to Use"
-				""
-				"- Place the block: Connect the Isolated Data Processor to your ME network."
-				""
-				"- Insert cards:"
-				""
-				"- Configure operations the same as in normal data processor."
-				""
-				"- Looping logic:"
-				"    - Every tick, the processor automatically reads the next card and executes the associated operation."
-				"    - Conditional jump cards (HIT, HIF) allow skipping to other slots dynamically."
-				"    - Multiple writes: It wont stop on a write to ME Data Controller. But each write overwrites the previous one."
-				""
-				"Because it runs independently and constantly, the Isolated Data Processor is perfect for creating always-on logic like counters or timers."
-			]
-			id: "3283C12B5D3D61BB"
-			tasks: [{
-				id: "63342E850A0B4F79"
-				item: "crazyae2addons:isolated_data_processor"
-				type: "item"
-			}]
-			x: 0.5d
-			y: 5.0d
-		}
-		{
-			description: [
 				"The Display is a visual part you can attach to any ME cable to show text or network variables directly in the world. It is updating dynamically as variables change."
 				"How to Use"
 				""
@@ -340,30 +296,6 @@
 				type: "item"
 			}]
 			x: -0.5d
-			y: 6.0d
-		}
-		{
-			description: [
-				"The Data Tracker is a simple block that watches the value of a specific ME network variable and emits a redstone signal based on its state. When the value is greater than zero, the block outputs full redstone power; no power otherwise."
-				"How to Use"
-				""
-				"- Place the block: Attach the Data Tracker to any spot in your ME network."
-				""
-				"- Set the tracked variable: Right-click the block to open its interface. Enter the name of the variable you want to monitor (for example, \\&ABC)."
-				""
-				"- Save and apply: Press the \"Save\"."
-				""
-				"- Redstone output: Whenever the value of the tracked variable is greater than 0, the Data Tracker will emit a redstone signal. Otherwise, it stays off."
-				""
-				"You can use the Data Tracker to trigger external systems based on for example the progress of your furnace smelting things."
-			]
-			id: "65C570A2AF7192F1"
-			tasks: [{
-				id: "509F8558D8C69EC9"
-				item: "crazyae2addons:data_tracker"
-				type: "item"
-			}]
-			x: 0.5d
 			y: 6.0d
 		}
 		{

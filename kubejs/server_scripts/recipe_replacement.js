@@ -47,6 +47,7 @@ tiers.forEach(tier => {
       `gtceu:${tier}_${part}`,
       `gtceu:${replacementTier}_${part}`
     );
+   
     event.replaceInput(
       { id: /^gtceu:(assembler\/)?electric_.*/ },
       `gtceu:${tier}_${part}`,

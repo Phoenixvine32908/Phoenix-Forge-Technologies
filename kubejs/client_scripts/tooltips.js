@@ -236,7 +236,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
     addGTCEuMaterialTooltips('glitched_corruption_substrate', Text.of("§dA substrate corrupted by glitches in reality, leading to unpredictable but immense properties."));
     addGTCEuMaterialTooltips('event_horizon_matter', Text.of("§0Matter condensed at an event horizon, possessing extreme density and gravitational pull."));
         addGTCEuMaterialTooltips('advanced_quin_naquadian_alloy', Text.of("§4An incredibly dense and volatile alloy, forged from exotic fission products and Naquadah, hinting at power beyond current understanding."));
-
+        addGTCEuMaterialTooltips('extremely_modified_space_grade_steel', Text.of("§dAn ultra-engineered variant of space grade steel, boasting extreme durability and resilience for the harshest environments."));
     // --- KubeJS Registered Fluids (buckets will use kubejs:fluid_name_bucket) ---
     addKubeJSUIDFluidTooltip('grass_water', Text.of("§aA strange elemental liquid, full of natural essence."));
     addKubeJSUIDFluidTooltip('dimensional_flux_resin', Text.of("§5A volatile resin that distorts space-time."));
@@ -327,13 +327,7 @@ event.add(`gtceu:${materialName}_crowbar`, descriptionText);
         Text.of('§d§oDesigned for deep-space resource extraction.'),
         Text.of('§5Enables efficient mining on celestial bodies and asteroids, far from terrestrial interference.')
     ]);
-     event.add('gtceu:alchemical_imbuer', [
-        Text.of('§7A mystical device that harnesses raw magic.'),
-        Text.of('§fUsed for:'),
-        Text.of('  §dSource of Magic §7(from §2Plants, §6Wood, §4Lava§7)'),
-        Text.of('  §cSource Gems §7(from §5Amethyst Shards and Source Of Magic§7)'),
-        Text.of('  §bSource Imbued Titanium §7(from §fTitanium§7 and Source Of Magic)')
-    ]);
+    
     // Tooltip for IV Confectionary Fabricator
 event.add('gtceu:iv_confectionery_fabricator', [
     Text.of('§7A sophisticated machine for creating delightful treats.'),
@@ -348,25 +342,9 @@ event.add('gtceu:luv_confectionery_fabricator', [
     Text.of('§6Honey Treats §7(from §eCream, §6Honey, §fPeanut Butter§7, etc)'),
     Text.of('from §eCream, §6Honey, §fPeanut Butter§7, etc)')
 ]);
-event.add('gtceu:comb_decanter', [
-    Text.of('§7A specialized machine for extracting valuable resources from combs.'),
-    Text.of('§fUsed for:'),
-    Text.of(' §aProcessing Combs §7(taking a §6Comb§7 and producing:'),
-    Text.of('   §eImpure Honey§7,'),
-    Text.of('   §dMineralized Wax §7(dependent on the comb§7),'),
-    Text.of('   §cPollen Concentrate§7,'),
-    Text.of('   §7Returns the §6Honeycomb Base.')
-]);
-event.add('gtceu:apis_progenitor', [
-    Text.of('§7A mystical device for evolving your bees.'),
-    Text.of('§fUsed for:'),
-    Text.of('§aTransforming Bees §7(takes a §eBee§7 and §f4 of the needed block§7 to create a new bee)'),
-]);
-event.add('gtceu:swarm_nuturer', [
-    Text.of('§7A specialized chamber for cultivating unique ambered creatures.'),
-    Text.of('§fUsed for:'),
-    Text.of('§aProducing Ambered Mobs §7(takes a §6Non-Consumed Amber Bee§7 and §cConsumed Mob Drops§7 to create an ambered mob)')
-]);
+
+
+
 
 
 // Tooltip for zpm Confectionery Fabricator
@@ -375,15 +353,7 @@ event.add('gtceu:zpm_confectionery_fabricator', [
     Text.of('§fUsed for:'),
     Text.of(' §6Honey Treats §7(from §eCream, §6Honey, §fPeanut Butter§7, etc)'),
 ]);
-event.add('gtceu:simulated_colony', [
-    Text.of('§7A sophisticated environment for advanced apiculture.'),
-    Text.of('§fUsed for:'),
-    Text.of(' §aProducing Special Combs from:'),
-    Text.of('   §eA Non-Consumed Bee§7,'),
-    Text.of('   §fA Block of the Material§7,'),
-    Text.of('   §bSugar Water§7, and'),
-    Text.of('   §6A Honeycomb Base§7')
-]);
+
 
 
 
@@ -419,27 +389,21 @@ event.add('gtceu:simulated_colony', [
         Text.of("§aA highly concentrated pellet of bred Uranium-233."),
         Text.of("§aDelivers exceptional energy output as primary fissile fuel.")
     ]);
-   event.add("gtceu:heat_exchanger", [
-        Text.of("§bA machine focused on efficiently converting hot coolant and critical steam into power.")
+ event.add("kubejs:uranium_236_fuel_pellet", [
+        Text.of("§aA highly concentrated pellet of bred Uranium-236."),
+         Text.of("§6Designed for efficient neutron capture and Pu-241 breeding reactions as a blanket.")
+    ]);
+    event.add("kubejs:plutonium_241_fuel_pellet", [
+        Text.of("§6A compacted pellet of Plutonium-241."),
+        Text.of("§aDelivers exceptional energy output as primary fissile fuel.")
     ]);
 
-    // Pressurized Fission Reactor Controller
-    event.add("gtceu:pressurized_fission_reactor", [
-        Text.of("§6A robust fission reactor designed for stable, high-pressure operation and precise fuel management.."),
-    ]);
-
-    // Advanced Pressurized Fission Reactor Controller
-    event.add("gtceu:advanced_pressurized_fission_reactor", [
-        Text.of("§9An upgraded pressurized fission reactor, capable of handling higher outputs and more stronger use of uranium oxide."),
-    ]);
+   
 
     // High Performance Breeder Reactor Controller
   
-    event.add("gtceu:large_steam_sieve", [
-        Text.of("§bProcesses rocks using powerful steam-driven sieves."),
-        Text.of("§7Extracts useful ore traces and valuable materials from raw stone."),
-        Text.of("§8Automates resource recovery from bulk geological inputs.")
-    ]);
+
+
 
     // Uranium-235 Fuel Pellet
     event.add("gtceu:uranium_235_fuel_pellet", [
@@ -458,16 +422,6 @@ event.add('gtceu:simulated_colony', [
     event.add("kubejs:space_grade_steel_drill_head", [
         Text.of("§d§lAn orbital-grade drill head, designed to pierce lunar regolith or asteroid cores."),
         Text.of("§5Extremely strong in its ability to withstand vacuum, extreme temperatures, and cosmic radiation.")
-    ]);;
-    event.add('gtceu:dimensional_anchor12', [
-        Text.of('§9§oOpens stable rifts to other dimensions, determined by its placement.'), // Rift opening, dimension-dependent
-        Text.of('§7These gateways allow for accelerated resource extraction unique to each realm.'), // Resource generation via rifts
-        Text.of('§7Requires distinct recipes for Overworld, Nether, and End configurations.') // Dimension-specific recipes
-    ]);
-
-    event.add('gtceu:aetherial_fabricator12', [
-        Text.of('§d§oUtilizes raw aetherial energy to create complex constructs.'),
-        Text.of('§5Transmutes pure magical essence into tangible matter.')
     ]);
     event.add("gtceu:compact_draconic_fusion_reactor_mk1", [
         Text.of("§6Draconic Reactor Without The Explosions!"),

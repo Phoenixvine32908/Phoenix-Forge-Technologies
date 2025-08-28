@@ -139,10 +139,9 @@ Molybdenum bee: LUV
 Voidglass shard bee: LUV
 Crystallized fluxstone bee: LUV
 Ignisium bee: LUV
-
+Sky steel bee: LUV+
 
 Radioactive bee: LUV+
-Sky steel bee: LUV+
 Neutronium bee: UHV+
 Osmium bee: ZPM+
 Palladium bee: ZPM+

@@ -34,7 +34,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
              phoenixvine.create('comb_decanter', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('comb_decanting')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
        .aisle("BCDDDCB", "BCDDDCB", "BCDDDCB", "BCDDDCB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB")
@@ -56,18 +56,16 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("G", Predicates.blocks("gtceu:heat_vent"))
    .where("H", Predicates.abilities(PartAbility.MUFFLER).setExactLimit(1))
    .where('J', Predicates.controller(Predicates.blocks(definition.get())))
-
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
             "gtceu:block/casings/gcym/high_temperature_smelting_casing",
-            "gtceu:block/multiblock/large_miner",
-            false
+            "gtceu:block/multiblock/large_miner"
         )
 
              phoenixvine.create('swarm_nuturer', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('swarm_nurturing')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK,GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GTBlocks.CASING_STAINLESS_CLEAN)
         .pattern(definition => FactoryBlockPattern.start()
       .aisle("BCCCB", "BDDDB", "BDDDB", "BCCCB")
@@ -84,18 +82,16 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("E", Predicates.blocks("gtceu:steel_frame"))
    .where("F", Predicates.blocks("gtceu:stainless_steel_gearbox"))
    .where('G', Predicates.controller(Predicates.blocks(definition.get())))
-
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
             "gtceu:block/casings/solid/machine_casing_clean_stainless_steel",
-            "gtceu:block/multiblock/large_miner",
-            false
+            "gtceu:block/multiblock/large_miner"
         )
 
               phoenixvine.create('apis_progenitor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('apis_progenitor')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK,GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GTBlocks.CASING_TUNGSTENSTEEL_ROBUST)
         .pattern(definition => FactoryBlockPattern.start()
 .aisle("BBBBB", "CDDDC", "CDDDC", "CDDDC", "EFFFE")
@@ -114,19 +110,15 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("G", Predicates.blocks("minecraft:dirt"))
    .where("H", Predicates.blocks("minecraft:poppy"))
    .where('I', Predicates.controller(Predicates.blocks(definition.get())))
-
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
             "gtceu:block/casings/solid/machine_casing_robust_tungstensteel",
-            "gtceu:block/multiblock/large_miner",
-            false
-        )
-
-        
+            "kubejs:block/multiblock/apis_progenitor"
+        );
               phoenixvine.create('simulated_colony', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('simulated_colony')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH,GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
         .pattern(definition => FactoryBlockPattern.start()
 .aisle("BCDDDCB", "BCEEECB", "BCEEECB", "BCEEECB", "BBBBBBB")
@@ -142,7 +134,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("D", Predicates.blocks("gtceu:solid_machine_casing"))
       .where('D', Predicates.blocks('gtceu:solid_machine_casing').setMinGlobalLimited(2) 
                 .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setExactLimit(1))
+                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))
    .where("E", Predicates.blocks("gtceu:tempered_glass"))
    .where("F", Predicates.blocks("gtceu:treated_wood_planks"))
@@ -150,11 +142,9 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where("H", Predicates.blocks("minecraft:dirt"))
    .where("I", Predicates.blocks("minecraft:poppy"))
   .where('J', Predicates.controller(Predicates.blocks(definition.get())))
-
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
             "gtceu:block/casings/solid/machine_casing_solid_steel",
-            "gtceu:block/multiblock/large_miner",
-            false
-        )
+            "gtceu:block/multiblock/large_miner"
+        );
 });

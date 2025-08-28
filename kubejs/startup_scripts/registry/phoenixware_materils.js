@@ -3,6 +3,7 @@ const $FluidProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.m
 const $OreProperty = Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.properties.OreProperty');
 const $FluidBuilder = Java.loadClass('com.gregtechceu.gtceu.api.fluids.FluidBuilder');
 const $FluidStorageKeys = Java.loadClass('com.gregtechceu.gtceu.api.fluids.store.FluidStorageKeys');
+const ALMOST_PURE_NEVONIAN_STEEL = Java.loadClass('net.phoenix.core.common.data.materials.PhoenixMaterialSet');
 Java.loadClass('com.gregtechceu.gtceu.api.data.chemical.material.Material'); 
 
 // Additional imports for material properties/tool properties
@@ -135,6 +136,8 @@ GTCEuStartupEvents.registry('gtceu:element', event => {
         ["antimatter", -1, -1, "aM"],
         ["uranium_233", 77, 118, "U²²³"],
         ["uranium_236", 77, 118, "U²³⁶"],
+        ["source_imbued_titanium", 10, 118, "SiT"],
+        ["source_grade_steel", 10, 24, "SgS"],
     ];
 
     elements.forEach(elem => {
@@ -185,7 +188,6 @@ GTCEuStartupEvents.registry('gtceu:material_icon_set', event => {
         antimatter: shiny,
         fiery_bronze: dull,
         honey: shiny,
-        almost_pure_nevonian_steel: shiny,
         infinity: shiny, // Added infinity icon set and set its parent to shiny
         aurum_steel: metallic, // Assuming metallic for aurum steel
         aluminfrost: bright, // Assuming bright for aluminfrost
@@ -263,14 +265,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         'cryo_steel_supercon',
         [GTValues.V[GTValues.HV], 8, 0, true],
     );
-  makeLimitedMaterialWithCable(
-        event,
-        'extremely_modified_space_grade_steel',
-        0xad6161,
-        0x593856,
-        'aluminfrost',
-        [GTValues.V[GTValues.LuV], 64, 0, true],
-    );
+   
            
 
 
@@ -339,6 +334,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
 
     event.create('fiery_bronze')
         .ingot()
+        .fluid()
         .color(0xff6d00)
         .secondaryColor(0xa0522d)
         .iconSet('fiery_bronze')
@@ -370,13 +366,45 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
             GTMaterialFlags.GENERATE_ROTOR);
-
     event.create('aluminfrost')
         .ingot()
         .fluid()
         .color(0xadd8e6)
         .secondaryColor(0xc0c0c0)
         .fluidPipeProperties(1200, 110, true, true, false, false)
+        .toolStats($ToolProperty.Builder.of(1.8, 1.7, 700, 3,
+            [GTToolType.SWORD,
+                GTToolType.PICKAXE,
+                GTToolType.SHOVEL,
+                GTToolType.AXE,
+                GTToolType.HOE,
+                GTToolType.MINING_HAMMER,
+                GTToolType.SPADE,
+                GTToolType.SCYTHE,
+                GTToolType.SAW,
+                GTToolType.HARD_HAMMER,
+                GTToolType.WRENCH,
+                GTToolType.FILE,
+                GTToolType.CROWBAR,
+                GTToolType.SCREWDRIVER,
+                GTToolType.MORTAR,
+                GTToolType.WIRE_CUTTER,
+                GTToolType.KNIFE,
+                GTToolType.DRILL_LV,
+                GTToolType.DRILL_MV,
+                GTToolType.DRILL_HV,
+                GTToolType.DRILL_EV,
+                GTToolType.DRILL_IV,
+                GTToolType.CHAINSAW_LV,
+                GTToolType.WRENCH_LV,
+                GTToolType.WRENCH_HV,
+                GTToolType.WRENCH_IV,
+                GTToolType.WIRE_CUTTER_LV,
+                GTToolType.WIRE_CUTTER_HV,
+                GTToolType.WIRE_CUTTER_IV,
+            ])
+            .unbreakable()
+            .build())
         .iconSet('aluminfrost')
         .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_RING,
@@ -388,12 +416,12 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
             GTMaterialFlags.GENERATE_BOLT_SCREW,
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
-            GTMaterialFlags.GENERATE_ROTOR);
+            GTMaterialFlags.GENERATE_ROTOR)
 event.create('85_percent_pure_nevonian_steel')
         .ingot()
         .color(0xFFFFE0)
         .secondaryColor(0xFFD700)
-        .iconSet('almost_pure_nevonian_steel')
+        .iconSet("almost_pure_nevonian_steel")
         .blastTemp(3800, 'mid', GTValues.VA[GTValues.EV], 1200)
         .flags(GTMaterialFlags.GENERATE_PLATE,
             GTMaterialFlags.GENERATE_GEAR,
@@ -666,6 +694,7 @@ event.create('superconductive_honey')
         .ingot()
         .color(0xA9A9A9)
         .secondaryColor(0xB0B0B0)
+        .element(GTElements.get("source_grade_steel"))
         .blastTemp(3700, 'mid', GTValues.VA[GTValues.EV], 1600)
         .iconSet('metallic')
         .flags(GTMaterialFlags.GENERATE_PLATE,
@@ -699,6 +728,7 @@ event.create('superconductive_honey')
     event.create('source_imbued_titanium')
         .ingot()
         .fluid()
+        .element(GTElements.get("source_imbued_titanium"))
         .color(0xc600ff)
         .fluidPipeProperties(2800, 200, true, true, false, false)
         .flags(GTMaterialFlags.GENERATE_PLATE,
@@ -869,10 +899,6 @@ event.create('invert_sugar_solution')
         .fluid()
         .color(0xFF8C00)
         .iconSet('dull'); 
-event.create('hydrogen_peroxide')
-        .fluid()
-        .color(0xFF8C00)
-        .iconSet('dull'); 
     event.create('oleum')
         .fluid()
         .color(0xDA6600) 
@@ -977,7 +1003,15 @@ event.create('spent_uranium_236')
         .secondaryColor(0xF4F8FF)
         .iconSet('radio');
      
-                
+                     event.create('extremely_modified_space_grade_steel')
+        .ingot()
+        .liquid(6500)
+        .color(0xad6161)
+        .secondaryColor(0x593856)
+        .iconSet('bright')
+        .cableProperties(GTValues.V[GTValues.LuV], 64, 0, true)
+        .components("4x source_imbued_titanium", "2x ruthenium", "4x space_grade_steel", "1x radon")
+        .blastTemp(7200, 'high', GTValues.VA[GTValues.LuV], 600)
              
 
     // For custom materials, use GTMaterials.get('material_id') instead of get('material_id')
@@ -1020,14 +1054,16 @@ let addFluid = (mat, key) => {
 }
 
 GTCEuStartupEvents.materialModification(event => {
-    GTMaterials.get('aluminfrost').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(1.8, 1.7, 700, 3, [GTToolType.SWORD, GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, GTToolType.WIRE_CUTTER, GTToolType.KNIFE, GTToolType.SOFT_MALLET]).build());
 
     GTMaterials.get('akashic_zeronium').setProperty($PropertyKey.TOOL, new $ToolProperty.Builder.of(180, 5.9, 2147483647, 6,
        [GTToolType.SWORD,GTToolType.DRILL_LV,GTToolType.DRILL_MV,GTToolType.DRILL_HV,GTToolType.DRILL_EV,
         GTToolType.DRILL_IV,GTToolType.PICKAXE, GTToolType.SHOVEL, GTToolType.AXE, GTToolType.HOE, 
         GTToolType.WRENCH, GTToolType.HARD_HAMMER, GTToolType.SAW, GTToolType.FILE, GTToolType.SCREWDRIVER, 
         GTToolType.WIRE_CUTTER, GTToolType.KNIFE, GTToolType.SOFT_MALLET]).build());
+
+        
 });
+
  /*  .enchantability(30)
         .addTypes(GTToolType.SWORD)
         .addTypes(GTToolType.PICKAXE)
@@ -1062,10 +1098,7 @@ GTCEuStartupEvents.materialModification(event => {
         .addTypes(GTToolType.BUTCHERY_KNIFE)
         .addTypes(GTToolType.FILE)
         .addTypes(GTToolType.CROWBAR)*/
-        /*if(mat.getProperties().hasProperty(PropertyKey.TOOL)) {
-  mat.getProperties().removeProperty(PropertyKey.TOOL)
-}
-mat.getProperties().addProperty(PropertyKey.TOOL, new MyCustomPropertyProps())*/
+
 ItemEvents.modification(event => {
   event.modify('minecraft:ender_pearl', item => {
     item.maxStackSize = 64

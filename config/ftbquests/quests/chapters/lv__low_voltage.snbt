@@ -1835,6 +1835,7 @@
 				id: "gtceu:lv_iron_drill"
 				tag: {
 					Charge: 2147483647L
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: {
 						AoEColumn: 1
@@ -1845,7 +1846,6 @@
 						MaxAoERow: 1
 					}
 					GT.Tool: {
-						Damage: 0
 						HarvestLevel: 2
 						MaxDamage: 767
 						ToolSpeed: 6.0f
@@ -1866,6 +1866,7 @@
 						id: "gtceu:lv_iron_drill"
 						tag: {
 							Charge: 2147483647L
+							Damage: 0
 							DisallowContainerItem: 0b
 							GT.Behaviours: {
 								AoEColumn: 1
@@ -1876,7 +1877,6 @@
 								MaxAoERow: 1
 							}
 							GT.Tool: {
-								Damage: 0
 								HarvestLevel: 2
 								MaxDamage: 767
 								ToolSpeed: 6.0f
@@ -2184,10 +2184,10 @@
 				Count: 1
 				id: "gtceu:polybenzimidazole_mallet"
 				tag: {
+					Damage: 0
 					DisallowContainerItem: 0b
 					GT.Behaviours: { }
 					GT.Tool: {
-						Damage: 0
 						MaxDamage: 1023
 					}
 					HideFlags: 2
@@ -2291,7 +2291,7 @@
 			y: 4.2d
 		}
 		{
-			dependencies: ["648BCF486E16CCB2"]
+			dependencies: ["2F1CCFEBAB71B1F3"]
 			description: [
 				"Macerating &3clay&r blocks yields &3clay dust&r. This &3clay dust&r can then be processed in an electrolyzer to extract valuable resources: lithium, sodium, silicon, and aluminum dust."
 				""
@@ -2311,8 +2311,8 @@
 				type: "item"
 			}]
 			title: "The Clay Line"
-			x: 1.5d
-			y: 5.25d
+			x: -2.31d
+			y: 4.62d
 		}
 		{
 			dependencies: ["044FF4E99087CCC9"]

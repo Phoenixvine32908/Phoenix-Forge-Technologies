@@ -17,7 +17,8 @@ ServerEvents.recipes(phoenix => {
         "obsidian": "Obsidian Bee",
         "nickel": "Nickel Bee",
         "lead": "Lead Bee",
-        "sticky_resin": "Sticky Resin Bee"
+        "sticky_resin": "Sticky Resin Bee",
+        "tantalite": "Tantalite Bee",
     };
 
     // Helper function to safely get item inputs from a tag
@@ -37,7 +38,7 @@ ServerEvents.recipes(phoenix => {
         .duration(360)
         .itemInputs(safeTagItemInput('#minecraft:logs', 'minecraft:oak_log', 128))
         // Input: Yellow Carpenter Bee (non-configurable)
-                    .itemInputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:yellow_black_carpente_bee",name: "Yellow Carpenter Be"})))
+                    .itemInputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:yellow_black_carpenter_bee",name: "Yellow Carpenter Be"})))
         // Output: Configurable Lumber Bee
         .itemOutputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:lumber_bee",name: "Lumber Bee"})))
 
@@ -50,6 +51,12 @@ ServerEvents.recipes(phoenix => {
                 .itemInputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:green_carpenter_bee",name: "Green Carpenter Bee"})))
         // Output: Configurable Lumber Bee
         .itemOutputs(Item.of('productivebees:bee_cage', { entity: "productivebees:configurable_bee", name: outputBeeCageDisplayNames['lumber'], type: "productivebees:lumber" }));
+        
+            phoenix.recipes.gtceu.apis_progenitor('kubejs:gtceu/apis_progenitor/wanna')
+        .EUt(GTValues.VA[GTValues.ZPM] / 2)
+        .duration(2000)
+        .itemInputs("kubejs:fully_charged_mob_essence_capsule", "16x productivebees:bee_cage")
+          .itemOutputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:wanna_bee",name: "WannaBee"})))
 
     // quarry_from_digger
     phoenix.recipes.gtceu.apis_progenitor('kubejs:gtceu/apis_progenitor/quarry_from_digger')
@@ -68,7 +75,7 @@ ServerEvents.recipes(phoenix => {
                 .itemInputs(IngredientHelper.weakNBT(Item.of('productivebees:bee_cage', {entity: "productivebees:lumber_bee",name: "Lumber Bee"})))
         // Output: Configurable Quarry Bee
         .itemOutputs(Item.of('productivebees:bee_cage', { type: "productivebees:rancher", name: "Rancher Bee" }).weakNBT())
-
+      Item.of('productivebees:bee_cage', {entity:"productivebees:rancher_bee","forge:spawn_type":"SPAWN_EGG",mod:"ProductiveBees",name:"Rancher Bee"}).weakNBT()
 
     // lepidolite_from_mason
     phoenix.recipes.gtceu.apis_progenitor('kubejs:gtceu/apis_progenitor/lepidolite_from_mason')

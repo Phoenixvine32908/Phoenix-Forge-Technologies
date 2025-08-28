@@ -54,7 +54,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         builder 
             .rotationState(RotationState.NON_Y_AXIS)
             .recipeType("earth_sieve")
-            .workableTieredHullRenderer("gtceu:block/machines/sifter")
+            .workableTieredHullModel("gtceu:block/machines/sifter")
             
         )
         phoenixvine.create("thermo_generator", "simple")
@@ -63,7 +63,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
             builder 
                 .rotationState(RotationState.NON_Y_AXIS)
                 .recipeType("thermo_generator")
-                .workableTieredHullRenderer("gtceu:block/machines/thermal_centrifuge")
+                .workableTieredHullModel("gtceu:block/machines/thermal_centrifuge")
                 
             )
         phoenixvine.create("confectionery_fabricator", "simple")
@@ -72,7 +72,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
             builder 
                 .rotationState(RotationState.NON_Y_AXIS)
                 .recipeType("confectionery_fabricator")
-                .workableTieredHullRenderer("gtceu:block/machines/thermal_centrifuge")    
+                .workableTieredHullModel("gtceu:block/machines/thermal_centrifuge")    
             )
             phoenixvine.create("ember_igniter", "simple")
             .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
@@ -80,7 +80,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
                 builder 
                     .rotationState(RotationState.NON_Y_AXIS)
                     .recipeType("ember_igniter")
-                    .workableTieredHullRenderer("gtceu:block/machines/sifter")
+                    .workableTieredHullModel("gtceu:block/machines/sifter")
                     
                 )
          
@@ -89,7 +89,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('test_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.MAX))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('plasma_generator')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("CCCCCCC", "OOOOOOO", "OOOOOOO", "OOOOOOO", "OOOOOOO", "OOOOOOO", "OOOOOOO")
@@ -110,10 +110,9 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
                 .or(Predicates.ability(PartAbility.ROTOR_HOLDER))
                 .or(Predicates.autoAbilities(definition.getRecipeTypes())))
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
           "kubejs:block/reliable_naquadah_alloy_machine_casing",
-            "gtceu:block/multiblock/fusion_reactor",
-            false
+            "gtceu:block/multiblock/fusion_reactor"
         )
         
 });

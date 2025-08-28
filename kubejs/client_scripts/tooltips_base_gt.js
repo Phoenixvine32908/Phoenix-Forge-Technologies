@@ -76,6 +76,26 @@ const LARGE_SCALE_ASSEMBLER_CASING_TOOLTIP = {
     maintenance: "§7Any Large-Scale Assembler Casing",
     pch: "§7Any Large-Scale Assembler Casing"
 };
+const STURDY_MACHINE_CASING_TOOLTIP = {
+    controller: "§7Front",
+    iteminput: "§7Any Sturdy HSS-E Machine Casing",
+    fluidinput: "§7Any Sturdy HSS-E Machine Casing",
+    itemoutput: "§7Any Sturdy HSS-E Machine Casing",
+    fluidoutput: "§7Any Sturdy HSS-E Machine Casing",
+    energy: "§7Any Sturdy HSS-E Machine Casing",
+    maintenance: "§7Any Sturdy HSS-E Machine Casing",
+    pch: "§7Any Sturdy HSS-E Machine Casing"
+};
+const STABLE_MACHINE_CASING_TOOLTIP = {
+    controller: "§7Front",
+    iteminput: "§7Any Stable Machine Casing",
+    fluidinput: "§7Any Stable Machine Casing",
+    itemoutput: "§7Any Stable Machine Casing",
+    fluidoutput: "§7Any Stable Machine Casing",
+    energy: "§7Any Stable Machine Casing",
+    maintenance: "§7Any Stable Machine Casing",
+    pch: "§7Any Stable Machine Casing"
+};
 const STRESS_PROOF_CASING_TOOLTIP = {
     controller: "§7Front",
     iteminput: "§7Any Stress Proof Casing",
@@ -355,7 +375,13 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
             "gtceu:large_extruder",
             "gtceu:large_extractor",
             "gtceu:mega_vacuum_freezer",
-            "gtceu:mega_blast_furnace"
+            "gtceu:mega_blast_furnace",
+            "gtceu:melferious_matrix",
+            "gtceu:dimensional_anchor12",
+            "gtceu:aetherial_fabricator12",
+            "gtceu:comb_decanter",
+            "gtceu:swarm_nuturer",
+            "gtceu:apis_progenitor"
         ],
         tooltipKeys: [
             "multiblock.pchaccess1",
@@ -379,12 +405,37 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
    'POWER_OUTPUT_GROUP': {
         multiblockIds: [
             "gtceu:large_gas_turbine",
+            "gtceu:pressurized_fission_reactor",
+            "gtceu:heat_exchanger",
         ],
         tooltipKeys: [
             'multiblock.energyoutputaccess1',
             'multiblock.energyoutputaccess2',
         ]   
     },
+     'NO_POWER_GROUP': {
+        multiblockIds: [
+            "gtceu:advanced_pressurized_fission_reactor",
+        ],
+        tooltipKeys: [
+            'multiblock.nopower1',
+            'multiblock.nopower2',
+        ]   
+    },
+    'NO_OC_SUBTICK_GROUP': {
+        multiblockIds: [
+            "gtceu:simulated_colony",
+        ],
+        tooltipKeys: [
+            'multiblock.nooc1',
+            'multiblock.nooc2',
+            'multiblock.subtickaccess1',
+            'multiblock.subtickaccess2',
+        ]   
+    },
+    
+    
+
     'SUB_STATION_POWER_OUTPUT_GROUP': {
         multiblockIds: [
             "gtceu:high_performace_breeder_reactor",
@@ -401,6 +452,7 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
     'SUBTICK_ONLY': {
         multiblockIds: [
             "gtceu:vacuum_freezer",
+            "gtceu:alchemical_imbuer",
             "gtceu:implosion_compressor",
             "gtceu:cracker",
             "gtceu:pyrolyse_oven",
@@ -417,6 +469,10 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
 const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
     "gtceu:large_arc_smelter": [
         "gtultimate.custom.tooltip_large_arc_smelter"
+    ],
+      "gtceu:alchemical_imbuer": [
+        "gtultimate.custom.tooltip_alchemical_imbuer",
+        "gtultimate.custom.tooltip_alchemical_imbuer2"
     ],
     "gtceu:large_assembler": [
         "gtultimate.custom.tooltip_large_assembler",
@@ -462,6 +518,13 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
     ],
     "gtceu:high_performace_breeder_reactor": [
         "gtultimate.custom.tooltip_high_performace_breeder_reactor"
+    ],
+    "gtceu:pressurized_fission_reactor": [
+        "gtultimate.custom.tooltip_pressurized_fission_reactor"
+    ],
+    "gtceu:advanced_pressurized_fission_reactor": [
+        "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor",
+        "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor2"
     ],
     "gtceu:large_maceration_tower": [
         "gtultimate.custom.tooltip_large_maceration_tower"
@@ -520,9 +583,47 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_mega_blast_furnace",
         "gtultimate.custom.tooltip_ebf_coils"
     ],
+    "gtceu:heat_exchanger": [
+        "gtultimate.custom.tooltip_heat_exchanger"
+    ],
+    "gtceu:large_steam_sieve": [
+        "gtultimate.custom.tooltip_large_steam_sieve",
+        "gtultimate.custom.tooltip_large_steam_sieve2"
+    ],
+    "gtceu:large_steam_compressor": [
+        "gtultimate.custom.tooltip_large_steam_compressor",
+        "gtultimate.custom.tooltip_large_steam_compressor2"
+    ],
+     "gtceu:melferious_matrix": [
+        "gtultimate.custom.tooltip_melferious_matrix",
+    ],
+     "gtceu:aetherial_fabricator12": [
+        "gtultimate.custom.tooltip_aetherial_fabricator",
+    ],
+     "gtceu:dimensional_anchor12": [
+        "gtultimate.custom.tooltip_dimensional_anchor",
+    ],
+
+   "gtceu:comb_decanter": [
+        "gtultimate.custom.tooltip_comb_decanter",
+        "gtultimate.custom.tooltip_comb_decanter2"
+    ],
+       "gtceu:apis_progenitor": [
+        "gtultimate.custom.tooltip_apis_progenitor",
+        "gtultimate.custom.tooltip_apis_progenitor2"
+    ],
+    
+   "gtceu:swarm_nuturer": [
+        "gtultimate.custom.tooltip_swarm_nurturer",
+        "gtultimate.custom.tooltip_swarm_nurturer2"
+    ],
+    
     "gtceu:multi_smelter": [
         "gtultimate.custom.tooltip_multi_smelter",
         "gtultimate.custom.tooltip_multi_smelter_2"
+    ],
+     "gtceu:simulated_colony": [
+        "gtultimate.custom.tooltip_simulated_colony",
     ],
     "gtceu:alloy_blast_smelter": [
         "gtultimate.custom.tooltip_alloy_blast_smelter",
@@ -554,6 +655,20 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
 };
 const MACHINE_TYPE_NAMES = {
     "gtceu:large_arc_smelter": "§eArc Furnace",
+    "gtceu:alchemical_imbuer": "§eSource Extraction | Source Imbuement",
+    "gtceu:heat_exchanger": "§eHeat Exchanger",
+    "gtceu:large_steam_compressor": "§eSteam Compressor",
+    "gtceu:large_steam_sieve": "§eSteam Sieve",
+    "gtceu:melferious_matrix": "§eMelferious Matrix",
+    "gtceu:dimensional_anchor12": "§eDimensional Anchor",
+    "gtceu:aetherial_fabricator12": "§eAetherial Fabricator",
+    "gtceu:advanced_cracking_unit": "§bAdvanced Cracking Unit",
+    "gtceu:superheated_pyrolyzing_oven": "§bSuperheated Pyrolyzing Oven",
+    "gtceu:comb_decanter": "§eComb Decanter",
+    "gtceu:simulated_colony": "§eSimulated Colony",
+    "gtceu:swarm_nuturer": "§eSwarm Nurturer",
+    "gtceu:apis_progenitor": "§eApis Progenitor",
+    "gtceu:large_arc_smelter": "§eArc Furnace",
     "gtceu:large_assembler": "§eAssembling Machine",
     "gtceu:large_autoclave": "§eAutoclave",
     "gtceu:large_brewer": "§eBrewery | Fermenter | Fluid Heater",
@@ -565,6 +680,8 @@ const MACHINE_TYPE_NAMES = {
     "gtceu:large_electromagnet": "§eElectromagnetic Separator | Polarizer",
     "gtceu:large_engraving_laser": "§eLaser Engraver",
     "gtceu:high_performace_breeder_reactor": "§eHigh Performance Breeder Reactor",
+    "gtceu:pressurized_fission_reactor": "§ePressurized Fission Reactor",
+    "gtceu:advanced_pressurized_fission_reactor": "§eAdvanced Pressurized Fission Reactor",
     "gtceu:large_maceration_tower": "§eMacerator",
     "gtceu:large_material_press": "§eBending | Compressor | Forge Hammer | Forming Press",
     "gtceu:large_mixer": "§eMixer",
@@ -611,6 +728,39 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             WATERTIGHT_CASING_TOOLTIP
     },
+    "gtceu:heat_exchanger": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
+        values:
+            FISSILE_REACTION_SAFE_CASING_TOOLTIP
+    },
+     "gtceu:large_steam_compressor": {
+        tooltipOrder: ["controller", "steamiteminput", "steamitemoutput", "steamenergy"],
+        values:
+            STEAM_MACHINE_CASING
+    },
+     "gtceu:large_steam_sieve": {
+        tooltipOrder: ["controller", "steamiteminput", "steamitemoutput", "steamenergy"],
+        values:
+            STEAM_MACHINE_CASING
+    },
+
+"gtceu:melferious_matrix": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+            STURDY_MACHINE_CASING_TOOLTIP
+    },
+"gtceu:dimensional_anchor12": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+            STABLE_MACHINE_CASING_TOOLTIP
+    },
+"gtceu:aetherial_fabricator12": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+           CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
+    },
+
+
     "gtceu:large_extractor": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler", "pch"],
         values:
@@ -710,6 +860,15 @@ const SHIFT_PLACEHOLDER_VALUES = {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
         values:
             FISSILE_REACTION_SAFE_CASING_TOOLTIP
+    },    "gtceu:pressurized_fission_reactor": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
+        values:
+            FISSILE_REACTION_SAFE_CASING_TOOLTIP
+    },
+        "gtceu:advanced_pressurized_fission_reactor": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "maintenance"],
+        values:
+            FISSILE_REACTION_SAFE_CASING_TOOLTIP
     },
     // SECURE_MACERATION_CASING_TOOLTIP
     "gtceu:large_maceration_tower": {
@@ -764,16 +923,43 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
     },
+      "gtceu:alchemical_imbuer": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance"],
+        values:
+            CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
+    },
      "gtceu:advanced_cracking_unit": {
-        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler"],
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler", "pch"],
         values:
             TUNGSTEN_STEEL_TURBINE_CASING_TOOLTIP
     },
        "gtceu:superheated_pyrolyzing_oven": {
-        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler"],
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "muffler", "pch"],
         values:
             SOLID_MACHINE_CASING_TOOLTIP
     },
+     "gtceu:comb_decanter": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+           HIGH_TEMPERATURE_SMELTING_CASING_TOOLTIP
+    },
+      "gtceu:simulated_colony": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+           SOLID_MACHINE_CASING_TOOLTIP
+    },
+    "gtceu:swarm_nuturer": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+           CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
+    },
+        "gtceu:apis_progenitor": {
+        tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
+        values:
+           ROBUST_TUNGSTENSTEEL_MACHINE_CASING_TOOLTIP
+    },
+
+    
     // CLEAN_STAINLESS_STEEL_CASING_DT_TOOLTIP
     "gtceu:distillation_tower": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance"],

@@ -601,7 +601,7 @@
 			description: [
 				"&5Source Imbued Titanium&r&r has the highest corrosion resistance, magic resistance, and strength-to-density ratio of any metallic element, so it's only natural that it will be used as a base for &5EV&r machinery."
 				""
-				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source Of Magic&r, which is obtained by running any plants through the Alchemical Imbuer multiblock. "
+				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source Of Magic&r, which is obtained by running any plant/log through the Alchemical Imbuer multiblock. "
 				""
 				""
 				"{@pagebreak}"
@@ -1579,6 +1579,7 @@
 			dependencies: [
 				"7CB0B82B219B75DC"
 				"06F2DEB21E1A7084"
+				"390E59F05132FCB8"
 			]
 			description: [
 				"The &ePressurized Fission Reactor&r stands ready to provide immense power for your operations. Fuel it with &aUranium Oxide Fuel Rods&r to generate a significant output of energy."
@@ -1711,6 +1712,30 @@
 			}]
 			x: 8.25d
 			y: -1.875d
+		}
+		{
+			dependencies: ["0021051273D48936"]
+			dependency_requirement: "one_completed"
+			description: [
+				"Welcome to the realm of &l&#00cdeecrazy,&n&r there is no return!"
+				""
+				"Check out &6&6Oktawia's amazing guide&r&r by holding &nG&r on any of &9CAE2AS&r items/blocks! (&bshe does a lot better job at explaining this than I do&r.)"
+				" "
+				""
+				"Some &6GregTech&r machines require a &aspecific circuit value&r to perform certain recipes. The Crazy Pattern Modifier allows you to assign a circuit number directly to a processing pattern - ensuring the machine runs with the correct configuration every time."
+				""
+				"Hints:"
+				"- Enable \"ignore NBT\" mode to allow more flexible crafting (e.g., any enchanted book, not just Sharpness V)."
+			]
+			id: "12D3177401E08197"
+			size: 0.75d
+			tasks: [{
+				id: "6356AE1A3CD69BE1"
+				item: "crazyae2addons:crazy_pattern_modifier"
+				type: "item"
+			}]
+			x: 3.375d
+			y: -4.125d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]

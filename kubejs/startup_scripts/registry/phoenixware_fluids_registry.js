@@ -22,12 +22,7 @@ GTCEuStartupEvents.registry('gtceu:material', event => {
         makeGTCEuPlasma(plasma[0], plasma[1], plasma[2]);
     });
 
-    event.create("trinaquadalloy")
-        .ingot().fluid()
-        .color(0x281832).iconSet(GTMaterialIconSet.BRIGHT)
-        .flags(GTMaterialFlags.GENERATE_PLATE)
-        .components('6x trinium', '2x naquadah', '1x carbon')
-        .blastTemp(8747, 'higher', GTValues.VA[GTValues.ZPM], 1200);
+    
 });
 
 

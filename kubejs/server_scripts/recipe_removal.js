@@ -412,7 +412,6 @@ const recipesToRemove = [
 "gtceu:alloy_blast_smelter/resonant_rhodium_alloy_gas",
 "gtceu:shaped/casing_luv",
 "gtceu:assembler/casing_luv",
-"gtceu:shaped/electric_motor_lv_iron",
 "gtceu:assembler/electric_motor_lv_iron",
 "gtceu:shaped/bronze_bricks_hull",
 "utilitarian:utility/logs_to_hopper",
@@ -421,7 +420,10 @@ const recipesToRemove = [
 "gtceu:alloy_blast_smelter/advanced_quin_naquadian_alloy_gas",
 "minecraft:kjs/gtceu_pyrolyse_oven_2",
 "gtceu:research_station/1_x_gtceu_iv_confectionery_fabricator",
-"gtceu:research_station/1_x_gtceu_pyrolyse_oven"
+"gtceu:research_station/1_x_gtceu_pyrolyse_oven",
+"gtceu:alloy_blast_smelter/extremely_modified_space_grade_steel",
+"gtceu:chemical_reactor/hydrogen_peroxide",
+"gtceu:large_chemical_reactor/hydrogen_peroxide"
 ];
   
     

@@ -13,9 +13,44 @@ StartupEvents.registry('item', event => {
     .displayName("§2Basic Fuel Rod")
     .texture("kubejs:item/basic_fuel_rod")
 
+event.create('empty_hostile_mob_essence_canister')
+    .displayName("§cEmpty Hostile Mob Essence Canister")
+    .texture("kubejs:item/componets/empty_hostile_mob_essence_canister");
+event.create('midway_hostile_mob_essence_canister')
+    .displayName("§cMidway Hostile Mob Essence Canister")
+    .texture("kubejs:item/componets/midway_hostile_mob_essence_canister");
+event.create('full_hostile_mob_essence_canister')
+    .displayName("§cFull Hostile Mob Essence Canister")
+    .texture("kubejs:item/componets/full_hostile_mob_essence_canister");
+    event.create('fully_charged_mob_essence_capsule')
+    .displayName("§cFully Charged Mob Essence Capsule")
+    .texture("kubejs:item/componets/fully_charged_mob_essence_capsule");
+
+event.create('empty_passive_mob_essence_canister')
+    .displayName("§aEmpty Passive Mob Essence Canister")
+    .texture("kubejs:item/componets/empty_passive_mob_essence_canister");
+event.create('midway_passive_mob_essence_canister')
+    .displayName("§aMidway Passive Mob Essence Canister")
+    .texture("kubejs:item/componets/midway_passive_mob_essence_canister");
+event.create('full_passive_mob_essence_canister')
+    .displayName("§aFull Passive Mob Essence Canister")
+    .texture("kubejs:item/componets/full_passive_mob_essence_canister");
+
+event.create('empty_neutral_mob_essence_canister')
+    .displayName("§9Empty Neutral Mob Essence Canister")
+    .texture("kubejs:item/componets/empty_neutral_mob_essence_canister");
+event.create('midway_neutral_mob_essence_canister')
+    .displayName("§9Midway Neutral Mob Essence Canister")
+    .texture("kubejs:item/componets/midway_neutral_mob_essence_canister");
+event.create('full_neutral_mob_essence_canister')
+    .displayName("§9Full Neutral Mob Essence Canister")
+    .texture("kubejs:item/componets/full_neutral_mob_essence_canister");
+
     event.create('zirconium_rod')
     .displayName("§2Zirconium Fission Rod")
     .texture("kubejs:item/zirconium_rod")
+
+
      event.create('space_grade_steel_drilling_kit')
     .displayName("§7Space Grade Steel Drilling Kit")
     .texture("kubejs:item/space_grade_steel_drilling_kit")

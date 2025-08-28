@@ -34,7 +34,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('heat_exchanging')
         .generator(true)
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock("kubejs:fissile_heat_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BBBBBBB", "BCCCCCB", "BCCCCCB", "BCCCCCB", "BBBBBBB")
@@ -52,16 +52,15 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
            .where('D', Predicates.controller(Predicates.blocks(definition.get())))
            .where("E", Predicates.blocks("kubejs:fissile_safe_gearbox"))
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
           "kubejs:block/fissile_heat_safe_casing",
-            "gtceu:block/multiblock/large_chemical_reactor",
-            false
+            "gtceu:block/multiblock/large_chemical_reactor"
         )
     phoenixvine.create('pressurized_fission_reactor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('pressurized_fission_reactor')
         .generator(true)
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock("kubejs:fissile_reaction_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCCCB", "CDDDC", "CDDDC", "CDDDC", "BCCCB")
@@ -83,15 +82,14 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
         .where("H", Predicates.blocks("kubejs:fissile_heat_safe_casing"))
         .where('I', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
           "kubejs:block/fissile_reaction_safe_casing",
-            "gtceu:block/multiblock/fusion_reactor",
-            false
+            "gtceu:block/multiblock/fusion_reactor"
         )
         phoenixvine.create('advanced_pressurized_fission_reactor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('advanced_pressurized_fission_reactor')
-        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT])
+        .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock("kubejs:fissile_reaction_safe_casing"))
         .pattern(definition => FactoryBlockPattern.start()
         .aisle("BCCCCCB", "CDDDDDC", "CDDDDDC", "CDDDDDC", "CDDDDDC", "CDDDDDC", "BCCCCCB")
@@ -118,10 +116,9 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
            .where("I", Predicates.blocks("minecraft:ice"))
            .where('J', Predicates.controller(Predicates.blocks(definition.get())))
             .build())
-        .workableCasingRenderer(
+        .workableCasingModel(
           "kubejs:block/fissile_reaction_safe_casing",
-            "gtceu:block/multiblock/fusion_reactor",
-            false
+            "gtceu:block/multiblock/fusion_reactor"
         )
              phoenixvine.create('high_performace_breeder_reactor', 'multiblock')
         .rotationState(RotationState.NON_Y_AXIS)
@@ -159,9 +156,8 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where('M', Predicates.controller(Predicates.blocks(definition.get())))
    .build()
 )
-.workableCasingRenderer(
+.workableCasingModel(
   "kubejs:block/fissile_reaction_safe_casing",
-    "gtceu:block/multiblock/fusion_reactor",
-    false
+    "gtceu:block/multiblock/fusion_reactor"
 );
 });

@@ -14,7 +14,7 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
     phoenixvine.create('phoenixware_fusion_mk1', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.UIV))
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes('phoenixware_fusion_mk1')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT, MachineModifiers.FUSION_REACTOR])
+        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT, MachineModifiers.FUSION_REACTOR, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(() => Block.getBlock("kubejs:strongest_rhodium_plated_machne_casing"))
         .pattern(definition => FactoryBlockPattern.start()  
 .aisle("########BBCCCBB########", "########DDEEEDD########", "########DDEEEDD########", "########DDEEEDD########", "########BBCCCBB########")
@@ -61,6 +61,6 @@ GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
    .where('N', Predicates.controller(Predicates.blocks(definition.get())))
 .build()
 )
-.workableCasingRenderer("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor", false)
+.workableCasingModel("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor")
     
 });
