@@ -52,7 +52,8 @@ backups
 crash-report
 journeymap*
 extrakube from modpacks
-kubejs/probe/*
+kubejs\probe\*
 mixin.out
+mixin.out\*
 mixin.out*
-mixin.out/*
+mixin.out\class\*
