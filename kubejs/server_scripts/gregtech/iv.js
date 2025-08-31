@@ -433,21 +433,21 @@ ServerEvents.recipes(event => {
         .inputFluids('gtceu:medium_pressure_fissile_steam 2000')
         .outputFluids('gtceu:distilled_water 4500')
         .duration(40)
-        .EUt(-GTValues.VA[GTValues.LuV])
+        .EUt(-GTValues.VA[GTValues.LuV]/2)
 
     // Heat Exchanging Fission Steam to Distilled Water (Critical Steam)
     event.recipes.gtceu.heat_exchanging('fission4')
         .inputFluids('gtceu:critical_steam 500')
         .outputFluids('gtceu:distilled_water 1000')
         .duration(280)
-        .EUt(-GTValues.VA[GTValues.LuV])
+        .EUt(-GTValues.VA[GTValues.LuV]/2)
 
     // Hot NaK Cooling via Heat Exchanger
     event.recipes.gtceu.heat_exchanging('hot_nak_cooling')
         .inputFluids('gtceu:hot_sodium_potassium 500')
         .outputFluids('gtceu:sodium_potassium 500')
         .duration(220)
-        .EUt(-GTValues.VA[GTValues.ZPM])
+        .EUt(-GTValues.VA[GTValues.ZPM]/2)
 
     // Cryo Zirconium Binding Solution in Mixer
     greg.mixer('cryo_zirconium_binding_solution')
