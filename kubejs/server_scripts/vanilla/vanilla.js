@@ -5,7 +5,7 @@ ServerEvents.recipes((event) => {
   event.remove({ id: "gtceu:shapeless/blaze_rod_to_powder" });
   event.remove({ id: "minecraft:ender_eye" });
 
-  //Ghast Tear
+  // Ghast Tear
   greg
     .chemical_reactor("gtceu:ghast_tear")
     .itemInputs("#forge:tiny_dusts/potassium", "#forge:tiny_dusts/lithium")
@@ -80,27 +80,31 @@ ServerEvents.recipes((event) => {
       Potion: "minecraft:fire_resistance",
     }),
     [
-      Item.of("minecraft:potion").withNBT({
-        Potion: "minecraft:water",
-      }).strongNBT(),
+      Item.of("minecraft:potion")
+        .withNBT({
+          Potion: "minecraft:water",
+        })
+        .strongNBT(),
       "#forge:dusts/sugar",
       "#forge:dusts/stone",
       "#forge:dusts/lead",
-    ]
+    ],
   );
   event.shapeless(
     Item.of("minecraft:potion").withNBT({
       Potion: "minecraft:long_fire_resistance",
     }),
     [
-      Item.of("minecraft:potion").withNBT({
-        Potion: "minecraft:water",
-      }).strongNBT(),
+      Item.of("minecraft:potion")
+        .withNBT({
+          Potion: "minecraft:water",
+        })
+        .strongNBT(),
       "#forge:dusts/redstone",
       "#forge:dusts/sugar",
       "#forge:dusts/stone",
       "#forge:dusts/lead",
-    ]
+    ],
   );
 
   // XP
@@ -109,7 +113,7 @@ ServerEvents.recipes((event) => {
     .itemInputs(
       "glass_bottle",
       "#forge:tiny_dusts/gold",
-      "#forge:tiny_dusts/sugar"
+      "#forge:tiny_dusts/sugar",
     )
     .inputFluids("water 100")
     .itemOutputs("experience_bottle")
@@ -133,10 +137,14 @@ ServerEvents.recipes((event) => {
     .duration(150)
     .EUt(100);
 
-  event.shaped(Item.of('minecraft:enchanted_book').enchant('minecraft:silk_touch', 1), ["RWR", "WBW", "RmR"], {
-    R: "#forge:plates/rubber",
-    W: "#minecraft:wool",
-    B: "minecraft:book",
-    m: "#forge:tools/mallets"
-  });
+  event.shaped(
+    Item.of("minecraft:enchanted_book").enchant("minecraft:silk_touch", 1),
+    ["RWR", "WBW", "RmR"],
+    {
+      R: "#forge:plates/rubber",
+      W: "#minecraft:wool",
+      B: "minecraft:book",
+      m: "#forge:tools/mallets",
+    },
+  );
 });

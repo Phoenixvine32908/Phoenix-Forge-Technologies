@@ -1,5 +1,4 @@
 ServerEvents.recipes((event) => {
-
   // Travel Anchors
   event.remove({ id: "travelanchors:travel_anchor" });
   event.shaped(`travelanchors:travel_anchor`, ["SGS", "GPG", "SGS"], {
@@ -44,24 +43,25 @@ ServerEvents.recipes((event) => {
 
 ServerEvents.recipes((event) => {
   const createUniversalCircuitRecipe = (outputId, inputTag) => {
-    event.recipes.gtceu.forming_press(outputId)
+    event.recipes.gtceu
+      .forming_press(outputId)
       .itemInputs(`#${inputTag}`)
       .itemOutputs(`kubejs:${outputId}`) // Assuming you want to output your universal circuit
       .duration(600) // Example duration
-      .EUt(GTValues.VA[GTValues.LV]/2);    // Example energy per tick
+      .EUt(GTValues.VA[GTValues.LV] / 2); // Example energy per tick
   };
 
-  createUniversalCircuitRecipe('zpm_universal_circuit', 'gtceu:circuits/zpm');
-  createUniversalCircuitRecipe('uv_universal_circuit', 'gtceu:circuits/uv');
-  createUniversalCircuitRecipe('uhv_universal_circuit', 'gtceu:circuits/uhv');
-  createUniversalCircuitRecipe('uev_universal_circuit', 'gtceu:circuits/uev');
-  createUniversalCircuitRecipe('uiv_universal_circuit', 'gtceu:circuits/uiv');
-  createUniversalCircuitRecipe('iv_universal_circuit', 'gtceu:circuits/iv');
-  createUniversalCircuitRecipe('uxv_universal_circuit', 'gtceu:circuits/uxv');
-  createUniversalCircuitRecipe('max_universal_circuit', 'gtceu:circuits/max');
-  createUniversalCircuitRecipe('luv_universal_circuit', 'gtceu:circuits/luv');
-  createUniversalCircuitRecipe('ev_universal_circuit', 'gtceu:circuits/ev');
-  createUniversalCircuitRecipe('hv_universal_circuit', 'gtceu:circuits/hv');
-  createUniversalCircuitRecipe('mv_universal_circuit', 'gtceu:circuits/mv');
-  createUniversalCircuitRecipe('lv_universal_circuit', 'gtceu:circuits/lv');
+  createUniversalCircuitRecipe("zpm_universal_circuit", "gtceu:circuits/zpm");
+  createUniversalCircuitRecipe("uv_universal_circuit", "gtceu:circuits/uv");
+  createUniversalCircuitRecipe("uhv_universal_circuit", "gtceu:circuits/uhv");
+  createUniversalCircuitRecipe("uev_universal_circuit", "gtceu:circuits/uev");
+  createUniversalCircuitRecipe("uiv_universal_circuit", "gtceu:circuits/uiv");
+  createUniversalCircuitRecipe("iv_universal_circuit", "gtceu:circuits/iv");
+  createUniversalCircuitRecipe("uxv_universal_circuit", "gtceu:circuits/uxv");
+  createUniversalCircuitRecipe("max_universal_circuit", "gtceu:circuits/max");
+  createUniversalCircuitRecipe("luv_universal_circuit", "gtceu:circuits/luv");
+  createUniversalCircuitRecipe("ev_universal_circuit", "gtceu:circuits/ev");
+  createUniversalCircuitRecipe("hv_universal_circuit", "gtceu:circuits/hv");
+  createUniversalCircuitRecipe("mv_universal_circuit", "gtceu:circuits/mv");
+  createUniversalCircuitRecipe("lv_universal_circuit", "gtceu:circuits/lv");
 });

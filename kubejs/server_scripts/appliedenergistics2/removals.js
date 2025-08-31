@@ -1,8 +1,8 @@
 ServerEvents.recipes((event) => {
-  let yeet = (recipeTag) => {
+  const yeet = (recipeTag) => {
     event.remove({ id: recipeTag });
   };
-  let yote = (itemName) => {
+  const yote = (itemName) => {
     event.remove({ output: itemName });
     event.remove({ input: itemName });
   };
@@ -36,17 +36,14 @@ ServerEvents.recipes((event) => {
   yote("ae2:smooth_quartz_block");
   yote("ae2:quartz_wall");
   yote("ae2:quartz_slab");
-  
-  yote('ae2:crystal_resonance_generator');
 
-
+  yote("ae2:crystal_resonance_generator");
 
   // ae2 transformation removals
-  event.remove({ id: "ae2:transform/fluix_crystals"})
-  event.remove({ id: "ae2:transform/flawed_budding_quartz"})
-  event.remove({ id: "ae2:transform/certus_quartz_crystals"})
-  event.remove({ id: "ae2:transform/fluix_crystal"})
-  event.remove({ id: "ae2:transform/chipped_budding_quartz"})
-  event.remove({ id: "ae2:transform/damaged_budding_quartz"})
-
+  event.remove({ id: "ae2:transform/fluix_crystals" });
+  event.remove({ id: "ae2:transform/flawed_budding_quartz" });
+  event.remove({ id: "ae2:transform/certus_quartz_crystals" });
+  event.remove({ id: "ae2:transform/fluix_crystal" });
+  event.remove({ id: "ae2:transform/chipped_budding_quartz" });
+  event.remove({ id: "ae2:transform/damaged_budding_quartz" });
 });

@@ -1,77 +1,160 @@
-GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
-    phoenixvine.create('source_imbument')
-        .category('alchemical')
-        .setEUIO('in') 
-        .setMaxIOSize(3, 1, 1, 1)
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.CHEMICAL);
-        phoenixvine.create('source_extraction')
-        .category('alchemical')
-        .setEUIO('in') 
-        .setMaxIOSize(3, 1, 1, 1)
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.CHEMICAL);
+GTCEuStartupEvents.registry("gtceu:recipe_type", (phoenixvine) => {
+  phoenixvine
+    .create("source_imbument")
+    .category("alchemical")
+    .setEUIO("in")
+    .setMaxIOSize(3, 1, 1, 1)
+    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+    .setSound(GTSoundEntries.CHEMICAL);
+  phoenixvine
+    .create("source_extraction")
+    .category("alchemical")
+    .setEUIO("in")
+    .setMaxIOSize(3, 1, 1, 1)
+    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+    .setSound(GTSoundEntries.CHEMICAL);
 });
-const CreativeEnergyMachine = Java.loadClass("net.phoenix.core.common.machine.multiblock.CreativeEnergyMultiMachine")
-GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('alchemical_imbuer', 'multiblock')
+const CreativeEnergyMachine = Java.loadClass(
+  "net.phoenix.core.common.machine.multiblock.CreativeEnergyMultiMachine",
+);
+GTCEuStartupEvents.registry("gtceu:machine", (phoenixvine) => {
+  phoenixvine
+    .create("alchemical_imbuer", "multiblock")
     .rotationState(RotationState.NON_Y_AXIS)
     .machine((holder) => new CreativeEnergyMachine(holder))
-    .recipeTypes(['source_imbument','source_extraction'])
-    .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
+    .recipeTypes(["source_imbument", "source_extraction"])
+    .recipeModifiers([
+      GTRecipeModifiers.OC_NON_PERFECT_SUBTICK,
+      GTRecipeModifiers.BATCH_MODE,
+    ])
     .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
-    .pattern(definition => FactoryBlockPattern.start()
-    .aisle("BBCCCBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBCCCBB")
-.aisle("BCDDDCB", "BBCCCBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBCCCBB", "BCDDDCB")
-.aisle("CDDDDDC", "BCEEECB", "BBFFFBB", "BBFFFBB", "BBFFFBB", "BCDDDCB", "CDGGGDC")
-.aisle("CDDDDDC", "BCEEECB", "BBFEFBB", "BBFHFBB", "BBFEFBB", "BCDIDCB", "CDGJGDC")
-.aisle("CDDDDDC", "BCEEECB", "BBFFFBB", "BBFFFBB", "BBFFFBB", "BCDDDCB", "CDGGGDC")
-.aisle("BCDDDCB", "BBCCCBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBCCCBB", "BCDDDCB")
-.aisle("BBCKCBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBBBBBB", "BBCCCBB")
-   .where("B", Predicates.any())
-   .where("C", Predicates.blocks("gtceu:clean_machine_casing")
-       .or(Predicates.autoAbilities(definition.getRecipeTypes()))
-       .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
-   .where("D", Predicates.blocks("ars_nouveau:sourcestone"))
-   .where("E", Predicates.blocks("ars_nouveau:magebloom_block"))
-   .where("F", Predicates.blocks("gtceu:tempered_glass"))
-   .where("G", Predicates.blocks("ars_nouveau:void_prism"))
-   .where("H", Predicates.blocks("ars_nouveau:source_gem_block"))
-   .where("I", Predicates.blocks("ars_nouveau:arcane_core"))
-   .where("J", Predicates.blocks("ars_nouveau:agronomic_sourcelink"))
-   .where("K", Predicates.controller(Predicates.blocks(definition.get())))
-    .build()
+    .pattern((definition) =>
+      FactoryBlockPattern.start()
+        .aisle(
+          "BBCCCBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBCCCBB",
+        )
+        .aisle(
+          "BCDDDCB",
+          "BBCCCBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBCCCBB",
+          "BCDDDCB",
+        )
+        .aisle(
+          "CDDDDDC",
+          "BCEEECB",
+          "BBFFFBB",
+          "BBFFFBB",
+          "BBFFFBB",
+          "BCDDDCB",
+          "CDGGGDC",
+        )
+        .aisle(
+          "CDDDDDC",
+          "BCEEECB",
+          "BBFEFBB",
+          "BBFHFBB",
+          "BBFEFBB",
+          "BCDIDCB",
+          "CDGJGDC",
+        )
+        .aisle(
+          "CDDDDDC",
+          "BCEEECB",
+          "BBFFFBB",
+          "BBFFFBB",
+          "BBFFFBB",
+          "BCDDDCB",
+          "CDGGGDC",
+        )
+        .aisle(
+          "BCDDDCB",
+          "BBCCCBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBCCCBB",
+          "BCDDDCB",
+        )
+        .aisle(
+          "BBCKCBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBBBBBB",
+          "BBCCCBB",
+        )
+        .where("B", Predicates.any())
+        .where(
+          "C",
+          Predicates.blocks("gtceu:clean_machine_casing")
+            .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+            .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)),
+        )
+        .where("D", Predicates.blocks("ars_nouveau:sourcestone"))
+        .where("E", Predicates.blocks("ars_nouveau:magebloom_block"))
+        .where("F", Predicates.blocks("gtceu:tempered_glass"))
+        .where("G", Predicates.blocks("ars_nouveau:void_prism"))
+        .where("H", Predicates.blocks("ars_nouveau:source_gem_block"))
+        .where("I", Predicates.blocks("ars_nouveau:arcane_core"))
+        .where("J", Predicates.blocks("ars_nouveau:agronomic_sourcelink"))
+        .where("K", Predicates.controller(Predicates.blocks(definition.get())))
+        .build(),
     )
-    .workableCasingModel("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/implosion_compressor")
+    .workableCasingModel(
+      "gtceu:block/casings/solid/machine_casing_clean_stainless_steel",
+      "gtceu:block/multiblock/implosion_compressor",
+    );
 
-
-        
-    phoenixvine.create('hyper_gas_turbine', 'multiblock').machine((holder) => new $LargeTurbineMachine(holder, GTValues.LuV))
+  phoenixvine
+    .create("hyper_gas_turbine", "multiblock")
+    .machine((holder) => new $LargeTurbineMachine(holder, GTValues.LuV))
     .rotationState(RotationState.NON_Y_AXIS)
     .recipeTypes("gas_turbine")
-    .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
+    .recipeModifiers([
+      GTRecipeModifiers.OC_NON_PERFECT_SUBTICK,
+      GTRecipeModifiers.BATCH_MODE,
+    ])
     .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)
-    .pattern(definition => FactoryBlockPattern.start()
-   .aisle("BBBBBBB", "BBBCBBB", "BBBDBBB", "BBBCBBB", "BBBBBBB")
-.aisle("BBBCBBB", "BBCACBB", "BBCECBB", "BBCACBB", "BBBCBBB")
-.aisle("BBCCCBB", "BCAAACB", "BCAEACB", "BCAEACB", "BBCCCBB")
-.aisle("BCCCCCB", "CAAEAAC", "CEEEEEC", "CAEEEAC", "BCCFCCB")
-.aisle("BBCCCBB", "BCAAACB", "BCAEACB", "BCAEACB", "BBCCCBB")
-.aisle("BBBCBBB", "BBCACBB", "BBCECBB", "BBCACBB", "BBBCBBB")
-.aisle("BBBBBBB", "BBBCBBB", "BBBGBBB", "BBBCBBB", "BBBBBBB")
-   .where("A", Predicates.blocks("minecraft:air"))
-   .where("B", Predicates.any())
-   .where("C", Predicates.blocks("gtceu:stainless_steel_turbine_casing")
-       .or(Predicates.autoAbilities(definition.getRecipeTypes()))
-       .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)))
-    .where("D", Predicates.ability(PartAbility.MUFFLER).setExactLimit(1))
-.where("F", Predicates.ability(PartAbility.ROTOR_HOLDER).setExactLimit(1))
-   .where("E", Predicates.blocks("gtceu:stainless_steel_frame"))
-   .where("G", Predicates.controller(Predicates.blocks(definition.get())))
-    .build()
+    .pattern((definition) =>
+      FactoryBlockPattern.start()
+        .aisle("BBBBBBB", "BBBCBBB", "BBBDBBB", "BBBCBBB", "BBBBBBB")
+        .aisle("BBBCBBB", "BBCACBB", "BBCECBB", "BBCACBB", "BBBCBBB")
+        .aisle("BBCCCBB", "BCAAACB", "BCAEACB", "BCAEACB", "BBCCCBB")
+        .aisle("BCCCCCB", "CAAEAAC", "CEEEEEC", "CAEEEAC", "BCCFCCB")
+        .aisle("BBCCCBB", "BCAAACB", "BCAEACB", "BCAEACB", "BBCCCBB")
+        .aisle("BBBCBBB", "BBCACBB", "BBCECBB", "BBCACBB", "BBBCBBB")
+        .aisle("BBBBBBB", "BBBCBBB", "BBBGBBB", "BBBCBBB", "BBBBBBB")
+        .where("A", Predicates.blocks("minecraft:air"))
+        .where("B", Predicates.any())
+        .where(
+          "C",
+          Predicates.blocks("gtceu:stainless_steel_turbine_casing")
+            .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+            .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1)),
+        )
+        .where("D", Predicates.ability(PartAbility.MUFFLER).setExactLimit(1))
+        .where(
+          "F",
+          Predicates.ability(PartAbility.ROTOR_HOLDER).setExactLimit(1),
+        )
+        .where("E", Predicates.blocks("gtceu:stainless_steel_frame"))
+        .where("G", Predicates.controller(Predicates.blocks(definition.get())))
+        .build(),
     )
-        .workableCasingModel("gtceu:block/casings/mechanic/machine_casing_turbine_stainless_steel", "gtceu:block/multiblock/generator/large_gas_turbine")
-
+    .workableCasingModel(
+      "gtceu:block/casings/mechanic/machine_casing_turbine_stainless_steel",
+      "gtceu:block/multiblock/generator/large_gas_turbine",
+    );
 }); // .or(Predicates.blocks(INPUT_ENERGY_HATCH[EV]))

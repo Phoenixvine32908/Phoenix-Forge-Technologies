@@ -7,7 +7,6 @@ ServerEvents.recipes((event) => {
     .EUt(2)
     .duration(20);
 
-
   event.recipes.gtceu
     .construction_core("skystone_dust")
     .itemInputs("gtceu:stone_dust", "#forge:dusts/certus_quartz")
@@ -16,4 +15,4 @@ ServerEvents.recipes((event) => {
     .circuit(1)
     .EUt(2)
     .duration(20);
-})
+});

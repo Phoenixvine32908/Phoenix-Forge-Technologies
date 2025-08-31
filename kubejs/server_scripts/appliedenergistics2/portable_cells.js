@@ -11,7 +11,7 @@ ServerEvents.recipes((event) => {
       H: "#forge:chests/wooden",
       P: "#forge:plates/wrought_iron",
       W: "gtceu:red_alloy_single_cable",
-    }
+    },
   );
   event.remove({ id: "ae2:tools/portable_item_cell_4k" });
   event.shaped("ae2:portable_item_cell_4k", ["BGB", "CHC", "PWP"], {

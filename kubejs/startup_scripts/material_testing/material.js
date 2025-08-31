@@ -7,7 +7,7 @@ GTCEuStartupEvents.registry("gtceu:material", (event) => {
     .iconSet(GTMaterialIconSet.DULL)
     .flags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_GEAR);
 
-    /*
+  /*
   event
     .create("netherite")
     .components("1x gold", "1x tungsten", "1x platinum")

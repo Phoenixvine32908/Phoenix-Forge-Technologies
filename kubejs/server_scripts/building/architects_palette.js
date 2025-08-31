@@ -101,7 +101,7 @@ ServerEvents.recipes((event) => {
     .canner("lit_withered_osseous_skull")
     .itemInputs(
       "architects_palette:withered_osseous_skull",
-      "minecraft:soul_torch"
+      "minecraft:soul_torch",
     )
     .itemOutputs("architects_palette:lit_withered_osseous_skull")
     .EUt(2)
@@ -227,7 +227,7 @@ ServerEvents.recipes((event) => {
     .itemInputs(
       "minecraft:ancient_debris",
       "4x architects_palette:nether_brass_ingot",
-      "4x architects_palette:nether_brass_nugget"
+      "4x architects_palette:nether_brass_nugget",
     )
     .itemOutputs("32x architects_palette:ancient_plating")
     .EUt(2)
@@ -236,7 +236,7 @@ ServerEvents.recipes((event) => {
     .construction_core("ancient_plating")
     .itemInputs(
       "minecraft:ancient_debris",
-      "4x architects_palette:nether_brass_ingot"
+      "4x architects_palette:nether_brass_ingot",
     )
     .itemOutputs("64x architects_palette:ancient_plating")
     .inputFluids("gtceu:construction_foam 100")
@@ -323,7 +323,7 @@ ServerEvents.recipes((event) => {
     .mixer("framed_oracle_block")
     .itemInputs(
       "architects_palette:oracle_block",
-      "architects_palette:cerebral_plate"
+      "architects_palette:cerebral_plate",
     )
     .itemOutputs("2x architects_palette:framed_oracle_block")
     .EUt(2)
@@ -332,7 +332,7 @@ ServerEvents.recipes((event) => {
     .construction_core("framed_oracle_block")
     .itemInputs(
       "architects_palette:oracle_block",
-      "architects_palette:cerebral_plate"
+      "architects_palette:cerebral_plate",
     )
     .itemOutputs("8x architects_palette:framed_oracle_block")
     .inputFluids("gtceu:construction_foam 100")
@@ -457,30 +457,51 @@ ServerEvents.recipes((event) => {
       .duration(20);
   }
 
-  getWarped("architects_palette:abyssaline", "architects_palette:hadaline")
-  getWarped("architects_palette:abyssaline_pillar", "architects_palette:hadaline_pillar")
-  getWarped("architects_palette:abyssaline_tiles", "architects_palette:hadaline_tiles")
-  getWarped("architects_palette:chiseled_abyssaline_bricks", "architects_palette:chiseled_hadaline_bricks")
-  getWarped("architects_palette:abyssaline_bricks", "architects_palette:hadaline_bricks")
-  getWarped("architects_palette:abyssaline_plating", "architects_palette:hadaline_plating")
-  getWarped("architects_palette:abyssaline_lamp", "architects_palette:hadaline_lamp")
+  getWarped("architects_palette:abyssaline", "architects_palette:hadaline");
+  getWarped(
+    "architects_palette:abyssaline_pillar",
+    "architects_palette:hadaline_pillar",
+  );
+  getWarped(
+    "architects_palette:abyssaline_tiles",
+    "architects_palette:hadaline_tiles",
+  );
+  getWarped(
+    "architects_palette:chiseled_abyssaline_bricks",
+    "architects_palette:chiseled_hadaline_bricks",
+  );
+  getWarped(
+    "architects_palette:abyssaline_bricks",
+    "architects_palette:hadaline_bricks",
+  );
+  getWarped(
+    "architects_palette:abyssaline_plating",
+    "architects_palette:hadaline_plating",
+  );
+  getWarped(
+    "architects_palette:abyssaline_lamp",
+    "architects_palette:hadaline_lamp",
+  );
 
-  getWarped("architects_palette:sunstone", "architects_palette:moonstone")
-  getWarped("architects_palette:rotten_flesh_block", "architects_palette:entrails")
+  getWarped("architects_palette:sunstone", "architects_palette:moonstone");
+  getWarped(
+    "architects_palette:rotten_flesh_block",
+    "architects_palette:entrails",
+  );
 
-  getWarped("netherite_ingot", "architects_palette:unobtanium")
+  getWarped("netherite_ingot", "architects_palette:unobtanium");
 
-  getWarped("granite", "architects_palette:onyx")
-  getWarped("diorite", "architects_palette:nebulite")
-  getWarped("cobblestone", "architects_palette:craterstone")
-  getWarped("andesite", "architects_palette:esoterrack")
-  getWarped("stone_bricks", "architects_palette:moonshale_bricks")
-  getWarped("stone", "architects_palette:moonshale")
+  getWarped("granite", "architects_palette:onyx");
+  getWarped("diorite", "architects_palette:nebulite");
+  getWarped("cobblestone", "architects_palette:craterstone");
+  getWarped("andesite", "architects_palette:esoterrack");
+  getWarped("stone_bricks", "architects_palette:moonshale_bricks");
+  getWarped("stone", "architects_palette:moonshale");
 
-  getWarped("#minecraft:logs", "architects_palette:twisted_log")
-  getWarped("#minecraft:planks", "architects_palette:twisted_planks")
-  getWarped("#minecraft:saplings", "architects_palette:twisted_sapling")
-  getWarped("#minecraft:leaves", "architects_palette:twisted_leaves")
+  getWarped("#minecraft:logs", "architects_palette:twisted_log");
+  getWarped("#minecraft:planks", "architects_palette:twisted_planks");
+  getWarped("#minecraft:saplings", "architects_palette:twisted_sapling");
+  getWarped("#minecraft:leaves", "architects_palette:twisted_leaves");
 
-  getWarped("clay", "architects_palette:warpstone")
+  getWarped("clay", "architects_palette:warpstone");
 });

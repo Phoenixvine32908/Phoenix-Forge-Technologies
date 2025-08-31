@@ -1,5 +1,4 @@
 ServerEvents.recipes((event) => {
-
   const greg = event.recipes.gtceu;
 
   event.remove({ output: "gtceu:fluid_voiding_cover" });
@@ -9,7 +8,7 @@ ServerEvents.recipes((event) => {
     .itemInputs(
       "2x #forge:screws/steel",
       "gtceu:fluid_detector_cover",
-      "gtceu:bronze_normal_fluid_pipe"
+      "gtceu:bronze_normal_fluid_pipe",
     )
     .itemOutputs("gtceu:fluid_voiding_cover")
     .duration(100)

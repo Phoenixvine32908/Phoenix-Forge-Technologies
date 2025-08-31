@@ -1,68 +1,68 @@
-function makeItem(event, id, texture, dispName, tag, glow){
-  if (tag == null){
+function makeItem(event, id, texture, dispName, tag, glow) {
+  if (tag == null) {
     event.create(id).texture(texture).displayName(dispName).glow(glow);
   } else {
     event.create(id).texture(texture).displayName(dispName).tag(tag).glow(glow);
   }
 }
 
-StartupEvents.registry('item', event => {
+StartupEvents.registry("item", (event) => {
   const circuitsDir = "kubejs:item/phoenixware/circuits";
   const universalCircuitsDir = "kubejs:item/universal_circuits";
 
- // const AscendedPhoenixWare = [ // Better name for perfected phoenixware
- //   [
-    //  "ascended_phoenixware_processor_mainframe",
-    //  `${circuitsDir}/perfected_phoenixware_processor_mainframe`,
-    //  "§aAscended PhoenixWare Mainframe - “Singularity-Convergent Mind”",
-   //   "gtceu:circuits/max",
-   //   true
-   // ],
-   // [
-     // "ascended_phoenixware_processing_unit",
-     // `${circuitsDir}/perfected_phoenixware_processing_unit`,
-     // "§aAscended PhoenixWare Processing Unit - “Singularity-Convergent Mind”",
-    //  null,
-    //  true
-    //],
-    //[
-    //  "ascended_phoenixware_processor_super_computer",
-     // `${circuitsDir}/perfected_phoenixware_processor_super_computer`,
-    //  "§aAscended PhoenixWare Supercomputer - “Hypercosmic Intelligence Engine”",
-    //  "gtceu:circuits/uiv",
-    //  true
-   // ],
-   // [
-   //   "ascended_phoenixware_processor_assembly",
-     // `${circuitsDir}/perfected_phoenixware_processor_assembly`,
-    //  "§aAscended PhoenixWare Assembly - “Dimensional Computation Array”",
-    //  "gtceu:circuits/uev",
-    //  true
-    //],
-    //[
-    //  "ascended_phoenixware_processor",
-    //  `${circuitsDir}/perfected_phoenixware_processor`,
-    //  "§aAscended PhoenixWare Processor - “Omniversal Logic Core”",
-     // "gtceu:circuits/uhv",
-     // true
-    //],
-   // [
-    //  "ascended_phoenixware_printed_board",
-     // `${circuitsDir}/perfected_phoenixware_printed_board`,
-    //  "§aAscended PhoenixWare Printed Circuit Board - “Aurum Phoenix”",
-    //  null,
-    //  true
-    //],
-    //[
-    //  "ascended_phoenixware_circuit_board",
-    //  `${circuitsDir}/perfected_phoenixware_circuit_board`,
-    //  "§aAscended PhoenixWare Circuit Board - “Inferno Zenith”",
-    //  null,
-    //  true
-    //]
-  //];
+  // const AscendedPhoenixWare = [ // Better name for perfected phoenixware
+  //   [
+  //  "ascended_phoenixware_processor_mainframe",
+  //  `${circuitsDir}/perfected_phoenixware_processor_mainframe`,
+  //  "§aAscended PhoenixWare Mainframe - “Singularity-Convergent Mind”",
+  //   "gtceu:circuits/max",
+  //   true
+  // ],
+  // [
+  // "ascended_phoenixware_processing_unit",
+  // `${circuitsDir}/perfected_phoenixware_processing_unit`,
+  // "§aAscended PhoenixWare Processing Unit - “Singularity-Convergent Mind”",
+  //  null,
+  //  true
+  // ],
+  // [
+  //  "ascended_phoenixware_processor_super_computer",
+  // `${circuitsDir}/perfected_phoenixware_processor_super_computer`,
+  //  "§aAscended PhoenixWare Supercomputer - “Hypercosmic Intelligence Engine”",
+  //  "gtceu:circuits/uiv",
+  //  true
+  // ],
+  // [
+  //   "ascended_phoenixware_processor_assembly",
+  // `${circuitsDir}/perfected_phoenixware_processor_assembly`,
+  //  "§aAscended PhoenixWare Assembly - “Dimensional Computation Array”",
+  //  "gtceu:circuits/uev",
+  //  true
+  // ],
+  // [
+  //  "ascended_phoenixware_processor",
+  //  `${circuitsDir}/perfected_phoenixware_processor`,
+  //  "§aAscended PhoenixWare Processor - “Omniversal Logic Core”",
+  // "gtceu:circuits/uhv",
+  // true
+  // ],
+  // [
+  //  "ascended_phoenixware_printed_board",
+  // `${circuitsDir}/perfected_phoenixware_printed_board`,
+  //  "§aAscended PhoenixWare Printed Circuit Board - “Aurum Phoenix”",
+  //  null,
+  //  true
+  // ],
+  // [
+  //  "ascended_phoenixware_circuit_board",
+  //  `${circuitsDir}/perfected_phoenixware_circuit_board`,
+  //  "§aAscended PhoenixWare Circuit Board - “Inferno Zenith”",
+  //  null,
+  //  true
+  // ]
+  // ];
 
-  /*const CogniTech = [ // Better name for normal phoenixware
+  /* const CogniTech = [ // Better name for normal phoenixware
     [
       "cognitech_processor_mainframe",
       `${circuitsDir}/phoenixware_processor_mainframe`,
@@ -112,9 +112,9 @@ StartupEvents.registry('item', event => {
       null,
       false
     ]
-  ];*/
+  ]; */
 
-  /*const FallenPhoenixWare = [ // Better name for flawed phoenixware
+  /* const FallenPhoenixWare = [ // Better name for flawed phoenixware
     [
       "fallen_phoenixware_processor",
       `${circuitsDir}/flawed_phoenixware_processor`,
@@ -164,9 +164,9 @@ StartupEvents.registry('item', event => {
       null,
       false
     ]
-  ];`*/
+  ];` */
 
-  /*const entropic_wetware = [ // Corrupted wetware line of circuits
+  /* const entropic_wetware = [ // Corrupted wetware line of circuits
     [
       "entropic_wetware_processor",
       `${circuitsDir}/entropic_wetware_processor`,
@@ -268,7 +268,7 @@ StartupEvents.registry('item', event => {
       null,
       true
     ]
-  ];*/
+  ]; */
 
   const other = [
     [
@@ -276,41 +276,125 @@ StartupEvents.registry('item', event => {
       `${circuitsDir}/unstable_processing_unit`,
       "§6Unstable Processing Unit - “Chaotic Computational Core ”",
       "gtceu:circuits/zpm",
-      false
-    ]
+      false,
+    ],
   ];
 
-  const itemsCombined = []
-    .concat(other)
-    //.concat(entropic_wetware)
-    //.concat(FallenPhoenixWare)
-   // .concat(CogniTech)
-    //.concat(AscendedPhoenixWare)
-    //.concat(panoptic_circuits);
+  const itemsCombined = [].concat(other);
+  // .concat(entropic_wetware)
+  // .concat(FallenPhoenixWare)
+  // .concat(CogniTech)
+  // .concat(AscendedPhoenixWare)
+  // .concat(panoptic_circuits);
 
-  itemsCombined.forEach(item => {
+  itemsCombined.forEach((item) => {
     makeItem(event, item[0], item[1], item[2], item[3], item[4]);
   });
 
   // --- Universal Circuits (One per Tier) ---
   const universalTiers = [
-    { name: "zpm_universal_circuit", displayName: "§dUniversal ZPM Circuit", texture: `${universalCircuitsDir}/zpm_universal_circuit`, tag: "gtceu:circuits/zpm", glow: true },
-    { name: "uv_universal_circuit", displayName: "§dUniversal UV Circuit", texture: `${universalCircuitsDir}/uv_universal_circuit`, tag: "gtceu:circuits/uv", glow: true },
-    { name: "uhv_universal_circuit", displayName: "§dUniversal UHV Circuit", texture: `${universalCircuitsDir}/uhv_universal_circuit`, tag: "gtceu:circuits/uhv", glow: true },
-    { name: "uev_universal_circuit", displayName: "§dUniversal UEV Circuit", texture: `${universalCircuitsDir}/uev_universal_circuit`, tag: "gtceu:circuits/uev", glow: true },
-    { name: "uiv_universal_circuit", displayName: "§dUniversal UIV Circuit", texture: `${universalCircuitsDir}/uiv_universal_circuit`, tag: "gtceu:circuits/uiv", glow: true },
-    { name: "iv_universal_circuit", displayName: "§dUniversal IV Circuit", texture: `${universalCircuitsDir}/iv_universal_circuit`, tag: "gtceu:circuits/iv", glow: true },
-    { name: "uxv_universal_circuit", displayName: "§dUniversal UXV Circuit", texture: `${universalCircuitsDir}/uev_universal_circuit`, tag: "gtceu:circuits/uxv", glow: true },
-    { name: "max_universal_circuit", displayName: "§dUniversal MAX Circuit", texture: `${universalCircuitsDir}/max_universal_circuit`, tag: "gtceu:circuits/max", glow: true },
-    { name: "luv_universal_circuit", displayName: "§dUniversal LUV Circuit", texture: `${universalCircuitsDir}/luv_universal_circuit`, tag: "gtceu:circuits/luv", glow: true },
-    { name: "ev_universal_circuit", displayName: "§dUniversal EV Circuit", texture: `${universalCircuitsDir}/ev_universal_circuit`, tag: "gtceu:circuits/ev", glow: true },
-    { name: "hv_universal_circuit", displayName: "§dUniversal HV Circuit", texture: `${universalCircuitsDir}/hv_universal_circuit`, tag: "gtceu:circuits/hv", glow: true },
-    { name: "mv_universal_circuit", displayName: "§dUniversal MV Circuit", texture: `${universalCircuitsDir}/mv_universal_circuit`, tag: "gtceu:circuits/mv", glow: true },
-    { name: "lv_universal_circuit", displayName: "§dUniversal LV Circuit", texture: `${universalCircuitsDir}/lv_universal_circuit`, tag: "gtceu:circuits/lv", glow: true },
+    {
+      name: "zpm_universal_circuit",
+      displayName: "§dUniversal ZPM Circuit",
+      texture: `${universalCircuitsDir}/zpm_universal_circuit`,
+      tag: "gtceu:circuits/zpm",
+      glow: true,
+    },
+    {
+      name: "uv_universal_circuit",
+      displayName: "§dUniversal UV Circuit",
+      texture: `${universalCircuitsDir}/uv_universal_circuit`,
+      tag: "gtceu:circuits/uv",
+      glow: true,
+    },
+    {
+      name: "uhv_universal_circuit",
+      displayName: "§dUniversal UHV Circuit",
+      texture: `${universalCircuitsDir}/uhv_universal_circuit`,
+      tag: "gtceu:circuits/uhv",
+      glow: true,
+    },
+    {
+      name: "uev_universal_circuit",
+      displayName: "§dUniversal UEV Circuit",
+      texture: `${universalCircuitsDir}/uev_universal_circuit`,
+      tag: "gtceu:circuits/uev",
+      glow: true,
+    },
+    {
+      name: "uiv_universal_circuit",
+      displayName: "§dUniversal UIV Circuit",
+      texture: `${universalCircuitsDir}/uiv_universal_circuit`,
+      tag: "gtceu:circuits/uiv",
+      glow: true,
+    },
+    {
+      name: "iv_universal_circuit",
+      displayName: "§dUniversal IV Circuit",
+      texture: `${universalCircuitsDir}/iv_universal_circuit`,
+      tag: "gtceu:circuits/iv",
+      glow: true,
+    },
+    {
+      name: "uxv_universal_circuit",
+      displayName: "§dUniversal UXV Circuit",
+      texture: `${universalCircuitsDir}/uev_universal_circuit`,
+      tag: "gtceu:circuits/uxv",
+      glow: true,
+    },
+    {
+      name: "max_universal_circuit",
+      displayName: "§dUniversal MAX Circuit",
+      texture: `${universalCircuitsDir}/max_universal_circuit`,
+      tag: "gtceu:circuits/max",
+      glow: true,
+    },
+    {
+      name: "luv_universal_circuit",
+      displayName: "§dUniversal LUV Circuit",
+      texture: `${universalCircuitsDir}/luv_universal_circuit`,
+      tag: "gtceu:circuits/luv",
+      glow: true,
+    },
+    {
+      name: "ev_universal_circuit",
+      displayName: "§dUniversal EV Circuit",
+      texture: `${universalCircuitsDir}/ev_universal_circuit`,
+      tag: "gtceu:circuits/ev",
+      glow: true,
+    },
+    {
+      name: "hv_universal_circuit",
+      displayName: "§dUniversal HV Circuit",
+      texture: `${universalCircuitsDir}/hv_universal_circuit`,
+      tag: "gtceu:circuits/hv",
+      glow: true,
+    },
+    {
+      name: "mv_universal_circuit",
+      displayName: "§dUniversal MV Circuit",
+      texture: `${universalCircuitsDir}/mv_universal_circuit`,
+      tag: "gtceu:circuits/mv",
+      glow: true,
+    },
+    {
+      name: "lv_universal_circuit",
+      displayName: "§dUniversal LV Circuit",
+      texture: `${universalCircuitsDir}/lv_universal_circuit`,
+      tag: "gtceu:circuits/lv",
+      glow: true,
+    },
   ];
 
-  universalTiers.forEach(tier => {
-    makeItem(event, tier.name, tier.texture, tier.displayName, tier.tag, tier.glow);
+  universalTiers.forEach((tier) => {
+    makeItem(
+      event,
+      tier.name,
+      tier.texture,
+      tier.displayName,
+      tier.tag,
+      tier.glow,
+    );
   });
 });
 

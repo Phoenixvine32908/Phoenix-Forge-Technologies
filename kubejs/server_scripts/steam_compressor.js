@@ -1,4 +1,4 @@
-/*ServerEvents.recipes(event => {
+/* ServerEvents.recipes(event => {
 event.recipes.gtceu.assembler('industrial_steam_casing')
 .circuit(6)
 .itemInputs('6x gtceu:brass_plate', '1x gtceu:steel_frame')
@@ -28,4 +28,4 @@ event.shaped("2x gtceu:industrial_steam_casing", ["PFP", "PZP", "PWP"], {
     C: "gtceu:hp_steam_compressor"
   });
 
-})*/
+}) */

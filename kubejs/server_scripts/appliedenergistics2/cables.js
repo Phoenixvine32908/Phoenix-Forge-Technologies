@@ -19,7 +19,7 @@ ServerEvents.recipes((event) => {
     "black",
   ];
   dyes.forEach((dyes) => {
-    let cablePainting = (cableType) => {
+    const cablePainting = (cableType) => {
       event.remove({ id: `ae2:network/cables/${cableType}_fluix_clean` });
       event.remove({ id: "ae2:network/cables/dense_smart_fluix_clean" });
       event.remove({ id: "ae2:network/cables/dense_covered_fluix_clean" });

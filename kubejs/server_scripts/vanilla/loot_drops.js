@@ -1,4 +1,4 @@
-/**LootJS.modifiers((event) => {
+/** LootJS.modifiers((event) => {
   event
     .addEntityLootModifier("minecraft:blaze")
     .replaceLoot("minecraft:blaze_rod", "gtceu:sulfur_dust", true);
@@ -8,4 +8,4 @@
 
 
     
-});*/
+}); */

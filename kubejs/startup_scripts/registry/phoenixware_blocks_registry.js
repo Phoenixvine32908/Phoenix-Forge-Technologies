@@ -1,236 +1,250 @@
-StartupEvents.registry("block", phoenixvine => {
-    phoenixvine.create("dust")
+StartupEvents.registry("block", (phoenixvine) => {
+  phoenixvine
+    .create("dust")
     .displayName("Dust")
     .tagBlock("mineable/shovel")
     .tagBlock("forge:mineable/shovel")
-    .soundType('sand')
+    .soundType("sand")
     .hardness(1)
     .requiresTool(false)
-    .resistance(1)
-    function MetalCasings(namespace, dspName) {
-        phoenixvine.create(namespace)
-        .displayName(dspName)
-        .tagBlock("mineable/pickaxe")
-        .tagBlock("forge:mineable/wrench")
-        .soundType('metal')
-        .hardness(5)
-        .requiresTool(true)
-        .resistance(5)
-        .defaultCutout();
-    }
+    .resistance(1);
+  function MetalCasings(namespace, dspName) {
+    phoenixvine
+      .create(namespace)
+      .displayName(dspName)
+      .tagBlock("mineable/pickaxe")
+      .tagBlock("forge:mineable/wrench")
+      .soundType("metal")
+      .hardness(5)
+      .requiresTool(true)
+      .resistance(5)
+      .defaultCutout();
+  }
 
-    const dispNames = {
-        quantified_alloy_block: "§6Quantified Alloy Block",
-        plasma_resistant: "§6Plasma Resistant Casing",
-        unstable_logic: "§6Unstable Logic Capable Casings",
-        stable_logic: "§6Stable Logic Capable Casings",
-        advanced_logic: "§6Advanced Logic Capable Casings",
-        perfected_logic: "§6Perfected Logic Capable Casings",
-        phoenix_enriched_neutronium_casing: "§fGravi-Stable Casing",
-        phoenix_enriched_naquad_casing: "§cSemi-Stable PW Casing",
-        phoenix_enriched_tritanium_casing: "§6Extremely Heat-Stable Casing",
-        akashic_zeronium_casing: "§6Zeronium Akashic Resonance Matrix Casings",
-        glitched_entropy_casing: "§6Glitched Entropy Casing",
-        supercooled_reactor_core: "§bSupercooled §6Reactor Core",
-        quantum_stable_fusion_casing: "§cQuantum Stable fusion casing PW1",
-        quasi_stable_fusion_casing: "§eQuasi Stable fusion casing PW2",
-        volatile_plasma_chamber: "§6Volatile Plasma Chamber",
-        quantum_stabilized_electrodes: "§bQuantum-Stabilized Electrodes",
-        true_phoenix_infused_casing: "§6True Phoenix-Infused Casing",
-      //  quantum_stabilization_core: "§6Quantum Stabilization Core",
-       // singularity_stabilized_coolant_system: "§6Singularity-Stabilized Coolant System",
-       // advanced_heat_regulator_modules: "§6Advanced Heat Regulator Modules",
-        heat_dissipating_coils: "§6Heat-Dissipating Coils",
-        //high_pressure_quantum_forge_core: "§6High-Pressure Quantum Forge Core",
-        strongest_rhodium_plated_machne_casing: "§eStrongest Rhodium Plated Casing",
-        reliable_naquadah_alloy_machine_casing: "§eReliable Naquadah Alloy Casing",
-        stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
-        entropy_logic_casing: "§cEntropy Logic Casing PW3",
-        glitched_fusion_casing: "§cEntropy Fusion Casing",
-        fissile_heat_safe_casing: "§bFissile Based Heat Safe Casing",
-        fissile_reaction_safe_casing: "§bFissile Reaction Safe Casing",
-        fission_cooling_casing: "§bFission Cooling Casing",
-        fissile_safe_gearbox: "§bFissile Safe Gearbox",
+  const dispNames = {
+    quantified_alloy_block: "§6Quantified Alloy Block",
+    plasma_resistant: "§6Plasma Resistant Casing",
+    unstable_logic: "§6Unstable Logic Capable Casings",
+    stable_logic: "§6Stable Logic Capable Casings",
+    advanced_logic: "§6Advanced Logic Capable Casings",
+    perfected_logic: "§6Perfected Logic Capable Casings",
+    phoenix_enriched_neutronium_casing: "§fGravi-Stable Casing",
+    phoenix_enriched_naquad_casing: "§cSemi-Stable PW Casing",
+    phoenix_enriched_tritanium_casing: "§6Extremely Heat-Stable Casing",
+    akashic_zeronium_casing: "§6Zeronium Akashic Resonance Matrix Casings",
+    glitched_entropy_casing: "§6Glitched Entropy Casing",
+    supercooled_reactor_core: "§bSupercooled §6Reactor Core",
+    quantum_stable_fusion_casing: "§cQuantum Stable fusion casing PW1",
+    quasi_stable_fusion_casing: "§eQuasi Stable fusion casing PW2",
+    volatile_plasma_chamber: "§6Volatile Plasma Chamber",
+    quantum_stabilized_electrodes: "§bQuantum-Stabilized Electrodes",
+    true_phoenix_infused_casing: "§6True Phoenix-Infused Casing",
+    //  quantum_stabilization_core: "§6Quantum Stabilization Core",
+    // singularity_stabilized_coolant_system: "§6Singularity-Stabilized Coolant System",
+    // advanced_heat_regulator_modules: "§6Advanced Heat Regulator Modules",
+    heat_dissipating_coils: "§6Heat-Dissipating Coils",
+    // high_pressure_quantum_forge_core: "§6High-Pressure Quantum Forge Core",
+    strongest_rhodium_plated_machne_casing: "§eStrongest Rhodium Plated Casing",
+    reliable_naquadah_alloy_machine_casing: "§eReliable Naquadah Alloy Casing",
+    stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
+    entropy_logic_casing: "§cEntropy Logic Casing PW3",
+    glitched_fusion_casing: "§cEntropy Fusion Casing",
+    fissile_heat_safe_casing: "§bFissile Based Heat Safe Casing",
+    fissile_reaction_safe_casing: "§bFissile Reaction Safe Casing",
+    fission_cooling_casing: "§bFission Cooling Casing",
+    fissile_safe_gearbox: "§bFissile Safe Gearbox",
 
-          // 🌌 Voidglass & Finality Constructs
-       //   voidglass_cocoon_shell: "§5Voidglass Cocoon Shell",
-       //   fractured_core_prism: "§dFractured Core Prism",
-        //  entropy_containment_plating: "§5Entropy Containment Plating",
-        //  dimensional_anchor_node: "§5Dimensional Anchor Node",
-        //  final_seal_node: "§dFinal Seal Node",
-  
-          // 🧠 Panoptic Engine Blocks
-          //panoptic_frame: "§fPanoptic Frame",
-        //  panoptic_lens_matrix: "§fLens Matrix Block",
-         // voidcore_actuator: "§dVoidcore Actuator",
-         // astral_projection_matrix: "§5Astral Projection Matrix",
-         // eidolon_stabilization_field: "§dEidolon Stabilization Field",
-         // high_temperature_fission_casing: "High Temperature Fission Casing",
-  
-          // 🔥 Phoenix Infuser Components
-          phoenix_heart_casing: "§cPhoenix Heart Casing",
-          blazing_core_stabilizer: "§cBlazing Core Stabilizer",
-          ashglass_viewing_panel: "§6Ashglass Viewing Panel",
-          super_stable_fusion_casing: "§cPhoenix Infusion Casing",
-          phoenix_gaze_panel: "§cPhoenix Gaze Panel",
-          controlled_ruin_lens: "§cControlled Ruin Lens",
-          phoenix_pyre_helix: "§cPhoenix Pyre Helix",
-          phoenix_ignition_matrix: "§cPhoenix Ignition Matrix",
-          entropy_well_coil: "§cEntropy Well Coil",
-          base_fission_casing: "Graphene Based Fission Rods",
-          green_fission_casing: "§cBerrylium Fission Rods"
+    // 🌌 Voidglass & Finality Constructs
+    //   voidglass_cocoon_shell: "§5Voidglass Cocoon Shell",
+    //   fractured_core_prism: "§dFractured Core Prism",
+    //  entropy_containment_plating: "§5Entropy Containment Plating",
+    //  dimensional_anchor_node: "§5Dimensional Anchor Node",
+    //  final_seal_node: "§dFinal Seal Node",
 
-      };
+    // 🧠 Panoptic Engine Blocks
+    // panoptic_frame: "§fPanoptic Frame",
+    //  panoptic_lens_matrix: "§fLens Matrix Block",
+    // voidcore_actuator: "§dVoidcore Actuator",
+    // astral_projection_matrix: "§5Astral Projection Matrix",
+    // eidolon_stabilization_field: "§dEidolon Stabilization Field",
+    // high_temperature_fission_casing: "High Temperature Fission Casing",
 
-    for (const key in dispNames) {
-        MetalCasings(key, dispNames[key]);
-    }
+    // 🔥 Phoenix Infuser Components
+    phoenix_heart_casing: "§cPhoenix Heart Casing",
+    blazing_core_stabilizer: "§cBlazing Core Stabilizer",
+    ashglass_viewing_panel: "§6Ashglass Viewing Panel",
+    super_stable_fusion_casing: "§cPhoenix Infusion Casing",
+    phoenix_gaze_panel: "§cPhoenix Gaze Panel",
+    controlled_ruin_lens: "§cControlled Ruin Lens",
+    phoenix_pyre_helix: "§cPhoenix Pyre Helix",
+    phoenix_ignition_matrix: "§cPhoenix Ignition Matrix",
+    entropy_well_coil: "§cEntropy Well Coil",
+    base_fission_casing: "Graphene Based Fission Rods",
+    green_fission_casing: "§cBerrylium Fission Rods",
+  };
 
-    phoenixvine.create('true_heat_stable_coil_block', 'gtceu:coil')
+  for (const key in dispNames) {
+    MetalCasings(key, dispNames[key]);
+  }
+
+  phoenixvine
+    .create("true_heat_stable_coil_block", "gtceu:coil")
     .temperature(200000)
     .level(30)
     .energyDiscount(30)
     .tier(12)
-    .coilMaterial(() => GTMaterials.get('phoenix_enriched_tritanium'))
+    .coilMaterial(() => GTMaterials.get("phoenix_enriched_tritanium"))
     .hardness(5)
     .requiresTool(true)
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
-    .soundType('metal')
-    phoenixvine.create('conductive_honey_coil', 'gtceu:active')
-    .bloom('gtceu:block/conductive_honey_coil_bloom') 
+    .soundType("metal");
+  phoenixvine
+    .create("conductive_honey_coil", "gtceu:active")
+    .bloom("gtceu:block/conductive_honey_coil_bloom")
     // The bloom texture should be 'gtceu:block/casings/fusion/superconducting_coil_bloom'
-    .displayName('Conductive Honey Coil')
-    .soundType('metal')
-    .resistance(6).hardness(5)
+    .displayName("Conductive Honey Coil")
+    .soundType("metal")
+    .resistance(6)
+    .hardness(5)
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
-    .requiresTool(true)
+    .requiresTool(true);
 
+  phoenixvine
+    .create("infinity_coil_block", "gtceu:coil")
+    .temperature(20000)
+    .level(30)
+    .energyDiscount(30)
+    .tier(12)
+    .coilMaterial(() => GTMaterials.get("infinity"))
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .tagBlock("forge:mineable/wrench")
+    .soundType("metal");
 
-    phoenixvine.create('infinity_coil_block', 'gtceu:coil')
+  phoenixvine
+    .create("entropic_coil_block", "gtceu:coil")
     .temperature(20000)
     .level(30)
     .energyDiscount(30)
     .tier(12)
-    .coilMaterial(() => GTMaterials.get('infinity'))
+    .coilMaterial(() => GTMaterials.get("corrupted_hyperalloy"))
     .hardness(5)
     .requiresTool(true)
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
-    .soundType('metal')
-    
-    phoenixvine.create('entropic_coil_block', 'gtceu:coil')
+    .soundType("metal");
+  phoenixvine
+    .create("true_gravi_stable_coil_block", "gtceu:coil")
     .temperature(20000)
     .level(30)
     .energyDiscount(30)
     .tier(12)
-    .coilMaterial(() => GTMaterials.get('corrupted_hyperalloy'))
+    .coilMaterial(() => GTMaterials.get("phoenix_enriched_neutronium"))
     .hardness(5)
     .requiresTool(true)
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
-    .soundType('metal')
-    phoenixvine.create('true_gravi_stable_coil_block', 'gtceu:coil')
-    .temperature(20000)
-    .level(30)
-    .energyDiscount(30)
-    .tier(12)
-    .coilMaterial(() => GTMaterials.get('phoenix_enriched_neutronium'))
-    .hardness(5)
-    .requiresTool(true)
-    .tagBlock("mineable/pickaxe")
-    .tagBlock("forge:mineable/wrench")
-    .soundType('metal')
-    phoenixvine.create('akashic_coil_block', 'gtceu:coil')
+    .soundType("metal");
+  phoenixvine
+    .create("akashic_coil_block", "gtceu:coil")
     .temperature(20000)
     .level(200)
     .energyDiscount(30)
     .tier(12)
-    .coilMaterial(() => GTMaterials.get('akashic_chrono_metal'))
+    .coilMaterial(() => GTMaterials.get("akashic_chrono_metal"))
     .hardness(5)
     .requiresTool(true)
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
-    .soundType('metal')
-    phoenixvine.create('highly_conductive_fission_casing')
+    .soundType("metal");
+  phoenixvine
+    .create("highly_conductive_fission_casing")
     .hardness(5)
     .requiresTool(true)
     .tagBlock("mineable/pickaxe")
     .tagBlock("forge:mineable/wrench")
-    .soundType('metal')
-
-
+    .soundType("metal");
 });
-const $ParallelHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.ParallelHatchPartMachine')
-const $LaserHatchPartMachine = Java.loadClass('com.gregtechceu.gtceu.common.machine.multiblock.part.LaserHatchPartMachine')
+const $ParallelHatchPartMachine = Java.loadClass(
+  "com.gregtechceu.gtceu.common.machine.multiblock.part.ParallelHatchPartMachine",
+);
+const $LaserHatchPartMachine = Java.loadClass(
+  "com.gregtechceu.gtceu.common.machine.multiblock.part.LaserHatchPartMachine",
+);
 
 // Parallel Hatches
-GTCEuStartupEvents.registry('gtceu:machine', event => {
-    event.create("uhv_parallel_hatch", "custom")
-        .machine((holder, tier) => {
-            return new $ParallelHatchPartMachine(holder, tier);
-        })
-        .tiers(GTValues.UHV)
-        .definition((tier, builder) =>
-            builder
-                .rotationState(RotationState.ALL)
-                .abilities(PartAbility.PARALLEL_HATCH)
-                .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk9"))
-        )
-    event.create("uev_parallel_hatch", "custom")
-        .machine((holder, tier) => {
-            return new $ParallelHatchPartMachine(holder, tier);
-        })
-        .tiers(GTValues.UEV)
-        .definition((tier, builder) =>
-            builder
-                .rotationState(RotationState.ALL)
-                .abilities(PartAbility.PARALLEL_HATCH)
-                .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk12"))
-        )
-    event.create("uiv_parallel_hatch", "custom")
-    .machine((holder, tier) => {
-        return new $ParallelHatchPartMachine(holder, tier);
-    })
+GTCEuStartupEvents.registry("gtceu:machine", (event) => {
+  event
+    .create("uhv_parallel_hatch", "custom")
+    .machine((holder, tier) => new $ParallelHatchPartMachine(holder, tier))
+    .tiers(GTValues.UHV)
+    .definition((tier, builder) =>
+      builder
+        .rotationState(RotationState.ALL)
+        .abilities(PartAbility.PARALLEL_HATCH)
+        .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk9")),
+    );
+  event
+    .create("uev_parallel_hatch", "custom")
+    .machine((holder, tier) => new $ParallelHatchPartMachine(holder, tier))
+    .tiers(GTValues.UEV)
+    .definition((tier, builder) =>
+      builder
+        .rotationState(RotationState.ALL)
+        .abilities(PartAbility.PARALLEL_HATCH)
+        .workableTieredHullModel(
+          GTCEu.id("block/machines/parallel_hatch_mk12"),
+        ),
+    );
+  event
+    .create("uiv_parallel_hatch", "custom")
+    .machine((holder, tier) => new $ParallelHatchPartMachine(holder, tier))
     .tiers(GTValues.UIV)
     .definition((tier, builder) =>
-        builder
-            .rotationState(RotationState.ALL)
-            .abilities(PartAbility.PARALLEL_HATCH)
-            .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk13"))
-    )
-    event.create("uxv_parallel_hatch", "custom")
-        .machine((holder, tier) => {
-            return new $ParallelHatchPartMachine(holder, tier);
-        })
-        .tiers(GTValues.UXV)
-        .definition((tier, builder) =>
-            builder
-                .rotationState(RotationState.ALL)
-                .abilities(PartAbility.PARALLEL_HATCH)
-                .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk14"))
-        )
-    event.create("opv_parallel_hatch", "custom")
-    .machine((holder, tier) => {
-        return new $ParallelHatchPartMachine(holder, tier);
-    })
+      builder
+        .rotationState(RotationState.ALL)
+        .abilities(PartAbility.PARALLEL_HATCH)
+        .workableTieredHullModel(
+          GTCEu.id("block/machines/parallel_hatch_mk13"),
+        ),
+    );
+  event
+    .create("uxv_parallel_hatch", "custom")
+    .machine((holder, tier) => new $ParallelHatchPartMachine(holder, tier))
+    .tiers(GTValues.UXV)
+    .definition((tier, builder) =>
+      builder
+        .rotationState(RotationState.ALL)
+        .abilities(PartAbility.PARALLEL_HATCH)
+        .workableTieredHullModel(
+          GTCEu.id("block/machines/parallel_hatch_mk14"),
+        ),
+    );
+  event
+    .create("opv_parallel_hatch", "custom")
+    .machine((holder, tier) => new $ParallelHatchPartMachine(holder, tier))
     .tiers(GTValues.OpV)
     .definition((tier, builder) =>
-        builder
-            .rotationState(RotationState.ALL)
-            .abilities(PartAbility.PARALLEL_HATCH)
-            .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk15"))
-    )
-    event.create("max_parallel_hatch", "custom")
-    .machine((holder, tier) => {
-        return new $ParallelHatchPartMachine(holder, tier);
-    })
+      builder
+        .rotationState(RotationState.ALL)
+        .abilities(PartAbility.PARALLEL_HATCH)
+        .workableTieredHullModel(
+          GTCEu.id("block/machines/parallel_hatch_mk15"),
+        ),
+    );
+  event
+    .create("max_parallel_hatch", "custom")
+    .machine((holder, tier) => new $ParallelHatchPartMachine(holder, tier))
     .tiers(GTValues.MAX)
     .definition((tier, builder) =>
-        builder
-            .rotationState(RotationState.ALL)
-            .abilities(PartAbility.PARALLEL_HATCH)
-            .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk16"))
-    )
-})
+      builder
+        .rotationState(RotationState.ALL)
+        .abilities(PartAbility.PARALLEL_HATCH)
+        .workableTieredHullModel(
+          GTCEu.id("block/machines/parallel_hatch_mk16"),
+        ),
+    );
+});

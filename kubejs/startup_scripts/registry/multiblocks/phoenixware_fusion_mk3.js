@@ -1,64 +1,224 @@
-
-GTCEuStartupEvents.registry('gtceu:recipe_type', phoenixvine => {
-    phoenixvine.create('phoenixware_fusion_mk3')
-        .category('multiblock')
-        .setEUIO('in') 
-        .setMaxIOSize(0, 0, 2, 1)
-        .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
-        .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
-        .setSound(GTSoundEntries.ARC);
+GTCEuStartupEvents.registry("gtceu:recipe_type", (phoenixvine) => {
+  phoenixvine
+    .create("phoenixware_fusion_mk3")
+    .category("multiblock")
+    .setEUIO("in")
+    .setMaxIOSize(0, 0, 2, 1)
+    .setSlotOverlay(false, false, GuiTextures.SOLIDIFIER_OVERLAY)
+    .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
+    .setSound(GTSoundEntries.ARC);
 });
- 
-GTCEuStartupEvents.registry('gtceu:machine', phoenixvine => {
-    phoenixvine.create('phoenixware_fusion_mk3', 'multiblock').machine((holder) => new $FusionReactorMachine(holder, GTValues.UXV))
-        .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes('phoenixware_fusion_mk3')
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
-        .appearanceBlock(() => Block.getBlock("kubejs:reliable_naquadah_alloy_machine_casing"))
-        .pattern(definition => FactoryBlockPattern.start()  
-        .aisle("BBBBBBBBCCDDDCCBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBCCDDDCCBBBBBBBB")
-        .aisle("BBBBBBCCCCCCCCCCCBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBCCCCCCCCCCCBBBBBB")
-        .aisle("BBBBCCCCCCCCCCCCCCCBBBB", "BBBBHHAAAAAAAAAAAHHBBBB", "BBBBHHAAAAAAAAAAAHHBBBB", "BBBBHHAAAAAAAAAAAHHBBBB", "BBBBCCCCCCCCCCCCCCCBBBB")
-        .aisle("BBBCCCCCCCCCCCCCCCCCBBB", "BBBHAAAAAAAAAAAAAAAHBBB", "BBBHAAAAAAAAAAAAAAAHBBB", "BBBHAAAAAAAAAAAAAAAHBBB", "BBBCCCCCCCCCCCCCCCCCBBB")
-        .aisle("BBCCCCCCCCCCCCCCCCCCCBB", "BBHAAAAAAAAAAAAAAAAAHBB", "BBHAAAAAAAIIIAAAAAAAHBB", "BBHAAAAAAAAAAAAAAAAAHBB", "BBCCCCCCCCCCCCCCCCCCCBB")
-        .aisle("BBCCCCCCCCJJJCCCCCCCCBB", "BBHAAAAAAAIIIAAAAAAAHBB", "BBHAAAAAIIAAAIIAAAAAHBB", "BBHAAAAAAAIIIAAAAAAAHBB", "BBCCCCCCCCJJJCCCCCCCCBB")
-        .aisle("BCCCCCCCCJJFJJCCCCCCCCB", "BGAAAAAAIIAAAIIAAAAAAGB", "BGAAAAAIAAIIIAAIAAAAAGB", "BGAAAAAAIIAAAIIAAAAAAGB", "BCCCCCCCCJJFJJCCCCCCCCB")
-        .aisle("BCCCCCCCJJFKFJJCCCCCCCB", "BGAAAAAIAAAAAAAIAAAAAGB", "BGAAAAILIIAMAIILIAAAAGB", "BGAAAAAIAAAAAAAIAAAAAGB", "BCCCCCCCJJFKFJJCCCCCCCB")
-        .aisle("CCCCCCCJJFKKKFJJCCCCCCC", "EAAAAAIAAAAAAAAAIAAAAAE", "EAAAAIAIMAAMAAMIAIAAAAE", "EAAAAAIAAAAAAAAAIAAAAAE", "CCCCCCCJJFKKKFJJCCCCCCC")
-        .aisle("CCCCCCJJFKKKKKFJJCCCCCC", "EAAAAAIAAAAAAAAAIAAAAAE", "EAAAAIAIAMAMAMAIAIAAAAE", "EAAAAAIAAAAAAAAAIAAAAAE", "CCCCCCJJFKKKKKFJJCCCCCC")
-        .aisle("DCCCCJJFKKKDKKKFJJCCCCD", "FAAAAIAAAAAAAAAAAIAAAAF", "FAAAIAIAAAMMMAAAIAIAAAF", "FAAAAIAAAAAAAAAAAIAAAAF", "DCCCCJJFKKKDKKKFJJCCCCD")
-        .aisle("DCCCCJFKKKDDDKKKFJCCCCD", "FAAAAIAAAAAMAAAAAIAAAAF", "FAAAIAIMMMMPMMMMIAIAAAF", "FAAAAIAAAAAMAAAAAIAAAAF", "DCCCCJFKKKDDDKKKFJCCCCD")
-        .aisle("DCCCCJJFKKKDKKKFJJCCCCD", "FAAAAIAAAAAAAAAAAIAAAAF", "FAAAIAIAAAMMMAAAIAIAAAF", "FAAAAIAAAAAAAAAAAIAAAAF", "DCCCCJJFKKKDKKKFJJCCCCD")
-        .aisle("CCCCCCJJFKKKKKFJJCCCCCC", "EAAAAAIAAAAAAAAAIAAAAAE", "EAAAAIAIAMAMAMAIAIAAAAE", "EAAAAAIAAAAAAAAAIAAAAAE", "CCCCCCJJFKKKKKFJJCCCCCC")
-        .aisle("CCCCCCCJJFKKKFJJCCCCCCC", "EAAAAAIAAAAAAAAAIAAAAAE", "EAAAAIAIMAAMAAMIAIAAAAE", "EAAAAAIAAAAAAAAAIAAAAAE", "CCCCCCCJJFKKKFJJCCCCCCC")
-        .aisle("BCCCCCCCJJFKFJJCCCCCCCB", "BGAAAAAIAAAAAAAIAAAAAGB", "BGAAAAILIIAMAIILIAAAAGB", "BGAAAAAIAAAAAAAIAAAAAGB", "BCCCCCCCJJFKFJJCCCCCCCB")
-        .aisle("BCCCCCCCCJJFJJCCCCCCCCB", "BGAAAAAAIIAAAIIAAAAAAGB", "BGAAAAAIAAIIIAAIAAAAAGB", "BGAAAAAAIIAAAIIAAAAAAGB", "BCCCCCCCCJJFJJCCCCCCCCB")
-        .aisle("BBCCCCCCCCJJJCCCCCCCCBB", "BBHAAAAAAAIIIAAAAAAAHBB", "BBHAAAAAIIAAAIIAAAAAHBB", "BBHAAAAAAAIIIAAAAAAAHBB", "BBCCCCCCCCJJJCCCCCCCCBB")
-        .aisle("BBCCCCCCCCCCCCCCCCCCCBB", "BBHAAAAAAAAAAAAAAAAAHBB", "BBHAAAAAAAIIIAAAAAAAHBB", "BBHAAAAAAAAAAAAAAAAAHBB", "BBCCCCCCCCCCCCCCCCCCCBB")
-        .aisle("BBBCCCCCCCCCCCCCCCCCBBB", "BBBHAAAAAAAAAAAAAAAHBBB", "BBBHAAAAAAAAAAAAAAAHBBB", "BBBHAAAAAAAAAAAAAAAHBBB", "BBBCCCCCCCCCCCCCCCCCBBB")
-        .aisle("BBBBCCCCCCCCCCCCCCCBBBB", "BBBBHHAAAAAAAAAAAHHBBBB", "BBBBHHAAAAAAAAAAAHHBBBB", "BBBBHHAAAAAAAAAAAHHBBBB", "BBBBCCCCCCCCCCCCCCCBBBB")
-        .aisle("BBBBBBCCCCCCCCCCCBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBGGAAAAAAAGGBBBBBB", "BBBBBBCCCCCCCCCCCBBBBBB")
-        .aisle("BBBBBBBBCCDDDCCBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBEEFQFEEBBBBBBBB", "BBBBBBBBEEFFFEEBBBBBBBB", "BBBBBBBBCCDDDCCBBBBBBBB")
-           .where("A", Predicates.blocks("minecraft:air"))
-           .where('B', Predicates.any())
-           .where("C", Predicates.blocks("kubejs:reliable_naquadah_alloy_machine_casing"))
-           .where("D", Predicates.blocks("kubejs:entropy_logic_casing"))
-           .where("E", Predicates.blocks("kubejs:glitched_entropy_casing"))
-           .where("F", Predicates.blocks("gtceu:fusion_casing_mk3").setMinGlobalLimited(10)
-           .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-           .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
-           .or(Predicates.autoAbilities(definition.getRecipeTypes())))
-           .where("G", Predicates.blocks("kubejs:entropy_well_coil"))
-           .where("H", Predicates.blocks("kubejs:controlled_ruin_lens"))
-           .where("I", Predicates.blocks("kubejs:glitched_fusion_casing"))
-           .where("J", Predicates.blocks("gtceu:neutronium_frame"))
-           .where("K", Predicates.blocks("gtceu:robust_machine_casing"))
-           .where("L", Predicates.blocks("gtceu:fusion_coil"))
-           .where("M", Predicates.blocks("gtceu:tungsten_steel_frame"))
-           .where("P", Predicates.blocks("kubejs:supercooled_reactor_core"))
-           .where('Q', Predicates.controller(Predicates.blocks(definition.get())))
-        .build()
-)
-.workableCasingModel("gtceu:block/casings/fusion/fusion_casing_mk3", "gtceu:block/multiblock/fusion_reactor")
 
+GTCEuStartupEvents.registry("gtceu:machine", (phoenixvine) => {
+  phoenixvine
+    .create("phoenixware_fusion_mk3", "multiblock")
+    .machine((holder) => new $FusionReactorMachine(holder, GTValues.UXV))
+    .rotationState(RotationState.NON_Y_AXIS)
+    .recipeTypes("phoenixware_fusion_mk3")
+    .recipeModifiers([
+      GTRecipeModifiers.PARALLEL_HATCH,
+      GTRecipeModifiers.OC_NON_PERFECT,
+      GTRecipeModifiers.BATCH_MODE,
+    ])
+    .appearanceBlock(() =>
+      Block.getBlock("kubejs:reliable_naquadah_alloy_machine_casing"),
+    )
+    .pattern((definition) =>
+      FactoryBlockPattern.start()
+        .aisle(
+          "BBBBBBBBCCDDDCCBBBBBBBB",
+          "BBBBBBBBEEFFFEEBBBBBBBB",
+          "BBBBBBBBEEFFFEEBBBBBBBB",
+          "BBBBBBBBEEFFFEEBBBBBBBB",
+          "BBBBBBBBCCDDDCCBBBBBBBB",
+        )
+        .aisle(
+          "BBBBBBCCCCCCCCCCCBBBBBB",
+          "BBBBBBGGAAAAAAAGGBBBBBB",
+          "BBBBBBGGAAAAAAAGGBBBBBB",
+          "BBBBBBGGAAAAAAAGGBBBBBB",
+          "BBBBBBCCCCCCCCCCCBBBBBB",
+        )
+        .aisle(
+          "BBBBCCCCCCCCCCCCCCCBBBB",
+          "BBBBHHAAAAAAAAAAAHHBBBB",
+          "BBBBHHAAAAAAAAAAAHHBBBB",
+          "BBBBHHAAAAAAAAAAAHHBBBB",
+          "BBBBCCCCCCCCCCCCCCCBBBB",
+        )
+        .aisle(
+          "BBBCCCCCCCCCCCCCCCCCBBB",
+          "BBBHAAAAAAAAAAAAAAAHBBB",
+          "BBBHAAAAAAAAAAAAAAAHBBB",
+          "BBBHAAAAAAAAAAAAAAAHBBB",
+          "BBBCCCCCCCCCCCCCCCCCBBB",
+        )
+        .aisle(
+          "BBCCCCCCCCCCCCCCCCCCCBB",
+          "BBHAAAAAAAAAAAAAAAAAHBB",
+          "BBHAAAAAAAIIIAAAAAAAHBB",
+          "BBHAAAAAAAAAAAAAAAAAHBB",
+          "BBCCCCCCCCCCCCCCCCCCCBB",
+        )
+        .aisle(
+          "BBCCCCCCCCJJJCCCCCCCCBB",
+          "BBHAAAAAAAIIIAAAAAAAHBB",
+          "BBHAAAAAIIAAAIIAAAAAHBB",
+          "BBHAAAAAAAIIIAAAAAAAHBB",
+          "BBCCCCCCCCJJJCCCCCCCCBB",
+        )
+        .aisle(
+          "BCCCCCCCCJJFJJCCCCCCCCB",
+          "BGAAAAAAIIAAAIIAAAAAAGB",
+          "BGAAAAAIAAIIIAAIAAAAAGB",
+          "BGAAAAAAIIAAAIIAAAAAAGB",
+          "BCCCCCCCCJJFJJCCCCCCCCB",
+        )
+        .aisle(
+          "BCCCCCCCJJFKFJJCCCCCCCB",
+          "BGAAAAAIAAAAAAAIAAAAAGB",
+          "BGAAAAILIIAMAIILIAAAAGB",
+          "BGAAAAAIAAAAAAAIAAAAAGB",
+          "BCCCCCCCJJFKFJJCCCCCCCB",
+        )
+        .aisle(
+          "CCCCCCCJJFKKKFJJCCCCCCC",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "EAAAAIAIMAAMAAMIAIAAAAE",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "CCCCCCCJJFKKKFJJCCCCCCC",
+        )
+        .aisle(
+          "CCCCCCJJFKKKKKFJJCCCCCC",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "EAAAAIAIAMAMAMAIAIAAAAE",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "CCCCCCJJFKKKKKFJJCCCCCC",
+        )
+        .aisle(
+          "DCCCCJJFKKKDKKKFJJCCCCD",
+          "FAAAAIAAAAAAAAAAAIAAAAF",
+          "FAAAIAIAAAMMMAAAIAIAAAF",
+          "FAAAAIAAAAAAAAAAAIAAAAF",
+          "DCCCCJJFKKKDKKKFJJCCCCD",
+        )
+        .aisle(
+          "DCCCCJFKKKDDDKKKFJCCCCD",
+          "FAAAAIAAAAAMAAAAAIAAAAF",
+          "FAAAIAIMMMMPMMMMIAIAAAF",
+          "FAAAAIAAAAAMAAAAAIAAAAF",
+          "DCCCCJFKKKDDDKKKFJCCCCD",
+        )
+        .aisle(
+          "DCCCCJJFKKKDKKKFJJCCCCD",
+          "FAAAAIAAAAAAAAAAAIAAAAF",
+          "FAAAIAIAAAMMMAAAIAIAAAF",
+          "FAAAAIAAAAAAAAAAAIAAAAF",
+          "DCCCCJJFKKKDKKKFJJCCCCD",
+        )
+        .aisle(
+          "CCCCCCJJFKKKKKFJJCCCCCC",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "EAAAAIAIAMAMAMAIAIAAAAE",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "CCCCCCJJFKKKKKFJJCCCCCC",
+        )
+        .aisle(
+          "CCCCCCCJJFKKKFJJCCCCCCC",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "EAAAAIAIMAAMAAMIAIAAAAE",
+          "EAAAAAIAAAAAAAAAIAAAAAE",
+          "CCCCCCCJJFKKKFJJCCCCCCC",
+        )
+        .aisle(
+          "BCCCCCCCJJFKFJJCCCCCCCB",
+          "BGAAAAAIAAAAAAAIAAAAAGB",
+          "BGAAAAILIIAMAIILIAAAAGB",
+          "BGAAAAAIAAAAAAAIAAAAAGB",
+          "BCCCCCCCJJFKFJJCCCCCCCB",
+        )
+        .aisle(
+          "BCCCCCCCCJJFJJCCCCCCCCB",
+          "BGAAAAAAIIAAAIIAAAAAAGB",
+          "BGAAAAAIAAIIIAAIAAAAAGB",
+          "BGAAAAAAIIAAAIIAAAAAAGB",
+          "BCCCCCCCCJJFJJCCCCCCCCB",
+        )
+        .aisle(
+          "BBCCCCCCCCJJJCCCCCCCCBB",
+          "BBHAAAAAAAIIIAAAAAAAHBB",
+          "BBHAAAAAIIAAAIIAAAAAHBB",
+          "BBHAAAAAAAIIIAAAAAAAHBB",
+          "BBCCCCCCCCJJJCCCCCCCCBB",
+        )
+        .aisle(
+          "BBCCCCCCCCCCCCCCCCCCCBB",
+          "BBHAAAAAAAAAAAAAAAAAHBB",
+          "BBHAAAAAAAIIIAAAAAAAHBB",
+          "BBHAAAAAAAAAAAAAAAAAHBB",
+          "BBCCCCCCCCCCCCCCCCCCCBB",
+        )
+        .aisle(
+          "BBBCCCCCCCCCCCCCCCCCBBB",
+          "BBBHAAAAAAAAAAAAAAAHBBB",
+          "BBBHAAAAAAAAAAAAAAAHBBB",
+          "BBBHAAAAAAAAAAAAAAAHBBB",
+          "BBBCCCCCCCCCCCCCCCCCBBB",
+        )
+        .aisle(
+          "BBBBCCCCCCCCCCCCCCCBBBB",
+          "BBBBHHAAAAAAAAAAAHHBBBB",
+          "BBBBHHAAAAAAAAAAAHHBBBB",
+          "BBBBHHAAAAAAAAAAAHHBBBB",
+          "BBBBCCCCCCCCCCCCCCCBBBB",
+        )
+        .aisle(
+          "BBBBBBCCCCCCCCCCCBBBBBB",
+          "BBBBBBGGAAAAAAAGGBBBBBB",
+          "BBBBBBGGAAAAAAAGGBBBBBB",
+          "BBBBBBGGAAAAAAAGGBBBBBB",
+          "BBBBBBCCCCCCCCCCCBBBBBB",
+        )
+        .aisle(
+          "BBBBBBBBCCDDDCCBBBBBBBB",
+          "BBBBBBBBEEFFFEEBBBBBBBB",
+          "BBBBBBBBEEFQFEEBBBBBBBB",
+          "BBBBBBBBEEFFFEEBBBBBBBB",
+          "BBBBBBBBCCDDDCCBBBBBBBB",
+        )
+        .where("A", Predicates.blocks("minecraft:air"))
+        .where("B", Predicates.any())
+        .where(
+          "C",
+          Predicates.blocks("kubejs:reliable_naquadah_alloy_machine_casing"),
+        )
+        .where("D", Predicates.blocks("kubejs:entropy_logic_casing"))
+        .where("E", Predicates.blocks("kubejs:glitched_entropy_casing"))
+        .where(
+          "F",
+          Predicates.blocks("gtceu:fusion_casing_mk3")
+            .setMinGlobalLimited(10)
+            .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
+            .or(
+              Predicates.abilities(
+                PartAbility.PARALLEL_HATCH,
+              ).setMaxGlobalLimited(1),
+            )
+            .or(Predicates.autoAbilities(definition.getRecipeTypes())),
+        )
+        .where("G", Predicates.blocks("kubejs:entropy_well_coil"))
+        .where("H", Predicates.blocks("kubejs:controlled_ruin_lens"))
+        .where("I", Predicates.blocks("kubejs:glitched_fusion_casing"))
+        .where("J", Predicates.blocks("gtceu:neutronium_frame"))
+        .where("K", Predicates.blocks("gtceu:robust_machine_casing"))
+        .where("L", Predicates.blocks("gtceu:fusion_coil"))
+        .where("M", Predicates.blocks("gtceu:tungsten_steel_frame"))
+        .where("P", Predicates.blocks("kubejs:supercooled_reactor_core"))
+        .where("Q", Predicates.controller(Predicates.blocks(definition.get())))
+        .build(),
+    )
+    .workableCasingModel(
+      "gtceu:block/casings/fusion/fusion_casing_mk3",
+      "gtceu:block/multiblock/fusion_reactor",
+    );
 }); // .or(Predicates.blocks(INPUT_ENERGY_HATCH[EV]))
