@@ -447,6 +447,13 @@ client:
     # Default: true
     coloredWireOutline: true
 
+  tankItemFluidPreview:
+    # Set true to render the including fluid icons to GT Drums
+    drum: false
+
+    # Set true to render the including fluid icons to Super (Quantum) Tanks
+    quantumTank: false
+
 # Config options for Tools and Armor
 tools:
   # Random chance for electric tools to take actual damage
