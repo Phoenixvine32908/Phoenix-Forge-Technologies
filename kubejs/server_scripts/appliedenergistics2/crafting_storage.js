@@ -1,6 +1,6 @@
 ServerEvents.recipes((event) => {
   const greg = event.recipes.gtceu;
-  let craftystorage = (componentSize, energyExponent) => {
+  const craftystorage = (componentSize, energyExponent) => {
     event.remove({ output: `ae2:${componentSize}k_crafting_storage` });
     greg
       .canner(`gtceu:${componentSize}k_crafting_storage`)

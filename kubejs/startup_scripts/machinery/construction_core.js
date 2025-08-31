@@ -4,7 +4,10 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
     .rotationState(RotationState.NON_Y_AXIS)
     .recipeType("construction_core")
     .appearanceBlock(GTBlocks.MACHINE_CASING_ULV)
-    .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT, GTRecipeModifiers.BATCH_MODE])
+    .recipeModifiers([
+      GTRecipeModifiers.OC_NON_PERFECT,
+      GTRecipeModifiers.BATCH_MODE,
+    ])
     .pattern((definition) =>
       FactoryBlockPattern.start()
         .aisle("BBB", "GGG", "BBB")
@@ -17,12 +20,12 @@ GTCEuStartupEvents.registry("gtceu:machine", (event) => {
           "B",
           Predicates.blocks("gtceu:lv_machine_casing")
             .setMinGlobalLimited(5)
-            .or(Predicates.autoAbilities(definition.getRecipeTypes()))
+            .or(Predicates.autoAbilities(definition.getRecipeTypes())),
         )
-        .build()
+        .build(),
     )
     .workableCasingModel(
       "gtceu:block/casings/voltage/lv/side",
-      "gtceu:block/multiblock/implosion_compressor"
+      "gtceu:block/multiblock/implosion_compressor",
     );
 });

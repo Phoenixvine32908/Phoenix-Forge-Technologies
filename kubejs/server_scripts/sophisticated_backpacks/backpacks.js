@@ -7,8 +7,6 @@ ServerEvents.recipes((event) => {
   event.remove({ id: "sophisticatedbackpacks:diamond_backpack" });
   event.remove({ id: "sophisticatedbackpacks:netherite_backpack" });
 
-  
-
   event.custom({
     type: "sophisticatedbackpacks:backpack_upgrade",
     conditions: [

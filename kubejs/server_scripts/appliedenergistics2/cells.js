@@ -1,12 +1,12 @@
 ServerEvents.recipes((event) => {
   const greg = event.recipes.gtceu;
-  let cells = (componentSize, energyExponent) => {
+  const cells = (componentSize, energyExponent) => {
     event.remove({ output: `ae2:item_storage_cell_${componentSize}` });
     greg
       .canner(`gtceu:${componentSize}_storage_cell`)
       .itemInputs(
         "ae2:item_cell_housing",
-        `ae2:cell_component_${componentSize}`
+        `ae2:cell_component_${componentSize}`,
       )
       .itemOutputs(`ae2:item_storage_cell_${componentSize}`)
       .duration(100)
@@ -16,7 +16,7 @@ ServerEvents.recipes((event) => {
       .canner(`gtceu:${componentSize}_fluid_storage_cell`)
       .itemInputs(
         "ae2:fluid_cell_housing",
-        `ae2:cell_component_${componentSize}`
+        `ae2:cell_component_${componentSize}`,
       )
       .itemOutputs(`ae2:fluid_storage_cell_${componentSize}`)
       .duration(100)
@@ -37,7 +37,7 @@ ServerEvents.recipes((event) => {
     .duration(100)
     .EUt(4);
 
-  //ME Storage Housing
+  // ME Storage Housing
   event.remove({ output: "ae2:item_cell_housing" });
   event.shaped("ae2:item_cell_housing", ["GPG", "WCW", "PPP"], {
     G: "ae2:quartz_glass",
@@ -46,7 +46,7 @@ ServerEvents.recipes((event) => {
     C: "#gtceu:circuits/lv",
   });
 
-  //Fluid Storage Housing
+  // Fluid Storage Housing
   event.remove({ output: "ae2:fluid_cell_housing" });
   event.shaped("2x ae2:fluid_cell_housing", ["GPG", "WCW", "PPP"], {
     G: "ae2:quartz_glass",

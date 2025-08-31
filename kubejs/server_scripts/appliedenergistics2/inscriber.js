@@ -35,5 +35,4 @@ ServerEvents.recipes((event) => {
     .itemOutputs("ae2:printed_calculation_processor")
     .duration(200)
     .EUt(30);
-;
 });

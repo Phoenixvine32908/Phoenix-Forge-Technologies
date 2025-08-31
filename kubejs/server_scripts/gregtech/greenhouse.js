@@ -46,7 +46,7 @@ ServerEvents.recipes((event) => {
     ["minecraft:rose_bush", "minecraft:rose_bush", 8],
     ["minecraft:peony", "minecraft:peony", 8],
   ];
-  
+
   trees.forEach((woodType) => {
     greg
       .greenhouse(woodType[0])
@@ -65,7 +65,7 @@ ServerEvents.recipes((event) => {
       .itemOutputs(
         `64x ${woodType[1]}`,
         `64x ${woodType[1]}`,
-        `12x ${woodType[0]}`
+        `12x ${woodType[0]}`,
       )
       .duration(900)
       .EUt(40)
@@ -82,7 +82,7 @@ ServerEvents.recipes((event) => {
       .EUt(32)
       .circuit(1);
     greg
-      .greenhouse(seedType[0] + "_fertilizer")
+      .greenhouse(`${seedType[0]}_fertilizer`)
       .notConsumable(seedType[0])
       .itemInputs("4x gtceu:fertilizer")
       .inputFluids("water 1000")
@@ -98,7 +98,7 @@ ServerEvents.recipes((event) => {
     .itemOutputs(
       "32x gtceu:rubber_log",
       "3x gtceu:rubber_sapling",
-      "16x gtceu:sticky_resin"
+      "16x gtceu:sticky_resin",
     )
     .duration(800)
     .EUt(32)
@@ -111,49 +111,41 @@ ServerEvents.recipes((event) => {
     .itemOutputs(
       "32x gtceu:rubber_log",
       "6x gtceu:rubber_sapling",
-      "8x gtceu:sticky_resin"
+      "8x gtceu:sticky_resin",
     )
     .duration(900)
     .EUt(32)
     .circuit(2);
-    greg
+  greg
     .greenhouse("peanut")
     .notConsumable("pamhc2crops:peanutseeditem")
     .inputFluids("water 1000")
-    .itemOutputs(
-      "4x pamhc2crops:peanutitem",
-    )
+    .itemOutputs("4x pamhc2crops:peanutitem")
     .duration(600)
     .EUt(32)
     .circuit(1);
-    greg
+  greg
     .greenhouse("peanut_fertiliser")
     .notConsumable("pamhc2crops:peanutseeditem")
     .itemInputs("4x gtceu:fertilizer")
     .inputFluids("water 1000")
-    .itemOutputs(
-      "8x pamhc2crops:peanutitem",
-    )
+    .itemOutputs("8x pamhc2crops:peanutitem")
     .duration(900)
     .EUt(32)
     .circuit(2);
-    greg
+  greg
     .greenhouse("waterchestnut")
     .notConsumable("pamhc2crops:waterchestnutseeditem")
     .inputFluids("water 1000")
-    .itemOutputs(
-      "4x pamhc2crops:waterchestnutitem",
-    )
+    .itemOutputs("4x pamhc2crops:waterchestnutitem")
     .duration(600)
     .EUt(32)
     .circuit(1);
-    greg
+  greg
     .greenhouse("waterchestnut_fertiliser")
     .notConsumable("pamhc2crops:waterchestnutseeditem")
     .inputFluids("water 1000")
-    .itemOutputs(
-      "8x pamhc2crops:waterchestnutitem",
-    )
+    .itemOutputs("8x pamhc2crops:waterchestnutitem")
     .duration(900)
     .EUt(32)
     .circuit(2);

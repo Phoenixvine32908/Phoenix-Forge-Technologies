@@ -6,7 +6,7 @@ ServerEvents.recipes((event) => {
     ["ev", "titanium", 4],
   ];
   patpros.forEach((tier) => {
-    let interProv = (materialType, blockType) => {
+    const interProv = (materialType, blockType) => {
       event.shaped(`${tier[2]}x ${blockType}`, ["PGP", "ACF", "PGP"], {
         P: `#forge:plates/${tier[1]}`,
         G: materialType,
