@@ -3,7 +3,7 @@ This pack is very much in its alpha stage. If you're interested in contributing,
 
 https://github.com/Phoenixvine32908/Phoenix-Forge-Technologies
 
-Discord: https://discord.gg/S7nBcWBpCK
+Discord: https://discord.gg/KBNst7hZ4C
 
 I have gotten permission from many wonderful people to use multiblock designs and other assets and for that, I do need to give credit.
 
