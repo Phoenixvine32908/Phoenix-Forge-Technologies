@@ -122,6 +122,7 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
             "kubejs:block/fissile_reaction_safe_casing",
             "gtceu:block/multiblock/fusion_reactor"
         )
+        // Get to breeding
     phoenixvine.create("high_performace_breeder_reactor", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
         .recipeTypes("high_performace_breeder_reactor")
