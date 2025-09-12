@@ -1,5 +1,5 @@
 /*
-ServerEvents.recipes(allthemods => { 
+ServerEvents.recipes(allthemods => {
 
     allthemods.forEachRecipe({ type: 'gtceu:pyrolyse_oven' }, rawRecipe => {
 
@@ -13,12 +13,12 @@ allthemods.custom(unmodifiedRecipe)
         let voltageMult = 50;
         let amountMult = 1000;
 
-    
+
         let oldDuration = recipe.duration;
         let newDuration = oldDuration * durationMult;
         recipe.duration = newDuration;
 
-  
+
         if (recipe.inputs.item) {
             recipe.inputs.item.forEach((itemInput) => {
                 if (itemInput.content.type == 'gtceu:sized') {
@@ -26,7 +26,7 @@ allthemods.custom(unmodifiedRecipe)
                     let newCount = oldCount * amountMult;
                     itemInput.content.count = newCount;
                 } else if (itemInput.content.type == 'gtceu:circuit') {
-                   
+
                     let oldCircuit = parseInt(itemInput.content.configuration);
                     let newCircuit = (oldCircuit + 1) % 33;
                     itemInput.content.configuration = newCircuit;
@@ -36,13 +36,13 @@ allthemods.custom(unmodifiedRecipe)
             });
         }
 
-       
+
         if (recipe.inputs.fluid) {
             recipe.inputs.fluid.forEach((fluidInput) => {
-              
+
                 let oldAmount = parseInt(fluidInput.content.amount);
-                let newAmount = oldAmount * amountMult; 
-                fluidInput.content.amount = newAmount; 
+                let newAmount = oldAmount * amountMult;
+                fluidInput.content.amount = newAmount;
             });
         }
 
@@ -50,26 +50,26 @@ allthemods.custom(unmodifiedRecipe)
             recipe.outputs.item.forEach((itemOutput) => {
                 if (itemOutput.content.type == 'gtceu:sized') {
                     let oldCount = parseInt(itemOutput.content.count);
-                    let newCount = oldCount * amountMult; 
+                    let newCount = oldCount * amountMult;
                     itemOutput.content.count = newCount;
                 } else {
-                  
+
                     console.log("[KubeJS Recipe Modify] Unhandled output item type: " + itemOutput.content.type);
                 }
             });
         }
 
-      
+
         if (recipe.outputs.fluid) {
             recipe.outputs.fluid.forEach((fluidOutput) => {
 
                 let oldAmount = parseInt(fluidOutput.content.amount);
-                let newAmount = oldAmount * amountMult; 
-                fluidOutput.content.amount = newAmount; 
+                let newAmount = oldAmount * amountMult;
+                fluidOutput.content.amount = newAmount;
             });
         }
 
-       
+
         if (recipe.tickInputs.eu) {
             recipe.tickInputs.eu.forEach((euInput) => {
                 let oldVoltage = euInput.content;

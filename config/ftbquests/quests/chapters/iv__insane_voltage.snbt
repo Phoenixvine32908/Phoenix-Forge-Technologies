@@ -1228,6 +1228,8 @@
 				"&9Leggings:&r Provides the speed boost which the Nano leggings did not."
 				""
 				"&9Boots:&r Provides &dStep Assist&r, nullifies fall damage, and increases jump height!"
+				""
+				"&9Full Set:&r Provides &dSpace Immunity&r: allowing you to breathe easy!"
 			]
 			icon: {
 				Count: 1

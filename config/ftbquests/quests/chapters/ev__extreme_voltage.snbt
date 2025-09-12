@@ -850,9 +850,9 @@
 				"7FA0ACB7F161F378"
 			]
 			description: [
-				"You've probably noticed the &9\"chance per tier\"&r when hovering over the bonus outputs in &2EMI&r Each overclock above the required tier will add that % bonus to the chanced output!"
+				"You've probably noticed the &9\"chance per tier\"&r when hovering over the bonus outputs in &2EMI&r in previous versions."
 				""
-				"This means using an &3EV Macerator&r will yield &6more Byproducts&r!"
+				"However, with the &l&cremoval of chance boosting&r&r in the &oGTM 7.x&r versions, macerators beyond hv only have the use of faster recipe times."
 			]
 			id: "7B23AF5B6B62BC19"
 			size: 0.75d
@@ -2274,7 +2274,7 @@
 					type: "item"
 				}
 				{
-					count: 12L
+					count: 40L
 					id: "6CBF9877C137F035"
 					item: "kubejs:fissile_reaction_safe_casing"
 					type: "item"

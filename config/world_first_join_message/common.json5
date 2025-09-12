@@ -6,7 +6,7 @@
 	// The RGB color code for the welcome message. Examples: 'FF0000' for red, '00FF00' for green, '0000FF' for blue 'FFFF00' for yellow, 'FF00FF' for magenta, '00FFFF' for cyan
 	"welcomeMessageColor": "FF0000",
 	// The URL to be opened when the player clicks the link
-	"clickableUrl": "https://discord.gg/GDXtUDCzkb",
+	"clickableUrl": "https://discord.gg/KBNst7hZ4C",
 	// clickable text
 	"clickhere": "[Discord Link]",
 	// The RGB color code for the clickable text '[Click here]'Examples: 'FF0000' for red, '00FF00' for green, '0000FF' for blue'FFFF00' for yellow, 'FF00FF' for magenta, '00FFFF' for cyan, 'FFFFFF' for white
