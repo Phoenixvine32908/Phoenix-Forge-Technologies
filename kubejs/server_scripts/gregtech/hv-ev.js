@@ -596,60 +596,70 @@ ServerEvents.recipes(event => {
 
     event.recipes.gtceu.assembler("aluminfrost_drum")
         .itemInputs("2x gtceu:long_aluminfrost_rod", "4x gtceu:aluminfrost_plate")
+        .circuit(2)
         .itemOutputs("gtceu:aluminfrost_drum")
         .duration(200)
         .EUt(GTValues.VA[GTValues.LV]);
 
     event.recipes.gtceu.assembler("aluminfrost_crate")
         .itemInputs("4x gtceu:long_aluminfrost_rod", "4x gtceu:aluminfrost_plate")
+        .circuit(1)
         .itemOutputs(" gtceu:aluminfrost_crate")
         .duration(200)
         .EUt(GTValues.VA[GTValues.LV]);
 
     event.recipes.gtceu.assembler("void_touched_tungsten_steel_drum")
         .itemInputs("2x gtceu:long_void_touched_tungsten_steel_rod", "4x gtceu:void_touched_tungsten_steel_plate")
-        .itemOutputs(" gtceu:void_touched_tungsten_steel_drum")
+        .circuit(2)
+        .itemOutputs("gtceu:void_touched_tungsten_steel_drum")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler("void_touched_tungsten_steel_crate")
+        .circuit(1)
         .itemInputs("4x gtceu:long_void_touched_tungsten_steel_rod", "4x gtceu:void_touched_tungsten_steel_plate")
-        .itemOutputs(" gtceu:void_touched_tungsten_steel_crate")
+        .itemOutputs("gtceu:void_touched_tungsten_steel_crate")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler("frost_reinforced_stained_steel_drum")
         .itemInputs("2x gtceu:long_frost_reinforced_stained_steel_rod", "4x gtceu:frost_reinforced_stained_steel_plate")
+        .circuit(2)
         .itemOutputs(" gtceu:frost_reinforced_stained_steel_drum")
         .duration(200)
         .EUt(GTValues.VA[GTValues.HV]);
 
     event.recipes.gtceu.assembler("frost_reinforced_stained_steel_crate")
         .itemInputs("4x gtceu:long_frost_reinforced_stained_steel_rod", "4x gtceu:frost_reinforced_stained_steel_plate")
+        .circuit(1)
         .itemOutputs(" gtceu:frost_reinforced_stained_steel_crate")
         .duration(200)
         .EUt(GTValues.VA[GTValues.HV]);
 
     event.recipes.gtceu.assembler("source_imbued_titanium_drum")
         .itemInputs("2x gtceu:long_source_imbued_titanium_rod", "4x gtceu:source_imbued_titanium_plate")
+        .circuit(2)
         .itemOutputs(" gtceu:source_imbued_titanium_drum")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler("source_imbued_titanium_crate")
         .itemInputs("4x gtceu:long_source_imbued_titanium_rod", "4x gtceu:source_imbued_titanium_plate")
+        .circuit(1)
         .itemOutputs(" gtceu:source_imbued_titanium_crate")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler("resonant_rhodium_alloy_drum")
         .itemInputs("2x gtceu:long_resonant_rhodium_alloy_rod", "4x gtceu:resonant_rhodium_alloy_plate")
+        .circuit(2)
         .itemOutputs(" gtceu:resonant_rhodium_alloy_drum")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV]);
 
     event.recipes.gtceu.assembler("resonant_rhodium_alloy_crate")
         .itemInputs("4x gtceu:long_resonant_rhodium_alloy_rod", "4x gtceu:resonant_rhodium_alloy_plate")
+        .circuit(1)
         .itemOutputs(" gtceu:resonant_rhodium_alloy_crate")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV]);
