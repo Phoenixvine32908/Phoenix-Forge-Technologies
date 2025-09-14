@@ -104,9 +104,9 @@ GTCEuServerEvents.oreVeins(event => {
         })
     })
     event.add("moon/magical_ores", vein => {
-        vein.weight(15)
-        vein.clusterSize(20)
-        vein.density(0.15)
+        vein.weight(10)
+        vein.clusterSize(15)
+        vein.density(0.10)
         vein.discardChanceOnAirExposure(1)
         vein.layer("ad_astra_moon")
         vein.dimensions("ad_astra:moon")

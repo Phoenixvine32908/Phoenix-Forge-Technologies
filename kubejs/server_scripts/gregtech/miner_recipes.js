@@ -91,7 +91,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "12x gtceu:raw_pyrolusite",
             "12x gtceu:raw_stibnite"
         )
-        .duration(8500) // Increased from 5000
+        .duration(12500) // Increased from 5000
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:overworld");
 
@@ -117,7 +117,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "23x gtceu:raw_sulfur",
             "14x gtceu:raw_diamond"
         )
-        .duration(9500) // Increased from 5500
+        .duration(15000) // Increased from 5500
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:overworld");
 
@@ -160,7 +160,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "28x gtceu:raw_cinnabar"
         )
         .chancedOutput("gtceu:raw_platinum", 2000, 200)
-        .duration(9500) // Increased from 5500
+        .duration(15000) // Increased from 5500
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:the_nether");
 
@@ -188,7 +188,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "14x gtceu:raw_chalcocite",
             "14x gtceu:raw_sphalerite"
         )
-        .duration(10500) // Increased from 6500
+        .duration(17000) // Increased from 6500
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:the_nether");
 
@@ -219,7 +219,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "12x gtceu:raw_pitchblende",
             "12x gtceu:raw_uraninite"
         )
-        .duration(9500) // Increased from 5600
+        .duration(16000) // Increased from 5600
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:the_end");
 
@@ -247,7 +247,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "17x gtceu:raw_pitchblende",
             "17x gtceu:raw_uraninite"
         )
-        .duration(10000) // Increased from 6300
+        .duration(18000) // Increased from 6300
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:the_end");
 
@@ -268,7 +268,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "12x gtceu:raw_nevvonian_iron",
             "12x gtceu:raw_ignisium"
         )
-        .duration(5500) // Increased from 4000
+        .duration(12000) // Increased from 4000
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("ad_astra:moon");
 
@@ -279,18 +279,18 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "kubejs:voidic_drilling_fluid  8000"
         ])
         .itemOutputs(
-            "10x gtceu:raw_voidglass_shard",
-            "28x gtceu:raw_ilmenite",
-            "28x gtceu:raw_bauxite",
-            "17x gtceu:raw_fluorite",
-            "28x gtceu:raw_magnetite",
-            "28x gtceu:raw_cooperite",
-            "12x gtceu:raw_nevvonian_iron",
-            "12x gtceu:raw_ignisium",
+            "15x gtceu:raw_voidglass_shard",
+            "35x gtceu:raw_ilmenite",
+            "40x gtceu:raw_bauxite",
+            "32x gtceu:raw_fluorite",
+            "50x gtceu:raw_magnetite",
+            "38x gtceu:raw_cooperite",
+            "20x gtceu:raw_nevvonian_iron",
+            "18x gtceu:raw_ignisium",
             "12x gtceu:raw_crystallized_fluxstone",
             "3x gtceu:raw_polarity_flipped_bismuthite",
         )
-        .duration(4750)
+        .duration(11500)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("ad_astra:moon");
 
