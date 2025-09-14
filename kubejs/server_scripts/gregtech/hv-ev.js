@@ -423,12 +423,12 @@ ServerEvents.recipes(event => {
     // Space Grade Steel Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("space_grade_steel_drilling_kit")
         .itemInputs(
-            "8x gtceu:space_grade_steel_plate",
-            "16x gtceu:space_grade_steel_screw",
-            "2x gtceu:ev_field_generator",
-            "4x gtceu:ev_electric_motor",
+            "16x gtceu:space_grade_steel_plate",
+            "32x gtceu:space_grade_steel_screw",
+            "4x gtceu:ev_field_generator",
+            "8x gtceu:ev_electric_motor",
             "20x #gtceu:circuits/ev",
-            "4x gtceu:source_titanium_filament_single_wire",
+            "16x gtceu:source_titanium_filament_single_wire",
             "8x kubejs:space_grade_steel_drill_head",
             "1x gtceu:ev_machine_hull")
         .inputFluids("gtceu:soldering_alloy 1200")
@@ -439,12 +439,12 @@ ServerEvents.recipes(event => {
     // / Frost Reinforced Stained Steel Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("frost_reinforced_stained_steel_drilling_kit")
         .itemInputs(
-            "8x gtceu:frost_reinforced_stained_steel_plate",
-            "16x gtceu:frost_reinforced_stained_steel_screw",
-            "2x gtceu:hv_field_generator",
-            "4x gtceu:hv_electric_motor",
-            "20x #gtceu:circuits/hv",
-            "4x gtceu:icy_steel_matrix_single_wire",
+            "16x gtceu:frost_reinforced_stained_steel_plate",
+            "32x gtceu:frost_reinforced_stained_steel_screw",
+            "4x gtceu:hv_field_generator",
+            "8x gtceu:hv_electric_motor",
+            "24x #gtceu:circuits/hv",
+            "16x gtceu:icy_steel_matrix_single_wire",
             "12x kubejs:frost_reinforced_stained_steel_drill_head",
             "1x gtceu:hv_machine_hull")
         .inputFluids("gtceu:soldering_alloy 1200")
@@ -455,12 +455,12 @@ ServerEvents.recipes(event => {
     // Aluminfrost Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("aluminfrost_drilling_kit")
         .itemInputs(
-            "8x gtceu:aluminfrost_plate",
-            "16x gtceu:aluminfrost_screw",
-            "2x gtceu:mv_field_generator",
-            "4x gtceu:mv_electric_motor",
+            "16x gtceu:aluminfrost_plate",
+            "32x gtceu:aluminfrost_screw",
+            "4x gtceu:mv_field_generator",
+            "8x gtceu:mv_electric_motor",
             "20x #gtceu:circuits/mv",
-            "4x gtceu:cryogenic_aluminum_strand_single_wire",
+            "16x gtceu:cryogenic_aluminum_strand_single_wire",
             "10x kubejs:aluminfrost_drill_head",
             "1x gtceu:mv_machine_hull")
         .inputFluids("gtceu:soldering_alloy 1200")
@@ -481,12 +481,12 @@ ServerEvents.recipes(event => {
     // Aurum Steel Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("aurum_steel_drilling_kit")
         .itemInputs(
-            "8x gtceu:aurum_steel_plate",
-            "16x gtceu:aurum_steel_screw",
-            "2x gtceu:lv_field_generator",
-            "4x gtceu:lv_electric_motor",
+            "16x gtceu:aurum_steel_plate",
+            "32x gtceu:aurum_steel_screw",
+            "4x gtceu:lv_field_generator",
+            "8x gtceu:lv_electric_motor",
             "20x #gtceu:circuits/lv",
-            "4x gtceu:magmatic_manganese_lead_single_wire",
+            "16x gtceu:magmatic_manganese_lead_single_wire",
             "8x kubejs:aurum_steel_drill_head",
             "1x gtceu:lv_machine_hull")
         .inputFluids("gtceu:soldering_alloy 1200")
@@ -578,15 +578,15 @@ ServerEvents.recipes(event => {
     // Earthbound Miner Module - EV Assembler
     event.recipes.gtceu.assembler("earthbound_miner_module")
         .itemInputs(
-            "1x kubejs:frost_reinforced_stained_steel_drilling_kit", // Slot 1: Core custom drilling kit 1
-            "1x kubejs:aurum_steel_drilling_kit",     // Slot 2: Core custom drilling kit 2
-            "1x kubejs:aluminfrost_drilling_kit",                   // Slot 3: Core custom drilling kit 3
+            "2x kubejs:frost_reinforced_stained_steel_drilling_kit", // Slot 1: Core custom drilling kit 1
+            "4x kubejs:aurum_steel_drilling_kit",     // Slot 2: Core custom drilling kit 2
+            "2x kubejs:aluminfrost_drilling_kit",                   // Slot 3: Core custom drilling kit 3
             "1x gtceu:ev_machine_hull",                             // Slot 4: Base machine structure (essential)
             "4x gtceu:ev_robot_arm",                                // Slot 5: Key robotic components for automation
             "8x gtceu:stable_machine_casing",                     // Slot 6: REPLACED anchor_casing. A robust EV-tier structural component.
             "4x gtceu:ev_electric_pump",                            // Slot 7: For fluid/material extraction
-            "8x #gtceu:circuits/ev",                                // Slot 8: Logic (should resolve to advanced_circuit_board or similar in your setup)
-            "8x gtceu:icy_steel_matrix_single_wire"                 // Slot 9: Custom cryogenic/structural wiring
+            "32x #gtceu:circuits/ev",                                // Slot 8: Logic (should resolve to advanced_circuit_board or similar in your setup)
+            "16x gtceu:icy_steel_matrix_single_wire"                 // Slot 9: Custom cryogenic/structural wiring
         )
         .inputFluids("kubejs:cryo_ember_fluid 12000")
         .itemOutputs("kubejs:earthbound_miner_module")
