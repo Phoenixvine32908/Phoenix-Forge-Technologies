@@ -303,75 +303,75 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sucrose", "gtceu:distilled_water 500", "gtceu:sulfuric_acid 10")
         .circuit(4)
         .outputFluids("gtceu:invert_sugar_solution 1000")
-        .duration(600)
+        .duration(1200)
         .EUt(GTValues.VA[GTValues.EV] / 2)
 
     // Protein Solution from Mince Meat in Large Chemical Reactor
     greg.large_chemical_reactor("protein_solution_from_mince_meat")
-        .itemInputs("10x gtceu:meat_dust")
+        .itemInputs("64x gtceu:meat_dust")
         .circuit(12)
-        .inputFluids("gtceu:acetic_acid 100")
+        .inputFluids("gtceu:acetic_acid 1009")
         .outputFluids("gtceu:protein_solution 1000")
-        .duration(250)
+        .duration(550)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Amino Acids from Protein Solution in Large Chemical Reactor
     greg.large_chemical_reactor("amino_acids_from_protein_solution")
-        .inputFluids("gtceu:protein_solution 1000", "gtceu:hydrofluoric_acid 250")
+        .inputFluids("gtceu:protein_solution 10000", "gtceu:hydrofluoric_acid 250")
         .circuit(2)
-        .itemInputs("gtceu:activated_carbon_dust")
+        .itemInputs("gtceu:activated_carbon_dust 64x")
         .outputFluids("gtceu:amino_acids 900")
-        .duration(350)
+        .duration(550)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Pollen Concentrate Fluid from Flowers in Large Chemical Reactor
     greg.large_chemical_reactor("pollen_concentrate_fluid_from_flowers")
-        .inputFluids("gtceu:ethanol 1000")
+        .inputFluids("gtceu:ethanol 10000")
         .circuit(4)
         .itemInputs("4x #minecraft:flowers")
         .outputFluids("gtceu:pollen_concentrate_fluid 500")
-        .duration(250)
+        .duration(450)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Pollen Concentrate Fluid from Plant Balls in Large Chemical Reactor
     greg.large_chemical_reactor("pollen_concentrate_fluid_from_plant_balls")
-        .inputFluids("gtceu:ethanol 1000")
+        .inputFluids("gtceu:ethanol 10000")
         .circuit(4)
         .itemInputs("1x gtceu:plant_ball")
         .outputFluids("gtceu:pollen_concentrate_fluid 500")
-        .duration(225)
+        .duration(425)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Honey Catalyst in Large Chemical Reactor
     greg.large_chemical_reactor("honey_catalyst")
-        .inputFluids("gtceu:amino_acids 1500", "minecraft:water 32000", "gtceu:sodium_potassium 1200")
+        .inputFluids("gtceu:amino_acids 5500", "minecraft:water 32000", "gtceu:sodium_potassium 2400")
         .circuit(24)
         .itemInputs("6x gtceu:magnesium_dust", "12x gtceu:calcium_dust")
         .outputFluids("gtceu:honey_catalyst 500")
-        .duration(150)
+        .duration(350)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Honey Production in Large Chemical Reactor
     greg.large_chemical_reactor("honey")
-        .inputFluids("gtceu:honey_catalyst 1500", "gtceu:invert_sugar_solution 3000", "gtceu:pollen_concentrate_fluid 2500")
+        .inputFluids("gtceu:honey_catalyst 3000", "gtceu:invert_sugar_solution 5000", "gtceu:pollen_concentrate_fluid 8500")
         .circuit(24)
         .outputFluids("productivebees:honey 500")
-        .duration(1000)
+        .duration(1200)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Honeycomb Assembly in Assembler
     greg.assembler("honeycomb_assembly")
-        .inputFluids("productivebees:honey 144", "gtceu:invert_sugar_solution 144")
+        .inputFluids("productivebees:honey 788", "gtceu:invert_sugar_solution 144")
         .notConsumable("kubejs:honey_comb_base")
         .itemOutputs("minecraft:honeycomb")
-        .duration(400)
+        .duration(600)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Invert Sugar Solution Separation in Distillation Tower
     greg.distillation_tower("invert_sugar_solution_separation")
         .inputFluids("gtceu:invert_sugar_solution 1000")
         .outputFluids("gtceu:glucose 500", "gtceu:fructose 500")
-        .duration(120)
+        .duration(480)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Sugar Water in Chemical Reactor
@@ -384,7 +384,7 @@ ServerEvents.recipes(event => {
     // Sugar and Molasses Production in Chemical Reactor
     greg.chemical_reactor("sugar_and_molasses_production")
         .inputFluids("gtceu:sugar_water 1000")
-        .itemOutputs("4x minecraft:sugar")
+        .itemOutputs("64x minecraft:sugar")
         .outputFluids("gtceu:molasses 200")
         .duration(180)
         .EUt(GTValues.VA[GTValues.HV]);
@@ -407,7 +407,7 @@ ServerEvents.recipes(event => {
     // Honey Treat in Confectionery Fabricator
     greg.confectionery_fabricator("honeytreat")
         .itemInputs("5x gtceu:dough", "2x minecraft:honeycomb")
-        .inputFluids("productivebees:honey 5000", "gtceu:molasses 1000", "gtceu:cream 500", "gtceu:pollen_concentrate_fluid 2500", "gtceu:peanut_butter 2250")
+        .inputFluids("productivebees:honey 12000", "gtceu:molasses 2500", "gtceu:cream 8000", "gtceu:pollen_concentrate_fluid 6500", "gtceu:peanut_butter 12250")
         .itemOutputs("32x productivebees:honey_treat")
         .duration(150)
         .EUt(GTValues.VA[GTValues.IV]);
@@ -439,7 +439,7 @@ ServerEvents.recipes(event => {
     // Heat Exchanging Fission Steam to Distilled Water (Medium Pressure)
     event.recipes.gtceu.heat_exchanging("fission3")
         .inputFluids("gtceu:medium_pressure_fissile_steam 4000")
-        .outputFluids("gtceu:distilled_water 4500")
+        .outputFluids("gtceu:distilled_water 500")
         .duration(40)
         .EUt(-GTValues.VA[GTValues.LuV])
 
@@ -520,7 +520,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sodium_potassium 64000", "minecraft:water 60000")
         .itemOutputs("4x gtceu:irradiated_uranium_236_nugget", "1x gtceu:depleted_plutonium_241_nugget")
         .outputFluids("gtceu:hot_sodium_potassium 64000", "gtceu:critical_steam 120000")
-        .duration(9500)
+        .duration(4500)
         .EUt(-GTValues.VA[GTValues.UHV] * 2)
 
     // Reprocessing Spent Plutonium-241/Uranium-236 Fuel in Large Chemical Reactor
@@ -565,7 +565,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sodium_potassium 500", "minecraft:water 250")
         .itemOutputs("4x gtceu:irradiated_thorium_nugget", "1x gtceu:spent_uranium_235_nugget")
         .outputFluids("gtceu:hot_sodium_potassium 500", "gtceu:critical_steam 1000")
-        .duration(8500)
+        .duration(3500)
         .EUt(-GTValues.VA[GTValues.ZPM] * 2);
 
     // Breeder Reactor: Thorium/Uranium-233 Cycle with U-233 Driver
@@ -574,7 +574,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sodium_potassium 500", "minecraft:water 250")
         .itemOutputs("4x gtceu:irradiated_thorium_nugget", "1x gtceu:spent_uranium_233_nugget")
         .outputFluids("gtceu:hot_sodium_potassium 500", "gtceu:critical_steam 1000")
-        .duration(9000)
+        .duration(3000)
         .EUt(-GTValues.VA[GTValues.UV] * 2);
 
     // Reprocessing Irradiated Thorium Rods to Uranium-233 in Large Chemical Reactor

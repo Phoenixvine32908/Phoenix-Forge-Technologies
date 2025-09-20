@@ -1,8 +1,6 @@
 /**
 Registry for the bee multiblocks
  */
-
-
 GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
     phoenixvine.create("comb_decanting")
         .category("bees")
