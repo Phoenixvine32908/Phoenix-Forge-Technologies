@@ -1,7 +1,0 @@
-Prod Bees: Honey Treat recipes have been changed, Bottler,breeding chamber, incubater, and gene indexer recipes have been changed to be unlocked at iv, melforius matrix is done but might need balancing.
-
-Powah: tier materiels changed to the forming press
-
-Resource Gen: Reborn and normal dimensional rift extractors have been completed. Reborn takes the recipes of normal and allows laser/parallel. Takes the ore as a catalyst and drilling fluid. Normal is EV reborn is ZPM
-
-HNN prediction matrixes, deep learner, and model framework recipes have been lv locked
