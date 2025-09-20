@@ -114,9 +114,11 @@ ServerEvents.recipes(event => {
         },
     };
 
+
     // The regular expression /^gtceu:.*/ matches any recipe ID that starts with "gtceu:"
     for (const tier in rotorReplacements) {
         const replacement = rotorReplacements[tier];
         event.replaceInput({ id: /^gtceu:.*/ }, replacement.oldRotor, replacement.newRotor);
     }
+
 })

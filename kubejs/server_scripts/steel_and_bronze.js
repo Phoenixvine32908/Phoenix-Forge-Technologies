@@ -304,6 +304,21 @@ ServerEvents.recipes((event) => {
         "1x gtceu:coke",
         "gtceu:wrought_iron_dust",
     ]);
+    event.shapeless("gtceu:aluminfrost_drum", [
+        "1x gtceu:aluminfrost_drum",
+    ]);
+    event.shapeless("gtceu:void_touched_tungsten_steel_drum", [
+        "1x gtceu:void_touched_tungsten_steel_drum",
+    ]);
+    event.shapeless("gtceu:frost_reinforced_stained_steel_drum", [
+        "1x gtceu:frost_reinforced_stained_steel_drum",
+    ]);
+    event.shapeless("gtceu:source_imbued_titanium_drum", [
+        "1x gtceu:source_imbued_titanium_drum",
+    ]);
+    event.shapeless("gtceu:resonant_rhodium_alloy_drum", [
+        "1x gtceu:resonant_rhodium_alloy_drum",
+    ]);
     event.shapeless("gtceu:magma_dust", [
         "1x minecraft:magma_block",
         "#forge:tools/hammers",

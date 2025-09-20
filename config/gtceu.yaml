@@ -235,9 +235,10 @@ machines:
   # Default: true
   enableMaintenance: true
 
-  # Time in ticks between when Multiblocks can require Maintenance. By default, 48 hours.
-  # Default: 3456000
-  maintenanceTime: 3456000
+  # How often to check for maintenance, rolling a 1/6000 chance every X ticks (before secondary effects like Configurable Maintenance Hatch).
+  # In default settings, this equates to a 5% chance every hour of a machine running.
+  # Default: 1000 (ticks)
+  maintenanceCheckRate: 1000
 
   # Whether to enable World Accelerators, which accelerate ticks for surrounding Tile Entities, Crops, etc.
   # Default: true
@@ -311,6 +312,9 @@ machines:
   # Default maximum parallel of steam multiblocks
   # Default: 8
   steamMultiParallelAmount: 16
+
+  # Whether the Drums can input fluids from the output side (bottom).
+  allowDrumsInputFluidsFromOutputSide: false
 
   # Small Steam Boiler Options
   smallBoilers:
@@ -438,6 +442,10 @@ client:
     # Render fluids in multiblocks that support them?
     # Default: true
     renderFluids: true
+
+    # Render growing plants in multiblocks that support them?
+    # Default: true
+    renderGrowingPlants: true
 
     # Whether or not to color tiered machine highlights in the tier color
     # Default: true
