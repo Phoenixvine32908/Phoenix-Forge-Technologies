@@ -295,7 +295,7 @@ ServerEvents.recipes(event => {
         .inputFluids("minecraft:water 500")
         .outputFluids("gtceu:sucrose 1200")
         .chancedOutput("1x minecraft:glowstone_dust", 8500, 1)
-        .duration(300)
+        .duration(1200)
         .EUt(GTValues.VA[GTValues.EV] / 2)
 
     // Sucrose Inversion in Large Chemical Reactor
@@ -303,7 +303,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sucrose", "gtceu:distilled_water 500", "gtceu:sulfuric_acid 10")
         .circuit(4)
         .outputFluids("gtceu:invert_sugar_solution 1000")
-        .duration(1200)
+        .duration(1600)
         .EUt(GTValues.VA[GTValues.EV] / 2)
 
     // Protein Solution from Mince Meat in Large Chemical Reactor
@@ -312,7 +312,7 @@ ServerEvents.recipes(event => {
         .circuit(12)
         .inputFluids("gtceu:acetic_acid 1009")
         .outputFluids("gtceu:protein_solution 1000")
-        .duration(550)
+        .duration(1050)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Amino Acids from Protein Solution in Large Chemical Reactor
@@ -321,7 +321,7 @@ ServerEvents.recipes(event => {
         .circuit(2)
         .itemInputs("gtceu:activated_carbon_dust 64x")
         .outputFluids("gtceu:amino_acids 900")
-        .duration(550)
+        .duration(1050)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Pollen Concentrate Fluid from Flowers in Large Chemical Reactor
@@ -330,7 +330,7 @@ ServerEvents.recipes(event => {
         .circuit(4)
         .itemInputs("4x #minecraft:flowers")
         .outputFluids("gtceu:pollen_concentrate_fluid 500")
-        .duration(450)
+        .duration(850)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Pollen Concentrate Fluid from Plant Balls in Large Chemical Reactor
@@ -339,7 +339,7 @@ ServerEvents.recipes(event => {
         .circuit(4)
         .itemInputs("1x gtceu:plant_ball")
         .outputFluids("gtceu:pollen_concentrate_fluid 500")
-        .duration(425)
+        .duration(825)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Honey Catalyst in Large Chemical Reactor
@@ -348,7 +348,7 @@ ServerEvents.recipes(event => {
         .circuit(24)
         .itemInputs("6x gtceu:magnesium_dust", "12x gtceu:calcium_dust")
         .outputFluids("gtceu:honey_catalyst 500")
-        .duration(350)
+        .duration(650)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Honey Production in Large Chemical Reactor
@@ -356,7 +356,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:honey_catalyst 3000", "gtceu:invert_sugar_solution 5000", "gtceu:pollen_concentrate_fluid 8500")
         .circuit(24)
         .outputFluids("productivebees:honey 500")
-        .duration(1200)
+        .duration(1600)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Honeycomb Assembly in Assembler
@@ -364,21 +364,21 @@ ServerEvents.recipes(event => {
         .inputFluids("productivebees:honey 788", "gtceu:invert_sugar_solution 144")
         .notConsumable("kubejs:honey_comb_base")
         .itemOutputs("minecraft:honeycomb")
-        .duration(600)
+        .duration(700)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Invert Sugar Solution Separation in Distillation Tower
     greg.distillation_tower("invert_sugar_solution_separation")
         .inputFluids("gtceu:invert_sugar_solution 1000")
         .outputFluids("gtceu:glucose 500", "gtceu:fructose 500")
-        .duration(480)
+        .duration(580)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Sugar Water in Chemical Reactor
     greg.chemical_reactor("sugar_water")
         .inputFluids("gtceu:glucose 250", "gtceu:fructose 250", "gtceu:distilled_water 1000")
         .outputFluids("gtceu:sugar_water 2000")
-        .duration(200)
+        .duration(480)
         .EUt(GTValues.VA[GTValues.HV] / 2)
 
     // Sugar and Molasses Production in Chemical Reactor
@@ -386,7 +386,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sugar_water 1000")
         .itemOutputs("64x minecraft:sugar")
         .outputFluids("gtceu:molasses 200")
-        .duration(180)
+        .duration(680)
         .EUt(GTValues.VA[GTValues.HV]);
 
     // Cream from Milk in Centrifuge
@@ -409,7 +409,7 @@ ServerEvents.recipes(event => {
         .itemInputs("5x gtceu:dough", "2x minecraft:honeycomb")
         .inputFluids("productivebees:honey 12000", "gtceu:molasses 2500", "gtceu:cream 8000", "gtceu:pollen_concentrate_fluid 6500", "gtceu:peanut_butter 12250")
         .itemOutputs("32x productivebees:honey_treat")
-        .duration(150)
+        .duration(650)
         .EUt(GTValues.VA[GTValues.IV]);
 
     // Peanut Dust in Macerator
