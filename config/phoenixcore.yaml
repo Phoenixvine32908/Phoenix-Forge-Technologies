@@ -2,7 +2,7 @@ features:
   # Whether the Creative Energy Multiblock is enabled
   creativeEnergyEnabled: true
 
-  # Whether the Blazing Maintence Hatch is enabled
+  # Whether the Blazing Maintenance Hatch is enabled
   blazingHatchEnabled: true
 
   # Whether the Blazing Cleanroom is enabled (This just disables the casings, you can have the hatch on with this off just fine)

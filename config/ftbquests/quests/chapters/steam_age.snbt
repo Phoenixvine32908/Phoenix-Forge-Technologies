@@ -153,7 +153,7 @@
 			description: [
 				"The &bSteam Grinder&r is a machine that uses &osteam&r to crush your ores, typically at a &b1:2 ratio.&r Pretty neat!"
 				""
-				"It crushes 8 ores in parallel. That effectively makes the Steam Grinder faster than 12 LV macerators (or 6 MV macerators)."
+				"It crushes 16 ores in parallel. That effectively makes the Steam Grinder faster than 16 LV macerators (or 8 MV macerators)."
 				""
 				"The catch: much like the LV and MV macerators, this machine &cdoes not provide byproducts&r (like gold dust from macerating magnetite, for instance)."
 				""
@@ -688,7 +688,7 @@
 			y: 5.0d
 		}
 		{
-			description: ["You will need &1water&r, and a &bLOT of it&r. Grabbing a million buckets every 5 seconds isn't efficient. So, make one of these to &b passively generate water for you&r."]
+			description: ["You will need &1water&r, and a &bLOT of it&r. Grabbing a million buckets every 5 seconds isn't efficient. So, make one of these to &bpassively generate water for you&r."]
 			icon: "watercollector:watercollector"
 			id: "015B71C49100E00E"
 			optional: true
@@ -712,8 +712,6 @@
 			description: [
 				"Your first task is to read this, then go mine all those tasty resources to start. &aAre you ready to begin?&r"
 				""
-				"(&oAlso, at the risk of being pedantic, please do not play on peaceful. &eI do not know how to fix it putting you there by default but you need mobs&r&r)"
-				""
 				"Now, you don't want to continue &cwhacking trees by hand&r do you? Your journey should start with the free &2greg mining hammers, axe, and shovel&r, and &2hv prospector&r you obtain from the starting quest page. &9However&r, if these decide to break you can make more in your crafting table."
 				""
 				"Just be sure to make the &8mining&r hammer and not the &1normal&r hammer okay?"
@@ -723,7 +721,7 @@
 				""
 				"{@pagebreak}"
 				""
-				"You might be wondering why I did not talk about &ev vanilla minecraft tools&r, aren't you? Well, &2greg tools&r might be more expensive in the initial investment but they are &afaster&r, have &amore durability&r, and have &bcool effects&r that vanilla minecraft tools simply, don't."
+				"You might be wondering why I did not talk about &evanilla minecraft tools&r, aren't you? Well, &2greg tools&r might be more expensive in the initial investment but they are &afaster&r, have &amore durability&r, and have &bcool effects&r that vanilla minecraft tools simply, don't."
 				""
 				"For example, the &2greg axe&r has &aTreefeller&r which takes the durability from the tool to mine an entire tree, which is nice to get those logs that always float above your head."
 				""
@@ -745,6 +743,7 @@
 						TorchPlacing: 1b
 					}
 					GT.Tool: {
+						DefaultEnchantments: [ ]
 						HarvestLevel: 3
 						MaxDamage: 2303
 						ToolSpeed: 6.4f
@@ -873,7 +872,9 @@
 			description: [
 				"The new &eLow Voltage&r casing material. You can make the dust in a crafting table, then smelt said dust to get your first &6aurum steel ingots&r!"
 				""
-				"These allow you to unlock the wonderful world of &3electricity&r. The ratio for &6aurum steel&r is 2 &7steel dust&r, 2 &cdormant ember dust&r, 1 &4magma dust&r, and one &6gold dust&r. It is quite a complex alloy, but it's worth it."
+				"These allow you to unlock the wonderful world of &3electricity&r. The ratio for &6aurum steel&r is 2 &7steel dust&r, 2 &cdormant ember dust&r, 1 &6aurum pulp&r, and one &6gold dust&r. It is quite a complex alloy, but it's worth it."
+				""
+				"(Btw, you can buy aurum saplings with feathers of rebirth)"
 			]
 			id: "7979150B6C5A215A"
 			rewards: [

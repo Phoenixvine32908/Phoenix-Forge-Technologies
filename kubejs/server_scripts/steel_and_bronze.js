@@ -177,16 +177,19 @@ ServerEvents.recipes((event) => {
     });
     event.shaped("17x gtceu:tantalite_ore", ["PPP", "PPP", "PPP"], {
         P: "kubejs:phoenix_feather",
-    });
+    }).noMirror().noShrink();
     event.shaped("16x gtceu:rubber_sapling", ["   ", "   ", "  P"], {
         P: "kubejs:phoenix_feather",
-    });
+    }).noMirror().noShrink();
+    event.shaped("1x forbidden_arcanus:aurum_sapling", ["   ", "   ", " P "], {
+        P: "kubejs:phoenix_feather",
+    }).noMirror().noShrink();
     event.shaped("17x gtceu:apatite_ore", ["PPP", "PPP", "PP "], {
         P: "kubejs:phoenix_feather",
-    });
+    }).noMirror().noShrink();
     event.shaped("64x minecraft:clay_ball", ["P  ", "   ", "   "], {
         P: "kubejs:phoenix_feather",
-    });
+    }).noMirror().noShrink();
     event.shaped("gtceu:lv_machine_casing", ["PPP", "PWP", "PPP"], {
         P: "gtceu:aurum_steel_plate",
         W: "#forge:tools/wrenches",

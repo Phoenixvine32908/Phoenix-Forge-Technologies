@@ -1,7 +1,6 @@
 /**
 IV and LuV recipes
  */
-
 ServerEvents.recipes(event => {
 
     const greg = event.recipes.gtceu
@@ -319,7 +318,7 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("amino_acids_from_protein_solution")
         .inputFluids("gtceu:protein_solution 10000", "gtceu:hydrofluoric_acid 250")
         .circuit(2)
-        .itemInputs("gtceu:activated_carbon_dust 64x")
+        .itemInputs("64x gtceu:activated_carbon_dust")
         .outputFluids("gtceu:amino_acids 900")
         .duration(1050)
         .EUt(GTValues.VA[GTValues.IV] / 2)

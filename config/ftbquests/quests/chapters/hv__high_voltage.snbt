@@ -1721,17 +1721,13 @@
 				""
 				"Check out &6&6Oktawia's amazing guide&r&r by holding &nG&r on any of &9CAE2AS&r items/blocks! (&bshe does a lot better job at explaining this than I do&r.)"
 				" "
-				""
-				"Some &6GregTech&r machines require a &aspecific circuit value&r to perform certain recipes. The Crazy Pattern Modifier allows you to assign a circuit number directly to a processing pattern - ensuring the machine runs with the correct configuration every time."
-				""
-				"Hints:"
-				"- Enable \"ignore NBT\" mode to allow more flexible crafting (e.g., any enchanted book, not just Sharpness V)."
+				"One such example of her &bamazing features&r is the round robin item p2p. This p2p will &o&3evenly spread items&r&r pushed through it to connected inventories."
 			]
 			id: "12D3177401E08197"
 			size: 0.75d
 			tasks: [{
-				id: "6356AE1A3CD69BE1"
-				item: "crazyae2addons:crazy_pattern_modifier"
+				id: "51C081B554D8F9E7"
+				item: "crazyae2addons:round_robin_item_p2p_tunnel"
 				type: "item"
 			}]
 			x: 3.375d
