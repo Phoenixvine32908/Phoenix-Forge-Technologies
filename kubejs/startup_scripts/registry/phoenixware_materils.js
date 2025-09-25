@@ -455,7 +455,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     event.create("permafrost")
         .ore().ingot()
         .color(0xA7D1EB).iconSet("diamond")
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
+        .addOreByproducts([GTMaterials.get("aluminfrost"), GTMaterials.get("aluminfrost"), GTMaterials.CertusQuartz]);
     event.create("polarity_flipped_bismuthite")
         .ore().dust()
         .color(0xe4d6ff).iconSet("diamond")
@@ -1109,6 +1109,9 @@ ItemEvents.modification(event => {
         item.maxStackSize = 64
         item.fireResistant = true
         item.rarity = "UNCOMMON"
+    })
+    event.modify("minecraft:sugar_cane", item => {
+        item.burnTime = 300
     })
 
     event.modify("gtceu:honey_ingot", item => {

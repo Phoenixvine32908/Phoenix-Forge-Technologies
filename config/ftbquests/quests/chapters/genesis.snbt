@@ -575,38 +575,6 @@
 		{
 			dependencies: ["1AC4E39729811BFB"]
 			description: [
-				"These generators are straightforward: place them, and they'll passively collect power during the day."
-				""
-				"Since they aren't GregTech machines, they can be tick-accelerated with world accelerators (use that information wisely!). They're not the most engaging, though, so don't worry – more exciting power options are on their way!"
-			]
-			icon: "solarflux:sp_avaritia.neutronium"
-			id: "60C881C46640C2EE"
-			rewards: [
-				{
-					id: "68482EFC35AB2A8E"
-					item: "solarflux:sp_1"
-					type: "item"
-				}
-				{
-					id: "58AD5A0D220619FB"
-					item: "solarflux:furnace_upgrade"
-					type: "item"
-				}
-			]
-			size: 0.7d
-			subtitle: "Sol"
-			tasks: [{
-				id: "642B3C84F268908B"
-				title: "Solar Flux Reborn"
-				type: "checkmark"
-			}]
-			title: "Solar Flux"
-			x: -5.25d
-			y: -1.75d
-		}
-		{
-			dependencies: ["1AC4E39729811BFB"]
-			description: [
 				"Thermal Expansion has been a core part of modpacks for ages! Right now, its &aDynamos&r and &aBoilers&r will be your biggest power boost."
 				""
 				"The &bSterling Dynamo&r generates power by burning items – pretty neat, huh?"
