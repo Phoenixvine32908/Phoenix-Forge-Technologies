@@ -17,11 +17,9 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.CHEMICAL);
 });
-const CreativeEnergyMachine = Java.loadClass("net.phoenix.core.common.machine.multiblock.CreativeEnergyMultiMachine")
 GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
     phoenixvine.create("alchemical_imbuer", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
-        .machine((holder) => new CreativeEnergyMachine(holder))
         .recipeTypes(["source_imbument","source_extraction"])
         .recipeModifiers([GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GTBlocks.CASING_TITANIUM_STABLE)

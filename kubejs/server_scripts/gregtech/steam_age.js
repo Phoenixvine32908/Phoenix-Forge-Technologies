@@ -4,14 +4,14 @@ steam age recipes
 
 ServerEvents.recipes(event => {
     event.recipes.gtceu.ember_igniter("flaming_dust")
-        .itemInputs("2x gtceu:dormant_ember_dust", "1x gtceu:magma_dust")
-        .inputFluids("minecraft:lava 1")
+        .itemInputs("8x gtceu:dormant_ember_dust", "4x gtceu:magma_dust")
+        .inputFluids("minecraft:lava 144")
         .itemOutputs("1x kubejs:flaming_dust")
         .duration(150)
         .EUt(20)
     event.recipes.gtceu.alloy_smelter("flamingmatrix")
         .itemInputs("1x kubejs:flaming_dust", "1x minecraft:clay_ball")
-        .itemOutputs("8x hostilenetworks:prediction_matrix")
+        .itemOutputs("4x hostilenetworks:prediction_matrix")
         .duration(100)
         .EUt(32)
     event.recipes.gtceu.alloy_smelter("tin_alloy")

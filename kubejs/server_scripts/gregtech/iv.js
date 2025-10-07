@@ -313,19 +313,24 @@ ServerEvents.recipes(event => {
         .outputFluids("gtceu:protein_solution 1000")
         .duration(1050)
         .EUt(GTValues.VA[GTValues.IV] / 2)
+           greg.extractor("resonant_ender")
+        .itemInputs("1x minecraft:ender_pearl")
+        .outputFluids("thermal:ender 250")
+        .duration(300)
+        .EUt(GTValues.VA[GTValues.HV] / 2)
 
     // Amino Acids from Protein Solution in Large Chemical Reactor
     greg.large_chemical_reactor("amino_acids_from_protein_solution")
-        .inputFluids("gtceu:protein_solution 10000", "gtceu:hydrofluoric_acid 250")
+        .inputFluids("gtceu:protein_solution 2500", "gtceu:hydrofluoric_acid 250")
         .circuit(2)
-        .itemInputs("64x gtceu:activated_carbon_dust")
-        .outputFluids("gtceu:amino_acids 900")
+        .itemInputs("32x gtceu:activated_carbon_dust")
+        .outputFluids("gtceu:amino_acids 1000")
         .duration(1050)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Pollen Concentrate Fluid from Flowers in Large Chemical Reactor
     greg.large_chemical_reactor("pollen_concentrate_fluid_from_flowers")
-        .inputFluids("gtceu:ethanol 10000")
+        .inputFluids("gtceu:ethanol 2000")
         .circuit(4)
         .itemInputs("4x #minecraft:flowers")
         .outputFluids("gtceu:pollen_concentrate_fluid 500")
@@ -334,7 +339,7 @@ ServerEvents.recipes(event => {
 
     // Pollen Concentrate Fluid from Plant Balls in Large Chemical Reactor
     greg.large_chemical_reactor("pollen_concentrate_fluid_from_plant_balls")
-        .inputFluids("gtceu:ethanol 10000")
+        .inputFluids("gtceu:ethanol 2000")
         .circuit(4)
         .itemInputs("1x gtceu:plant_ball")
         .outputFluids("gtceu:pollen_concentrate_fluid 500")
@@ -437,7 +442,7 @@ ServerEvents.recipes(event => {
     // --- Nuclear & Radioactive Processing ---
     // Heat Exchanging Fission Steam to Distilled Water (Medium Pressure)
     event.recipes.gtceu.heat_exchanging("fission3")
-        .inputFluids("gtceu:medium_pressure_fissile_steam 4000")
+        .inputFluids("gtceu:medium_pressure_fissile_steam 2000")
         .outputFluids("gtceu:distilled_water 500")
         .duration(40)
         .EUt(-GTValues.VA[GTValues.LuV])

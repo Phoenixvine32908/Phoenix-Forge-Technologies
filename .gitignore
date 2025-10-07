@@ -54,9 +54,12 @@ journeymap*
 extrakube from modpacks
 kubejs\probe\*
 mixin.out
+mixin
+.mixin
 mixin.out\*
 mixin.out*
-mixin.out/class/*
+mixin.out/class*
+mixin.out\class\*
 .mixin.out/class/net/minecraft/util/HttpUtil.class
 .mixin.out/class/net/minecraft/client/renderer/ItemModelShaper$Anonymous$a157b521662142c6958d62aea144a914.class
 .mixin.out/class/appeng/helpers/patternprovider/PatternProviderTargetCache$Anonymous$625a91d1099b41f9bc0617ce4918de86.class
@@ -70,3 +73,5 @@ mixin.out/class/*
 .mixin.out/class/net/minecraft/client/gui/components/MultilineTextField.class
 .mixin.out/class/net/minecraft/world/level/GameType.class
 .mixin.out/class/appeng/core/sync/packets/PatternAccessTerminalPacket.class
+.mixin.out/class/appeng/blockentity/crafting/PatternProviderBlockEntity.class
+.mixin.out/class/appeng/client/gui/AEBaseScreen.class

@@ -28,7 +28,7 @@ ServerEvents.recipes(event => {
         .duration(150)
         .EUt(1920)
     event.recipes.gtceu.assembly_line("kubejs:epp/assembler_matrix_glass")
-        .itemInputs("4x gtceu:dense_85_percent_pure_nevonian_steel_plate", "4x gtceu:blue_steel_frame", "gtceu:cleanroom_glass", "#gtceu:circuits/ev")
+        .itemInputs("2x gtceu:dense_85_percent_pure_nevonian_steel_plate", "4x gtceu:blue_steel_frame", "gtceu:cleanroom_glass", "#gtceu:circuits/ev")
         .inputFluids("gtceu:polytetrafluoroethylene 288")
         .itemOutputs("4x expatternprovider:assembler_matrix_glass")
         .duration(150)

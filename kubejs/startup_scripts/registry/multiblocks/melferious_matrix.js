@@ -15,7 +15,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
 GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
     phoenixvine.create("melferious_matrix", "multiblock")
         .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes(["melferious_matrix", "simulated_colony"])
+        .recipeTypes(["melferious_matrix"])
         .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.OC_NON_PERFECT_SUBTICK, GTRecipeModifiers.BATCH_MODE])
         .appearanceBlock(GCYMBlocks.CASING_HIGH_TEMPERATURE_SMELTING)
         .pattern(definition => FactoryBlockPattern.start()

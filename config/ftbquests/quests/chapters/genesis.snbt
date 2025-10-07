@@ -13,6 +13,7 @@
 				Mode: 2b
 			}
 			GT.Tool: {
+				DefaultEnchantments: [ ]
 				HarvestLevel: 2
 				MaxDamage: 255
 				ToolSpeed: 6.0f

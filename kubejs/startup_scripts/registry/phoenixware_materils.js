@@ -462,7 +462,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
     event.create("void_touched_tungsten_steel")
         .ingot()
-        .liquid(3100)
+        .liquid(new $FluidBuilder().block().temperature(3100))
         .fluidPipeProperties(3800, 250, true, true, true, true)
         .color(0x4B0082)
         .secondaryColor(0x000000)
@@ -688,6 +688,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0xFFBF00)
         .secondaryColor(0x87CEFA)
         .iconSet("bright")
+        .flags(GTMaterialFlags.NO_SMELTING)
         .cableProperties(GTValues.V[GTValues.IV], 32, 0, true)
     event.create("magma")
         .dust()
