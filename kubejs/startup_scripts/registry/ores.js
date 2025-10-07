@@ -2,6 +2,7 @@
 Registry for custom ores
  */
 
+
 GTCEuStartupEvents.registry("gtceu:material", event => {
 
     // Existing Material
@@ -18,6 +19,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     event.create("nevvonian_iron")
         .ore().ingot()
         .color(0x7A687F).iconSet("diamond")
+        
 
 
     event.create("phoenixite")

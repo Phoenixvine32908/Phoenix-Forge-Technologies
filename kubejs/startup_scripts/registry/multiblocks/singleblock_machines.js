@@ -1,7 +1,8 @@
 /**
  * Registry for sigle block machines
  */
-
+        const $MaintenanceHatchPartMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.part.MaintenanceHatchPartMachine")
+const BlazingCleanroom = Java.loadClass("net.phoenix.core.common.machine.multiblock.BlazingCleanroom")
 const $LargeTurbineMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.generator.LargeTurbineMachine")
 GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
     phoenixvine.create("test_turbine")
@@ -86,6 +87,20 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
                 .workableTieredHullModel("gtceu:block/machines/sifter")
 
         )
+         phoenixvine.create("blazing_cleaning_maintenance_hatch", "custom")
+        .machine((holder,tier) => {
+            return new $MaintenanceHatchPartMachine(holder, BlazingCleanroom.BLAZING_CLEANROOM)
+        })
+        .tiers(GTValues.UIV)
+        .definition((tier, builder) => builder
+            .langValue("Blazing Cleaning Maintenance Hatch")
+            .rotationState(RotationState.ALL)
+            .abilities(PartAbility.MAINTENANCE)
+            .workableTieredHullModel("kubejs/block/multiblock/blazing_cleaning_maintenance_hatch")
+        )
+
+
+
 
 
     phoenixvine.create("test_turbine", "multiblock").machine((holder) => new $LargeTurbineMachine(holder, GTValues.MAX))
@@ -116,5 +131,4 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
             "kubejs:block/reliable_naquadah_alloy_machine_casing",
             "gtceu:block/multiblock/fusion_reactor"
         )
-
 });
