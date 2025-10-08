@@ -14,3 +14,7 @@ Credit to WithersChat!!! Thanks so much to her for letting me use the universal 
 Credits to Ezlych and Sky Of Grind for letting me use some of thier assets and multiblock designs! Be sure to check them out!
 
 https://www.curseforge.com/minecraft/modpacks/sky-of-grind
+
+Logo on curseforge was made by Rai. Huge thanks for the wonderful pack icon.
+
+Logo in main quest page was made by ZGStuff. Huge thanks for the wonderful pack icon quest background.
