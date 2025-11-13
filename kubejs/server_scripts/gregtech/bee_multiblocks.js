@@ -242,7 +242,7 @@ ServerEvents.recipes(phoenix => {
             { luv_bee: "draconic", luVbeeName: "Draconic Bee", pollination: "minecraft:dragon_egg", LuVoutputComb: "draconic" },
             { luv_bee: "pyrochlore", luVbeeName: "Pyrochlore Bee", pollination: "gtceu:raw_pyrochlore_block", LuVoutputComb: "pyrochlore" },
             { luv_bee: "voidglass_shard", luVbeeName: "Voidglass Shard Bee", pollination: "gtceu:raw_voidglass_shard_block", LuVoutputComb: "voidglass_shard" },
-            { luv_bee: "crystallized_fluxstone", luVbeeName: "Crystallized Fluxstone Bee", pollination: "gtce:raw_crystalized_fluxstone_block", LuVoutputComb: "crystalized_fluxstonee" },
+            { luv_bee: "crystalized_fluxstone", luVbeeName: "Crystalized Fluxstone Bee", pollination: "gtceu:raw_crystalized_fluxstone_block", LuVoutputComb: "crystalized_fluxstonee" },
             { luv_bee: "ignisium", luVbeeName: "Ignisium Bee", pollination: "gtceu:raw_ignisium_block", LuVoutputComb: "ignisium" },
             { luv_bee: "sky_steel", luVbeeName: "Sky Steel Bee", pollination: "megacells:sky_steel_block", LuVoutputComb: "sky_steel" }
         ];
