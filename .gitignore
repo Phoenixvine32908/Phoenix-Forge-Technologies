@@ -53,6 +53,7 @@ crash-report
 journeymap*
 extrakube from modpacks
 kubejs\probe\*
+node_modules
 mixin.out
 mixin
 .mixin

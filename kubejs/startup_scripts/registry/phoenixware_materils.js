@@ -631,7 +631,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet("dull");
 
     // --- Recovered Dust ---
-    event.create("trace_actinide_dust")
+    event.create("trace_actinides")
         .dust()
         .color(0x8B008B) // Dark Magenta
         .secondaryColor(0x9932CC) // Dark Orchid

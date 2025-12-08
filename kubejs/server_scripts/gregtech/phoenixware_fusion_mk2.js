@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
         ["tritanium_mk2", "gtceu:titanium 32", "gtceu:duranium 32", "gtceu:tritanium 16", 64, 262144,],
         ["plutonium_241_mk2", "gtceu:krypton 125", "gtceu:cerium 16", "gtceu:plutonium_241 16", 128, 262144,],
         ["americium_mk2", "gtceu:lutetium 32", "gtceu:chromium 32", "gtceu:americium 32", 64, 262144,],
-        ["darmstadtium_mk2", "gtceu:arsenic_vapor 32", "gtceu:ruthenium 16", "gtceu:darmstadtium 16", 32, 262144,],
+        ["darmstadtium_mk2", "gtceu:arsenic 32", "gtceu:ruthenium 16", "gtceu:darmstadtium 16", 32, 262144,],
         ["radon_mk2", "gtceu:gold 16", "gtceu:mercury 16", "gtceu:radon 125", 64, 262144,],
         ["argon_plasma_mk2", "gtceu:carbon 16", "gtceu:magnesium 16", "gtceu:argon_plasma 125", 64, 262144,],
         ["indium_mk2", "gtceu:silver 144", "gtceu:lithium 144", "gtceu:indium 144", 8, 262144,],

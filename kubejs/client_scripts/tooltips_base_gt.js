@@ -381,9 +381,9 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
             "gtceu:melferious_matrix",
             "gtceu:dimensional_anchor12",
             "gtceu:aetherial_fabricator12",
-            "gtceu:comb_decanter",
-            "gtceu:swarm_nuturer",
-            "gtceu:apis_progenitor"
+            "phoenixcore:comb_decanter",
+            "phoenixcore:swarm_nuturer",
+            "phoenixcore:apis_progenitor"
         ],
         tooltipKeys: [
             "multiblock.pchaccess1",
@@ -426,7 +426,7 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
     },
     "NO_OC_SUBTICK_GROUP": {
         multiblockIds: [
-            "gtceu:simulated_colony",
+            "phoenixcore:simulated_colony",
         ],
         tooltipKeys: [
             "multiblock.nooc1",
@@ -605,16 +605,16 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_dimensional_anchor",
     ],
 
-    "gtceu:comb_decanter": [
+    "phoenixcore:comb_decanter": [
         "gtultimate.custom.tooltip_comb_decanter",
         "gtultimate.custom.tooltip_comb_decanter2"
     ],
-    "gtceu:apis_progenitor": [
+    "phoenixcore:apis_progenitor": [
         "gtultimate.custom.tooltip_apis_progenitor",
         "gtultimate.custom.tooltip_apis_progenitor2"
     ],
 
-    "gtceu:swarm_nuturer": [
+    "phoenixcore:swarm_nuturer": [
         "gtultimate.custom.tooltip_swarm_nurturer",
         "gtultimate.custom.tooltip_swarm_nurturer2"
     ],
@@ -623,7 +623,7 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_multi_smelter",
         "gtultimate.custom.tooltip_multi_smelter_2"
     ],
-    "gtceu:simulated_colony": [
+    "phoenixcore:simulated_colony": [
         "gtultimate.custom.tooltip_simulated_colony",
     ],
     "gtceu:alloy_blast_smelter": [
@@ -665,10 +665,10 @@ const MACHINE_TYPE_NAMES = {
     "gtceu:aetherial_fabricator12": "§eAetherial Fabricator",
     "gtceu:advanced_cracking_unit": "§bAdvanced Cracking Unit",
     "gtceu:superheated_pyrolyzing_oven": "§bSuperheated Pyrolyzing Oven",
-    "gtceu:comb_decanter": "§eComb Decanter",
-    "gtceu:simulated_colony": "§eSimulated Colony",
-    "gtceu:swarm_nuturer": "§eSwarm Nurturer",
-    "gtceu:apis_progenitor": "§eApis Progenitor",
+    "phoenixcore:comb_decanter": "§eComb Decanter",
+    "phoenixcore:simulated_colony": "§eSimulated Colony",
+    "phoenixcore:swarm_nuturer": "§eSwarm Nurturer",
+    "phoenixcore:apis_progenitor": "§eApis Progenitor",
     "gtceu:large_assembler": "§eAssembling Machine",
     "gtceu:large_autoclave": "§eAutoclave",
     "gtceu:large_brewer": "§eBrewery | Fermenter | Fluid Heater",
@@ -934,22 +934,22 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             SOLID_MACHINE_CASING_TOOLTIP
     },
-    "gtceu:comb_decanter": {
+    "phoenixcore:comb_decanter": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
         values:
            HIGH_TEMPERATURE_SMELTING_CASING_TOOLTIP
     },
-    "gtceu:simulated_colony": {
+    "phoenixcore:simulated_colony": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
         values:
            SOLID_MACHINE_CASING_TOOLTIP
     },
-    "gtceu:swarm_nuturer": {
+    "phoenixcore:swarm_nuturer": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
         values:
            CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
     },
-    "gtceu:apis_progenitor": {
+    "phoenixcore:apis_progenitor": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance", "pch"],
         values:
            ROBUST_TUNGSTENSTEEL_MACHINE_CASING_TOOLTIP
