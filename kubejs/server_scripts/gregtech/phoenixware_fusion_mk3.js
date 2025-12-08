@@ -28,11 +28,11 @@ ServerEvents.recipes(event => {
         ["tritanium_mk3", "gtceu:titanium 32", "gtceu:duranium 32", "gtceu:tritanium 16", 32, 1048576,],
         ["plutonium_241_mk3", "gtceu:krypton 125", "gtceu:cerium 16", "gtceu:plutonium_241 16", 64, 1048576,],
         ["americium_mk3", "gtceu:lutetium 32", "gtceu:chromium 32", "gtceu:americium 32", 32, 1048576,],
-        ["darmstadtium_mk3", "gtceu:arsenic_vapor 32", "gtceu:ruthenium 16", "gtceu:darmstadtium 16", 16, 1048576,],
+        ["darmstadtium_mk3", "gtceu:arsenic 32", "gtceu:ruthenium 16", "gtceu:darmstadtium 16", 16, 1048576,],
         ["radon_mk3", "gtceu:gold 16", "gtceu:mercury 16", "gtceu:radon 125", 32, 1048576,],
         ["argon_plasma_mk3", "gtceu:carbon 16", "gtceu:magnesium 16", "gtceu:argon_plasma 125", 32, 1048576,],
         ["iron_plasma_mk3", "gtceu:silicon 16", "gtceu:magnesium 16", "gtceu:iron_plasma 16", 32, 1048576,],
-        ["naquadria_mk3", "gtceu:enriched_naquad 16", "gtceu:radon 125", "gtceu:naquadria 4", 64, 1048576,],
+        ["naquadria_mk3", "gtceu:enriched_naquadah 16", "gtceu:radon 125", "gtceu:naquadria 4", 64, 1048576,],
         ["nickel_plasma_mk3", "gtceu:potassium 16", "gtceu:fluorine 125", "gtceu:nickel_plasma 16", 16, 1048576,],
         ["neutronium_mk3", "gtceu:americium 128", "gtceu:naquadria 128", "gtceu:neutronium 32", 200, 1048576,],
 

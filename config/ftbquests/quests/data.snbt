@@ -2,7 +2,7 @@
 	default_autoclaim_rewards: "disabled"
 	default_consume_items: false
 	default_quest_disable_jei: false
-	default_quest_shape: "square"
+	default_quest_shape: "circle"
 	default_reward_team: false
 	detection_delay: 20
 	disable_gui: false
@@ -10,16 +10,14 @@
 	drop_loot_crates: false
 	emergency_items_cooldown: 300
 	grid_scale: 0.5d
-	icon: "kubejs:pft_icon"
-	lock_message: "eSFSDF"
+	lock_message: ""
 	loot_crate_no_drop: {
 		boss: 0
 		monster: 600
 		passive: 4000
 	}
 	pause_game: false
-	progression_mode: "default"
-	show_lock_icons: true
-	title: "Phoenix Forge Technologies"
+	progression_mode: "linear"
+	show_lock_icons: false
 	version: 13
 }

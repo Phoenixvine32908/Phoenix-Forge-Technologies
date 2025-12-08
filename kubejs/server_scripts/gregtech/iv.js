@@ -4,12 +4,13 @@ IV and LuV recipes
 ServerEvents.recipes(event => {
 
     const greg = event.recipes.gtceu
-    greg.electrolyzer("flourite_dust_to_flourine")
-        .itemInputs("12x gtceu:flourite_dust")
-        .itemOutputs("4x gtceu:tantalite_dust")
-        .outputFluids("gtceu:flourine 1000")
-        .duration(100)
-        .EUt(GTValues.VA[GTValues.LV]);
+   // greg.electrolyzer("flourite_dust_to_flourine")
+      //  .itemInputs("12x gtceu:flourite_dust")
+       // .itemOutputs("4x gtceu:tantalite_dust")
+        //.outputFluids("gtceu:flourine 1000")
+       // .duration(100)
+       // .EUt(GTValues.VA[GTValues.LV]);
+
     // LUV Confectionery Fabricator Research (existing)
     greg.scanner("luv_confectionery_fabricator")
         .itemInputs("gtceu:iv_confectionery_fabricator", "gtceu:data_stick")
@@ -19,7 +20,7 @@ ServerEvents.recipes(event => {
 
     // Superheated Pyro Oven Research (scanner)
     greg.scanner("melferious_matrix_research")
-        .itemInputs("gtceu:simulated_colony", "gtceu:data_stick")
+        .itemInputs("phoenixcore:simulated_colony", "gtceu:data_stick")
         .itemOutputs(Item.of("gtceu:data_stick", '{assembly_line_research:{research_id:"1x_gtceu_simulated_colony",research_type:"gtceu:assembly_line"}}'))
         .duration(2000)
         .EUt(GTValues.VA[GTValues.IV])
@@ -34,14 +35,14 @@ ServerEvents.recipes(event => {
             "4x kubejs:conductive_honey_coil",
             "1x gtceu:extremely_modified_space_grade_steel_quadruple_wire", // LuV supercon
             "4x gtceu:void_touched_tungsten_steel_rotor",
-            "2x gtceu:simulated_colony"
+            "2x phoenixcore:simulated_colony"
         )
         .inputFluids(
             "productivebees:honey 24000",
             "gtceu:soldering_alloy 4000"
         )
         .itemOutputs("gtceu:melferious_matrix")
-        .stationResearch(b => b.researchStack("gtceu:simulated_colony")
+        .stationResearch(b => b.researchStack("phoenixcore:simulated_colony")
             .EUt(131000).CWUt(1, 1)
             .dataStack("gtceu:data_stick"))
         .EUt(GTValues.VA[GTValues.LuV])
@@ -540,7 +541,7 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("reprocessing/depleted_plutonium_241_nuggets")
         .itemInputs("4x gtceu:depleted_plutonium_241_nugget")
         .inputFluids("gtceu:nitric_acid 500")
-        .itemOutputs("2x gtceu:plutonium_241_dust", "1x gtceu:americium_241_dust", "4x gtceu:depleted_plutonium_dust")
+        .itemOutputs("2x gtceu:plutonium_241_dust", "1x gtceu:americium_241_dust", "4x gtceu:depleted_plutonium_241_dust")
         .duration(200)
         .EUt(GTValues.VA[GTValues.IV]);
 
@@ -666,7 +667,7 @@ ServerEvents.recipes(event => {
     // Processing Radioactive Sludge (from Plutonium Fission Ash and other processes)
     greg.centrifuge("radioactive_sludge_processing")
         .inputFluids("gtceu:radioactive_sludge 1000", "minecraft:water 500")
-        .itemOutputs("1x gtceu:rare_earth_dust", "1x gtceu:trace_actinide_dust") // Recover trace rare earths and actinides
+        .itemOutputs("1x gtceu:rare_earth_dust", "1x gtceu:trace_actinides_dust") // Recover trace rare earths and actinides
         .outputFluids("gtceu:purified_radioactive_waste_fluid 250") // Reduced hazard waste fluid
         .duration(400)
         .EUt(GTValues.VA[GTValues.LuV]);
@@ -688,7 +689,7 @@ ServerEvents.recipes(event => {
 
     // Recycling Depleted Plutonium (back to a usable form)
     greg.large_chemical_reactor("depleted_plutonium_recycling")
-        .itemInputs("8x gtceu:depleted_plutonium")
+        .itemInputs("8x gtceu:depleted_plutonium_241_dust")
         .inputFluids("gtceu:nitric_acid 500", "gtceu:fluorine 100")
         .itemOutputs("2x gtceu:plutonium_dust") // Recover generic plutonium dust for re-enrichment
         .outputFluids("gtceu:radioactive_waste_fluid 100") // Some residual waste
@@ -732,14 +733,14 @@ ServerEvents.recipes(event => {
     greg.assembler("comb_decanter_recipe_assembler")
         .itemInputs("4x minecraft:honey_block", "kubejs:conductive_honey_coil", "2x gtceu:samarium_iron_arsenic_oxide_double_wire", "2x gtceu:iv_field_generator", "2x #gtceu:circuits/iv")
         .inputFluids("gtceu:soldering_alloy 5044")
-        .itemOutputs("gtceu:comb_decanter")
+        .itemOutputs("phoenixcore:comb_decanter")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(400)
 
     // Apis Progenitor Assembly in Assembler
     greg.assembler("apis_progenitor_recipe_assembler")
         .itemInputs("4x productivebees:honey_treat", "4x #minecraft:flowers", "#gtceu:circuits/iv", "gtceu:iv_machine_hull", "32x gtceu:fine_platinum_wire")
-        .itemOutputs("gtceu:apis_progenitor")
+        .itemOutputs("phoenixcore:apis_progenitor")
         .inputFluids("productivebees:honey 1000")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(600)
@@ -748,7 +749,7 @@ ServerEvents.recipes(event => {
     greg.assembler("swarm_nurturer_recipe_assembler")
         .itemInputs("gtceu:iv_machine_hull", "#gtceu:circuits/iv", "2x gtceu:stainless_steel_frame", "12x gtceu:source_imbued_titanium_screw", "gtceu:rtm_alloy_coil_block")
         .inputFluids("gtceu:vanadium_gallium 500")
-        .itemOutputs("gtceu:swarm_nuturer")
+        .itemOutputs("phoenixcore:swarm_nurturer")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(800)
 
@@ -756,7 +757,7 @@ ServerEvents.recipes(event => {
     greg.assembler("simulated_colony_recipe_assembler")
         .itemInputs("2x gtceu:source_imbued_titanium_gear", "32x #minecraft:flowers", "12x #forge:dyes", "3x #gtceu:circuits/iv", "gtceu:iv_machine_hull", "16x productivebees:honey_treat")
         .inputFluids("gtceu:sugar_water 1000")
-        .itemOutputs("gtceu:simulated_colony")
+        .itemOutputs("phoenixcore:simulated_colony")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(900)
         // Breeder Reactor Controller in Assembler
@@ -975,7 +976,7 @@ ServerEvents.recipes(event => {
             "16x gtceu:superconductive_honey_double_wire",
             "16x gtceu:extremely_modified_space_grade_steel_double_wire",
             "minecraft:ender_pearl",
-            "gtceu:swarm_nuturer"
+            "phoenixcore:swarm_nurturer"
         )
         .inputFluids("thermal:ender 288", "gtceu:liquid_ender_air 200")
         .itemOutputs("kubejs:empty_neutral_mob_essence_canister")

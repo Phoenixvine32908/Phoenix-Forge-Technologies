@@ -113,7 +113,7 @@ ServerEvents.recipes(phoenix => {
         "brown_shroom": "Brown Shroombee",
         "red_shroom": "Red Shroombee",
         "crimson": "Crimson Shroombee",
-        "experience": "Experience Bee",
+        //"experience": "Experience Bee",
         "arcane_crystal": "Arcanus Bee",
         "crystalline": "Crystalline Bee",
         "rune": "Rune Bee",
@@ -242,7 +242,7 @@ ServerEvents.recipes(phoenix => {
             { luv_bee: "draconic", luVbeeName: "Draconic Bee", pollination: "minecraft:dragon_egg", LuVoutputComb: "draconic" },
             { luv_bee: "pyrochlore", luVbeeName: "Pyrochlore Bee", pollination: "gtceu:raw_pyrochlore_block", LuVoutputComb: "pyrochlore" },
             { luv_bee: "voidglass_shard", luVbeeName: "Voidglass Shard Bee", pollination: "gtceu:raw_voidglass_shard_block", LuVoutputComb: "voidglass_shard" },
-            { luv_bee: "crystalized_fluxstone", luVbeeName: "Crystalized Fluxstone Bee", pollination: "gtceu:raw_crystalized_fluxstone_block", LuVoutputComb: "crystalized_fluxstonee" },
+          //  { luv_bee: "crystalized_fluxstone", luVbeeName: "Crystalized Fluxstone Bee", pollination: "gtceu:raw_crystalized_fluxstone_block", LuVoutputComb: "crystalized_fluxstone" },
             { luv_bee: "ignisium", luVbeeName: "Ignisium Bee", pollination: "gtceu:raw_ignisium_block", LuVoutputComb: "ignisium" },
             { luv_bee: "sky_steel", luVbeeName: "Sky Steel Bee", pollination: "megacells:sky_steel_block", LuVoutputComb: "sky_steel" }
         ];
@@ -396,7 +396,7 @@ ServerEvents.recipes(phoenix => {
         copper: Item.of("minecraft:copper_block"),
         pitchblende: Item.of("gtceu:raw_pitchblende_block"),
         lepidolite: Item.of("gtceu:raw_lepidolite_block"),
-        experience: Item.of("minecraft:bookshelf"),
+        //experience: Item.of("minecraft:bookshelf"),
         arcane: Item.of("ars_nouveau:source_gem_block"),
         cinnabar: Item.of("gtceu:raw_cinnabar_block"),
         topaz: Item.of("gtceu:raw_topaz_block"),
@@ -513,16 +513,16 @@ ServerEvents.recipes(phoenix => {
             EUt: GTValues.VA[GTValues.IV] / 2
             // crystalline bee + copper block
         },
-        {
-            id: "kubejs:gtceu/apis_progenitor/exp_from_water",
-            outputBeeType: "experience",
-            inputBeeType: "emerald",
-            itemInput: "64x crazyae2addons:xp_shard",
-            fluidInput: null,
-            duration: 360,
-            EUt: GTValues.VA[GTValues.IV] / 2
+      //  {
+       //     id: "kubejs:gtceu/apis_progenitor/exp_from_water",
+       //     outputBeeType: "experience",
+        //    inputBeeType: "emerald",
+        //    itemInput: "64x crazyae2addons:xp_shard",
+          //  fluidInput: null,
+          //  duration: 360,
+         //   EUt: GTValues.VA[GTValues.IV] / 2
             // emerald bee + lapis block
-        },
+      //  },
         {
             id: "kubejs:gtceu/apis_progenitor/arcane_from_water",
             outputBeeType: "arcane",
@@ -774,16 +774,16 @@ ServerEvents.recipes(phoenix => {
             EUt: GTValues.VA[GTValues.LuV]
             // diamond bee + voidglass shard block
         },
-        {
-            id: "kubejs:gtceu/apis_progenitor/crystallized_fluxstone_from_water",
-            outputBeeType: "crystallized_fluxstone",
-            inputBeeType: "diamond",
-            itemInput: "32x gtce:raw_crystalized_fluxstone_block",
-            fluidInput: null,
-            duration: 360,
-            EUt: GTValues.VA[GTValues.LuV]
+      //  {
+        //    id: "kubejs:gtceu/apis_progenitor/crystallized_fluxstone_from_water",
+        //    outputBeeType: "crystallized_fluxstone",
+        //    inputBeeType: "diamond",
+        //    itemInput: "32x gtce:raw_crystalized_fluxstone_block",
+         //   fluidInput: null,
+         //   duration: 360,
+         //   EUt: GTValues.VA[GTValues.LuV]
             // diamond bee + crystallized fluxstone block
-        },
+       // },
         {
             id: "kubejs:gtceu/apis_progenitor/ignisium_from_water",
             outputBeeType: "ignisium",
@@ -1035,7 +1035,7 @@ ServerEvents.recipes(phoenix => {
         salty: Item.of("gtceu:raw_salt", 5),
         apatite: Item.of("gtceu:raw_apatite", 5),
         sponge: Item.of("minecraft:sponge", 1),
-        copper: Item.of("gtceu:raw_copper", 5),
+        copper: Item.of("minecraft:raw_copper", 5),
         lepidolite: Item.of("gtceu:raw_lepidolite", 5),
         cinnabar: Item.of("gtceu:raw_cinnabar", 5),
         topaz: Item.of("gtceu:raw_topaz", 5),
@@ -1045,7 +1045,7 @@ ServerEvents.recipes(phoenix => {
         zinc: Item.of("gtceu:zinc_ingot", 5),
         tin: Item.of("gtceu:raw_tin", 5),
         diamond: Item.of("gtceu:raw_diamond", 5),
-        iron: Item.of("gtceu:raw_iron", 5),
+        iron: Item.of("minecraft:raw_iron", 5),
         fluorite: Item.of("gtceu:raw_fluorite", 5),
         scheelite: Item.of("gtceu:raw_scheelite", 5),
         ruby: Item.of("gtceu:raw_ruby", 5),
@@ -1058,7 +1058,7 @@ ServerEvents.recipes(phoenix => {
         ilmenite: Item.of("gtceu:raw_ilmenite", 5),
         silicon: Item.of("gtceu:silicon_ingot", 5),
         galena: Item.of("gtceu:raw_galena", 5),
-        gold: Item.of("gtceu:raw_gold", 5),
+        gold: Item.of("minecraft:raw_gold", 5),
         cobaltite: Item.of("gtceu:raw_cobaltite", 5),
         bauxite: Item.of("gtceu:raw_bauxite", 5),
         silver: Item.of("gtceu:raw_silver", 5),
@@ -1069,7 +1069,7 @@ ServerEvents.recipes(phoenix => {
         malachite: Item.of("gtceu:raw_malachite", 5),
 
         // Other materials (non-ore type outputs)
-        experience: Item.of("crazyae2addons:xp_shard", 32),
+      //  experience: Item.of("crazyae2addons:xp_shard", 32),
         arcane: Item.of("ars_nouveau:source_gem", 5),
         blazing: Item.of("minecraft:blaze_powder", 1),
         prismarine: Item.of("minecraft:prismarine_shard", 5),
@@ -1129,7 +1129,7 @@ ServerEvents.recipes(phoenix => {
         pyrochlore: Item.of("gtceu:raw_pyrochlore", 5),
         molybdenum: Item.of("gtceu:raw_molybdenite", 5),
         voidglass_shard: Item.of("gtceu:raw_voidglass_shard", 5),
-        crystallized_fluxstone: Item.of("gtceu:raw_crystallized_fluxstone", 5),
+       // crystallized_fluxstone: Item.of("gtceu:raw_crystallized_fluxstone", 5),
         ignisium: Item.of("gtceu:raw_ignisium", 5),
         sky_steel: Item.of("megacells:sky_steel_ingot", 3)
         // Add more specific mappings as needed for other BEE_MATERIAL_TYPES

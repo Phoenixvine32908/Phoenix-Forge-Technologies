@@ -96,64 +96,9 @@ ServerEvents.recipes(event => {
         .itemOutputs("1x gtceu:hafnium_dust")
         .duration(100)
         .EUt(GTValues.VA[GTValues.HV] / 2);
-    event.recipes.gtceu.chemical_bath("cooling_magmatic_manganese_lead_distilled")
-        .itemInputs("gtceu:hot_magmatic_manganese_lead_ingot")
-        .inputFluids("gtceu:distilled_water 1000")
-        .itemOutputs("1x gtceu:magmatic_manganese_lead_ingot")
-        .duration(150)
-        .EUt(GTValues.VA[GTValues.LV] / 2);
 
-    event.recipes.gtceu.chemical_bath("cooling_magmatic_manganese_lead_water")
-        .itemInputs("gtceu:hot_magmatic_manganese_lead_ingot")
-        .inputFluids("minecraft:water 1000")
-        .itemOutputs("1x gtceu:magmatic_manganese_lead_ingot")
-        .duration(200)
-        .EUt(GTValues.VA[GTValues.LV] / 2);
 
-    // Cooling recipes for Cryogenic Aluminum Strand
-    event.recipes.gtceu.chemical_bath("cooling_cryogenic_aluminum_strand_distilled")
-        .itemInputs("gtceu:hot_cryogenic_aluminum_strand_ingot")
-        .inputFluids("gtceu:distilled_water 1000")
-        .itemOutputs("1x gtceu:cryogenic_aluminum_strand_ingot")
-        .duration(150)
-        .EUt(GTValues.VA[GTValues.MV] / 2);
 
-    event.recipes.gtceu.chemical_bath("cooling_cryogenic_aluminum_strand_water")
-        .itemInputs("gtceu:hot_cryogenic_aluminum_strand_ingot")
-        .inputFluids("minecraft:water 1000")
-        .itemOutputs("1x gtceu:cryogenic_aluminum_strand_ingot")
-        .duration(200)
-        .EUt(GTValues.VA[GTValues.MV] / 2);
-
-    // Cooling recipes for Icy Steel Matrix
-    event.recipes.gtceu.chemical_bath("cooling_icy_steel_matrix_distilled")
-        .itemInputs("gtceu:hot_icy_steel_matrix_ingot")
-        .inputFluids("gtceu:distilled_water 1000")
-        .itemOutputs("1x gtceu:icy_steel_matrix_ingot")
-        .duration(150)
-        .EUt(GTValues.VA[GTValues.HV] / 2);
-
-    event.recipes.gtceu.chemical_bath("cooling_icy_steel_matrix_water")
-        .itemInputs("gtceu:hot_icy_steel_matrix_ingot")
-        .inputFluids("minecraft:water 1000")
-        .itemOutputs("1x gtceu:icy_steel_matrix_ingot")
-        .duration(200)
-        .EUt(GTValues.VA[GTValues.HV] / 2);
-
-    // Cooling recipes for Source Titanium Filament
-    event.recipes.gtceu.chemical_bath("cooling_source_titanium_filament_distilled")
-        .itemInputs("gtceu:hot_source_titanium_filament_ingot")
-        .inputFluids("gtceu:distilled_water 1000")
-        .itemOutputs("1x gtceu:source_titanium_filament_ingot")
-        .duration(150)
-        .EUt(GTValues.VA[GTValues.EV] / 2);
-
-    event.recipes.gtceu.chemical_bath("cooling_source_titanium_filament_water")
-        .itemInputs("gtceu:hot_source_titanium_filament_ingot")
-        .inputFluids("minecraft:water 1000")
-        .itemOutputs("1x gtceu:source_titanium_filament_ingot")
-        .duration(200)
-        .EUt(GTValues.VA[GTValues.EV] / 2);
     event.recipes.gtceu.assembler("fissile_heat_safe_casing")
         .itemInputs("6x gtceu:zircalloy_plate", "1x gtceu:stainless_steel_frame", "2x gtceu:aluminfrost_large_fluid_pipe")
         .circuit(2)

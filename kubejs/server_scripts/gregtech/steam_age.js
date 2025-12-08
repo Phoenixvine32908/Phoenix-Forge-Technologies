@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
         .EUt(32)
     event.recipes.gtceu.forming_press("gold_iron_alloy")
         .itemInputs("2x minecraft:gold_ingot", "2x minecraft:iron_ingot")
-        .itemOutputs("4x gtceu:gold_iron_alloy")
+        .itemOutputs("4x gtceu:gold_iron_alloy_ingot")
         .duration(50)
         .EUt(32)
     event.recipes.gtceu.forge_hammer("sophisticatedstorage:packing_tap")

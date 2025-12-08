@@ -51,10 +51,6 @@ StartupEvents.registry("block", phoenixvine => {
         stronk_tritanium_machine_casing: "§cStronk Tritanium Casing",
         entropy_logic_casing: "§cEntropy Logic Casing PW3",
         glitched_fusion_casing: "§cEntropy Fusion Casing",
-        fissile_heat_safe_casing: "§bFissile Based Heat Safe Casing",
-        fissile_reaction_safe_casing: "§bFissile Reaction Safe Casing",
-        fission_cooling_casing: "§bFission Cooling Casing",
-        fissile_safe_gearbox: "§bFissile Safe Gearbox",
 
         // 🌌 Voidglass & Finality Constructs
         //   voidglass_cocoon_shell: "§5Voidglass Cocoon Shell",
@@ -81,7 +77,6 @@ StartupEvents.registry("block", phoenixvine => {
         phoenix_pyre_helix: "§cPhoenix Pyre Helix",
         phoenix_ignition_matrix: "§cPhoenix Ignition Matrix",
         entropy_well_coil: "§cEntropy Well Coil",
-        base_fission_casing: "Graphene Based Fission Rods",
         green_fission_casing: "§cBerrylium Fission Rods"
 
     };
@@ -101,6 +96,31 @@ StartupEvents.registry("block", phoenixvine => {
         .tagBlock("mineable/pickaxe")
         .tagBlock("forge:mineable/wrench")
         .soundType("metal")
+
+      //  phoenixvine.create('neutronium_moderator', 'phoenixcore:fission_moderator')
+     //   .displayName('Neutronium Moderator')
+      //  .EUBoost(100)           // IFissionModeratorType.getEUBoost()
+      //  .fuelDiscount(250)      // IFissionModeratorType.getFuelDiscount()
+      //  .tier(2)               // IFissionModeratorType.getTier()
+       // .moderatorMaterial(() => GTMaterials.get('neutronium')) 
+      //  .hardness(2.0)
+      //  .requiresTool(true)
+      //  .tagBlock("mineable/pickaxe")
+      //  .soundType("metal")
+     //   .texture('kubejs:block/advanced_logic') 
+
+       // phoenixvine.create('super_quantum_cooler', 'phoenixcore:fission_cooler')
+       // .displayName('Super Quantum Cooler')
+        //.coolerTemperature(15000)   
+      //  .coolantUsagePerTick(750)   
+       // .tier(2)                  
+      //  .requiredCoolantMaterialId('gtceu:lead') 
+      //  .coolerMaterial(() => GTMaterials.get('steel')) 
+      //  .hardness(10.0)
+      //  .requiresTool(true)
+     //   .tagBlock("mineable/pickaxe")
+     //   .soundType("metal")
+     //   .texture('kubejs:block/advanced_logic') 
     phoenixvine.create("conductive_honey_coil", "gtceu:active")
         .bloom("gtceu:block/conductive_honey_coil_bloom")
     // The bloom texture should be 'gtceu:block/casings/fusion/superconducting_coil_bloom'

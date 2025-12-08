@@ -254,7 +254,7 @@ ServerEvents.recipes(phoenix => {
 
             { mobDrops: Item.of("64x minecraft:ink_sac"), mobEntityType: "minecraft:squid", mobName: "Squid" },
             { mobDrops: Item.of("128x minecraft:leather"), mobEntityType: "minecraft:cow", mobName: "Cow" },
-            { mobDrops: Item.of("128x minecraft:wool"), mobEntityType: "minecraft:sheep", mobName: "Sheep" },
+            { mobDrops: Item.of("128x minecraft:white_wool"), mobEntityType: "minecraft:sheep", mobName: "Sheep" },
             { mobDrops: Item.of("32x minecraft:feather"), mobEntityType: "minecraft:chicken", mobName: "Chicken" },
             { mobDrops: Item.of("16x minecraft:porkchop"), mobEntityType: "minecraft:pig", mobName: "Pig" },
         ];

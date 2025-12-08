@@ -56,6 +56,6 @@ ServerEvents.recipes((event) => {
         G: "ae2:quartz_glass",
         P: "#forge:plates/ruby",
         W: "gtceu:simple_soc",
-        C: "#gtceu:circuits/ev",
+        C: "#gtceu:circuits/hv",
     });
 });
