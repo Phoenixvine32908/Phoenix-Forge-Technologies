@@ -22,8 +22,6 @@
 		}
 	}
 	id: "7DFD5701239DC26C"
-<<<<<<< HEAD
-=======
 	images: [{
 		height: 10.0d
 		image: "kubejs:item/phoenix_icon"
@@ -32,7 +30,6 @@
 		x: 0.5d
 		y: -3.5d
 	}]
->>>>>>> d75a0ad6 (let's try this again eh?)
 	order_index: 0
 	quest_links: [ ]
 	quests: [
