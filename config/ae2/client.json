@@ -18,6 +18,8 @@
     "showPlacementPreview": true,
     "notifyForFinishedCraftingJobs_comment": "Show toast when long-running crafting jobs finish.",
     "notifyForFinishedCraftingJobs": true,
+    "fancyPatternTooltips_comment": "Show fancy tooltips for encoded patterns.",
+    "fancyPatternTooltips": true,
     "clearGridOnClose_comment": "Automatically clear the crafting/encoding grid when closing the terminal",
     "clearGridOnClose": true,
     "terminalMargin_comment": "The vertical margin to apply when sizing terminals. Used to make room for centered item mod search bars",

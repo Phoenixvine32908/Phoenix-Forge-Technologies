@@ -520,7 +520,7 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(GTValues.VA[GTValues.IV])
     // Breeder Reactor: Plutonium/Uranium-236 Cycle
-    greg.high_performace_breeder_reactor("breeder_reactor/plutonium_uranium_236_cycle")
+    greg.high_performance_breeder_reactor("breeder_reactor/plutonium_uranium_236_cycle")
         .itemInputs("4x kubejs:u236_fuel_pellet", "1x kubejs:plutonium_241_fuel_pellet")
         .inputFluids("gtceu:sodium_potassium 64000", "minecraft:water 60000")
         .itemOutputs("4x gtceu:irradiated_uranium_236_nugget", "1x gtceu:depleted_plutonium_241_nugget")
@@ -565,7 +565,7 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.IV]);
 
     // Breeder Reactor: Thorium/Uranium-233 Cycle with U-235 Driver
-    greg.high_performace_breeder_reactor("breeder_reactor/thorium_uranium_233_cycle_u235_driver")
+    greg.high_performance_breeder_reactor("breeder_reactor/thorium_uranium_233_cycle_u235_driver")
         .itemInputs("4x kubejs:thorium_fuel_pellet", "1x kubejs:u235_fuel_pellet")
         .inputFluids("gtceu:sodium_potassium 500", "minecraft:water 250")
         .itemOutputs("4x gtceu:irradiated_thorium_nugget", "1x gtceu:spent_uranium_235_nugget")
@@ -574,7 +574,7 @@ ServerEvents.recipes(event => {
         .EUt(-GTValues.VA[GTValues.ZPM] * 2);
 
     // Breeder Reactor: Thorium/Uranium-233 Cycle with U-233 Driver
-    greg.high_performace_breeder_reactor("breeder_reactor/thorium_uranium_233_cycle_u233_driver")
+    greg.high_performance_breeder_reactor("breeder_reactor/thorium_uranium_233_cycle_u233_driver")
         .itemInputs("4x kubejs:thorium_fuel_pellet", "1x kubejs:u233_fuel_pellet")
         .inputFluids("gtceu:sodium_potassium 500", "minecraft:water 250")
         .itemOutputs("4x gtceu:irradiated_thorium_nugget", "1x gtceu:spent_uranium_233_nugget")
@@ -763,7 +763,7 @@ ServerEvents.recipes(event => {
         // Breeder Reactor Controller in Assembler
     greg.assembler("breeder_reactor_controller")
         .itemInputs(
-            "gtceu:pressurized_fission_reactor",
+            "phoenixcore:pressurized_fission_reactor",
             "2x gtceu:void_touched_tungsten_steel_rotor",
             "4x #gtceu:circuits/iv",
             "2x gtceu:zircalloy_gear",
@@ -771,7 +771,7 @@ ServerEvents.recipes(event => {
             "16x gtceu:uranium_235_rod"
         )
         .inputFluids("gtceu:cryo_zirconium_binding_solution 6000")
-        .itemOutputs("gtceu:high_performace_breeder_reactor")
+        .itemOutputs("phoenixcore:high_performance_breeder_reactor")
         .duration(800)
         .EUt(GTValues.VA[GTValues.IV])
     // IV Confectionery Fabricator in Assembler

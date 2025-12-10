@@ -6,7 +6,7 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.ember_igniter("flaming_dust")
         .itemInputs("8x gtceu:dormant_ember_dust", "4x gtceu:magma_dust")
         .inputFluids("minecraft:lava 144")
-        .itemOutputs("1x kubejs:flaming_dust")
+        .itemOutputs("4x kubejs:flaming_dust")
         .duration(150)
         .EUt(20)
     event.recipes.gtceu.alloy_smelter("flamingmatrix")
