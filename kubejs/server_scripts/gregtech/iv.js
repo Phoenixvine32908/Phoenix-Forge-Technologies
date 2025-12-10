@@ -464,7 +464,7 @@ ServerEvents.recipes(event => {
 
     // Cryo Zirconium Binding Solution in Mixer
     greg.mixer("cryo_zirconium_binding_solution")
-        .inputFluids("kubejs:frost 288", "minecraft:water 2000")
+        .inputFluids("phoenixcore:frost 288", "minecraft:water 2000")
         .itemInputs("2x gtceu:crystallized_fluxstone_dust", "1x gtceu:zirconium_dust")
         .outputFluids("gtceu:cryo_zirconium_binding_solution 2000")
         .duration(150)
@@ -472,7 +472,7 @@ ServerEvents.recipes(event => {
 
     // Cryo Graphite Binding Solution in Mixer
     greg.mixer("cryo_graphite_binding_solution")
-        .inputFluids("kubejs:frost 288", "minecraft:water 2000")
+        .inputFluids("phoenixcore:frost 288", "minecraft:water 2000")
         .itemInputs("2x gtceu:crystallized_fluxstone_dust", "1x gtceu:graphite_dust")
         .outputFluids("gtceu:cryo_graphite_binding_solution 3000")
         .duration(175)
@@ -726,6 +726,30 @@ ServerEvents.recipes(event => {
         .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
         .inputFluids("gtceu:pcb_coolant 1000")
         .itemOutputs("gtceu:active_transformer")
+        .duration(450)
+        .EUt(GTValues.VA[GTValues.IV]);
+            greg.assembler("boron_carbide_moderator")
+        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
+        .inputFluids("gtceu:pcb_coolant 1000")
+        .itemOutputs("gtceu:active_transformer")
+        .duration(450)
+        .EUt(GTValues.VA[GTValues.IV]);
+            greg.assembler("beryllium_moderator")
+        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
+        .inputFluids("gtceu:pcb_coolant 1000")
+        .itemOutputs("gtceu:active_transformer")
+        .duration(450)
+        .EUt(GTValues.VA[GTValues.IV]);
+            greg.assembler("niobium_modified_silicon_carbide_moderator")
+        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
+        .inputFluids("gtceu:pcb_coolant 1000")
+        .itemOutputs("kubejs:niobium_modified_silicon_carbide_moderator")
+        .duration(450)
+        .EUt(GTValues.VA[GTValues.IV]);
+                    greg.assembler("graphite_moderator")
+        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
+        .inputFluids("gtceu:pcb_coolant 1000")
+        .itemOutputs("kubejs:graphite_moderator")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
 

@@ -407,8 +407,8 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
     "POWER_OUTPUT_GROUP": {
         multiblockIds: [
             "gtceu:large_gas_turbine",
-            "gtceu:pressurized_fission_reactor",
-            "gtceu:heat_exchanger",
+            "phoenixcore:pressurized_fission_reactor",
+            "phoenixcore:heat_exchanger",
         ],
         tooltipKeys: [
             "multiblock.energyoutputaccess1",
@@ -417,7 +417,7 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
     },
     "NO_POWER_GROUP": {
         multiblockIds: [
-            "gtceu:advanced_pressurized_fission_reactor",
+            "phoenixcore:advanced_pressurized_fission_reactor",
         ],
         tooltipKeys: [
             "multiblock.nopower1",
@@ -439,7 +439,7 @@ const NON_SHIFT_TOOLTIP_GROUPS = {
 
     "SUB_STATION_POWER_OUTPUT_GROUP": {
         multiblockIds: [
-            "gtceu:high_performace_breeder_reactor",
+            "phoenixcore:high_performance_breeder_reactor",
         ],
         tooltipKeys: [
             "multiblock.energyoutputaccess1",
@@ -517,13 +517,13 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
     "gtceu:large_engraving_laser": [
         "gtultimate.custom.tooltip_large_engraving_laser"
     ],
-    "gtceu:high_performace_breeder_reactor": [
+    "phoenixcore:high_performance_breeder_reactor": [
         "gtultimate.custom.tooltip_high_performace_breeder_reactor"
     ],
-    "gtceu:pressurized_fission_reactor": [
+    "phoenixcore:pressurized_fission_reactor": [
         "gtultimate.custom.tooltip_pressurized_fission_reactor"
     ],
-    "gtceu:advanced_pressurized_fission_reactor": [
+    "phoenixcore:advanced_pressurized_fission_reactor": [
         "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor",
         "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor2"
     ],
@@ -584,7 +584,7 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_mega_blast_furnace",
         "gtultimate.custom.tooltip_ebf_coils"
     ],
-    "gtceu:heat_exchanger": [
+    "phoenixcore:heat_exchanger": [
         "gtultimate.custom.tooltip_heat_exchanger"
     ],
     "gtceu:large_steam_sieve": [
@@ -657,7 +657,7 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
 const MACHINE_TYPE_NAMES = {
     "gtceu:large_arc_smelter": "§eArc Furnace",
     "gtceu:alchemical_imbuer": "§eSource Extraction | Source Imbuement",
-    "gtceu:heat_exchanger": "§eHeat Exchanger",
+    "phoenixcore:heat_exchanger": "§eHeat Exchanging",
     "gtceu:large_steam_compressor": "§eSteam Compressor",
     "gtceu:large_steam_sieve": "§eSteam Sieve",
     "gtceu:melferious_matrix": "§eMelferious Matrix",
@@ -679,9 +679,9 @@ const MACHINE_TYPE_NAMES = {
     "gtceu:large_electrolyzer": "§eElectrolyzer",
     "gtceu:large_electromagnet": "§eElectromagnetic Separator | Polarizer",
     "gtceu:large_engraving_laser": "§eLaser Engraver",
-    "gtceu:high_performace_breeder_reactor": "§eHigh Performance Breeder Reactor",
-    "gtceu:pressurized_fission_reactor": "§ePressurized Fission Reactor",
-    "gtceu:advanced_pressurized_fission_reactor": "§eAdvanced Pressurized Fission Reactor",
+    "phoenixcore:high_performance_breeder_reactor": "§eHigh Performance Breeder Reactor",
+    "phoenixcore:pressurized_fission_reactor": "§ePressurized Fission Reactor",
+    "phoenixcore:advanced_pressurized_fission_reactor": "§eAdvanced Pressurized Fission Reactor",
     "gtceu:large_maceration_tower": "§eMacerator",
     "gtceu:large_material_press": "§eBending | Compressor | Forge Hammer | Forming Press",
     "gtceu:large_mixer": "§eMixer",
@@ -724,7 +724,7 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             WATERTIGHT_CASING_TOOLTIP
     },
-    "gtceu:heat_exchanger": {
+    "phoenixcore:heat_exchanger": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
         values:
             FISSILE_REACTION_SAFE_CASING_TOOLTIP
@@ -852,16 +852,16 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             LASER_SAFE_ENGRAVING_CASING_TOOLTIP
     },
-    "gtceu:high_performace_breeder_reactor": {
+    "phoenixcore:high_performance_breeder_reactor": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
         values:
             FISSILE_REACTION_SAFE_CASING_TOOLTIP
-    }, "gtceu:pressurized_fission_reactor": {
+    }, "phoenixcore:pressurized_fission_reactor": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energyoutput", "maintenance"],
         values:
             FISSILE_REACTION_SAFE_CASING_TOOLTIP
     },
-    "gtceu:advanced_pressurized_fission_reactor": {
+    "phoenixcore:advanced_pressurized_fission_reactor": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "maintenance"],
         values:
             FISSILE_REACTION_SAFE_CASING_TOOLTIP

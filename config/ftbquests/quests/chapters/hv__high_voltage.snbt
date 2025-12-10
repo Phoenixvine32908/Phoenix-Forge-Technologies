@@ -1608,7 +1608,7 @@
 			tasks: [
 				{
 					id: "15FE5AE8606B3F6E"
-					item: "gtceu:pressurized_fission_reactor"
+					item: "phoenixcore:pressurized_fission_reactor"
 					type: "item"
 				}
 				{

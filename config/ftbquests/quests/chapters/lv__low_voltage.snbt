@@ -202,9 +202,9 @@
 				""
 				"&aAlumFrost&r is the main ingredient for &bMV&r machinery. Check &8aa&7aa&raall the way to the other side for the &2AluminFrost&r quest if you haven't acquired any &aUnrefined Aluminfrost Dust&r yet."
 				""
-				"Once you setup an &3MV Electrolyzer&r, you can get &aAluminFrost&r through many other ores. All of this quest's rewards bear &aAluminFrost&r, so keep an eye out for them when mining."
+				"Once you setup an &3MV Electrolyzer&r, you can get aluminium through many other ores. All of this quest's rewards bear &aAluminFrost&r, so keep an eye out for them when mining."
 				""
-				"The process of smelting AlumFrost can be cut down by about a third with &9Liquid Frost&r, which is obtained by extracting &9PermaFrost&r."
+				"The process of smelting this valuable material can be cut down by about a third with &9Liquid Frost&r, which is obtained by extracting &9PermaFrost&r."
 				""
 				"&6You will still need MV Circuits in order to make MV machines!&r"
 			]
@@ -274,7 +274,7 @@
 		{
 			dependencies: ["1C767009F505A813"]
 			description: [
-				"Crates are strong upgrades to chests in base gtceu. While soph chests or functional storage drawers might hold more, the upgrades can be more expsensive than making a few crates. "
+				"Crates are strong upgrades to chests in base gtceu. While soph chests or functional storage drawers might hold more, the upgrades can be more exspensive than making a few crates. "
 				""
 				"Moreover, crates can accept covers so this makes them really powerful for automation before ae2. (Sadly, crates can not be sorted because of a bug with ldlib)"
 			]
@@ -1163,7 +1163,7 @@
 				""
 				"You can attach a &aFilter&r for more precise voiding."
 				"{@pagebreak}"
-				"An advanced version also exists, which requires a &dMV Circuit&r. It enables voiding above a set threshold - great for for overflow control."
+				"An advanced version also exists, which requires a &dMV Circuit&r. It enables voiding above a set threshold - great for overflow control."
 				""
 				"&9Note:&r They default to being switched off, to prevent accidental voiding. Right-click them with a &5Soft Mallet&r to activate them."
 				""

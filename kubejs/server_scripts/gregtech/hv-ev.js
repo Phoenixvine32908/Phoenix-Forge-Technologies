@@ -21,6 +21,8 @@ ServerEvents.recipes(event => {
         .itemOutputs("gtceu:certus_quartz_dust")
         .duration(80)
         .EUt(GTValues.VA[GTValues.LV] / 2)
+    event.recipes.gtceu.assembler("good_circuit_universal")
+
     event.recipes.gtceu.assembly_line("kubejs:epp/assembler_matrix_frame")
         .itemInputs("2x gtceu:dense_85_percent_pure_nevonian_steel_plate", "4x gtceu:blue_steel_frame", "gtceu:plascrete", "#gtceu:circuits/ev")
         .inputFluids("gtceu:polytetrafluoroethylene 288")
@@ -103,7 +105,7 @@ ServerEvents.recipes(event => {
         .itemInputs("6x gtceu:zircalloy_plate", "1x gtceu:stainless_steel_frame", "2x gtceu:aluminfrost_large_fluid_pipe")
         .circuit(2)
         .itemOutputs("2x kubejs:fissile_heat_safe_casing")
-        .inputFluids("kubejs:frost 100")
+        .inputFluids("phoenixcore:frost 100")
         .duration(100)
         .EUt(GTValues.VA[GTValues.LV] / 2)
     event.recipes.gtceu.assembler("fission_cooling_casing")
@@ -240,6 +242,21 @@ ServerEvents.recipes(event => {
         .duration(160)
         .circuit(15)
         .EUt(GTValues.VA[GTValues.EV] / 2)
+        // 1. Boron Carbide (B4C) Dust - EV Tier
+event.recipes.gtceu.mixer("boron_carbide_dust")
+    .itemInputs("4x gtceu:boron_dust", "1x gtceu:carbon_dust")
+    .itemOutputs("5x phoenixcore:boron_carbide_dust")
+    .duration(150)
+    .circuit(1)
+    .EUt(GTValues.EV); // Uses the correct EUt for EV
+
+// 2. Niobium Modified Silicon Carbide (Nb-SiC) Dust - IV Tier
+event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
+    .itemInputs("1x gtceu:niobium_dust", "1x gtceu:silicon_dust", "2x gtceu:carbon_dust")
+    .itemOutputs("4x phoenixcore:niobium_modified_silicon_carbide_dust")
+    .duration(200)
+    .circuit(2)
+    .EUt(GTValues.IV); // Uses the correct EUt for IV
 
     event.recipes.gtceu.mixer("space_grade_steel_dust")
         .itemInputs(
@@ -257,6 +274,7 @@ ServerEvents.recipes(event => {
         .chancedInput("1x kubejs:basic_fuel_rod", 5000, 0)
         .itemOutputs("10x gtceu:low_level_radioactive_waste_dust")
         .duration(2200)
+        .addData("required_cooling", 1000)
         .EUt(-GTValues.VA[GTValues.EV])
     event.recipes.gtceu.advanced_pressurized_fission_reactor("fission2")
         .itemInputs("3x kubejs:basic_fuel_rod")

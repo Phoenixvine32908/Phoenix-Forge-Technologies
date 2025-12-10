@@ -424,7 +424,10 @@ const recipesToRemove = [
     "gtceu:research_station/1_x_gtceu_pyrolyse_oven",
     "gtceu:alloy_blast_smelter/extremely_modified_space_grade_steel",
     "gtceu:chemical_reactor/hydrogen_peroxide",
-    "gtceu:large_chemical_reactor/hydrogen_peroxide"
+    "gtceu:large_chemical_reactor/hydrogen_peroxide", 
+    "gtceu:circuit_assembler/electronic_circuit_mv",
+    "gtceu:circuit_assembler/electronic_circuit_mv_soldering_alloy",
+    "gtceu:shaped/electronic_circuit_mv"
 ];
 
 

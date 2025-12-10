@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "kubejs:block/boron_carbide_moderator"
+    }
+  }
+}

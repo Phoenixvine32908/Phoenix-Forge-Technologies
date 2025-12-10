@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "kubejs:block/hydro_kinetic_cooler"
+    },
+    "active=true": {
+      "model": "kubejs:block/hydro_kinetic_cooler_active"
+    }
+  }
+}

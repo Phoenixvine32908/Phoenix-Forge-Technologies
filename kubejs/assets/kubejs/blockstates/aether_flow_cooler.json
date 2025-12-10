@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "kubejs:block/aether_flow_cooler"
+    },
+    "active=true": {
+      "model": "kubejs:block/aether_flow_cooler_active"
+    }
+  }
+}
