@@ -729,29 +729,63 @@ ServerEvents.recipes(event => {
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
             greg.assembler("boron_carbide_moderator")
-        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
-        .inputFluids("gtceu:pcb_coolant 1000")
-        .itemOutputs("gtceu:active_transformer")
+        .itemInputs("4x phoenixcore:boron_carbide_plate", "1x gtceu:frost_reinforced_stained_steel_frame", "1x gtceu:hv_voltage_coil", "#gtceu:circuits/hv")
+        .inputFluids("gtceu:steel 576")
+        .itemOutputs("kubejs:boron_carbide_moderator")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
             greg.assembler("beryllium_moderator")
-        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
-        .inputFluids("gtceu:pcb_coolant 1000")
-        .itemOutputs("gtceu:active_transformer")
+        .itemInputs("4x gtceu:beryllium_plate", "1x gtceu:source_imbued_titanium_frame", "1x gtceu:ev_voltage_coil", "#gtceu:circuits/ev")
+        .inputFluids("gtceu:steel 576")
+        .itemOutputs("kubejs:beryllium_moderator")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
             greg.assembler("niobium_modified_silicon_carbide_moderator")
-        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
-        .inputFluids("gtceu:pcb_coolant 1000")
+        .itemInputs("4x phoenixcore:niobium_modified_silicon_carbide_plate", "1x gtceu:void_touched_tungsten_steel_frame", "1x gtceu:iv_voltage_coil", "#gtceu:circuits/iv")
+        .inputFluids("gtceu:steel 576")
         .itemOutputs("kubejs:niobium_modified_silicon_carbide_moderator")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
-                    greg.assembler("graphite_moderator")
-        .itemInputs("gtceu:iv_transformer_16a", "8x #gtceu:circuits/iv", "8x gtceu:superconductive_honey_double_wire", "10x gtceu:hpic_chip")
-        .inputFluids("gtceu:pcb_coolant 1000")
-        .itemOutputs("kubejs:graphite_moderator")
+            greg.assembler("graphite_moderator")
+        .itemInputs("4x gtceu:steel_plate", "16x gtceu:graphite_dust", "1x gtceu:aurum_steel_frame", "1x gtceu:mv_voltage_coil", "#gtceu:circuits/mv")
+        .inputFluids("gtceu:steel 576")
+        .itemOutputs("phoenixcore:graphite_moderator")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
+        greg.assembler("basic_fission_cooler")
+    .itemInputs(
+        "2x gtceu:aurum_steel_frame", 
+        "3x gtceu:long_steel_rod", // Basic tier uses 3 rods
+        "1x gtceu:aurum_steel_rotor", 
+        "#gtceu:circuits/hv"
+    )
+    .inputFluids("gtceu:distilled_water 576")
+    .itemOutputs("phoenixcore:basic_cooler")
+    .duration(450)
+    .EUt(GTValues.VA[GTValues.HV]);
+    greg.assembler("hydro_kinetic_cooler")
+    .itemInputs(
+        "2x gtceu:titanium_frame", 
+        "2x gtceu:long_source_imbued_titanium_rod", // Advanced tier uses 2 rods
+        "1x gtceu:source_imbued_titanium_rotor", 
+        "#gtceu:circuits/ev"
+    )
+    .inputFluids("gtceu:salt_water 576")
+    .itemOutputs("kubejs:hydro_kinetic_cooler")
+    .duration(450)
+    .EUt(GTValues.VA[GTValues.EV]); // Runs at EV
+    greg.assembler("aether_flow_cooler")
+    .itemInputs(
+        "2x gtceu:tungsten_steel_frame", 
+        "2x gtceu:long_void_touched_tungsten_steel_rod",
+        "1x gtceu:void_touched_tungsten_steel_rotor", 
+        "#gtceu:circuits/iv"
+    )
+    .inputFluids("phoenixcore:frost 576")
+    .itemOutputs("kubejs:aether_flow_cooler")
+    .duration(450)
+    .EUt(GTValues.VA[GTValues.IV]); // Runs at IV
+
 
     // Comb Decanter Assembly in Assembler
     greg.assembler("comb_decanter_recipe_assembler")

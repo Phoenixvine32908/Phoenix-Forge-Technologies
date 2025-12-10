@@ -17,7 +17,7 @@
 deprecateBlock("kubejs:fissile_reaction_safe_casing", "phoenixcore:fissile_reaction_safe_casing", "Fissile Reaction Safe Casing")
 deprecateBlock("kubejs:fissile_heat_safe_casing", "phoenixcore:fissile_heat_safe_casing", "Fissile Heat Safe Casing")
 deprecateBlock("kubejs:fissile_safe_gearbox", "phoenixcore:fissile_safe_gearbox_casing", "Fissile Safe Gearbox Casing")
-deprecateBlock("kubejs:fission_cooling_casing", "phoenixcore:heat_stable_cooler", "Heat Stable Cooler")
+deprecateBlock("kubejs:fission_cooling_casing", "phoenixcore:basic_cooler", "Basic Cooler")
 deprecateBlock("kubejs:base_fission_casing", "phoenixcore:graphite_moderator", "Graphite Moderator")
 
 

@@ -427,7 +427,6 @@ const recipesToRemove = [
     "gtceu:large_chemical_reactor/hydrogen_peroxide", 
     "gtceu:circuit_assembler/electronic_circuit_mv",
     "gtceu:circuit_assembler/electronic_circuit_mv_soldering_alloy",
-    "gtceu:shaped/electronic_circuit_mv"
 ];
 
 
