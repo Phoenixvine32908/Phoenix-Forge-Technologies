@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "kubejs:block/niobium_modified_silicon_carbide_moderator"
+    }
+  }
+}

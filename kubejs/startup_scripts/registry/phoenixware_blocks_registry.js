@@ -97,30 +97,77 @@ StartupEvents.registry("block", phoenixvine => {
         .tagBlock("forge:mineable/wrench")
         .soundType("metal")
 
-    phoenixvine.create('neutronium_moderator', 'phoenixcore:fission_moderator')
-        .displayName('Neutronium Moderator')
-        .EUBoost(100)           // IFissionModeratorType.getEUBoost()
-        .fuelDiscount(250)      // IFissionModeratorType.getFuelDiscount()
-        .tier(2)               // IFissionModeratorType.getTier()
-        .moderatorMaterial(() => GTMaterials.get('neutronium')) 
-        .hardness(2.0)
-        .requiresTool(true)
-        .tagBlock("mineable/pickaxe")
-        .soundType("metal")
-       .texture('kubejs:block/advanced_logic') 
+// --- Fission Moderators ---
 
-    phoenixvine.create('super_quantum_cooler', 'phoenixcore:fission_cooler')
-        .displayName('Super Quantum Cooler')
-        .coolerTemperature(15000)   
-        .coolantUsagePerTick(750)   
-        .tier(2)                  
-        .requiredCoolantMaterialId('gtceu:lead') 
-        .coolerMaterial(() => GTMaterials.get('steel')) 
-        .hardness(10.0)
-        .requiresTool(true)
-        .tagBlock("mineable/pickaxe")
-        .soundType("metal")
-        .texture('kubejs:block/advanced_logic') 
+
+// 2. Boron Carbide Moderator (Stability/Poison Control)
+phoenixvine.create('boron_carbide_moderator', 'phoenixcore:fission_moderator')
+    .displayName('Boron Carbide Moderator')
+    .EUBoost(10) 
+    .fuelDiscount(5) // Quirk: Lower fuel economy for enhanced stability
+    .tier(1) // Low explosion risk
+    .moderatorMaterial(() => GTMaterials.get('boron_carbide')) 
+    .hardness(3.0)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .soundType("metal")
+    .texture('kubejs:block/fission/boron_carbide_moderator');
+
+// 3. Beryllium Moderator (High-Heat Performance)
+phoenixvine.create('beryllium_moderator', 'phoenixcore:fission_moderator')
+    .displayName('Beryllium Moderator')
+    .EUBoost(20) 
+    .fuelDiscount(10) 
+    .tier(3) // Mid explosion risk
+    .moderatorMaterial(() => GTMaterials.get('beryllium')) 
+    .hardness(5.0)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .soundType("metal")
+    .texture('kubejs:block/fission/beryllium_moderator');
+
+// 4. Niobium-Modified SiC Moderator (Max Output & Cooling Enhancer)
+phoenixvine.create('niobium_modified_silicon_carbide_moderator', 'phoenixcore:fission_moderator')
+    .displayName('Nb-SiC Moderator')
+    .EUBoost(25) 
+    .fuelDiscount(5) // Quirk: Highest power but higher risk/cost
+    .tier(5) // High explosion risk
+    .moderatorMaterial(() => GTMaterials.get('niobium_modified_silicon_carbide')) 
+    .hardness(12.0)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .soundType("metal")
+    .texture('kubejs:block/fission/niobium_sic_moderator');
+
+
+// 2. Improved Cooler: Hydro-Kinetic Block (Salt Water)
+phoenixvine.create('hydro_kinetic_cooler', 'phoenixcore:fission_cooler')
+    .displayName('Hydro-Kinetic Cooler')
+    .coolerTemperature(4500) 
+    .coolantUsagePerTick(20) 
+    .tier(3) 
+    .requiredCoolantMaterialId('gtceu:salt_water') 
+    .coolerMaterial(() => GTMaterials.get('titanium')) 
+    .hardness(12.0)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .soundType("metal")
+    .texture('kubejs:block/fission/hydro_kinetic_cooler');
+
+// 3. Advanced Cooler: Aether-Flow Engine (Frost Coolant)
+phoenixvine.create('aether_flow_cooler', 'phoenixcore:fission_cooler')
+    .displayName('Aether-Flow Cooler')
+    .coolerTemperature(8000) 
+    .coolantUsagePerTick(10) 
+    .tier(5) 
+    .requiredCoolantMaterialId('phoenixcore:frost') 
+    .coolerMaterial(() => GTMaterials.get('tungsten_steel')) 
+    .hardness(12.0)
+    .requiresTool(true)
+    .tagBlock("mineable/pickaxe")
+    .soundType("metal")
+    .texture('kubejs:block/fission/aether_flow_cooler');
+
     phoenixvine.create("conductive_honey_coil", "gtceu:active")
         .bloom("gtceu:block/conductive_honey_coil_bloom")
     // The bloom texture should be 'gtceu:block/casings/fusion/superconducting_coil_bloom'

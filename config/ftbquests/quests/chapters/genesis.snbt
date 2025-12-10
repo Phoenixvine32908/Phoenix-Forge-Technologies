@@ -994,6 +994,31 @@
 			x: 7.0d
 			y: -3.0d
 		}
+		{
+			dependencies: ["10ED20D1ED4CABD8"]
+			description: [
+				"In base &bae2&r, there are &achannels&r. &aChannels&r are directly correlated to the amount of &5me devices&r you can have on your network. For example each terminal would be it's own &achannel&r. "
+				""
+				"However, we have &bdecided&r to in favor of turning these &3channels off&r. &bWhy&r, you might ask? Well, the &6gregified ae2 componets&r are already pricey enough, where adding channels to that would be kinda mean. "
+				""
+				""
+				"{@pagebreak}"
+				""
+				"If you want them back on, you can run the command /ae2 channelmode default, 2x, or 4x (infinite is the setting this pack uses.) "
+				""
+				"There are some who prefer the complexity of channels. I can't really blame them, so have at ye and have fun!"
+			]
+			icon: "ae2:fluix_smart_cable"
+			id: "53CA978EDA44DC1F"
+			subtitle: "The digital age has limits?"
+			tasks: [{
+				id: "575CB854BF7A6947"
+				title: "Channels? What are those?"
+				type: "checkmark"
+			}]
+			x: 0.0d
+			y: -2.5d
+		}
 	]
 	title: "Genesis"
 }

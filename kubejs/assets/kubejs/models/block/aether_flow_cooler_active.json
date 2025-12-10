@@ -1,0 +1,7 @@
+{
+  "parent": "gtceu:block/cube_2_layer/all",
+  "textures": {
+    "bot_all": "kubejs:block/fission/aether_flow_cooler",
+    "top_all": "kubejs:block/fission/aether_flow_cooler_active"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "phoenixcore:block/basic_cooler"
+    },
+    "active=true": {
+      "model": "phoenixcore:block/basic_cooler_active"
+    }
+  }
+}

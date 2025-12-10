@@ -113,7 +113,6 @@ StartupEvents.registry("fluid", event => {
         // Fallen Phoenixware (Purely Technological) - ALL FLUIDS:
         ["fading_ember_residue", "thick", 0xFF8C00, 0x8B4513, "Fading Ember Residue"],
         ["true_heat_conductor_unstable", "thin", 0xFFFFFF, 0xFFD700, "True Heat Conductor (Unstable)"],
-        ["frost", "thin", 0xA7D1EB, 0x778899, "Frost"],
         ["phoenix_ash_suspension", "thick", 0x696969, 0xFF4500, "Phoenix Ash Suspension"],
         ["infernal_overload_emulsion", "thick", 0x8B0000, 0xFF6347, "Infernal Overload Emulsion"],
         ["scorched_matrix_fluid", "thick", 0x36454F, 0xFFA07A, "Scorched Matrix Fluid"],

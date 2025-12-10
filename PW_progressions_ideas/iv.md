@@ -3,7 +3,7 @@ Machine: Mixer
 
 Item Inputs: 2x gtceu:crystallized_fluxstone_dust, 1x gtceu:zirconium_dust
 
-Fluid Inputs: kubejs:frost 288, minecraft:water 2000
+Fluid Inputs: phoenixcore:frost 288, minecraft:water 2000
 
 Fluid Outputs: gtceu:cryo_zirconium_binding_solution 2000
 
@@ -16,7 +16,7 @@ Machine: Mixer
 
 Item Inputs: 2x gtceu:crystallized_fluxstone_dust, 1x gtceu:graphite_dust
 
-Fluid Inputs: kubejs:frost 288, minecraft:water 2000
+Fluid Inputs: phoenixcore:frost 288, minecraft:water 2000
 
 Fluid Outputs: gtceu:cryo_graphite_binding_solution 3000
 

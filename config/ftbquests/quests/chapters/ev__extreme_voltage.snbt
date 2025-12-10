@@ -2264,7 +2264,7 @@
 			tasks: [
 				{
 					id: "3341CA14D86A3877"
-					item: "gtceu:advanced_pressurized_fission_reactor"
+					item: "phoenixcore:advanced_pressurized_fission_reactor"
 					type: "item"
 				}
 				{
@@ -2352,7 +2352,7 @@
 				}
 				{
 					id: "4FBAF8435191AB3B"
-					item: "gtceu:heat_exchanger"
+					item: "phoenixcore:heat_exchanger"
 					type: "item"
 				}
 			]

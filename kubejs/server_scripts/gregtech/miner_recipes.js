@@ -37,7 +37,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.large_chemical_reactor("voidic_drilling_fluid_recipe_base") // Renamed ID
         .inputFluids([
             "gtceu:drilling_fluid 500",
-            "kubejs:frost 250",
+            "phoenixcore:frost 250",
             "kubejs:cryo_ember_fluid 25000",
             "gtceu:source_of_magic 100"
         ])
