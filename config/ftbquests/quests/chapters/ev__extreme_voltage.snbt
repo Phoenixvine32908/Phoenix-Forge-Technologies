@@ -2247,7 +2247,7 @@
 			description: [
 				"This is the more advanced version of the Pressurized Fission Reactor, operating at &bHV tier&r. Just like its predecessor, it utilizes &aUranium Oxide Fuel Rods&r as fuel."
 				""
-				"However, your primary focus for this machine shifts to the &bspecial steam&r it produces, as the direct power generation from the main reactor unit isn't its strongest aspect. You will then push this steam into the &ePressurized Fissile Turbine&r to extract the bulk of your power, bringing you into the &eEV tier&r."
+				"However, your primary focus for this machine shifts to the &bspecial steam&r it produces, as the direct power generation from the main reactor unit isn't its strongest aspect. You will then push this steam into the &eHeat Exchanger&r to extract the bulk of your power, bringing you into the &eEV tier&r."
 				""
 				"While the initial setup cost might seem daunting, these machines are designed to scale significantly, making them viable far into your progression."
 			]
@@ -2270,25 +2270,25 @@
 				{
 					count: 24L
 					id: "64D8031E00E61F1E"
-					item: { Count: 24, id: "kubejs:fission_cooling_casing" }
+					item: "kubejs:hydro_kinetic_cooler"
 					type: "item"
 				}
 				{
 					count: 40L
 					id: "6CBF9877C137F035"
-					item: "kubejs:fissile_reaction_safe_casing"
+					item: "phoenixcore:fissile_reaction_safe_casing"
 					type: "item"
 				}
 				{
 					count: 9L
 					id: "2C88A9E908BE8F48"
-					item: "kubejs:fissile_heat_safe_casing"
+					item: "phoenixcore:fissile_heat_safe_casing"
 					type: "item"
 				}
 				{
 					count: 38L
 					id: "5417FF8E99E672E4"
-					item: "kubejs:base_fission_casing"
+					item: "phoenixcore:graphite_moderator"
 					type: "item"
 				}
 				{
@@ -2335,19 +2335,19 @@
 				{
 					count: 11L
 					id: "0CA90FE97F4B121E"
-					item: { Count: 11, id: "kubejs:fissile_safe_gearbox" }
+					item: "phoenixcore:fissile_safe_gearbox_casing"
 					type: "item"
 				}
 				{
 					count: 91L
 					id: "0322A536674671CE"
-					item: { Count: 99, id: "kubejs:fissile_reaction_safe_casing" }
+					item: "phoenixcore:fissile_reaction_safe_casing"
 					type: "item"
 				}
 				{
 					count: 6L
 					id: "193EA28F2CCA90DD"
-					item: { Count: 6, id: "kubejs:fissile_heat_safe_casing" }
+					item: "phoenixcore:fissile_heat_safe_casing"
 					type: "item"
 				}
 				{
@@ -2622,6 +2622,7 @@
 			dependencies: ["39E7997F3080250A"]
 			description: ["These &c&l&oamazing&r little devices stand out from other peer-to-peer (P2P) systems due to one &e&l&nspecial&r little &5&l&npart&r. Unlike most P2P setups where you have to actively &b&lpush&r data, these innovative devices &d&lautomatically pull&r it in! This unique \"&9&lauto-pull&r\" functionality makes them incredibly efficient and user-friendly."]
 			id: "571E8181C0A35BA4"
+			invisible: true
 			size: 0.5d
 			subtitle: "Extracting Time"
 			tasks: [{

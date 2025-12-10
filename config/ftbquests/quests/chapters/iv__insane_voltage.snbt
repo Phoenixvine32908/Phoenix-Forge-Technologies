@@ -53,7 +53,6 @@
 			description: [
 				"If you already made and centrifuged &aRare Earth&r, that's great! If you haven't, you can obtain it as a &9Byproduct&r from various ores, or from centrifuging &dMonazite&r."
 				""
-				"To extract the &aRare Earths&r&r, you should use a &3Centrifuge&r &4as high a tier as possible&r, due to the increased chance of bonus outputs."
 				"{@pagebreak}"
 				"The elements you can obtain are:"
 				""
@@ -1662,11 +1661,11 @@
 				type: "item"
 			}]
 			size: 0.77d
-			subtitle: "Materiel from combs?"
+			subtitle: "Material from combs?"
 			tasks: [
 				{
 					id: "287E6E7AD252E31D"
-					item: "gtceu:comb_decanter"
+					item: "phoenixcore:comb_decanter"
 					type: "item"
 				}
 				{
@@ -1731,7 +1730,7 @@
 			tasks: [
 				{
 					id: "25BF7D0D64F19D28"
-					item: "gtceu:simulated_colony"
+					item: "phoenixcore:simulated_colony"
 					type: "item"
 				}
 				{
@@ -1777,6 +1776,7 @@
 					type: "item"
 				}
 			]
+			title: "Simulated Colony"
 			x: 7.7d
 			y: 0.77d
 		}
@@ -1808,7 +1808,7 @@
 			tasks: [
 				{
 					id: "32BAD0FE02B842B4"
-					item: "gtceu:apis_progenitor"
+					item: "phoenixcore:apis_progenitor"
 					type: "item"
 				}
 				{
@@ -1875,7 +1875,7 @@
 			tasks: [
 				{
 					id: "3946534B396AA30D"
-					item: "gtceu:swarm_nuturer"
+					item: "phoenixcore:swarm_nurturer"
 					type: "item"
 				}
 				{
@@ -1933,31 +1933,54 @@
 			tasks: [
 				{
 					id: "2D12940726DD8B8F"
-					item: "gtceu:high_performace_breeder_reactor"
+					item: "phoenixcore:high_performance_breeder_reactor"
 					type: "item"
 				}
 				{
 					count: 16L
 					id: "4F44A4037156A42D"
-					item: { Count: 16, id: "kubejs:fission_cooling_casing" }
+					item: "kubejs:aether_flow_cooler"
 					type: "item"
 				}
 				{
 					count: 120L
 					id: "4B66FFD4FB0AA08B"
-					item: { Count: 120, id: "kubejs:fissile_reaction_safe_casing" }
+					item: "phoenixcore:fissile_reaction_safe_casing"
 					type: "item"
 				}
 				{
 					count: 42L
 					id: "7B88AC058DEA3227"
-					item: { Count: 42, id: "kubejs:fissile_heat_safe_casing" }
+					item: "phoenixcore:fissile_heat_safe_casing"
 					type: "item"
 				}
 				{
 					count: 56L
 					id: "08A0838EB6725BCE"
-					item: { Count: 56, id: "kubejs:base_fission_casing" }
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "phoenixcore:graphite_moderator"
+								}
+								{
+									Count: 1b
+									id: "kubejs:boron_carbide_moderator"
+								}
+								{
+									Count: 1b
+									id: "kubejs:niobium_modified_silicon_carbide_moderator"
+								}
+								{
+									Count: 1b
+									id: "kubejs:beryllium_moderator"
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{

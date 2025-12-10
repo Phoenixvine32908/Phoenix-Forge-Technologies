@@ -518,7 +518,10 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_large_engraving_laser"
     ],
     "phoenixcore:high_performance_breeder_reactor": [
-        "gtultimate.custom.tooltip_high_performace_breeder_reactor"
+        "gtultimate.custom.tooltip_high_performace_breeder_reactor",
+        "gtultimate.custom.tooltip_fission",
+        "gtultimate.custom.tooltip_fission2",
+        "gtultimate.custom.tooltip_fission3"
     ],
     "phoenixcore:pressurized_fission_reactor": [
         "gtultimate.custom.tooltip_pressurized_fission_reactor"
