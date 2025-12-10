@@ -1266,8 +1266,8 @@
 				type: "item"
 			}]
 			title: "Ammonia"
-			x: 6.75d
-			y: -0.75d
+			x: 6.6d
+			y: 0.33d
 		}
 		{
 			description: [
@@ -1580,6 +1580,7 @@
 				"7CB0B82B219B75DC"
 				"06F2DEB21E1A7084"
 				"390E59F05132FCB8"
+				"1FAE0CCEAC76A293"
 			]
 			description: [
 				"The &ePressurized Fission Reactor&r stands ready to provide immense power for your operations. Fuel it with &aUranium Oxide Fuel Rods&r to generate a significant output of energy."
@@ -1605,49 +1606,11 @@
 			}]
 			size: 0.9d
 			subtitle: "Your First Taste of Fission"
-			tasks: [
-				{
-					id: "15FE5AE8606B3F6E"
-					item: "phoenixcore:pressurized_fission_reactor"
-					type: "item"
-				}
-				{
-					count: 4L
-					id: "2B3C52B0526E9F8A"
-					item: { Count: 4, id: "kubejs:fissile_heat_safe_casing" }
-					type: "item"
-				}
-				{
-					count: 12L
-					id: "59B888F24A171F9D"
-					item: { Count: 12, id: "kubejs:fissile_reaction_safe_casing" }
-					type: "item"
-				}
-				{
-					count: 7L
-					id: "23671CFAF6AB71D7"
-					item: { Count: 7, id: "kubejs:base_fission_casing" }
-					type: "item"
-				}
-				{
-					count: 6L
-					id: "55A3998E3C8BC6D5"
-					item: { Count: 6, id: "gtceu:kanthal_coil_block" }
-					type: "item"
-				}
-				{
-					count: 40L
-					id: "6C1033E035EC8D0E"
-					item: { Count: 40, id: "minecraft:tinted_glass" }
-					type: "item"
-				}
-				{
-					count: 24L
-					id: "701BF1E191A90A04"
-					item: { Count: 24, id: "minecraft:ice" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				id: "15FE5AE8606B3F6E"
+				item: "phoenixcore:pressurized_fission_reactor"
+				type: "item"
+			}]
 			x: 6.75d
 			y: -1.7999999999999998d
 		}
@@ -1673,7 +1636,7 @@
 				item: "gtceu:zircalloy_ingot"
 				type: "item"
 			}]
-			x: 7.5d
+			x: 7.875d
 			y: -1.125d
 		}
 		{
@@ -1710,8 +1673,8 @@
 				item: "gtceu:uranium_oxide_bucket"
 				type: "item"
 			}]
-			x: 8.25d
-			y: -1.875d
+			x: 8.4d
+			y: -2.1d
 		}
 		{
 			dependencies: ["0021051273D48936"]
@@ -1732,6 +1695,84 @@
 			}]
 			x: 3.375d
 			y: -4.125d
+		}
+		{
+			description: [
+				"Along with the &abase structure&r and the &afuel&r for your &2fission reactors&r, you also need &afission&r &6moderators&r and &bcoolers&r. The &cexplosion strength&r is decided by the tier of &bcooler&r you use. As they say, &chigh risk&r:&6high reward&r."
+				""
+				"&bCoolers&r: These are &o&cnecessary&r&r to make sure your reactor doesn't &4&lblow up&r&r. These have a &3linear progression&r of tiers. Higher tier coolers are needed for higher tier recipes, so &o&cmake sure&r&r that you check &aemi&r before you start. Each cooler has it's own &bcoolant&r and &3cooling power&r. Moreover, each cooler block shows you the relevant info on shift. "
+				""
+				"Your first cooler is aptly named, &bBasic Cooler&r. Good luck and don't blame me if your base has an &l&cexplosive suprise&r&r!"
+				""
+				""
+				"{@pagebreak}"
+				""
+				"&6Moderators&r: These are &o&cnecessary&r&r to form your reactors and they provide some &6beautiful benefits&r. Each &6moderator&r has it's own &aEU Boost&r (power generation bonus) and &9Fuel Discount&r (recipe duration bonus). Unlike &bcoolers&r, the reactors &o&adon't really care&r&r what &6moderator&r it has. You can only have &cone type&r of &6moderator&r per reactor, so &o&l&cpick carefully&r&r&r. "
+				""
+				"Your first &6moderator&r is the graphite moderator. With a EU Boost of &65%&r and &9Fuel Discount&r of &61%&r, this moderator will provide a delightful base for your future fissile goals. "
+			]
+			icon: "phoenixcore:graphite_moderator"
+			id: "1FAE0CCEAC76A293"
+			shape: "rsquare"
+			size: 0.75d
+			subtitle: "Man, I thought fission was going to be simple."
+			tasks: [
+				{
+					id: "104451455A68F7AE"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "kubejs:hydro_kinetic_cooler"
+								}
+								{
+									Count: 1b
+									id: "kubejs:aether_flow_cooler"
+								}
+								{
+									Count: 1b
+									id: "phoenixcore:basic_cooler"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "20699585CBA4BCAE"
+					item: {
+						Count: 1
+						id: "itemfilters:or"
+						tag: {
+							items: [
+								{
+									Count: 1b
+									id: "phoenixcore:graphite_moderator"
+								}
+								{
+									Count: 1b
+									id: "kubejs:boron_carbide_moderator"
+								}
+								{
+									Count: 1b
+									id: "kubejs:niobium_modified_silicon_carbide_moderator"
+								}
+								{
+									Count: 1b
+									id: "kubejs:beryllium_moderator"
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+			]
+			title: "Moderators and Coolers."
+			x: 7.125d
+			y: -0.75d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]
