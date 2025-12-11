@@ -103,8 +103,8 @@ StartupEvents.registry("block", phoenixvine => {
 // 2. Boron Carbide Moderator (Stability/Poison Control)
 phoenixvine.create('boron_carbide_moderator', 'phoenixcore:fission_moderator')
     .displayName('Boron Carbide Moderator')
-    .EUBoost(8) 
-    .fuelDiscount(4) // Quirk: Lower fuel economy for enhanced stability
+    .EUBoost(2) 
+    .fuelDiscount(1) // Quirk: Lower fuel economy for enhanced stability
     .tier(1) // Low explosion risk
     .moderatorMaterial(() => GTMaterials.get('boron_carbide')) 
     .hardness(3.0)
@@ -116,9 +116,8 @@ phoenixvine.create('boron_carbide_moderator', 'phoenixcore:fission_moderator')
 // 3. Beryllium Moderator (High-Heat Performance)
 phoenixvine.create('beryllium_moderator', 'phoenixcore:fission_moderator')
     .displayName('Beryllium Moderator')
-    .EUBoost(10) 
-    .fuelDiscount(8) 
-    .tier(3) // Mid explosion risk
+    .EUBoost(2) 
+    .fuelDiscount(1) // Mid explosion risk
     .moderatorMaterial(() => GTMaterials.get('beryllium')) 
     .hardness(5.0)
     .requiresTool(true)
@@ -143,7 +142,7 @@ phoenixvine.create('niobium_modified_silicon_carbide_moderator', 'phoenixcore:fi
 // 2. Improved Cooler: Hydro-Kinetic Block (Salt Water)
 phoenixvine.create('hydro_kinetic_cooler', 'phoenixcore:fission_cooler')
     .displayName('Hydro-Kinetic Cooler')
-    .coolerTemperature(2000) 
+    .coolerTemperature(208) 
     .coolantUsagePerTick(20) 
     .tier(2) 
     .requiredCoolantMaterialId('gtceu:salt_water') 
@@ -157,7 +156,7 @@ phoenixvine.create('hydro_kinetic_cooler', 'phoenixcore:fission_cooler')
 // 3. Advanced Cooler: Aether-Flow Engine (Frost Coolant)
 phoenixvine.create('aether_flow_cooler', 'phoenixcore:fission_cooler')
     .displayName('Aether-Flow Cooler')
-    .coolerTemperature(3000) 
+    .coolerTemperature(1025) 
     .coolantUsagePerTick(10) 
     .tier(3) 
     .requiredCoolantMaterialId('phoenixcore:frost') 
@@ -167,6 +166,7 @@ phoenixvine.create('aether_flow_cooler', 'phoenixcore:fission_cooler')
     .tagBlock("mineable/pickaxe")
     .soundType("metal")
     .texture('kubejs:block/fission/aether_flow_cooler');
+ 
 
     phoenixvine.create("conductive_honey_coil", "gtceu:active")
         .bloom("gtceu:block/conductive_honey_coil_bloom")

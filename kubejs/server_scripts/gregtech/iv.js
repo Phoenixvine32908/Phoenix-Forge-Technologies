@@ -526,6 +526,7 @@ ServerEvents.recipes(event => {
         .itemOutputs("4x gtceu:irradiated_uranium_236_nugget", "1x gtceu:depleted_plutonium_241_nugget")
         .outputFluids("gtceu:hot_sodium_potassium 64000", "gtceu:critical_steam 120000")
         .duration(4500)
+        .addData("required_cooling", 20000)
         .EUt(-GTValues.VA[GTValues.UHV] * 2)
 
     // Reprocessing Spent Plutonium-241/Uranium-236 Fuel in Large Chemical Reactor
@@ -571,6 +572,7 @@ ServerEvents.recipes(event => {
         .itemOutputs("4x gtceu:irradiated_thorium_nugget", "1x gtceu:spent_uranium_235_nugget")
         .outputFluids("gtceu:hot_sodium_potassium 500", "gtceu:critical_steam 1000")
         .duration(3500)
+        .addData("required_cooling", 10000)
         .EUt(-GTValues.VA[GTValues.ZPM] * 2);
 
     // Breeder Reactor: Thorium/Uranium-233 Cycle with U-233 Driver
@@ -580,6 +582,7 @@ ServerEvents.recipes(event => {
         .itemOutputs("4x gtceu:irradiated_thorium_nugget", "1x gtceu:spent_uranium_233_nugget")
         .outputFluids("gtceu:hot_sodium_potassium 500", "gtceu:critical_steam 1000")
         .duration(3000)
+        .addData("required_cooling", 15000)
         .EUt(-GTValues.VA[GTValues.UV] * 2);
 
     // Reprocessing Irradiated Thorium Rods to Uranium-233 in Large Chemical Reactor
