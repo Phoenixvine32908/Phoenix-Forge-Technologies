@@ -524,11 +524,17 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_fission3"
     ],
     "phoenixcore:pressurized_fission_reactor": [
-        "gtultimate.custom.tooltip_pressurized_fission_reactor"
+        "gtultimate.custom.tooltip_pressurized_fission_reactor",
+        "gtultimate.custom.tooltip_fission",
+        "gtultimate.custom.tooltip_fission2",
+        "gtultimate.custom.tooltip_fission3"
     ],
     "phoenixcore:advanced_pressurized_fission_reactor": [
         "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor",
-        "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor2"
+        "gtultimate.custom.tooltip_advanced_pressurized_fission_reactor2",
+        "gtultimate.custom.tooltip_fission",
+        "gtultimate.custom.tooltip_fission2",
+        "gtultimate.custom.tooltip_fission3"
     ],
     "gtceu:large_maceration_tower": [
         "gtultimate.custom.tooltip_large_maceration_tower"
