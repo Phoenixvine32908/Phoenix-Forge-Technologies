@@ -854,10 +854,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .fluid()
         .color(0xFFF9E3)
         .iconSet("dull");
-    event.create("sugar_water")
-        .fluid()
-        .color(0xFFFFF0)
-        .iconSet("dull");
     event.create("ammonium_persulfate")
         .fluid()
         .color(0xF0FFFF)
