@@ -24,7 +24,7 @@ ServerEvents.recipes(phoenix => {
             name: "Rancher Bee",
         })).weakNBT())
         .notConsumable("minecraft:milk_bucket")
-        .inputFluids("gtceu:sugar_water 100")
+        .inputFluids("phoenixcore:sugar_water 100")
         .itemOutputs("productivebees:honeycomb_milky")
         .duration(400)
         .EUt(GTValues.VA[GTValues.IV] / 2)
@@ -211,7 +211,7 @@ ServerEvents.recipes(phoenix => {
                 .duration(1200)
                 .notConsumable(IngredientHelper.weakNBT(Item.of("productivebees:bee_cage", {entity: "productivebees:lumber_bee",name: "Lumber Bee"})))
                 .notConsumable(type.pollination)
-                .inputFluids("gtceu:sugar_water 100")
+                .inputFluids("phoenixcore:sugar_water 100")
                 .itemOutputs(Item.of(type.log).withCount(64));
         });
     }
@@ -334,7 +334,7 @@ ServerEvents.recipes(phoenix => {
                 .notConsumable(IngredientHelper.weakNBT(Item.of("productivebees:bee_cage", inputLuVBeeNbt)))
                 .itemInputs("kubejs:honey_comb_base")
                 .notConsumable(type.pollination)
-                .inputFluids("gtceu:sugar_water 100")
+                .inputFluids("phoenixcore:sugar_water 100")
                 .itemOutputs(LuVoutputComb.withCount(1));
         });
     }
@@ -379,7 +379,7 @@ ServerEvents.recipes(phoenix => {
             .duration(duration)
             .notConsumable(inputItem.withCount(1).weakNBT())
             .itemInputs(pollinationBlock)
-            .inputFluids("gtceu:sugar_water 100")
+            .inputFluids("phoenixcore:sugar_water 100")
             .itemInputs("kubejs:honey_comb_base")
             .itemOutputs(output);
     }
