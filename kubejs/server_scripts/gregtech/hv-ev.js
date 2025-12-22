@@ -222,7 +222,7 @@ ServerEvents.recipes(event => {
         .circuit(15)
         .EUt(GTValues.VA[GTValues.HV] / 2)
     event.recipes.gtceu.mixer("void_touched_tungsten_steel")
-        .itemInputs("4x gtceu:tungsten_dust", "4x gtceu:voidglass_shard_dust", "2x gtceu:vanadium_steel_dust")
+        .itemInputs("4x gtceu:tungsten_dust", "4x phoenixcore:voidglass_shard_dust", "2x gtceu:vanadium_steel_dust")
         .inputFluids("gtceu:liquid_ender_air 500")
         .itemOutputs("8x gtceu:void_touched_tungsten_steel_dust")
         .duration(160)
@@ -269,7 +269,11 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .chancedOutput("gtceu:low_level_radioactive_waste_ingot", 500, 0)
         .addData("required_cooling", 5500)
         .duration(6000)
-
+    event.recipes.gtceu.gas_collector("void_air")
+        .circuit(4)
+        .outputFluids("gtceu:air 10000")
+        .EUt(GTValues.VA[GTValues.LV] / 2)
+        .duration(200)
 
     event.recipes.gtceu.centrifuge("fissio")
         .itemInputs("5x gtceu:low_level_radioactive_waste_dust")
@@ -420,7 +424,7 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .itemInputs(
             "4x gtceu:exquisite_coke_gem",
             "16x gtceu:diamond_dust",
-            "2x gtceu:nevvonian_iron_dust")
+            "2x phoenixcore:nevvonian_iron_dust")
         .inputFluids("gtceu:source_of_magic 1200", "gtceu:titanium 250")
         .outputFluids("gtceu:titanium_tetrachloride 100")
         .itemOutputs("4x gtceu:85_percent_pure_nevonian_steel_dust")

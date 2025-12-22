@@ -6,19 +6,12 @@ Registry for custom ores
 GTCEuStartupEvents.registry("gtceu:material", event => {
 
     // Existing Material
-    event.create("fluorite")
-        .gem().ore()
-        .color(0x0c9949).iconSet("diamond")
-        .components("1x calcium", "2x fluorine")
+
 
     // ⚡ ZPM–UV Tier
     event.create("quantariumite")
         .ore().dust()
         .color(0x7e00ff).iconSet("diamond")
-
-    event.create("nevvonian_iron")
-        .ore().ingot()
-        .color(0x7A687F).iconSet("diamond")
         
 
 
@@ -52,9 +45,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x00cfff).iconSet("diamond")
 
 
-    event.create("crystallized_fluxstone")
-        .ore().dust()
-        .color(0xd4bfff).iconSet("diamond")
 
 
     event.create("quantum_entropite")
@@ -80,10 +70,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x77e3ff).iconSet("diamond")
 
 
-    // 🔥 Nether Addition
-    event.create("ignisium")
-        .ore().dust() // Could be a fiery dust
-        .color(0xFF4500).iconSet("diamond") // Orange-red color
+
 
 
     // 🌀 UEV Tier

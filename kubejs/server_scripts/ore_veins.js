@@ -56,11 +56,11 @@ GTCEuServerEvents.oreVeins(event => {
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
                 .layer(l => l.weight(35).mat(GTMaterials.Diamond).size(1, 2))
-                .layer(l => l.weight(35).mat(GTMaterials.get("fluorite")).size(1, 2))
+                .layer(l => l.weight(35).mat(PhoenixOres.FLUORITE).size(1, 2))
             )
         )
         vein.surfaceIndicatorGenerator(indicator => indicator
-            .surfaceRock(GTMaterials.get("fluorite"))
+            .surfaceRock(PhoenixOres.FLUORITE)
             .placement("above")
         )
 
@@ -113,13 +113,13 @@ GTCEuServerEvents.oreVeins(event => {
         vein.heightRangeUniform(-40, 80)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
-                .layer(l => l.weight(35).mat(GTMaterials.get("nevvonian_iron")).size(1, 2))
-                .layer(l => l.weight(20).mat(GTMaterials.get("polarity_flipped_bismuthite")).size(1, 2))
-                .layer(l => l.weight(25).mat(GTMaterials.get("voidglass_shard")).size(1, 2))
+                .layer(l => l.weight(35).mat(PhoenixOres.NEVVONIAN_IRON).size(1, 2))
+                .layer(l => l.weight(20).mat(PhoenixOres.POLARITY_FLIPPED_BISMUTHITE).size(1, 2))
+                .layer(l => l.weight(25).mat(PhoenixOres.VOIDGLASS_SHARD).size(1, 2))
             )
         )
         vein.surfaceIndicatorGenerator(indicator => indicator
-            .surfaceRock(GTMaterials.get("nevvonian_iron"))
+            .surfaceRock(PhoenixOres.NEVVONIAN_IRON)
             .placement("above")
         )
 
