@@ -178,7 +178,7 @@ ServerEvents.recipes(event => {
 
     // Liquid Void Touched Tungsten Steel in Alloy Blast Smelter
     greg.alloy_blast_smelter("loquid_void_touched_tungsten_steel")
-        .itemInputs("4x gtceu:tungsten_dust", "4x gtceu:voidglass_shard_dust", "2x gtceu:molybdenum_dust")
+        .itemInputs("4x gtceu:tungsten_dust", "4x phoenixcore:voidglass_shard_dust", "2x gtceu:molybdenum_dust")
         .circuit(5)
         .inputFluids("gtceu:liquid_ender_air 100")
         .outputFluids("gtceu:molten_void_touched_tungsten_steel 1152")
@@ -220,7 +220,7 @@ ServerEvents.recipes(event => {
 
     // Liquid Void Touched Tungsten Steel (Boosted) in Alloy Blast Smelter
     greg.alloy_blast_smelter("loquid_void_touched_tungsten_steel_boosted")
-        .itemInputs("4x gtceu:tungsten_dust", "4x gtceu:voidglass_shard_dust", "2x gtceu:molybdenum_dust")
+        .itemInputs("4x gtceu:tungsten_dust", "4x phoenixcore:voidglass_shard_dust", "2x gtceu:molybdenum_dust")
         .circuit(15)
         .inputFluids("gtceu:liquid_ender_air 100", "gtceu:helium 100")
         .outputFluids("gtceu:molten_void_touched_tungsten_steel 1152")
@@ -230,7 +230,7 @@ ServerEvents.recipes(event => {
 
     // Resonant Rhodium Alloy Dust in Mixer
     greg.mixer("resonant_rhodium_alloy")
-        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x gtceu:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
+        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x phoenixcore:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
         .inputFluids("thermal:ender 144")
         .itemOutputs("13x gtceu:resonant_rhodium_alloy_dust")
         .EUt(GTValues.VA[GTValues.IV])
@@ -239,7 +239,7 @@ ServerEvents.recipes(event => {
 
     // Molten Resonant Rhodium Alloy (Gas) in Alloy Blast Smelter
     greg.alloy_blast_smelter("molten_resonant_rhodium_alloy_gas")
-        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x gtceu:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
+        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x phoenixcore:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
         .circuit(15)
         .inputFluids("thermal:ender 1144", "gtceu:argon 100")
         .outputFluids("gtceu:molten_resonant_rhodium_alloy 2016")
@@ -249,7 +249,7 @@ ServerEvents.recipes(event => {
 
     // Molten Resonant Rhodium Alloy in Alloy Blast Smelter
     greg.alloy_blast_smelter("molten_resonant_rhodium_alloy")
-        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x gtceu:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
+        .itemInputs("3x gtceu:rhodium_dust", "4x gtceu:palladium_dust", "2x phoenixcore:polarity_flipped_bismuthite_dust", "4x gtceu:cerium_dust")
         .circuit(5)
         .inputFluids("thermal:ender 1144")
         .outputFluids("gtceu:molten_resonant_rhodium_alloy 2016")
@@ -380,15 +380,15 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Sugar Water in Chemical Reactor
-    greg.chemical_reactor("sugar_water")
+    greg.large_chemical_reactor("sugar_water")
         .inputFluids("gtceu:glucose 250", "gtceu:fructose 250", "gtceu:distilled_water 1000")
-        .outputFluids("gtceu:sugar_water 2000")
+        .outputFluids("phoenixcore:sugar_water 2000")
         .duration(480)
         .EUt(GTValues.VA[GTValues.HV] / 2)
 
     // Sugar and Molasses Production in Chemical Reactor
     greg.chemical_reactor("sugar_and_molasses_production")
-        .inputFluids("gtceu:sugar_water 1000")
+        .inputFluids("phoenixcore:sugar_water 1000")
         .itemOutputs("64x minecraft:sugar")
         .outputFluids("gtceu:molasses 200")
         .duration(680)
@@ -465,7 +465,7 @@ ServerEvents.recipes(event => {
     // Cryo Zirconium Binding Solution in Mixer
     greg.mixer("cryo_zirconium_binding_solution")
         .inputFluids("phoenixcore:frost 288", "minecraft:water 2000")
-        .itemInputs("2x gtceu:crystallized_fluxstone_dust", "1x gtceu:zirconium_dust")
+        .itemInputs("2x phoenixcore:crystallized_fluxstone_dust", "1x gtceu:zirconium_dust")
         .outputFluids("gtceu:cryo_zirconium_binding_solution 2000")
         .duration(150)
         .EUt(GTValues.VA[GTValues.EV]);
@@ -473,7 +473,7 @@ ServerEvents.recipes(event => {
     // Cryo Graphite Binding Solution in Mixer
     greg.mixer("cryo_graphite_binding_solution")
         .inputFluids("phoenixcore:frost 288", "minecraft:water 2000")
-        .itemInputs("2x gtceu:crystallized_fluxstone_dust", "1x gtceu:graphite_dust")
+        .itemInputs("2x phoenixcore:crystallized_fluxstone_dust", "1x gtceu:graphite_dust")
         .outputFluids("gtceu:cryo_graphite_binding_solution 3000")
         .duration(175)
         .EUt(GTValues.VA[GTValues.EV]);
@@ -817,7 +817,7 @@ ServerEvents.recipes(event => {
     // Simulated Colony Assembly in Assembler
     greg.assembler("simulated_colony_recipe_assembler")
         .itemInputs("2x gtceu:source_imbued_titanium_gear", "32x #minecraft:flowers", "12x #forge:dyes", "3x #gtceu:circuits/iv", "gtceu:iv_machine_hull", "16x productivebees:honey_treat")
-        .inputFluids("gtceu:sugar_water 1000")
+        .inputFluids("phoenixcore:sugar_water 1000")
         .itemOutputs("phoenixcore:simulated_colony")
         .EUt(GTValues.VA[GTValues.IV])
         .duration(900)
@@ -873,7 +873,7 @@ ServerEvents.recipes(event => {
 
     // Recipe for Advanced Quin-Naquadian Alloy (using Exotic Fission Concentrate)
     greg.large_chemical_reactor("advanced_quin_naquadian_alloy_synthesis")
-        .itemInputs("2x gtceu:naquadah_alloy_dust", "1x gtceu:exotic_fissile_materials_clump_dust", "1x gtceu:nevvonian_iron_dust")
+        .itemInputs("2x gtceu:naquadah_alloy_dust", "1x gtceu:exotic_fissile_materials_clump_dust", "1x phoenixcore:nevvonian_iron_dust")
         .inputFluids("gtceu:critical_steam 500")
         .itemOutputs("5x gtceu:advanced_quin_naquadian_alloy_dust")
         .duration(200)

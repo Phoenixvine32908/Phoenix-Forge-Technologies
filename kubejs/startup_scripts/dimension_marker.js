@@ -5,7 +5,7 @@
 GTCEuStartupEvents.registry("gtceu:dimension_marker", event => {
     // Void Dim
     event.create("javd:void")
-        .iconSupplier(() => Item.of("telepastries:custom_cake").getItem())
+        .iconSupplier(() => Item.of("javd:portal_block").getItem())
         .tier(0)
         .overrideName("Void Dimension")
 

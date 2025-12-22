@@ -106,38 +106,4 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
         .workableCasingModel("gtceu:block/casings/solid/machine_casing_solid_steel",
             "gtceu:block/multiblock/pyrolyse_oven");
 
-    event.create("high_energy_matter_mixer", "multiblock")
-        .rotationState(RotationState.NON_Y_AXIS)
-        .recipeTypes(GCYMRecipeTypes.ALLOY_BLAST_RECIPES)
-        .recipeModifiers([GTRecipeModifiers.PARALLEL_HATCH, GTRecipeModifiers.BATCH_MODE])
-        .appearanceBlock(GTBlocks.CASING_STEEL_SOLID)
-        .pattern(definition => FactoryBlockPattern.start()
-            .aisle("AABBBAAAAAAAAABBBAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AABBBAAAAAAAAABBBAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA")
-            .aisle("ABBBBBAAAAAAABBBBBA", "ACAEACAAAAAAACAEACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAEACA", "ABBFBBAAAAAAABBFBBA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA")
-            .aisle("BBBBBBBBBBBBBBBBBBB", "CAEGEACABBBACAEGEAC", "CAAEAACAAAAACAAEAAC", "CAAEAACAAAAACAAEAAC", "CAAEAACAAAAACAAEAAC", "CAAEAACAAAAACAAEAAC", "CAEGEACAAAAACAEGEAC", "BBBHBBBAAAAABBBHBBB", "AAAIAAAAAAAAAAAIAAA", "AAAIAAAAAAAAAAAIAAA", "AAAIIAAAAAAAAAIIAAA", "AAAAIIIAAAAAIIIAAAA", "AAAAAAIIIIIIIAAAAAA", "AAAAAAAAAAAAAAAAAAA")
-            .aisle("BBBBBBBBBBBBBBBBBBB", "CEGGGECBBBBBCEGGGEC", "CAEGEACBBBBBCAEGEAC", "CAEGEACAAAAACAEGEAC", "CAEGEACAAAAACAEGEAC", "CAEGEACAAAAACAEGEAC", "CEGGGECAAAAACEGGGEC", "BBHJHBBAAAAABBHJHBB", "AAIJIAAAAAAAAAIJIAA", "AAIJIAAAAAAAAAIJIAA", "AAIJJIIAAAAAIIJJIAA", "AAAIJJJIIIIIJJJIAAA", "AAAAIIJJJJJJJIIAAAA", "AAAAAAIIIIIIIAAAAAA")
-            .aisle("BBBBBBBBBBBBBBBBBBB", "CAEGEACBBKBBCAEGEAC", "CAAEAACBAAABCAAEAAC", "CAAEAACAAAAACAAEAAC", "CAAEAACAAAAACAAEAAC", "CAAEAACAAAAACAAEAAC", "CAEGEACAAAAACAEGEAC", "BBBHBBBAAAAABBBHBBB", "AAAIAAAAAAAAAAAIAAA", "AAAIAAAAAAAAAAAIAAA", "AAAIIAAAAAAAAAIIAAA", "AAAAIIIAAAAAIIIAAAA", "AAAAAAIIIIIIIAAAAAA", "AAAAAAAAAAAAAAAAAAA")
-            .aisle("ABBBBBAAAAAAABBBBBA", "ACAEACAAAAAAACAEACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAAACA", "ACAAACAAAAAAACAAACA", "ACAEACAAAAAAACAEACA", "ABBBBBAAAAAAABBBBBA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA")
-            .aisle("AABBBAAAAAAAAABBBAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AACCCAAAAAAAAACCCAA", "AABBBAAAAAAAAABBBAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA")
-            .where("A", Predicates.blocks("minecraft:air"))
-            .where("C", Predicates.blocks("gtceu:laminated_glass"))
-            .where("E", Predicates.blocks("gtceu:rtm_alloy_coil_block")
-                .or(Predicates.blocks("gtceu:cupronickel_coil_block")
-                    .or(Predicates.blocks("gtceu:nichrome_coil_block"))))
-            .where("F", Predicates.blocks(PartAbility.MUFFLER.getBlocks(GTValues.IV,GTValues.LuV,GTValues.ZPM, GTValues.UV, GTValues.UHV).toArray()))
-            .where("G", Predicates.blocks("gtceu:extreme_engine_intake_casing"))
-            .where("H", Predicates.blocks("gtceu:nonconducting_casing"))
-            .where("I", Predicates.blocks("gtceu:inert_machine_casing"))
-            .where("J", Predicates.blocks("gtceu:superconducting_coil"))
-            .where("K", Predicates.controller(Predicates.blocks(definition.get())))
-            .where("B", Predicates.blocks("gtceu:solid_machine_casing").setMinGlobalLimited(10)
-                .or(Predicates.abilities(PartAbility.MAINTENANCE).setExactLimit(1))
-                .or(Predicates.abilities(PartAbility.PARALLEL_HATCH).setMaxGlobalLimited(1))
-                .or(Predicates.autoAbilities(definition.getRecipeTypes())))
-            .build())
-        .workableCasingModel(
-            "gtceu:block/casings/solid/machine_casing_solid_steel",
-            "gtceu:block/multiblock/assembly_line"
-        );
-
 })

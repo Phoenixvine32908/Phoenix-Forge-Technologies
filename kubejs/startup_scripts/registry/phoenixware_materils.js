@@ -447,19 +447,11 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
             GTMaterialFlags.GENERATE_FRAME,
             GTMaterialFlags.GENERATE_DENSE,
         );
-    event.create("voidglass_shard")
-        .ore().gem()
-        .color(0x6a00aa).iconSet("diamond")
-        .components("1x calcium") // Changed
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
+
     event.create("permafrost")
         .ore().ingot()
         .color(0xA7D1EB).iconSet("diamond")
         .addOreByproducts([GTMaterials.get("aluminfrost"), GTMaterials.get("aluminfrost"), GTMaterials.CertusQuartz]);
-    event.create("polarity_flipped_bismuthite")
-        .ore().dust()
-        .color(0xe4d6ff).iconSet("diamond")
-        .flags(GTMaterialFlags.DISABLE_DECOMPOSITION);
     event.create("void_touched_tungsten_steel")
         .ingot()
         .liquid(new $FluidBuilder().block().temperature(3100))

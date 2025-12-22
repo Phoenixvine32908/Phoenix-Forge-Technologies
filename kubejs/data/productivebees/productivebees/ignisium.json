@@ -7,8 +7,8 @@
     "selfbreed": false,
     "selfheal": true,
     "fireproof": true,
-    "flowerItem": "gtceu:raw_ignisium",
-    "name": "I Guess That's A Tritanium bee",
+    "flowerItem": "phoenixcore:raw_ignisium",
+    "name": "I Guess That's A Ignisium bee",
     "invulnerability": [
         "mekanism.radiation"
     ],

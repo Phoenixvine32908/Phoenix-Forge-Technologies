@@ -27,7 +27,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "gtceu:drilling_fluid 500"
         ])
         .itemInputs([
-            "2x gtceu:ignisium_dust" // Corrected quantity syntax
+            "2x phoenixcore:ignisium_dust" // Corrected quantity syntax
         ])
         .outputFluids("kubejs:blazing_drilling_fluid 900")
         .duration(200)
@@ -55,7 +55,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "gtceu:source_of_magic 1000"
         ])
         .itemInputs([
-            "gtceu:crystallized_fluxstone_dust"
+            "phoenixcore:crystallized_fluxstone_dust"
         ])
         .outputFluids("kubejs:voidic_drilling_fluid 3000")
         .duration(300)
@@ -201,7 +201,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         ])
         .itemOutputs(
             "12x gtceu:raw_naquadah",
-            "17x gtceu:raw_crystallized_fluxstone", // KEPT AS IS
+            "17x phoenixcore:raw_crystallized_fluxstone", // KEPT AS IS
             "17x gtceu:raw_permafrost", // KEPT AS IS
             "12x gtceu:raw_palladium",
             "12x gtceu:raw_platinum",
@@ -259,14 +259,14 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "kubejs:voidic_drilling_fluid  8000"
         ])
         .itemOutputs(
-            "10x gtceu:raw_voidglass_shard",
+            "10x phoenixcore:raw_voidglass_shard",
             "28x gtceu:raw_ilmenite",
             "28x gtceu:raw_bauxite",
-            "17x gtceu:raw_fluorite",
+            "17x phoenixcore:raw_fluorite",
             "28x gtceu:raw_magnetite",
             "28x gtceu:raw_cooperite",
-            "12x gtceu:raw_nevvonian_iron",
-            "12x gtceu:raw_ignisium"
+            "12x phoenixcore:raw_nevvonian_iron",
+            "12x phoenixcore:raw_ignisium"
         )
         .duration(12000) // Increased from 4000
         .EUt(GTValues.VA[GTValues.EV] / 2)
@@ -279,16 +279,16 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "kubejs:voidic_drilling_fluid  8000"
         ])
         .itemOutputs(
-            "15x gtceu:raw_voidglass_shard",
+            "15x phoenixcore:raw_voidglass_shard",
             "35x gtceu:raw_ilmenite",
             "40x gtceu:raw_bauxite",
-            "32x gtceu:raw_fluorite",
+            "32x phoenixcore:raw_fluorite",
             "50x gtceu:raw_magnetite",
             "38x gtceu:raw_cooperite",
-            "20x gtceu:raw_nevvonian_iron",
-            "18x gtceu:raw_ignisium",
-            "12x gtceu:raw_crystallized_fluxstone",
-            "3x gtceu:raw_polarity_flipped_bismuthite",
+            "20x phoenixcore:raw_nevvonian_iron",
+            "18x phoenixcore:raw_ignisium",
+            "12x phoenixcore:raw_crystallized_fluxstone",
+            "3x phoenixcore:raw_polarity_flipped_bismuthite",
         )
         .duration(11500)
         .EUt(GTValues.VA[GTValues.EV] / 2)
