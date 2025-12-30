@@ -18,7 +18,7 @@ Item Inputs: 2x gtceu:crystallized_fluxstone_dust, 1x gtceu:graphite_dust
 
 Fluid Inputs: phoenixcore:frost 288, minecraft:water 2000
 
-Fluid Outputs: gtceu:cryo_graphite_binding_solution 3000
+Fluid Outputs: phoenixcore:cryo_graphite_binding_solution 3000
 
 Duration: 175 ticks
 
@@ -29,7 +29,7 @@ Machine: Large Chemical Reactor
 
 Item Inputs: 9x gtceu:thorium_nugget
 
-Fluid Inputs: gtceu:cryo_graphite_binding_solution 1000
+Fluid Inputs: phoenixcore:cryo_graphite_binding_solution 1000
 
 Item Outputs: 9x kubejs:thorium_fuel_pellet
 
@@ -81,7 +81,7 @@ Machine: Large Chemical Reactor
 
 Item Inputs: 9x gtceu:uranium_236_nugget
 
-Fluid Inputs: gtceu:cryo_graphite_binding_solution 1000
+Fluid Inputs: phoenixcore:cryo_graphite_binding_solution 1000
 
 Item Outputs: 9x kubejs:u236_fuel_pellet
 

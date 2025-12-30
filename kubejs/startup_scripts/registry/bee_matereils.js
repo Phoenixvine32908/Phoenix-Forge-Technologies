@@ -133,11 +133,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .iconSet("dull");
 
     // Stage III: Mineralized Wax Chunk Processing (Catalytic Centrifuge) Inputs/Outputs
-    event.create("melting_catalyst")
-        .fluid()
-        .color(0xADD8E6)
-        .secondaryColor(0x6A5ACD)
-        .iconSet("dull");
 
 
     event.create("impure_honey")

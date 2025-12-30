@@ -54,6 +54,14 @@ ServerEvents.recipes(event => {
         .itemOutputs(Item.of("gtceu:data_stick", '{assembly_line_research:{research_id:"1x_gtceu_cracker",research_type:"gtceu:assembly_line"}}'))
         .duration(2000)
         .EUt(GTValues.VA[GTValues.IV])
+        
+    greg.mixer("melting_catalyst")
+        .itemInputs("2x gtceu:carbon_dust", "1x minecraft:glowstone_dust")
+        .circuit(4)
+        .inputFluids("minecraft:water 2500", "gtceu:naphtha 250")
+        .outputFluids("phoenixcore:wax_melting_catalyst 2500")
+        .duration(100)
+        .EUt(GTValues.VA[GTValues.EV] / 2)
 
     // Advanced Cracker Assembly Line Recipe
     greg.assembly_line("advanced_cracker")
@@ -76,6 +84,7 @@ ServerEvents.recipes(event => {
             .dataStack("gtceu:data_stick"))
         .EUt(GTValues.VA[GTValues.LuV])
         .duration(900)
+        
     greg.mixer("permafrost")
         .itemInputs(["minecraft:packed_ice", "minecraft:blue_ice", "minecraft:ice"])
         .itemOutputs(["14x gtceu:permafrost_dust"])
@@ -303,17 +312,18 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:sucrose", "gtceu:distilled_water 500", "gtceu:sulfuric_acid 10")
         .circuit(4)
         .outputFluids("gtceu:invert_sugar_solution 1000")
-        .duration(1600)
+        .duration(1200)
         .EUt(GTValues.VA[GTValues.EV] / 2)
 
     // Protein Solution from Mince Meat in Large Chemical Reactor
     greg.large_chemical_reactor("protein_solution_from_mince_meat")
-        .itemInputs("64x gtceu:meat_dust")
+        .itemInputs("32x gtceu:meat_dust")
         .circuit(12)
-        .inputFluids("gtceu:acetic_acid 1009")
+        .inputFluids("gtceu:acetic_acid 1008")
         .outputFluids("gtceu:protein_solution 1000")
-        .duration(1050)
+        .duration(900)
         .EUt(GTValues.VA[GTValues.IV] / 2)
+
            greg.extractor("resonant_ender")
         .itemInputs("1x minecraft:ender_pearl")
         .outputFluids("thermal:ender 250")
@@ -322,11 +332,11 @@ ServerEvents.recipes(event => {
 
     // Amino Acids from Protein Solution in Large Chemical Reactor
     greg.large_chemical_reactor("amino_acids_from_protein_solution")
-        .inputFluids("gtceu:protein_solution 2500", "gtceu:hydrofluoric_acid 250")
+        .inputFluids("gtceu:protein_solution 1500", "gtceu:hydrofluoric_acid 250")
         .circuit(2)
-        .itemInputs("32x gtceu:activated_carbon_dust")
+        .itemInputs("16x gtceu:activated_carbon_dust")
         .outputFluids("gtceu:amino_acids 1000")
-        .duration(1050)
+        .duration(950)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Pollen Concentrate Fluid from Flowers in Large Chemical Reactor
@@ -334,7 +344,7 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:ethanol 2000")
         .circuit(4)
         .itemInputs("4x #minecraft:flowers")
-        .outputFluids("gtceu:pollen_concentrate_fluid 500")
+        .outputFluids("gtceu:pollen_concentrate_fluid 900")
         .duration(850)
         .EUt(GTValues.VA[GTValues.IV])
 
@@ -343,16 +353,16 @@ ServerEvents.recipes(event => {
         .inputFluids("gtceu:ethanol 2000")
         .circuit(4)
         .itemInputs("1x gtceu:plant_ball")
-        .outputFluids("gtceu:pollen_concentrate_fluid 500")
+        .outputFluids("gtceu:pollen_concentrate_fluid 750")
         .duration(825)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 
     // Honey Catalyst in Large Chemical Reactor
     greg.large_chemical_reactor("honey_catalyst")
-        .inputFluids("gtceu:amino_acids 5500", "minecraft:water 32000", "gtceu:sodium_potassium 2400")
+        .inputFluids("gtceu:amino_acids 4500", "minecraft:water 32000", "gtceu:sodium_potassium 1700")
         .circuit(24)
         .itemInputs("6x gtceu:magnesium_dust", "12x gtceu:calcium_dust")
-        .outputFluids("gtceu:honey_catalyst 500")
+        .outputFluids("gtceu:honey_catalyst 750")
         .duration(650)
         .EUt(GTValues.VA[GTValues.IV])
 
@@ -360,13 +370,13 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("honey")
         .inputFluids("gtceu:honey_catalyst 3000", "gtceu:invert_sugar_solution 5000", "gtceu:pollen_concentrate_fluid 8500")
         .circuit(24)
-        .outputFluids("productivebees:honey 500")
+        .outputFluids("productivebees:honey 1500")
         .duration(1600)
         .EUt(GTValues.VA[GTValues.IV])
 
     // Honeycomb Assembly in Assembler
     greg.assembler("honeycomb_assembly")
-        .inputFluids("productivebees:honey 788", "gtceu:invert_sugar_solution 144")
+        .inputFluids("productivebees:honey 588", "gtceu:invert_sugar_solution 144")
         .notConsumable("kubejs:honey_comb_base")
         .itemOutputs("minecraft:honeycomb")
         .duration(700)
@@ -382,7 +392,7 @@ ServerEvents.recipes(event => {
     // Sugar Water in Chemical Reactor
     greg.large_chemical_reactor("sugar_water")
         .inputFluids("gtceu:glucose 250", "gtceu:fructose 250", "gtceu:distilled_water 1000")
-        .outputFluids("phoenixcore:sugar_water 2000")
+        .outputFluids("phoenixcore:sugar_water 15000")
         .duration(480)
         .EUt(GTValues.VA[GTValues.HV] / 2)
 
@@ -412,7 +422,7 @@ ServerEvents.recipes(event => {
     // Honey Treat in Confectionery Fabricator
     greg.confectionery_fabricator("honeytreat")
         .itemInputs("5x gtceu:dough", "2x minecraft:honeycomb")
-        .inputFluids("productivebees:honey 12000", "gtceu:molasses 2500", "gtceu:cream 8000", "gtceu:pollen_concentrate_fluid 6500", "gtceu:peanut_butter 12250")
+        .inputFluids("productivebees:honey 15000", "gtceu:molasses 2500", "gtceu:cream 8000", "gtceu:pollen_concentrate_fluid 6500", "gtceu:peanut_butter 12250")
         .itemOutputs("32x productivebees:honey_treat")
         .duration(650)
         .EUt(GTValues.VA[GTValues.IV]);
@@ -474,14 +484,14 @@ ServerEvents.recipes(event => {
     greg.mixer("cryo_graphite_binding_solution")
         .inputFluids("phoenixcore:frost 288", "minecraft:water 2000")
         .itemInputs("2x phoenixcore:crystallized_fluxstone_dust", "1x gtceu:graphite_dust")
-        .outputFluids("gtceu:cryo_graphite_binding_solution 3000")
+        .outputFluids("phoenixcore:cryo_graphite_binding_solution 3000")
         .duration(175)
         .EUt(GTValues.VA[GTValues.EV]);
 
     // Thorium Fuel Pellet Crafting in Large Chemical Reactor
     greg.large_chemical_reactor("thorium_fuel_pellet_crafting")
         .itemInputs("9x gtceu:thorium_nugget")
-        .inputFluids("gtceu:cryo_graphite_binding_solution 1000")
+        .inputFluids("phoenixcore:cryo_graphite_binding_solution 1000")
         .itemOutputs("9x kubejs:thorium_fuel_pellet ")
         .duration(100)
         .EUt(GTValues.VA[GTValues.MV]);
@@ -515,7 +525,7 @@ ServerEvents.recipes(event => {
     // Uranium-236 Fuel Pellet Crafting in Large Chemical Reactor
     greg.large_chemical_reactor("uranium_236_fuel_pellet_crafting")
         .itemInputs("9x gtceu:uranium_236_nugget")
-        .inputFluids("gtceu:cryo_graphite_binding_solution 1000")
+        .inputFluids("phoenixcore:cryo_graphite_binding_solution 1000")
         .itemOutputs("9x kubejs:u236_fuel_pellet")
         .duration(100)
         .EUt(GTValues.VA[GTValues.IV])
@@ -882,7 +892,7 @@ ServerEvents.recipes(event => {
     // Recipe for Exotic Fissile Materials Clump (binding concentrate with cryo-binding solutions)
     greg.large_chemical_reactor("exotic_fissile_materials_clump_production")
         .itemInputs("1x gtceu:exotic_fission_concentrate_dust")
-        .inputFluids("gtceu:cryo_zirconium_binding_solution 1000", "gtceu:cryo_graphite_binding_solution 1000")
+        .inputFluids("gtceu:cryo_zirconium_binding_solution 1000", "phoenixcore:cryo_graphite_binding_solution 1000")
         .itemOutputs("4x gtceu:exotic_fissile_materials_clump_dust")
         .duration(400) // Significant duration for binding
         .EUt(GTValues.VA[GTValues.IV]); // High tier process
