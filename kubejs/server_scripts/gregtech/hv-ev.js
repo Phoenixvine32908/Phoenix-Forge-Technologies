@@ -197,17 +197,15 @@ ServerEvents.recipes(event => {
         .duration(1200)
         .EUt(GTValues.VA[GTValues.HV]);
 
-    // --- AE2 Flawless Budding Certus Quartz Recipe (GTCEu Assembler) ---
-    // A higher-tier recipe using the Assembler, requiring HV voltage for precision and power.
     event.recipes.gtceu.assembler("flawless_budding_certus_quartz_assembly")
         .itemInputs(
-            "4x ae2:charged_certus_quartz_crystal", // Charged Certus for pure energy/perfection
-            "4x ae2:certus_quartz_crystal",         // Regular Certus for bulk material
-            "ae2:growth_accelerator",               // AE2 Growth Accelerator to symbolize crystal perfection
-            "ae2:fluix_crystal"                     // Fluix Crystal for AE2 integration
+            "4x ae2:charged_certus_quartz_crystal",
+            "4x ae2:certus_quartz_crystal",        
+            "ae2:growth_accelerator",              
+            "ae2:fluix_crystal"                    
         )
         .itemOutputs("ae2:flawless_budding_quartz")
-        .duration(400)                      // Longer processing time
+        .duration(400)                     
         .EUt(GTValues.VA[GTValues.HV]);
     event.recipes.gtceu.assembler("pressurized_fission_reactor")
         .itemInputs("4x phoenixcore:fissile_reaction_safe_casing", "8x gtceu:stainless_steel_large_fluid_pipe", "4x gtceu:zircalloy_frame", "2x #gtceu:circuits/hv")
