@@ -12,8 +12,6 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     event.create("quantariumite")
         .ore().dust()
         .color(0x7e00ff).iconSet("diamond")
-        
-
 
     event.create("phoenixite")
         .ore().dust()

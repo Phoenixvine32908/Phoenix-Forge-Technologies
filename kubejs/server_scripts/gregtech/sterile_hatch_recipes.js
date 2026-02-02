@@ -5,7 +5,7 @@ sterile hatch recipes
 ServerEvents.recipes(event => {
     event.recipes.gtceu.assembly_line("sterile_cleaning_maintenance_hatch")
         .itemInputs("4x #gtceu:circuits/uhv",
-            "2x gtceu:uhv_robot_arm",
+            "2x gtceu:uv_robot_arm",
             "1x gtceu:uhv_machine_hull",
             "1x gtceu:auto_maintenance_hatch",
             "2x gtceu:ruthenium_trinium_americium_neutronate_single_wire",
