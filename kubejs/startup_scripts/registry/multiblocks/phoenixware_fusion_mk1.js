@@ -1,6 +1,6 @@
 /**
 Registry for the mk1 phoenixware fusion
- */
+ 
 const $FusionReactorMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.electric.FusionReactorMachine")
 
 GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
@@ -67,3 +67,4 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
         .workableCasingModel("gtceu:block/casings/fusion/fusion_casing", "gtceu:block/multiblock/fusion_reactor")
 
 });
+*/

@@ -100,8 +100,8 @@ StartupEvents.registry("block", phoenixvine => {
 // --- Fission Moderators ---
 
 
-// 2. Boron Carbide Moderator (Stability/Poison Control)
-phoenixvine.create('boron_carbide_moderator', 'phoenixcore:fission_moderator')
+/*
+phoenixvine.create('boron_carbide_moderator', 'phoenix_fission:fission_moderator')
     .displayName('Boron Carbide Moderator')
     .EUBoost(2) 
     .fuelDiscount(1) // Quirk: Lower fuel economy for enhanced stability
@@ -114,7 +114,7 @@ phoenixvine.create('boron_carbide_moderator', 'phoenixcore:fission_moderator')
     .texture('kubejs:block/fission/boron_carbide_moderator');
 
 // 3. Beryllium Moderator (High-Heat Performance)
-phoenixvine.create('beryllium_moderator', 'phoenixcore:fission_moderator')
+phoenixvine.create('beryllium_moderator', 'phoenix_fission:fission_moderator')
     .displayName('Beryllium Moderator')
     .EUBoost(2) 
     .fuelDiscount(1) // Mid explosion risk
@@ -126,7 +126,7 @@ phoenixvine.create('beryllium_moderator', 'phoenixcore:fission_moderator')
     .texture('kubejs:block/fission/beryllium_moderator');
 
 // 4. Niobium-Modified SiC Moderator (Max Output & Cooling Enhancer)
-phoenixvine.create('niobium_modified_silicon_carbide_moderator', 'phoenixcore:fission_moderator')
+phoenixvine.create('niobium_modified_silicon_carbide_moderator', 'phoenix_fission:fission_moderator')
     .displayName('Nb-SiC Moderator')
     .EUBoost(15) 
     .fuelDiscount(5) // Quirk: Highest power but higher risk/cost
@@ -140,7 +140,7 @@ phoenixvine.create('niobium_modified_silicon_carbide_moderator', 'phoenixcore:fi
 
 
 // 2. Improved Cooler: Hydro-Kinetic Block (Salt Water)
-phoenixvine.create('hydro_kinetic_cooler', 'phoenixcore:fission_cooler')
+phoenixvine.create('hydro_kinetic_cooler', 'phoenix_fission:fission_cooler')
     .displayName('Hydro-Kinetic Cooler')
     .coolerTemperature(208) 
     .coolantUsagePerTick(20) 
@@ -154,7 +154,7 @@ phoenixvine.create('hydro_kinetic_cooler', 'phoenixcore:fission_cooler')
     .texture('kubejs:block/fission/hydro_kinetic_cooler');
 
 // 3. Advanced Cooler: Aether-Flow Engine (Frost Coolant)
-phoenixvine.create('aether_flow_cooler', 'phoenixcore:fission_cooler')
+phoenixvine.create('aether_flow_cooler', 'phoenix_fission:fission_cooler')
     .displayName('Aether-Flow Cooler')
     .coolerTemperature(1025) 
     .coolantUsagePerTick(10) 
@@ -166,7 +166,7 @@ phoenixvine.create('aether_flow_cooler', 'phoenixcore:fission_cooler')
     .tagBlock("mineable/pickaxe")
     .soundType("metal")
     .texture('kubejs:block/fission/aether_flow_cooler');
- 
+ */
 
     phoenixvine.create("conductive_honey_coil", "gtceu:active")
         .bloom("gtceu:block/conductive_honey_coil_bloom")

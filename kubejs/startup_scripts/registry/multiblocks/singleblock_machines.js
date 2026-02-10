@@ -52,17 +52,20 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
     GTMachineUtils.registerCrate(GTMaterials.get("resonant_rhodium_alloy"), 200, "Resonant Rhodium Alloy Crate");
 
 
-    phoenixvine.create("earth_sieve", "simple")
-        .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-        .definition((tier, builder) =>
-            builder
-                .rotationState(RotationState.NON_Y_AXIS)
-                .recipeType("earth_sieve")
-                .workableTieredHullModel("gtceu:block/machines/sifter")
 
-        )
+/*
+    phoenixvine.create('earth_sieve', 'simple')
+        .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+        .langValue("Earth Sieve")
+        .definition((tier, builder) => {
+            return builder
+                .recipeType('earth_sieve')
+                .workableTieredHullModel('gtceu:block/machines/sifter')
+    })
+
     phoenixvine.create("thermo_generator", "simple")
         .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
+        .langValue("Thermo Generator")
         .definition((tier, builder) =>
             builder
                 .rotationState(RotationState.NON_Y_AXIS)
@@ -70,6 +73,7 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
                 .workableTieredHullModel("gtceu:block/machines/thermal_centrifuge")
 
         )
+
     phoenixvine.create("confectionery_fabricator", "simple")
         .tiers(GTValues.IV, GTValues.LuV, GTValues.ZPM)
         .definition((tier, builder) =>
@@ -87,17 +91,7 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
                 .workableTieredHullModel("gtceu:block/machines/sifter")
 
         )
-         phoenixvine.create("blazing_cleaning_maintenance_hatch", "custom")
-        .machine((holder,tier) => {
-            return new $MaintenanceHatchPartMachine(holder, BlazingCleanroom.BLAZING_CLEANROOM)
-        })
-        .tiers(GTValues.UIV)
-        .definition((tier, builder) => builder
-            .langValue("Blazing Cleaning Maintenance Hatch")
-            .rotationState(RotationState.ALL)
-            .abilities(PartAbility.MAINTENANCE)
-            .workableTieredHullModel("kubejs/block/multiblock/blazing_cleaning_maintenance_hatch")
-        )
+*/
 
 
 

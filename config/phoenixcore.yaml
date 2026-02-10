@@ -80,3 +80,11 @@ features:
   # What Strongest Coolant the Active Phoenix Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
   CoolantBoost2: 1.2
 
+  # The connection mode for Tesla Towers.
+  # TEAM_AUTO: All towers under a team/player share the same cloud automatically.
+  # DATA_STICK: Towers must be manually linked to hatches using a Data Stick.
+  # Allowed values:
+  # - TEAM_AUTO
+  # - DATA_STICK
+  teslaConnectionMode: DATA_STICK
+

@@ -754,11 +754,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         )
         .iconSet("metallic");
 
-    // Fluid Materials
-    event.create("hafnium_chloride")
-        .fluid()
-        .color(0xC0C0C0)
-        .iconSet("bright");
+
 
     event.create("source_of_magic")
         .fluid()
@@ -1011,7 +1007,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     // --- Modifications to existing GTCEu materials ---
     GTMaterials.Silver.setProperty($PropertyKey.ROTOR, new $RotorProperty(200, 1000, 2.0, 50));
     GTMaterials.Francium.setProperty($PropertyKey.INGOT, new $IngotProperty());
-    GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty().addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE));
+    GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Hafnium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Hafnium.setProperty($PropertyKey.ORE, new $OreProperty());
 

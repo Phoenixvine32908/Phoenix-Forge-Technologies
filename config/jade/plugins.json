@@ -62,7 +62,7 @@
   },
   "phoenixcore": {
     "source_hatch_info": true,
-    "fission_machine_info": true,
+    "tesla_network_info": true,
     "plasma_furnace_info": true
   },
   "avaritia": {
@@ -142,9 +142,6 @@
     "canvas_beehive": true,
     "bee_attributes": true,
     "productive_bee": true
-  },
-  "gtmthings": {
-    "wireless_energy_hatch_provider": true
   },
   "ars_nouveau": {
     "mob_jar": true

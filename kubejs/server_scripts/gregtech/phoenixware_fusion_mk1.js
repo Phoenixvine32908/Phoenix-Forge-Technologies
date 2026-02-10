@@ -1,6 +1,6 @@
 /**
 phoenixware fusion mk1 recipes
- */
+ 
 
 ServerEvents.recipes(event => {
 
@@ -30,3 +30,4 @@ ServerEvents.recipes(event => {
         PhoenixwareFusionMk1Recipe(event, id, fluidInput1, fluidInput2, fluidOutput, dur, power);
     });
 })
+    */

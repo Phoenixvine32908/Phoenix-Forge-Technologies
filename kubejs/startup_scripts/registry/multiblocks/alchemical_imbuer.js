@@ -1,6 +1,6 @@
 /**
 Registry for the alchemial imbuer
- */
+ 
 GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
     phoenixvine.create("source_imbument")
         .category("alchemical")
@@ -48,3 +48,4 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
         .workableCasingModel("gtceu:block/casings/solid/machine_casing_clean_stainless_steel", "gtceu:block/multiblock/implosion_compressor")
 
 }); // .or(Predicates.blocks(INPUT_ENERGY_HATCH[EV]))
+*/
