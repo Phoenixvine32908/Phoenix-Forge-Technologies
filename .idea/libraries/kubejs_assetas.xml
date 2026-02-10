@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="kubejs assetas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/kubejs/assets/kubejs assetas.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
