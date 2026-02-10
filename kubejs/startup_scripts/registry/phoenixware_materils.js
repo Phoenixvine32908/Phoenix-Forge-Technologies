@@ -30,6 +30,11 @@ function makeElement(event, id, prot, neut, sym) {
         .symbol(sym);
 }
 
+// --- REVISED makeMaterial HELPER FUNCTION ---
+// This function is for creating new GTCEu materials, including alloys.
+// - Removed .element(GTElements.get(id)) as it's problematic for alloys.
+// - Fixed cableProperties application.
+// - Ensured 'flags' parameter is used.
 function makeMaterial(event, id, color, color2, icon, flagsArray, cableProps, rotorProps) {
     const mat = event.create(id)
         .ingot()
@@ -749,7 +754,11 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         )
         .iconSet("metallic");
 
-
+    // Fluid Materials
+    event.create("hafnium_chloride")
+        .fluid()
+        .color(0xC0C0C0)
+        .iconSet("bright");
 
     event.create("source_of_magic")
         .fluid()
@@ -1002,7 +1011,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
     // --- Modifications to existing GTCEu materials ---
     GTMaterials.Silver.setProperty($PropertyKey.ROTOR, new $RotorProperty(200, 1000, 2.0, 50));
     GTMaterials.Francium.setProperty($PropertyKey.INGOT, new $IngotProperty());
-    GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty());
+    GTMaterials.Zirconium.setProperty($PropertyKey.INGOT, new $IngotProperty().addFlags(GTMaterialFlags.GENERATE_PLATE, GTMaterialFlags.GENERATE_ROD, GTMaterialFlags.GENERATE_FRAME, GTMaterialFlags.GENERATE_DENSE));
     GTMaterials.Hafnium.setProperty($PropertyKey.INGOT, new $IngotProperty());
     GTMaterials.Hafnium.setProperty($PropertyKey.ORE, new $OreProperty());
 

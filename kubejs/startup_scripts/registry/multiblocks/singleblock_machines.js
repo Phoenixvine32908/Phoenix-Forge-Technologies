@@ -53,10 +53,9 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
 
 
 
-/*
+
     phoenixvine.create('earth_sieve', 'simple')
         .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-        .langValue("Earth Sieve")
         .definition((tier, builder) => {
             return builder
                 .recipeType('earth_sieve')
@@ -65,7 +64,6 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
 
     phoenixvine.create("thermo_generator", "simple")
         .tiers(GTValues.LV, GTValues.MV, GTValues.HV)
-        .langValue("Thermo Generator")
         .definition((tier, builder) =>
             builder
                 .rotationState(RotationState.NON_Y_AXIS)
@@ -91,7 +89,7 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
                 .workableTieredHullModel("gtceu:block/machines/sifter")
 
         )
-*/
+
 
 
 
