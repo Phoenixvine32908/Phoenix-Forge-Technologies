@@ -741,6 +741,7 @@ ServerEvents.recipes(event => {
         .itemOutputs("gtceu:active_transformer")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
+        /*
             greg.assembler("boron_carbide_moderator")
         .itemInputs("4x phoenixcore:boron_carbide_plate", "1x gtceu:frost_reinforced_stained_steel_frame", "1x gtceu:hv_voltage_coil", "#gtceu:circuits/hv")
         .inputFluids("gtceu:steel 576")
@@ -799,7 +800,7 @@ ServerEvents.recipes(event => {
     .duration(450)
     .EUt(GTValues.VA[GTValues.IV]); // Runs at IV
 
-
+*/
     // Comb Decanter Assembly in Assembler
     greg.assembler("comb_decanter_recipe_assembler")
         .itemInputs("4x minecraft:honey_block", "kubejs:conductive_honey_coil", "2x gtceu:samarium_iron_arsenic_oxide_double_wire", "2x gtceu:iv_field_generator", "2x #gtceu:circuits/iv")

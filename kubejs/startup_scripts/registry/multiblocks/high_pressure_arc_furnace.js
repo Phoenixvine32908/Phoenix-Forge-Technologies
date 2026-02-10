@@ -1,6 +1,6 @@
 /**
 Registry for the high pressure arc furnace
- */
+ 
 
 GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
     phoenixvine.create("high_pressure_arc_furnace")
@@ -48,3 +48,4 @@ GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
             "gtceu:block/multiblock/fusion_reactor"
         )
 });
+*/
