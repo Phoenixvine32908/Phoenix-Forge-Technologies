@@ -30,11 +30,6 @@ function makeElement(event, id, prot, neut, sym) {
         .symbol(sym);
 }
 
-// --- REVISED makeMaterial HELPER FUNCTION ---
-// This function is for creating new GTCEu materials, including alloys.
-// - Removed .element(GTElements.get(id)) as it's problematic for alloys.
-// - Fixed cableProperties application.
-// - Ensured 'flags' parameter is used.
 function makeMaterial(event, id, color, color2, icon, flagsArray, cableProps, rotorProps) {
     const mat = event.create(id)
         .ingot()
