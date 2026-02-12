@@ -24,4 +24,3 @@ ItemEvents.modification(event => {
     };
   });
 });
-*/
