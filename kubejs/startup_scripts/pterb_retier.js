@@ -1,7 +1,7 @@
 /**
  * Re-tiers the PTERB to late LuV - script 1 of 2.
  * - Replaces the neutronium frames with europium frames.
- */
+ 
 
 let PTERBMachine = Java.loadClass("net.neganote.gtutilities.common.machine.multiblock.PTERBMachine")
 let GTMemorizer = Java.loadClass("com.gregtechceu.gtceu.utils.memoization.GTMemoizer")
@@ -27,3 +27,4 @@ StartupEvents.postInit(event => {
         .build()
     UtilMachines.PTERB_MACHINE.setPatternFactory(GTMemoizer["memoize(java.util.function.Supplier)"](()=> pterb_pattern.apply(UtilMachines.PTERB_MACHINE)));
 })
+*/
