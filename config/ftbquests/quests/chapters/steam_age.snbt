@@ -414,7 +414,10 @@
 			tasks: [{
 				count: 16L
 				id: "794A5ED934385ECA"
-				item: { Count: 16, id: "gtceu:fiery_bronze_ingot" }
+				item: {
+					Count: 16
+					id: "gtceu:fiery_bronze_ingot"
+				}
 				type: "item"
 			}]
 			title: "Fiery Bronze"

@@ -232,7 +232,7 @@ phoenixvine.create('aether_flow_cooler', 'phoenix_fission:fission_cooler')
         .soundType("metal")
 
 
-});
+});/*
 const $ParallelHatchPartMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.part.ParallelHatchPartMachine")
 const $LaserHatchPartMachine = Java.loadClass("com.gregtechceu.gtceu.common.machine.multiblock.part.LaserHatchPartMachine")
 
@@ -305,3 +305,4 @@ GTCEuStartupEvents.registry("gtceu:machine", event => {
                 .workableTieredHullModel(GTCEu.id("block/machines/parallel_hatch_mk16"))
         )
 })
+*/

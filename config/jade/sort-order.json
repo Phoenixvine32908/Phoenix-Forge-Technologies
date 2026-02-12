@@ -29,6 +29,7 @@
   "expatternprovider:tile_data": null,
   "framedblocks:framed_item_frame": null,
   "gtceu:auto_output_info": null,
+  "gtceu:battery_info": null,
   "gtceu:cable_info": null,
   "gtceu:controllable_provider": null,
   "gtceu:custom_fluid_storage": null,

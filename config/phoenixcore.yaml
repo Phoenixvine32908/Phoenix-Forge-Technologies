@@ -88,3 +88,23 @@ features:
   # - DATA_STICK
   teslaConnectionMode: DATA_STICK
 
+cleanroom:
+  # Whether the cleanroom deals lethal damage to players when active and at max cleanliness.
+  lethal: true
+
+  # The maximum cleanliness level of the cleanroom.
+  maxCleanliness: 1000
+
+  # The amount of pollution each player adds per tick inside the cleanroom.
+  playerPollution: 5
+
+  # The amount of cleanliness regenerated per tick when no players are inside.
+  regenRate: 1
+
+  # The amount of sterilizing gas consumed per tick.
+  fluidConsumption: 1
+
+sourceHatch:
+  # The radius (in blocks) in which a Source Hatch will scan for nearby Source Jars to pull from.
+  sourceJarCheckRadius: 12
+
