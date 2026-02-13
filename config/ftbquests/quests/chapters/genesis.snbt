@@ -163,7 +163,7 @@
 				""
 				"The new Steam Age tier material is &cFiery Bronze&r, crafted from a &e3:1:1&r ratio of &ecopper dust&r, &etin dust&r, and &cdormant ember dust&r to yield 4 &cFiery Bronze Dust&r, which can then be smelted into ingots."
 			]
-			icon: "gtceu:fiery_bronze_ingot"
+			icon: "phoenixcore:fiery_bronze_ingot"
 			id: "17E79085719EAE0B"
 			rewards: [
 				{
@@ -758,7 +758,7 @@
 				""
 				"Check the quest page for each progression tier to find the crafting recipes! "
 			]
-			icon: "gtceu:aluminfrost_ingot"
+			icon: "phoenixcore:aluminfrost_ingot"
 			id: "4FB0C8EE3CA3018C"
 			subtitle: "Getting creative"
 			tasks: [{
