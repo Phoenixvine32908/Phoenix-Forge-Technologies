@@ -708,13 +708,6 @@ ServerEvents.recipes(event => {
             A: "kubejs:phoenix_feather"
         }).noMirror().noShrink()
 
-        event.shaped(Item.of("thermal:rubberwood_sapling", 64), [
-            "AA ",
-            " A ",
-            "   "
-        ], {
-            A: "kubejs:phoenix_feather"
-        }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:jungle_sapling", 64), [
             "AA ",

@@ -15,13 +15,14 @@ GTCEuServerEvents.oreVeins(event => {
         vein.heightRangeUniform(30, 60)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
-                .layer(l => l.weight(2).mat(GTMaterials.get("permafrost")).size(2, 2))
-                .layer(l => l.weight(2).mat(GTMaterials.get("dormant_ember")).size(1, 2))
+                .layer(l => l.weight(2).mat(PhoenixOres.DORMANT_EMBER).size(2, 2))
+                .layer(l => l.weight(2).mat(PhoenixOres.DORMANT_EMBER).size(1, 2))
                 .layer(l => l.weight(1).state(() => Block.getBlock("minecraft:magma_block").defaultBlockState()).size(2, 3))
+                .layer(l => l.weight(1).state(() => Block.getBlock("minecraft:blue_ice").defaultBlockState()).size(1, 2))
             )
         )
         vein.surfaceIndicatorGenerator(indicator => indicator
-            .surfaceRock(GTMaterials.get("dormant_ember"))
+            .surfaceRock(PhoenixOres.DORMANT_EMBER)
             .placement("above")
         )
     })
@@ -34,13 +35,14 @@ GTCEuServerEvents.oreVeins(event => {
         vein.heightRangeUniform(-30, 30)
         vein.layeredVeinGenerator(generator => generator
             .buildLayerPattern(pattern => pattern
-                .layer(l => l.weight(2).mat(GTMaterials.get("permafrost")).size(2, 2))
-                .layer(l => l.weight(2).mat(GTMaterials.get("dormant_ember")).size(1, 2))
+                .layer(l => l.weight(2).mat(PhoenixOres.PERMAFROST).size(2, 2))
+                .layer(l => l.weight(2).mat(PhoenixOres.DORMANT_EMBER).size(1, 2))
                 .layer(l => l.weight(1).state(() => Block.getBlock("minecraft:magma_block").defaultBlockState()).size(2, 3))
+                .layer(l => l.weight(1).state(() => Block.getBlock("minecraft:blue_ice").defaultBlockState()).size(1, 2))
             )
         )
         vein.surfaceIndicatorGenerator(indicator => indicator
-            .surfaceRock(GTMaterials.get("dormant_ember"))
+            .surfaceRock(PhoenixOres.DORMANT_EMBER)
             .placement("above")
         )
     })

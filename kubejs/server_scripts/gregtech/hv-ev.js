@@ -17,12 +17,6 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(GTValues.VA[GTValues.HV] / 2);
         */
-    event.recipes.gtceu.assembler("thermal_power_upgrade")
-        .itemInputs("1x gtceu:aurum_steel_gear","4x gtceu:fiery_bronze_plate","2x gtceu:tempered_glass")
-        .inputFluids("gtceu:glue 500")
-        .itemOutputs("thermal:dynamo_output_augment")
-        .duration(200)
-        .EUt(GTValues.VA[GTValues.LV] / 2)
     event.recipes.gtceu.macerator("certus_quartz_dust_2")
         .itemInputs("ae2:certus_quartz_crystal")
         .itemOutputs("gtceu:certus_quartz_dust")
