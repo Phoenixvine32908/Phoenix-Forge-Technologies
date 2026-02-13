@@ -112,6 +112,7 @@ GTCEuStartupEvents.registry("gtceu:material", event => {
         .color(0x704214).iconSet("shiny")
         .addOreByproducts("iron")
         .element("ember")
+        
     event.create("osmiridium_80_20")
         .ore().dust()
         .color(0xD3D3D3).iconSet("shiny")
