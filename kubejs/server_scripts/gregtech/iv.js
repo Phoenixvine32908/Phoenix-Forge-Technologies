@@ -60,7 +60,7 @@ ServerEvents.recipes(event => {
         .inputFluids("minecraft:water 2500", "gtceu:naphtha 250")
         .outputFluids("phoenixcore:wax_melting_catalyst 2500")
         .duration(100)
-        .EUt(GTValues.VA[GTValues.UHV] / 2)
+        .EUt(GTValues.VA[GTValues.EV] / 2)
 
     // Advanced Cracker Assembly Line Recipe
     greg.assembly_line("advanced_cracker")
