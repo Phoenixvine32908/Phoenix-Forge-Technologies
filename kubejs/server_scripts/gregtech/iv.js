@@ -172,15 +172,15 @@ ServerEvents.recipes(event => {
     // Honeycomb Base Solidification in Fluid Solidifier
     greg.fluid_solidifier("honey_comb_base")
         .inputFluids("phoenixcore:honey_comb_base_mixture 1008")
-        .notConsumable("kubejs:honey_comb_base_mold")
-        .itemOutputs("kubejs:honey_comb_base")
+        .notConsumable("phoenixcore:honey_comb_base_mold")
+        .itemOutputs("phoenixcore:honey_comb_base")
         .duration(2000)
         .EUt(GTValues.VA[GTValues.HV] / 2)
 
     // Honeycomb Base Mold from Compressor
     greg.compressor("honey_comb_bases_solid")
         .notConsumable("12x phoenixcore:dense_void_touched_tungsten_steel_plate")
-        .itemOutputs("kubejs:honey_comb_base_mold")
+        .itemOutputs("phoenixcore:honey_comb_base_mold")
         .duration(2000)
         .EUt(GTValues.VA[GTValues.IV] / 2)
 

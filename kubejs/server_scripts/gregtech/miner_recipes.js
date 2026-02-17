@@ -33,33 +33,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV] / 2);
 
-    // Recipe for Voidic Drill Fluid (Base)
-    event.recipes.gtceu.large_chemical_reactor("voidic_drilling_fluid_recipe_base") // Renamed ID
-        .inputFluids([
-            "gtceu:drilling_fluid 500",
-            "phoenixcore:frost 250",
-            "kubejs:cryo_ember_fluid 25000",
-            "phoenixcore:source_of_magic 100"
-        ])
-        .itemInputs([
-            "phoenixcore:permafrost_dust",
-            "gtceu:ender_eye_dust"
-        ])
-        .outputFluids("kubejs:voidic_drilling_fluid 1000")
-        .duration(300)
-        .EUt(GTValues.VA[GTValues.EV] / 2);
 
-    event.recipes.gtceu.large_chemical_reactor("voidic_drilling_fluid_recipe_better") // Renamed ID
-        .inputFluids([
-            "gtceu:drilling_fluid 500",
-            "phoenixcore:source_of_magic 1000"
-        ])
-        .itemInputs([
-            "phoenixcore:crystallized_fluxstone_dust"
-        ])
-        .outputFluids("kubejs:voidic_drilling_fluid 3000")
-        .duration(300)
-        .EUt(GTValues.VA[GTValues.EV] / 2);
 
     // --- Dimensional Anchoring Recipes (Nerfed) ---
     // Overworld Blazing Drill (Better) - Nerf Round 3

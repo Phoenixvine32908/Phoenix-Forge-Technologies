@@ -114,15 +114,11 @@ StartupEvents.registry("item", event => {
     event.create("flaming_dust")
         .displayName("§cFlaming Dust")
         .texture("kubejs:item/flaming_dust")
+
     event.create("phoenix_feather")
         .displayName("§cFeather §6Of §cRebirth")
         .texture("kubejs:item/phoenix_feather")
-    event.create("honey_comb_base_mold")
-        .displayName("§6Honeycomb Base Mold")
-        .texture("kubejs:item/honey_comb_base_mold")
-    event.create("honey_comb_base")
-        .displayName("§6Honeycomb Base")
-        .texture("kubejs:item/honey_comb_base")
+
     event.create("copper_vein_traces")
         .displayName("Copper Vein Traces")
         .texture("kubejs:item/veins/copper_traces")
