@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
         .itemInputs("32x phoenixcore:unrefined_aluminfrost_dust", "1x gtceu:cobalt_dust")
         .inputFluids("phoenixcore:frost 6000")
         .blastFurnaceTemp(1700)
-        .itemOutputs("32x gtceu:aluminfrost_ingot")
+        .itemOutputs("32x phoenixcore:aluminfrost_ingot")
         .duration(4200)
         .EUt(100)
     event.recipes.gtceu.compressor("dense_steel_plate")
@@ -185,7 +185,7 @@ ServerEvents.recipes(event => {
         .circuit(6)
         .itemInputs("6x gtceu:iron_dust","1x gtceu:nickel_dust", "1x gtceu:manganese_dust", "gtceu:chromium_dust", "1x gtceu:carbon_dust")
         .inputFluids("phoenixcore:frost 100")
-        .itemOutputs("11x gtceu:frost_reinforced_stained_steel_dust")
+        .itemOutputs("11x phoenixcore:frost_reinforced_stained_steel_dust")
         .EUt(GTValues.VA[GTValues.MV] / 2)
         .EUt(16)
     event.shaped("gtceu:lv_earth_sieve", ["OFO", "DWD", "CFC"], {

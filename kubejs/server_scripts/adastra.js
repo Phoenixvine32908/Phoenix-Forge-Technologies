@@ -4,12 +4,12 @@ ad astra recipes
 
 ServerEvents.recipes(event => {
     // Replace all Steel plates & rods
-    event.replaceInput({ id: /^ad_astra:.*/ }, "ad_astra:steel_rod", "gtceu:space_grade_steel_rod")
-    event.replaceInput({ id: /^ad_astra:.*/ }, "ad_astra:steel_plate", "gtceu:space_grade_steel_plate")
-    event.replaceInput({ id: /^gtceu:.*/ }, "gtceu:europium_frame", "gtceu:uranium_236_frame")
-    event.replaceInput({ id: "gtceu:shaped/electric_motor_lv_iron" }, "gtceu:iron_rod", "gtceu:aurum_steel_rod")
-    event.replaceInput({ id: "gtceu:assembler/casing_zpm" }, "gtceu:naquadah_alloy_plate", "gtceu:advanced_quin_naquadian_alloy_plate")
-    event.replaceInput({ id: "gtceu:shaped/casing_zpm" }, "gtceu:naquadah_alloy_plate", "gtceu:advanced_quin_naquadian_alloy_plate")
+    event.replaceInput({ id: /^ad_astra:.*/ }, "ad_astra:steel_rod", "phoenixcore:space_grade_steel_rod")
+    event.replaceInput({ id: /^ad_astra:.*/ }, "ad_astra:steel_plate", "phoenixcore:space_grade_steel_plate")
+    event.replaceInput({ id: /^gtceu:.*/ }, "gtceu:europium_frame", "phoenixcore:uranium_236_frame")
+    event.replaceInput({ id: "gtceu:shaped/electric_motor_lv_iron" }, "gtceu:iron_rod", "phoenixcore:aurum_steel_rod")
+    event.replaceInput({ id: "gtceu:assembler/casing_zpm" }, "gtceu:naquadah_alloy_plate", "phoenixcore:advanced_quin_naquadian_alloy_plate")
+    event.replaceInput({ id: "gtceu:shaped/casing_zpm" }, "gtceu:naquadah_alloy_plate", "phoenixcore:advanced_quin_naquadian_alloy_plate")
     event.remove({ id: /nasa_workbench/ })
     const rocket = [ // Plate mats currently just based on color of rocket for testing
         ["tier_1_rocket", "steel", "space_grade_steel"],

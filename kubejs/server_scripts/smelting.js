@@ -17,12 +17,12 @@ ServerEvents.recipes(event => {
     event.smelting("1x minecraft:charcoal", "gtceu:rubber_log");
     event.smelting("1x minecraft:glass", "1x minecraft:sand");
     event.smelting("1x gtceu:wrought_iron_ingot", "1x minecraft:iron_ingot");
-    event.smelting("1x gtceu:dormant_ember_dust", "1x gtceu:raw_dormant_ember")
-    event.smelting("1x gtceu:dormant_ember_dust", "1x gtceu:deepslate_dormant_ember_ore")
-    event.smelting("1x gtceu:dormant_ember_dust", "1x gtceu:dormant_ember_ore")
-    event.smelting("1x gtceu:permafrost_dust", "1x gtceu:raw_permafrost")
-    event.smelting("1x gtceu:permafrost_dust", "1x gtceu:permafrost_ore")
-    event.smelting("1x gtceu:permafrost_dust", "1x gtceu:deepslate_permafrost_ore")
+    event.smelting("1x phoenixcore:dormant_ember_dust", "1x phoenixcore:raw_dormant_ember")
+    event.smelting("1x phoenixcore:dormant_ember_dust", "1x phoenixcore:deepslate_dormant_ember_ore")
+    event.smelting("1x phoenixcore:dormant_ember_dust", "1x phoenixcore:dormant_ember_ore")
+    event.smelting("1x phoenixcore:permafrost_dust", "1x phoenixcore:raw_permafrost")
+    event.smelting("1x phoenixcore:permafrost_dust", "1x phoenixcore:permafrost_ore")
+    event.smelting("1x phoenixcore:permafrost_dust", "1x phoenixcore:deepslate_permafrost_ore")
 
 
     // --- Wood (Bark Block) to Charcoal Recipes ---
