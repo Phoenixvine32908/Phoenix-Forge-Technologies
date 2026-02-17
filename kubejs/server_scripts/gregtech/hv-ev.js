@@ -287,100 +287,18 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .outputFluids("gtceu:helium 500")
         .duration(150)
         .EUt(GTValues.VA[GTValues.EV] / 2)
-        /*
-    event.recipes.gtceu.source_imbument("source_gem")
-        .itemInputs("1x minecraft:amethyst_shard")
-        .inputFluids("gtceu:source_of_magic 250")
-        .itemOutputs("2x ars_nouveau:source_gem")
-        .duration(40)
-        .EUt(GTValues.VA[GTValues.HV] / 2)
+        
+                event.recipes.gtceu.extractor("lava_from_magma")
+                .itemInputs("minecraft:magma_block")
+                .outputFluids("minecraft:lava 250")
+                .duration(280)
+                .EUt(GTValues.VA[GTValues.LV] / 2)
+        event.recipes.gtceu.extractor("lava_from_magma_dust")
+                .itemInputs("gtceu:magma_dust")
+                .outputFluids("minecraft:lava 150")
+                .duration(280)
+                .EUt(GTValues.VA[GTValues.LV] / 2)
 
-    event.recipes.gtceu.source_imbument("eighty_five_percent_pure_nevonian_steel_cooling")
-        .itemInputs("1x gtceu:hot_eighty_five_percent_pure_nevonian_steel_ingot")
-        .inputFluids("gtceu:source_of_magic 2500")
-        .itemOutputs("1x gtceu:eighty_five_percent_pure_nevonian_steel_ingot")
-        .duration(400)
-        .EUt(GTValues.VA[GTValues.EV] / 2)
-    event.recipes.gtceu.source_imbument("source_gem_without_source")
-        .itemInputs("1x minecraft:amethyst_shard")
-        .itemOutputs("1x ars_nouveau:source_gem")
-        .circuit(2)
-        .duration(1500)
-        .EUt(GTValues.VA[GTValues.HV] / 2)
-    event.recipes.gtceu.source_extraction("source_from_wheat")
-        .itemInputs("3x minecraft:wheat")
-        .outputFluids("gtceu:source_of_magic 125")
-        .duration(190)
-        .EUt(GTValues.VA[GTValues.HV] / 3)
-
-    event.recipes.gtceu.source_extraction("source_from_flowers")
-        .itemInputs("2x #minecraft:flowers")
-        .outputFluids("gtceu:source_of_magic 80")
-        .duration(150)
-        .EUt(GTValues.VA[GTValues.HV] / 3);
-
-    // Generic crop extraction (covers wheat, carrot, potato, beetroot, etc.)
-    event.recipes.gtceu.source_extraction("source_from_crops")
-        .itemInputs("3x #forge:crops")
-        .outputFluids("gtceu:source_of_magic 100")
-        .duration(160)
-        .EUt(GTValues.VA[GTValues.HV] / 3);
-
-    event.recipes.gtceu.source_extraction("source_from_brown_mushroom")
-        .itemInputs("4x #forge:mushrooms")
-        .outputFluids("gtceu:source_of_magic 60")
-        .duration(145)
-        .EUt(GTValues.VA[GTValues.HV] / 3)
-    event.recipes.gtceu.source_extraction("source_from_coal")
-        .itemInputs("2x minecraft:coal")
-        .outputFluids("gtceu:source_of_magic 500")
-        .duration(220)
-        .EUt(GTValues.VA[GTValues.HV] / 2.5)
-
-    event.recipes.gtceu.source_extraction("source_from_coke")
-        .itemInputs("1x gtceu:coke_gem")
-        .outputFluids("gtceu:source_of_magic 400")
-        .duration(250)
-        .EUt(GTValues.VA[GTValues.HV] / 2.5)
-
-    event.recipes.gtceu.source_extraction("source_from_charcoal")
-        .itemInputs("2x minecraft:charcoal")
-        .outputFluids("gtceu:source_of_magic 450")
-        .duration(210)
-        .EUt(GTValues.VA[GTValues.HV] / 2.5)
-
-    event.recipes.gtceu.source_extraction("source_from_logs")
-        .itemInputs("4x #minecraft:logs")
-        .outputFluids("gtceu:source_of_magic 200")
-        .duration(180)
-        .EUt(GTValues.VA[GTValues.HV] / 3)
-    event.recipes.gtceu.source_extraction("source_from_planks")
-        .itemInputs("4x #minecraft:planks")
-        .outputFluids("gtceu:source_of_magic 200")
-        .duration(180)
-        .EUt(GTValues.VA[GTValues.HV] / 3)
-    event.recipes.gtceu.source_extraction("source_from_lava")
-        .inputFluids("minecraft:lava 1000")
-        .outputFluids("gtceu:source_of_magic 500")
-        .duration(280)
-        .EUt(GTValues.VA[GTValues.HV] / 2)
-    event.recipes.gtceu.extractor("lava_from_magma")
-        .itemInputs("minecraft:magma_block")
-        .outputFluids("minecraft:lava 250")
-        .duration(280)
-        .EUt(GTValues.VA[GTValues.LV] / 2)
-    event.recipes.gtceu.extractor("lava_from_magma_dust")
-        .itemInputs("gtceu:magma_dust")
-        .outputFluids("minecraft:lava 150")
-        .duration(280)
-        .EUt(GTValues.VA[GTValues.LV] / 2)
-    event.recipes.gtceu.source_imbument("source_imbued_titanium")
-        .itemInputs("1x gtceu:titanium_ingot")
-        .inputFluids("gtceu:source_of_magic 1000")
-        .itemOutputs("gtceu:source_imbued_titanium_ingot")
-        .duration(160)
-        .EUt(GTValues.VA[GTValues.HV] / 3)
-        */
     // Space Grade Steel Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("space_grade_steel_drilling_kit")
         .itemInputs(
@@ -428,17 +346,6 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .itemOutputs("kubejs:aluminfrost_drilling_kit")
         .duration(400)
         .EUt(GTValues.VA[GTValues.EV]);
-    event.recipes.gtceu.large_chemical_reactor("eighty_five_percent_pure_nevonian_steel_dust")
-        .itemInputs(
-            "4x gtceu:exquisite_coke_gem",
-            "16x gtceu:diamond_dust",
-            "2x phoenixcore:nevvonian_iron_dust")
-        .inputFluids("phoenixcore:source_of_magic 1200", "gtceu:titanium 250")
-        .outputFluids("gtceu:titanium_tetrachloride 100")
-        .itemOutputs("4x phoenixcore:eighty_five_percent_pure_nevonian_steel_dust")
-        .duration(800)
-        .EUt(GTValues.VA[GTValues.EV]);
-
     // Aurum Steel Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("aurum_steel_drilling_kit")
         .itemInputs(
@@ -495,17 +402,6 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .duration(600) // HV tier duration
         .EUt(GTValues.VA[GTValues.HV]); // HV voltage
 
-    event.recipes.gtceu.mixer("source_titanium_filament_alloy")
-        .itemInputs(
-            "4x gtceu:titanium_dust",
-            "64x ars_nouveau:source_gem",
-            "2x gtceu:molybdenum_dust",
-
-        )
-        .inputFluids("phoenixcore:source_of_magic 1200")
-        .itemOutputs("6x phoenixcore:source_titanium_filament_dust") // Output the custom material dust
-        .duration(200) // EV tier duration
-        .EUt(GTValues.VA[GTValues.EV]); // EV voltage
     event.recipes.gtceu.assembler("diamond_ring")
         .itemInputs(
             "4x gtceu:double_iridium_plate",
@@ -518,6 +414,7 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .itemOutputs("1x angelring:diamond_ring") // Output the custom material dust
         .duration(500) // EV tier duration
         .EUt(GTValues.VA[GTValues.EV]); // EV voltage
+
     // Space Miner Module - EV Assembler
     event.recipes.gtceu.assembler("space_miner_module")
         .itemInputs(
