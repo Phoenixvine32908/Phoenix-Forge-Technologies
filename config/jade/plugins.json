@@ -65,6 +65,7 @@
   },
   "phoenixcore": {
     "source_hatch_info": true,
+    "fission_machine_info": true,
     "tesla_network_info": true,
     "plasma_furnace_info": true
   },

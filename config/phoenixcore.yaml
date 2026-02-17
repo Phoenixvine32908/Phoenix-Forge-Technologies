@@ -1,110 +1,132 @@
-features:
-  # Whether the Creative Energy Multiblock is enabled
-  creativeEnergyEnabled: true
+fission:
+  # Enable the nuke block.
+  nukeEnabled: true
 
-  # Whether the Blazing Maintenance Hatch is enabled
-  blazingHatchEnabled: true
+  # Cube radius in blocks. Total affected volume is (2r+1)^3.
+  nukeCubeRadius: 16
 
-  # Whether the Blazing Cleanroom is enabled (This just disables the casings, you can have the hatch on with this off just fine)
-  blazingCleanroomEnabled: true
+  # Hard cap to prevent insane values.
+  nukeCubeRadiusCap: 48
 
-  # Whether the Custom HPCA componets are enabled
-  HPCAComponetsEnabled: true
+  # Fuse time in ticks (20 ticks = 1 second). TNT is 80.
+  nukeFuseTicks: 120
 
-  # Whether the Custom Phoenix HPCA multiblock is enabled
-  PHPCAEnabled: true
+  # How many blocks to process per tick during cube wipe.
+  nukeBatchPerTick: 8000
 
-  # Whether recipes for the machines are enabled
-  recipesEnabled: true
+  # Skip blocks that have a BlockEntity (machines/chests).
+  nukeSkipBlockEntities: true
 
-  # How powerful the normal Phoenix Computation Unit is (CWU/t)
-  BasicPCUStrength: 32
+  # Skip blocks in unloaded chunks (prevents chunk-forcing).
+  nukeSkipUnloadedChunks: true
 
-  # How powerful the Advanced Phoenix Computation Unit is (CWU/t)
-  PCUStrength: 64
+  # If true, replace removed blocks with fire instead of air.
+  nukeReplaceWithFire: false
 
-  # How much coolant the basic Phoenix Computation Unit uses
-  BasicPCUCoolantUsed: 4
+  # Flat heat added per tick while running (before rods/moderators/parallels).
+  baseHeatPerTick: 0.0
 
-  # How much coolant the Advanced Phoenix Computation Unit uses
-  PCUCoolantUsed: 8
+  # Max bonus percent from continuous running (power + breeder output). Example: 60 = up to +60%.
+  burnBonusMaxPercent: 60.0
 
-  # How powerful the normal Phoenix Computation Unit is (CWU/t) when damaged
-  damagedBasicPCUStrength: 16
+  # Seconds of continuous running required to reach the max burn bonus. Example: 1200 = 20 minutes.
+  burnBonusRampSeconds: 1200.0
 
-  # How powerful the advanced Phoenix Computation Unit is (CWU/t) when damaged
-  damagedPCUStrength: 32
+  # The maximum heat a reactor can hold before starting the meltdown timer.
+  maxSafeHeat: 10000.0
 
-  # How much EU the normal Phoenix Computation uses per tick while not providing CWU/t (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
-  basicPCUEutUpkeep: 8
+  # Minimum heat clamp.
+  minHeat: 0.0
 
-  # How much EU the normal Phoenix Computation can use at max (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
-  basicPCUMaxEUt: 10
+  # Maximum heat clamp to prevent runaway numeric overflow (meltdown still happens).
+  maxHeatClamp: 250000.0
 
-  # How much EU the advanced Phoenix Computation uses per tick while not providing CWU/t (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
-  PCUEutUpkeep: 8
+  # Does the reactor naturally lose heat when not running?
+  passiveCooling: true
 
-  # How much EU the advanced Phoenix Computation can use at max (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
-  PCUMaxEUt: 10
+  # Heat lost per tick when idling.
+  idleHeatLoss: 1.0
 
-  # How powerful the Phoenix Heat Sink is (Cooling Provided)
-  HeatSinkStrength: 4
+  # Base parallels added per fuel rod (before heat-based parallels).
+  parallelsPerFuelRod: 1
 
-  # How powerful the Phoenix Active Cooler is (Cooling Provided)
-  ActiveCoolerStrength: 8
+  # How much heat is required to add +1 to the recipe parallel multiplier.
+  heatPerParallel: 2000.0
 
-  # How much EU the Phoenix Heat Sink uses per tick (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
-  HeatSinkEutUpkeep: 0
+  # Hard cap for parallels.
+  maxParallels: 64
 
-  # How much EU the Active Phoenix Cooler uses per tick (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
-  ActiveCoolerEutUpkeep: 8
+  # How much EU/t is generated per unit of CURRENT heat (power scales with current heat).
+  euPerHeatUnit: 0.5
 
-  # How much coolant the Active Phoenix Cooler can use at max in milibuckets
-  ActiveCoolerCoolantUse: 10
+  # Optional cap on generated EU/t. Set <= 0 for no cap.
+  maxGeneratedEUt: 0
 
-  # What Base Coolant the Active Phoenix Cooler uses while in the PHPCA (Gt or GT Kubejs Material)
-  ActiveCoolerCoolantBase: copper
+  # If true, fuel usage scales with parallels (recommended).
+  fuelUsageScalesWithParallels: true
 
-  # What Stronger Coolant the Active Phoenix Cooler uses while in the PHPCA  (Gt or GT Kubejs Material)
-  ActiveCoolerCoolant1: pcb_coolant
+  # If true, fuel usage scales with rod count (usually true).
+  fuelUsageScalesWithRodCount: true
 
-  # What Strongest Coolant the Active Phoenix Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
-  ActiveCoolerCoolant2: sodium_potassium
+  # If true, blanket usage/output is additive across ALL blankets. If false, only the primary blanket is processed.
+  blanketUsageAdditive: true
 
-  # How much ActiveCoolerCoolant1 boosts base CWU/t ()
-  BaseCoolantBoost: 1.0
+  # Clamp for total fuel discount percent from moderators.
+  maxFuelDiscountPercent: 90
 
-  # How much ActiveCoolerCoolant1 boosts base CWU/t ()
-  CoolantBoost1: 1.1
+  # Clamp for total EU boost percent from moderators.
+  maxEUBoostPercent: 500
 
-  # What Strongest Coolant the Active Phoenix Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
-  CoolantBoost2: 1.2
+  # If true, cooling only applies when coolant is present.
+  coolingRequiresCoolant: true
 
-  # The connection mode for Tesla Towers.
-  # TEAM_AUTO: All towers under a team/player share the same cloud automatically.
-  # DATA_STICK: Towers must be manually linked to hatches using a Data Stick.
-  # Allowed values:
-  # - TEAM_AUTO
-  # - DATA_STICK
-  teslaConnectionMode: DATA_STICK
+  # If true, coolant usage is additive across all coolers. If false, uses primary cooler only.
+  coolantUsageAdditive: false
 
-cleanroom:
-  # Whether the cleanroom deals lethal damage to players when active and at max cleanliness.
-  lethal: true
+  # Minimum EU/t produced while running (prevents 0). Set 0 to allow 0.
+  minGeneratedEUt: 8
 
-  # The maximum cleanliness level of the cleanroom.
-  maxCleanliness: 1000
+  # Exponent for heat->power curve. 1 = linear, >1 rewards high heat.
+  powerCurveExponent: 2.0
 
-  # The amount of pollution each player adds per tick inside the cleanroom.
-  playerPollution: 5
+  # Heat fraction of maxSafeHeat where generation begins. 0.0 = always, 0.1 = starts at 10% of maxSafeHeat.
+  powerStartFraction: 0.0
 
-  # The amount of cleanliness regenerated per tick when no players are inside.
-  regenRate: 1
+  meltdown:
+    # Base grace seconds when barely above safe heat.
+    baseGraceSeconds: 60.0
 
-  # The amount of sterilizing gas consumed per tick.
-  fluidConsumption: 1
+    # Minimum grace seconds when extremely above safe heat.
+    minGraceSeconds: 10.0
 
-sourceHatch:
-  # The radius (in blocks) in which a Source Hatch will scan for nearby Source Jars to pull from.
-  sourceJarCheckRadius: 12
+    # Severity multiplier: higher = faster meltdown when over safe heat.
+    excessHeatSeverity: 1.0
+
+    # If true, falling back under safe heat clears the timer.
+    clearTimerWhenSafe: true
+
+  explosion:
+    # If true, replaces blocks with air/fire. If false, uses standard GT explosion (drops items).
+    destructiveExplosion: true
+
+    # Explosion power scales with fuel rod count: power = base + rods * multiplier.
+    explosionPowerPerFuelRod: 1.5
+
+    # The base power of the meltdown explosion.
+    baseExplosionPower: 10.0
+
+    # Max radius used for destructive bypass block wiping.
+    maxDestructiveRadius: 6
+
+  # If true, all fuel rods in the multiblock must be the same tier.
+  restrictFuelRodTier: true
+
+  # If true, all coolers in the multiblock must be the same tier.
+  restrictCoolerTier: true
+
+  # If >= 0, all fuel rods must be exactly this tier. Set to -1 to disable.
+  requiredFuelRodTier: -1
+
+  # If >= 0, all coolers must be exactly this tier. Set to -1 to disable.
+  requiredCoolerTier: -1
 

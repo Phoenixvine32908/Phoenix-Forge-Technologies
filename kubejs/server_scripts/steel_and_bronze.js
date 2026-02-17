@@ -53,10 +53,6 @@ ServerEvents.recipes((event) => {
         "4x minecraft:redstone",
         "1x gtceu:copper_dust"
     ]);
-    event.shapeless("2x gtceu:gold_iron_alloy_dust", [
-        "1x gtceu:iron_dust",
-        "1x gtceu:gold_dust",
-    ]);
     event.shapeless("5x gtceu:aurum_steel_dust", [
         "2x gtceu:steel_dust",
         "1x gtceu:gold_dust",
