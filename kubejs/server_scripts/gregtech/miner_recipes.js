@@ -39,10 +39,10 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "gtceu:drilling_fluid 500",
             "phoenixcore:frost 250",
             "kubejs:cryo_ember_fluid 25000",
-            "gtceu:source_of_magic 100"
+            "phoenixcore:source_of_magic 100"
         ])
         .itemInputs([
-            "gtceu:permafrost_dust",
+            "phoenixcore:permafrost_dust",
             "gtceu:ender_eye_dust"
         ])
         .outputFluids("kubejs:voidic_drilling_fluid 1000")
@@ -52,7 +52,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.large_chemical_reactor("voidic_drilling_fluid_recipe_better") // Renamed ID
         .inputFluids([
             "gtceu:drilling_fluid 500",
-            "gtceu:source_of_magic 1000"
+            "phoenixcore:source_of_magic 1000"
         ])
         .itemInputs([
             "phoenixcore:crystallized_fluxstone_dust"
@@ -197,12 +197,12 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable("kubejs:frost_reinforced_stained_steel_drilling_kit")
         .notConsumable("kubejs:earthbound_miner_module")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid  8000"
+            "kubejs:blazing_drilling_fluid 8000"
         ])
         .itemOutputs(
             "12x gtceu:raw_naquadah",
             "17x phoenixcore:raw_crystallized_fluxstone", // KEPT AS IS
-            "17x gtceu:raw_permafrost", // KEPT AS IS
+            "17x phoenixcore:raw_permafrost", // KEPT AS IS
             "12x gtceu:raw_palladium",
             "12x gtceu:raw_platinum",
             "12x gtceu:raw_molybdenite",
@@ -231,7 +231,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         ])
         .itemOutputs(
             "17x gtceu:raw_naquadah",
-            "20x gtceu:raw_permafrost", // KEPT AS IS
+            "20x phoenixcore:raw_permafrost", // KEPT AS IS
             "17x gtceu:raw_palladium",
             "17x gtceu:raw_platinum",
             "17x gtceu:raw_molybdenite",

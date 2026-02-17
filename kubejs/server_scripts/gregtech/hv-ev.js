@@ -84,12 +84,12 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.centrifuge("zircon_dust_from_blackstone_dust")
         .itemInputs("3x gtceu:blackstone_dust")
         .itemOutputs("1x phoenixcore:magma_dust", "1x phoenixcore:dormant_ember_dust", "gtceu:silicon_dust")
-        .chancedOutput("1x phoenix_fission:zircon_dust", 2500, 1)  // Slightly lower
+        .chancedOutput("1x phoenixcore:zircon_dust", 2500, 1)  
         .duration(650)
         .EUt(GTValues.VA[GTValues.MV] / 2)
     event.recipes.gtceu.centrifuge("zircon_dust_processing")
-        .itemInputs("20x phoenix_fission:zircon_dust")
-        .itemOutputs("8x phoenix_fission:impure_zirconium_dust","4x phoenix_fission:impure_hafnium_dust")
+        .itemInputs("20x phoenixcore:zircon_dust")
+        .itemOutputs("8x phoenixcore:impure_zirconium_dust","4x phoenixcore:impure_hafnium_dust")
         .duration(400)
         .EUt(GTValues.VA[GTValues.HV] / 2)
 
@@ -118,14 +118,14 @@ ServerEvents.recipes(event => {
             event.recipes.gtceu.assembler("fissile_reaction_safe_casing")
         .itemInputs("3x gtceu:zircalloy_plate","2x gtceu:stainless_steel_plate", "1x gtceu:zircalloy_frame")
         .circuit(6)
-        .itemOutputs("2x phoenix_fission:fissile_reaction_safe_casing")
+        .itemOutputs("2x phoenixcore:fissile_reaction_safe_casing")
         .inputFluids("gtceu:stainless_steel 250")
         .duration(100)
         .EUt(GTValues.VA[GTValues.HV] / 2)
     event.recipes.gtceu.assembler("fissile_safe_gearbox")
         .itemInputs("4x gtceu:zircalloy_plate","2x gtceu:zircalloy_gear", "1x gtceu:zircalloy_frame")
         .circuit(4)
-        .itemOutputs("2x phoenix_fission:fissile_safe_gearbox_casing")
+        .itemOutputs("2x phoenixcore:fissile_safe_gearbox_casing")
         .inputFluids("gtceu:gold 1000")
         .duration(100)
         .EUt(GTValues.VA[GTValues.LV] / 2)
@@ -137,7 +137,7 @@ ServerEvents.recipes(event => {
         .duration(100)
         .EUt(GTValues.VA[GTValues.HV] / 2)
     event.recipes.gtceu.assembler("zirconium_rod")
-        .itemInputs("4x gtceu:lead_plate", "gtceu:universal_fluid_cell", "2x gtceu:stainless_steel_plate", "1x phoenix_fission:dense_zircalloy_plate")
+        .itemInputs("4x gtceu:lead_plate", "gtceu:universal_fluid_cell", "2x gtceu:stainless_steel_plate", "1x phoenixcore:dense_zircalloy_plate")
         .itemOutputs("12x kubejs:zirconium_rod")
         .duration(200)
         .EUt(GTValues.VA[GTValues.HV] / 2)
@@ -155,31 +155,31 @@ ServerEvents.recipes(event => {
         .duration(150)
         .EUt(GTValues.VA[GTValues.HV] / 2) 
     event.recipes.gtceu.assembler("advanced_pressurized_fission_reactor")
-        .itemInputs("4x phoenix_fission:fissile_reaction_safe_casing", "2x gtceu:source_imbued_titanium_gear", "8x gtceu:dense_frost_reinforced_stained_steel_plate", "3x #gtceu:circuits/ev", "3x gtceu:dense_zircalloy_plate")
+        .itemInputs("4x phoenixcore:fissile_reaction_safe_casing", "2x gtceu:source_imbued_titanium_gear", "8x gtceu:dense_frost_reinforced_stained_steel_plate", "3x #gtceu:circuits/ev", "3x gtceu:dense_zircalloy_plate")
         .inputFluids("gtceu:soldering_alloy 613")
-        .itemOutputs("1x phoenix_fission:advanced_pressurized_fission_reactor")
+        .itemOutputs("1x phoenixcore:advanced_pressurized_fission_reactor")
         .duration(150)
         .EUt(GTValues.VA[GTValues.HV] / 2)
         */
     event.recipes.gtceu.assembler("dimensional_anchor")
         .itemInputs("4x kubejs:frost_reinforced_stained_steel_drilling_kit", "2x phoenixcore:frost_reinforced_stained_steel_gear",
-            "8x phoenixcore:dense_frost_reinforced_stained_steel_plate", "3x #gtceu:circuits/ev", "3x phoenix_fission:dense_zircalloy_plate","4x phoenixcore:icy_steel_matrix_single_wire")
+            "8x phoenixcore:dense_frost_reinforced_stained_steel_plate", "3x #gtceu:circuits/ev", "3x phoenixcore:dense_zircalloy_plate","4x phoenixcore:icy_steel_matrix_single_wire")
         .inputFluids("gtceu:soldering_alloy 4200")
         .itemOutputs("1x gtceu:dimensional_anchor12")
         .duration(150)
         .EUt(GTValues.VA[GTValues.EV] / 2)
     event.recipes.gtceu.assembler("aetherial_fabricator")
         .itemInputs("4x kubejs:source_imbued_titanium_drill_head", "2x phoenixcore:source_imbued_titanium_gear",
-            "8x phoenixcore:source_imbued_titanium_plate", "5x #gtceu:circuits/ev", "3x phoenix_fission:dense_zircalloy_plate", "4x phoenixcore:source_titanium_filament_single_wire")
+            "8x phoenixcore:source_imbued_titanium_plate", "5x #gtceu:circuits/ev", "3x phoenixcore:dense_zircalloy_plate", "4x phoenixcore:source_titanium_filament_single_wire")
         .inputFluids("gtceu:soldering_alloy 4200")
         .itemOutputs("1x gtceu:aetherial_fabricator12")
         .duration(150)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         /*
     event.recipes.gtceu.assembler("heat_exchanger")
-        .itemInputs("2x phoenix_fission:fissile_reaction_safe_casing","8x phoenix_fission:fissile_heat_safe_casing", "2x gtceu:dense_zircalloy_plate","1x #gtceu:circuits/ev", "2x gtceu:titanium_large_fluid_pipe" )
+        .itemInputs("2x phoenixcore:fissile_reaction_safe_casing","8x phoenixcore:fissile_heat_safe_casing", "2x gtceu:dense_zircalloy_plate","1x #gtceu:circuits/ev", "2x gtceu:titanium_large_fluid_pipe" )
         .inputFluids("gtceu:soldering_alloy 613")
-        .itemOutputs("1x phoenix_fission:heat_exchanger")
+        .itemOutputs("1x phoenixcore:heat_exchanger")
         .duration(150)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         */
@@ -203,15 +203,15 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.HV]);
         /*
     event.recipes.gtceu.assembler("pressurized_fission_reactor")
-        .itemInputs("4x phoenix_fission:fissile_reaction_safe_casing", "8x gtceu:stainless_steel_large_fluid_pipe", "4x gtceu:zircalloy_frame", "2x #gtceu:circuits/hv")
+        .itemInputs("4x phoenixcore:fissile_reaction_safe_casing", "8x gtceu:stainless_steel_large_fluid_pipe", "4x gtceu:zircalloy_frame", "2x #gtceu:circuits/hv")
         .inputFluids("gtceu:soldering_alloy 613")
-        .itemOutputs("1x phoenix_fission:pressurized_fission_reactor")
+        .itemOutputs("1x phoenixcore:pressurized_fission_reactor")
         .duration(150)
         .EUt(GTValues.VA[GTValues.HV] / 2)
         */
     event.recipes.gtceu.mixer("zircalloy_dust")
         .itemInputs("5x gtceu:zirconium_dust", "1x gtceu:small_bismuth_dust", "2x gtceu:hafnium_dust")
-        .itemOutputs("7x phoenix_fission:zircalloy_dust")
+        .itemOutputs("7x phoenixcore:zircalloy_dust")
         .duration(100)
         .circuit(15)
         .EUt(GTValues.VA[GTValues.HV] / 2)
@@ -226,7 +226,7 @@ ServerEvents.recipes(event => {
         /*
 event.recipes.gtceu.mixer("boron_carbide_dust")
     .itemInputs("4x gtceu:boron_dust", "1x gtceu:carbon_dust")
-    .itemOutputs("5x phoenix_fission:boron_carbide_dust")
+    .itemOutputs("5x phoenixcore:boron_carbide_dust")
     .duration(150)
     .circuit(1)
     .EUt(GTValues.EV); // Uses the correct EUt for EV
@@ -234,7 +234,7 @@ event.recipes.gtceu.mixer("boron_carbide_dust")
 // 2. Niobium Modified Silicon Carbide (Nb-SiC) Dust - IV Tier
 event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
     .itemInputs("1x gtceu:niobium_dust", "1x gtceu:silicon_dust", "2x gtceu:carbon_dust")
-    .itemOutputs("4x phoenix_fission:niobium_modified_silicon_carbide_dust")
+    .itemOutputs("4x phoenixcore:niobium_modified_silicon_carbide_dust")
     .duration(200)
     .circuit(2)
     .EUt(GTValues.IV); // Uses the correct EUt for IV
@@ -242,15 +242,15 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
     event.recipes.gtceu.assembler("fissile_heat_safe_casing")
         .itemInputs("6x gtceu:zircalloy_plate", "1x gtceu:stainless_steel_frame", "2x gtceu:aluminfrost_large_fluid_pipe")
         .circuit(2)
-        .itemOutputs("2x phoenix_fission:fissile_heat_safe_casing")
-        .inputFluids("phoenix_fission:frost 100")
+        .itemOutputs("2x phoenixcore:fissile_heat_safe_casing")
+        .inputFluids("phoenixcore:frost 100")
         .duration(100)
         .EUt(GTValues.VA[GTValues.LV] / 2)
     */
 
     event.recipes.gtceu.mixer("space_grade_steel_dust")
         .itemInputs(
-            "1x phoenix_fission:zircalloy_dust",
+            "1x phoenixcore:zircalloy_dust",
             "2x gtceu:tungsten_dust",
             "4x phoenixcore:icy_steel_matrix_dust",
             "2x gtceu:molybdenum_dust",
@@ -260,18 +260,21 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
         .duration(200)
         .circuit(12)
         .EUt(GTValues.VA[GTValues.EV]);
+        /*
     event.recipes.gtceu.pressurized_fission_reactor("fission1")
         .chancedInput("1x kubejs:basic_fuel_rod", 5000, 0)
         .itemOutputs("10x phoenixcore:low_level_radioactive_waste_dust")
         .duration(2200)
         .addData("required_cooling", 2500)
         .EUt(-GTValues.VA[GTValues.EV])
+
     event.recipes.gtceu.advanced_pressurized_fission_reactor("fission2")
         .itemInputs("3x kubejs:basic_fuel_rod")
         .perTick(true)
         .outputFluids("phoenixcore:medium_pressure_fissile_steam 100")
         .chancedOutput("phoenixcore:low_level_radioactive_waste_ingot", 500, 0)
         .duration(6000)
+        */
     event.recipes.gtceu.gas_collector("void_air")
         .circuit(4)
         .outputFluids("gtceu:air 10000")
@@ -432,15 +435,15 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
             "2x phoenixcore:nevvonian_iron_dust")
         .inputFluids("phoenixcore:source_of_magic 1200", "gtceu:titanium 250")
         .outputFluids("gtceu:titanium_tetrachloride 100")
-        .itemOutputs("4x gtceu:eighty_five_percent_pure_nevonian_steel_dust")
+        .itemOutputs("4x phoenixcore:eighty_five_percent_pure_nevonian_steel_dust")
         .duration(800)
         .EUt(GTValues.VA[GTValues.EV]);
 
     // Aurum Steel Drilling Kit - EV Assembler
     event.recipes.gtceu.assembler("aurum_steel_drilling_kit")
         .itemInputs(
-            "16x gtceu:aurum_steel_plate",
-            "32x gtceu:aurum_steel_screw",
+            "16x phoenixcore:aurum_steel_plate",
+            "32x phoenixcore:aurum_steel_screw",
             "4x gtceu:lv_field_generator",
             "8x gtceu:lv_electric_motor",
             "20x #gtceu:circuits/lv",
@@ -499,7 +502,7 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
             "2x gtceu:molybdenum_dust",
 
         )
-        .inputFluids("gtceu:source_of_magic 1200")
+        .inputFluids("phoenixcore:source_of_magic 1200")
         .itemOutputs("6x phoenixcore:source_titanium_filament_dust") // Output the custom material dust
         .duration(200) // EV tier duration
         .EUt(GTValues.VA[GTValues.EV]); // EV voltage

@@ -15,7 +15,6 @@ ServerEvents.recipes(event => {
     event.smelting("1x minecraft:charcoal", "minecraft:crimson_stem");
     event.smelting("1x minecraft:charcoal", "minecraft:warped_stem");
     event.smelting("1x minecraft:charcoal", "gtceu:rubber_log");
-    event.smelting("1x gtceu:gold_iron_alloy_ingot", "1x gtceu:gold_iron_alloy_dust");
     event.smelting("1x minecraft:glass", "1x minecraft:sand");
     event.smelting("1x gtceu:wrought_iron_ingot", "1x minecraft:iron_ingot");
     event.smelting("1x gtceu:dormant_ember_dust", "1x gtceu:raw_dormant_ember")
