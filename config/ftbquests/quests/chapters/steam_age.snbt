@@ -515,7 +515,10 @@
 				{
 					count: 16L
 					id: "785B27CE86B9196E"
-					item: { Count: 16, id: "gtceu:raw_dormant_ember" }
+					item: {
+						Count: 16
+						id: "gtceu:raw_dormant_ember"
+					}
 					type: "item"
 				}
 				{

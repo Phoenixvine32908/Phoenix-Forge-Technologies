@@ -173,10 +173,10 @@ ServerEvents.recipes(event => {
 
     // Stack upgrades
     let stackupgrade = [
-        ["stack_upgrade_tier_1", "gtceu:aurum_steel", "upgrade_base"],
-        ["stack_upgrade_tier_2", "gtceu:frost_reinforced_stained_steel", "stack_upgrade_tier_1"],
-        ["stack_upgrade_tier_3", "gtceu:void_touched_tungsten_steel", "stack_upgrade_tier_2"],
-        ["stack_upgrade_tier_4", "gtceu:osmiridium", "stack_upgrade_tier_3"]
+        ["stack_upgrade_tier_1", "phoenixcore:aurum_steel", "upgrade_base"],
+        ["stack_upgrade_tier_2", "phoenixcore:frost_reinforced_stained_steel", "stack_upgrade_tier_1"],
+        ["stack_upgrade_tier_3", "phoenixcore:void_touched_tungsten_steel", "stack_upgrade_tier_2"],
+        ["stack_upgrade_tier_4", "phoenixcore:osmiridium", "stack_upgrade_tier_3"]
     ]
     event.remove({ output: "sophisticatedbackpacks:stack_upgrade_starter_tier" })
     event.remove({ output: "sophisticatedstorage:stack_upgrade_tier_1_plus" })

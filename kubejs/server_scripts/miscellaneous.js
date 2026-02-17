@@ -69,3 +69,4 @@ ServerEvents.recipes((event) => {
     createUniversalCircuitRecipe("mv_universal_circuit", "gtceu:circuits/mv");
     createUniversalCircuitRecipe("lv_universal_circuit", "gtceu:circuits/lv");
 });
+

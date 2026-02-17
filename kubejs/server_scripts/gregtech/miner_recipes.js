@@ -14,7 +14,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "kubejs:cryo_ember_fluid 10000"
         ])
         .itemInputs([
-            "10x gtceu:dormant_ember_dust",
+            "10x phoenixcore:dormant_ember_dust",
             "2x gtceu:sulfur_dust"
         ])
         .outputFluids("kubejs:blazing_drilling_fluid 750")
@@ -130,7 +130,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         ])
         .itemOutputs(
             "50x gtceu:raw_sulfur",
-            "17x gtceu:raw_dormant_ember", // KEPT AS IS
+            "17x phoenixcore:raw_dormant_ember", // KEPT AS IS
             "38x gtceu:raw_pyrite",
             "46x gtceu:raw_nether_quartz",
             "38x gtceu:raw_magnetite",
@@ -173,7 +173,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .itemOutputs(
             "29x gtceu:raw_sulfur",
             "23x gtceu:raw_pyrite",
-            "20x gtceu:raw_dormant_ember", // KEPT AS IS
+            "20x phoenixcore:raw_dormant_ember", // KEPT AS IS
             "14x gtceu:raw_cinnabar",
             "29x gtceu:raw_nether_quartz",
             "23x gtceu:raw_magnetite",

@@ -29,18 +29,18 @@ ServerEvents.recipes((event) => {
     event.shapeless("minecraft:crying_obsidian", [
         "1x minecraft:obsidian",
     ]);
-    event.shapeless("gtceu:dormant_ember_dust", [
+    event.shapeless("phoenixcore:dormant_ember_dust", [
         "#forge:tools/mortars",
-        "gtceu:dormant_ember_ingot"
+        "phoenixcore:dormant_ember_ingot"
     ]);
-    event.shapeless("gtceu:permafrost_dust", [
+    event.shapeless("phoenixcore:permafrost_dust", [
         "#forge:tools/mortars",
-        "gtceu:permafrost_ingot"
+        "phoenixcore:permafrost_ingot"
     ]);
-    event.shapeless("4x gtceu:fiery_bronze_dust", [
+    event.shapeless("4x phoenixcore:fiery_bronze_dust", [
         "3x gtceu:copper_dust",
         "1x gtceu:tin_dust",
-        "1x gtceu:dormant_ember_dust",
+        "1x phoenixcore:dormant_ember_dust",
     ]);
     event.shapeless("1x gtceu:programmed_circuit", [
         "#gtceu:circuits",
@@ -53,11 +53,11 @@ ServerEvents.recipes((event) => {
         "4x minecraft:redstone",
         "1x gtceu:copper_dust"
     ]);
-    event.shapeless("5x gtceu:aurum_steel_dust", [
+    event.shapeless("5x phoenixcore:aurum_steel_dust", [
         "2x gtceu:steel_dust",
         "1x gtceu:gold_dust",
-        "2x gtceu:dormant_ember_dust",
-        "1x gtceu:aurum_wood_dust",
+        "2x phoenixcore:dormant_ember_dust",
+        "1x phoenixcore:aurum_wood_dust",
     ]);
     event.shaped("gtceu:wood_plate", [" L ", " S ", " S "], {
         S: "#minecraft:planks",
@@ -279,10 +279,6 @@ ServerEvents.recipes((event) => {
     event.shaped("minecraft:glass_bottle", ["   ", " P ", "P P"], {
         P: "minecraft:glass",
     });
-    event.shaped("enderio:energetic_conduit", ["BBB", "EEE", "BBB"], {
-        B: "enderio:conduit_binder",
-        E: "enderio:energetic_alloy_ingot"
-    });
     event.shapeless("gtceu:steel_dust", [
         "1x gtceu:coke_dust",
         "gtceu:iron_dust",
@@ -303,26 +299,26 @@ ServerEvents.recipes((event) => {
         "1x gtceu:coke",
         "gtceu:wrought_iron_dust",
     ]);
-    event.shapeless("gtceu:aluminfrost_drum", [
-        "1x gtceu:aluminfrost_drum",
+    event.shapeless("phoenixcore:aluminfrost_drum", [
+        "1x phoenixcore:aluminfrost_drum",
     ]);
-    event.shapeless("gtceu:void_touched_tungsten_steel_drum", [
-        "1x gtceu:void_touched_tungsten_steel_drum",
+    event.shapeless("phoenixcore:void_touched_tungsten_steel_drum", [
+        "1x phoenixcore:void_touched_tungsten_steel_drum",
     ]);
-    event.shapeless("gtceu:frost_reinforced_stained_steel_drum", [
-        "1x gtceu:frost_reinforced_stained_steel_drum",
+    event.shapeless("phoenixcore:frost_reinforced_stained_steel_drum", [
+        "1x phoenixcore:frost_reinforced_stained_steel_drum",
     ]);
-    event.shapeless("gtceu:source_imbued_titanium_drum", [
-        "1x gtceu:source_imbued_titanium_drum",
+    event.shapeless("phoenixcore:source_imbued_titanium_drum", [
+        "1x phoenixcore:source_imbued_titanium_drum",
     ]);
-    event.shapeless("gtceu:resonant_rhodium_alloy_drum", [
-        "1x gtceu:resonant_rhodium_alloy_drum",
+    event.shapeless("phoenixcore:resonant_rhodium_alloy_drum", [
+        "1x phoenixcore:resonant_rhodium_alloy_drum",
     ]);
-    event.shapeless("gtceu:magma_dust", [
+    event.shapeless("phoenixcore:magma_dust", [
         "1x minecraft:magma_block",
         "#forge:tools/hammers",
     ]);
-    event.shapeless("4x gtceu:aurum_wood_dust", [
+    event.shapeless("4x phoenixcore:aurum_wood_dust", [
         "1x forbidden_arcanus:aurum_log",
         "#forge:tools/hammers",
     ]);
@@ -389,9 +385,9 @@ ServerEvents.recipes(event => {
         alloySmelterRecipe(event, `gtceu:${id}_from_alloy_smelter`, inputs, outputs, dur, power);
     });
     const mixerRecipes = [
-        ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x gtceu:dormant_ember_dust"], ["4x gtceu:fiery_bronze_dust"], 300, 7, 4],
-        ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x gtceu:dormant_ember_dust", "1x gtceu:aurum_wood_dust"], ["5x gtceu:aurum_steel_dust"], 300, 7, 2],
-        ["unrefined_aluminfrost_dust_from_mixe", ["2x gtceu:aluminium_dust", "1x gtceu:permafrost_dust"], ["4x gtceu:unrefined_aluminfrost_dust"], 180, 32, 3],
+        ["fiery_bronze_dust_from_mixer", ["3x gtceu:copper_dust", "1x gtceu:tin_dust", "1x phoenixcore:dormant_ember_dust"], ["4x phoenixcore:fiery_bronze_dust"], 300, 7, 4],
+        ["aurum_steel_dust_from_mixer", ["2x gtceu:steel_dust", "1x gtceu:gold_dust", "2x phoenixcore:dormant_ember_dust", "1x phoenixcore:aurum_wood_dust"], ["5x phoenixcore:aurum_steel_dust"], 300, 7, 2],
+        ["unrefined_aluminfrost_dust_from_mixe", ["2x gtceu:aluminium_dust", "1x phoenixcore:permafrost_dust"], ["4x phoenixcore:unrefined_aluminfrost_dust"], 180, 32, 3],
     // You can add more mixer recipes here following the same format
     // ["recipe_id", ["input1", "input2", ...], ["output1", "output2", ...], duration, power],
     ];

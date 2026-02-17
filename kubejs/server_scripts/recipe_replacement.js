@@ -1,5 +1,5 @@
 /**
-Replacing recipes
+ * Replacing recipes for Phoenix Core materials
  */
 
 ServerEvents.recipes((event) => {
@@ -11,27 +11,15 @@ ServerEvents.recipes((event) => {
         "tungsten_steel",
         "rhodium_plated_palladium"
     ];
+
     const parts = [
-        "gear",
-        "rod",
-        "plate",
-        "bolt",
-        "long_rod",
-        "ring",
-        "round",
-        "small_gear",
-        "spring",
-        "phosphorescent",
-        "screw",
-        "frame",
-        "dense",
-        "fine_wire",
-        "foil",
-        "rotor"
+        "gear", "rod", "plate", "bolt", "long_rod", 
+        "ring", "round", "small_gear", "spring", 
+        "phosphorescent", "screw", "frame", "dense", 
+        "fine_wire", "foil", "rotor"
     ];
 
-
-    // Map of tier replacements
+    // Map of tier replacements to phoenixcore
     const tierReplacements = {
         aluminium: "aluminfrost",
         titanium: "source_imbued_titanium",
@@ -39,57 +27,40 @@ ServerEvents.recipes((event) => {
         tungsten_steel: "void_touched_tungsten_steel",
         rhodium_plated_palladium: "resonant_rhodium_alloy",
         stainless_steel: "frost_reinforced_stained_steel",
-        naquadah_alloy: "advanced_quin_naquadian_alloy",
-        // Add more replacements as needed
+        naquadah_alloy: "advanced_quin_naquadian_alloy"
     };
 
     tiers.forEach(tier => {
         const replacementTier = tierReplacements[tier] || `source_imbued_${tier}`;
+        
         parts.forEach(part => {
-            event.replaceInput(
-                { id: /^gtceu:(shaped\/)?electric_.*/ },
-                `gtceu:${tier}_${part}`,
-                `gtceu:${replacementTier}_${part}`
-            );
+            // Updated namespace from gtceu to phoenixcore for the replacement items
+            const oldItem = `gtceu:${tier}_${part}`;
+            const newItem = `phoenixcore:${replacementTier}_${part}`;
 
-            event.replaceInput(
-                { id: /^gtceu:(assembler\/)?electric_.*/ },
-                `gtceu:${tier}_${part}`,
-                `gtceu:${replacementTier}_${part}`
-            );
-            event.replaceInput(
-                { id: /^gtceu:(shaped\/)?robot_arm_.*/ },
-                `gtceu:${tier}_${part}`,
-                `gtceu:${replacementTier}_${part}`
-            );
-            event.replaceInput(
-                { id: /^gtceu:(assembler\/)?robot_arm_.*/ },
-                `gtceu:${tier}_${part}`,
-                `gtceu:${replacementTier}_${part}`
-            );
-            event.replaceInput(
-                { id: /^gtceu:(shaped\/)?sensor_.*/ },
-                `gtceu:${tier}_${part}`,
-                `gtceu:${replacementTier}_${part}`
-            );
-            event.replaceInput(
-                { id: /^gtceu:(assembler\/)?sensor_.*/ },
-                `gtceu:${tier}_${part}`,
-                `gtceu:${replacementTier}_${part}`
-            );
-
-
-            event.remove({ id: "/advanced_[a-z_]+_beehive/" })
-            event.remove({ id: "/advanced_[a-z_]+_canvas_hive/" })
-            event.remove({ id: /^productivebees:stonecutter\/.*canvas_hive$/ })
-            event.remove({ id: /^thermal:machines\/press\/press_[a-z_]+_gear$/ })
-            event.remove({ id: /^thermalexpansion:press\/[a-z_]+_gear$/ })
-            event.remove({ id: /^thermal:parts\/[a-z_]+_gear$/ });
-            event.remove({ id: /^productivebees:bee_breeding\// });
-            event.remove({ id: /^productivebees:cage_incubation/ });
-            event.remove({ id: /^productivebees.*incubation/ });
-
-
+            // Handle Electric components
+            event.replaceInput({ id: /gtceu:(shaped\/|assembler\/)?electric_.*/ }, oldItem, newItem);
+            
+            // Handle Robot Arms
+            event.replaceInput({ id: /gtceu:(shaped\/|assembler\/)?robot_arm_.*/ }, oldItem, newItem);
+            
+            // Handle Sensors
+            event.replaceInput({ id: /gtceu:(shaped\/|assembler\/)?sensor_.*/ }, oldItem, newItem);
         });
     });
-})
+
+    // Consolidated Removals
+    const toRemove = [
+        { id: /advanced_[a-z_]+_beehive/ },
+        { id: /advanced_[a-z_]+_canvas_hive/ },
+        { id: /^productivebees:stonecutter\/.*canvas_hive$/ },
+        { id: /^thermal:machines\/press\/press_[a-z_]+_gear$/ },
+        { id: /^thermalexpansion:press\/[a-z_]+_gear$/ },
+        { id: /^thermal:parts\/[a-z_]+_gear$/ },
+        { id: /^productivebees:bee_breeding\// },
+        { id: /^productivebees:cage_incubation/ },
+        { id: /^productivebees.*incubation/ }
+    ];
+
+    toRemove.forEach(removal => event.remove(removal));
+});
