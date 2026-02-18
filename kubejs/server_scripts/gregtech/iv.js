@@ -268,7 +268,7 @@ ServerEvents.recipes(event => {
     // Superconductive Honey Creation in Large Chemical Reactor
     greg.large_chemical_reactor("superconductive_honey_creation")
         .itemInputs("8x phoenixcore:honey_dust", "4x gtceu:niobium_titanium_dust", "2x gtceu:iridium_dust")
-        .inputFluids("gtceu:helium 500", "kubejs:cryo_ember_fluid 100")
+        .inputFluids("gtceu:helium 500", "phoenixcore:cryo_ember_fluid 100")
         .itemOutputs("12x phoenixcore:superconductive_honey_dust")
         .duration(300)
         .EUt(GTValues.VA[GTValues.EV]);
@@ -376,7 +376,7 @@ ServerEvents.recipes(event => {
     // Honeycomb Assembly in Assembler
     greg.assembler("honeycomb_assembly")
         .inputFluids("phoenixcore:honey 588", "phoenixcore:invert_sugar_solution 144")
-        .notConsumable("kubejs:honey_comb_base")
+        .notConsumable("phoenixcore:honey_comb_base")
         .itemOutputs("minecraft:honeycomb")
         .duration(700)
         .EUt(GTValues.VA[GTValues.IV] / 2)

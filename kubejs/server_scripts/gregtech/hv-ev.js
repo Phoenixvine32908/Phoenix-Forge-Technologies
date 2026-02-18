@@ -428,7 +428,7 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
             "8x phoenixcore:space_grade_steel_plate",               // Slot 8: Primary custom structural material
             "8x phoenixcore:source_titanium_filament_single_wire"  // Slot 9: High-tech custom wiring
         )
-        .inputFluids("kubejs:cryo_ember_fluid 32000")
+        .inputFluids("phoenixcore:cryo_ember_fluid 32000")
         .itemOutputs("kubejs:space_miner_module")
         .duration(600)
         .EUt(GTValues.VA[GTValues.EV]);
@@ -446,7 +446,7 @@ event.recipes.gtceu.mixer("niobium_modified_silicon_carbide_dust")
             "32x #gtceu:circuits/ev",                                // Slot 8: Logic (should resolve to advanced_circuit_board or similar in your setup)
             "16x phoenixcore:icy_steel_matrix_single_wire"                 // Slot 9: Custom cryogenic/structural wiring
         )
-        .inputFluids("kubejs:cryo_ember_fluid 12000")
+        .inputFluids("phoenixcore:cryo_ember_fluid 12000")
         .itemOutputs("kubejs:earthbound_miner_module")
         .duration(600)
         .EUt(GTValues.VA[GTValues.EV]);

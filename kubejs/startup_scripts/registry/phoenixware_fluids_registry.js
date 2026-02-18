@@ -57,7 +57,7 @@ StartupEvents.registry("fluid", event => {
         ["neutrino_laced_superfluid", "thin", 0x4682B4, 0x6495ED, "Neutrino-Laced Superfluid"],
         ["exo_temporal_stabilizer", "thick", 0x3CB371, 0x2E8B57, "Exo-Temporal Stabilizer"],
         ["hypercharged_void_extract", "thick", 0xFFD700, 0xFFA500, "Hypercharged Void Extract"],
-        ["reality_woven_nanotubes", "thick", 0x800080, 0x9400D3, "Reality-Woven Nanotubes"]
+        ["reality_woven_nanotubes", "thick", 0x800080, 0x9400D3, "Reality-Woven Nanotubes"],
         ["phoenix_fire_solution", "thick", 0xFF4500, 0xFF8C00, "Phoenix Fire Solution"],
         ["eldritch_catalytic_mist", "thin", 0x483D8B, 0x6A5ACD, "Eldritch Catalytic Mist"],
         ["quantum_locked_fluid", "thick", 0x00BFFF, 0x1E90FF, "Quantum-Locked Fluid"],
