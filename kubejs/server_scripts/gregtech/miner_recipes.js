@@ -11,13 +11,13 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .inputFluids([
             "gtceu:drilling_fluid 500",
             "minecraft:lava 150",
-            "kubejs:cryo_ember_fluid 10000"
+            "phoenixcore:cryo_ember_fluid 10000"
         ])
         .itemInputs([
             "10x phoenixcore:dormant_ember_dust",
             "2x gtceu:sulfur_dust"
         ])
-        .outputFluids("kubejs:blazing_drilling_fluid 750")
+        .outputFluids("phoenixcore:blazing_drilling_fluid 750")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV] / 2);
 
@@ -29,7 +29,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .itemInputs([
             "2x phoenixcore:ignisium_dust" // Corrected quantity syntax
         ])
-        .outputFluids("kubejs:blazing_drilling_fluid 900")
+        .outputFluids("phoenixcore:blazing_drilling_fluid 900")
         .duration(200)
         .EUt(GTValues.VA[GTValues.EV] / 2);
 
@@ -41,7 +41,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable("kubejs:aurum_steel_drilling_kit")
         .notConsumable("kubejs:earthbound_miner_module")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid  8000"
+            "phoenixcore:blazing_drilling_fluid  8000"
         ])
         .itemOutputs(
             "35x gtceu:raw_chalcopyrite",
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.dimensional_anchoring12("overworld_blazing_drill_lesser")
         .notConsumable("kubejs:aurum_steel_drilling_kit")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid  8000"
+            "phoenixcore:blazing_drilling_fluid  8000"
         ])
         .itemOutputs(
             "23x gtceu:raw_chalcopyrite",
@@ -100,7 +100,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable("kubejs:aluminfrost_drilling_kit")
         .notConsumable("kubejs:earthbound_miner_module")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid  8000"
+            "phoenixcore:blazing_drilling_fluid  8000"
         ])
         .itemOutputs(
             "50x gtceu:raw_sulfur",
@@ -142,7 +142,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.dimensional_anchoring12("nether_blazing_drill_lesser_no_module")
         .notConsumable("kubejs:aluminfrost_drilling_kit")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid  8000"
+            "phoenixcore:blazing_drilling_fluid  8000"
         ])
         .itemOutputs(
             "29x gtceu:raw_sulfur",
@@ -171,7 +171,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable("kubejs:frost_reinforced_stained_steel_drilling_kit")
         .notConsumable("kubejs:earthbound_miner_module")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid 8000"
+            "phoenixcore:blazing_drilling_fluid 8000"
         ])
         .itemOutputs(
             "12x gtceu:raw_naquadah",
@@ -201,7 +201,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.dimensional_anchoring12("end_blazing_drill_lesser")
         .notConsumable("kubejs:frost_reinforced_stained_steel_drilling_kit")
         .inputFluids([
-            "kubejs:blazing_drilling_fluid  8000"
+            "phoenixcore:blazing_drilling_fluid  8000"
         ])
         .itemOutputs(
             "17x gtceu:raw_naquadah",
@@ -230,7 +230,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
     event.recipes.gtceu.aetherial_fabrication12("moon_voidic_drill_lesser")
         .notConsumable("kubejs:space_grade_steel_drilling_kit")
         .inputFluids([
-            "kubejs:voidic_drilling_fluid  8000"
+            "phoenixcore:voidic_drilling_fluid  8000"
         ])
         .itemOutputs(
             "10x phoenixcore:raw_voidglass_shard",
@@ -250,7 +250,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .notConsumable("kubejs:space_grade_steel_drilling_kit")
         .notConsumable("kubejs:space_miner_module")
         .inputFluids([
-            "kubejs:voidic_drilling_fluid  8000"
+            "phoenixcore:voidic_drilling_fluid  8000"
         ])
         .itemOutputs(
             "15x phoenixcore:raw_voidglass_shard",

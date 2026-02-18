@@ -57,8 +57,7 @@ StartupEvents.registry("fluid", event => {
         ["neutrino_laced_superfluid", "thin", 0x4682B4, 0x6495ED, "Neutrino-Laced Superfluid"],
         ["exo_temporal_stabilizer", "thick", 0x3CB371, 0x2E8B57, "Exo-Temporal Stabilizer"],
         ["hypercharged_void_extract", "thick", 0xFFD700, 0xFFA500, "Hypercharged Void Extract"],
-        ["reality_woven_nanotubes", "thick", 0x800080, 0x9400D3, "Reality-Woven Nanotubes"],
-        ["cryo_ember_fluid", "thin", 0xFF4500, 0xA020F0, "Cryo Ember Fluid"],
+        ["reality_woven_nanotubes", "thick", 0x800080, 0x9400D3, "Reality-Woven Nanotubes"]
         ["phoenix_fire_solution", "thick", 0xFF4500, 0xFF8C00, "Phoenix Fire Solution"],
         ["eldritch_catalytic_mist", "thin", 0x483D8B, 0x6A5ACD, "Eldritch Catalytic Mist"],
         ["quantum_locked_fluid", "thick", 0x00BFFF, 0x1E90FF, "Quantum-Locked Fluid"],
@@ -124,8 +123,6 @@ StartupEvents.registry("fluid", event => {
         ["adaptive_camouflage_coating_tech", "thin", 0x8FBC8F, 0xA9A9A9, "Adaptive Camouflage Coating (Tech)"],
         ["directional_energy_receiver_fluid", "thin", 0xF0E68C, 0xFFD700, "Directional Energy Receiver Fluid"],
         ["neural_interface_emulator_digital_fluid", "thin", 0x6A5ACD, 0x8A2BE2, "Neural Interface Emulator (Digital Fluid)"],
-        ["blazing_drilling_fluid", "thin", 0xFF6600, 0xEE4400, "Blazing Drilling Fluid"],
-        ["voidic_drilling_fluid", "thin", 0x400080, 0x7B68EE, "Voidic Drilling Fluid"]
     ];
 
     customFluids.forEach(fluid => {
