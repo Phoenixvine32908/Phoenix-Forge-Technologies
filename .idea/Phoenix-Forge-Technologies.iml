@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$" />
+    <content url="file://$USER_HOME$/curseforge/minecraft/Instances/Phoenix Forge Technologies/mods" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
