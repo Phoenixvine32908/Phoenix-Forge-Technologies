@@ -16,7 +16,7 @@ ItemEvents.modification(event => {
     };
   });
 
-  event.modify("productivebees:honey_treat", item => {
+  event.modify("phoenixcore:honey_treat", item => {
     item.foodProperties = food => {
       food.hunger(4);
       food.saturation(200);

@@ -425,7 +425,7 @@
 	/**
 	 * Delete the stack in the cursor when hovering the index
 	 */
-	delete-cursor-stack: "key.mouse.left";
+	delete-cursor-stack: "key.keyboard.equal";
 
 	/**
 	 * Copies the hovered recipe's ID to the clipboard

@@ -74,7 +74,7 @@ ServerEvents.recipes((event) => {
     });
     event.shaped("gtceu:large_steam_compressor", ["SPS", "PCP", "SLS"], {
         S: "gtceu:steam_machine_casing",
-        L: "gtceu:fiery_bronze_gear",
+        L: "phoenixcore:fiery_bronze_gear",
         P: "gtceu:dense_steel_plate",
         C: "gtceu:hp_steam_compressor"
     });
@@ -84,12 +84,12 @@ ServerEvents.recipes((event) => {
     });
 
     event.shaped("gtceu:lp_steam_liquid_boiler", ["PPP", "PBP", "PWP"], {
-        P: "gtceu:fiery_bronze_plate",
+        P: "phoenixcore:fiery_bronze_plate",
         W: "gtceu:bronze_brick_casing",
         B: "minecraft:glass",
     });
     event.shaped("gtceu:lp_steam_solid_boiler", ["PPP", "PTP", "GBG"], {
-        P: "gtceu:fiery_bronze_plate",
+        P: "phoenixcore:fiery_bronze_plate",
         B: "minecraft:furnace",
         G: "minecraft:bricks",
         T: "#forge:tools/wrench"
@@ -98,167 +98,160 @@ ServerEvents.recipes((event) => {
         P: "gtceu:silver_plate",
         W: "gtceu:bronze_brick_casing",
         B: "minecraft:glass",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
     });
 
     event.shaped("gtceu:lp_steam_extractor", ["FFF", "ZWB", "FFF"], {
         W: "gtceu:bronze_brick_casing",
         B: "minecraft:glass",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         Z: "#forge:pistons"
     });
     event.shaped("gtceu:lp_steam_macerator", ["PFP", "FWF", "FZF"], {
         P: "minecraft:diamond",
         W: "gtceu:bronze_machine_casing",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         Z: "#forge:pistons"
     });
     event.shaped("gtceu:lp_steam_compressor", ["FFF", "ZWZ", "FFF"], {
         W: "gtceu:bronze_machine_casing",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         Z: "#forge:pistons"
     });
     event.shaped("gtceu:lp_steam_forge_hammer", ["FZF", "FWF", "FAF"], {
         W: "gtceu:bronze_machine_casing",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         Z: "#forge:pistons",
         A: "minecraft:anvil",
     });
     event.shaped("gtceu:lp_steam_furnace", ["FFF", "FWF", "FAF"], {
         W: "gtceu:bronze_brick_casing",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         A: "minecraft:furnace",
     });
     event.shaped("gtceu:lp_steam_alloy_smelter", ["FFF", "AWA", "FFF"], {
         W: "gtceu:bronze_brick_casing",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         A: "minecraft:furnace",
     });
     event.shaped("gtceu:lp_steam_rock_crusher", ["ZFZ", "FWF", "PFP"], {
         P: "minecraft:diamond",
         W: "gtceu:bronze_machine_casing",
-        F: "gtceu:fiery_bronze_small_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_small_fluid_pipe",
         Z: "#forge:pistons"
     });
     event.shaped("gtceu:lp_steam_miner", ["PFP", "FWF", "ZFZ"], {
         P: "minecraft:diamond",
         W: "gtceu:bronze_brick_casing",
-        F: "gtceu:fiery_bronze_normal_fluid_pipe",
-        Z: "gtceu:small_fiery_bronze_gear"
-    });
-    event.shaped("watercollector:watercollector", ["ZFZ", "PWP", " R "], {
-        P: "minecraft:water_bucket",
-        W: "#minecraft:logs",
-        F: "#minecraft:leaves",
-        Z: "minecraft:stick",
-        R: "minecraft:iron_ingot"
+        F: "phoenixcore:fiery_bronze_normal_fluid_pipe",
+        Z: "phoenixcore:small_fiery_bronze_gear"
     });
     event.shaped("2x gtceu:steam_machine_casing", ["PFP", "PZP", "PWP"], {
-        P: "gtceu:fiery_bronze_plate",
+        P: "phoenixcore:fiery_bronze_plate",
         W: "#forge:tools/wrenches",
         F: "#forge:tools/hammers",
         Z: "minecraft:bricks"
     });
     event.shaped("2x gtceu:industrial_steam_casing", ["PFP", "PZP", "PWP"], {
-        P: "gtceu:fiery_bronze_plate",
+        P: "phoenixcore:fiery_bronze_plate",
         W: "#forge:tools/wrenches",
         F: "#forge:tools/hammers",
         Z: "gtceu:steel_frame"
     });
     event.shaped("2x gtceu:bronze_firebox_casing", ["PRP", "RFR", "PRP"], {
-        P: "gtceu:fiery_bronze_plate",
-        F: "gtceu:fiery_bronze_frame",
-        R: "gtceu:fiery_bronze_rod",
+        P: "phoenixcore:fiery_bronze_plate",
+        F: "phoenixcore:fiery_bronze_frame",
+        R: "phoenixcore:fiery_bronze_rod",
 
     });
     event.shaped("17x gtceu:tantalite_ore", ["PPP", "PPP", "PPP"], {
-        P: "kubejs:phoenix_feather",
+        P: "phoenixcore:phoenix_feather",
     }).noMirror().noShrink();
     event.shaped("16x gtceu:rubber_sapling", ["   ", "   ", "  P"], {
-        P: "kubejs:phoenix_feather",
+        P: "phoenixcore:phoenix_feather",
     }).noMirror().noShrink();
     event.shaped("1x forbidden_arcanus:aurum_sapling", ["   ", "   ", " P "], {
-        P: "kubejs:phoenix_feather",
+        P: "phoenixcore:phoenix_feather",
     }).noMirror().noShrink();
     event.shaped("17x gtceu:apatite_ore", ["PPP", "PPP", "PP "], {
-        P: "kubejs:phoenix_feather",
+        P: "phoenixcore:phoenix_feather",
     }).noMirror().noShrink();
     event.shaped("64x minecraft:clay_ball", ["P  ", "   ", "   "], {
-        P: "kubejs:phoenix_feather",
+        P: "phoenixcore:phoenix_feather",
     }).noMirror().noShrink();
     event.shaped("gtceu:lv_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:aurum_steel_plate",
+        P: "phoenixcore:aurum_steel_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:mv_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:aluminfrost_plate",
+        P: "phoenixcore:aluminfrost_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:hv_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:frost_reinforced_stained_steel_plate",
+        P: "phoenixcore:frost_reinforced_stained_steel_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:luv_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:resonant_rhodium_alloy_plate",
+        P: "phoenixcore:resonant_rhodium_alloy_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:iv_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:void_touched_tungsten_steel_plate",
+        P: "phoenixcore:void_touched_tungsten_steel_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:ev_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:source_imbued_titanium_plate",
+        P: "phoenixcore:source_imbued_titanium_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:bronze_machine_casing", ["PPP", "PWP", "PPP"], {
-        P: "gtceu:fiery_bronze_plate",
+        P: "phoenixcore:fiery_bronze_plate",
         W: "#forge:tools/wrenches",
     });
     event.shaped("gtceu:lv_machine_hull", ["SPS", "WZW", "   "], {
-        P: "gtceu:aurum_steel_plate",
+        P: "phoenixcore:aurum_steel_plate",
         W: "gtceu:tin_single_cable",
         Z: "gtceu:lv_machine_casing",
         S: "gtceu:wrought_iron_plate"
     });
     event.shaped("gtceu:bronze_brick_casing", ["FFF", "FHF", "BBB"], {
-        F: "gtceu:fiery_bronze_plate",
+        F: "phoenixcore:fiery_bronze_plate",
         H: "#forge:tools/hammers",
         B: "minecraft:bricks",
     });
     event.shaped("gtceu:steam_input_hatch", ["FWF", "FZF", "FWF"], {
-        F: "gtceu:fiery_bronze_plate",
-        W: "gtceu:fiery_bronze_normal_fluid_pipe",
+        F: "phoenixcore:fiery_bronze_plate",
+        W: "phoenixcore:fiery_bronze_normal_fluid_pipe",
         Z: "gtceu:bronze_drum",
     });
 
     event.shaped("ad_astra:nasa_workbench", ["APW", "SZS", "WPA"], {
-        P: "gtceu:dense_frost_reinforced_stained_steel_plate",
+        P: "phoenixcore:dense_frost_reinforced_stained_steel_plate",
         W: "#gtceu:circuits/ev",
         Z: "gtceu:ev_machine_hull",
-        S: "gtceu:aluminfrost_gear",
+        S: "phoenixcore:aluminfrost_gear",
         A: "gtceu:ev_robot_arm"
     });
     event.shaped("gtceu:iv_machine_hull", ["SPS", "WZW", "   "], {
-        P: "gtceu:void_touched_tungsten_steel_plate",
+        P: "phoenixcore:void_touched_tungsten_steel_plate",
         W: "gtceu:tin_single_cable",
         Z: "gtceu:iv_machine_casing",
         S: "gtceu:polytetrafluoroethylene_plate"
     });
 
     event.shaped("gtceu:mv_machine_hull", ["SPS", "WZW", "   "], {
-        P: "gtceu:aluminfrost_plate",
+        P: "phoenixcore:aluminfrost_plate",
         W: "gtceu:copper_single_cable",
         Z: "gtceu:mv_machine_casing",
         S: "gtceu:wrought_iron_plate"
     });
     event.shaped("gtceu:hv_machine_hull", ["SPS", "WZW", "   "], {
-        P: "gtceu:frost_reinforced_stained_steel_plate",
+        P: "phoenixcore:frost_reinforced_stained_steel_plate",
         W: "gtceu:gold_single_cable",
         Z: "gtceu:hv_machine_casing",
         S: "gtceu:polyethylene_plate"
     });
     event.shaped("gtceu:ev_machine_hull", ["SPS", "WZW", "   "], {
-        P: "gtceu:source_imbued_titanium_plate",
+        P: "phoenixcore:source_imbued_titanium_plate",
         W: "gtceu:aluminium_single_cable",
         Z: "gtceu:ev_machine_casing",
         S: "gtceu:polyethylene_plate"
@@ -275,6 +268,26 @@ ServerEvents.recipes((event) => {
         Z: "gtceu:lv_electric_pump",
         A: "gtceu:lv_electric_piston",
         S: "gtceu:lv_machine_hull"
+    });
+    event.shaped("2x ae2:storage_bus", ["   ", "IPC", "   "], {
+        I: "ae2:interface",
+        P: "gtceu:mv_electric_piston",
+        C: "ae2:fluix_glass_cable"
+    });
+    event.shaped("4x ae2:storage_bus", ["   ", "IPC", "   "], {
+        I: "ae2:interface",
+        P: "gtceu:hv_electric_piston",
+        C: "ae2:fluix_glass_cable"
+    });
+    event.shaped("8x ae2:storage_bus", ["   ", "IPC", "   "], {
+        I: "ae2:interface",
+        P: "gtceu:ev_electric_piston",
+        C: "ae2:fluix_glass_cable"
+    });
+    event.shaped("16x ae2:storage_bus", ["   ", "IPC", "   "], {
+        I: "ae2:interface",
+        P: "gtceu:iv_electric_piston",
+        C: "ae2:fluix_glass_cable"
     });
     event.shaped("minecraft:glass_bottle", ["   ", " P ", "P P"], {
         P: "minecraft:glass",
@@ -406,7 +419,13 @@ ServerEvents.tags("item", event => {
         "gtceu:quarktech_leggings",
         "gtceu:quarktech_boots"
     ]
-    event.add("ad_astra:space_resistant_armor", quarkTechArmor)
-    event.add("ad_astra:freeze_resistant_armor", quarkTechArmor)
-    event.add("ad_astra:heat_resistant_armor", quarkTechArmor)
+    const phoenixTechArmor = [
+        "phoenixcore:phoenix_helmet",
+        "phoenixcore:phoenix_chestplate",
+        "phoenixcore:phoenix_leggings",
+        "phoenixcore:phoenix_boots"
+    ]
+    event.add("ad_astra:space_resistant_armor", quarkTechArmor, phoenixTechArmor)
+    event.add("ad_astra:freeze_resistant_armor", quarkTechArmor, phoenixTechArmor)
+    event.add("ad_astra:heat_resistant_armor", quarkTechArmor, phoenixTechArmor)
 })

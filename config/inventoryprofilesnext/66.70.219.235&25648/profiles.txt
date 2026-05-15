@@ -1,0 +1,22 @@
+
+
+
+
+profile Saved activate HOT8
+	HOT1
+		"integrateddynamics:cable"
+	HOT2
+		"gtceu:steel_wrench"
+	HOT3
+		"ae2:export_bus"
+	HOT4
+		"gtceu:diamond_axe"
+	HOT5
+		"gtceu:steel_screwdriver"
+	HOT9
+		"phoenixcore:tesla_binder"
+	HEAD
+		"minecraft:iron_helmet"
+	FEET
+		"minecraft:chainmail_boots"
+

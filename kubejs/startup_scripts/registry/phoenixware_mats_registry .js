@@ -13,9 +13,6 @@ function makeDust(event, id, color, cmp){
 
 StartupEvents.registry("item", event => {
 
-    event.create("basic_fuel_rod")
-        .displayName("§2Basic Fuel Rod")
-        .texture("kubejs:item/basic_fuel_rod")
 
     event.create("empty_hostile_mob_essence_canister")
         .displayName("§cEmpty Hostile Mob Essence Canister")
@@ -49,76 +46,6 @@ StartupEvents.registry("item", event => {
     event.create("full_neutral_mob_essence_canister")
         .displayName("§9Full Neutral Mob Essence Canister")
         .texture("kubejs:item/componets/full_neutral_mob_essence_canister");
-
-    event.create("zirconium_rod")
-        .displayName("§2Zirconium Fission Rod")
-        .texture("kubejs:item/zirconium_rod")
-
-
-    event.create("space_grade_steel_drilling_kit")
-        .displayName("§7Space Grade Steel Drilling Kit")
-        .texture("kubejs:item/space_grade_steel_drilling_kit")
-    event.create("frost_reinforced_stained_steel_drilling_kit")
-        .displayName("§3Frost Reinforced Stained Steel Drill Kit")
-        .texture("kubejs:item/frost_reinforced_stained_steel_drilling_kit")
-    event.create("aluminfrost_drilling_kit")
-        .displayName("§bAluminfrost Drill Kit")
-        .texture("kubejs:item/aluminfrost_drilling_kit")
-    event.create("aurum_steel_drilling_kit")
-        .displayName("§6Aurum Steel Drill Kit")
-        .texture("kubejs:item/aurum_steel_drilling_kit")
-    event.create("space_miner_module")
-        .displayName("§dSpace Miner Module")
-        .texture("kubejs:item/space_miner_module")
-    event.create("earthbound_miner_module")
-        .displayName("§eEarth Bound Miner Module")
-        .texture("kubejs:item/earthbound_miner_module")
-
-    event.create("thorium_fuel_pellet")
-        .displayName("§2Thorium Fuel Pellet")
-        .texture("kubejs:item/thorium_fuel_pellet")
-
-    event.create("u235_fuel_pellet")
-        .displayName("§aUranium-235 Fuel Pellet")
-        .texture("kubejs:item/u235_fuel_pellet")
-    event.create("u236_fuel_pellet")
-        .displayName("§aUranium-236 Fuel Pellet")
-        .texture("kubejs:item/u236_fuel_pellet")
-
-    event.create("plutonium_241_fuel_pellet")
-        .displayName("§cPlutonium-241 Fuel Pellet")
-        .texture("kubejs:item/plutonium_241_fuel_pellet")
-    event.create("u233_fuel_pellet")
-        .displayName("§aUranium-233 Fuel Pellet")
-        .texture("kubejs:item/u233_fuel_pellet")
-
-
-    event.create("space_grade_steel_drill_head")
-        .displayName("§7Space Grade Steel Drill Head")
-        .texture("kubejs:item/space_grade_steel_drill_head")
-    event.create("frost_reinforced_stained_steel_drill_head")
-        .displayName("§3Frost Reinforced Stained Steel Drill Head")
-        .texture("kubejs:item/frost_reinforced_stained_steel_drill_head")
-    event.create("aluminfrost_drill_head")
-        .displayName("§bAluminfrost Drill Head")
-        .texture("kubejs:item/aluminfrost_drill_head")
-    event.create("aurum_steel_drill_head")
-        .displayName("§6Aurum Steel Drill Head")
-        .texture("kubejs:item/aurum_steel_drill_head")
-    event.create("source_imbued_titanium_drill_head")
-        .displayName("§dSource-Imbued Titanium Drill Head")
-        .texture("kubejs:item/source_imbued_titanium_drill_head")
-    event.create("flaming_mesh")
-        .displayName("§cFlaming Mesh")
-        .texture("kubejs:item/flaming_mesh")
-    event.create("flaming_dust")
-        .displayName("§cFlaming Dust")
-        .texture("kubejs:item/flaming_dust")
-
-    event.create("phoenix_feather")
-        .displayName("§cFeather §6Of §cRebirth")
-        .texture("kubejs:item/phoenix_feather")
-
     event.create("copper_vein_traces")
         .displayName("Copper Vein Traces")
         .texture("kubejs:item/veins/copper_traces")

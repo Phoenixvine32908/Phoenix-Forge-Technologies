@@ -1,0 +1,20 @@
+
+
+
+
+profile Saved activate HOT5
+	HOT1
+		"gtceu:diamond_mining_hammer"
+	HOT2
+		"minecraft:water_bucket"
+	HOT3
+		"minecraft:cooked_beef"
+	HOT4
+		"gtceu:diamond_mining_hammer"
+	HOT8
+		"gtceu:iron_hammer"
+	HOT9
+		"gtceu:prospector.hv"
+	CHEST
+		"sophisticatedbackpacks:backpack"
+

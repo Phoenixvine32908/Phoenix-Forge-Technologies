@@ -1,0 +1,20 @@
+{
+  "machine": "phoenixcore:apis_progenitor",
+  "steps": [
+    {
+      "tick": 0,
+      "caption": null,
+      "show": "all",
+      "layer": 0,
+      "layerMin": 0,
+      "layerMax": 0,
+      "positions": [],
+      "hideLayer": -1,
+      "hidePositions": [],
+      "working": false,
+      "camera": null
+    }
+  ],
+  "mistakes": [],
+  "globalMistakes": []
+}

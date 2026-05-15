@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "kubejs:block/fission/aether_flow_cooler"
-  }
-}

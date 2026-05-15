@@ -7,12 +7,13 @@
 	id: "32EF20533F323E02"
 	order_index: 5
 	quest_links: [{
+		icon: "phoenixcore:void_touched_tungsten_steel_ingot"
 		id: "050247AED8C803F9"
 		linked_quest: "30A6EDDF25A5E5F8"
 		shape: "gear"
 		size: 1.2d
-		x: 0.375d
-		y: 4.875d
+		x: 0.6d
+		y: 4.8d
 	}]
 	quests: [
 		{
@@ -26,7 +27,7 @@
 			rewards: [{
 				count: 3
 				id: "7B0F1CE8B14229DE"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -69,7 +70,7 @@
 			rewards: [{
 				count: 3
 				id: "06453A2C5AB5BB7C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -105,7 +106,7 @@
 			rewards: [{
 				count: 3
 				id: "4A37D66CC212D5C0"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -155,7 +156,7 @@
 			rewards: [{
 				count: 3
 				id: "1E4E801CFEBFBD32"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -226,7 +227,7 @@
 			rewards: [{
 				count: 3
 				id: "69EE585844A62CCE"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -264,7 +265,7 @@
 			id: "195E5BFDE4C5A0DE"
 			rewards: [{
 				id: "31443DCAF18D0384"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -318,7 +319,7 @@
 			rewards: [{
 				count: 4
 				id: "6159F488B8EF3D0D"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -358,7 +359,7 @@
 			rewards: [{
 				count: 3
 				id: "425924F113E5F667"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -396,7 +397,7 @@
 			rewards: [{
 				count: 2
 				id: "396CC0897CE24B52"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -426,7 +427,7 @@
 			rewards: [{
 				count: 3
 				id: "5929E09228AD479B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -456,7 +457,7 @@
 			rewards: [{
 				count: 2
 				id: "2A47C326ECEF8BBD"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -487,7 +488,7 @@
 			id: "0425179329ED1B72"
 			rewards: [{
 				id: "03475B1F2BB0DC49"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -514,7 +515,7 @@
 			rewards: [{
 				count: 3
 				id: "6C06053BF04C29F7"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				random_bonus: 2
 				type: "item"
 			}]
@@ -579,7 +580,7 @@
 			rewards: [{
 				count: 4
 				id: "6459279104C33B12"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -607,7 +608,7 @@
 			rewards: [{
 				count: 2
 				id: "312305419CD12315"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "circle"
@@ -645,7 +646,7 @@
 			rewards: [{
 				count: 4
 				id: "589A0B442829A939"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -680,7 +681,7 @@
 			rewards: [{
 				count: 3
 				id: "7172A6669474E730"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -708,7 +709,7 @@
 			id: "327C3E02CD751453"
 			rewards: [{
 				id: "0A862D8AD4EE87B6"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -743,7 +744,7 @@
 			rewards: [{
 				count: 3
 				id: "0F0009D2CDB5559B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -792,7 +793,7 @@
 			rewards: [{
 				count: 2
 				id: "504B2D9B69A475EB"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -844,7 +845,7 @@
 			subtitle: "The main &dLuV&r material"
 			tasks: [{
 				id: "5C77B95F27C0F098"
-				item: "gtceu:resonant_rhodium_alloy_dust"
+				item: "phoenixcore:resonant_rhodium_alloy_ingot"
 				type: "item"
 			}]
 			title: "Resonant-Rhodium Alloy"
@@ -862,7 +863,7 @@
 			rewards: [{
 				count: 3
 				id: "45687BC1A1BFC100"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -893,7 +894,7 @@
 			rewards: [{
 				count: 3
 				id: "41BC449E41A511E4"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -923,7 +924,7 @@
 				{
 					count: 3
 					id: "7832B3860B2876AF"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 				{
@@ -962,7 +963,7 @@
 			rewards: [{
 				count: 3
 				id: "708A5C6A12ADAD47"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -990,7 +991,7 @@
 			rewards: [{
 				count: 4
 				id: "7EF14B933B6852FB"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1019,7 +1020,7 @@
 			id: "49C1D61741AA288E"
 			rewards: [{
 				id: "7A4716BB4C907844"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1048,7 +1049,7 @@
 			rewards: [{
 				count: 2
 				id: "2066989C4B4DEC7B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1075,7 +1076,7 @@
 			id: "0338C9219DC2F819"
 			rewards: [{
 				id: "5AE1DA01EF195F9C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1096,7 +1097,7 @@
 			rewards: [{
 				count: 2
 				id: "5FCD110C72996527"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1120,7 +1121,7 @@
 			id: "698B5F65F2DE4439"
 			rewards: [{
 				id: "5C9CC41FE2F92CFB"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1151,7 +1152,7 @@
 			rewards: [{
 				count: 2
 				id: "32D23876465554CF"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1194,7 +1195,7 @@
 			rewards: [{
 				count: 4
 				id: "364CB85A4A7D637C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1240,7 +1241,7 @@
 			id: "2EFC07A4615B8B12"
 			rewards: [{
 				id: "6DDAF068FE1416A7"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1316,7 +1317,7 @@
 			rewards: [{
 				count: 3
 				id: "7192CC00C3D39050"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "circle"
@@ -1356,7 +1357,7 @@
 			rewards: [{
 				count: 3
 				id: "42932F100D0C4D6F"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1381,7 +1382,7 @@
 			rewards: [{
 				count: 2
 				id: "4E11AAD53003041A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1409,7 +1410,7 @@
 			rewards: [{
 				count: 2
 				id: "7BEF34721AB7F49A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -1436,7 +1437,7 @@
 			rewards: [{
 				count: 2
 				id: "23CA344F87D598E4"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1462,7 +1463,7 @@
 			rewards: [{
 				count: 2
 				id: "6C832A9DC072367C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1488,7 +1489,7 @@
 			rewards: [{
 				count: 2
 				id: "3E503D8CB7F88DAE"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1507,13 +1508,13 @@
 				""
 				"The more impure alloys are found throughout universes, each version slightly changing the name."
 				""
-				"Here, this slightly &6impure Nevvonian Steel&r is used to make the &3assembler matrix&r. It is made by combining &9Nevvonian Iron&r, &9Coke&r, &9Diamonds&r, &9Magic&r, and &9Liquid Titanium&r. I suggest you batch a decent bit because it might also be used a lot more later."
+				"Here, this slightly &6impure Nevvonian Steel&r is used to make the &3assembler matrix&r. It is made by combining &9Nevvonian Iron&r, &9Coke&r, &9Diamonds&r, &5Source&r, and &9Liquid Titanium&r. I suggest you batch a decent bit because it might also be used a lot more later."
 			]
 			id: "4C727D2C208400A9"
 			rewards: [{
 				count: 10
 				id: "25AF12A81658D572"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "diamond"
@@ -1521,7 +1522,7 @@
 			subtitle: "And if you don't think so, you will see eventually."
 			tasks: [{
 				id: "3ABAFE851748FAD2"
-				item: "gtceu:85_percent_pure_nevonian_steel_ingot"
+				item: "phoenixcore:eighty_five_percent_pure_nevonian_steel_ingot"
 				type: "item"
 			}]
 			title: "True Beauty Begins With Many Impurities"
@@ -1539,7 +1540,7 @@
 			rewards: [{
 				count: 4
 				id: "03D8BC2F89F2837A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "heart"
@@ -1593,7 +1594,7 @@
 			rewards: [{
 				count: 2
 				id: "5C386EE19052513B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1621,7 +1622,7 @@
 			rewards: [{
 				count: 3
 				id: "69615F0590EC62FE"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "heart"
@@ -1634,6 +1635,7 @@
 					type: "item"
 				}
 				{
+					icon: "phoenixcore:honey_comb_base"
 					id: "407D5C31B69D8643"
 					item: "kubejs:honey_comb_base"
 					type: "item"
@@ -1657,7 +1659,7 @@
 			rewards: [{
 				count: 6
 				id: "1D58A9DBEB7CB754"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.77d
@@ -1721,7 +1723,7 @@
 			rewards: [{
 				count: 4
 				id: "15AF58DF85DBED24"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -1799,7 +1801,7 @@
 			rewards: [{
 				count: 6
 				id: "1CA39756909E2630"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "pentagon"
@@ -1867,7 +1869,7 @@
 			rewards: [{
 				count: 4
 				id: "03BE42CB99141743"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -1925,7 +1927,7 @@
 			rewards: [{
 				count: 10
 				id: "445303711BD3791B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1939,7 +1941,7 @@
 				{
 					count: 16L
 					id: "4F44A4037156A42D"
-					item: "kubejs:aether_flow_cooler"
+					item: "phoenixcore:ev_cooler"
 					type: "item"
 				}
 				{
@@ -2036,14 +2038,14 @@
 			rewards: [{
 				count: 8
 				id: "21BAF4A683AAB71A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "Quite the enriching activity."
 			tasks: [{
 				id: "05B6A993EBA32DE8"
-				item: "kubejs:u235_fuel_pellet"
+				item: "phoenixcore:u235_fuel_pellet"
 				type: "item"
 			}]
 			x: 0.375d
@@ -2062,18 +2064,44 @@
 			rewards: [{
 				count: 9
 				id: "353B6D5DF8E70D19"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.7d
 			subtitle: "Finnaly, a use for thorium!"
 			tasks: [{
 				id: "06B937A6E48C2B17"
-				item: "kubejs:thorium_fuel_pellet"
+				item: "phoenixcore:thorium_fuel_pellet"
 				type: "item"
 			}]
 			x: 1.4d
 			y: 0.35d
+		}
+		{
+			description: [
+				"These are a &6wonderful&r tool to give one of the &a16 base Minecraft dyes&r to any dyeable block (such as wool or &9ae2&r cables). Moreover, if you &aShift-Right-Click&r you can color an area at once."
+				""
+				"They can also be used to color GT &claser pipes&r, &6cables&r, &ewires&r, and &bmachines&r. "
+				""
+				"They also have one more &6unqiue&r effect. When an &aInput/Output Hatch&r or &aBus&r is colored with one of these, it acts distinct from all other colors. What this means, is that if you were to color a &6Bus + Hatch combo&r, that combo would only be able to look for recipe Inputs/Output Space in that color. "
+				""
+				"Any uncolored hatch/bus is seen as a &6&owildcard&r&r to all others, this is most useful in the Alloy Blast Smelter."
+				""
+				"One final thing, if you fill up a spray can with &6Acetone&r, you can use it to &c&odissolve&r&r colors from other cans. "
+			]
+			icon: "gtceu:purple_dye_spray_can"
+			id: "68025D5E0AF2B286"
+			shape: "heart"
+			size: 1.0d
+			subtitle: "Now we getting distinct."
+			tasks: [{
+				id: "3B3075DD09FF249E"
+				item: "gtceu:empty_spray_can"
+				type: "item"
+			}]
+			title: "Spray Cans"
+			x: 3.75d
+			y: 0.375d
 		}
 	]
 	subtitle: ["Automate everything and learn how to assemble"]

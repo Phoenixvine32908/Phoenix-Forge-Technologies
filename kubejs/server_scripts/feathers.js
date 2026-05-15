@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:saltpeter_ore", 32), [
@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:graphite_ore", 32), [
@@ -27,7 +27,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:powellite_ore", 32), [
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:oilsands_ore", 32), [
@@ -43,7 +43,7 @@ ServerEvents.recipes(event => {
             "AAA",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:tricalcium_phosphate_ore", 32), [
@@ -51,7 +51,7 @@ ServerEvents.recipes(event => {
             "AAA",
             " AA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:apatite_ore", 32), [
@@ -59,7 +59,7 @@ ServerEvents.recipes(event => {
             "  A",
             "AAA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:beryllium_ore", 32), [
@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
             "   ",
             "AAA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:salt_ore", 32), [
@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
             "  A",
             "AAA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:rock_salt_ore", 32), [
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
             " AA",
             "AAA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:lazurite_ore", 32), [
@@ -91,7 +91,7 @@ ServerEvents.recipes(event => {
             "  A",
             "AA "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:vanadium_magnetite_ore", 32), [
@@ -99,7 +99,7 @@ ServerEvents.recipes(event => {
             " AA",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:calcite_ore", 32), [
@@ -107,7 +107,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:sodalite_ore", 32), [
@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
             "   ",
             " AA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:lapis_ore", 32), [
@@ -123,7 +123,7 @@ ServerEvents.recipes(event => {
             "   ",
             "AA "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:coal_ore", 32), [
@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
             " AA",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:cinnabar_ore", 32), [
@@ -139,7 +139,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:redstone_ore", 32), [
@@ -147,7 +147,7 @@ ServerEvents.recipes(event => {
             "A  ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:talc_ore", 32), [
@@ -155,7 +155,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:pyrope_ore", 32), [
@@ -163,7 +163,7 @@ ServerEvents.recipes(event => {
             "A A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:soapstone_ore", 32), [
@@ -171,7 +171,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         // moniNICKEL RECIPES
@@ -180,7 +180,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:green_sapphire_ore", 32), [
@@ -188,7 +188,7 @@ ServerEvents.recipes(event => {
             "A A",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:sapphire_ore", 32), [
@@ -196,7 +196,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:cobaltite_ore", 32), [
@@ -204,7 +204,7 @@ ServerEvents.recipes(event => {
             "AA ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:neodymium_ore", 32), [
@@ -212,7 +212,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:realgar_ore", 32), [
@@ -220,7 +220,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "A A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:electrotine_ore", 32), [
@@ -228,14 +228,14 @@ ServerEvents.recipes(event => {
             "AA ",
             "AAA"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
         event.shaped(Item.of("gtceu:gold_ore", 32), [
             "A A",
             "   ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
 
@@ -244,7 +244,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:uraninite_ore", 32), [
@@ -252,7 +252,7 @@ ServerEvents.recipes(event => {
             "   ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:silver_ore", 32), [
@@ -260,7 +260,7 @@ ServerEvents.recipes(event => {
             "  A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:spessartine_ore", 32), [
@@ -268,7 +268,7 @@ ServerEvents.recipes(event => {
             "   ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:lead_ore", 32), [
@@ -276,7 +276,7 @@ ServerEvents.recipes(event => {
             " A ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:molybdenite_ore", 32), [
@@ -284,7 +284,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:bastnasite_ore", 32), [
@@ -292,7 +292,7 @@ ServerEvents.recipes(event => {
             "A A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:monazite_ore", 32), [
@@ -300,7 +300,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:tetrahedrite_ore", 32), [
@@ -308,7 +308,7 @@ ServerEvents.recipes(event => {
             "  A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:topaz_ore", 32), [
@@ -316,7 +316,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:ruby_ore", 32), [
@@ -324,7 +324,7 @@ ServerEvents.recipes(event => {
             " A ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:stibnite_ore", 32), [
@@ -332,7 +332,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:thorium_ore", 32), [
@@ -340,7 +340,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:malachite_ore", 32), [
@@ -348,7 +348,7 @@ ServerEvents.recipes(event => {
             "   ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:pyrite_ore", 32), [
@@ -356,7 +356,7 @@ ServerEvents.recipes(event => {
             "AAA",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:galena_ore", 32), [
@@ -364,7 +364,7 @@ ServerEvents.recipes(event => {
             "   ",
             "AA "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:almandine_ore", 32), [
@@ -372,7 +372,7 @@ ServerEvents.recipes(event => {
             "   ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:garnierite_ore", 32), [
@@ -380,7 +380,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:nickel_ore", 32), [
@@ -388,7 +388,7 @@ ServerEvents.recipes(event => {
             " A ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:barite_ore", 32), [
@@ -396,7 +396,7 @@ ServerEvents.recipes(event => {
             "  A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:lepidolite_ore", 32), [
@@ -404,7 +404,7 @@ ServerEvents.recipes(event => {
             "   ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:bentonite_ore", 32), [
@@ -412,7 +412,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:aluminium_ore", 32), [
@@ -420,7 +420,7 @@ ServerEvents.recipes(event => {
             "   ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:bauxite_ore", 32), [
@@ -428,7 +428,7 @@ ServerEvents.recipes(event => {
             "   ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:grossular_ore", 32), [
@@ -436,7 +436,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:pyrolusite_ore", 32), [
@@ -444,7 +444,7 @@ ServerEvents.recipes(event => {
             " A ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:magnesite_ore", 32), [
@@ -452,7 +452,7 @@ ServerEvents.recipes(event => {
             "  A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:olivine_ore", 32), [
@@ -460,7 +460,7 @@ ServerEvents.recipes(event => {
             "   ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:tin_ore", 32), [
@@ -468,7 +468,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:cassiterite_ore", 32), [
@@ -476,7 +476,7 @@ ServerEvents.recipes(event => {
             "   ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:lithium_ore", 32), [
@@ -484,7 +484,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:spodumene_ore", 32), [
@@ -492,7 +492,7 @@ ServerEvents.recipes(event => {
             " A ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:chalcopyrite_ore", 32), [
@@ -500,7 +500,7 @@ ServerEvents.recipes(event => {
             "  A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:copper_ore", 32), [
@@ -508,7 +508,7 @@ ServerEvents.recipes(event => {
             "   ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:sulfur_ore", 32), [
@@ -516,7 +516,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:quartzite_ore", 32), [
@@ -524,7 +524,7 @@ ServerEvents.recipes(event => {
             "   ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:nether_quartz_ore", 32), [
@@ -532,7 +532,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:certus_quartz_ore", 32), [
@@ -540,7 +540,7 @@ ServerEvents.recipes(event => {
             "A A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:pentlandite_ore", 32), [
@@ -548,7 +548,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:glauconite_sand_ore", 32), [
@@ -556,7 +556,7 @@ ServerEvents.recipes(event => {
             "A  ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         /* event.shaped(
@@ -568,7 +568,7 @@ ServerEvents.recipes(event => {
             '   '
           ],
           {
-            A: 'kubejs:phoenix_feather'
+            A: 'phoenixcore:phoenix_feather'
           }).noMirror().noShrink()*/
 
         event.shaped(Item.of("gtceu:yellow_limonite_ore", 32), [
@@ -576,7 +576,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:iron_ore", 32), [
@@ -584,7 +584,7 @@ ServerEvents.recipes(event => {
             " AA",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:magnetite_ore", 32), [
@@ -592,7 +592,7 @@ ServerEvents.recipes(event => {
             " A ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:gypsum_ore", 32), [
@@ -600,7 +600,7 @@ ServerEvents.recipes(event => {
             "  A",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         // moniQUARTER RECIPES
@@ -609,7 +609,7 @@ ServerEvents.recipes(event => {
             "   ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:emerald_ore", 32), [
@@ -617,7 +617,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:palladium_ore", 32), [
@@ -625,7 +625,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:molybdenum_ore", 32), [
@@ -633,7 +633,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
 
@@ -642,7 +642,7 @@ ServerEvents.recipes(event => {
             " A ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:platinum_ore", 32), [
@@ -650,7 +650,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:cooperite_ore", 32), [
@@ -658,7 +658,7 @@ ServerEvents.recipes(event => {
             "AA ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("gtceu:diamond_ore", 32), [
@@ -666,14 +666,14 @@ ServerEvents.recipes(event => {
             "  A",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
         event.shaped(Item.of("minecraft:oak_sapling", 64), [
             "AAA",
             "   ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:dark_oak_sapling", 64), [
@@ -681,7 +681,7 @@ ServerEvents.recipes(event => {
             "   ",
             "A  "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:acacia_sapling", 64), [
@@ -689,7 +689,7 @@ ServerEvents.recipes(event => {
             " A ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:spruce_sapling", 64), [
@@ -697,7 +697,7 @@ ServerEvents.recipes(event => {
             "   ",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:birch_sapling", 64), [
@@ -705,7 +705,7 @@ ServerEvents.recipes(event => {
             "A  ",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
 
@@ -714,7 +714,7 @@ ServerEvents.recipes(event => {
             "  A",
             "   "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:cherry_sapling", 64), [
@@ -722,7 +722,7 @@ ServerEvents.recipes(event => {
             "   ",
             "  A"
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
 
         event.shaped(Item.of("minecraft:mangrove_propagule", 64), [
@@ -730,7 +730,7 @@ ServerEvents.recipes(event => {
             "  A",
             " A "
         ], {
-            A: "kubejs:phoenix_feather"
+            A: "phoenixcore:phoenix_feather"
         }).noMirror().noShrink()
     }
 })

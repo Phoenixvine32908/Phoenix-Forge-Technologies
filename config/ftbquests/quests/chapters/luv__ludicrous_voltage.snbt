@@ -131,7 +131,7 @@
 			rewards: [{
 				count: 3
 				id: "69B82361EEC18F69"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -160,7 +160,7 @@
 			rewards: [{
 				count: 3
 				id: "0E23447F76FD8B9D"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -225,7 +225,7 @@
 				}
 				{
 					id: "3DC557BF47560025"
-					item: "gtceu:extremely_modified_space_grade_steel_single_wire"
+					item: "phoenixcore:extremely_modified_space_grade_steel_single_wire"
 					type: "item"
 				}
 			]
@@ -250,7 +250,7 @@
 			id: "173C1FA72301B5E7"
 			rewards: [{
 				id: "7A9899314EBDBBAA"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -277,7 +277,7 @@
 			rewards: [{
 				count: 3
 				id: "51B50CCA2C5CC078"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -302,7 +302,7 @@
 			rewards: [{
 				count: 3
 				id: "6358CF0AFD41D83B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -353,7 +353,7 @@
 			rewards: [{
 				count: 3
 				id: "1AC0AB8E1264BF3D"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -385,7 +385,7 @@
 			rewards: [{
 				count: 3
 				id: "79F46AA35B75EF40"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -420,7 +420,7 @@
 			id: "2BBD3BC7D1B955C2"
 			rewards: [{
 				id: "26419DDF65ABB72B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -470,7 +470,7 @@
 			rewards: [{
 				count: 5
 				id: "34E0294D27792EBB"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -498,7 +498,7 @@
 			rewards: [{
 				count: 5
 				id: "1701FEDB3CFA4779"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -533,7 +533,7 @@
 			rewards: [{
 				count: 3
 				id: "2842C1B553319692"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -618,7 +618,7 @@
 			rewards: [{
 				count: 3
 				id: "5AAEA6D6A5B186BE"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -646,7 +646,7 @@
 			rewards: [{
 				count: 3
 				id: "25CB2908E62733E5"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -674,7 +674,7 @@
 			rewards: [{
 				count: 3
 				id: "3EA064F7EC0A789F"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -704,7 +704,7 @@
 			rewards: [{
 				count: 3
 				id: "46699FB601539054"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -733,7 +733,7 @@
 			rewards: [{
 				count: 2
 				id: "4E1DC517A78FEAD9"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -758,7 +758,7 @@
 			rewards: [{
 				count: 3
 				id: "2CF5532504413AF3"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -782,7 +782,7 @@
 			rewards: [{
 				count: 3
 				id: "66ED47470AD525A7"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -812,7 +812,7 @@
 			rewards: [{
 				count: 3
 				id: "36C2256229DF1E01"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -839,7 +839,7 @@
 			rewards: [{
 				count: 3
 				id: "4BEA4501BDE7334E"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -875,7 +875,7 @@
 			rewards: [{
 				count: 3
 				id: "3D981FFE09BF2A31"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -928,7 +928,7 @@
 			id: "12FEE0A47E4658D5"
 			rewards: [{
 				id: "7AB7210C48CA93FC"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -983,7 +983,7 @@
 			rewards: [{
 				count: 3
 				id: "280CFC386CC3E76F"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "circle"
@@ -1004,7 +1004,7 @@
 			rewards: [{
 				count: 3
 				id: "3051A726B1A354C7"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1027,7 +1027,7 @@
 			rewards: [{
 				count: 3
 				id: "5B7B71EF76DBDFA6"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1062,7 +1062,7 @@
 			rewards: [{
 				count: 5
 				id: "65AD2CD540CBF5E9"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1094,7 +1094,7 @@
 			id: "0960C894446A786C"
 			rewards: [{
 				id: "56368132BE994985"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "circle"
@@ -1183,7 +1183,7 @@
 				}
 				{
 					id: "431B9FC88FE7C5B3"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1302,14 +1302,14 @@
 			rewards: [{
 				count: 3
 				id: "3B4A1211F10BBADB"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
 			subtitle: "Now we cooking!"
 			tasks: [{
 				id: "31D28DB63C79E42A"
-				item: "kubejs:u233_fuel_pellet"
+				item: "phoenixcore:u233_fuel_pellet"
 				type: "item"
 			}]
 			x: 5.94d
@@ -1360,14 +1360,14 @@
 			rewards: [{
 				count: 3
 				id: "2E76DAFBE21675FF"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
 			subtitle: "That's a lotta calories!"
 			tasks: [{
 				id: "101B54F31E3F0731"
-				item: "kubejs:u236_fuel_pellet"
+				item: "phoenixcore:u236_fuel_pellet"
 				type: "item"
 			}]
 			x: 7.59d
@@ -1379,14 +1379,14 @@
 			id: "3509C91BE95143C2"
 			rewards: [{
 				id: "6DC73C7B4C75AF60"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
 			subtitle: "It's not a red hot candy, trust me"
 			tasks: [{
 				id: "465531FC13F80F24"
-				item: "kubejs:plutonium_241_fuel_pellet"
+				item: "phoenixcore:plutonium_241_fuel_pellet"
 				type: "item"
 			}]
 			x: 7.59d

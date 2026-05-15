@@ -25,22 +25,22 @@ ServerEvents.recipes(event => {
                     "item": "ad_astra:rocket_nose_cone"
                 },
                 {
-                    "item": `gtceu:${rocketmaterial}_block`
+                    "item": `phoenixcore:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:${rocketmaterial}_block`
+                    "item": `phoenixcore:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:${rocketmaterial}_block`
+                    "item": `phoenixcore:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:${rocketmaterial}_block`
+                    "item": `phoenixcore:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:${rocketmaterial}_block`
+                    "item": `phoenixcore:${rocketmaterial}_block`
                 },
                 {
-                    "item": `gtceu:${rocketmaterial}_block`
+                    "item": `phoenixcore:${rocketmaterial}_block`
                 },
                 {
                     "item": "ad_astra:rocket_fin"

@@ -59,7 +59,7 @@
 				{
 					count: 3
 					id: "68B21B19769EA11E"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -102,9 +102,9 @@
 			size: 0.66d
 			subtitle: "Plants aren't industrial enough!"
 			tasks: [{
-				id: "4FBD476EB6B6DD04"
-				item: "gtceu:biomass_bucket"
-				type: "item"
+				id: "0BC0FF88E02B1E38"
+				title: "Biomass"
+				type: "checkmark"
 			}]
 			title: "Biomass"
 			x: 0.0d
@@ -132,7 +132,7 @@
 				}
 				{
 					id: "147118C6D47967A0"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -333,7 +333,7 @@
 				""
 				"Have one EBF run off &bMV&r for Aluminium and any other recipes requiring &bMV&r Power, and one running off &6HV&r with &32 MV Energy Hatches&r."
 			]
-			icon: "gtceu:frost_reinforced_stained_steel_ingot"
+			icon: "phoenixcore:frost_reinforced_stained_steel_ingot"
 			id: "16A6AE5C770DB83A"
 			rewards: [
 				{
@@ -345,7 +345,7 @@
 				{
 					count: 3
 					id: "6678BD26B1225923"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -354,7 +354,7 @@
 			subtitle: "HV is in your grasp"
 			tasks: [{
 				id: "688A2B0E8F359F8C"
-				item: "gtceu:frost_reinforced_stained_steel_ingot"
+				item: "phoenixcore:frost_reinforced_stained_steel_ingot"
 				type: "item"
 			}]
 			title: "Frost Reinforced Stained Steel"
@@ -384,7 +384,7 @@
 			id: "6C20A9A64C1BE0BF"
 			rewards: [{
 				id: "009AF3239F94B9D4"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -412,7 +412,7 @@
 			id: "4A92AFD2532EED26"
 			rewards: [{
 				id: "0B1DD9EACA52D3ED"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -443,7 +443,7 @@
 			rewards: [{
 				count: 2
 				id: "503EB837E06D4FA4"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -587,7 +587,7 @@
 				}
 				{
 					id: "7EB3EE65FF520A99"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -645,7 +645,7 @@
 			rewards: [{
 				count: 3
 				id: "1E4D9C2BB1DE6667"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -728,7 +728,7 @@
 			rewards: [{
 				count: 2
 				id: "520C5E027D6E3295"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -764,7 +764,7 @@
 				{
 					count: 2
 					id: "79C716240FD8D682"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -825,7 +825,7 @@
 			id: "1C55AE6AD5BDE304"
 			rewards: [{
 				id: "6DF442F1186E8911"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -913,7 +913,7 @@
 			id: "26394C1290D70AB6"
 			rewards: [{
 				id: "223425AAE31EE16F"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -973,7 +973,7 @@
 			rewards: [{
 				count: 2
 				id: "3C79B0F749C7ED0E"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1062,7 +1062,7 @@
 				{
 					count: 3
 					id: "1C4E996E4460E7D4"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1098,7 +1098,7 @@
 				{
 					count: 3
 					id: "5EA852EA722E198C"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1131,7 +1131,7 @@
 			id: "5E76D4C24026157D"
 			rewards: [{
 				id: "2C42F27E68046EDF"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1186,7 +1186,7 @@
 			id: "4AFD3073C731A1E4"
 			rewards: [{
 				id: "433462E3F28EE4F2"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1216,7 +1216,7 @@
 			rewards: [{
 				count: 2
 				id: "1F8FD630D3656059"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1280,7 +1280,7 @@
 				{
 					count: 2
 					id: "0E81AA6887863257"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1339,7 +1339,7 @@
 				{
 					count: 3
 					id: "08E4E465200B6192"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1368,7 +1368,7 @@
 			id: "1C036BCB2C488CFF"
 			rewards: [{
 				id: "44CA45AA45A0325C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				random_bonus: 2
 				type: "item"
 			}]
@@ -1420,7 +1420,7 @@
 			id: "40408FFD02134148"
 			rewards: [{
 				id: "1DC947C3048EE4F9"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1449,7 +1449,7 @@
 			id: "4600221BF0A30C3A"
 			rewards: [{
 				id: "6F919731756E3EE0"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1677,7 +1677,7 @@
 				{
 					count: 3
 					id: "7749923756A55844"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1731,7 +1731,7 @@
 			rewards: [{
 				count: 4
 				id: "055D051F095BE0F4"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -1834,7 +1834,7 @@
 				}
 				{
 					id: "50988A8A0552B9E3"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1855,9 +1855,9 @@
 					type: "item"
 				}
 				{
-					id: "1838F842C9D12880"
-					item: "gtceu:oilsands_dust"
-					type: "item"
+					id: "572A51CDCD437EC3"
+					title: "Oil"
+					type: "checkmark"
 				}
 			]
 			title: "America Simulator"
@@ -1907,25 +1907,9 @@
 			size: 0.75d
 			subtitle: "The Illusion of Free Choice"
 			tasks: [{
-				id: "685043442271A0D0"
-				item: {
-					Count: 1
-					id: "itemfilters:or"
-					tag: {
-						items: [
-							{
-								Count: 1b
-								id: "gtceu:lv_distillery"
-							}
-							{
-								Count: 1b
-								id: "gtceu:mv_distillery"
-							}
-						]
-					}
-				}
-				title: "Either an LV or MV Distillery"
-				type: "item"
+				id: "5EB2D752E4294F12"
+				title: "Distill"
+				type: "checkmark"
 			}]
 			title: "Distillery"
 			x: -1.125d
@@ -1989,9 +1973,9 @@
 			size: 0.66d
 			subtitle: "In the end, it's always Benzene"
 			tasks: [{
-				id: "4E9EBCCCC7BBAFDD"
-				item: "gtceu:benzene_bucket"
-				type: "item"
+				id: "7524EBE19E95F910"
+				title: "Benzene"
+				type: "checkmark"
 			}]
 			title: "The Church of Benzene"
 			x: -2.25d
@@ -2090,7 +2074,7 @@
 			id: "66041DE10C882382"
 			rewards: [{
 				id: "791592A0C6900C7B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -2165,7 +2149,7 @@
 			id: "16A1EF8B80A96633"
 			rewards: [{
 				id: "1C5B9BA990EECB1E"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -2359,7 +2343,7 @@
 			id: "26C43416F9427BB3"
 			rewards: [{
 				id: "16484B9B24D09595"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.5d
@@ -2409,7 +2393,7 @@
 			id: "0DB46141978BE703"
 			rewards: [{
 				id: "5A1CBEBE63688436"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.6d
@@ -2435,102 +2419,6 @@
 			}]
 			x: -2.6999999999999997d
 			y: 1.5d
-		}
-		{
-			description: [
-				"This &bdynamo&r uses &cburnable&r fuels to produce power. While it is less effcient than the steam dynamo in terms of fuel use, the power output is worth it. "
-				""
-				"&oDon't forget to upgrade this with integral componets and multi cycle injectors.&r"
-			]
-			id: "050EE53096074290"
-			rewards: [{
-				count: 3
-				id: "57694F5175E8DE21"
-				item: "kubejs:phoenix_feather"
-				type: "item"
-			}]
-			shape: "square"
-			size: 0.75d
-			subtitle: "Burning Fuels"
-			tasks: [{
-				id: "10E96352693AC276"
-				item: "thermal:dynamo_stirling"
-				type: "item"
-			}]
-			x: 3.375d
-			y: -1.5d
-		}
-		{
-			dependencies: ["050EE53096074290"]
-			description: [
-				"This upgrade makes all the stats of a machine &aincrease&r. "
-				""
-				"Moreover, because it applies the upgraded stats after other upgrades, these componets also increase the power of other &bupgrades&r."
-			]
-			id: "44D251E5D13F32C5"
-			rewards: [{
-				id: "12059096F67BAC92"
-				item: "kubejs:phoenix_feather"
-				type: "item"
-			}]
-			size: 0.6d
-			subtitle: "Integrity"
-			tasks: [{
-				id: "0A6EA41AF011361C"
-				item: "thermal:upgrade_augment_1"
-				type: "item"
-			}]
-			x: 3.0d
-			y: -2.4d
-		}
-		{
-			dependencies: ["050EE53096074290"]
-			description: [
-				"These are an upgrade to the base &aenergy conduits&r. "
-				""
-				"They move 400 more &bFE/t&r. While &cGreg wires&r do autoconvert to &bFE&r (and are faster eventually), these are &dcheaper&r to spam everywhere."
-			]
-			id: "6341508D7D62AC07"
-			rewards: [{
-				id: "2FE81A02618E8F8F"
-				item: "kubejs:phoenix_feather"
-				type: "item"
-			}]
-			size: 0.6d
-			subtitle: "Energetic Power Movement"
-			tasks: [{
-				id: "7B22131C8FFB15FE"
-				item: "enderio:energetic_conduit"
-				type: "item"
-			}]
-			x: 3.5999999999999996d
-			y: -2.4d
-		}
-		{
-			dependencies: ["050EE53096074290"]
-			description: [
-				"Another option to &bgt pipes&r. "
-				""
-				"These can be upgraded with &aextraction upgrades&r to increase the throughput. "
-				""
-				"While these are strong, &bGreg pipes&r will still pull thier weight. Even steel pipes move more fluids per tick without any upgrades."
-			]
-			id: "1FAF572E0EB00A94"
-			rewards: [{
-				count: 2
-				id: "5CDDEDB273279654"
-				item: "kubejs:phoenix_feather"
-				type: "item"
-			}]
-			size: 0.6d
-			subtitle: "Fluids Go Brr"
-			tasks: [{
-				id: "5A9911F16180CB1E"
-				item: "enderio:pressurized_fluid_conduit"
-				type: "item"
-			}]
-			x: 2.6999999999999997d
-			y: -1.2d
 		}
 	]
 	subtitle: ["Venture into petrochemistry and refine electronics"]

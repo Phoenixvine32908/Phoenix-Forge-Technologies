@@ -51,7 +51,7 @@ ServerEvents.recipes((event) => {
         event.recipes.gtceu.forming_press(outputId)
             .itemInputs(`#${inputTag}`)
             .itemOutputs(`kubejs:${outputId}`) // Assuming you want to output your universal circuit
-            .duration(600) // Example duration
+            .duration(10) // Example duration
             .EUt(GTValues.VA[GTValues.LV] / 2);    // Example energy per tick
     };
 

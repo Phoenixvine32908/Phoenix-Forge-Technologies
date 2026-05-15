@@ -396,7 +396,7 @@
 			id: "2B4FED49B6A88B6C"
 			rewards: [{
 				id: "3584F7BBEB863163"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Fast Furnaces - Little Cost"
@@ -584,28 +584,6 @@
 		{
 			dependencies: ["1AC4E39729811BFB"]
 			description: [
-				"Thermal Expansion has been a core part of modpacks for ages! Right now, its &aDynamos&r and &aBoilers&r will be your biggest power boost."
-				""
-				"The &bSterling Dynamo&r generates power by burning items – pretty neat, huh?"
-				""
-				"While upgrades significantly enhance their output, they aren't strictly &cnecessary&r to get started."
-			]
-			icon: "thermal_extra:abyssal_upgrade_augment"
-			id: "16B036CDC5931E9C"
-			size: 0.7d
-			subtitle: "All things require energy"
-			tasks: [{
-				id: "230A0309F85DFA00"
-				title: "Thermal"
-				type: "checkmark"
-			}]
-			title: "Thermal's Power"
-			x: -5.95d
-			y: -2.4499999999999997d
-		}
-		{
-			dependencies: ["1AC4E39729811BFB"]
-			description: [
 				"Let's dive into the fascinating world of GregTech power, starting with &6EU (Energy Units)&r."
 				""
 				"Now, the EU system operates quite differently from other power systems you might be familiar with. A crucial distinction is the &bvoltage tier system&r. &4BE WARNED&r: connecting higher voltage tier generators or dynamo hatches to lower tier infrastructure will result in &4CATASTROPHIC FAILURE – THINK EXPLOSIONS!&r"
@@ -662,7 +640,7 @@
 				{
 					count: 4
 					id: "4681511BEEA979D0"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 				{
@@ -1018,6 +996,17 @@
 			}]
 			x: 0.0d
 			y: -2.5d
+		}
+		{
+			description: ["&zStop being an idiot stupid."]
+			id: "53EB36A1F90215FF"
+			tasks: [{
+				id: "0D000A687E37FCEB"
+				item: "minecraft:waxed_oxidized_cut_copper_stairs"
+				type: "item"
+			}]
+			x: 9.5d
+			y: 3.5d
 		}
 	]
 	title: "Genesis"

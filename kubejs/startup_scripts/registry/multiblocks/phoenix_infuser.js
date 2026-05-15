@@ -1,7 +1,7 @@
 /**
 registry for the phoenix infuser
  */
-
+/*
 GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
     phoenixvine.create("phoenix_infuser")
         .category("phoenix")
@@ -18,7 +18,7 @@ GTCEuStartupEvents.registry("gtceu:recipe_type", phoenixvine => {
         .setProgressBar(GuiTextures.PROGRESS_BAR_ARROW, FillDirection.LEFT_TO_RIGHT)
         .setSound(GTSoundEntries.FURNACE);
 });
-/*
+
 GTCEuStartupEvents.registry("gtceu:machine", phoenixvine => {
     phoenixvine.create("phoenix_infuser", "multiblock").machine((holder) => new $FusionReactorMachine(holder, GTValues.OpV))
         .rotationState(RotationState.NON_Y_AXIS)

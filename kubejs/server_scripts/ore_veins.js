@@ -3,6 +3,7 @@ Ore veins setup
  */
 
 const WorldGenLayers = Java.loadClass("com.gregtechceu.gtceu.api.data.worldgen.WorldGenLayers")
+const PhoenixOres = Java.loadClass("net.phoenix.core.common.data.materials.PhoenixOres")
 
 GTCEuServerEvents.oreVeins(event => {
 

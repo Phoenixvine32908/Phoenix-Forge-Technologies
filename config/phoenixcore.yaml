@@ -1,3 +1,122 @@
+features:
+  # Whether the Creative Energy Multiblock is enabled
+  creativeEnergyEnabled: true
+
+  # Whether the Blazing Maintenance Hatch is enabled
+  blazingHatchEnabled: true
+
+  # Whether the Blazing Cleanroom is enabled (This just disables the casings, you can have the hatch on with this off just fine)
+  blazingCleanroomEnabled: true
+
+  # Whether the Custom HPCA components are enabled
+  HPCAComponetsEnabled: true
+
+  # Whether the Custom Phoenix HPCA multiblock is enabled
+  PHPCAEnabled: true
+
+  # Whether recipes for the machines are enabled
+  recipesEnabled: true
+
+  # How powerful the normal Phoenix Computation Unit is (CWU/t)
+  BasicPCUStrength: 32
+
+  # How powerful the Advanced Phoenix Computation Unit is (CWU/t)
+  PCUStrength: 64
+
+  # How much coolant the basic Phoenix Computation Unit uses
+  BasicPCUCoolantUsed: 4
+
+  # How much coolant the Advanced Phoenix Computation Unit uses
+  PCUCoolantUsed: 8
+
+  # How powerful the normal Phoenix Computation Unit is (CWU/t) when damaged
+  damagedBasicPCUStrength: 16
+
+  # How powerful the advanced Phoenix Computation Unit is (CWU/t) when damaged
+  damagedPCUStrength: 32
+
+  # How much EU the normal Phoenix Computation uses per tick while not providing CWU/t (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  basicPCUEutUpkeep: 8
+
+  # How much EU the normal Phoenix Computation can use at max (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  basicPCUMaxEUt: 10
+
+  # How much EU the advanced Phoenix Computation uses per tick while not providing CWU/t (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  PCUEutUpkeep: 8
+
+  # How much EU the advanced Phoenix Computation can use at max (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  PCUMaxEUt: 10
+
+  # How powerful the Phoenix Heat Sink is (Cooling Provided)
+  HeatSinkStrength: 4
+
+  # How powerful the Phoenix Active Cooler is (Cooling Provided)
+  ActiveCoolerStrength: 8
+
+  # How much EU the Phoenix Heat Sink uses per tick (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  HeatSinkEutUpkeep: 0
+
+  # How much EU the Active Phoenix Cooler uses per tick (Goes off GTValues, ULV is 0, LV is 1, MV is 2, etc)
+  ActiveCoolerEutUpkeep: 8
+
+  # How much coolant the Active Phoenix Cooler can use at max in milibuckets
+  ActiveCoolerCoolantUse: 10
+
+  # What Base Coolant the Active Phoenix Cooler uses while in the PHPCA (Gt or GT Kubejs Material)
+  ActiveCoolerCoolantBase: copper
+
+  # What Stronger Coolant the Active Phoenix Cooler uses while in the PHPCA (Gt or GT Kubejs Material)
+  ActiveCoolerCoolant1: pcb_coolant
+
+  # What Strongest Coolant the Active Phoenix Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
+  ActiveCoolerCoolant2: sodium_potassium
+
+  # How much ActiveCoolerCoolant1 boosts base CWU/t ()
+  BaseCoolantBoost: 1.0
+
+  # How much ActiveCoolerCoolant1 boosts base CWU/t ()
+  CoolantBoost1: 1.1
+
+  # What Strongest Coolant the Active Phoenix Cooler uses when in the PHPCA (Gt or GT Kubejs Material)
+  CoolantBoost2: 1.2
+
+  # The connection mode for Tesla Towers.
+  # TEAM_AUTO: All towers under a team/player share the same cloud automatically.
+  # DATA_STICK: Towers must be manually linked to hatches using a Data Stick.
+  # Allowed values:
+  # - TEAM_AUTO
+  # - DATA_STICK
+  teslaConnectionMode: DATA_STICK
+
+cleanroom:
+  # Whether the cleanroom deals lethal damage to players when active and at max cleanliness.
+  lethal: true
+
+  # The maximum cleanliness level of the cleanroom.
+  maxCleanliness: 1000
+
+  # The amount of pollution each player adds per tick inside the cleanroom.
+  playerPollution: 5
+
+  # The amount of cleanliness regenerated per tick when no players are inside.
+  regenRate: 1
+
+  # The amount of sterilizing gas consumed per tick.
+  fluidConsumption: 1
+
+sourceHatch:
+  # The radius (in blocks) in which a Source Hatch will scan for nearby Source Jars to pull from.
+  sourceJarCheckRadius: 12
+
+colors:
+  # Add custom formatting codes here.
+  # Format: 'char:hex' (e.g., 'z:BF00FF')
+  # Note: The code is a single character, and hex should not include #
+  customColors:
+    - z:BF00FF
+    - °:00F2FF
+    - p:FF2100
+
 fission:
   # Enable the nuke block.
   nukeEnabled: true
@@ -51,13 +170,13 @@ fission:
   parallelsPerFuelRod: 1
 
   # How much heat is required to add +1 to the recipe parallel multiplier.
-  heatPerParallel: 2000.0
+  heatPerParallel: 10000.0
 
   # Hard cap for parallels.
   maxParallels: 64
 
   # How much EU/t is generated per unit of CURRENT heat (power scales with current heat).
-  euPerHeatUnit: 0.5
+  euPerHeatUnit: 0.25
 
   # Optional cap on generated EU/t. Set <= 0 for no cap.
   maxGeneratedEUt: 0
@@ -75,7 +194,7 @@ fission:
   maxFuelDiscountPercent: 90
 
   # Clamp for total EU boost percent from moderators.
-  maxEUBoostPercent: 500
+  maxEUBoostPercent: 100
 
   # If true, cooling only applies when coolant is present.
   coolingRequiresCoolant: true
@@ -107,7 +226,7 @@ fission:
 
   explosion:
     # If true, replaces blocks with air/fire. If false, uses standard GT explosion (drops items).
-    destructiveExplosion: true
+    destructiveExplosion: false
 
     # Explosion power scales with fuel rod count: power = base + rods * multiplier.
     explosionPowerPerFuelRod: 1.5
@@ -129,4 +248,155 @@ fission:
 
   # If >= 0, all coolers must be exactly this tier. Set to -1 to disable.
   requiredCoolerTier: -1
+
+fissionStats:
+  # Configuration for Fission Coolers
+  coolers:
+    # EU/t boost multiplier for the basic cooler.
+    coolingPowerBasicCooler: 2
+
+  # Configuration for Fission Moderators
+  moderators:
+    # EU/t boost multiplier for the graphite moderator.
+    euBoostGraphiteModerator: 2
+
+    # Fuel Discount for the graphite moderator.
+    fuelDiscountGraphiteModerator: 1
+
+    # Tier for the graphite moderator.
+    tierGraphiteModerator: 1
+
+    # EU/t boost multiplier for the beryllium moderator.
+    euBoostBerylliumModerator: 5
+
+    # Fuel Discount for the beryllium moderator.
+    fuelDiscountBerylliumModerator: 2
+
+    # Tier for the beryllium moderator.
+    tierBerylliumModerator: 2
+
+    # EU/t boost multiplier for the heavy water moderator.
+    euBoostHeavyWaterModerator: 12
+
+    # Fuel Discount for the heavy water moderator.
+    fuelDiscountHeavyWaterModerator: 5
+
+    # Tier for the heay water moderator.
+    tierHeavyWaterModerator: 3
+
+    # EU/t boost multiplier for the niobium sic moderator.
+    euBoostNiobiumSicModerator: 30
+
+    # Fuel Discount for the niobium sic moderator.
+    fuelDiscountNiobiumSicModerator: 10
+
+    # Tier for the niobium sic moderator.
+    tierNiobiumSicModerator: 4
+
+  # Configuration for Fission Fuel Rods
+  fuelRods:
+    # Base heat production for the T1 fuel rod.
+    heatProductionT1: 50
+
+    # Base heat production for the T2 fuel rod.
+    heatProductionT2: 150
+
+    # Base heat production for the T3 fuel rod.
+    heatProductionT3: 500
+
+    # Base heat production for the T4 fuel rod.
+    heatProductionT4: 1200
+
+    # Base heat production for the Tt fuel rod.
+    heatProductionT5: 3000
+
+    # NeutronBias for the T1 fuel rod.
+    neutronBiasT1: 0
+
+    # NeutronBias for the T2 fuel rod.
+    neutronBiasT2: 1
+
+    # NeutronBias for the T3 fuel rod.
+    neutronBiasT3: 5
+
+    # NeutronBias for the T4 fuel rod.
+    neutronBiasT4: 12
+
+    # NeutronBias for the T5 fuel rod.
+    neutronBiasT5: 30
+
+    # Fuel cycle duration in ticks for the T1 fuel rod.
+    cycleDurationT1: 2500
+
+    # Fuel cycle duration in ticks for the T2 fuel rod.
+    cycleDurationT2: 3000
+
+    # Fuel cycle duration in ticks for the T3 fuel rod.
+    cycleDurationT3: 3500
+
+    # Fuel cycle duration in ticks for the T4 fuel rod.
+    cycleDurationT4: 4000
+
+    # Fuel cycle duration in ticks for the T5 fuel rod.
+    cycleDurationT5: 8000
+
+    # Fuel amount used per cycle for the T1 fuel rod.
+    cycleAmountT1: 1
+
+    # Fuel amount used per cycle for the T2 fuel rod.
+    cycleAmountT2: 1
+
+    # Fuel amount used per cycle for the T3 fuel rod.
+    cycleAmountT3: 1
+
+    # Fuel amount used per cycle for the T4 fuel rod.
+    cycleAmountT4: 1
+
+    # Fuel amount used per cycle for the T5 fuel rod.
+    cycleAmountT5: 1
+
+    # Fuel used for the T1 fuel rod. (Registry name string)
+    fuelUsedT1: phoenixcore:basic_fuel_rod
+
+    # Fuel used for the T2 fuel rod. (Registry name string)
+    fuelUsedT2: phoenixcore:basic_fuel_rod
+
+    # Fuel used for the T3 fuel rod. (Registry name string)
+    fuelUsedT3: phoenixcore:u235_fuel_pellet
+
+    # Fuel used for the T4 fuel rod. (Registry name string)
+    fuelUsedT4: phoenixcore:plutonium_241_fuel_pellet
+
+    # Fuel used for the T5 fuel rod. (Registry name string)
+    fuelUsedT5: phoenixcore:u242_fuel_pellet
+
+    # Depleted Fuel produced for the T1 fuel rod. (Registry name string)
+    depletedGivenT1: phoenixcore:low_level_radioactive_waste
+
+    # Depleted Fuel produced for the T2 fuel rod. (Registry name string)
+    depletedGivenT2: phoenixcore:low_level_radioactive_waste
+
+    # Depleted Fuel produced for the T3 fuel rod. (Registry name string)
+    depletedGivenT3: phoenixcore:spent_uranium_235_nugget
+
+    # Depleted Fuel produced for the T4 fuel rod. (Registry name string)
+    depletedGivenT4: phoenixcore:depleted_plutonium_241_nugget
+
+    # Depleted Fuel produced for the T5 fuel rod. (Registry name string)
+    depletedGivenT5: phoenixcore:spent_uranium_242_nugget
+
+phantasiaUI:
+  # LOOK_AT: Bar appears when looking at a placed controller.
+  # HELD_ITEM: Bar appears when holding a controller in your hand.
+  # PERSISTENT: Bar stays on screen for the last accessed machine.
+  # Allowed values:
+  # - TOOLTIP_ONLY
+  # - JADE_ONLY
+  # - HOTBAR_ONLY
+  # - TOOLTIP_JADE
+  # - TOOLTIP_HOTBAR
+  displayMode: TOOLTIP_HOTBAR
+
+  # Ticks required to hold the key to open the menu (20 ticks = 1 second).
+  activationTicks: 20
 

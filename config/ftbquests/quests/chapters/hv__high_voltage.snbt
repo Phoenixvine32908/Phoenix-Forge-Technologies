@@ -58,7 +58,7 @@
 				{
 					count: 2
 					id: "715FE523FA345826"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -105,7 +105,7 @@
 			rewards: [{
 				count: 2
 				id: "65D87E6687903F0B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -184,7 +184,7 @@
 			rewards: [{
 				count: 2
 				id: "268BBF0865C3C2A9"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -358,7 +358,7 @@
 			id: "15EC934CE8F4DC86"
 			rewards: [{
 				id: "469F3878D6F617D5"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -452,7 +452,7 @@
 			id: "390E59F05132FCB8"
 			rewards: [{
 				id: "09F0CB09B1D64FDF"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "square"
@@ -601,7 +601,7 @@
 			description: [
 				"&5Source Imbued Titanium&r&r has the highest corrosion resistance, magic resistance, and strength-to-density ratio of any metallic element, so it's only natural that it will be used as a base for &5EV&r machinery."
 				""
-				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source Of Magic&r, which is obtained by running any plant/log through the Alchemical Imbuer multiblock. "
+				"Confirm that your closed loop for &aRutile&r is up to standard, and prepare to run a dedicated &3EBF&r for hours. You also need to get some &5Source&r, which is obtained by running any plant/log through the Alchemical Imbuer multiblock. "
 				""
 				""
 				"{@pagebreak}"
@@ -609,7 +609,7 @@
 				""
 				"Whilst Multiblock generators are much more expensive, you'll find them to be much more energy efficient!"
 			]
-			icon: "gtceu:source_imbued_titanium_ingot"
+			icon: "phoenixcore:source_imbued_titanium_ingot"
 			id: "7FA0ACB7F161F378"
 			rewards: [
 				{
@@ -621,7 +621,7 @@
 				{
 					count: 4
 					id: "150715AF48188F6D"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -629,6 +629,7 @@
 			size: 1.2d
 			subtitle: "Magical Titanite Slab"
 			tasks: [{
+				icon: "phoenixcore:source_imbued_titanium_ingot"
 				id: "5E6A00C5E2682B89"
 				item: "gtceu:source_imbued_titanium_ingot"
 				type: "item"
@@ -795,7 +796,7 @@
 			rewards: [{
 				count: 4
 				id: "48AD98BF1DD633A2"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "gear"
@@ -884,7 +885,7 @@
 				}
 				{
 					id: "569CD0163997A22C"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -992,7 +993,7 @@
 				{
 					count: 4
 					id: "07359A83A4EA454A"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1043,7 +1044,7 @@
 				{
 					count: 3
 					id: "51A3BF1E38EA4DAC"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1146,7 +1147,7 @@
 			id: "4C3805F75C9EE3DD"
 			rewards: [{
 				id: "1D9ECA3CA523C36A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1183,7 +1184,7 @@
 			id: "7F272A099E65F848"
 			rewards: [{
 				id: "6CA3D66CF56B421C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1221,7 +1222,7 @@
 			rewards: [{
 				count: 3
 				id: "21314D20D5B27E39"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1281,7 +1282,7 @@
 			rewards: [{
 				count: 2
 				id: "7978507849593C4B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1417,22 +1418,22 @@
 		{
 			dependencies: ["2D6F0875CC953C16"]
 			description: [
-				"Unlock the power of &5Source of Magic!&r In an &eAlchemical Imbuer&r (set to &6Source Extraction Mode&r), process &oplants, fuels, or lava&r to obtain this wonderful liquid."
+				"Unlock the power of &5Source!&r In an &eAlchemical Imbuer&r (set to &6Source Extraction Mode&r), process &oplants, fuels, or lava&r to obtain this wonderful resource. You can also use the vitalic sourcelink (baby growth ticks) to generate source. However this is less effecient than using the &eAlchemical Imbuer&r."
 				""
-				"Your first step with this fluid is making &5Source-Imbued Titanium&r. (Also used for the &dev superconductor&r but we will see that later)."
+				"Your first step is making &5Source-Imbued Titanium&r. (Also used for the &dev superconductor&r but we will see that later)."
 			]
 			id: "76681EFD9B76F401"
 			rewards: [{
 				id: "1FCF86EFF1371AAE"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "Ooooh, Magic"
 			tasks: [{
-				id: "5C933AA40CF32815"
-				item: "gtceu:source_of_magic_bucket"
-				type: "item"
+				id: "7C62469ECE82C5B9"
+				title: "Magic!"
+				type: "checkmark"
 			}]
 			x: 5.625d
 			y: -6.375d
@@ -1447,7 +1448,7 @@
 			rewards: [{
 				count: 2
 				id: "606D9897C2B5A492"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -1459,7 +1460,7 @@
 				type: "item"
 			}]
 			x: 4.95d
-			y: -7.26d
+			y: -6.93d
 		}
 		{
 			dependencies: [
@@ -1479,15 +1480,16 @@
 			rewards: [{
 				count: 5
 				id: "7A1B6218A40CDDD1"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "Imbuement!"
 			tasks: [
 				{
+					icon: "phoenixcore:alchemical_imbuer"
 					id: "1E8A3856666013E7"
-					item: "gtceu:alchemical_imbuer"
+					item: "phoenixcore:alchemical_imbuer"
 					type: "item"
 				}
 				{
@@ -1555,26 +1557,7 @@
 				type: "item"
 			}]
 			x: 6.2700000000000005d
-			y: -7.26d
-		}
-		{
-			description: [
-				"The heart of any grand industrial symphony is its conductor. With &6&lCrazy AE2 Addons&r, you are granted the baton, transforming your basic ME network into a truly intelligent system. This isn't merely about moving items; it's about making your automation &a&othink&r."
-				""
-				"A powerful &bdata system&r lies at its very core, a nexus of raw information waiting to be harnessed. Discover how to read the ebb and flow of these data streams and direct your automated processes with unparalleled precision. Proceed to the dedicated &9&lCrazy AE2 Addons Chapter&r for an in-depth explanation of these groundbreaking features."
-			]
-			icon: "crazyae2addons:display_monitor"
-			id: "61885813E9823B9C"
-			invisible: true
-			size: 0.75d
-			subtitle: "Display Your Data"
-			tasks: [{
-				id: "0731B6B4F6959F67"
-				title: "Crazy"
-				type: "checkmark"
-			}]
-			x: 9.0d
-			y: -6.0d
+			y: -6.93d
 		}
 		{
 			dependencies: [
@@ -1602,7 +1585,7 @@
 			rewards: [{
 				count: 3
 				id: "03BFAFD50665B88C"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.9d
@@ -1712,14 +1695,14 @@
 			rewards: [{
 				count: 4
 				id: "32B8F6496ABF48D5"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
 			subtitle: "Your First Fissile Safe Materiel."
 			tasks: [{
 				id: "1694AE728C4AE44F"
-				item: "gtceu:zircalloy_ingot"
+				item: "phoenixcore:zircalloy_ingot"
 				type: "item"
 			}]
 			x: 7.875d
@@ -1749,39 +1732,19 @@
 			rewards: [{
 				count: 3
 				id: "7ECB8B6C1CC257AA"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.6d
 			subtitle: "The Start Of Fissile Fuel!"
 			tasks: [{
+				icon: "phoenixcore:uranium_oxide_bucket"
 				id: "6804EA49F0122E8F"
 				item: "gtceu:uranium_oxide_bucket"
 				type: "item"
 			}]
 			x: 8.4d
 			y: -2.1d
-		}
-		{
-			dependencies: ["0021051273D48936"]
-			dependency_requirement: "one_completed"
-			description: [
-				"Welcome to the realm of &l&#00cdeecrazy,&n&r there is no return!"
-				""
-				"Check out &6&6Oktawia's amazing guide&r&r by holding &nG&r on any of &9CAE2AS&r items/blocks! (&bshe does a lot better job at explaining this than I do&r.)"
-				" "
-				"One such example of her &bamazing features&r is the round robin item p2p. This p2p will &o&3evenly spread items&r&r pushed through it to connected inventories."
-			]
-			id: "12D3177401E08197"
-			invisible: true
-			size: 0.75d
-			tasks: [{
-				id: "51C081B554D8F9E7"
-				item: "crazyae2addons:round_robin_item_p2p_tunnel"
-				type: "item"
-			}]
-			x: 3.375d
-			y: -4.125d
 		}
 		{
 			description: [
@@ -1860,6 +1823,51 @@
 			title: "Moderators and Coolers."
 			x: 7.125d
 			y: -0.75d
+		}
+		{
+			description: [
+				"Your way of using &dArs Nouveau&r &5Source&r in GregTech multiblocks. To move &5Source&r long distances you will want to use &5Source&r jars and &5Source&r relays, with the source hatches acting as &aendpoints&r. The distance that jars can be seen by a &5Source&r hatch is by default &a12 blocks&r, anything longer than that will require your &dWand Of Dominion&r."
+				""
+				"&5Source&r Input: Used by the Alchemical Imbuer and &5Source&r Reactor to transform &2mundane&r resources into more &dmagical&r variants."
+				""
+				"&5Source&r Output: Used by the Alchemical Imbuer's &5Source&r Extraction Mode to provide you source through carbon based materials."
+			]
+			id: "081F9488279D1745"
+			size: 0.9d
+			subtitle: "Heard ya wanted to learn magic."
+			tasks: [{
+				id: "0BD08B8AFD3A5D43"
+				item: "phoenixcore:hv_source_input_hatch"
+				type: "item"
+			}]
+			title: "Source Logistics"
+			x: 4.95d
+			y: -7.6499999999999995d
+		}
+		{
+			description: [
+				"This is your &atool&r to control long-distance &5Source&r lines, it handles connection between one source transmitter and one source receiver."
+				""
+				"&5Source&r Jar to &5Source&r Relay: Right click on the jar to set it as the &atransmitter&r, and right click on the relay to set it as the &6receiver&r."
+				""
+				"&5Source&r Relay to &5Source&r Jar: Right click on the relay to set it as the &atransmitter&r, and right click on the jar to set it as the &6receiver&r."
+				""
+				"After you mess around with it for a bit, try setting up a real set of &5Source&r &alogistics&r linking up all your &dmagical&r infrastructure. "
+			]
+			id: "5CF27689E362A1AE"
+			size: 0.9d
+			subtitle: "Telling your magic what to do."
+			tasks: [{
+				id: "66D66A3E35D4E66D"
+				item: {
+					Count: 1
+					id: "ars_nouveau:dominion_wand"
+					tag: { }
+				}
+				type: "item"
+			}]
+			x: 6.3d
+			y: -7.6499999999999995d
 		}
 	]
 	subtitle: ["Scale up your power and begin advanced chemistry"]

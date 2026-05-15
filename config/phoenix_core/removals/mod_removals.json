@@ -1,0 +1,10 @@
+{
+  "remove_by_id": [],
+  "remove_by_mod": [
+    "example_mod_id"
+  ],
+  "remove_by_input": [],
+  "remove_by_output": [
+    "example_mod:broken_item"
+  ]
+}

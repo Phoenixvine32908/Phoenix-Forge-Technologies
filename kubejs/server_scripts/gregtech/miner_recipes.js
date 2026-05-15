@@ -37,9 +37,9 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
 
     // --- Dimensional Anchoring Recipes (Nerfed) ---
     // Overworld Blazing Drill (Better) - Nerf Round 3
-    event.recipes.gtceu.dimensional_anchoring12("overworld_blazing_drill_better")
-        .notConsumable("kubejs:aurum_steel_drilling_kit")
-        .notConsumable("kubejs:earthbound_miner_module")
+    event.recipes.gtceu.dimensional_anchoring("overworld_blazing_drill_better")
+        .notConsumable("phoenixcore:aurum_steel_drilling_kit")
+        .notConsumable("phoenixcore:earthbound_miner_module")
         .inputFluids([
             "phoenixcore:blazing_drilling_fluid  8000"
         ])
@@ -70,8 +70,8 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .dimension("minecraft:overworld");
 
     // Overworld Blazing Drill (Lesser) - Nerf Round 3
-    event.recipes.gtceu.dimensional_anchoring12("overworld_blazing_drill_lesser")
-        .notConsumable("kubejs:aurum_steel_drilling_kit")
+    event.recipes.gtceu.dimensional_anchoring("overworld_blazing_drill_lesser")
+        .notConsumable("phoenixcore:aurum_steel_drilling_kit")
         .inputFluids([
             "phoenixcore:blazing_drilling_fluid  8000"
         ])
@@ -96,9 +96,9 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         .dimension("minecraft:overworld");
 
     // Nether Blazing Drill (Better) - Nerf Round 3
-    event.recipes.gtceu.dimensional_anchoring12("nether_blazing_drill_better")
-        .notConsumable("kubejs:aluminfrost_drilling_kit")
-        .notConsumable("kubejs:earthbound_miner_module")
+    event.recipes.gtceu.dimensional_anchoring("nether_blazing_drill_better")
+        .notConsumable("phoenixcore:aluminfrost_drilling_kit")
+        .notConsumable("phoenixcore:earthbound_miner_module")
         .inputFluids([
             "phoenixcore:blazing_drilling_fluid  8000"
         ])
@@ -135,12 +135,13 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         )
         .chancedOutput("gtceu:raw_platinum", 2000, 200)
         .duration(15000) // Increased from 5500
+        .circuit(2)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:the_nether");
 
     // Nether Blazing Drill (Lesser, No Module) - Nerf Round 3
-    event.recipes.gtceu.dimensional_anchoring12("nether_blazing_drill_lesser_no_module")
-        .notConsumable("kubejs:aluminfrost_drilling_kit")
+    event.recipes.gtceu.dimensional_anchoring("nether_blazing_drill_lesser_no_module")
+        .notConsumable("phoenixcore:aluminfrost_drilling_kit")
         .inputFluids([
             "phoenixcore:blazing_drilling_fluid  8000"
         ])
@@ -164,12 +165,13 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         )
         .duration(17000) // Increased from 6500
         .EUt(GTValues.VA[GTValues.EV] / 2)
+        .circuit(1)
         .dimension("minecraft:the_nether");
 
     // End Blazing Drill (Better) - Nerf Round 3
-    event.recipes.gtceu.dimensional_anchoring12("end_blazing_drill_better")
-        .notConsumable("kubejs:frost_reinforced_stained_steel_drilling_kit")
-        .notConsumable("kubejs:earthbound_miner_module")
+    event.recipes.gtceu.dimensional_anchoring("end_blazing_drill_better")
+        .notConsumable("phoenixcore:frost_reinforced_stained_steel_drilling_kit")
+        .notConsumable("phoenixcore:earthbound_miner_module")
         .inputFluids([
             "phoenixcore:blazing_drilling_fluid 8000"
         ])
@@ -195,11 +197,12 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         )
         .duration(16000) // Increased from 5600
         .EUt(GTValues.VA[GTValues.EV] / 2)
+        .circuit(2)
         .dimension("minecraft:the_end");
 
     // End Blazing Drill (Lesser) - Nerf Round 3
-    event.recipes.gtceu.dimensional_anchoring12("end_blazing_drill_lesser")
-        .notConsumable("kubejs:frost_reinforced_stained_steel_drilling_kit")
+    event.recipes.gtceu.dimensional_anchoring("end_blazing_drill_lesser")
+        .notConsumable("phoenixcore:frost_reinforced_stained_steel_drilling_kit")
         .inputFluids([
             "phoenixcore:blazing_drilling_fluid  8000"
         ])
@@ -221,14 +224,15 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "17x gtceu:raw_pitchblende",
             "17x gtceu:raw_uraninite"
         )
+        .circuit(1)
         .duration(18000) // Increased from 6300
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("minecraft:the_end");
 
 
     // Moon Voidic Drill (Lesser) - Aetherial Fabrication - Nerf Round 3
-    event.recipes.gtceu.aetherial_fabrication12("moon_voidic_drill_lesser")
-        .notConsumable("kubejs:space_grade_steel_drilling_kit")
+    event.recipes.gtceu.aetherial_fabrication("moon_voidic_drill_lesser")
+        .notConsumable("phoenixcore:space_grade_steel_drilling_kit")
         .inputFluids([
             "phoenixcore:voidic_drilling_fluid  8000"
         ])
@@ -243,12 +247,13 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
             "12x phoenixcore:raw_ignisium"
         )
         .duration(12000) // Increased from 4000
+        .circuit(1)
         .EUt(GTValues.VA[GTValues.EV] / 2)
         .dimension("ad_astra:moon");
 
-    event.recipes.gtceu.aetherial_fabrication12("moon_voidic_drill_module")
-        .notConsumable("kubejs:space_grade_steel_drilling_kit")
-        .notConsumable("kubejs:space_miner_module")
+    event.recipes.gtceu.aetherial_fabrication("moon_voidic_drill_module")
+        .notConsumable("phoenixcore:space_grade_steel_drilling_kit")
+        .notConsumable("phoenixcore:space_miner_module")
         .inputFluids([
             "phoenixcore:voidic_drilling_fluid  8000"
         ])
@@ -266,6 +271,7 @@ ServerEvents.recipes(event => { // Start of the main recipe event listener
         )
         .duration(11500)
         .EUt(GTValues.VA[GTValues.EV] / 2)
+        .circuit(2)
         .dimension("ad_astra:moon");
 
     // Calcite Generator (using chemical_reactor as discussed) - Nerf Round 3

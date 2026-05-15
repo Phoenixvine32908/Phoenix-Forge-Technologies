@@ -1,4 +1,0 @@
-/**
-Registry for fission multis
- */
-

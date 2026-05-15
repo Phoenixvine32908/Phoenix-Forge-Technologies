@@ -42,7 +42,7 @@
 				{
 					count: 12
 					id: "741708ABEE8996E6"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -69,7 +69,7 @@
 			rewards: [{
 				count: 4
 				id: "1F0623928E41EF39"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Controlling power"
@@ -103,7 +103,7 @@
 				{
 					count: 2
 					id: "3EE04CF99343F0EB"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -135,7 +135,7 @@
 				{
 					count: 3
 					id: "4EE0DCD20ED1C563"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -176,7 +176,7 @@
 				{
 					count: 4
 					id: "2EE99E9924DC65BD"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -235,7 +235,7 @@
 			rewards: [{
 				count: 4
 				id: "0F6F43DB3E63D867"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "You Spin Me Right Round Baby"
@@ -288,10 +288,8 @@
 				"{@pagebreak}"
 				""
 				"&aGreg Solar Boilers&r: Use the power of the sun to provide heat for your steam production. These are quite nice as they are passive steam during the day but have a higher initial investment than solid or liquid boilers."
-				""
-				"&aThermal Boilers&r: Use more unconventional fuels to produce steam. However, the steam from thermal does not burn you when inside pipes, and the boilers can be upgraded with multi-injectors to increase steam production. Do note that with the buffs to GregTech steam production, it might be faster to run a few &bhigh-pressure solid boilers&r. Feel free to test it out though; thermal might still be stronger."
 			]
-			icon: "systeams:stirling_boiler"
+			icon: "gtceu:hp_steam_solar_boiler"
 			id: "75C63892579D7900"
 			rewards: [
 				{
@@ -303,7 +301,7 @@
 				{
 					count: 2
 					id: "5284D39C36C068DC"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 				{
@@ -347,7 +345,7 @@
 				{
 					count: 3
 					id: "62F6A6BBD9CA2F28"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -394,19 +392,19 @@
 				"&cFiery Bronze&r: 4:1:1: Copper Dust, Tin Dust, Dormant Ember Dust= 5 Fiery bronze dust."
 				"Don't worry, we won't make you jump through hoops here. Just smelt it in a furnace."
 			]
-			icon: "gtceu:fiery_bronze_ingot"
+			icon: "phoenixcore:fiery_bronze_ingot"
 			id: "44F9415F8D2963F3"
 			rewards: [
 				{
 					count: 4
 					id: "4CD5BA080E40409C"
-					item: "gtceu:fiery_bronze_ingot"
+					item: "phoenixcore:fiery_bronze_ingot"
 					type: "item"
 				}
 				{
 					count: 2
 					id: "77560598921BEE52"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -414,10 +412,7 @@
 			tasks: [{
 				count: 16L
 				id: "794A5ED934385ECA"
-				item: {
-					Count: 16
-					id: "gtceu:fiery_bronze_ingot"
-				}
+				item: "phoenixcore:fiery_bronze_ingot"
 				type: "item"
 			}]
 			title: "Fiery Bronze"
@@ -464,7 +459,7 @@
 				{
 					count: 4
 					id: "288A7EEA1BAA1928"
-					item: "gtceu:raw_dormant_ember"
+					item: "phoenixcore:raw_dormant_ember"
 					type: "item"
 				}
 				{
@@ -482,7 +477,7 @@
 				{
 					count: 3
 					id: "5CD45EE11DEE4710"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -515,10 +510,7 @@
 				{
 					count: 16L
 					id: "785B27CE86B9196E"
-					item: {
-						Count: 16
-						id: "gtceu:raw_dormant_ember"
-					}
+					item: "phoenixcore:raw_dormant_ember"
 					type: "item"
 				}
 				{
@@ -556,7 +548,7 @@
 			optional: true
 			rewards: [{
 				id: "30B973C9E589CDE8"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Home, Sweet Home"
@@ -583,13 +575,13 @@
 				{
 					count: 10
 					id: "20BBDD99C1F7D461"
-					item: "gtceu:raw_dormant_ember"
+					item: "phoenixcore:raw_dormant_ember"
 					type: "item"
 				}
 				{
 					count: 8
 					id: "4897741F997C1489"
-					item: "gtceu:raw_permafrost"
+					item: "phoenixcore:raw_permafrost"
 					type: "item"
 				}
 			]
@@ -597,7 +589,7 @@
 			tasks: [{
 				count: 16L
 				id: "01F2CA88A3AA6BB8"
-				item: "gtceu:raw_dormant_ember"
+				item: "phoenixcore:raw_dormant_ember"
 				type: "item"
 			}]
 			title: "Dormant ember Ore"
@@ -622,7 +614,7 @@
 				{
 					count: 4
 					id: "75518EE9E0D135AB"
-					item: "gtceu:fiery_bronze_ingot"
+					item: "phoenixcore:fiery_bronze_ingot"
 					type: "item"
 				}
 				{
@@ -634,7 +626,7 @@
 				{
 					count: 2
 					id: "159F207C6AD5B0B1"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -701,7 +693,7 @@
 			rewards: [{
 				count: 2
 				id: "2A5F6F3B51E29913"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Thirsty"
@@ -724,6 +716,8 @@
 				""
 				"&oMade that mistake more than I would like to admit&r."
 				""
+				"(also here, have enough enderpearls for a magnet upgrade, shh)"
+				""
 				""
 				"{@pagebreak}"
 				""
@@ -732,6 +726,7 @@
 				"For example, the &2greg axe&r has &aTreefeller&r which takes the durability from the tool to mine an entire tree, which is nice to get those logs that always float above your head."
 				""
 				"Eventually, you will make &3electric tools&r to make mining and resource gathering even &aeasier&r but that is a bit &olater&r."
+				" "
 			]
 			icon: {
 				Count: 1
@@ -774,7 +769,13 @@
 				{
 					count: 3
 					id: "7A23B3484175F286"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "3BC4D304DC8FB750"
+					item: "minecraft:ender_pearl"
 					type: "item"
 				}
 			]
@@ -804,7 +805,7 @@
 				{
 					count: 4
 					id: "227AF6F30DFD75B3"
-					item: "gtceu:fiery_bronze_ingot"
+					item: "phoenixcore:fiery_bronze_ingot"
 					type: "item"
 				}
 				{
@@ -815,7 +816,7 @@
 				}
 				{
 					id: "79F1EE4B589D877C"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -899,7 +900,7 @@
 				{
 					count: 4
 					id: "39569D51C450D3B1"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -909,7 +910,7 @@
 			tasks: [{
 				count: 12L
 				id: "67CE19BA302B1029"
-				item: "gtceu:aurum_steel_ingot"
+				item: "phoenixcore:aurum_steel_ingot"
 				type: "item"
 			}]
 			x: 13.0d
@@ -979,7 +980,7 @@
 				{
 					count: 2
 					id: "6500E14C541FD82C"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1051,12 +1052,12 @@
 				"&lNot an issue!&r Just spend these &4feathers&r you find on your travels to \"buy\" &8ores&r, &1spawn eggs&r, and &2saplings&r! Just whack them in a crafting table and explore the possibilties!"
 				"One word thou: &c&lDon't Hoard&r&r. They won't help you if you never use them. "
 			]
-			icon: "kubejs:phoenix_feather"
+			icon: "phoenixcore:phoenix_feather"
 			id: "6B90970C97C0160D"
 			rewards: [{
 				count: 3
 				id: "4ACAA42B9DE4ECD3"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Don't be a hoarder"
@@ -1090,7 +1091,7 @@
 				{
 					count: 2
 					id: "34BD9DE90F9EF010"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1182,7 +1183,7 @@
 				}
 				{
 					id: "2001E943D95E27F2"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1206,7 +1207,7 @@
 			id: "3E25AEBD6AF89870"
 			rewards: [{
 				id: "4E8A5837A181F363"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Planked"
@@ -1230,7 +1231,7 @@
 				{
 					count: 2
 					id: "1BC66AE9CE9BDC44"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 				{
@@ -1296,7 +1297,7 @@
 			rewards: [{
 				count: 4
 				id: "7DAAC40D189B70E1"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Processing Your Ores"
@@ -1317,7 +1318,7 @@
 			rewards: [{
 				count: 4
 				id: "20EB8FE6642B192D"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			subtitle: "Spin or Wash"

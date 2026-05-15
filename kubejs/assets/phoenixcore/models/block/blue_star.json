@@ -1,0 +1,9 @@
+{
+  "flip_v": true,
+  "loader": "forge:obj",
+  "model": "phoenixcore:models/obj/star.obj",
+  "textures": {
+    "texture0": "phoenixcore:block/obj/blue_star_layer",
+    "particle":"phoenixcore:block/obj/blue_star_layer"
+  }
+}

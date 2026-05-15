@@ -13,7 +13,7 @@ function formingPressRecipe(event, id, inputs, outputs, dur, power) {
 ServerEvents.recipes(event => {
 
     const formingPressRecipes = [
-        ["void_portal", ["2x minecraft:nether_star"], ["1x javd:portal_block"], 600, 64]
+        ["void_portal", ["4x minecraft:diamond_block"], ["1x javd:portal_block"], 600, 64]
     ]
 
     formingPressRecipes.forEach(([id, inputs, outputs, dur, power]) => {

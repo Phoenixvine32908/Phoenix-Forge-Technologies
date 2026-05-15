@@ -1,0 +1,7 @@
+{
+  "parent": "gtceu:block/overlay/2_layer/front_emissive",
+  "textures": {
+    "overlay": "phoenixcore:block/overlay/machine/overlay_maintenance_blazing_cleaning",
+    "overlay_emissive": "phoenixcore:block/overlay/machine/overlay_maintenance_blazing_cleaning_emissive"
+  }
+}

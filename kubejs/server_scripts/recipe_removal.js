@@ -146,10 +146,14 @@ const recipesToRemove = [
     "gtceu:large_chemical_reactor/hydrogen_peroxide", 
     "gtceu:circuit_assembler/electronic_circuit_mv",
     "gtceu:circuit_assembler/electronic_circuit_mv_soldering_alloy",
-    "ars_nouveau:agronomic_sourcelink",
     "ars_nouveau:volcanic_sourcelink",
     "ars_nouveau:alchemical_sourcelink",
-    "ars_nouveau:mycelial_sourcelink"
+    "ars_nouveau:mycelial_sourcelink",
+    "gtceu:centrifuge/oilsands_dust_separation",
+    "expandedae:crafting/exp_pattern_provider",
+    "expandedae:crafting/exp_pattern_provider_upgrade",
+    "expatternprovider:circuit_cutter",
+    "expandedae:crafting/exp_io_port_ext"
 ];
 
 

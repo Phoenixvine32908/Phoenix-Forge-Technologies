@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/cube_all",
-  "textures": {
-    "all": "phoenixcore:block/fission/basic_cooler_block"
-  }
-}

@@ -1,7 +1,0 @@
-{
-  "parent": "gtceu:block/cube_2_layer/all",
-  "textures": {
-    "bot_all": "phoenixcore:block/fission/basic_cooler_block",
-    "top_all": "phoenixcore:block/fission/basic_cooler_block_active"
-  }
-}

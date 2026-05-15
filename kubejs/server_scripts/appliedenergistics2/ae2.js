@@ -35,9 +35,9 @@ ServerEvents.recipes((event) => {
     // WAP
     event.remove({ id: "ae2:network/wireless_access_point" });
     event.shaped("ae2:wireless_access_point", ["PWP", "RCR", "PFP"], {
-        P: "gtceu:titanium_plate",
+        P: "phoenixcore:frost_reinforced_stained_steel_plate",
         W: "ae2:wireless_receiver",
-        R: "gtceu:titanium_rod",
+        R: "phoenixcore:frost_reinforced_stained_steel_rod",
         C: "ae2:calculation_processor",
         F: "ae2:fluix_glass_cable",
     });
@@ -291,7 +291,7 @@ ServerEvents.recipes((event) => {
     event.shaped("ae2:wireless_receiver", ["CPC", "RSR", "   "], {
         C: "#gtceu:circuits/ev",
         P: "ae2:fluix_pearl",
-        R: "#forge:rods/titanium",
+        R: "phoenixcore:frost_reinforced_stained_steel",
         S: "gtceu:hv_sensor",
     });
 

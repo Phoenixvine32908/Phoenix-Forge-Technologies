@@ -149,7 +149,7 @@
 			optional: true
 			rewards: [{
 				id: "6C7D0A907CB7DF39"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -176,7 +176,7 @@
 			rewards: [{
 				count: 4
 				id: "25C3EF87B90CC386"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -213,13 +213,13 @@
 				{
 					count: 8
 					id: "1FAFD533935D1B4B"
-					item: "gtceu:unrefined_aluminfrost_dust"
+					item: "phoenixcore:aluminfrost_ingot"
 					type: "item"
 				}
 				{
 					count: 2
 					id: "0BEAF8EC72B17EB3"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -228,7 +228,7 @@
 			subtitle: "We're basically in MV now, right?"
 			tasks: [{
 				id: "42FD6E615C7E3CC2"
-				item: "gtceu:aluminfrost_ingot"
+				item: "phoenixcore:aluminfrost_ingot"
 				type: "item"
 			}]
 			x: 9.393452380952382d
@@ -330,7 +330,7 @@
 				{
 					count: 3
 					id: "34AA8FB864B18FBA"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -400,7 +400,7 @@
 				}
 				{
 					id: "26AC42B44F51E53A"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -459,7 +459,7 @@
 				}
 				{
 					id: "0914FD400419E94A"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -540,7 +540,7 @@
 				}
 				{
 					id: "103808C5EADA28CC"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -549,7 +549,7 @@
 			subtitle: "We aren't losing a single Amp more"
 			tasks: [{
 				id: "0FD6FBCF5C181E00"
-				item: "gtceu:magmatic_manganese_lead_single_wire"
+				item: "phoenixcore:magmatic_manganese_lead_single_wire"
 				type: "item"
 			}]
 			title: "LV Superconductor"
@@ -606,7 +606,7 @@
 			rewards: [{
 				count: 3
 				id: "4A8196B9A8FA5A0B"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -700,7 +700,7 @@
 				{
 					count: 3
 					id: "2B72FD70D08B6142"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -729,7 +729,7 @@
 			rewards: [{
 				count: 2
 				id: "5D5B9E07824E0C98"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "circle"
@@ -760,7 +760,7 @@
 				{
 					count: 3
 					id: "2DE6FFEF31961753"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 				{
@@ -801,7 +801,7 @@
 				{
 					count: 2
 					id: "174090527F0F0F52"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1021,7 +1021,7 @@
 			rewards: [{
 				count: 2
 				id: "0552168B6AD80B0A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			shape: "rsquare"
@@ -1059,7 +1059,7 @@
 				{
 					count: 3
 					id: "062B00393757AE04"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1085,7 +1085,7 @@
 			rewards: [{
 				count: 3
 				id: "62DB7620B92E6840"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1136,7 +1136,7 @@
 				{
 					count: 5
 					id: "20A06E6C9FFEA2B4"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1219,7 +1219,7 @@
 			id: "5B2696206205CB2E"
 			rewards: [{
 				id: "64C80BCE9367199A"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -1254,7 +1254,7 @@
 				{
 					count: 2
 					id: "26111FBD93CD4E89"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1448,7 +1448,7 @@
 				{
 					count: 3
 					id: "6A38FF0161D06BDB"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1564,7 +1564,7 @@
 				{
 					count: 4
 					id: "0E744F7556F1C3C5"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1594,7 +1594,7 @@
 			rewards: [{
 				count: 4
 				id: "46FEC0CD0E07F38B"
-				item: "gtceu:unrefined_aluminfrost_dust"
+				item: "phoenixcore:unrefined_aluminfrost_dust"
 				random_bonus: 4
 				type: "item"
 			}]
@@ -1602,7 +1602,7 @@
 			subtitle: "Aluminfrost, not aluminium"
 			tasks: [{
 				id: "26ECFDAA596BB4E7"
-				item: "gtceu:unrefined_aluminfrost_dust"
+				item: "phoenixcore:unrefined_aluminfrost_dust"
 				type: "item"
 			}]
 			title: "AluminFrost Dust"
@@ -1721,7 +1721,7 @@
 				{
 					count: 3
 					id: "7778FFF99FCA1C68"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1801,7 +1801,7 @@
 				}
 				{
 					id: "2204627B39902344"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 			]
@@ -1963,7 +1963,7 @@
 				{
 					count: 3
 					id: "3C88882D15B3EE6E"
-					item: "kubejs:phoenix_feather"
+					item: "phoenixcore:phoenix_feather"
 					type: "item"
 				}
 				{
@@ -1983,42 +1983,6 @@
 			}]
 			x: 3.3d
 			y: 4.62d
-		}
-		{
-			dependencies: ["648BCF486E16CCB2"]
-			description: [
-				"Your first taste of &bFE (Forge Energy)&r producing machines is here!"
-				""
-				"Your first dynamo is the &3Steam Dynamo&r. Much like how the GregTech turbines work, this machine takes in steam to produce power. "
-				""
-				"However, it shines in its upgrades, such as the &aMulti-Cycle Injector&r or &aIntegral Components&r. Eventually, the &3Steam Boiler&r will not be enough, which will mean you should upgrade to the other dynamo options."
-			]
-			id: "53F48B30CAA6163A"
-			shape: "gear"
-			size: 0.66d
-			subtitle: "POWAH"
-			tasks: [{
-				id: "7A7FF5B190E3D7A2"
-				item: "systeams:steam_dynamo"
-				type: "item"
-			}]
-			x: 2.31d
-			y: 3.63d
-		}
-		{
-			dependencies: ["53F48B30CAA6163A"]
-			description: ["These upgrades &alower the amount of fuel used&r while keeping the power production the same. It is a &agood idea to stack these&r in your &6dynamos&r if you can afford them. You will also unlock further &dthermal upgrades&r as you go along, including the &bintegrated components&r!"]
-			id: "449DE2F9B8CC435A"
-			shape: "circle"
-			size: 0.45d
-			subtitle: "Moar Efficiency"
-			tasks: [{
-				id: "268F9C266E5EF183"
-				item: "thermal:dynamo_fuel_augment"
-				type: "item"
-			}]
-			x: 1.7999999999999998d
-			y: 3.375d
 		}
 		{
 			dependencies: [
@@ -2062,7 +2026,7 @@
 			rewards: [{
 				count: 2
 				id: "61C0B992B9A54E4F"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -2146,7 +2110,7 @@
 			rewards: [{
 				count: 2
 				id: "7CFEB0C80A330236"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.66d
@@ -2205,26 +2169,6 @@
 			title: "I'm Fetching Me Mallet!"
 			x: 8.91d
 			y: 4.29d
-		}
-		{
-			dependencies: ["53F48B30CAA6163A"]
-			description: [
-				"The enderio energy conduits are your &bbest bet&r to move your non-GregTech power from thermal's &6dynamos&r. For now, you can use these &3basic energy conduits&r, but you will unlock &abetter ones later&r."
-				""
-				"You should also invest in &aextraction cards for EnderIO&r in order to increase power, fluid, and item movement speed."
-			]
-			icon: "enderio:energy_conduit"
-			id: "1D92D3F59F0B2908"
-			shape: "circle"
-			size: 0.45d
-			subtitle: "Moving FE"
-			tasks: [{
-				id: "63AE7B9992220462"
-				title: "Energy Movement"
-				type: "checkmark"
-			}]
-			x: 2.6999999999999997d
-			y: 3.375d
 		}
 		{
 			dependencies: ["701BCADAE5CF6CA5"]
@@ -2465,7 +2409,7 @@
 			rewards: [{
 				count: 2
 				id: "24B608E0754069B1"
-				item: "kubejs:phoenix_feather"
+				item: "phoenixcore:phoenix_feather"
 				type: "item"
 			}]
 			size: 0.75d
@@ -2476,6 +2420,16 @@
 			}]
 			x: 7.5d
 			y: 0.0d
+		}
+		{
+			id: "101F2B1DCA53F213"
+			tasks: [{
+				id: "48538368AD4C6A32"
+				item: "gtceu:machine_memory_card"
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.5d
 		}
 	]
 	subtitle: ["Tame electricity and make your first machines"]

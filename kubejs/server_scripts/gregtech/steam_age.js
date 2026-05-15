@@ -6,11 +6,11 @@ ServerEvents.recipes(event => {
     event.recipes.gtceu.ember_igniter("flaming_dust")
         .itemInputs("8x phoenixcore:dormant_ember_dust", "4x phoenixcore:magma_dust")
         .inputFluids("minecraft:lava 144")
-        .itemOutputs("4x kubejs:flaming_dust")
+        .itemOutputs("4x phoenixcore:flaming_dust")
         .duration(150)
         .EUt(20)
     event.recipes.gtceu.alloy_smelter("flamingmatrix")
-        .itemInputs("1x kubejs:flaming_dust", "1x minecraft:clay_ball")
+        .itemInputs("1x phoenixcore:flaming_dust", "1x minecraft:clay_ball")
         .itemOutputs("4x hostilenetworks:prediction_matrix")
         .duration(100)
         .EUt(32)
@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
         .EUt(32)
     event.recipes.gtceu.extractor("magma")
         .itemInputs("1x phoenixcore:magma_dust")
-        .outputFluids("kubejs:magma 500")
+        .outputFluids("phoenixcore:magma 500")
         .duration(150)
         .EUt(32)
     event.recipes.gtceu.assembler("steam_machine_casing")
@@ -189,61 +189,61 @@ ServerEvents.recipes(event => {
         .EUt(GTValues.VA[GTValues.MV] / 2)
         .EUt(16)
     event.shaped("gtceu:lv_earth_sieve", ["OFO", "DWD", "CFC"], {
-        O: "gtceu:aurum_steel_plate",
-        W: "gtceu:lv_machine_hull", // Corrected to MV Casing
-        E: "gtceu:aurum_steel_small_fluid_pipe",
+        O: "phoenixcore:aurum_steel_plate",
+        W: "gtceu:lv_machine_hull",
         D: "gtceu:lv_electric_piston",
         F: "gtceu:item_filter",
         C: "#gtceu:circuits/lv"
+    });
+    // MV Earth Sieve Example (Corrected Casing)
+    event.shaped("gtceu:mv_earth_sieve", ["OFO", "DWD", "CFC"], {
+        O: "phoenixcore:aluminfrost_plate",
+        W: "gtceu:mv_machine_hull", // Corrected to MV Casing
+        D: "gtceu:mv_electric_piston",
+        F: "gtceu:item_filter",
+        C: "#gtceu:circuits/mv"
     });
     event.shaped("gtceu:large_steam_sieve", ["WFW", "WCW", "WFW"], {
         W: "gtceu:steam_machine_casing", // Corrected to MV Casing
         F: "gtceu:item_filter",
         C: "gtceu:lv_earth_sieve"
     });
-    event.shaped("kubejs:aurum_steel_drill_head", ["FWF", "FWF", "WCW"], {
+    event.shaped("phoenixcore:aurum_steel_drill_head", ["FWF", "FWF", "WCW"], {
         W: "gtceu:dense_steel_plate",
-        F: "gtceu:dense_aurum_steel_plate",
+        F: "phoenixcore:dense_aurum_steel_plate",
         C: "#forge:tools/hammers"
     });
 
     // Recipe for Frost Reinforced Stained Steel Drill Head
-    event.shaped("kubejs:frost_reinforced_stained_steel_drill_head", ["FWF", "FWF", "WCW"], {
+    event.shaped("phoenixcore:frost_reinforced_stained_steel_drill_head", ["FWF", "FWF", "WCW"], {
         W: "gtceu:dense_steel_plate",
-        F: "gtceu:dense_frost_reinforced_stained_steel_plate", // Assuming this item ID exists
+        F: "phoenixcore:dense_frost_reinforced_stained_steel_plate", // Assuming this item ID exists
         C: "#forge:tools/hammers"
     });
-    event.shaped("kubejs:source_imbued_titanium_drill_head", ["FWF", "FWF", "WCW"], {
-        W: "gtceu:dense_source_imbued_titanium_plate",
-        F: "gtceu:dense_frost_reinforced_stained_steel_plate", // Assuming this item ID exists
+    event.shaped("phoenixcore:source_imbued_titanium_drill_head", ["FWF", "FWF", "WCW"], {
+        W: "phoenixcore:dense_source_imbued_titanium_plate",
+        F: "phoenixcore:dense_frost_reinforced_stained_steel_plate", // Assuming this item ID exists
         C: "#forge:tools/hammers"
     });
 
 
     // Recipe for Aluminfrost Drill Head
-    event.shaped("kubejs:aluminfrost_drill_head", ["FWF", "FWF", "WCW"], {
+    event.shaped("phoenixcore:aluminfrost_drill_head", ["FWF", "FWF", "WCW"], {
         W: "gtceu:dense_steel_plate",
-        F: "gtceu:dense_aluminfrost_plate", // Assuming this item ID exists
+        F: "phoenixcore:dense_aluminfrost_plate", // Assuming this item ID exists
         C: "#forge:tools/hammers"
     });
 
     // Recipe for Space Grade Steel Drill Head
-    event.shaped("kubejs:space_grade_steel_drill_head", ["FWF", "FWF", "WCW"], {
+    event.shaped("phoenixcore:space_grade_steel_drill_head", ["FWF", "FWF", "WCW"], {
         W: "gtceu:dense_steel_plate",
-        F: "gtceu:dense_space_grade_steel_plate", // Assuming this item ID exists
+        F: "phoenixcore:dense_space_grade_steel_plate", // Assuming this item ID exists
         C: "#forge:tools/hammers"
     });
-    // MV Earth Sieve Example (Corrected Casing)
-    event.shaped("gtceu:mv_earth_sieve", ["OFO", "DWD", "CFC"], {
-        O: "gtceu:aluminfrost_plate",
-        W: "gtceu:mv_machine_hull", // Corrected to MV Casing
-        D: "gtceu:mv_electric_piston",
-        F: "gtceu:item_filter",
-        C: "#gtceu:circuits/mv"
-    });
+
 
     event.shaped("gtceu:hv_earth_sieve", ["OFO", "DWD", "CFC"], {
-        O: "gtceu:stainless_steel_plate",
+        O: "phoenixcore:frost_reinforced_stained_steel_plate",
         W: "gtceu:hv_machine_hull", // Corrected to MV Casing
         D: "gtceu:hv_electric_piston",
         F: "gtceu:item_filter",
@@ -254,7 +254,7 @@ ServerEvents.recipes(event => {
     event.shaped("gtceu:lv_ember_igniter", ["FPF", "WZW", "PFP"], {
         P: "minecraft:lava_bucket",
         W: "gtceu:tin_double_wire",
-        F: "gtceu:aurum_steel_plate",
+        F: "phoenixcore:aurum_steel_plate",
         Z: "gtceu:lv_machine_hull",
     });
 
@@ -262,14 +262,36 @@ ServerEvents.recipes(event => {
     event.shaped("gtceu:mv_ember_igniter", ["FPF", "WZW", "PFP"], {
         P: "minecraft:lava_bucket",
         W: "gtceu:cupronickel_double_wire",
-        F: "gtceu:aluminfrost_plate",
+        F: "phoenixcore:aluminfrost_plate",
         Z: "gtceu:mv_machine_hull",
     });
 
     event.shaped("gtceu:hv_ember_igniter", ["FPF", "WZW", "PFP"], {
         P: "minecraft:lava_bucket",
         W: "gtceu:kanthal_double_wire",
-        F: "gtceu:stainless_steel_plate",
+        F: "phoenixcore:frost_reinforced_stained_steel_plate",
         Z: "gtceu:hv_machine_hull",
     });
+    event.recipes.gtceu.water_source('pump_water')
+        .circuit(0)
+        .outputFluids(Fluid.of('minecraft:water', 1000))
+        .duration(20)
+
+    event.recipes.gtceu.water_source('pump_water_alt')
+        .circuit(1)
+        .outputFluids(Fluid.of('minecraft:water', 100))
+        .duration(2)
+
+    event.recipes.gtceu.shaped('gtceu:ulv_water_source', [
+        'ABA',
+        'CDC',
+        'ABA'
+    ], {
+        A: 'gtceu:wrought_iron_plate',
+        B: 'gtceu:tempered_glass',
+        C: 'minecraft:water_bucket',
+        D: 'gtceu:wood_drum'
+    })
+        .replaceIngredient('minecraft:water_bucket', 'minecraft:bucket')
+        .addMaterialInfo()
 })

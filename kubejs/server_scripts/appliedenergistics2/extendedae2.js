@@ -79,14 +79,13 @@ ServerEvents.recipes((event) => {
 
     event.remove({ id: "expatternprovider:wireless_connector" });
     greg
-        .assembly_line("gtceu:extended_card")
+        .assembler("gtceu:extended_card")
         .itemInputs(
-            "gtceu:luv_machine_casing",
-            "2x gtceu:luv_sensor",
-            "gtceu:luv_emitter",
-            "gtceu:quantum_star"
+            "gtceu:hv_machine_casing",
+            "2x gtceu:hv_sensor",
+            "gtceu:hv_emitter",
         )
-        .inputFluids("gtceu:radon 1000")
+        .inputFluids("gtceu:argon 1000")
         .itemOutputs("2x expatternprovider:wireless_connect")
         .duration(200)
         .EUt(8192);
@@ -96,7 +95,7 @@ ServerEvents.recipes((event) => {
         P: "#forge:plates/ultimet",
         D: "gtceu:computer_monitor_cover",
         A: "ae2:logic_processor",
-        K: "#gtceu:circuits/luv",
+        K: "#gtceu:circuits/iv",
         B: "ae2:engineering_processor",
         C: "ae2:calculation_processor",
     });

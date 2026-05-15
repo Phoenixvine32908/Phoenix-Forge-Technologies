@@ -331,6 +331,10 @@ ItemEvents.tooltip(event => {
         Text.of("§d§oDesigned for deep-space resource extraction."),
         Text.of("§5Enables efficient mining on celestial bodies and asteroids, far from terrestrial interference.")
     ]);
+    event.addAdvanced('gtceu:ulv_water_source', (item, advanced, text) => {
+        text.add(1, Text.of('§o§7A Great Source of Water!'))
+        text.add(2, Text.of('§o§7This machine does not require power to operate.'))
+    })
 
     // Tooltip for IV Confectionary Fabricator
     event.add("gtceu:iv_confectionery_fabricator", [

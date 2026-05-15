@@ -30,14 +30,18 @@ ItemEvents.tooltip(event=>{
     const gtceuItems = Ingredient.of("@gtceu").itemIds.toArray().map(id => `${id}`)
     event.addAdvanced(gtceuItems, (item, advanced, text)=>{
         text.removeIf(component => {
-            const translate = JSON.parse(component.toJson().toString()).translate
+            let json = component.toJson()
+            if (typeof json === 'boolean') return false
+            const translate = JSON.parse(json.toString()).translate
             if(!translate) return false
             return translationKeysToRemove.indexOf(`${translate}`) != -1
         })
     })
     event.addAdvanced("gtceu:multi_smelter", (item, advanced, text)=>{
         text.removeIf(component => {
-            const translate = JSON.parse(component.toJson().toString()).translate
+            let json = component.toJson()
+            if (typeof json === 'boolean') return false
+            const translate = JSON.parse(json.toString()).translate
             if(!translate) return false
             return translate.includes("gtceu.machine.available_recipe_map_")
         })
@@ -600,6 +604,10 @@ const MULTIBLOCK_DESCRIPTION_TOOLTIPS = {
         "gtultimate.custom.tooltip_large_steam_sieve",
         "gtultimate.custom.tooltip_large_steam_sieve2"
     ],
+    "gtceu:large_steam_sifter": [
+        "gtultimate.custom.tooltip_large_steam_sifter1",
+        "gtultimate.custom.tooltip_large_steam_sifter2"
+    ],
     "gtceu:large_steam_compressor": [
         "gtultimate.custom.tooltip_large_steam_compressor",
         "gtultimate.custom.tooltip_large_steam_compressor2"
@@ -669,6 +677,7 @@ const MACHINE_TYPE_NAMES = {
     "phoenixcore:heat_exchanger": "§eHeat Exchanging",
     "gtceu:large_steam_compressor": "§eSteam Compressor",
     "gtceu:large_steam_sieve": "§eSteam Sieve",
+    "gtceu:large_steam_sifter": "§eSteam Sifting",
     "gtceu:melferious_matrix": "§eMelferious Matrix",
     "gtceu:dimensional_anchor12": "§eDimensional Anchor",
     "gtceu:aetherial_fabricator12": "§eAetherial Fabricator",
@@ -742,6 +751,11 @@ const SHIFT_PLACEHOLDER_VALUES = {
         tooltipOrder: ["controller", "steamiteminput", "steamitemoutput", "steamenergy"],
         values:
             STEAM_MACHINE_CASING
+    },
+    "gtceu:large_steam_sifter": {
+        tooltipOrder: ["controller", "steamiteminput", "steamitemoutput", "steamenergy"],
+        values:
+        STEAM_MACHINE_CASING
     },
     "gtceu:large_steam_sieve": {
         tooltipOrder: ["controller", "steamiteminput", "steamitemoutput", "steamenergy"],
@@ -928,7 +942,7 @@ const SHIFT_PLACEHOLDER_VALUES = {
         values:
             CLEAN_STAINLESS_STEEL_CASING_TOOLTIP
     },
-    "gtceu:alchemical_imbuer": {
+    "phoenixcore:alchemical_imbuer": {
         tooltipOrder: ["controller", "iteminput", "fluidinput", "itemoutput", "fluidoutput", "energy", "maintenance"],
         values:
             CLEAN_STAINLESS_STEEL_CASING_TOOLTIP

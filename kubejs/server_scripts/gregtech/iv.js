@@ -18,7 +18,7 @@ ServerEvents.recipes(event => {
         .duration(2000)
         .EUt(GTValues.VA[GTValues.IV])
 
-    // Superheated Pyro Oven Research (scanner)
+
     greg.scanner("melferious_matrix_research")
         .itemInputs("phoenixcore:simulated_colony", "gtceu:data_stick")
         .itemOutputs(Item.of("gtceu:data_stick", '{assembly_line_research:{research_id:"1x_gtceu_simulated_colony",research_type:"gtceu:assembly_line"}}'))
@@ -40,7 +40,7 @@ ServerEvents.recipes(event => {
             "phoenixcore:honey 24000",
             "gtceu:soldering_alloy 4000"
         )
-        .itemOutputs("gtceu:melferious_matrix")
+        .itemOutputs("phoenixcore:melliferious_matrix")
         .stationResearch(b => b.researchStack("phoenixcore:simulated_colony")
             .EUt(131000).CWUt(1, 1)
             .dataStack("gtceu:data_stick"))
@@ -77,7 +77,7 @@ ServerEvents.recipes(event => {
             "gtceu:vanadium_gallium 1000",
             "gtceu:hssg 2880"
         )
-        .itemOutputs("gtceu:advanced_cracking_unit")
+        .itemOutputs("phoenixcore:advanced_cracking_unit")
         .stationResearch(b => b.researchStack("gtceu:cracker")
             .EUt(131000).CWUt(1, 1)
             .dataStack("gtceu:data_stick"))
@@ -449,28 +449,6 @@ ServerEvents.recipes(event => {
         .duration(200)
         .EUt(GTValues.VA[GTValues.HV]);
 
-    // --- Nuclear & Radioactive Processing ---
-    // Heat Exchanging Fission Steam to Distilled Water (Medium Pressure)
-    event.recipes.gtceu.heat_exchanging("fission3")
-        .inputFluids("phoenixcore:medium_pressure_fissile_steam 2000")
-        .outputFluids("gtceu:distilled_water 500")
-        .duration(40)
-        .EUt(-GTValues.VA[GTValues.LuV])
-
-    // Heat Exchanging Fission Steam to Distilled Water (Critical Steam)
-    event.recipes.gtceu.heat_exchanging("fission4")
-        .itemOutputs("phoenixcore:honey_ingot")
-        .inputFluids("phoenixcore:critical_steam 500")
-        .outputFluids("gtceu:distilled_water 1000")
-        .duration(280)
-        .EUt(-GTValues.VA[GTValues.LuV])
-
-    // Hot NaK Cooling via Heat Exchanger
-    event.recipes.gtceu.heat_exchanging("hot_nak_cooling")
-        .inputFluids("phoenixcore:hot_sodium_potassium 500")
-        .outputFluids("gtceu:sodium_potassium 500")
-        .duration(220)
-        .EUt(-GTValues.VA[GTValues.ZPM])
 
     // Cryo Zirconium Binding Solution in Mixer
     greg.mixer("cryo_zirconium_binding_solution")
@@ -492,7 +470,7 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("thorium_fuel_pellet_crafting")
         .itemInputs("9x gtceu:thorium_nugget")
         .inputFluids("phoenixcore:cryo_graphite_binding_solution 1000")
-        .itemOutputs("9x kubejs:thorium_fuel_pellet ")
+        .itemOutputs("9x phoenixcore:thorium_fuel_pellet ")
         .duration(100)
         .EUt(GTValues.VA[GTValues.MV]);
 
@@ -500,7 +478,7 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("uranium_235_fuel_pellet_crafting")
         .itemInputs("9x gtceu:uranium_235_nugget")
         .inputFluids("phoenixcore:cryo_zirconium_binding_solution 1000")
-        .itemOutputs("9x kubejs:u235_fuel_pellet")
+        .itemOutputs("9x phoenixcore:u235_fuel_pellet")
         .duration(100)
         .EUt(GTValues.VA[GTValues.MV])
 
@@ -508,7 +486,7 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("uranium_233_fuel_pellet_crafting")
         .itemInputs("9x phoenixcore:uranium_233_nugget")
         .inputFluids("phoenixcore:cryo_zirconium_binding_solution 1000")
-        .itemOutputs("9x kubejs:u233_fuel_pellet")
+        .itemOutputs("9x phoenixcore:u233_fuel_pellet")
         .duration(100)
         .EUt(GTValues.VA[GTValues.MV])
 
@@ -518,7 +496,7 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("plutonium_241_fuel_pellet_crafting")
         .itemInputs("9x gtceu:plutonium_241_nugget")
         .inputFluids("phoenixcore:cryo_zirconium_binding_solution 1000")
-        .itemOutputs("9x kubejs:plutonium_241_fuel_pellet")
+        .itemOutputs("9x phoenixcore:plutonium_241_fuel_pellet")
         .duration(100)
         .EUt(GTValues.VA[GTValues.IV])
 
@@ -526,23 +504,11 @@ ServerEvents.recipes(event => {
     greg.large_chemical_reactor("uranium_236_fuel_pellet_crafting")
         .itemInputs("9x phoenixcore:uranium_236_nugget")
         .inputFluids("phoenixcore:cryo_graphite_binding_solution 1000")
-        .itemOutputs("9x kubejs:u236_fuel_pellet")
+        .itemOutputs("9x phoenixcore:u236_fuel_pellet")
         .duration(100)
         .EUt(GTValues.VA[GTValues.IV])
-    // Breeder Reactor: Plutonium/Uranium-236 Cycle
-    /*
-    greg.high_performance_breeder_reactor("breeder_reactor/plutonium_uranium_236_cycle")
-        .itemInputs("4x kubejs:u236_fuel_pellet", "1x kubejs:plutonium_241_fuel_pellet")
-        .inputFluids("gtceu:sodium_potassium 64000", "minecraft:water 60000")
-        .itemOutputs("4x phoenixcore:irradiated_uranium_236_nugget", "1x phoenixcore:depleted_plutonium_241_nugget")
-        .outputFluids("phoenixcore:hot_sodium_potassium 64000", "phoenixcore:critical_steam 120000")
-        .duration(4500)
-        .addData("required_cooling", 20000)
-        .EUt(-GTValues.VA[GTValues.UHV] * 2)
-        */
 
-    // Reprocessing Spent Plutonium-241/Uranium-236 Fuel in Large Chemical Reactor
-    // Reprocessing Irradiated Uranium-236 Nuggets (first stage)
+
     greg.large_chemical_reactor("reprocessing/irradiated_uranium_236_nuggets")
         .itemInputs("16x phoenixcore:irradiated_uranium_236_nugget")
         .inputFluids("gtceu:nitric_acid 1000")
@@ -576,28 +542,6 @@ ServerEvents.recipes(event => {
         .outputFluids("phoenixcore:fission_products_fluid 500", "phoenixcore:radioactive_gas_mixture 100")
         .duration(120)
         .EUt(GTValues.VA[GTValues.IV]);
-
-    // Breeder Reactor: Thorium/Uranium-233 Cycle with U-235 Driver
-    /*
-    greg.high_performance_breeder_reactor("breeder_reactor/thorium_uranium_233_cycle_u235_driver")
-        .itemInputs("4x kubejs:thorium_fuel_pellet", "1x kubejs:u235_fuel_pellet")
-        .inputFluids("gtceu:sodium_potassium 500", "minecraft:water 250")
-        .itemOutputs("4x phoenixcore:irradiated_thorium_nugget", "1x phoenixcore:spent_uranium_235_nugget")
-        .outputFluids("phoenixcore:hot_sodium_potassium 500", "phoenixcore:critical_steam 1000")
-        .duration(3500)
-        .addData("required_cooling", 10000)
-        .EUt(-GTValues.VA[GTValues.ZPM] * 2);
-
-    // Breeder Reactor: Thorium/Uranium-233 Cycle with U-233 Driver
-    greg.high_performance_breeder_reactor("breeder_reactor/thorium_uranium_233_cycle_u233_driver")
-        .itemInputs("4x kubejs:thorium_fuel_pellet", "1x kubejs:u233_fuel_pellet")
-        .inputFluids("gtceu:sodium_potassium 500", "minecraft:water 250")
-        .itemOutputs("4x phoenixcore:irradiated_thorium_nugget", "1x phoenixcore:spent_uranium_233_nugget")
-        .outputFluids("phoenixcore:hot_sodium_potassium 500", "phoenixcore:critical_steam 1000")
-        .duration(3000)
-        .addData("required_cooling", 15000)
-        .EUt(-GTValues.VA[GTValues.UV] * 2);
-        */
 
     // Reprocessing Irradiated Thorium Rods to Uranium-233 in Large Chemical Reactor
     greg.large_chemical_reactor("reprocessing/thorium_rods_to_uranium_233")
@@ -743,66 +687,7 @@ ServerEvents.recipes(event => {
         .itemOutputs("gtceu:active_transformer")
         .duration(450)
         .EUt(GTValues.VA[GTValues.IV]);
-        /*
-            greg.assembler("boron_carbide_moderator")
-        .itemInputs("4x phoenixcore:boron_carbide_plate", "1x gtceu:frost_reinforced_stained_steel_frame", "1x gtceu:hv_voltage_coil", "#gtceu:circuits/hv")
-        .inputFluids("gtceu:steel 576")
-        .itemOutputs("kubejs:boron_carbide_moderator")
-        .duration(450)
-        .EUt(GTValues.VA[GTValues.IV]);
-            greg.assembler("beryllium_moderator")
-        .itemInputs("4x gtceu:beryllium_plate", "1x gtceu:source_imbued_titanium_frame", "1x gtceu:ev_voltage_coil", "#gtceu:circuits/ev")
-        .inputFluids("gtceu:steel 576")
-        .itemOutputs("kubejs:beryllium_moderator")
-        .duration(450)
-        .EUt(GTValues.VA[GTValues.IV]);
-            greg.assembler("niobium_modified_silicon_carbide_moderator")
-        .itemInputs("4x phoenixcore:niobium_modified_silicon_carbide_plate", "1x gtceu:void_touched_tungsten_steel_frame", "1x gtceu:iv_voltage_coil", "#gtceu:circuits/iv")
-        .inputFluids("gtceu:steel 576")
-        .itemOutputs("kubejs:niobium_modified_silicon_carbide_moderator")
-        .duration(450)
-        .EUt(GTValues.VA[GTValues.IV]);
-            greg.assembler("graphite_moderator")
-        .itemInputs("4x gtceu:steel_plate", "16x gtceu:graphite_dust", "1x gtceu:aurum_steel_frame", "1x gtceu:mv_voltage_coil", "#gtceu:circuits/mv")
-        .inputFluids("gtceu:steel 576")
-        .itemOutputs("phoenixcore:graphite_moderator")
-        .duration(450)
-        .EUt(GTValues.VA[GTValues.IV]);
-        greg.assembler("basic_fission_cooler")
-    .itemInputs(
-        "2x gtceu:aurum_steel_frame", 
-        "3x gtceu:long_steel_rod", // Basic tier uses 3 rods
-        "1x gtceu:aurum_steel_rotor", 
-        "#gtceu:circuits/hv"
-    )
-    .inputFluids("gtceu:distilled_water 576")
-    .itemOutputs("phoenixcore:basic_cooler")
-    .duration(450)
-    .EUt(GTValues.VA[GTValues.HV]);
-    greg.assembler("hydro_kinetic_cooler")
-    .itemInputs(
-        "2x gtceu:titanium_frame", 
-        "2x gtceu:long_source_imbued_titanium_rod", // Advanced tier uses 2 rods
-        "1x gtceu:source_imbued_titanium_rotor", 
-        "#gtceu:circuits/ev"
-    )
-    .inputFluids("gtceu:salt_water 576")
-    .itemOutputs("kubejs:hydro_kinetic_cooler")
-    .duration(450)
-    .EUt(GTValues.VA[GTValues.EV]); // Runs at EV
-    greg.assembler("aether_flow_cooler")
-    .itemInputs(
-        "2x gtceu:tungsten_steel_frame", 
-        "2x gtceu:long_void_touched_tungsten_steel_rod",
-        "1x gtceu:void_touched_tungsten_steel_rotor", 
-        "#gtceu:circuits/iv"
-    )
-    .inputFluids("phoenixcore:frost 576")
-    .itemOutputs("kubejs:aether_flow_cooler")
-    .duration(450)
-    .EUt(GTValues.VA[GTValues.IV]); // Runs at IV
 
-*/
     // Comb Decanter Assembly in Assembler
     greg.assembler("comb_decanter_recipe_assembler")
         .itemInputs("4x minecraft:honey_block", "kubejs:conductive_honey_coil", "2x gtceu:samarium_iron_arsenic_oxide_double_wire", "2x gtceu:iv_field_generator", "2x #gtceu:circuits/iv")
@@ -1067,4 +952,96 @@ ServerEvents.recipes(event => {
         .itemOutputs("kubejs:fully_charged_mob_essence_capsule")
         .duration(400) // This is a complex recipe, so it should take longer
         .EUt(GTValues.IV) // And require a higher voltage tier
+
+// --- 1. FUEL RODS (FUEL_ROD_T1 - FUEL_ROD_T5) ---
+// T1: HV | T2: EV | T3: IV | T4: LuV | T5: ZPM
+    const fuelRods = [
+        { id: 't1_fuel_rod', tier: 'hv', input: 'gtceu:uranium_dust', plate: 'phoenixcore:frost_reinforced_stained_steel', volt: 480 },
+        { id: 't2_fuel_rod', tier: 'ev', input: 'gtceu:uranium_dust', plate: 'phoenixcore:source_imbued_titanium', volt: 1920 },
+        { id: 't3_fuel_rod', tier: 'iv', input: 'phoenixcore:u235_fuel_pellet', plate: 'phoenixcore:source_imbued_titanium', volt: 7680 },
+        { id: 't4_fuel_rod', tier: 'luv', input: 'phoenixcore:plutonium_241_fuel_pellet', plate: 'phoenixcore:resonant_rhodium_alloy', volt: 30720 },
+        { id: 't5_fuel_rod', tier: 'zpm', input: 'phoenixcore:u236_fuel_pellet', plate: 'phoenixcore:advanced_quin_naquadian_alloy', volt: 122880 }
+    ];
+
+    fuelRods.forEach(f => {
+        greg.assembler(f.id)
+            .itemInputs(`gtceu:${f.tier}_machine_casing`, `4x ${f.plate}_plate`, f.input)
+            .itemOutputs(`phoenixcore:${f.id}`)
+            .duration(200)
+            .EUt(f.volt);
+    });
+
+// --- 2. BREEDER BLANKETS ---
+// Thorium (HV)
+    greg.assembler('thorium_blanket')
+        .itemInputs('gtceu:hv_machine_casing', '2x gtceu:lead_plate', 'phoenixcore:thorium_fuel_pellet')
+        .itemOutputs('phoenixcore:thorium_blanket')
+        .duration(400).EUt(480);
+
+// Uranium (EV) - Updated from U236
+    greg.assembler('uranium_blanket')
+        .itemInputs('gtceu:ev_machine_casing', '2x phoenixcore:source_imbued_titanium_plate', 'phoenixcore:u236_fuel_pellet')
+        .itemOutputs('phoenixcore:uranium_blanket')
+        .duration(400).EUt(1920);
+
+// Neptunium (IV)
+    greg.assembler('neptunium_blanket')
+        .itemInputs('gtceu:iv_machine_casing', 'phoenixcore:frost_reinforced_stained_steel_plate', 'gtceu:lead_dust')
+        .itemOutputs('phoenixcore:neptunium_blanket')
+        .duration(400).EUt(7680);
+
+// Plutonium (LuV)
+    greg.assembler('plutonium_blanket')
+        .itemInputs('gtceu:luv_machine_casing', '2x phoenixcore:resonant_rhodium_alloy_plate', 'gtceu:uranium_dust')
+        .itemOutputs('phoenixcore:plutonium_blanket')
+        .duration(600).EUt(30720);
+
+// Americium (ZPM)
+    greg.assembler('americium_blanket')
+        .itemInputs('gtceu:zpm_machine_casing', '2x phoenixcore:advanced_quin_naquadian_alloy_plate', 'phoenixcore:u236_fuel_pellet')
+        .itemOutputs('phoenixcore:americium_blanket')
+        .duration(800).EUt(122880);
+
+// --- 3. COOLERS ---
+    const coolers = [
+        { id: 'cooler_basic', tier: 'hv', mat: 'gtceu:tin', volt: 480 },
+        { id: 'cooler_ev', tier: 'ev', mat: 'phoenixcore:source_imbued_titanium', volt: 1920 },
+        { id: 'cooler_iv', tier: 'iv', mat: 'phoenixcore:dense_source_imbued_titanium', volt: 7680 },
+        { id: 'cooler_luv', tier: 'luv', mat: 'phoenixcore:resonant_rhodium_alloy', volt: 30720 }
+    ];
+
+    coolers.forEach(c => {
+        greg.assembler(c.id)
+            .itemInputs(`gtceu:${c.tier}_machine_casing`, `4x ${c.mat}_plate`, '4x gtceu:copper_single_wire')
+            .itemOutputs(`phoenixcore:${c.id}`)
+            .duration(150).EUt(c.volt);
+    });
+
+// --- 4. MODERATORS ---
+// Graphite (HV)
+    greg.assembler('graphite_moderator')
+        .itemInputs('gtceu:hv_machine_casing', '16x gtceu:graphite_dust')
+        .itemOutputs('phoenixcore:graphite_moderator')
+        .duration(200).EUt(480);
+
+// Beryllium (EV)
+    greg.assembler('beryllium_moderator')
+        .itemInputs('gtceu:ev_machine_casing', '16x gtceu:beryllium_dust')
+        .itemOutputs('phoenixcore:beryllium_moderator')
+        .duration(200).EUt(1920);
+
+// Heavy Water (IV)
+    greg.assembler('heavy_water_moderator')
+        .itemInputs('gtceu:iv_machine_casing', '2x gtceu:tungsten_steel_large_fluid_pipe')
+        .inputFluids('minecraft:water 1000')
+        .itemOutputs('phoenixcore:heavy_water_moderator')
+        .duration(300).EUt(7680);
+
+// Niobium-SiC (LuV)
+    greg.assembler('niobium_sic_moderator')
+        .itemInputs('gtceu:luv_machine_casing', '4x gtceu:niobium_nitride_plate', '8x phoenixcore:niobium_modified_silicon_carbide_rod')
+        .itemOutputs('phoenixcore:niobium_sic_moderator')
+        .duration(600).EUt(30720);
+
+
 })

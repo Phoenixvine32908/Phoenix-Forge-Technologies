@@ -1,0 +1,8 @@
+{
+  "remove_by_id": [
+    "minecraft:example_recipe_id"
+  ],
+  "remove_by_mod": [],
+  "remove_by_input": [],
+  "remove_by_output": []
+}
