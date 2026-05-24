@@ -400,3 +400,10 @@ phantasiaUI:
   # Ticks required to hold the key to open the menu (20 ticks = 1 second).
   activationTicks: 20
 
+  # Visual theme for the Phantasia scene viewer.
+  # COBALT   - Default. Deep navy with sky-blue accents.
+  # RAINBOW  - Hue-cycling accent on a neutral dark base.
+  # AMETHYST - Soft purple with gold progress bars.
+  # MINECRAFT - Classic vanilla inventory look (stone grey, gold accent).
+  theme: COBALT
+
