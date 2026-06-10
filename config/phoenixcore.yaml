@@ -1,4 +1,13 @@
 features:
+  # The maximum Prismatic Paint capacity of the Chameleon Spray Can (in mB).
+  chameleonSprayCanCapacity: 8000
+
+  # The amount of Prismatic Paint consumed per block/entity recolored (in mB).
+  chameleonSprayCanCostPerOperation: 50
+
+  # The fluid consumption multiplier applied when chain-painting/bulk-painting blocks (e.g. 0.85 equals a 15% discount). Set to 1.0 to disable discounts.
+  chameleonSprayCanBulkMultiplier: 0.85
+
   # Whether the Creative Energy Multiblock is enabled
   creativeEnergyEnabled: true
 

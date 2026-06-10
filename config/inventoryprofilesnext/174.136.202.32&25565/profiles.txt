@@ -2,19 +2,21 @@
 
 
 
-profile Saved activate HOT5
+profile Saved activate HOT7
 	HOT1
-		"gtceu:diamond_mining_hammer"
+		"gtceu:steel_wrench"
 	HOT2
-		"minecraft:water_bucket"
+		"minecraft:carrot"
 	HOT3
-		"minecraft:cooked_beef"
+		"integrateddynamics:cable"
 	HOT4
-		"gtceu:diamond_mining_hammer"
-	HOT8
-		"gtceu:iron_hammer"
-	HOT9
 		"gtceu:prospector.hv"
+	HOT5
+		"phoenixcore:tesla_binder"
+	HOT6
+		"minecraft:bucket"
+	HOT9
+		"gtceuterminal:multi_structure_manager"
 	CHEST
-		"sophisticatedbackpacks:backpack"
+		"gtceu:electric_jetpack"
 

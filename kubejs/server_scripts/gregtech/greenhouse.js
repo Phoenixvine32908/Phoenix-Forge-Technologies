@@ -127,7 +127,7 @@ ServerEvents.recipes((event) => {
         .itemOutputs(
             "4x pamhc2crops:peanutitem",
         )
-        .duration(600)
+        .duration(500)
         .EUt(32)
         .circuit(1);
     greg
@@ -138,8 +138,51 @@ ServerEvents.recipes((event) => {
         .itemOutputs(
             "8x pamhc2crops:peanutitem",
         )
-        .duration(900)
+        .duration(650)
         .EUt(32)
+        .circuit(2);
+    greg
+        .greenhouse("chorus")
+        .notConsumable("minecraft:chorus_fruit")
+        .inputFluids("water 1000")
+        .itemOutputs(
+            "4x minecraft:chorus_fruit",
+        )
+        .duration(300)
+        .EUt(120)
+        .circuit(1);
+    greg
+        .greenhouse("chorus_fert")
+        .notConsumable("minecraft:chorus_fruit")
+        .itemInputs("4x gtceu:fertilizer")
+        .inputFluids("water 1000")
+        .itemOutputs(
+            "8x minecraft:chorus_fruit",
+        )
+        .duration(200)
+        .EUt(120)
+        .circuit(2);
+
+    greg
+        .greenhouse("chorus_flower")
+        .notConsumable("minecraft:chorus_flower")
+        .inputFluids("water 1000")
+        .itemOutputs(
+            "4x minecraft:chorus_flower",
+        )
+        .duration(300)
+        .EUt(120)
+        .circuit(1);
+    greg
+        .greenhouse("chorus_flower_fert")
+        .notConsumable("minecraft:chorus_flower")
+        .itemInputs("4x gtceu:fertilizer")
+        .inputFluids("water 1000")
+        .itemOutputs(
+            "8x minecraft:chorus_flower",
+        )
+        .duration(200)
+        .EUt(120)
         .circuit(2);
     greg
         .greenhouse("waterchestnut")

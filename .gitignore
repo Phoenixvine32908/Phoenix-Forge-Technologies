@@ -76,3 +76,4 @@ mixin.out\class\*
 .mixin.out/class/appeng/core/sync/packets/PatternAccessTerminalPacket.class
 .mixin.out/class/appeng/blockentity/crafting/PatternProviderBlockEntity.class
 .mixin.out/class/appeng/client/gui/AEBaseScreen.class
+*.jar
