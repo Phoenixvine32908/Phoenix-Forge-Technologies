@@ -90,7 +90,7 @@ ServerEvents.recipes(event => {
         D: id("variable")
     })
 
-        event.shaped(id("logic_director"), [
+    event.shaped(id("logic_director"), [
         "ABA",
         "ACA",
         "ABA"
